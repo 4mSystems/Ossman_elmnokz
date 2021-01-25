@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragments.SplashFragment">
+
+    <data>
+
+        <variable
+            name="splashViewModel"
+            type="apps.app.altcompany.pages.splash.SplashViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_splash_logo"
+            android:layout_width="@dimen/dp120w"
+            android:layout_height="@dimen/dp120h"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_logo" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp80w"
+            android:layout_height="@dimen/dp50h"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/grand" />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,204 @@
+<resources>
+    <string name="app_name">AltiCompany</string>
+
+    <string name="facebook_app_id">314581022739311</string>
+    <string name="fb_login_protocol_scheme">fb314581022739311</string>
+
+    <string name="google_direction_api">AIzaSyB6HkoaSUeBo-GuZvsxoFxL-cPYUvVDkOM</string>
+    <string name="connection_invaild_body">Check your Internet connection and try again</string>
+    <string name="connection_On">Please turn on</string>
+    <string name="connection_Wifi">Wifi</string>
+    <string name="connection_Data">Mobile data</string>
+    <string name="connection_AirPlane">You have turned on the airplane mode.</string>
+    <string name="connection_AirPlane_TurnOff">Please turn off</string>
+    <string name="connection_AirPlane_Mode">Airplane mode</string>
+    <string name="connection_invaild_msg">Poor Internet Connection</string>
+    <string name="please_select_another_file">Please select another file</string>
+
+    <!--layout_grand-->
+    <string name="design_program">Design and program</string>
+    <string name="call">Call</string>
+    <string name="whats">Whatsapp</string>
+    <!--end_grand-->
+    <string name="label_confirm">Confirm</string>
+
+    <string name="label_sign_in">Sign In</string>
+    <string name="hint_username_or_email">User Name or Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_password_confirm">Password Confirm</string>
+    <string name="both_password_are_not_same">Both password are not same</string>
+    <string name="label_create_new_account">Create new account</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_username">User Name</string>
+    <string name="hint_phone_number">Phone Number</string>
+    <string name="hint_country">Country</string>
+    <string name="hint_city">City</string>
+    <string name="hint_upload_image">Upload Image</string>
+    <string name="hint_agree_on">Agree on</string>
+    <string name="please_login_first">Please Login First</string>
+    <string name="done_update_your_profile">Your Profile Had Been Updated</string>
+    <string name="label_login">Login</string>
+
+    <string name="terms_and_privacy_policy"><u>Terms and Privacy Policy</u></string>
+    <string name="please_enter">Please enter</string>
+    <string name="change_password">Change Password</string>
+    <string name="escape">Escape</string>
+
+    <string name="label_forget_password_question">Forget Password ?</string>
+    <string name="label_forget_password">Forget Password</string>
+    <string name="label_sign_up">Sign Up</string>
+    <string name="label_facebook">Facebook</string>
+    <string name="label_google">Google</string>
+    <string name="hint_email_or_phone">Email Or Phone</string>
+    <string name="label_write_code">Write Code</string>
+    <string name="label_new_password">New Password</string>
+    <string name="label_registration">Registration</string>
+    <string name="action_ok">Okay</string>
+    <string name="label_exit_app">Do you want close app?</string>
+    <string name="label_yes">Yes</string>
+    <string name="label_no">No</string>
+    <string name="action_send">Send</string>
+    <string name="hint_write_something">Write something ...</string>
+    <string name="label_choose_your_language">Choose your language</string>
+    <string name="label_arabic">Arabic</string>
+    <string name="label_english">English</string>
+    <string name="label_ok">Ok</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="label_select_time_period">Select Time Period</string>
+    <string name="label_home">Home</string>
+    <string name="label_my_products">My Products</string>
+    <string name="label_favourite">Favourite</string>
+    <string name="label_notification">Notification</string>
+    <string name="label_language">Language</string>
+    <string name="label_privacy_policy">Privacy policy</string>
+    <string name="label_suggestions">Suggestions</string>
+    <string name="label_share_app">Share app</string>
+    <string name="label_about_us">About us</string>
+    <string name="label_logout">Logout</string>
+
+    <string name="specification">Specification</string>
+    <string name="exchange_with">Exchange With</string>
+    <string name="present_offer">Present Offer</string>
+
+    <string name="product_name">Product Name</string>
+    <string name="select_department">Select Department</string>
+    <string name="select_category">Select Category</string>
+    <string name="write_a_description">Write a Description</string>
+    <string name="swap_with">Swap with</string>
+    <string name="please_select_the_good_place">Please select the good place</string>
+    <string name="address">Address</string>
+    <string name="show">Show</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="hint_birth_date">Birth Date</string>
+    <string name="hint_gender">Gender</string>
+    <string name="label_old_password">Old Password</string>
+    <string name="label_check_new_password">Check New Password</string>
+    <string name="label_save">Save</string>
+    <string name="label_exchange">Exchange</string>
+    <string name="label_no_exchange">No Exchange</string>
+    <string name="please_check_connection">Please Check Connection</string>
+    <string name="please_try_again">Please Try Again</string>
+    <string name="email_not_valid">Email is not validً</string>
+    <string name="phone_not_valid">Phone number not validً</string>
+    <string name="this_field_is_requried">This Field is requiredً</string>
+    <string name="profile">Profile</string>
+    <string name="departments">Departments</string>
+    <string name="department">Department</string>
+    <string name="category">category</string>
+
+    <string name="there_are_no">There are no</string>
+    <string name="add_images_or_video">Add Images or video</string>
+    <string name="your_location_has_been_successfully_selected">Your location has been successfully selected</string>
+
+
+    <!--Request Permission-->
+    <string name="permission_info">App requires permission to Storage to view images.</string>
+    <string name="permission_force">App requires permission to Storage to view images. Tap Settings and go to Permissions to grant permission.</string>
+    <string name="permission_ok">OK</string>
+    <string name="permission_settings">Settings</string>
+    <string name="permission_package">package</string>
+    <string name="error_null_cursor">Oops, something went wrong!</string>
+    <string name="image_view">Tap to select images</string>
+    <string name="selected">selected</string>
+    <string name="limit_exceeded">Can select a maximum of %d images</string>
+    <string name="album_view">Select photo album</string>
+    <string name="add">Add</string>
+    <string name="uploaded">Uploaded</string>
+    <string name="photos">Photos</string>
+    <string name="select_location">Select location</string>
+    <string name="offer_details">Offer details</string>
+    <string name="upload_your_images_or_video">Upload your images or video</string>
+    <string name="add_offer">Add Offer</string>
+    <string name="done_uploaded_video">Done uploaded video</string>
+    <string name="please_select_your_offer">Please select your offer</string>
+
+    <string name="search">Search</string>
+    <string name="search_filter">Search Filter</string>
+    <string name="whats_you_need">Whats you need?</string>
+    <string name="offers">Offers</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+
+    <string name="someone_accept_your_offer">Someone Accept your offer, you can contact with him now</string>
+    <string name="congratulation">Congratulation</string>
+    <string name="continue_">Continue</string>
+    <string name="show_offer_location">Show Offer Location</string>
+    <string name="offer_location">Offer Location</string>
+    <string name="add_product">Add Product</string>
+    <string name="please_update_your_profile">Please update your profile</string>
+
+    <!-- End multiple select -->
+
+
+    <string name="rate_company_quote">Rate Company:</string>
+    <string name="submit">Submit</string>
+    <string name="feedback_quote">Feedback:</string>
+    <string name="nearest">Nearest</string>
+    <string name="high_rate">High rateً</string>
+    <string name="comments">Comments</string>
+    <string name="more">More</string>
+    <string name="rate_service_company">Rate service company</string>
+    <string name="notifications">Notifications</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="orders">Orders</string>
+    <string name="admin_chat">Admin Chat</string>
+    <string name="contact_us">Contact us</string>
+    <string name="send_order">Send order</string>
+    <string name="select_date">Select date</string>
+    <string name="select_time">Select time</string>
+    <string name="business_register">Business Register</string>
+    <string name="description">Description</string>
+    <string name="select_item">Select Item</string>
+    <string name="choose_department_quote">Choose Department:</string>
+    <string name="choose_department">Choose Department</string>
+    <string name="choose_category_quote">Choose Category:</string>
+    <string name="choose_category">Choose Category</string>
+    <string name="next">Next</string>
+    <string name="select_service">Select service</string>
+    <string name="title">Title</string>
+    <string name="message">Message</string>
+    <string name="select_image">Select Image</string>
+    <string name="send_offer">Send offer</string>
+    <string name="recharge">Recharge</string>
+    <string name="current_orders">Orders</string>
+    <string name="previous_orders">Last orders</string>
+    <string name="invalidEmail">Invalid email, Alti@Example.com</string>
+    <string name="invalidPhone">Invalid phone</string>
+    <string name="password_not_match">Password doesn\'t match</string>
+    <string name="google_map">AIzaSyACLGmyHsCiSodwDmyX_xAf_cfgTWWYfGE</string>
+    <string name="msg_server_error">Server error ,try again later</string>
+    <string name="gallery">Pick image from gallery</string>
+    <string name="camera">take a photo</string>
+    <string name="select_image_from">Select image</string>
+    <string name="select_file">Choose file</string>
+    <string name="register">Sign up</string>
+    <string name="confirmPickUpLocation">Confirm</string>
+    <string name="location_warning">Please wait until finding your address</string>
+    <string name="terms_warning">Please accept terms and conditions first</string>
+    <string name="image_warning">Please select your image</string>
+    <string name="image_selected">Image selected successfully</string>
+    <string name="select_package">Select_package</string>
+    <string name="payment">Payment</string>
+    <string name="empty_warning">Please fill all data</string>
+</resources>

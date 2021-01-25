@@ -1,0 +1,272 @@
+apps/app/altcompany/pages/auth/forgetPassword/ForgetPasswordFragment.java
+ apps.app.altcompany.pages.auth.forgetPassword.ForgetPasswordFragment
+apps/app/altcompany/base/LiveData.java
+ apps.app.altcompany.base.LiveData
+apps/app/altcompany/utils/upload/FileOperations.java
+ apps.app.altcompany.utils.upload.FileOperations
+apps/app/altcompany/pages/auth/models/ChangePasswordRequest.java
+ apps.app.altcompany.pages.auth.models.ChangePasswordRequest
+apps/app/altcompany/utils/URLS.java
+ apps.app.altcompany.utils.URLS
+apps/app/altcompany/utils/locations/FetchLocationListener.java
+ apps.app.altcompany.utils.locations.FetchLocationListener
+apps/app/altcompany/customViews/views/CustomTextViewBold.java
+ apps.app.altcompany.customViews.views.CustomTextViewBold
+apps/app/altcompany/databinding/LayoutActionBarHomeBinding.java
+ apps.app.altcompany.databinding.LayoutActionBarHomeBinding
+apps/app/altcompany/utils/PopUp/PopUpInterface.java
+ apps.app.altcompany.utils.PopUp.PopUpInterface
+apps/app/altcompany/base/BaseViewModel.java
+ apps.app.altcompany.base.BaseViewModel
+apps/app/altcompany/databinding/ItemCategoryBinding.java
+ apps.app.altcompany.databinding.ItemCategoryBinding
+apps/app/altcompany/pages/auth/register/RegisterViewModel.java
+ apps.app.altcompany.pages.auth.register.RegisterViewModel
+apps/app/altcompany/utils/helper/MovementHelper.java
+ apps.app.altcompany.utils.helper.MovementHelper
+apps/app/altcompany/pages/auth/models/cities/Cities.java
+ apps.app.altcompany.pages.auth.models.cities.Cities
+apps/app/altcompany/PassingObject.java
+ apps.app.altcompany.PassingObject
+apps/app/altcompany/pages/auth/forgetPassword/ForgetPasswordViewModel.java
+ apps.app.altcompany.pages.auth.forgetPassword.ForgetPasswordViewModel
+apps/app/altcompany/pages/auth/models/LoginRequest.java
+ apps.app.altcompany.pages.auth.models.LoginRequest
+apps/app/altcompany/pages/auth/register/viewModels/ItemPackagesViewModel.java
+ apps.app.altcompany.pages.auth.register.viewModels.ItemPackagesViewModel
+apps/app/altcompany/BuildConfig.java
+ apps.app.altcompany.BuildConfig
+apps/app/altcompany/utils/locations/MapConfig.java
+ apps.app.altcompany.utils.locations.MapConfig
+ apps.app.altcompany.utils.locations.MapConfig$1
+ apps.app.altcompany.utils.locations.MapConfig$2
+ apps.app.altcompany.utils.locations.MapConfig$3
+ apps.app.altcompany.utils.locations.MapConfig$4
+apps/app/altcompany/utils/services/RealTimeReceiver.java
+ apps.app.altcompany.utils.services.RealTimeReceiver
+ apps.app.altcompany.utils.services.RealTimeReceiver$MessageReceiverListener
+apps/app/altcompany/pages/auth/register/models/PrivacyPolicy.java
+ apps.app.altcompany.pages.auth.register.models.PrivacyPolicy
+apps/app/altcompany/pages/auth/register/models/RegisterStep1Response.java
+ apps.app.altcompany.pages.auth.register.models.RegisterStep1Response
+apps/app/altcompany/pages/splash/models/SettingsResponse.java
+ apps.app.altcompany.pages.splash.models.SettingsResponse
+apps/app/altcompany/customViews/actionbar/MenuActionBarView.java
+ apps.app.altcompany.customViews.actionbar.MenuActionBarView
+apps/app/altcompany/pages/auth/register/RegisterStep3Fragment.java
+ apps.app.altcompany.pages.auth.register.RegisterStep3Fragment
+apps/app/altcompany/utils/locations/MapAddressActivity.java
+ apps.app.altcompany.utils.locations.MapAddressActivity
+apps/app/altcompany/pages/auth/register/RegisterStep2Fragment.java
+ apps.app.altcompany.pages.auth.register.RegisterStep2Fragment
+apps/app/altcompany/utils/helper/AppHelper.java
+ apps.app.altcompany.utils.helper.AppHelper
+apps/app/altcompany/pages/auth/login/LoginViewModel.java
+ apps.app.altcompany.pages.auth.login.LoginViewModel
+apps/app/altcompany/connection/ConnectionListenerInterFace.java
+ apps.app.altcompany.connection.ConnectionListenerInterFace
+apps/app/altcompany/databinding/ItemRechargeBinding.java
+ apps.app.altcompany.databinding.ItemRechargeBinding
+apps/app/altcompany/pages/auth/register/models/packages/PackageResponse.java
+ apps.app.altcompany.pages.auth.register.models.packages.PackageResponse
+apps/app/altcompany/repository/AuthRepository.java
+ apps.app.altcompany.repository.AuthRepository
+apps/app/altcompany/base/MyApplication.java
+ apps.app.altcompany.base.MyApplication
+apps/app/altcompany/activity/BaseActivity.java
+ apps.app.altcompany.activity.BaseActivity
+apps/app/altcompany/pages/auth/models/ForgetPasswordRequest.java
+ apps.app.altcompany.pages.auth.models.ForgetPasswordRequest
+apps/app/altcompany/utils/PopUp/PopUp.java
+ apps.app.altcompany.utils.PopUp.PopUp
+apps/app/altcompany/utils/images/ImageConstants.java
+ apps.app.altcompany.utils.images.ImageConstants
+apps/app/altcompany/utils/locations/MapAddress.java
+ apps.app.altcompany.utils.locations.MapAddress
+ apps.app.altcompany.utils.locations.MapAddress$1
+apps/app/altcompany/base/BaseFragment.java
+ apps.app.altcompany.base.BaseFragment
+apps/app/altcompany/base/IApplicationComponent.java
+ apps.app.altcompany.base.IApplicationComponent
+ apps.app.altcompany.base.IApplicationComponent$Builder
+apps/app/altcompany/utils/session/LanguagesHelper.java
+ apps.app.altcompany.utils.session.LanguagesHelper
+apps/app/altcompany/pages/auth/confirmCode/CodeViewModel.java
+ apps.app.altcompany.pages.auth.confirmCode.CodeViewModel
+apps/app/altcompany/ResponseHeader.java
+ apps.app.altcompany.ResponseHeader
+apps/app/altcompany/databinding/FragmentForgetPasswordBinding.java
+ apps.app.altcompany.databinding.FragmentForgetPasswordBinding
+apps/app/altcompany/pages/auth/models/UserData.java
+ apps.app.altcompany.pages.auth.models.UserData
+apps/app/altcompany/pages/auth/register/models/categories/RelatedSubCategoriesItem.java
+ apps.app.altcompany.pages.auth.register.models.categories.RelatedSubCategoriesItem
+apps/app/altcompany/pages/splash/models/BannersItem.java
+ apps.app.altcompany.pages.splash.models.BannersItem
+apps/app/altcompany/model/base/Mutable.java
+ apps.app.altcompany.model.base.Mutable
+apps/app/altcompany/utils/session/SharedPreferenceHelper.java
+ apps.app.altcompany.utils.session.SharedPreferenceHelper
+apps/app/altcompany/pages/auth/register/models/categories/AllDepartments.java
+ apps.app.altcompany.pages.auth.register.models.categories.AllDepartments
+apps/app/altcompany/pages/auth/models/SocialRequest.java
+ apps.app.altcompany.pages.auth.models.SocialRequest
+apps/app/altcompany/pages/auth/register/RegisterFragment.java
+ apps.app.altcompany.pages.auth.register.RegisterFragment
+apps/app/altcompany/pages/auth/register/models/RegisterStep1Data.java
+ apps.app.altcompany.pages.auth.register.models.RegisterStep1Data
+apps/app/altcompany/customViews/actionbar/HomeActionBarView.java
+ apps.app.altcompany.customViews.actionbar.HomeActionBarView
+apps/app/altcompany/databinding/FragmentSplashBinding.java
+ apps.app.altcompany.databinding.FragmentSplashBinding
+apps/app/altcompany/utils/locations/MapAddressViewModel.java
+ apps.app.altcompany.utils.locations.MapAddressViewModel
+apps/app/altcompany/model/base/StatusMessage.java
+ apps.app.altcompany.model.base.StatusMessage
+apps/app/altcompany/pages/auth/changePassword/ChangePasswordRequest.java
+ apps.app.altcompany.pages.auth.changePassword.ChangePasswordRequest
+apps/app/altcompany/databinding/ActivityMapAddressBinding.java
+ apps.app.altcompany.databinding.ActivityMapAddressBinding
+apps/app/altcompany/databinding/FragmentConfirmCodeBinding.java
+ apps.app.altcompany.databinding.FragmentConfirmCodeBinding
+apps/app/altcompany/pages/auth/models/cities/CitiesResponse.java
+ apps.app.altcompany.pages.auth.models.cities.CitiesResponse
+apps/app/altcompany/pages/auth/changePassword/ChangePasswordViewModel.java
+ apps.app.altcompany.pages.auth.changePassword.ChangePasswordViewModel
+apps/app/altcompany/utils/locations/GPSLocation.java
+ apps.app.altcompany.utils.locations.GPSLocation
+ apps.app.altcompany.utils.locations.GPSLocation$1
+apps/app/altcompany/utils/upload/FileUpload.java
+ apps.app.altcompany.utils.upload.FileUpload
+apps/app/altcompany/pages/auth/changePassword/ChangePasswordFragment.java
+ apps.app.altcompany.pages.auth.changePassword.ChangePasswordFragment
+apps/app/altcompany/pages/auth/confirmCode/ConfirmCodeFragment.java
+ apps.app.altcompany.pages.auth.confirmCode.ConfirmCodeFragment
+apps/app/altcompany/DataBindingTriggerClass.java
+ apps.app.altcompany.DataBindingTriggerClass
+apps/app/altcompany/customViews/views/BaseEditText.java
+ apps.app.altcompany.customViews.views.BaseEditText
+ apps.app.altcompany.customViews.views.BaseEditText$1
+apps/app/altcompany/databinding/FragmentLoginBinding.java
+ apps.app.altcompany.databinding.FragmentLoginBinding
+apps/app/altcompany/utils/session/MyContextWrapper.java
+ apps.app.altcompany.utils.session.MyContextWrapper
+apps/app/altcompany/databinding/FragmentChangePasswordBinding.java
+ apps.app.altcompany.databinding.FragmentChangePasswordBinding
+apps/app/altcompany/databinding/FragmentRegisterStep4Binding.java
+ apps.app.altcompany.databinding.FragmentRegisterStep4Binding
+apps/app/altcompany/connection/ConnectionModule.java
+ apps.app.altcompany.connection.ConnectionModule
+ apps.app.altcompany.connection.ConnectionModule$1
+apps/app/altcompany/utils/locations/MapAddressInterface.java
+ apps.app.altcompany.utils.locations.MapAddressInterface
+apps/app/altcompany/base/ParentActivity.java
+ apps.app.altcompany.base.ParentActivity
+apps/app/altcompany/databinding/FragmentRegisterStep2Binding.java
+ apps.app.altcompany.databinding.FragmentRegisterStep2Binding
+apps/app/altcompany/databinding/FragmentRegisterStep3Binding.java
+ apps.app.altcompany.databinding.FragmentRegisterStep3Binding
+apps/app/altcompany/utils/validation/Validate.java
+ apps.app.altcompany.utils.validation.Validate
+apps/app/altcompany/base/ApplicationBinding.java
+ apps.app.altcompany.base.ApplicationBinding
+apps/app/altcompany/base/MyFirebaseMessagingService.java
+ apps.app.altcompany.base.MyFirebaseMessagingService
+apps/app/altcompany/pages/splash/SplashViewModel.java
+ apps.app.altcompany.pages.splash.SplashViewModel
+ apps.app.altcompany.pages.splash.SplashViewModel$1
+apps/app/altcompany/utils/locations/GPSAllowListener.java
+ apps.app.altcompany.utils.locations.GPSAllowListener
+apps/app/altcompany/databinding/FragmentRegisterStep1Binding.java
+ apps.app.altcompany.databinding.FragmentRegisterStep1Binding
+apps/app/altcompany/pages/auth/register/RegisterStep4Fragment.java
+ apps.app.altcompany.pages.auth.register.RegisterStep4Fragment
+apps/app/altcompany/pages/auth/login/LoginFragment.java
+ apps.app.altcompany.pages.auth.login.LoginFragment
+ apps.app.altcompany.pages.auth.login.LoginFragment$1
+ apps.app.altcompany.pages.auth.login.LoginFragment$2
+apps/app/altcompany/utils/PopUp/PopUpMenuHelper.java
+ apps.app.altcompany.utils.PopUp.PopUpMenuHelper
+apps/app/altcompany/activity/MainActivity.java
+ apps.app.altcompany.activity.MainActivity
+apps/app/altcompany/pages/splash/models/ReasonsItem.java
+ apps.app.altcompany.pages.splash.models.ReasonsItem
+apps/app/altcompany/databinding/TermsDialogBinding.java
+ apps.app.altcompany.databinding.TermsDialogBinding
+apps/app/altcompany/customViews/views/CustomEditText.java
+ apps.app.altcompany.customViews.views.CustomEditText
+ apps.app.altcompany.customViews.views.CustomEditText$Validator
+apps/app/altcompany/pages/auth/register/adapters/CategoriesAdapter.java
+ apps.app.altcompany.pages.auth.register.adapters.CategoriesAdapter
+ apps.app.altcompany.pages.auth.register.adapters.CategoriesAdapter$ViewHolder
+apps/app/altcompany/pages/auth/models/ConfirmCodeRequest.java
+ apps.app.altcompany.pages.auth.models.ConfirmCodeRequest
+apps/app/altcompany/databinding/LayoutGrandBinding.java
+ apps.app.altcompany.databinding.LayoutGrandBinding
+apps/app/altcompany/pages/auth/register/adapters/PackagesAdapter.java
+ apps.app.altcompany.pages.auth.register.adapters.PackagesAdapter
+ apps.app.altcompany.pages.auth.register.adapters.PackagesAdapter$ViewHolder
+apps/app/altcompany/customViews/views/CustomTextViewRegular.java
+ apps.app.altcompany.customViews.views.CustomTextViewRegular
+apps/app/altcompany/pages/splash/SplashFragment.java
+ apps.app.altcompany.pages.splash.SplashFragment
+apps/app/altcompany/base/ApplicationComponent.java
+ apps.app.altcompany.base.ApplicationComponent
+apps/app/altcompany/utils/images/PhotoFullPopupWindow.java
+ apps.app.altcompany.utils.images.PhotoFullPopupWindow
+ apps.app.altcompany.utils.images.PhotoFullPopupWindow$1
+ apps.app.altcompany.utils.images.PhotoFullPopupWindow$2
+apps/app/altcompany/base/ConnectivityReceiver.java
+ apps.app.altcompany.base.ConnectivityReceiver
+ apps.app.altcompany.base.ConnectivityReceiver$ConnectivityReceiverListener
+apps/app/altcompany/databinding/ActivityBaseBinding.java
+ apps.app.altcompany.databinding.ActivityBaseBinding
+apps/app/altcompany/utils/Constants.java
+ apps.app.altcompany.utils.Constants
+apps/app/altcompany/repository/BaseRepository.java
+ apps.app.altcompany.repository.BaseRepository
+apps/app/altcompany/pages/auth/models/RegisterRequest.java
+ apps.app.altcompany.pages.auth.models.RegisterRequest
+apps/app/altcompany/pages/auth/register/models/categories/DepartmentsItem.java
+ apps.app.altcompany.pages.auth.register.models.categories.DepartmentsItem
+apps/app/altcompany/customViews/views/CustomTextViewMedium.java
+ apps.app.altcompany.customViews.views.CustomTextViewMedium
+apps/app/altcompany/pages/auth/register/models/packages/PackagesData.java
+ apps.app.altcompany.pages.auth.register.models.packages.PackagesData
+apps/app/altcompany/utils/resources/ResourceManager.java
+ apps.app.altcompany.utils.resources.ResourceManager
+apps/app/altcompany/databinding/ActivityMainBinding.java
+ apps.app.altcompany.databinding.ActivityMainBinding
+apps/app/altcompany/customViews/actionbar/BackActionBarView.java
+ apps.app.altcompany.customViews.actionbar.BackActionBarView
+apps/app/altcompany/pages/auth/models/UsersResponse.java
+ apps.app.altcompany.pages.auth.models.UsersResponse
+apps/app/altcompany/databinding/LayoutActionBarBackBinding.java
+ apps.app.altcompany.databinding.LayoutActionBarBackBinding
+apps/app/altcompany/customViews/grandDialog/GrandImageDialog.java
+ apps.app.altcompany.customViews.grandDialog.GrandDialog
+ apps.app.altcompany.customViews.grandDialog.GrandDialog$1
+ apps.app.altcompany.customViews.grandDialog.GrandDialog$2
+ apps.app.altcompany.customViews.grandDialog.GrandDialog$3
+ apps.app.altcompany.customViews.grandDialog.GrandDialog$4
+ apps.app.altcompany.customViews.grandDialog.GrandImageDialog
+ apps.app.altcompany.customViews.grandDialog.GrandImageDialog$1
+apps/app/altcompany/pages/auth/register/models/categories/CategoriesResponse.java
+ apps.app.altcompany.pages.auth.register.models.categories.CategoriesResponse
+apps/app/altcompany/connection/ConnectionHelper.java
+ apps.app.altcompany.connection.ConnectionHelper
+ apps.app.altcompany.connection.ConnectionHelper$1
+ apps.app.altcompany.connection.ConnectionHelper$2
+ apps.app.altcompany.connection.ConnectionHelper$3
+apps/app/altcompany/pages/auth/register/models/PrivacyResponse.java
+ apps.app.altcompany.pages.auth.register.models.PrivacyResponse
+apps/app/altcompany/connection/FileObject.java
+ apps.app.altcompany.connection.FileObject
+apps/app/altcompany/utils/session/UserHelper.java
+ apps.app.altcompany.utils.session.UserHelper
+apps/app/altcompany/connection/Api.java
+ apps.app.altcompany.connection.Api
+apps/app/altcompany/pages/splash/models/SettingData.java
+ apps.app.altcompany.pages.splash.models.SettingData
+apps/app/altcompany/pages/auth/register/viewModels/ItemCategoriesViewModel.java
+ apps.app.altcompany.pages.auth.register.viewModels.ItemCategoriesViewModel

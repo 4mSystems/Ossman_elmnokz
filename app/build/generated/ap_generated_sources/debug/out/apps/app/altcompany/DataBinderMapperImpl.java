@@ -1,0 +1,308 @@
+package apps.app.altcompany;
+
+import android.util.SparseArray;
+import android.util.SparseIntArray;
+import android.view.View;
+import androidx.databinding.DataBinderMapper;
+import androidx.databinding.DataBindingComponent;
+import androidx.databinding.ViewDataBinding;
+import apps.app.altcompany.databinding.ActivityBaseBindingImpl;
+import apps.app.altcompany.databinding.ActivityMainBindingImpl;
+import apps.app.altcompany.databinding.ActivityMapAddressBindingImpl;
+import apps.app.altcompany.databinding.FragmentChangePasswordBindingImpl;
+import apps.app.altcompany.databinding.FragmentConfirmCodeBindingImpl;
+import apps.app.altcompany.databinding.FragmentForgetPasswordBindingImpl;
+import apps.app.altcompany.databinding.FragmentLoginBindingImpl;
+import apps.app.altcompany.databinding.FragmentRegisterStep1BindingImpl;
+import apps.app.altcompany.databinding.FragmentRegisterStep2BindingImpl;
+import apps.app.altcompany.databinding.FragmentRegisterStep3BindingImpl;
+import apps.app.altcompany.databinding.FragmentRegisterStep4BindingImpl;
+import apps.app.altcompany.databinding.FragmentSplashBindingImpl;
+import apps.app.altcompany.databinding.ItemCategoryBindingImpl;
+import apps.app.altcompany.databinding.ItemRechargeBindingImpl;
+import apps.app.altcompany.databinding.LayoutActionBarBackBindingImpl;
+import apps.app.altcompany.databinding.LayoutActionBarHomeBindingImpl;
+import apps.app.altcompany.databinding.LayoutGrandBindingImpl;
+import apps.app.altcompany.databinding.TermsDialogBindingImpl;
+import java.lang.IllegalArgumentException;
+import java.lang.Integer;
+import java.lang.Object;
+import java.lang.Override;
+import java.lang.RuntimeException;
+import java.lang.String;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+public class DataBinderMapperImpl extends DataBinderMapper {
+  private static final int LAYOUT_ACTIVITYBASE = 1;
+
+  private static final int LAYOUT_ACTIVITYMAIN = 2;
+
+  private static final int LAYOUT_ACTIVITYMAPADDRESS = 3;
+
+  private static final int LAYOUT_FRAGMENTCHANGEPASSWORD = 4;
+
+  private static final int LAYOUT_FRAGMENTCONFIRMCODE = 5;
+
+  private static final int LAYOUT_FRAGMENTFORGETPASSWORD = 6;
+
+  private static final int LAYOUT_FRAGMENTLOGIN = 7;
+
+  private static final int LAYOUT_FRAGMENTREGISTERSTEP1 = 8;
+
+  private static final int LAYOUT_FRAGMENTREGISTERSTEP2 = 9;
+
+  private static final int LAYOUT_FRAGMENTREGISTERSTEP3 = 10;
+
+  private static final int LAYOUT_FRAGMENTREGISTERSTEP4 = 11;
+
+  private static final int LAYOUT_FRAGMENTSPLASH = 12;
+
+  private static final int LAYOUT_ITEMCATEGORY = 13;
+
+  private static final int LAYOUT_ITEMRECHARGE = 14;
+
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 15;
+
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 16;
+
+  private static final int LAYOUT_LAYOUTGRAND = 17;
+
+  private static final int LAYOUT_TERMSDIALOG = 18;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(18);
+
+  static {
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.activity_map_address, LAYOUT_ACTIVITYMAPADDRESS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_change_password, LAYOUT_FRAGMENTCHANGEPASSWORD);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_confirm_code, LAYOUT_FRAGMENTCONFIRMCODE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_forget_password, LAYOUT_FRAGMENTFORGETPASSWORD);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_login, LAYOUT_FRAGMENTLOGIN);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_register_step1, LAYOUT_FRAGMENTREGISTERSTEP1);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_register_step2, LAYOUT_FRAGMENTREGISTERSTEP2);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_register_step3, LAYOUT_FRAGMENTREGISTERSTEP3);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_register_step4, LAYOUT_FRAGMENTREGISTERSTEP4);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_splash, LAYOUT_FRAGMENTSPLASH);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.item_category, LAYOUT_ITEMCATEGORY);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.item_recharge, LAYOUT_ITEMRECHARGE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.layout_action_bar_back, LAYOUT_LAYOUTACTIONBARBACK);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.layout_action_bar_home, LAYOUT_LAYOUTACTIONBARHOME);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.layout_grand, LAYOUT_LAYOUTGRAND);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.terms_dialog, LAYOUT_TERMSDIALOG);
+  }
+
+  @Override
+  public ViewDataBinding getDataBinder(DataBindingComponent component, View view, int layoutId) {
+    int localizedLayoutId = INTERNAL_LAYOUT_ID_LOOKUP.get(layoutId);
+    if(localizedLayoutId > 0) {
+      final Object tag = view.getTag();
+      if(tag == null) {
+        throw new RuntimeException("view must have a tag");
+      }
+      switch(localizedLayoutId) {
+        case  LAYOUT_ACTIVITYBASE: {
+          if ("layout/activity_base_0".equals(tag)) {
+            return new ActivityBaseBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_base is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ACTIVITYMAIN: {
+          if ("layout/activity_main_0".equals(tag)) {
+            return new ActivityMainBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_main is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ACTIVITYMAPADDRESS: {
+          if ("layout/activity_map_address_0".equals(tag)) {
+            return new ActivityMapAddressBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_map_address is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTCHANGEPASSWORD: {
+          if ("layout/fragment_change_password_0".equals(tag)) {
+            return new FragmentChangePasswordBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_change_password is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTCONFIRMCODE: {
+          if ("layout/fragment_confirm_code_0".equals(tag)) {
+            return new FragmentConfirmCodeBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_confirm_code is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTFORGETPASSWORD: {
+          if ("layout/fragment_forget_password_0".equals(tag)) {
+            return new FragmentForgetPasswordBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_forget_password is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTLOGIN: {
+          if ("layout/fragment_login_0".equals(tag)) {
+            return new FragmentLoginBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_login is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTREGISTERSTEP1: {
+          if ("layout/fragment_register_step1_0".equals(tag)) {
+            return new FragmentRegisterStep1BindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_register_step1 is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTREGISTERSTEP2: {
+          if ("layout/fragment_register_step2_0".equals(tag)) {
+            return new FragmentRegisterStep2BindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_register_step2 is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTREGISTERSTEP3: {
+          if ("layout/fragment_register_step3_0".equals(tag)) {
+            return new FragmentRegisterStep3BindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_register_step3 is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTREGISTERSTEP4: {
+          if ("layout/fragment_register_step4_0".equals(tag)) {
+            return new FragmentRegisterStep4BindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_register_step4 is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTSPLASH: {
+          if ("layout/fragment_splash_0".equals(tag)) {
+            return new FragmentSplashBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_splash is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMCATEGORY: {
+          if ("layout/item_category_0".equals(tag)) {
+            return new ItemCategoryBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_category is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMRECHARGE: {
+          if ("layout/item_recharge_0".equals(tag)) {
+            return new ItemRechargeBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_recharge is invalid. Received: " + tag);
+        }
+        case  LAYOUT_LAYOUTACTIONBARBACK: {
+          if ("layout/layout_action_bar_back_0".equals(tag)) {
+            return new LayoutActionBarBackBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for layout_action_bar_back is invalid. Received: " + tag);
+        }
+        case  LAYOUT_LAYOUTACTIONBARHOME: {
+          if ("layout/layout_action_bar_home_0".equals(tag)) {
+            return new LayoutActionBarHomeBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for layout_action_bar_home is invalid. Received: " + tag);
+        }
+        case  LAYOUT_LAYOUTGRAND: {
+          if ("layout/layout_grand_0".equals(tag)) {
+            return new LayoutGrandBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for layout_grand is invalid. Received: " + tag);
+        }
+        case  LAYOUT_TERMSDIALOG: {
+          if ("layout/terms_dialog_0".equals(tag)) {
+            return new TermsDialogBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for terms_dialog is invalid. Received: " + tag);
+        }
+      }
+    }
+    return null;
+  }
+
+  @Override
+  public ViewDataBinding getDataBinder(DataBindingComponent component, View[] views, int layoutId) {
+    if(views == null || views.length == 0) {
+      return null;
+    }
+    int localizedLayoutId = INTERNAL_LAYOUT_ID_LOOKUP.get(layoutId);
+    if(localizedLayoutId > 0) {
+      final Object tag = views[0].getTag();
+      if(tag == null) {
+        throw new RuntimeException("view must have a tag");
+      }
+      switch(localizedLayoutId) {
+      }
+    }
+    return null;
+  }
+
+  @Override
+  public int getLayoutId(String tag) {
+    if (tag == null) {
+      return 0;
+    }
+    Integer tmpVal = InnerLayoutIdLookup.sKeys.get(tag);
+    return tmpVal == null ? 0 : tmpVal;
+  }
+
+  @Override
+  public String convertBrIdToString(int localId) {
+    String tmpVal = InnerBrLookup.sKeys.get(localId);
+    return tmpVal;
+  }
+
+  @Override
+  public List<DataBinderMapper> collectDependencies() {
+    ArrayList<DataBinderMapper> result = new ArrayList<DataBinderMapper>(1);
+    result.add(new androidx.databinding.library.baseAdapters.DataBinderMapperImpl());
+    return result;
+  }
+
+  private static class InnerBrLookup {
+    static final SparseArray<String> sKeys = new SparseArray<String>(19);
+
+    static {
+      sKeys.put(0, "_all");
+      sKeys.put(1, "baseViewModel");
+      sKeys.put(2, "categoriesAdapter");
+      sKeys.put(3, "categoryData");
+      sKeys.put(4, "changePasswordViewModel");
+      sKeys.put(5, "checked");
+      sKeys.put(6, "citiesList");
+      sKeys.put(7, "departmentsItems");
+      sKeys.put(8, "forgetPasswordViewModel");
+      sKeys.put(9, "itemMenuViewModel");
+      sKeys.put(10, "itemViewModel");
+      sKeys.put(11, "loginViewModel");
+      sKeys.put(12, "mapAddressViewModel");
+      sKeys.put(13, "packagesAdapter");
+      sKeys.put(14, "packagesData");
+      sKeys.put(15, "passingObject");
+      sKeys.put(16, "registerStep1ViewModel");
+      sKeys.put(17, "splashViewModel");
+      sKeys.put(18, "verificationCodeViewModel");
+    }
+  }
+
+  private static class InnerLayoutIdLookup {
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(18);
+
+    static {
+      sKeys.put("layout/activity_base_0", apps.app.altcompany.R.layout.activity_base);
+      sKeys.put("layout/activity_main_0", apps.app.altcompany.R.layout.activity_main);
+      sKeys.put("layout/activity_map_address_0", apps.app.altcompany.R.layout.activity_map_address);
+      sKeys.put("layout/fragment_change_password_0", apps.app.altcompany.R.layout.fragment_change_password);
+      sKeys.put("layout/fragment_confirm_code_0", apps.app.altcompany.R.layout.fragment_confirm_code);
+      sKeys.put("layout/fragment_forget_password_0", apps.app.altcompany.R.layout.fragment_forget_password);
+      sKeys.put("layout/fragment_login_0", apps.app.altcompany.R.layout.fragment_login);
+      sKeys.put("layout/fragment_register_step1_0", apps.app.altcompany.R.layout.fragment_register_step1);
+      sKeys.put("layout/fragment_register_step2_0", apps.app.altcompany.R.layout.fragment_register_step2);
+      sKeys.put("layout/fragment_register_step3_0", apps.app.altcompany.R.layout.fragment_register_step3);
+      sKeys.put("layout/fragment_register_step4_0", apps.app.altcompany.R.layout.fragment_register_step4);
+      sKeys.put("layout/fragment_splash_0", apps.app.altcompany.R.layout.fragment_splash);
+      sKeys.put("layout/item_category_0", apps.app.altcompany.R.layout.item_category);
+      sKeys.put("layout/item_recharge_0", apps.app.altcompany.R.layout.item_recharge);
+      sKeys.put("layout/layout_action_bar_back_0", apps.app.altcompany.R.layout.layout_action_bar_back);
+      sKeys.put("layout/layout_action_bar_home_0", apps.app.altcompany.R.layout.layout_action_bar_home);
+      sKeys.put("layout/layout_grand_0", apps.app.altcompany.R.layout.layout_grand);
+      sKeys.put("layout/terms_dialog_0", apps.app.altcompany.R.layout.terms_dialog);
+    }
+  }
+}
