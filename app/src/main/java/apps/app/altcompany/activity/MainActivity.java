@@ -4,7 +4,6 @@ import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.Observer;
 
 import javax.inject.Inject;
 
@@ -13,13 +12,16 @@ import apps.app.altcompany.base.IApplicationComponent;
 import apps.app.altcompany.base.MyApplication;
 import apps.app.altcompany.base.ParentActivity;
 import apps.app.altcompany.customViews.actionbar.HomeActionBarView;
+import apps.app.altcompany.customViews.menu.NavigationDrawerView;
 import apps.app.altcompany.databinding.ActivityMainBinding;
 import apps.app.altcompany.model.base.Mutable;
-import apps.app.altcompany.utils.Constants;
+import apps.app.altcompany.pages.home.HomeFragment;
 import apps.app.altcompany.utils.helper.MovementHelper;
 
 public class MainActivity extends ParentActivity {
     public HomeActionBarView homeActionBarView = null;
+    public NavigationDrawerView navigationDrawerView;
+
     ActivityMainBinding activityMainBinding;
     @Inject
     MutableLiveData<Mutable> liveData;
@@ -30,15 +32,16 @@ public class MainActivity extends ParentActivity {
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         IApplicationComponent component = ((MyApplication) getApplicationContext()).getApplicationComponent();
         component.inject(this);
-//        activityMainBinding.setViewModel(viewModel);
-//        if (viewModel.userData.getType() != 0)
-//            activityMainBinding.homeNavigationMenu.inflateMenu(R.menu.bottom_navigation_menu);
-//        else
-//            activityMainBinding.homeNavigationMenu.inflateMenu(R.menu.searcher_bottom_navigation_menu);
-//        homeActionBarView = new HomeActionBarView(this);
-//        MovementHelper.replaceFragment(this, new HomeCitiesFragment(), "");
+        homeActionBarView = new HomeActionBarView(this);
+        navigationDrawerView = new NavigationDrawerView(this);
+        activityMainBinding.llBaseContainer.addView(navigationDrawerView);
+        navigationDrawerView.layoutNavigationDrawerBinding.llBaseActionBarContainer.addView(homeActionBarView, 0);
+        homeActionBarView.setNavigation(navigationDrawerView);
+        homeActionBarView.connectDrawer(navigationDrawerView.layoutNavigationDrawerBinding.dlMainNavigationMenu, true);
+        navigationDrawerView.setActionBar(homeActionBarView);
+        homeActionBarView.setTitle("Home");
+        MovementHelper.replaceFragment(this, new HomeFragment(), "");
         setEvents();
-
     }
 
     private void setEvents() {

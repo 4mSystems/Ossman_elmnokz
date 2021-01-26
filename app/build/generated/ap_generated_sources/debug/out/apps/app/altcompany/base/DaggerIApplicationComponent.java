@@ -42,6 +42,32 @@ import apps.app.altcompany.pages.auth.register.RegisterStep4Fragment_MembersInje
 import apps.app.altcompany.pages.auth.register.RegisterViewModel;
 import apps.app.altcompany.pages.auth.register.RegisterViewModel_Factory;
 import apps.app.altcompany.pages.auth.register.RegisterViewModel_MembersInjector;
+import apps.app.altcompany.pages.companies.CompanyProfileFragment;
+import apps.app.altcompany.pages.companies.CompanyProfileFragment_MembersInjector;
+import apps.app.altcompany.pages.companies.viewModels.CompaniesViewModel;
+import apps.app.altcompany.pages.companies.viewModels.CompaniesViewModel_Factory;
+import apps.app.altcompany.pages.companies.viewModels.CompaniesViewModel_MembersInjector;
+import apps.app.altcompany.pages.home.HomeFragment;
+import apps.app.altcompany.pages.home.HomeFragment_MembersInjector;
+import apps.app.altcompany.pages.home.OrderDetailsFragment;
+import apps.app.altcompany.pages.home.OrderDetailsFragment_MembersInjector;
+import apps.app.altcompany.pages.home.UserDetailsFragment;
+import apps.app.altcompany.pages.home.UserDetailsFragment_MembersInjector;
+import apps.app.altcompany.pages.home.viewModels.HomeViewModel;
+import apps.app.altcompany.pages.home.viewModels.HomeViewModel_Factory;
+import apps.app.altcompany.pages.home.viewModels.HomeViewModel_MembersInjector;
+import apps.app.altcompany.pages.home.viewModels.OrderDetailsViewModel;
+import apps.app.altcompany.pages.home.viewModels.OrderDetailsViewModel_Factory;
+import apps.app.altcompany.pages.home.viewModels.OrderDetailsViewModel_MembersInjector;
+import apps.app.altcompany.pages.settings.AboutFragment;
+import apps.app.altcompany.pages.settings.AboutFragment_MembersInjector;
+import apps.app.altcompany.pages.settings.PrivacyFragment;
+import apps.app.altcompany.pages.settings.PrivacyFragment_MembersInjector;
+import apps.app.altcompany.pages.settings.SuggestionsFragment;
+import apps.app.altcompany.pages.settings.SuggestionsFragment_MembersInjector;
+import apps.app.altcompany.pages.settings.viewModels.SettingsViewModel;
+import apps.app.altcompany.pages.settings.viewModels.SettingsViewModel_Factory;
+import apps.app.altcompany.pages.settings.viewModels.SettingsViewModel_MembersInjector;
 import apps.app.altcompany.pages.splash.SplashFragment;
 import apps.app.altcompany.pages.splash.SplashFragment_MembersInjector;
 import apps.app.altcompany.pages.splash.SplashViewModel;
@@ -49,6 +75,10 @@ import apps.app.altcompany.pages.splash.SplashViewModel_Factory;
 import apps.app.altcompany.pages.splash.SplashViewModel_MembersInjector;
 import apps.app.altcompany.repository.AuthRepository;
 import apps.app.altcompany.repository.AuthRepository_Factory;
+import apps.app.altcompany.repository.OrdersRepository;
+import apps.app.altcompany.repository.OrdersRepository_Factory;
+import apps.app.altcompany.repository.SettingsRepository;
+import apps.app.altcompany.repository.SettingsRepository_Factory;
 import apps.app.altcompany.utils.locations.MapAddressActivity;
 import apps.app.altcompany.utils.locations.MapAddressActivity_MembersInjector;
 import apps.app.altcompany.utils.locations.MapAddressViewModel;
@@ -67,6 +97,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   private Provider<ConnectionHelper> connectionHelperProvider;
 
   private Provider<AuthRepository> authRepositoryProvider;
+
+  private Provider<OrdersRepository> ordersRepositoryProvider;
+
+  private Provider<SettingsRepository> settingsRepositoryProvider;
 
   private DaggerIApplicationComponent(ConnectionModule connectionModuleParam,
       LiveData liveDataParam) {
@@ -106,6 +140,22 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectRegisterViewModel(RegisterViewModel_Factory.newInstance(authRepositoryProvider.get()));
   }
 
+  private HomeViewModel homeViewModel() {
+    return injectHomeViewModel(HomeViewModel_Factory.newInstance(ordersRepositoryProvider.get()));
+  }
+
+  private SettingsViewModel settingsViewModel() {
+    return injectSettingsViewModel(SettingsViewModel_Factory.newInstance(settingsRepositoryProvider.get()));
+  }
+
+  private OrderDetailsViewModel orderDetailsViewModel() {
+    return injectOrderDetailsViewModel(OrderDetailsViewModel_Factory.newInstance(ordersRepositoryProvider.get()));
+  }
+
+  private CompaniesViewModel companiesViewModel() {
+    return injectCompaniesViewModel(CompaniesViewModel_Factory.newInstance(authRepositoryProvider.get()));
+  }
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam,
       final LiveData liveDataParam) {
@@ -113,6 +163,8 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     this.webServiceProvider = DoubleCheck.provider(ConnectionModule_WebServiceFactory.create(connectionModuleParam));
     this.connectionHelperProvider = DoubleCheck.provider(ConnectionHelper_Factory.create(webServiceProvider, webServiceProvider));
     this.authRepositoryProvider = DoubleCheck.provider(AuthRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
+    this.ordersRepositoryProvider = DoubleCheck.provider(OrdersRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
+    this.settingsRepositoryProvider = DoubleCheck.provider(SettingsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
   }
 
   @Override
@@ -172,6 +224,41 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(MapAddressActivity mapAddressActivity) {
     injectMapAddressActivity(mapAddressActivity);
+  }
+
+  @Override
+  public void inject(HomeFragment homeFragment) {
+    injectHomeFragment(homeFragment);
+  }
+
+  @Override
+  public void inject(PrivacyFragment privacyFragment) {
+    injectPrivacyFragment(privacyFragment);
+  }
+
+  @Override
+  public void inject(OrderDetailsFragment orderDetailsFragment) {
+    injectOrderDetailsFragment(orderDetailsFragment);
+  }
+
+  @Override
+  public void inject(UserDetailsFragment userDetailsFragment) {
+    injectUserDetailsFragment(userDetailsFragment);
+  }
+
+  @Override
+  public void inject(CompanyProfileFragment companyProfileFragment) {
+    injectCompanyProfileFragment(companyProfileFragment);
+  }
+
+  @Override
+  public void inject(SuggestionsFragment suggestionsFragment) {
+    injectSuggestionsFragment(suggestionsFragment);
+  }
+
+  @Override
+  public void inject(AboutFragment aboutFragment) {
+    injectAboutFragment(aboutFragment);
   }
 
   private MainActivity injectMainActivity(MainActivity instance) {
@@ -256,6 +343,61 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private MapAddressActivity injectMapAddressActivity(MapAddressActivity instance) {
     MapAddressActivity_MembersInjector.injectMapAddressViewModel(instance, new MapAddressViewModel());
+    return instance;
+  }
+
+  private HomeViewModel injectHomeViewModel(HomeViewModel instance) {
+    HomeViewModel_MembersInjector.injectOrdersRepository(instance, ordersRepositoryProvider.get());
+    return instance;
+  }
+
+  private HomeFragment injectHomeFragment(HomeFragment instance) {
+    HomeFragment_MembersInjector.injectViewModel(instance, homeViewModel());
+    return instance;
+  }
+
+  private SettingsViewModel injectSettingsViewModel(SettingsViewModel instance) {
+    SettingsViewModel_MembersInjector.injectRepository(instance, settingsRepositoryProvider.get());
+    return instance;
+  }
+
+  private PrivacyFragment injectPrivacyFragment(PrivacyFragment instance) {
+    PrivacyFragment_MembersInjector.injectViewModel(instance, settingsViewModel());
+    return instance;
+  }
+
+  private OrderDetailsViewModel injectOrderDetailsViewModel(OrderDetailsViewModel instance) {
+    OrderDetailsViewModel_MembersInjector.injectOrdersRepository(instance, ordersRepositoryProvider.get());
+    return instance;
+  }
+
+  private OrderDetailsFragment injectOrderDetailsFragment(OrderDetailsFragment instance) {
+    OrderDetailsFragment_MembersInjector.injectViewModel(instance, orderDetailsViewModel());
+    return instance;
+  }
+
+  private UserDetailsFragment injectUserDetailsFragment(UserDetailsFragment instance) {
+    UserDetailsFragment_MembersInjector.injectViewModel(instance, orderDetailsViewModel());
+    return instance;
+  }
+
+  private CompaniesViewModel injectCompaniesViewModel(CompaniesViewModel instance) {
+    CompaniesViewModel_MembersInjector.injectRepository(instance, authRepositoryProvider.get());
+    return instance;
+  }
+
+  private CompanyProfileFragment injectCompanyProfileFragment(CompanyProfileFragment instance) {
+    CompanyProfileFragment_MembersInjector.injectViewModel(instance, companiesViewModel());
+    return instance;
+  }
+
+  private SuggestionsFragment injectSuggestionsFragment(SuggestionsFragment instance) {
+    SuggestionsFragment_MembersInjector.injectViewModel(instance, settingsViewModel());
+    return instance;
+  }
+
+  private AboutFragment injectAboutFragment(AboutFragment instance) {
+    AboutFragment_MembersInjector.injectViewModel(instance, settingsViewModel());
     return instance;
   }
 

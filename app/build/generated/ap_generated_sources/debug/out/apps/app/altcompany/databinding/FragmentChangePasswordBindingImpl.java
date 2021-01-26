@@ -28,27 +28,27 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
     private final apps.app.altcompany.customViews.views.CustomTextViewRegular mboundView4;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback18;
+    private final android.view.View.OnClickListener mCallback7;
     // values
     // listeners
     // Inverse Binding Event Handlers
     private androidx.databinding.InverseBindingListener mboundView1androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
-            // Inverse of changePasswordViewModel.request.password
-            //         is changePasswordViewModel.request.setPassword((java.lang.String) callbackArg_0)
+            // Inverse of changePasswordViewModel.request.oldPassword
+            //         is changePasswordViewModel.request.setOldPassword((java.lang.String) callbackArg_0)
             java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView1);
             // localize variables for thread safety
             // changePasswordViewModel.request
-            apps.app.altcompany.pages.auth.models.RegisterRequest changePasswordViewModelRequest = null;
+            apps.app.altcompany.pages.auth.changePassword.ChangePasswordRequest changePasswordViewModelRequest = null;
             // changePasswordViewModel.request != null
             boolean changePasswordViewModelRequestJavaLangObjectNull = false;
+            // changePasswordViewModel.request.oldPassword
+            java.lang.String changePasswordViewModelRequestOldPassword = null;
             // changePasswordViewModel
             apps.app.altcompany.pages.auth.changePassword.ChangePasswordViewModel changePasswordViewModel = mChangePasswordViewModel;
             // changePasswordViewModel != null
             boolean changePasswordViewModelJavaLangObjectNull = false;
-            // changePasswordViewModel.request.password
-            java.lang.String changePasswordViewModelRequestPassword = null;
 
 
 
@@ -64,7 +64,7 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
 
 
 
-                    changePasswordViewModelRequest.setPassword(((java.lang.String) (callbackArg_0)));
+                    changePasswordViewModelRequest.setOldPassword(((java.lang.String) (callbackArg_0)));
                 }
             }
         }
@@ -72,20 +72,20 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
     private androidx.databinding.InverseBindingListener mboundView2androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
-            // Inverse of changePasswordViewModel.request.password
-            //         is changePasswordViewModel.request.setPassword((java.lang.String) callbackArg_0)
+            // Inverse of changePasswordViewModel.request.newPassword
+            //         is changePasswordViewModel.request.setNewPassword((java.lang.String) callbackArg_0)
             java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView2);
             // localize variables for thread safety
             // changePasswordViewModel.request
-            apps.app.altcompany.pages.auth.models.RegisterRequest changePasswordViewModelRequest = null;
+            apps.app.altcompany.pages.auth.changePassword.ChangePasswordRequest changePasswordViewModelRequest = null;
             // changePasswordViewModel.request != null
             boolean changePasswordViewModelRequestJavaLangObjectNull = false;
             // changePasswordViewModel
             apps.app.altcompany.pages.auth.changePassword.ChangePasswordViewModel changePasswordViewModel = mChangePasswordViewModel;
             // changePasswordViewModel != null
             boolean changePasswordViewModelJavaLangObjectNull = false;
-            // changePasswordViewModel.request.password
-            java.lang.String changePasswordViewModelRequestPassword = null;
+            // changePasswordViewModel.request.newPassword
+            java.lang.String changePasswordViewModelRequestNewPassword = null;
 
 
 
@@ -101,7 +101,7 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
 
 
 
-                    changePasswordViewModelRequest.setPassword(((java.lang.String) (callbackArg_0)));
+                    changePasswordViewModelRequest.setNewPassword(((java.lang.String) (callbackArg_0)));
                 }
             }
         }
@@ -114,7 +114,7 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
             java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView3);
             // localize variables for thread safety
             // changePasswordViewModel.request
-            apps.app.altcompany.pages.auth.models.RegisterRequest changePasswordViewModelRequest = null;
+            apps.app.altcompany.pages.auth.changePassword.ChangePasswordRequest changePasswordViewModelRequest = null;
             // changePasswordViewModel.request != null
             boolean changePasswordViewModelRequestJavaLangObjectNull = false;
             // changePasswordViewModel
@@ -148,7 +148,7 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
         this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
     }
     private FragmentChangePasswordBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 3
+        super(bindingComponent, root, 1
             );
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
@@ -162,14 +162,14 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
         this.mboundView4.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback18 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback7 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x8L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -197,10 +197,10 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
     }
 
     public void setChangePasswordViewModel(@Nullable apps.app.altcompany.pages.auth.changePassword.ChangePasswordViewModel ChangePasswordViewModel) {
-        updateRegistration(2, ChangePasswordViewModel);
+        updateRegistration(0, ChangePasswordViewModel);
         this.mChangePasswordViewModel = ChangePasswordViewModel;
         synchronized(this) {
-            mDirtyFlags |= 0x4L;
+            mDirtyFlags |= 0x1L;
         }
         notifyPropertyChanged(BR.changePasswordViewModel);
         super.requestRebind();
@@ -210,36 +210,20 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeChangePasswordViewModelRequestPasswordError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
-            case 1 :
-                return onChangeChangePasswordViewModelRequestConfirmPasswordError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
-            case 2 :
                 return onChangeChangePasswordViewModel((apps.app.altcompany.pages.auth.changePassword.ChangePasswordViewModel) object, fieldId);
-        }
-        return false;
-    }
-    private boolean onChangeChangePasswordViewModelRequestPasswordError(androidx.databinding.ObservableField<java.lang.String> ChangePasswordViewModelRequestPasswordError, int fieldId) {
-        if (fieldId == BR._all) {
-            synchronized(this) {
-                    mDirtyFlags |= 0x1L;
-            }
-            return true;
-        }
-        return false;
-    }
-    private boolean onChangeChangePasswordViewModelRequestConfirmPasswordError(androidx.databinding.ObservableField<java.lang.String> ChangePasswordViewModelRequestConfirmPasswordError, int fieldId) {
-        if (fieldId == BR._all) {
-            synchronized(this) {
-                    mDirtyFlags |= 0x2L;
-            }
-            return true;
         }
         return false;
     }
     private boolean onChangeChangePasswordViewModel(apps.app.altcompany.pages.auth.changePassword.ChangePasswordViewModel ChangePasswordViewModel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
-                    mDirtyFlags |= 0x4L;
+                    mDirtyFlags |= 0x1L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.passingObject) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
             }
             return true;
         }
@@ -253,88 +237,107 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        apps.app.altcompany.pages.auth.models.RegisterRequest changePasswordViewModelRequest = null;
-        java.lang.String changePasswordViewModelRequestConfirmPasswordErrorGet = null;
-        androidx.databinding.ObservableField<java.lang.String> changePasswordViewModelRequestPasswordError = null;
-        androidx.databinding.ObservableField<java.lang.String> changePasswordViewModelRequestConfirmPasswordError = null;
+        int changePasswordViewModelPassingObjectId = 0;
         apps.app.altcompany.pages.auth.changePassword.ChangePasswordViewModel changePasswordViewModel = mChangePasswordViewModel;
+        boolean changePasswordViewModelPassingObjectIdInt1 = false;
+        boolean changePasswordViewModelPassingObjectJavaLangObjectNullChangePasswordViewModelPassingObjectIdInt1BooleanFalse = false;
+        apps.app.altcompany.pages.auth.changePassword.ChangePasswordRequest changePasswordViewModelRequest = null;
+        int changePasswordViewModelPassingObjectJavaLangObjectNullChangePasswordViewModelPassingObjectIdInt1BooleanFalseViewGONEViewVISIBLE = 0;
+        apps.app.altcompany.PassingObject changePasswordViewModelPassingObject = null;
+        java.lang.String changePasswordViewModelRequestOldPassword = null;
         java.lang.String changePasswordViewModelRequestConfirmPassword = null;
-        java.lang.String changePasswordViewModelRequestPasswordErrorGet = null;
-        java.lang.String changePasswordViewModelRequestPassword = null;
+        java.lang.String changePasswordViewModelRequestNewPassword = null;
+        boolean changePasswordViewModelPassingObjectJavaLangObjectNull = false;
 
-        if ((dirtyFlags & 0xfL) != 0) {
+        if ((dirtyFlags & 0x7L) != 0) {
 
 
+            if ((dirtyFlags & 0x5L) != 0) {
 
-                if (changePasswordViewModel != null) {
-                    // read changePasswordViewModel.request
-                    changePasswordViewModelRequest = changePasswordViewModel.getRequest();
-                }
+                    if (changePasswordViewModel != null) {
+                        // read changePasswordViewModel.request
+                        changePasswordViewModelRequest = changePasswordViewModel.getRequest();
+                    }
 
-            if ((dirtyFlags & 0xdL) != 0) {
 
                     if (changePasswordViewModelRequest != null) {
-                        // read changePasswordViewModel.request.passwordError
-                        changePasswordViewModelRequestPasswordError = changePasswordViewModelRequest.passwordError;
-                    }
-                    updateRegistration(0, changePasswordViewModelRequestPasswordError);
-
-
-                    if (changePasswordViewModelRequestPasswordError != null) {
-                        // read changePasswordViewModel.request.passwordError.get()
-                        changePasswordViewModelRequestPasswordErrorGet = changePasswordViewModelRequestPasswordError.get();
-                    }
-            }
-            if ((dirtyFlags & 0xeL) != 0) {
-
-                    if (changePasswordViewModelRequest != null) {
-                        // read changePasswordViewModel.request.confirmPasswordError
-                        changePasswordViewModelRequestConfirmPasswordError = changePasswordViewModelRequest.confirmPasswordError;
-                    }
-                    updateRegistration(1, changePasswordViewModelRequestConfirmPasswordError);
-
-
-                    if (changePasswordViewModelRequestConfirmPasswordError != null) {
-                        // read changePasswordViewModel.request.confirmPasswordError.get()
-                        changePasswordViewModelRequestConfirmPasswordErrorGet = changePasswordViewModelRequestConfirmPasswordError.get();
-                    }
-            }
-            if ((dirtyFlags & 0xcL) != 0) {
-
-                    if (changePasswordViewModelRequest != null) {
+                        // read changePasswordViewModel.request.oldPassword
+                        changePasswordViewModelRequestOldPassword = changePasswordViewModelRequest.getOldPassword();
                         // read changePasswordViewModel.request.confirmPassword
                         changePasswordViewModelRequestConfirmPassword = changePasswordViewModelRequest.getConfirmPassword();
-                        // read changePasswordViewModel.request.password
-                        changePasswordViewModelRequestPassword = changePasswordViewModelRequest.getPassword();
+                        // read changePasswordViewModel.request.newPassword
+                        changePasswordViewModelRequestNewPassword = changePasswordViewModelRequest.getNewPassword();
                     }
+            }
+
+                if (changePasswordViewModel != null) {
+                    // read changePasswordViewModel.passingObject
+                    changePasswordViewModelPassingObject = changePasswordViewModel.getPassingObject();
+                }
+
+
+                // read changePasswordViewModel.passingObject != null
+                changePasswordViewModelPassingObjectJavaLangObjectNull = (changePasswordViewModelPassingObject) != (null);
+            if((dirtyFlags & 0x7L) != 0) {
+                if(changePasswordViewModelPassingObjectJavaLangObjectNull) {
+                        dirtyFlags |= 0x10L;
+                }
+                else {
+                        dirtyFlags |= 0x8L;
+                }
             }
         }
         // batch finished
-        if ((dirtyFlags & 0xcL) != 0) {
+
+        if ((dirtyFlags & 0x10L) != 0) {
+
+                if (changePasswordViewModelPassingObject != null) {
+                    // read changePasswordViewModel.passingObject.id
+                    changePasswordViewModelPassingObjectId = changePasswordViewModelPassingObject.getId();
+                }
+
+
+                // read changePasswordViewModel.passingObject.id == 1
+                changePasswordViewModelPassingObjectIdInt1 = (changePasswordViewModelPassingObjectId) == (1);
+        }
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+                // read changePasswordViewModel.passingObject != null ? changePasswordViewModel.passingObject.id == 1 : false
+                changePasswordViewModelPassingObjectJavaLangObjectNullChangePasswordViewModelPassingObjectIdInt1BooleanFalse = ((changePasswordViewModelPassingObjectJavaLangObjectNull) ? (changePasswordViewModelPassingObjectIdInt1) : (false));
+            if((dirtyFlags & 0x7L) != 0) {
+                if(changePasswordViewModelPassingObjectJavaLangObjectNullChangePasswordViewModelPassingObjectIdInt1BooleanFalse) {
+                        dirtyFlags |= 0x40L;
+                }
+                else {
+                        dirtyFlags |= 0x20L;
+                }
+            }
+
+
+                // read changePasswordViewModel.passingObject != null ? changePasswordViewModel.passingObject.id == 1 : false ? View.GONE : View.VISIBLE
+                changePasswordViewModelPassingObjectJavaLangObjectNullChangePasswordViewModelPassingObjectIdInt1BooleanFalseViewGONEViewVISIBLE = ((changePasswordViewModelPassingObjectJavaLangObjectNullChangePasswordViewModelPassingObjectIdInt1BooleanFalse) ? (android.view.View.GONE) : (android.view.View.VISIBLE));
+        }
+        // batch finished
+        if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView1, changePasswordViewModelRequestPassword);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, changePasswordViewModelRequestPassword);
-            apps.app.altcompany.customViews.views.BaseEditText.setError(this.mboundView2, changePasswordViewModelRequestPassword);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView1, changePasswordViewModelRequestOldPassword);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, changePasswordViewModelRequestNewPassword);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView3, changePasswordViewModelRequestConfirmPassword);
         }
-        if ((dirtyFlags & 0xdL) != 0) {
+        if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            apps.app.altcompany.customViews.views.BaseEditText.setError(this.mboundView1, changePasswordViewModelRequestPasswordErrorGet);
+            this.mboundView1.setVisibility(changePasswordViewModelPassingObjectJavaLangObjectNullChangePasswordViewModelPassingObjectIdInt1BooleanFalseViewGONEViewVISIBLE);
         }
-        if ((dirtyFlags & 0x8L) != 0) {
+        if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView1, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView1androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView3, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView3androidTextAttrChanged);
-            this.mboundView4.setOnClickListener(mCallback18);
-        }
-        if ((dirtyFlags & 0xeL) != 0) {
-            // api target 1
-
-            apps.app.altcompany.customViews.views.BaseEditText.setError(this.mboundView3, changePasswordViewModelRequestConfirmPasswordErrorGet);
+            this.mboundView4.setOnClickListener(mCallback7);
         }
     }
     // Listener Stub Implementations
@@ -358,10 +361,13 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): changePasswordViewModel.request.passwordError
-        flag 1 (0x2L): changePasswordViewModel.request.confirmPasswordError
-        flag 2 (0x3L): changePasswordViewModel
-        flag 3 (0x4L): null
+        flag 0 (0x1L): changePasswordViewModel
+        flag 1 (0x2L): changePasswordViewModel.passingObject
+        flag 2 (0x3L): null
+        flag 3 (0x4L): changePasswordViewModel.passingObject != null ? changePasswordViewModel.passingObject.id == 1 : false
+        flag 4 (0x5L): changePasswordViewModel.passingObject != null ? changePasswordViewModel.passingObject.id == 1 : false
+        flag 5 (0x6L): changePasswordViewModel.passingObject != null ? changePasswordViewModel.passingObject.id == 1 : false ? View.GONE : View.VISIBLE
+        flag 6 (0x7L): changePasswordViewModel.passingObject != null ? changePasswordViewModel.passingObject.id == 1 : false ? View.GONE : View.VISIBLE
     flag mapping end*/
     //end
 }

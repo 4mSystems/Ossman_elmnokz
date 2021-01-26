@@ -42,15 +42,17 @@ import apps.app.altcompany.R;
 import apps.app.altcompany.base.BaseFragment;
 import apps.app.altcompany.base.IApplicationComponent;
 import apps.app.altcompany.base.MyApplication;
+import apps.app.altcompany.base.ParentActivity;
 import apps.app.altcompany.databinding.FragmentLoginBinding;
 import apps.app.altcompany.model.base.Mutable;
 import apps.app.altcompany.pages.auth.confirmCode.ConfirmCodeFragment;
 import apps.app.altcompany.pages.auth.forgetPassword.ForgetPasswordFragment;
+import apps.app.altcompany.pages.auth.login.models.UsersResponse;
 import apps.app.altcompany.pages.auth.models.SocialRequest;
-import apps.app.altcompany.pages.auth.models.UsersResponse;
 import apps.app.altcompany.pages.auth.register.RegisterFragment;
 import apps.app.altcompany.pages.auth.register.RegisterStep2Fragment;
 import apps.app.altcompany.pages.auth.register.RegisterStep3Fragment;
+import apps.app.altcompany.pages.auth.register.RegisterStep4Fragment;
 import apps.app.altcompany.utils.Constants;
 import apps.app.altcompany.utils.helper.MovementHelper;
 import apps.app.altcompany.utils.session.UserHelper;
@@ -88,25 +90,27 @@ public class LoginFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            switch (((Mutable) o).message) {
+            switch (mutable.message) {
                 case Constants.REGISTER:
-                    MovementHelper.startActivity(context, RegisterStep2Fragment.class.getName(), getString(R.string.register), null);
+                    MovementHelper.startActivity(context, RegisterFragment.class.getName(), getString(R.string.register), null);
                     break;
                 case Constants.LOGIN:
-//                    if (((UsersResponse) mutable.object).getData().getPaymentStatus() == 0 && ((UsersResponse) mutable.object).getData().getType() != 0) {
-//                        showError(((UsersResponse) mutable.object).mMessage);
-//                        UserHelper.getInstance(context).addJwt(((UsersResponse) ((Mutable) o).object).getData().getJwt());
-//                    } else {
-//                        toastMessage(((UsersResponse) mutable.object).mMessage);
-//                        UserHelper.getInstance(context).userLogin(((UsersResponse) ((Mutable) o).object).getData());
-//                        MovementHelper.startActivityMain(context);
-//                    }
+                    if (((UsersResponse) mutable.object).getData().getStep() == 4) {
+                        toastMessage(((UsersResponse) mutable.object).mMessage);
+                        UserHelper.getInstance(context).userLogin(((UsersResponse) ((Mutable) o).object).getData());
+                        MovementHelper.startActivityMain(context);
+                    } else {
+                        ((ParentActivity) context).toastError(((UsersResponse) mutable.object).mMessage);
+                        UserHelper.getInstance(context).addJwt(((UsersResponse) mutable.object).getData().getJwt());
+                        UserHelper.getInstance(context).saveStep(String.valueOf(((UsersResponse) mutable.object).getData().getStep()));
+                        checkStep(String.valueOf(((UsersResponse) mutable.object).getData().getStep()));
+                    }
                     break;
                 case Constants.FORGET_PASSWORD:
                     MovementHelper.startActivityWithBundle(context, new PassingObject(Constants.FORGET_PASSWORD), null, ForgetPasswordFragment.class.getName(), null);
                     break;
                 case Constants.NOT_VERIFIED:
-                    MovementHelper.startActivity(context, ConfirmCodeFragment.class.getName(), null, null);
+                    MovementHelper.startActivityWithBundle(context, new PassingObject(Constants.CHECK_CONFIRM_NAV_REGISTER), null, ConfirmCodeFragment.class.getName(), null);
                     break;
                 case Constants.EMPTY_WARNING:
                     showError(getResources().getString(R.string.this_field_is_requried));
@@ -120,6 +124,21 @@ public class LoginFragment extends BaseFragment {
 
             }
         });
+    }
+
+    private void checkStep(String step) {
+        Log.e(TAG, "checkStep: " + step);
+        switch (step) {
+            case "1":
+                MovementHelper.startActivity(context, RegisterStep2Fragment.class.getName(), getString(R.string.select_service), null);
+                break;
+            case "2":
+                MovementHelper.startActivity(context, RegisterStep3Fragment.class.getName(), getString(R.string.select_package), null);
+                break;
+            case "3":
+                MovementHelper.startActivity(context, RegisterStep4Fragment.class.getName(), getString(R.string.payment), null);
+                break;
+        }
     }
 
     private void signInFacebook() {
@@ -147,16 +166,13 @@ public class LoginFragment extends BaseFragment {
         handleActions(new Mutable(Constants.SHOW_PROGRESS));
         AuthCredential credential = FacebookAuthProvider.getCredential(accessToken.getToken());
         mAuth.signInWithCredential(credential)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        handleActions(new Mutable(Constants.HIDE_PROGRESS));
-                        if (task.isSuccessful()) {
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            Log.e(TAG, "onComplete: " + user.getPhoneNumber());
-                        } else
-                            Log.e(TAG, "onComplete: " + task.getException());
-                    }
+                .addOnCompleteListener(task -> {
+                    handleActions(new Mutable(Constants.HIDE_PROGRESS));
+                    if (task.isSuccessful()) {
+                        FirebaseUser user = mAuth.getCurrentUser();
+                        Log.e(TAG, "onComplete: " + user.getPhoneNumber());
+                    } else
+                        Log.e(TAG, "onComplete: " + task.getException());
                 });
     }
 

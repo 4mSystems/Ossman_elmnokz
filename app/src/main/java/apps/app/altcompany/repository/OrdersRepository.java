@@ -1,0 +1,52 @@
+package apps.app.altcompany.repository;
+
+
+import androidx.lifecycle.MutableLiveData;
+
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
+import apps.app.altcompany.connection.ConnectionHelper;
+import apps.app.altcompany.model.base.Mutable;
+import apps.app.altcompany.model.base.StatusMessage;
+import apps.app.altcompany.pages.auth.models.cities.CitiesResponse;
+import apps.app.altcompany.pages.home.models.HomeResponse;
+import apps.app.altcompany.pages.home.models.orderDetails.OrderDetailsRequest;
+import apps.app.altcompany.pages.home.models.orderDetails.OrderDetailsResponse;
+import apps.app.altcompany.utils.Constants;
+import apps.app.altcompany.utils.URLS;
+import io.reactivex.disposables.Disposable;
+
+@Singleton
+public class OrdersRepository extends BaseRepository {
+    @Inject
+    public ConnectionHelper connectionHelper;
+    protected MutableLiveData<Mutable> liveData;
+
+    @Inject
+    public OrdersRepository(ConnectionHelper connectionHelper) {
+        this.connectionHelper = connectionHelper;
+    }
+
+    public void setLiveData(MutableLiveData<Mutable> liveData) {
+        this.liveData = liveData;
+        connectionHelper.liveData = liveData;
+    }
+
+    public Disposable home() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.HOME, new Object(), HomeResponse.class,
+                Constants.HOME, true);
+    }
+
+    public Disposable orderDetails(int orderId) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ORDER_DETAILS, new OrderDetailsRequest(orderId), OrderDetailsResponse.class,
+                Constants.ORDER_DETAILS, true);
+    }
+
+    public Disposable sendOffer(int orderId) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.SEND_OFFER, new OrderDetailsRequest(orderId), StatusMessage.class,
+                Constants.SEND_OFFER, true);
+    }
+
+
+}

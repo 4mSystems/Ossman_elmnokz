@@ -26,9 +26,9 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
     private final androidx.appcompat.widget.AppCompatButton mboundView3;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback20;
+    private final android.view.View.OnClickListener mCallback8;
     @Nullable
-    private final android.view.View.OnClickListener mCallback19;
+    private final android.view.View.OnClickListener mCallback9;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -38,7 +38,7 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
     }
     private ActivityMapAddressBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
-            , (android.widget.ImageView) bindings[1]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
             , (android.widget.ImageView) bindings[6]
             , (android.widget.ProgressBar) bindings[7]
             , (com.google.android.gms.maps.MapView) bindings[2]
@@ -53,8 +53,8 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
         this.mboundView3.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback20 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
-        mCallback19 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback8 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback9 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -158,8 +158,8 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.imgMapSubmit.setOnClickListener(mCallback19);
-            this.mboundView3.setOnClickListener(mCallback20);
+            this.imgMapSubmit.setOnClickListener(mCallback8);
+            this.mboundView3.setOnClickListener(mCallback9);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -171,23 +171,6 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // mapAddressViewModel
-                apps.app.altcompany.utils.locations.MapAddressViewModel mapAddressViewModel = mMapAddressViewModel;
-                // mapAddressViewModel != null
-                boolean mapAddressViewModelJavaLangObjectNull = false;
-
-
-
-                mapAddressViewModelJavaLangObjectNull = (mapAddressViewModel) != (null);
-                if (mapAddressViewModelJavaLangObjectNull) {
-
-
-                    mapAddressViewModel.submit();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // mapAddressViewModel
@@ -203,6 +186,23 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
 
 
                     mapAddressViewModel.goBack(getRoot().getContext());
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // mapAddressViewModel
+                apps.app.altcompany.utils.locations.MapAddressViewModel mapAddressViewModel = mMapAddressViewModel;
+                // mapAddressViewModel != null
+                boolean mapAddressViewModelJavaLangObjectNull = false;
+
+
+
+                mapAddressViewModelJavaLangObjectNull = (mapAddressViewModel) != (null);
+                if (mapAddressViewModelJavaLangObjectNull) {
+
+
+                    mapAddressViewModel.submit();
                 }
                 break;
             }

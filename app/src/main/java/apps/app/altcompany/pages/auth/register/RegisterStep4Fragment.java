@@ -20,16 +20,12 @@ import apps.app.altcompany.R;
 import apps.app.altcompany.base.BaseFragment;
 import apps.app.altcompany.base.IApplicationComponent;
 import apps.app.altcompany.base.MyApplication;
-import apps.app.altcompany.databinding.FragmentRegisterStep3Binding;
 import apps.app.altcompany.databinding.FragmentRegisterStep4Binding;
 import apps.app.altcompany.model.base.Mutable;
 import apps.app.altcompany.pages.auth.confirmCode.ConfirmCodeFragment;
-import apps.app.altcompany.pages.auth.models.UsersResponse;
-import apps.app.altcompany.pages.auth.register.models.RegisterStep1Response;
-import apps.app.altcompany.pages.auth.register.models.packages.PackageResponse;
+import apps.app.altcompany.pages.auth.login.models.UsersResponse;
 import apps.app.altcompany.utils.Constants;
 import apps.app.altcompany.utils.helper.MovementHelper;
-import apps.app.altcompany.utils.session.UserHelper;
 
 public class RegisterStep4Fragment extends BaseFragment {
     private Context context;
@@ -43,7 +39,6 @@ public class RegisterStep4Fragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setRegisterStep1ViewModel(viewModel);
-        viewModel.getPackages();
         setEvent();
         return binding.getRoot();
     }
@@ -53,7 +48,7 @@ public class RegisterStep4Fragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (Constants.NOT_VERIFIED.equals(mutable.message)) {
-                MovementHelper.startActivityWithBundle(context, new PassingObject(Constants.CHECK_CONFIRM_NAV_REGISTER, ((UsersResponse) mutable.object).getData().getEmail()), null, ConfirmCodeFragment.class.getName(), null);
+                MovementHelper.startActivityWithBundle(context, new PassingObject(Constants.CHECK_CONFIRM_NAV_REGISTER), null, ConfirmCodeFragment.class.getName(), null);
             }
 
         });

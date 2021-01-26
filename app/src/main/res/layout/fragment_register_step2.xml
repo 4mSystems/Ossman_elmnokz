@@ -31,6 +31,7 @@
                 android:id="@+id/your_state_progress_bar_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:visibility="@{registerStep1ViewModel.userData!=null?View.GONE:View.VISIBLE,default=gone}"
                 app:spb_animateToCurrentProgressState="true"
                 app:spb_checkStateCompleted="true"
                 app:spb_currentStateDescriptionColor="#009688"
@@ -132,8 +133,23 @@
                 android:paddingStart="@dimen/dp70h"
                 android:paddingEnd="@dimen/dp70h"
                 android:text="@string/next"
-                android:textSize="@dimen/sp12"
-                android:textStyle="bold" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                android:visibility="@{registerStep1ViewModel.userData!=null?View.GONE:View.VISIBLE,default=gone}" />
+
+            <apps.app.altcompany.customViews.views.CustomTextViewMedium
+                style="@style/btn_submit_primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10h"
+                android:layout_marginBottom="@dimen/dp20h"
+                android:onClick="@{() -> registerStep1ViewModel.registerStep2()}"
+                android:paddingStart="@dimen/dp70h"
+                android:paddingEnd="@dimen/dp70h"
+                android:text="@string/label_save"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                android:visibility="@{registerStep1ViewModel.userData!=null?View.VISIBLE:View.GONE,default=gone}" />
 
         </LinearLayout>
 

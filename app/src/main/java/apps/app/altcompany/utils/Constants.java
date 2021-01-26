@@ -32,11 +32,11 @@ public class Constants {
     public final static String EMPTY_WARNING = "EMPTY_WARNING";
 
     public final static String LOGOUT = "logout";
-    public final static String FLIP_CARD = "FLIP_CARD";
+    public final static String ORDER_DETAILS = "ORDER_DETAILS";
 
-    public final static String CHOOSE_CITY = "CHOOSE_CITY";
-    public final static String AD_INFO_1 = "AD_INFO_1";
-    public final static String SUBSCRIBE_AS_DELEGATE = "SUBSCRIBE_AS_DELEGATE";
+    public final static String SEND_OFFER = "SEND_OFFER";
+    public final static String USER_DETAILS = "USER_DETAILS";
+    public final static String COMPANY_PROFILE = "COMPANY_PROFILE";
     public final static String ERROR_TOAST = "error_toast";
 
     public final static String ERROR = "error";
@@ -44,7 +44,7 @@ public class Constants {
     public final static String HIDE_PROGRESS = "hideProgress";
     public final static String SERVER_ERROR = "serverError";
     public final static String ERROR_NOT_FOUND = "not_found";
-    public final static String FAVORITES = "FAVORITES";
+    public final static String UPDATE_CATEGORY = "UPDATE_CATEGORY";
     public final static String FAILURE_CONNECTION = "failure_connection";
     public final static String AD_UPLOAD_ATTACH = "AD_UPLOAD_ATTACH";
 
@@ -77,11 +77,10 @@ public class Constants {
     public static final int RESPONSE_SUCCESS = 200;
     public final static int RESPONSE_ERROR = 203;
     public static final int RESPONSE_TRIP_FAILED = 401;
-    public static final int PAYMENT_REQUIRED_CODE = 402;
     public static final int RESPONSE_JWT_EXPIRE = 403;
     public static final int RESPONSE_404 = 404;
-    public static final int RESPONSE_401 = 401;
-    public static final int GPS_REQUEST = 406;
+    public static final int RESPONSE_405 = 405;
+    public static final int RESPONSE_402 = 402;
     public static final int LOCATION_REQUEST = 407;
     public static final int RATE_REQUEST = 408;
     public static final int FILTER_REQUEST = 409;
@@ -96,7 +95,7 @@ public class Constants {
     public final static int CHECK_CONFIRM_NAV_FORGET = 1;
 
     public static final String front_car_image = "front_car_image";
-    public static final int RC_SIGN_IN  = 9001;
+    public static final int RC_SIGN_IN = 9001;
 
     public static final String back_car_image = "back_car_image";
     public static final int back_car_code = 381;

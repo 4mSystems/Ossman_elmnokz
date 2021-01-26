@@ -63,6 +63,7 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="@dimen/dp70h"
                 android:paddingEnd="@dimen/dp70h"
+                android:onClick="@{()-> verificationCodeViewModel.confirmCode()}"
                 android:text="@string/label_confirm"
                 android:textSize="@dimen/sp12"
                 android:textStyle="bold" />

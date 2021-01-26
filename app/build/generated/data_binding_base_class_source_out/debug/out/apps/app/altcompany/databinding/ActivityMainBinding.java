@@ -16,15 +16,15 @@ import java.lang.Object;
 
 public abstract class ActivityMainBinding extends ViewDataBinding {
   @NonNull
-  public final LinearLayout flHomeContainer;
+  public final LinearLayout llBaseActionBarContainer;
 
   @NonNull
   public final ConstraintLayout llBaseContainer;
 
   protected ActivityMainBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      LinearLayout flHomeContainer, ConstraintLayout llBaseContainer) {
+      LinearLayout llBaseActionBarContainer, ConstraintLayout llBaseContainer) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.flHomeContainer = flHomeContainer;
+    this.llBaseActionBarContainer = llBaseActionBarContainer;
     this.llBaseContainer = llBaseContainer;
   }
 

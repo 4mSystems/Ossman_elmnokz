@@ -25,9 +25,6 @@ public class MapAddressViewModel extends BaseViewModel {
 
     public static double lat = 0,lng = 0;
     public GoogleMap mMap;
-
-
-
     public void submit(){
         getLiveData().setValue(Constants.PICKED_SUCCESSFULLY);
     }

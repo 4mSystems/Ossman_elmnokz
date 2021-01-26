@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding  {
+public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding implements apps.app.altcompany.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,12 +14,16 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding  
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.logo, 2);
+        sViewsWithIds.put(R.id.logo, 3);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
+    @NonNull
+    private final apps.app.altcompany.customViews.views.CustomTextViewMedium mboundView2;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback12;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -62,18 +66,21 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding  
     };
 
     public FragmentConfirmCodeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private FragmentConfirmCodeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
             , (com.chaos.view.PinView) bindings[1]
             );
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView2 = (apps.app.altcompany.customViews.views.CustomTextViewMedium) bindings[2];
+        this.mboundView2.setTag(null);
         this.pinView.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback12 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -162,19 +169,36 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding  
                 }
         }
         // batch finished
+        if ((dirtyFlags & 0x2L) != 0) {
+            // api target 1
+
+            this.mboundView2.setOnClickListener(mCallback12);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.pinView, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, pinViewandroidTextAttrChanged);
+        }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.pinView, verificationCodeViewModelRequestCode);
         }
-        if ((dirtyFlags & 0x2L) != 0) {
-            // api target 1
-
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.pinView, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, pinViewandroidTextAttrChanged);
-        }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // verificationCodeViewModel
+        apps.app.altcompany.pages.auth.confirmCode.CodeViewModel verificationCodeViewModel = mVerificationCodeViewModel;
+        // verificationCodeViewModel != null
+        boolean verificationCodeViewModelJavaLangObjectNull = false;
+
+
+
+        verificationCodeViewModelJavaLangObjectNull = (verificationCodeViewModel) != (null);
+        if (verificationCodeViewModelJavaLangObjectNull) {
+
+
+            verificationCodeViewModel.confirmCode();
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

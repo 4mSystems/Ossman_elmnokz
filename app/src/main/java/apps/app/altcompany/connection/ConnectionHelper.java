@@ -147,14 +147,19 @@ public class ConnectionHelper {
                     public void onNext(JsonObject response) {
                         hideProgress(showProgress);
                         String jsonString = gson.toJson(response);
-                        StatusMessage statusMessage = gson.fromJson(jsonString, (Type) responseType);
-                        Log.e(TAG, "onNext: " + statusMessage.mMessage);
-                        if (statusMessage.code == Constants.RESPONSE_SUCCESS)
-                            liveData.setValue(new Mutable(constantSuccessResponse, gson.fromJson(jsonString, responseType)));
-                        else if (statusMessage.code == Constants.RESPONSE_JWT_EXPIRE)
-                            liveData.setValue(new Mutable(Constants.LOGOUT, statusMessage.mMessage));
-                        else
-                            liveData.setValue(new Mutable(Constants.ERROR, statusMessage.mMessage));
+                        try {
+                            StatusMessage statusMessage = gson.fromJson(jsonString, (Type) responseType);
+                            Log.e(TAG, "onNext: " + statusMessage.mMessage);
+                            if (statusMessage.code == Constants.RESPONSE_SUCCESS)
+                                liveData.setValue(new Mutable(constantSuccessResponse, gson.fromJson(jsonString, responseType)));
+                            else if (statusMessage.code == Constants.RESPONSE_JWT_EXPIRE)
+                                liveData.setValue(new Mutable(Constants.LOGOUT, statusMessage.mMessage));
+                            else
+                                liveData.setValue(new Mutable(Constants.ERROR, statusMessage.mMessage));
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                     }
 
                     @Override
@@ -211,14 +216,14 @@ public class ConnectionHelper {
                                 liveData.setValue(new Mutable(constantSuccessResponse, gson.fromJson(jsonString, responseType)));
                             else if (statusMessage.code == Constants.RESPONSE_JWT_EXPIRE)
                                 liveData.setValue(new Mutable(Constants.LOGOUT, statusMessage.mMessage));
-                            else if (statusMessage.code == Constants.RESPONSE_404)
-                                liveData.setValue(new Mutable(Constants.ERROR_NOT_FOUND, statusMessage.mMessage));
-                            else if (statusMessage.code == Constants.PAYMENT_REQUIRED_CODE) {
-                                Log.e(TAG, "onNext: " + response.toString());
+                            else if (statusMessage.code == Constants.RESPONSE_405)
+                                liveData.setValue(new Mutable(Constants.NOT_VERIFIED, statusMessage.mMessage));
+                            else if (statusMessage.code == Constants.RESPONSE_402) {
                                 liveData.setValue(new Mutable(constantSuccessResponse, gson.fromJson(jsonString, responseType)));
                             } else
                                 liveData.setValue(new Mutable(Constants.ERROR, statusMessage.mMessage));
                         } catch (Exception e) {
+                            liveData.setValue(new Mutable(Constants.ERROR, e.getMessage()));
                             e.printStackTrace();
                         }
 

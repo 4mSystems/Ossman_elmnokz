@@ -62,7 +62,6 @@ public class RegisterStep3Fragment extends BaseFragment {
                 case Constants.REGISTER:
                     toastMessage(((Mutable) o).message);
                     viewModel.goBack(context);
-                    UserHelper.getInstance(context).addJwt(((RegisterStep1Response) mutable.object).getRegisterStep1Data().getJwt());
                     UserHelper.getInstance(context).saveStep("3");
                     MovementHelper.startActivity(context, RegisterStep4Fragment.class.getName(), getString(R.string.payment), null);
                     break;

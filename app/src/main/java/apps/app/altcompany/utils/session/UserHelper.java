@@ -5,7 +5,8 @@ import android.content.SharedPreferences;
 
 import com.google.gson.Gson;
 
-import apps.app.altcompany.pages.auth.models.UserData;
+import apps.app.altcompany.pages.auth.login.models.UserData;
+
 
 public class UserHelper {
     private static UserHelper mInstance;

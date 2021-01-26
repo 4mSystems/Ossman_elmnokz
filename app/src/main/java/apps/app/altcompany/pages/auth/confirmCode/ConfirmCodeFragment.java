@@ -2,6 +2,7 @@ package apps.app.altcompany.pages.auth.confirmCode;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +26,7 @@ import apps.app.altcompany.base.MyApplication;
 import apps.app.altcompany.databinding.FragmentConfirmCodeBinding;
 import apps.app.altcompany.model.base.Mutable;
 import apps.app.altcompany.pages.auth.changePassword.ChangePasswordFragment;
-import apps.app.altcompany.pages.auth.models.UsersResponse;
+import apps.app.altcompany.pages.auth.login.models.UsersResponse;
 import apps.app.altcompany.utils.Constants;
 import apps.app.altcompany.utils.helper.MovementHelper;
 import apps.app.altcompany.utils.session.UserHelper;
@@ -61,7 +62,7 @@ public class ConfirmCodeFragment extends BaseFragment {
                     MovementHelper.startActivityMain(context);
                 } else {
                     UserHelper.getInstance(context).addJwt(((UsersResponse) ((Mutable) o).object).getData().getJwt());
-                    MovementHelper.startActivity(context, ChangePasswordFragment.class.getName(), null, null);
+                    MovementHelper.startActivityWithBundle(context, new PassingObject(viewModel.getPassingObject().getId()), null, ChangePasswordFragment.class.getName(), null);
                 }
                 viewModel.goBack(context);
             }

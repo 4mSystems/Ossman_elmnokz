@@ -24,7 +24,7 @@ import apps.app.altcompany.base.IApplicationComponent;
 import apps.app.altcompany.base.MyApplication;
 import apps.app.altcompany.databinding.FragmentChangePasswordBinding;
 import apps.app.altcompany.model.base.Mutable;
-import apps.app.altcompany.model.base.StatusMessage;
+import apps.app.altcompany.pages.auth.login.models.UsersResponse;
 import apps.app.altcompany.utils.Constants;
 
 public class ChangePasswordFragment extends BaseFragment {
@@ -51,8 +51,8 @@ public class ChangePasswordFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            if (mutable.message.equals(Constants.UPDATE_PROFILE)) {
-                toastMessage(((StatusMessage) mutable.object).mMessage);
+            if (mutable.message.equals(Constants.CHANGE_PASSWORD)) {
+                toastMessage(((UsersResponse) mutable.object).mMessage);
                 viewModel.goBack(context);
             } else if (mutable.message.equals(Constants.NOT_MATCH_PASSWORD)) {
                 showError(getResources().getString(R.string.password_not_match));

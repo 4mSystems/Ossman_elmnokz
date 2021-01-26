@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".views.fragments.ProductDetailsFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="apps.app.altcompany.pages.home.viewModels.OrderDetailsViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_img"
+                android:layout_width="@dimen/dp70w"
+                android:layout_height="@dimen/dp70h"
+                android:layout_margin="@dimen/dp10h"
+                android:onClick="@{()-> viewModel.toUserDetails()}"
+                android:src="@drawable/ic_user"
+                app:civ_border_color="@color/colorAccent"
+                app:civ_border_width="1dp"
+                app:imageUrl="@{viewModel.ordersData.user.users_img}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <apps.app.altcompany.customViews.views.CustomTextViewMedium
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10w"
+                android:layout_marginEnd="@dimen/dp6w"
+                android:text="@{viewModel.ordersData.user.users_username}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintBottom_toBottomOf="@id/user_img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/user_img"
+                app:layout_constraintTop_toTopOf="@id/user_img" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10w"
+                android:layout_marginTop="@dimen/dp12h"
+                android:layout_marginEnd="@dimen/dp10w"
+                app:cardCornerRadius="@dimen/dp15h"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/user_img">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp120h"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_logo"
+                    app:imageUrl="@{viewModel.ordersData.ordersImgorVideo}" />
+            </androidx.cardview.widget.CardView>
+
+            <apps.app.altcompany.customViews.views.CustomTextViewMedium
+                android:id="@+id/txt_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:layout_marginEnd="@dimen/dp10w"
+                android:background="@drawable/border_grey_round_line"
+                android:padding="@dimen/dp8h"
+                android:text="@{viewModel.ordersData.ordersDesc}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintTop_toBottomOf="@id/card_img" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/btn_submit_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10w"
+                android:layout_marginTop="@dimen/dp15h"
+                android:layout_marginEnd="@dimen/dp10w"
+                android:layout_marginBottom="@dimen/dp15h"
+                android:onClick="@{()-> viewModel.sendOffer()}"
+                android:text="@string/send_offer"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_details" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

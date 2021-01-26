@@ -13,42 +13,49 @@ public class FragmentRegisterStep2BindingImpl extends FragmentRegisterStep2Bindi
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.your_state_progress_bar_id, 4);
+        sViewsWithIds = null;
     }
     // views
     @NonNull
-    private final androidx.recyclerview.widget.RecyclerView mboundView2;
+    private final androidx.recyclerview.widget.RecyclerView mboundView3;
     @NonNull
-    private final apps.app.altcompany.customViews.views.CustomTextViewMedium mboundView3;
+    private final apps.app.altcompany.customViews.views.CustomTextViewMedium mboundView4;
+    @NonNull
+    private final apps.app.altcompany.customViews.views.CustomTextViewMedium mboundView5;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback5;
+    private final android.view.View.OnClickListener mCallback16;
     @Nullable
-    private final android.view.View.OnClickListener mCallback4;
+    private final android.view.View.OnClickListener mCallback17;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback18;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentRegisterStep2BindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
     }
     private FragmentRegisterStep2BindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
-            , (apps.app.altcompany.customViews.views.CustomEditText) bindings[1]
+            , (apps.app.altcompany.customViews.views.CustomEditText) bindings[2]
             , (androidx.core.widget.NestedScrollView) bindings[0]
-            , (com.kofigyan.stateprogressbar.StateProgressBar) bindings[4]
+            , (com.kofigyan.stateprogressbar.StateProgressBar) bindings[1]
             );
         this.departments.setTag(null);
-        this.mboundView2 = (androidx.recyclerview.widget.RecyclerView) bindings[2];
-        this.mboundView2.setTag(null);
-        this.mboundView3 = (apps.app.altcompany.customViews.views.CustomTextViewMedium) bindings[3];
+        this.mboundView3 = (androidx.recyclerview.widget.RecyclerView) bindings[3];
         this.mboundView3.setTag(null);
+        this.mboundView4 = (apps.app.altcompany.customViews.views.CustomTextViewMedium) bindings[4];
+        this.mboundView4.setTag(null);
+        this.mboundView5 = (apps.app.altcompany.customViews.views.CustomTextViewMedium) bindings[5];
+        this.mboundView5.setTag(null);
         this.svRegisterStep1.setTag(null);
+        this.yourStateProgressBarId.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback5 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
-        mCallback4 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback16 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback17 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
+        mCallback18 = new apps.app.altcompany.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -136,9 +143,13 @@ public class FragmentRegisterStep2BindingImpl extends FragmentRegisterStep2Bindi
         }
         apps.app.altcompany.pages.auth.register.RegisterViewModel registerStep1ViewModel = mRegisterStep1ViewModel;
         apps.app.altcompany.pages.auth.register.adapters.CategoriesAdapter registerStep1ViewModelCategoriesAdapter = null;
+        boolean registerStep1ViewModelUserDataJavaLangObjectNull = false;
+        int registerStep1ViewModelUserDataJavaLangObjectNullViewGONEViewVISIBLE = 0;
         apps.app.altcompany.pages.auth.models.RegisterRequest registerStep1ViewModelRequest = null;
         java.lang.String registerStep1ViewModelRequestCategoryIdErrorGet = null;
+        apps.app.altcompany.pages.auth.login.models.UserData registerStep1ViewModelUserData = null;
         androidx.databinding.ObservableField<java.lang.String> registerStep1ViewModelRequestCategoryIdError = null;
+        int registerStep1ViewModelUserDataJavaLangObjectNullViewVISIBLEViewGONE = 0;
 
         if ((dirtyFlags & 0xfL) != 0) {
 
@@ -170,13 +181,41 @@ public class FragmentRegisterStep2BindingImpl extends FragmentRegisterStep2Bindi
                         registerStep1ViewModelRequestCategoryIdErrorGet = registerStep1ViewModelRequestCategoryIdError.get();
                     }
             }
+            if ((dirtyFlags & 0x9L) != 0) {
+
+                    if (registerStep1ViewModel != null) {
+                        // read registerStep1ViewModel.userData
+                        registerStep1ViewModelUserData = registerStep1ViewModel.userData;
+                    }
+
+
+                    // read registerStep1ViewModel.userData != null
+                    registerStep1ViewModelUserDataJavaLangObjectNull = (registerStep1ViewModelUserData) != (null);
+                if((dirtyFlags & 0x9L) != 0) {
+                    if(registerStep1ViewModelUserDataJavaLangObjectNull) {
+                            dirtyFlags |= 0x20L;
+                            dirtyFlags |= 0x80L;
+                    }
+                    else {
+                            dirtyFlags |= 0x10L;
+                            dirtyFlags |= 0x40L;
+                    }
+                }
+
+
+                    // read registerStep1ViewModel.userData != null ? View.GONE : View.VISIBLE
+                    registerStep1ViewModelUserDataJavaLangObjectNullViewGONEViewVISIBLE = ((registerStep1ViewModelUserDataJavaLangObjectNull) ? (android.view.View.GONE) : (android.view.View.VISIBLE));
+                    // read registerStep1ViewModel.userData != null ? View.VISIBLE : View.GONE
+                    registerStep1ViewModelUserDataJavaLangObjectNullViewVISIBLEViewGONE = ((registerStep1ViewModelUserDataJavaLangObjectNull) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+            }
         }
         // batch finished
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.departments.setOnClickListener(mCallback4);
-            this.mboundView3.setOnClickListener(mCallback5);
+            this.departments.setOnClickListener(mCallback16);
+            this.mboundView4.setOnClickListener(mCallback17);
+            this.mboundView5.setOnClickListener(mCallback18);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
@@ -186,30 +225,20 @@ public class FragmentRegisterStep2BindingImpl extends FragmentRegisterStep2Bindi
         if ((dirtyFlags & 0xdL) != 0) {
             // api target 1
 
-            apps.app.altcompany.base.ApplicationBinding.getItemsV2Binding(this.mboundView2, registerStep1ViewModelCategoriesAdapter, "1", "1");
+            apps.app.altcompany.base.ApplicationBinding.getItemsV2Binding(this.mboundView3, registerStep1ViewModelCategoriesAdapter, "1", "1");
+        }
+        if ((dirtyFlags & 0x9L) != 0) {
+            // api target 1
+
+            this.mboundView4.setVisibility(registerStep1ViewModelUserDataJavaLangObjectNullViewGONEViewVISIBLE);
+            this.mboundView5.setVisibility(registerStep1ViewModelUserDataJavaLangObjectNullViewVISIBLEViewGONE);
+            this.yourStateProgressBarId.setVisibility(registerStep1ViewModelUserDataJavaLangObjectNullViewGONEViewVISIBLE);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // registerStep1ViewModel != null
-                boolean registerStep1ViewModelJavaLangObjectNull = false;
-                // registerStep1ViewModel
-                apps.app.altcompany.pages.auth.register.RegisterViewModel registerStep1ViewModel = mRegisterStep1ViewModel;
-
-
-
-                registerStep1ViewModelJavaLangObjectNull = (registerStep1ViewModel) != (null);
-                if (registerStep1ViewModelJavaLangObjectNull) {
-
-
-                    registerStep1ViewModel.registerStep2();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // registerStep1ViewModel != null
@@ -227,6 +256,40 @@ public class FragmentRegisterStep2BindingImpl extends FragmentRegisterStep2Bindi
                 }
                 break;
             }
+            case 2: {
+                // localize variables for thread safety
+                // registerStep1ViewModel != null
+                boolean registerStep1ViewModelJavaLangObjectNull = false;
+                // registerStep1ViewModel
+                apps.app.altcompany.pages.auth.register.RegisterViewModel registerStep1ViewModel = mRegisterStep1ViewModel;
+
+
+
+                registerStep1ViewModelJavaLangObjectNull = (registerStep1ViewModel) != (null);
+                if (registerStep1ViewModelJavaLangObjectNull) {
+
+
+                    registerStep1ViewModel.registerStep2();
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // registerStep1ViewModel != null
+                boolean registerStep1ViewModelJavaLangObjectNull = false;
+                // registerStep1ViewModel
+                apps.app.altcompany.pages.auth.register.RegisterViewModel registerStep1ViewModel = mRegisterStep1ViewModel;
+
+
+
+                registerStep1ViewModelJavaLangObjectNull = (registerStep1ViewModel) != (null);
+                if (registerStep1ViewModelJavaLangObjectNull) {
+
+
+                    registerStep1ViewModel.registerStep2();
+                }
+                break;
+            }
         }
     }
     // dirty flag
@@ -236,6 +299,10 @@ public class FragmentRegisterStep2BindingImpl extends FragmentRegisterStep2Bindi
         flag 1 (0x2L): registerStep1ViewModel.request.categoryIdError
         flag 2 (0x3L): registerStep1ViewModel.categoriesAdapter
         flag 3 (0x4L): null
+        flag 4 (0x5L): registerStep1ViewModel.userData != null ? View.GONE : View.VISIBLE
+        flag 5 (0x6L): registerStep1ViewModel.userData != null ? View.GONE : View.VISIBLE
+        flag 6 (0x7L): registerStep1ViewModel.userData != null ? View.VISIBLE : View.GONE
+        flag 7 (0x8L): registerStep1ViewModel.userData != null ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

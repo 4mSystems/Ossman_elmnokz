@@ -13,13 +13,13 @@ import apps.app.altcompany.connection.ConnectionHelper;
 import apps.app.altcompany.connection.FileObject;
 import apps.app.altcompany.model.base.Mutable;
 import apps.app.altcompany.model.base.StatusMessage;
-import apps.app.altcompany.pages.auth.models.ChangePasswordRequest;
+import apps.app.altcompany.pages.auth.changePassword.ChangePasswordRequest;
+import apps.app.altcompany.pages.auth.login.models.UsersResponse;
 import apps.app.altcompany.pages.auth.models.ConfirmCodeRequest;
 import apps.app.altcompany.pages.auth.models.ForgetPasswordRequest;
 import apps.app.altcompany.pages.auth.models.LoginRequest;
 import apps.app.altcompany.pages.auth.models.RegisterRequest;
 import apps.app.altcompany.pages.auth.models.SocialRequest;
-import apps.app.altcompany.pages.auth.models.UsersResponse;
 import apps.app.altcompany.pages.auth.models.cities.CitiesResponse;
 import apps.app.altcompany.pages.auth.register.models.PrivacyResponse;
 import apps.app.altcompany.pages.auth.register.models.RegisterStep1Response;
@@ -74,6 +74,11 @@ public class AuthRepository extends BaseRepository {
                 Constants.REGISTER, true);
     }
 
+    public Disposable updateCategories(RegisterRequest request) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.UPDATE_CATEGORY, request, StatusMessage.class,
+                Constants.UPDATE_CATEGORY, true);
+    }
+
     public Disposable registerStep3(RegisterRequest request) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.REGISTER, request, StatusMessage.class,
                 Constants.REGISTER, true);
@@ -102,7 +107,7 @@ public class AuthRepository extends BaseRepository {
     }
 
     public Disposable changePassword(ChangePasswordRequest request) {
-        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.CHANGE_PASSWORD, request, StatusMessage.class,
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.CHANGE_PASSWORD, request, UsersResponse.class,
                 Constants.CHANGE_PASSWORD, true);
     }
 
@@ -119,6 +124,11 @@ public class AuthRepository extends BaseRepository {
     public Disposable packages() {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.PACKAGES, new Object(), PackageResponse.class,
                 Constants.PACKAGES, true);
+    }
+
+    public Disposable companyProfile() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.COMPANY_PROFILE, new Object(), UsersResponse.class,
+                Constants.COMPANY_PROFILE, true);
     }
 
 }

@@ -6,6 +6,13 @@ import apps.app.altcompany.pages.auth.register.RegisterFragment;
 import apps.app.altcompany.pages.auth.register.RegisterStep2Fragment;
 import apps.app.altcompany.pages.auth.register.RegisterStep3Fragment;
 import apps.app.altcompany.pages.auth.register.RegisterStep4Fragment;
+import apps.app.altcompany.pages.companies.CompanyProfileFragment;
+import apps.app.altcompany.pages.home.HomeFragment;
+import apps.app.altcompany.pages.home.OrderDetailsFragment;
+import apps.app.altcompany.pages.home.UserDetailsFragment;
+import apps.app.altcompany.pages.settings.AboutFragment;
+import apps.app.altcompany.pages.settings.PrivacyFragment;
+import apps.app.altcompany.pages.settings.SuggestionsFragment;
 import apps.app.altcompany.utils.locations.MapAddressActivity;
 import dagger.Component;
 import apps.app.altcompany.activity.BaseActivity;
@@ -43,6 +50,20 @@ public interface IApplicationComponent {
     void inject(RegisterStep4Fragment registerStep4Fragment);
 
     void inject(MapAddressActivity mapAddressActivity);
+
+    void inject(HomeFragment homeFragment);
+
+    void inject(PrivacyFragment privacyFragment);
+
+    void inject(OrderDetailsFragment orderDetailsFragment);
+
+    void inject(UserDetailsFragment userDetailsFragment);
+
+    void inject(CompanyProfileFragment companyProfileFragment);
+
+    void inject(SuggestionsFragment suggestionsFragment);
+
+    void inject(AboutFragment aboutFragment);
 
 
     @Component.Builder

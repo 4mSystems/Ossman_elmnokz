@@ -14,7 +14,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.fl_home_container, 1);
+        sViewsWithIds.put(R.id.ll_base_action_bar_container, 1);
     }
     // views
     // variables

@@ -9,7 +9,7 @@ import apps.app.altcompany.utils.Constants;
 import apps.app.altcompany.utils.validation.Validate;
 
 public class ForgetPasswordRequest {
-    @SerializedName("phone")
+    @SerializedName("workers_phone_number")
     @Expose
     private String phone;
     public transient ObservableField<String> phoneError = new ObservableField<>();

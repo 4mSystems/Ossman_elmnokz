@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.BatteryManager;
+import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
 import android.webkit.URLUtil;
@@ -15,10 +16,6 @@ import apps.app.altcompany.R;
 import apps.app.altcompany.utils.Constants;
 import apps.app.altcompany.utils.resources.ResourceManager;
 
-/**
- * Created by osama on 12/31/2017.
- */
-
 public class Validate {
     public static String error;
 
@@ -26,9 +23,6 @@ public class Validate {
         if (isValid(data)) {
             if (type.equals(Constants.EMAIL) && !Validate.isMail(data)) {
                 error = ResourceManager.getString(R.string.invalidEmail);
-                return false;
-            } else if (type.equals(Constants.FIELD) && !isPhoneValid(data)) {
-                error = ResourceManager.getString(R.string.invalidPhone);
                 return false;
             }
             return true;
@@ -55,9 +49,10 @@ public class Validate {
         return (matcher.matches()) ? true : false;
     }
 
+    private static final String TAG = "Validate";
+
     public static boolean isValid(String data) {
-        if (data != null && data.trim().equals("")) {
-            Log.e("valid", "dataFalse");
+        if (TextUtils.isEmpty(data)) {
             error = ResourceManager.getString(R.string.this_field_is_requried);
             return false;
         }

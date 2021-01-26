@@ -1,5 +1,7 @@
 package apps.app.altcompany.pages.auth.login;
 
+import android.util.Log;
+
 import androidx.lifecycle.MutableLiveData;
 
 import javax.inject.Inject;
@@ -31,8 +33,6 @@ public class LoginViewModel extends BaseViewModel {
     public void register() {
         liveData.setValue(new Mutable(Constants.REGISTER));
     }
-
-    private static final String TAG = "LoginViewModel";
 
     public void forgetPassword() {
         liveData.setValue(new Mutable(Constants.FORGET_PASSWORD));

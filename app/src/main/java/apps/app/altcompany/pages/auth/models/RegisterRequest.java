@@ -18,9 +18,6 @@ public class RegisterRequest {
     private String phone;
     @SerializedName("password")
     private String password;
-    @SerializedName("old_password")
-    private String oldPassword;
-    private transient String confirmPassword;
     @SerializedName("FK_cities_id")
     private String FK_cities_id;
     @SerializedName("workers_address")
@@ -40,6 +37,8 @@ public class RegisterRequest {
     private String step;
     @SerializedName("category_id")
     private String category_id;
+    @SerializedName("category")
+    private String category;
     @SerializedName("sub_categories")
     private List<Integer> sub_categories;
     @SerializedName("package_id")
@@ -65,37 +64,33 @@ public class RegisterRequest {
 
 
     public boolean isValidStep1() {
-//        boolean isValid = true;
-//        if (!Validate.isValid(name, Constants.FIELD)) {
-//            nameError.set(Validate.error);
-//            isValid = false;
-//        } else if (!Validate.isValid(email, Constants.EMAIL)) {
-//            emailError.set(Validate.error);
-//            isValid = false;
-//        } else if (!Validate.isValid(phone, Constants.FIELD)) {
-//            phoneError.set(Validate.error);
-//            isValid = false;
-//        } else if (!Validate.isValid(password, Constants.FIELD)) {
-//            passwordError.set(Validate.error);
-//            isValid = false;
-//        } else if (!Validate.isValid(FK_cities_id, Constants.FIELD)) {
-//            cityError.set(Validate.error);
-//            isValid = false;
-//        } else if (!Validate.isValid(workers_address, Constants.FIELD)) {
-//            addressError.set(Validate.error);
-//            isValid = false;
-//        } else if (!Validate.isValid(workers_desc, Constants.FIELD)) {
-//            desError.set(Validate.error);
-//            isValid = false;
-//        } else if (!Validate.isValid(bussinessregister, Constants.FIELD)) {
-//            businessError.set(Validate.error);
-//            isValid = false;
-//        }
-        return (
-                !TextUtils.isEmpty(name) && !TextUtils.isEmpty(email)
-                        && !TextUtils.isEmpty(phone) && !TextUtils.isEmpty(password)
-                        && !TextUtils.isEmpty(FK_cities_id) && !TextUtils.isEmpty(workers_address) && !TextUtils.isEmpty(workers_desc) && !TextUtils.isEmpty(bussinessregister)
-        );
+        boolean isValid = true;
+        if (!Validate.isValid(name, Constants.FIELD)) {
+            nameError.set(Validate.error);
+            isValid = false;
+        } else if (!Validate.isValid(email, Constants.EMAIL)) {
+            emailError.set(Validate.error);
+            isValid = false;
+        } else if (!Validate.isValid(phone, Constants.FIELD)) {
+            phoneError.set(Validate.error);
+            isValid = false;
+        } else if (!Validate.isValid(password, Constants.FIELD)) {
+            passwordError.set(Validate.error);
+            isValid = false;
+        } else if (!Validate.isValid(FK_cities_id, Constants.FIELD)) {
+            cityError.set(Validate.error);
+            isValid = false;
+        } else if (!Validate.isValid(workers_address, Constants.FIELD)) {
+            addressError.set(Validate.error);
+            isValid = false;
+        } else if (!Validate.isValid(workers_desc, Constants.FIELD)) {
+            desError.set(Validate.error);
+            isValid = false;
+        } else if (!Validate.isValid(bussinessregister, Constants.FIELD)) {
+            businessError.set(Validate.error);
+            isValid = false;
+        }
+        return isValid;
     }
 
     public boolean isValidStep2() {
@@ -105,26 +100,6 @@ public class RegisterRequest {
             isValid = false;
         }
         return isValid;
-    }
-
-    public boolean isPasswordsValid() {
-        boolean valid = true;
-        if (!Validate.isValid(password, Constants.CHANGE_PASSWORD)) {
-            passwordError.set(Validate.error);
-            valid = false;
-        } else if (!Validate.isValid(confirmPassword, Constants.CHANGE_PASSWORD)) {
-            confirmPasswordError.set(Validate.error);
-            valid = false;
-        }
-        return valid;
-    }
-
-    public String getConfirmPassword() {
-        return confirmPassword;
-    }
-
-    public void setConfirmPassword(String confirmPassword) {
-        this.confirmPassword = confirmPassword;
     }
 
     public String getName() {
@@ -159,13 +134,6 @@ public class RegisterRequest {
         this.email = email;
     }
 
-    public String getOldPassword() {
-        return oldPassword;
-    }
-
-    public void setOldPassword(String oldPassword) {
-        this.oldPassword = oldPassword;
-    }
 
     public String getFK_cities_id() {
         return FK_cities_id;
@@ -279,14 +247,20 @@ public class RegisterRequest {
         this.payment_success = payment_success;
     }
 
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
     @Override
     public String toString() {
         return "RegisterRequest{" +
                 "name='" + name + '\'' +
                 ", phone='" + phone + '\'' +
                 ", password='" + password + '\'' +
-                ", oldPassword='" + oldPassword + '\'' +
-                ", confirmPassword='" + confirmPassword + '\'' +
                 ", FK_cities_id='" + FK_cities_id + '\'' +
                 ", workers_address='" + workers_address + '\'' +
                 ", firebase_token='" + firebase_token + '\'' +

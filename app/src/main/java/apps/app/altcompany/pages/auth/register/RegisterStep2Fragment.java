@@ -23,6 +23,7 @@ import apps.app.altcompany.base.MyApplication;
 import apps.app.altcompany.base.ParentActivity;
 import apps.app.altcompany.databinding.FragmentRegisterStep2Binding;
 import apps.app.altcompany.model.base.Mutable;
+import apps.app.altcompany.model.base.StatusMessage;
 import apps.app.altcompany.pages.auth.confirmCode.ConfirmCodeFragment;
 import apps.app.altcompany.pages.auth.register.models.RegisterStep1Response;
 import apps.app.altcompany.pages.auth.register.models.categories.CategoriesResponse;
@@ -49,13 +50,16 @@ public class RegisterStep2Fragment extends BaseFragment {
     }
 
     private void setEvent() {
-
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             switch (mutable.message) {
                 case Constants.CATEGORIES:
                     viewModel.setDepartmentsItems(((CategoriesResponse) mutable.object).getAllDepartments().getCategories());
+                    break;
+                case Constants.UPDATE_CATEGORY:
+                    toastMessage(((StatusMessage) mutable.object).mMessage);
+                    finishActivity();
                     break;
                 case Constants.DEPARTMENT:
                     showDepartments();
@@ -78,6 +82,7 @@ public class RegisterStep2Fragment extends BaseFragment {
         PopUpMenuHelper.showDepartmentsPopUp(context, binding.departments, viewModel.getDepartmentsItems()).setOnMenuItemClickListener(item -> {
             binding.departments.setText(viewModel.getDepartmentsItems().get(item.getItemId()).getCategoriesName());
             viewModel.getRequest().setCategory_id(String.valueOf(viewModel.getDepartmentsItems().get(item.getItemId()).getCategoriesId()));
+            viewModel.getRequest().setCategory(String.valueOf(viewModel.getDepartmentsItems().get(item.getItemId()).getCategoriesId()));
             viewModel.getCategoriesAdapter().getSelectedCategories().clear();
             viewModel.getCategoriesAdapter().update(viewModel.getDepartmentsItems().get(item.getItemId()).getRelatedSubCategories());
             return false;

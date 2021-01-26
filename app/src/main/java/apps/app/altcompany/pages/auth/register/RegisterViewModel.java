@@ -64,10 +64,12 @@ public class RegisterViewModel extends BaseViewModel {
     public void registerStep2() {
         getRequest().setStep("2");
         if (getRequest().isValidStep2()) {
-            Log.e("registerStep2", "registerStep2: " + getCategoriesAdapter().getSelectedCategories().size());
             if (getCategoriesAdapter().getSelectedCategories() != null && getCategoriesAdapter().getSelectedCategories().size() > 0) {
                 getRequest().setSub_categories(getCategoriesAdapter().getSelectedCategories());
-                compositeDisposable.add(repository.register(request, fileObject));
+                if (userData == null)
+                    compositeDisposable.add(repository.register(request, fileObject));
+                else
+                    compositeDisposable.add(repository.updateCategories(request));
             } else
                 liveData.setValue(new Mutable(Constants.TERMS_WARNING));
         }

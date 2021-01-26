@@ -9,12 +9,14 @@ import androidx.databinding.DataBindingUtil;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import apps.app.altcompany.R;
+import apps.app.altcompany.customViews.menu.NavigationDrawerView;
 import apps.app.altcompany.databinding.LayoutActionBarHomeBinding;
 
 public class HomeActionBarView extends RelativeLayout {
     public LayoutActionBarHomeBinding layoutActionBarHomeBinding;
     DrawerLayout drawerLayout;
     private Context context;
+    NavigationDrawerView navigationDrawerView;
 
     public HomeActionBarView(Context context) {
         super(context);
@@ -49,7 +51,9 @@ public class HomeActionBarView extends RelativeLayout {
     public void setTitle(String string) {
         layoutActionBarHomeBinding.tvHomeBarText.setText(string);
     }
-
+    public void setNavigation(NavigationDrawerView navigationDrawerView) {
+        this.navigationDrawerView = navigationDrawerView;
+    }
     public void notificationVisible(int visible) {
         layoutActionBarHomeBinding.imgHomeBarMenuNotifications.setVisibility(visible);
     }

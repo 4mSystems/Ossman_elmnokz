@@ -12,13 +12,10 @@ import androidx.databinding.PropertyChangeRegistry;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import apps.app.altcompany.BR;
 import apps.app.altcompany.PassingObject;
 import apps.app.altcompany.R;
-import apps.app.altcompany.pages.auth.models.UserData;
+import apps.app.altcompany.pages.auth.login.models.UserData;
 import apps.app.altcompany.utils.images.PhotoFullPopupWindow;
 import apps.app.altcompany.utils.resources.ResourceManager;
 import apps.app.altcompany.utils.session.UserHelper;

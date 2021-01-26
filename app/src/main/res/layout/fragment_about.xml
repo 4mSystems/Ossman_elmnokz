@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".views.fragments.TermFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="aboutViewModel"
+            type="apps.app.altcompany.pages.settings.viewModels.SettingsViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp140h"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/about_us" />
+
+            <apps.app.altcompany.customViews.views.CustomTextViewMedium
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10h"
+                android:background="@drawable/border_silver_round_line"
+                android:padding="@dimen/dp8h"
+                android:text="@{aboutViewModel.privacyData.details}"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp15" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -39,7 +39,7 @@ import apps.app.altcompany.utils.session.MyContextWrapper;
 import apps.app.altcompany.utils.session.UserHelper;
 
 public class ParentActivity extends AppCompatActivity implements
-        ConnectivityReceiver.ConnectivityReceiverListener{
+        ConnectivityReceiver.ConnectivityReceiverListener {
     public NoInternetDialog noInternetDialog;
     public MutableLiveData<Boolean> ConnectionLiveData;
     ConnectivityReceiver connectivityReceiver = new ConnectivityReceiver();
@@ -155,7 +155,7 @@ public class ParentActivity extends AppCompatActivity implements
         } else if (mutable.message.equals(Constants.ERROR) && mutable.object instanceof String) {
             hideProgress();
             showError((String) mutable.object);
-        } else if (mutable.message.equals(Constants.NOT_VERIFIED) || mutable.message.equals(Constants.ERROR_NOT_FOUND) && mutable.object instanceof String) {
+        } else if (mutable.message.equals(Constants.ERROR_NOT_FOUND) && mutable.object instanceof String) {
             hideProgress();
             showError((String) mutable.object);
         } else if (mutable.message.equals(Constants.ERROR_TOAST) && mutable.object instanceof String) {

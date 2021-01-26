@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
 public class ConfirmCodeRequest {
     @SerializedName("phone")
     private String phone;
-    @SerializedName("code")
+    @SerializedName("verification_workers_code")
     private String code;
 
     public String getPhone() {

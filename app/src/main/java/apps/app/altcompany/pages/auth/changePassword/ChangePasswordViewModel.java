@@ -6,8 +6,7 @@ import javax.inject.Inject;
 
 import apps.app.altcompany.base.BaseViewModel;
 import apps.app.altcompany.model.base.Mutable;
-import apps.app.altcompany.pages.auth.models.RegisterRequest;
-import apps.app.altcompany.pages.auth.models.UserData;
+import apps.app.altcompany.pages.auth.login.models.UserData;
 import apps.app.altcompany.repository.AuthRepository;
 import apps.app.altcompany.utils.Constants;
 import apps.app.altcompany.utils.validation.Validate;
@@ -18,21 +17,21 @@ public class ChangePasswordViewModel extends BaseViewModel {
     @Inject
     AuthRepository repository;
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
-    private RegisterRequest request;
+    private ChangePasswordRequest request;
 
     @Inject
     public ChangePasswordViewModel(AuthRepository repository) {
         this.repository = repository;
         this.liveData = new MutableLiveData<>();
         repository.setLiveData(liveData);
-        request = new RegisterRequest();
+        request = new ChangePasswordRequest();
         userData = new UserData();
     }
 
     public void submit() {
         if (request.isPasswordsValid()) {
-            if (Validate.isMatchPassword(getRequest().getPassword(), getRequest().getConfirmPassword()))
-                compositeDisposable.add(repository.updateProfile(getRequest(), null));
+            if (Validate.isMatchPassword(getRequest().getNewPassword(), getRequest().getConfirmPassword()))
+                compositeDisposable.add(repository.changePassword(getRequest()));
             else
                 liveData.setValue(new Mutable(Constants.NOT_MATCH_PASSWORD));
         }
@@ -50,7 +49,7 @@ public class ChangePasswordViewModel extends BaseViewModel {
         unSubscribeFromObservable();
     }
 
-    public RegisterRequest getRequest() {
+    public ChangePasswordRequest getRequest() {
         return request;
     }
 

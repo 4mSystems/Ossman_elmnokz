@@ -1,6 +1,8 @@
 package apps.app.altcompany.pages.auth.models;
 
 
+import android.util.Log;
+
 import androidx.databinding.ObservableField;
 
 import com.google.gson.annotations.Expose;
@@ -46,9 +48,11 @@ public class LoginRequest {
         this.firebase_token = firebase_token;
     }
 
+    private static final String TAG = "LoginRequest";
+
     public boolean isValid() {
         boolean valid = true;
-        if (!Validate.isValid(email, Constants.EMAIL)) {
+        if (!Validate.isValid(email, Constants.FIELD)) {
             emailError.set(Validate.error);
             valid = false;
         }
