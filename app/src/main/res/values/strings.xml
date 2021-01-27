@@ -180,6 +180,7 @@
     <string name="message">Message</string>
     <string name="select_image">Select Image</string>
     <string name="send_offer">Send offer</string>
+    <string name="chat">Chat</string>
     <string name="recharge">Recharge</string>
     <string name="current_orders">Orders</string>
     <string name="previous_orders">Last orders</string>
@@ -205,4 +206,7 @@
     <string name="user_details">User details</string>
     <string name="points">points</string>
     <string name="company_profile">Company profile</string>
+    <string name="chat_hint">Write your message...</string>
+    <string name="finished">Finished</string>
+    <string name="waiting">Waiting</string>
 </resources>

@@ -51,9 +51,9 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.ViewHolder
         OrdersData ordersData = ordersDataList.get(position);
         ItemHomeViewModel itemMenuViewModel = new ItemHomeViewModel(ordersData);
         itemMenuViewModel.getLiveData().observe(((LifecycleOwner) context), o -> {
-            MovementHelper.startActivityWithBundle(context, new PassingObject(ordersData.getOrdersId()), ResourceManager.getString(R.string.order_details), OrderDetailsFragment.class.getName(), null);
+            MovementHelper.startActivityWithBundle(context, new PassingObject(ordersData.getOrdersId(), "-1"), ResourceManager.getString(R.string.order_details), OrderDetailsFragment.class.getName(), null);
         });
-
+        holder.binding.tvItemOrderStatus.setVisibility(View.GONE);
         holder.setViewModel(itemMenuViewModel);
     }
 

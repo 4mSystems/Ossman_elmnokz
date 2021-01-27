@@ -21,11 +21,11 @@ public class URLS {
     public final static String COMPANY_PROFILE = "workerprofile";
     public final static String UPDATE_CATEGORY = "editcategory";
     public final static String SUPPORT = "createsuggest";
-    public final static String SUBSCRIBE_AS_DELEGATE = "delegate/subscribe-as-delegate?shop_id=";
+    public final static String OFFERS = "getalloffers";
 
-    public final static String REMOVE_ADD_FAVORITE = "listings/add-to-fav";
-    public final static String MY_LISTING = "listings/my-listing/";
-    public final static String MY_PREMIUM_LISTING = "listings/my-premium-listing/";
+    public final static String ADD_OFFER = "createoffer";
+    public final static String MY_ORDERS = "getlastordersworker";
+    public static final String CHAT_ADMIN = "getallmessagesadmin";
     public final static String ABOUT = "aboutus";
     public final static String TERMS = "privacypolicy";
 
@@ -33,7 +33,7 @@ public class URLS {
     public static final String CONTACT_US = "settings/contact-us";
     public static final String NOTIFICATIONS = "notifications";
     public final static String GET_USER_DOCUMENTS = "delegate/delegate-documents";
-    public final static String REMOVE_AD = "listings/delete-listing/";
+    public final static String REMOVE_OFFER = "deleteoffer";
     public final static String GET_AD_DETAILS = "listings/listing/";
     public final static String REMOVE_IMAGE = "listings/delete-img/";
 
@@ -45,7 +45,7 @@ public class URLS {
 
     public static final String UPDATE_IMAGES = "listings/update-listing-images";
     public static final String CONVERSATIONS = "settings/messages-history";
-    public static final String CHAT = "settings/messages/";
-    public static final String SEND_MESSAGE = "settings/send-message";
-    public static final String FILTER_DATA = "listings/filter-data/";
+    public static final String CHAT = "getallmessages";
+    public static final String SEND_MESSAGE = "sendmessageadmin";
+    public static final String SEND_ORDER_MESSAGE = "sendmessage";
 }

@@ -24,11 +24,11 @@ public class FragmentRegisterStep2BindingImpl extends FragmentRegisterStep2Bindi
     private final apps.app.altcompany.customViews.views.CustomTextViewMedium mboundView5;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback16;
+    private final android.view.View.OnClickListener mCallback21;
     @Nullable
-    private final android.view.View.OnClickListener mCallback17;
+    private final android.view.View.OnClickListener mCallback22;
     @Nullable
-    private final android.view.View.OnClickListener mCallback18;
+    private final android.view.View.OnClickListener mCallback20;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -53,9 +53,9 @@ public class FragmentRegisterStep2BindingImpl extends FragmentRegisterStep2Bindi
         this.yourStateProgressBarId.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback16 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
-        mCallback17 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
-        mCallback18 = new apps.app.altcompany.generated.callback.OnClickListener(this, 3);
+        mCallback21 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
+        mCallback22 = new apps.app.altcompany.generated.callback.OnClickListener(this, 3);
+        mCallback20 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -213,9 +213,9 @@ public class FragmentRegisterStep2BindingImpl extends FragmentRegisterStep2Bindi
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.departments.setOnClickListener(mCallback16);
-            this.mboundView4.setOnClickListener(mCallback17);
-            this.mboundView5.setOnClickListener(mCallback18);
+            this.departments.setOnClickListener(mCallback20);
+            this.mboundView4.setOnClickListener(mCallback21);
+            this.mboundView5.setOnClickListener(mCallback22);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
@@ -239,23 +239,6 @@ public class FragmentRegisterStep2BindingImpl extends FragmentRegisterStep2Bindi
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
-                // localize variables for thread safety
-                // registerStep1ViewModel != null
-                boolean registerStep1ViewModelJavaLangObjectNull = false;
-                // registerStep1ViewModel
-                apps.app.altcompany.pages.auth.register.RegisterViewModel registerStep1ViewModel = mRegisterStep1ViewModel;
-
-
-
-                registerStep1ViewModelJavaLangObjectNull = (registerStep1ViewModel) != (null);
-                if (registerStep1ViewModelJavaLangObjectNull) {
-
-
-                    registerStep1ViewModel.toSelectDepartment();
-                }
-                break;
-            }
             case 2: {
                 // localize variables for thread safety
                 // registerStep1ViewModel != null
@@ -287,6 +270,23 @@ public class FragmentRegisterStep2BindingImpl extends FragmentRegisterStep2Bindi
 
 
                     registerStep1ViewModel.registerStep2();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // registerStep1ViewModel != null
+                boolean registerStep1ViewModelJavaLangObjectNull = false;
+                // registerStep1ViewModel
+                apps.app.altcompany.pages.auth.register.RegisterViewModel registerStep1ViewModel = mRegisterStep1ViewModel;
+
+
+
+                registerStep1ViewModelJavaLangObjectNull = (registerStep1ViewModel) != (null);
+                if (registerStep1ViewModelJavaLangObjectNull) {
+
+
+                    registerStep1ViewModel.toSelectDepartment();
                 }
                 break;
             }

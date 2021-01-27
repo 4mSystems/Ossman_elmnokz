@@ -20,6 +20,10 @@
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_forget_password.xml"
     },
     {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_offer.xml",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\item_offer.xml"
+    },
+    {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_company_profile.xml",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_company_profile.xml"
     },
@@ -28,8 +32,16 @@
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\item_order.xml"
     },
     {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_chat_admin.xml",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_chat_admin.xml"
+    },
+    {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_confirm_code.xml",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_confirm_code.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_notifications.xml",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_notifications.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_grand.xml",
@@ -60,20 +72,36 @@
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_privacy.xml"
     },
     {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_chat_admin.xml",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\item_chat_admin.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_notification.xml",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\item_notification.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_offers.xml",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_offers.xml"
+    },
+    {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\terms_dialog.xml",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\terms_dialog.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_add_offer.xml",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_add_offer.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_user_details.xml",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_user_details.xml"
     },
     {
-        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_category.xml",
-        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\item_category.xml"
-    },
-    {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_suggestion.xml",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_suggestion.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_category.xml",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\item_category.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
@@ -86,6 +114,10 @@
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_map_address.xml",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\activity_map_address.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_my_orders.xml",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_my_orders.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_splash.xml",

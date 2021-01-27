@@ -12,7 +12,7 @@ public class OrdersData {
     @SerializedName("orders_time")
     private String ordersTime;
 
-    @SerializedName("media_type")
+    @SerializedName("type")
     private String mediaType;
 
     @SerializedName("orders_date")
@@ -21,8 +21,10 @@ public class OrdersData {
     @SerializedName("orders_status")
     private int ordersStatus;
 
-    @SerializedName("orders_imgor_video")
-    private String ordersImgorVideo;
+    @SerializedName("orders_img")
+    private String orders_img;
+    @SerializedName("orders_video")
+    private String orders_video;
 
     @SerializedName("orders_desc")
     private String ordersDesc;
@@ -49,9 +51,12 @@ public class OrdersData {
         return ordersStatus;
     }
 
+    public String getOrders_img() {
+        return orders_img;
+    }
 
-    public String getOrdersImgorVideo() {
-        return ordersImgorVideo;
+    public String getOrders_video() {
+        return orders_video;
     }
 
     public String getOrdersDesc() {

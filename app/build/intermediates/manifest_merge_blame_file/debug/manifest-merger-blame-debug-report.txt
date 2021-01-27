@@ -62,8 +62,8 @@
 30-->F:\mostafa elnagar\AltiCompany\app\src\main\AndroidManifest.xml:16:5-88:19
 31        android:name="apps.app.altcompany.base.MyApplication"
 31-->F:\mostafa elnagar\AltiCompany\app\src\main\AndroidManifest.xml:17:9-62
-32        android:allowBackup="true"
-32-->F:\mostafa elnagar\AltiCompany\app\src\main\AndroidManifest.xml:18:9-35
+32        android:allowBackup="false"
+32-->F:\mostafa elnagar\AltiCompany\app\src\main\AndroidManifest.xml:18:9-36
 33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 33-->[androidx.core:core:1.3.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\877adde09d532379f8f9cfb98e394ba3\core-1.3.1\AndroidManifest.xml:24:18-86
 34        android:debuggable="true"

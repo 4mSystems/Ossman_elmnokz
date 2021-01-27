@@ -1,11 +1,15 @@
 [
     {
-        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_delete.png.flat",
-        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_delete.png"
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_add_offer.xml.flat",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_add_offer.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_grand_exit.png.flat",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\mipmap-xxxhdpi\\grand_exit.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_delete.png.flat",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_delete.png"
     },
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_clock_black.png.flat",
@@ -50,6 +54,10 @@
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_clock_black.png.flat",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\drawable-hdpi\\ic_clock_black.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_offers.xml.flat",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_offers.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_search_primary.png.flat",
@@ -214,6 +222,10 @@
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border_primary_grey.xml.flat",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\drawable\\border_primary_grey.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_chat_admin.xml.flat",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\item_chat_admin.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\anim_blink.xml.flat",
@@ -440,8 +452,16 @@
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\drawable-hdpi\\ic_back_white.png"
     },
     {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_chat_admin.xml.flat",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_chat_admin.xml"
+    },
+    {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_location_map.png.flat",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_location_map.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_notification.xml.flat",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\item_notification.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_suggestion_black.png.flat",
@@ -812,6 +832,10 @@
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_splash.xml"
     },
     {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_my_orders.xml.flat",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_my_orders.xml"
+    },
+    {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_orders_black.png.flat",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\drawable-mdpi\\ic_orders_black.png"
     },
@@ -892,6 +916,10 @@
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\drawable-xxhdpi\\ic_login_black.png"
     },
     {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_privacy.xml.flat",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_privacy.xml"
+    },
+    {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_google.png.flat",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\drawable-hdpi\\ic_google.png"
     },
@@ -902,10 +930,6 @@
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_action_bar_home.xml.flat",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\layout_action_bar_home.xml"
-    },
-    {
-        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_privacy.xml.flat",
-        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_privacy.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_marker_black.png.flat",
@@ -1002,6 +1026,10 @@
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_logo_circle.png.flat",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\drawable\\ic_logo_circle.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_notifications.xml.flat",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_notifications.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_splash.jpg.flat",
@@ -1274,6 +1302,10 @@
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_home_black.png.flat",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\drawable-mdpi\\ic_home_black.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_offer.xml.flat",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\item_offer.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_video_primary.png.flat",

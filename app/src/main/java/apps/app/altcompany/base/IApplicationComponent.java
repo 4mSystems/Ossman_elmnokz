@@ -6,10 +6,15 @@ import apps.app.altcompany.pages.auth.register.RegisterFragment;
 import apps.app.altcompany.pages.auth.register.RegisterStep2Fragment;
 import apps.app.altcompany.pages.auth.register.RegisterStep3Fragment;
 import apps.app.altcompany.pages.auth.register.RegisterStep4Fragment;
+import apps.app.altcompany.pages.chatAdmin.view.ChatAdminFragment;
 import apps.app.altcompany.pages.companies.CompanyProfileFragment;
 import apps.app.altcompany.pages.home.HomeFragment;
 import apps.app.altcompany.pages.home.OrderDetailsFragment;
 import apps.app.altcompany.pages.home.UserDetailsFragment;
+import apps.app.altcompany.pages.myOrders.MyOrdersFragment;
+import apps.app.altcompany.pages.notifications.NotificationsFragment;
+import apps.app.altcompany.pages.offers.AddOfferFragment;
+import apps.app.altcompany.pages.offers.OffersFragment;
 import apps.app.altcompany.pages.settings.AboutFragment;
 import apps.app.altcompany.pages.settings.PrivacyFragment;
 import apps.app.altcompany.pages.settings.SuggestionsFragment;
@@ -64,6 +69,15 @@ public interface IApplicationComponent {
     void inject(SuggestionsFragment suggestionsFragment);
 
     void inject(AboutFragment aboutFragment);
+
+    void inject(MyOrdersFragment myOrdersFragment);
+
+    void inject(OffersFragment offersFragment);
+
+    void inject(AddOfferFragment addOfferFragment);
+
+    void inject(NotificationsFragment notificationsFragment);
+    void inject(ChatAdminFragment chatAdminFragment);
 
 
     @Component.Builder

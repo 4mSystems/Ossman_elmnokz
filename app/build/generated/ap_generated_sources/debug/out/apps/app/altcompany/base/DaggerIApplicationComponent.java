@@ -42,6 +42,11 @@ import apps.app.altcompany.pages.auth.register.RegisterStep4Fragment_MembersInje
 import apps.app.altcompany.pages.auth.register.RegisterViewModel;
 import apps.app.altcompany.pages.auth.register.RegisterViewModel_Factory;
 import apps.app.altcompany.pages.auth.register.RegisterViewModel_MembersInjector;
+import apps.app.altcompany.pages.chatAdmin.view.ChatAdminFragment;
+import apps.app.altcompany.pages.chatAdmin.view.ChatAdminFragment_MembersInjector;
+import apps.app.altcompany.pages.chatAdmin.viewmodel.ChatAdminViewModel;
+import apps.app.altcompany.pages.chatAdmin.viewmodel.ChatAdminViewModel_Factory;
+import apps.app.altcompany.pages.chatAdmin.viewmodel.ChatAdminViewModel_MembersInjector;
 import apps.app.altcompany.pages.companies.CompanyProfileFragment;
 import apps.app.altcompany.pages.companies.CompanyProfileFragment_MembersInjector;
 import apps.app.altcompany.pages.companies.viewModels.CompaniesViewModel;
@@ -59,6 +64,23 @@ import apps.app.altcompany.pages.home.viewModels.HomeViewModel_MembersInjector;
 import apps.app.altcompany.pages.home.viewModels.OrderDetailsViewModel;
 import apps.app.altcompany.pages.home.viewModels.OrderDetailsViewModel_Factory;
 import apps.app.altcompany.pages.home.viewModels.OrderDetailsViewModel_MembersInjector;
+import apps.app.altcompany.pages.myOrders.MyOrdersFragment;
+import apps.app.altcompany.pages.myOrders.MyOrdersFragment_MembersInjector;
+import apps.app.altcompany.pages.myOrders.viewModels.MyOrdersViewModel;
+import apps.app.altcompany.pages.myOrders.viewModels.MyOrdersViewModel_Factory;
+import apps.app.altcompany.pages.myOrders.viewModels.MyOrdersViewModel_MembersInjector;
+import apps.app.altcompany.pages.notifications.NotificationsFragment;
+import apps.app.altcompany.pages.notifications.NotificationsFragment_MembersInjector;
+import apps.app.altcompany.pages.notifications.viewModels.NotificationsViewModels;
+import apps.app.altcompany.pages.notifications.viewModels.NotificationsViewModels_Factory;
+import apps.app.altcompany.pages.notifications.viewModels.NotificationsViewModels_MembersInjector;
+import apps.app.altcompany.pages.offers.AddOfferFragment;
+import apps.app.altcompany.pages.offers.AddOfferFragment_MembersInjector;
+import apps.app.altcompany.pages.offers.OffersFragment;
+import apps.app.altcompany.pages.offers.OffersFragment_MembersInjector;
+import apps.app.altcompany.pages.offers.viewModels.OffersViewModel;
+import apps.app.altcompany.pages.offers.viewModels.OffersViewModel_Factory;
+import apps.app.altcompany.pages.offers.viewModels.OffersViewModel_MembersInjector;
 import apps.app.altcompany.pages.settings.AboutFragment;
 import apps.app.altcompany.pages.settings.AboutFragment_MembersInjector;
 import apps.app.altcompany.pages.settings.PrivacyFragment;
@@ -75,6 +97,8 @@ import apps.app.altcompany.pages.splash.SplashViewModel_Factory;
 import apps.app.altcompany.pages.splash.SplashViewModel_MembersInjector;
 import apps.app.altcompany.repository.AuthRepository;
 import apps.app.altcompany.repository.AuthRepository_Factory;
+import apps.app.altcompany.repository.ChatRepository;
+import apps.app.altcompany.repository.ChatRepository_Factory;
 import apps.app.altcompany.repository.OrdersRepository;
 import apps.app.altcompany.repository.OrdersRepository_Factory;
 import apps.app.altcompany.repository.SettingsRepository;
@@ -101,6 +125,8 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   private Provider<OrdersRepository> ordersRepositoryProvider;
 
   private Provider<SettingsRepository> settingsRepositoryProvider;
+
+  private Provider<ChatRepository> chatRepositoryProvider;
 
   private DaggerIApplicationComponent(ConnectionModule connectionModuleParam,
       LiveData liveDataParam) {
@@ -156,6 +182,22 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectCompaniesViewModel(CompaniesViewModel_Factory.newInstance(authRepositoryProvider.get()));
   }
 
+  private MyOrdersViewModel myOrdersViewModel() {
+    return injectMyOrdersViewModel(MyOrdersViewModel_Factory.newInstance(ordersRepositoryProvider.get()));
+  }
+
+  private OffersViewModel offersViewModel() {
+    return injectOffersViewModel(OffersViewModel_Factory.newInstance(ordersRepositoryProvider.get()));
+  }
+
+  private NotificationsViewModels notificationsViewModels() {
+    return injectNotificationsViewModels(NotificationsViewModels_Factory.newInstance(settingsRepositoryProvider.get()));
+  }
+
+  private ChatAdminViewModel chatAdminViewModel() {
+    return injectChatAdminViewModel(ChatAdminViewModel_Factory.newInstance(chatRepositoryProvider.get()));
+  }
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam,
       final LiveData liveDataParam) {
@@ -165,6 +207,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     this.authRepositoryProvider = DoubleCheck.provider(AuthRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
     this.ordersRepositoryProvider = DoubleCheck.provider(OrdersRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
     this.settingsRepositoryProvider = DoubleCheck.provider(SettingsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
+    this.chatRepositoryProvider = DoubleCheck.provider(ChatRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
   }
 
   @Override
@@ -259,6 +302,31 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(AboutFragment aboutFragment) {
     injectAboutFragment(aboutFragment);
+  }
+
+  @Override
+  public void inject(MyOrdersFragment myOrdersFragment) {
+    injectMyOrdersFragment(myOrdersFragment);
+  }
+
+  @Override
+  public void inject(OffersFragment offersFragment) {
+    injectOffersFragment(offersFragment);
+  }
+
+  @Override
+  public void inject(AddOfferFragment addOfferFragment) {
+    injectAddOfferFragment(addOfferFragment);
+  }
+
+  @Override
+  public void inject(NotificationsFragment notificationsFragment) {
+    injectNotificationsFragment(notificationsFragment);
+  }
+
+  @Override
+  public void inject(ChatAdminFragment chatAdminFragment) {
+    injectChatAdminFragment(chatAdminFragment);
   }
 
   private MainActivity injectMainActivity(MainActivity instance) {
@@ -398,6 +466,51 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private AboutFragment injectAboutFragment(AboutFragment instance) {
     AboutFragment_MembersInjector.injectViewModel(instance, settingsViewModel());
+    return instance;
+  }
+
+  private MyOrdersViewModel injectMyOrdersViewModel(MyOrdersViewModel instance) {
+    MyOrdersViewModel_MembersInjector.injectOrdersRepository(instance, ordersRepositoryProvider.get());
+    return instance;
+  }
+
+  private MyOrdersFragment injectMyOrdersFragment(MyOrdersFragment instance) {
+    MyOrdersFragment_MembersInjector.injectViewModel(instance, myOrdersViewModel());
+    return instance;
+  }
+
+  private OffersViewModel injectOffersViewModel(OffersViewModel instance) {
+    OffersViewModel_MembersInjector.injectOrdersRepository(instance, ordersRepositoryProvider.get());
+    return instance;
+  }
+
+  private OffersFragment injectOffersFragment(OffersFragment instance) {
+    OffersFragment_MembersInjector.injectViewModel(instance, offersViewModel());
+    return instance;
+  }
+
+  private AddOfferFragment injectAddOfferFragment(AddOfferFragment instance) {
+    AddOfferFragment_MembersInjector.injectViewModel(instance, offersViewModel());
+    return instance;
+  }
+
+  private NotificationsViewModels injectNotificationsViewModels(NotificationsViewModels instance) {
+    NotificationsViewModels_MembersInjector.injectSettingsRepository(instance, settingsRepositoryProvider.get());
+    return instance;
+  }
+
+  private NotificationsFragment injectNotificationsFragment(NotificationsFragment instance) {
+    NotificationsFragment_MembersInjector.injectNotificationsViewModels(instance, notificationsViewModels());
+    return instance;
+  }
+
+  private ChatAdminViewModel injectChatAdminViewModel(ChatAdminViewModel instance) {
+    ChatAdminViewModel_MembersInjector.injectRepository(instance, chatRepositoryProvider.get());
+    return instance;
+  }
+
+  private ChatAdminFragment injectChatAdminFragment(ChatAdminFragment instance) {
+    ChatAdminFragment_MembersInjector.injectViewModel(instance, chatAdminViewModel());
     return instance;
   }
 

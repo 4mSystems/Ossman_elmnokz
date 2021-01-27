@@ -22,7 +22,7 @@ public class ItemCategoryBindingImpl extends ItemCategoryBinding implements apps
     private final androidx.appcompat.widget.AppCompatCheckBox mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback14;
+    private final android.view.View.OnClickListener mCallback18;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -39,7 +39,7 @@ public class ItemCategoryBindingImpl extends ItemCategoryBinding implements apps
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback14 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback18 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -159,7 +159,7 @@ public class ItemCategoryBindingImpl extends ItemCategoryBinding implements apps
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView1.setOnClickListener(mCallback14);
+            this.mboundView1.setOnClickListener(mCallback18);
         }
     }
     // Listener Stub Implementations

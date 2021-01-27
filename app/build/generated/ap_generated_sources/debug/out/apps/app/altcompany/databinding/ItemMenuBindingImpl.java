@@ -20,7 +20,7 @@ public class ItemMenuBindingImpl extends ItemMenuBinding implements apps.app.alt
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback5;
+    private final android.view.View.OnClickListener mCallback8;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -39,7 +39,7 @@ public class ItemMenuBindingImpl extends ItemMenuBinding implements apps.app.alt
         this.tvMenuItem.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback5 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback8 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -146,7 +146,7 @@ public class ItemMenuBindingImpl extends ItemMenuBinding implements apps.app.alt
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback5);
+            this.mboundView0.setOnClickListener(mCallback8);
         }
     }
     // Listener Stub Implementations

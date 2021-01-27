@@ -11,7 +11,6 @@ import com.google.gson.Gson;
 
 public class RealTimeReceiver extends BroadcastReceiver {
     public static MessageReceiverListener messageReceiverListene;
-
     @Override
     public void onReceive(Context context, Intent intent) {
         if (intent != null) {

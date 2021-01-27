@@ -28,11 +28,11 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements ap
     private final apps.app.altcompany.customViews.views.CustomTextViewMedium mboundView5;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback3;
+    private final android.view.View.OnClickListener mCallback7;
     @Nullable
-    private final android.view.View.OnClickListener mCallback4;
+    private final android.view.View.OnClickListener mCallback5;
     @Nullable
-    private final android.view.View.OnClickListener mCallback2;
+    private final android.view.View.OnClickListener mCallback6;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -229,9 +229,9 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements ap
         this.rlLoginContainer.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback3 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
-        mCallback4 = new apps.app.altcompany.generated.callback.OnClickListener(this, 3);
-        mCallback2 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback7 = new apps.app.altcompany.generated.callback.OnClickListener(this, 3);
+        mCallback5 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback6 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -397,9 +397,9 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements ap
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.edtLogin, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, edtLoginandroidTextAttrChanged);
             apps.app.altcompany.customViews.views.BaseEditText.setListener(this.mboundView2, mboundView2errorAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
-            this.mboundView3.setOnClickListener(mCallback2);
-            this.mboundView4.setOnClickListener(mCallback3);
-            this.mboundView5.setOnClickListener(mCallback4);
+            this.mboundView3.setOnClickListener(mCallback5);
+            this.mboundView4.setOnClickListener(mCallback6);
+            this.mboundView5.setOnClickListener(mCallback7);
         }
         if ((dirtyFlags & 0xeL) != 0) {
             // api target 1
@@ -411,23 +411,6 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements ap
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // loginViewModel != null
-                boolean loginViewModelJavaLangObjectNull = false;
-                // loginViewModel
-                apps.app.altcompany.pages.auth.login.LoginViewModel loginViewModel = mLoginViewModel;
-
-
-
-                loginViewModelJavaLangObjectNull = (loginViewModel) != (null);
-                if (loginViewModelJavaLangObjectNull) {
-
-
-                    loginViewModel.loginPhone();
-                }
-                break;
-            }
             case 3: {
                 // localize variables for thread safety
                 // loginViewModel != null
@@ -459,6 +442,23 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements ap
 
 
                     loginViewModel.forgetPassword();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // loginViewModel != null
+                boolean loginViewModelJavaLangObjectNull = false;
+                // loginViewModel
+                apps.app.altcompany.pages.auth.login.LoginViewModel loginViewModel = mLoginViewModel;
+
+
+
+                loginViewModelJavaLangObjectNull = (loginViewModel) != (null);
+                if (loginViewModelJavaLangObjectNull) {
+
+
+                    loginViewModel.loginPhone();
                 }
                 break;
             }

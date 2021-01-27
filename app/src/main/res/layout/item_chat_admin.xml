@@ -1,0 +1,59 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="itemChatViewModel"
+            type="apps.app.altcompany.pages.chatAdmin.viewmodel.ItemChatAdminViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl_item_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp6h"
+        android:layoutDirection="@{itemChatViewModel.chat.senderType}">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/driver_image"
+            android:layout_width="@dimen/dp60w"
+            android:layout_height="@dimen/dp60h"
+            android:layout_margin="@dimen/dp8h"
+            android:src="@drawable/ic_user"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="1dp"
+            app:imageUrl="@{itemChatViewModel.chat.image}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10w"
+            android:layout_marginEnd="@dimen/dp10w"
+            app:cardCornerRadius="@dimen/dp8h"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/driver_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/driver_image"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <apps.app.altcompany.customViews.views.CustomTextViewMedium
+                android:id="@+id/item_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp8h"
+                android:text="@{itemChatViewModel.chat.message}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -25,6 +25,7 @@ public class Constants {
 
 
     public final static String IMAGE = "workers_img";
+    public final static String IMAGE_OFFER = "offer_img";
     public final static String IMAGE_BUSINESS = "workers_bussinessregister";
     public final static String DEPARTMENT = "DEPARTMENT";
     public final static String PACKAGES = "PACKAGES";
@@ -46,17 +47,17 @@ public class Constants {
     public final static String ERROR_NOT_FOUND = "not_found";
     public final static String UPDATE_CATEGORY = "UPDATE_CATEGORY";
     public final static String FAILURE_CONNECTION = "failure_connection";
-    public final static String AD_UPLOAD_ATTACH = "AD_UPLOAD_ATTACH";
+    public final static String OFFERS = "OFFERS";
 
     public final static String LANGUAGE = "language";
     public static final String DEFAULT_LANGUAGE = "en";
-    public static final String MENU_ACCOUNT = "MENU_ACCOUNT";
+    public static final String ADD_OFFER = "ADD_OFFER";
     public static final String PAGE = "page";
     public final static String NAME_BAR = "name_bar";
     public static final String BUNDLE = "bundle";
-    public static final String MAP_LOCATION = "MAP_LOCATION";
-    public static final String SETTINGS = "SETTINGS";
-    public static final String REGISTER_SHOPS = "REGISTER_SHOPS";
+    public static final String REMOVE_OFFER = "REMOVE_OFFER";
+    public static final String MY_ORDERS = "MY_ORDERS";
+    public static final String CHAT_ADMIN = "CHAT_ADMIN";
     public static final String MY_ADS = "MY_ORDERS";
     public static final String SORT_DIALOG = "SORT_DIALOG";
     public static final String CATEGORIES = "CATEGORIES";

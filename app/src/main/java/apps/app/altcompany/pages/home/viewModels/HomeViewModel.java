@@ -57,7 +57,6 @@ public class HomeViewModel extends BaseViewModel {
 
     @Bindable
     public void setHomeData(HomeData homeData) {
-        Log.e("setHomeData", "setHomeData: " + homeData);
         getOrdersAdapter().update(homeData.getOrders());
         getSliderAdapter().updateData(homeData.getSlider());
         notifyChange(BR.homeData);
@@ -66,7 +65,7 @@ public class HomeViewModel extends BaseViewModel {
 
     public void setupSlider(SliderView sliderView) {
         sliderView.setSliderAdapter(getSliderAdapter());
-        sliderView.setAutoCycle(true);
+        sliderView.startAutoCycle();
     }
 
     public OrdersRepository getOrdersRepository() {

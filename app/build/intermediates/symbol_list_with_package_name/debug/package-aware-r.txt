@@ -4271,6 +4271,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add_offer
 id adjust_height
 id adjust_width
 id alertTitle
@@ -4279,6 +4280,7 @@ id all
 id always
 id animateToEnd
 id animateToStart
+id animationView
 id anonymous_button
 id appbar_layout
 id apple_signin_button
@@ -4408,6 +4410,7 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
+id driver_image
 id drop
 id dropdown_menu
 id dynamic
@@ -4415,6 +4418,7 @@ id easeIn
 id easeInOut
 id easeOut
 id edAddress
+id ed_message
 id editText_search
 id edit_phone_number
 id edit_query
@@ -4505,12 +4509,14 @@ id img_dismiss
 id img_grand_close
 id img_home_bar_menu
 id img_home_bar_menu_notifications
+id img_item_notification
 id img_item_order
 id img_login_facebook
 id img_login_google
 id img_map_submit
 id img_marker_center
 id img_menu_item
+id img_offer
 id img_register_update
 id img_splash_logo
 id info
@@ -4519,6 +4525,7 @@ id invisible
 id invisible_frame
 id inward
 id italic
+id item_message
 id item_touch_helper_previous_elevation
 id iv_auto_image_slider
 id iv_photo
@@ -4624,6 +4631,8 @@ id notification_background
 id notification_main_column
 id notification_main_column_container
 id off
+id offer_image
+id offer_select
 id ok_action
 id okay
 id on
@@ -4682,6 +4691,8 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id rc_chat
+id rc_current_orders
 id rectangle
 id rectangles
 id recycler_countryDialog
@@ -4702,6 +4713,9 @@ id rl_grand_call
 id rl_grand_whats
 id rl_header
 id rl_holder
+id rl_item_chat
+id rl_item_notification_container
+id rl_item_notification_image
 id rl_item_order_container
 id rl_login_container
 id rl_navigation_drawer
@@ -4730,6 +4744,7 @@ id scrollIndicatorUp
 id scrollView
 id scrollable
 id search
+id searchContainer
 id search_badge
 id search_bar
 id search_button
@@ -4743,6 +4758,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id send_chat
 id send_code
 id send_sms_tos
 id shortcut
@@ -4860,6 +4876,8 @@ id tv_grand_phone
 id tv_grand_url
 id tv_home_bar_text
 id tv_home_header
+id tv_item_notification_date
+id tv_item_notification_desc
 id tv_item_order_company
 id tv_item_order_desc
 id tv_item_order_status
@@ -5004,7 +5022,9 @@ layout design_text_input_start_icon
 layout dialog_no_internet
 layout fastscroll__default_bubble
 layout fragment_about
+layout fragment_add_offer
 layout fragment_change_password
+layout fragment_chat_admin
 layout fragment_company_profile
 layout fragment_confirm_code
 layout fragment_doc_picker
@@ -5013,6 +5033,9 @@ layout fragment_home
 layout fragment_login
 layout fragment_media_folder_picker
 layout fragment_media_picker
+layout fragment_my_orders
+layout fragment_notifications
+layout fragment_offers
 layout fragment_order_detail
 layout fragment_photo_picker
 layout fragment_privacy
@@ -5051,9 +5074,12 @@ layout fui_welcome_back_idp_prompt_layout
 layout fui_welcome_back_password_prompt_layout
 layout home_slider
 layout item_category
+layout item_chat_admin
 layout item_doc_layout
 layout item_folder_layout
 layout item_menu
+layout item_notification
+layout item_offer
 layout item_order
 layout item_photo_layout
 layout item_recharge
@@ -5283,6 +5309,8 @@ string change_password
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
+string chat
+string chat_hint
 string check_icon
 string chip_text
 string choose_category
@@ -5378,6 +5406,7 @@ string fastscroll__app_name
 string fb_login_protocol_scheme
 string fcm_fallback_notification_channel_label
 string feedback_quote
+string finished
 string firebase_web_host
 string fui_accessibility_logo
 string fui_auto_verified
@@ -5712,6 +5741,7 @@ string upload_your_images_or_video
 string uploaded
 string user_details
 string videos
+string waiting
 string whats
 string whats_you_need
 string wifi

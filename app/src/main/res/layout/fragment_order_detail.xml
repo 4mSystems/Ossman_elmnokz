@@ -63,9 +63,10 @@
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp120h"
+                    android:onClick="@{(rootView)-> viewModel.showImage(viewModel.ordersData.orders_img,rootView)}"
                     android:scaleType="centerCrop"
                     android:src="@drawable/ic_logo"
-                    app:imageUrl="@{viewModel.ordersData.ordersImgorVideo}" />
+                    app:imageUrl="@{viewModel.ordersData.orders_img}" />
             </androidx.cardview.widget.CardView>
 
             <apps.app.altcompany.customViews.views.CustomTextViewMedium
@@ -91,7 +92,7 @@
                 android:layout_marginEnd="@dimen/dp10w"
                 android:layout_marginBottom="@dimen/dp15h"
                 android:onClick="@{()-> viewModel.sendOffer()}"
-                android:text="@string/send_offer"
+                android:text="@{viewModel.passingObject.object.equals(`-1`)?@string/send_offer:@string/chat}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txt_details" />
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,7 +29,7 @@
 
     <application
         android:name="apps.app.altcompany.base.MyApplication"
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:extractNativeLibs="false"

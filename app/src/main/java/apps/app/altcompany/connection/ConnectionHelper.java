@@ -1,7 +1,6 @@
 package apps.app.altcompany.connection;
 
 
-import android.graphics.BitmapFactory;
 import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
@@ -11,12 +10,7 @@ import com.google.gson.JsonObject;
 
 import org.json.JSONObject;
 
-import java.io.BufferedOutputStream;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -61,53 +55,6 @@ public class ConnectionHelper {
     @Inject
     public void init() {
         gson = new Gson();
-    }
-
-
-    private MultipartBody prepareImages(List<FileObject> volleyFileObjects) {
-        MultipartBody requestBody = null;
-        ArrayList<File> files = new ArrayList<>();
-        MultipartBody.Builder builder = new MultipartBody.Builder();
-        builder.setType(MultipartBody.FORM);
-        int counter = 0;
-        for (FileObject volleyFileObject : volleyFileObjects) {
-            if (volleyFileObject.getFileType() == Constants.FILE_TYPE_IMAGE) {
-                Log.d(TAG, "=>" + counter);
-                Log.e("type", "type:" + Constants.FILE_TYPE_IMAGE);
-                BitmapFactory.Options options = new BitmapFactory.Options();
-                options.inSampleSize = 2;
-                OutputStream os = null;
-                try {
-                    os = new BufferedOutputStream(new FileOutputStream(volleyFileObject.getFilePath()));
-//                    volleyFileObject.getBitmap().compress(Bitmap.CompressFormat.JPEG, 70, os);
-                    os.close();
-                    File file = volleyFileObject.getFile();
-                    if (file.exists()) {
-                        files.add(file);
-                        Log.e("KeyNameImage", "KeyNameImage:" + volleyFileObject.getParamName());
-                        builder.addFormDataPart(volleyFileObject.getParamName(),
-                                volleyFileObject.getParamName(), RequestBody.create(MediaType.parse("multipart/form-data"), file));
-                        counter++;
-                    }
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            } else {
-                File file = volleyFileObject.getFile();
-                if (file.exists()) {
-                    Log.e(TAG, "prepareImages: File Found:" + file.getAbsolutePath());
-                    files.add(file);
-                    Log.e("KeyNameImage", "KeyNameImage:" + volleyFileObject.getParamName());
-                    builder.addFormDataPart(volleyFileObject.getParamName(),
-                            volleyFileObject.getParamName(), RequestBody.create(MediaType.parse("multipart/form-data"), file));
-                }
-            }
-        }
-        if (files.size() > 0)
-            requestBody = builder.build();
-        return requestBody;
     }
 
     //public Disposable requestApi(String url, Object requestData, Class<?> responseType, String constantSuccessResponse,

@@ -389,7 +389,7 @@ MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\MAymanM\.
 	tools:targetApi
 		ADDED from F:\mostafa elnagar\AltiCompany\app\src\main\AndroidManifest.xml:29:9-28
 	android:allowBackup
-		ADDED from F:\mostafa elnagar\AltiCompany\app\src\main\AndroidManifest.xml:18:9-35
+		ADDED from F:\mostafa elnagar\AltiCompany\app\src\main\AndroidManifest.xml:18:9-36
 		REJECTED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\dfd4ccbfb8d2ad5339b1e4b08e28a248\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:12:9-35
 		REJECTED from [com.whiteelephant:monthandyearpicker:1.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\1940c958a966ba51b2797ef82484e1d2\jetified-monthandyearpicker-1.3.0\AndroidManifest.xml:12:9-35
 	android:theme

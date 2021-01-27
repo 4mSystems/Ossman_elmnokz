@@ -2,6 +2,7 @@ package apps.app.altcompany.pages.home;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +28,7 @@ import apps.app.altcompany.model.base.Mutable;
 import apps.app.altcompany.model.base.StatusMessage;
 import apps.app.altcompany.pages.auth.login.models.UserData;
 import apps.app.altcompany.pages.auth.models.RegisterRequest;
+import apps.app.altcompany.pages.chatAdmin.view.ChatAdminFragment;
 import apps.app.altcompany.pages.home.models.HomeResponse;
 import apps.app.altcompany.pages.home.models.orderDetails.OrderDetailsResponse;
 import apps.app.altcompany.pages.home.viewModels.OrderDetailsViewModel;
@@ -49,6 +51,7 @@ public class OrderDetailsFragment extends BaseFragment {
         if (bundle != null) {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
+            Log.e("onCreateView", "onCreateView: " + viewModel.getPassingObject().getObject());
             viewModel.orderDetails();
         }
         setEvent();
@@ -70,6 +73,9 @@ public class OrderDetailsFragment extends BaseFragment {
                     break;
                 case Constants.USER_DETAILS:
                     MovementHelper.startActivityWithBundle(context, new PassingObject(viewModel.getOrdersData()), getString(R.string.user_details), UserDetailsFragment.class.getName(), null);
+                    break;
+                case Constants.CHAT:
+                    MovementHelper.startActivityWithBundle(context, new PassingObject(viewModel.getPassingObject().getId(), Constants.CHAT), getString(R.string.chat), ChatAdminFragment.class.getName(), null);
                     break;
             }
         });

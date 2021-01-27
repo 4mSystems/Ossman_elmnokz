@@ -10,12 +10,17 @@ import apps.app.altcompany.databinding.ActivityBaseBindingImpl;
 import apps.app.altcompany.databinding.ActivityMainBindingImpl;
 import apps.app.altcompany.databinding.ActivityMapAddressBindingImpl;
 import apps.app.altcompany.databinding.FragmentAboutBindingImpl;
+import apps.app.altcompany.databinding.FragmentAddOfferBindingImpl;
 import apps.app.altcompany.databinding.FragmentChangePasswordBindingImpl;
+import apps.app.altcompany.databinding.FragmentChatAdminBindingImpl;
 import apps.app.altcompany.databinding.FragmentCompanyProfileBindingImpl;
 import apps.app.altcompany.databinding.FragmentConfirmCodeBindingImpl;
 import apps.app.altcompany.databinding.FragmentForgetPasswordBindingImpl;
 import apps.app.altcompany.databinding.FragmentHomeBindingImpl;
 import apps.app.altcompany.databinding.FragmentLoginBindingImpl;
+import apps.app.altcompany.databinding.FragmentMyOrdersBindingImpl;
+import apps.app.altcompany.databinding.FragmentNotificationsBindingImpl;
+import apps.app.altcompany.databinding.FragmentOffersBindingImpl;
 import apps.app.altcompany.databinding.FragmentOrderDetailBindingImpl;
 import apps.app.altcompany.databinding.FragmentPrivacyBindingImpl;
 import apps.app.altcompany.databinding.FragmentRegisterStep1BindingImpl;
@@ -26,7 +31,10 @@ import apps.app.altcompany.databinding.FragmentSplashBindingImpl;
 import apps.app.altcompany.databinding.FragmentSuggestionBindingImpl;
 import apps.app.altcompany.databinding.FragmentUserDetailsBindingImpl;
 import apps.app.altcompany.databinding.ItemCategoryBindingImpl;
+import apps.app.altcompany.databinding.ItemChatAdminBindingImpl;
 import apps.app.altcompany.databinding.ItemMenuBindingImpl;
+import apps.app.altcompany.databinding.ItemNotificationBindingImpl;
+import apps.app.altcompany.databinding.ItemOfferBindingImpl;
 import apps.app.altcompany.databinding.ItemOrderBindingImpl;
 import apps.app.altcompany.databinding.ItemRechargeBindingImpl;
 import apps.app.altcompany.databinding.LayoutActionBarBackBindingImpl;
@@ -53,67 +61,88 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_FRAGMENTABOUT = 4;
 
-  private static final int LAYOUT_FRAGMENTCHANGEPASSWORD = 5;
+  private static final int LAYOUT_FRAGMENTADDOFFER = 5;
 
-  private static final int LAYOUT_FRAGMENTCOMPANYPROFILE = 6;
+  private static final int LAYOUT_FRAGMENTCHANGEPASSWORD = 6;
 
-  private static final int LAYOUT_FRAGMENTCONFIRMCODE = 7;
+  private static final int LAYOUT_FRAGMENTCHATADMIN = 7;
 
-  private static final int LAYOUT_FRAGMENTFORGETPASSWORD = 8;
+  private static final int LAYOUT_FRAGMENTCOMPANYPROFILE = 8;
 
-  private static final int LAYOUT_FRAGMENTHOME = 9;
+  private static final int LAYOUT_FRAGMENTCONFIRMCODE = 9;
 
-  private static final int LAYOUT_FRAGMENTLOGIN = 10;
+  private static final int LAYOUT_FRAGMENTFORGETPASSWORD = 10;
 
-  private static final int LAYOUT_FRAGMENTORDERDETAIL = 11;
+  private static final int LAYOUT_FRAGMENTHOME = 11;
 
-  private static final int LAYOUT_FRAGMENTPRIVACY = 12;
+  private static final int LAYOUT_FRAGMENTLOGIN = 12;
 
-  private static final int LAYOUT_FRAGMENTREGISTERSTEP1 = 13;
+  private static final int LAYOUT_FRAGMENTMYORDERS = 13;
 
-  private static final int LAYOUT_FRAGMENTREGISTERSTEP2 = 14;
+  private static final int LAYOUT_FRAGMENTNOTIFICATIONS = 14;
 
-  private static final int LAYOUT_FRAGMENTREGISTERSTEP3 = 15;
+  private static final int LAYOUT_FRAGMENTOFFERS = 15;
 
-  private static final int LAYOUT_FRAGMENTREGISTERSTEP4 = 16;
+  private static final int LAYOUT_FRAGMENTORDERDETAIL = 16;
 
-  private static final int LAYOUT_FRAGMENTSPLASH = 17;
+  private static final int LAYOUT_FRAGMENTPRIVACY = 17;
 
-  private static final int LAYOUT_FRAGMENTSUGGESTION = 18;
+  private static final int LAYOUT_FRAGMENTREGISTERSTEP1 = 18;
 
-  private static final int LAYOUT_FRAGMENTUSERDETAILS = 19;
+  private static final int LAYOUT_FRAGMENTREGISTERSTEP2 = 19;
 
-  private static final int LAYOUT_ITEMCATEGORY = 20;
+  private static final int LAYOUT_FRAGMENTREGISTERSTEP3 = 20;
 
-  private static final int LAYOUT_ITEMMENU = 21;
+  private static final int LAYOUT_FRAGMENTREGISTERSTEP4 = 21;
 
-  private static final int LAYOUT_ITEMORDER = 22;
+  private static final int LAYOUT_FRAGMENTSPLASH = 22;
 
-  private static final int LAYOUT_ITEMRECHARGE = 23;
+  private static final int LAYOUT_FRAGMENTSUGGESTION = 23;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 24;
+  private static final int LAYOUT_FRAGMENTUSERDETAILS = 24;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 25;
+  private static final int LAYOUT_ITEMCATEGORY = 25;
 
-  private static final int LAYOUT_LAYOUTGRAND = 26;
+  private static final int LAYOUT_ITEMCHATADMIN = 26;
 
-  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 27;
+  private static final int LAYOUT_ITEMMENU = 27;
 
-  private static final int LAYOUT_TERMSDIALOG = 28;
+  private static final int LAYOUT_ITEMNOTIFICATION = 28;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(28);
+  private static final int LAYOUT_ITEMOFFER = 29;
+
+  private static final int LAYOUT_ITEMORDER = 30;
+
+  private static final int LAYOUT_ITEMRECHARGE = 31;
+
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 32;
+
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 33;
+
+  private static final int LAYOUT_LAYOUTGRAND = 34;
+
+  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 35;
+
+  private static final int LAYOUT_TERMSDIALOG = 36;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(36);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.activity_map_address, LAYOUT_ACTIVITYMAPADDRESS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_about, LAYOUT_FRAGMENTABOUT);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_add_offer, LAYOUT_FRAGMENTADDOFFER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_change_password, LAYOUT_FRAGMENTCHANGEPASSWORD);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_chat_admin, LAYOUT_FRAGMENTCHATADMIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_company_profile, LAYOUT_FRAGMENTCOMPANYPROFILE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_confirm_code, LAYOUT_FRAGMENTCONFIRMCODE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_forget_password, LAYOUT_FRAGMENTFORGETPASSWORD);
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_home, LAYOUT_FRAGMENTHOME);
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_login, LAYOUT_FRAGMENTLOGIN);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_my_orders, LAYOUT_FRAGMENTMYORDERS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_notifications, LAYOUT_FRAGMENTNOTIFICATIONS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_offers, LAYOUT_FRAGMENTOFFERS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_order_detail, LAYOUT_FRAGMENTORDERDETAIL);
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_privacy, LAYOUT_FRAGMENTPRIVACY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_register_step1, LAYOUT_FRAGMENTREGISTERSTEP1);
@@ -124,7 +153,10 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_suggestion, LAYOUT_FRAGMENTSUGGESTION);
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_user_details, LAYOUT_FRAGMENTUSERDETAILS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.item_category, LAYOUT_ITEMCATEGORY);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.item_chat_admin, LAYOUT_ITEMCHATADMIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.item_menu, LAYOUT_ITEMMENU);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.item_notification, LAYOUT_ITEMNOTIFICATION);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.item_offer, LAYOUT_ITEMOFFER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.item_order, LAYOUT_ITEMORDER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.item_recharge, LAYOUT_ITEMRECHARGE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.layout_action_bar_back, LAYOUT_LAYOUTACTIONBARBACK);
@@ -167,11 +199,23 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for fragment_about is invalid. Received: " + tag);
         }
+        case  LAYOUT_FRAGMENTADDOFFER: {
+          if ("layout/fragment_add_offer_0".equals(tag)) {
+            return new FragmentAddOfferBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_add_offer is invalid. Received: " + tag);
+        }
         case  LAYOUT_FRAGMENTCHANGEPASSWORD: {
           if ("layout/fragment_change_password_0".equals(tag)) {
             return new FragmentChangePasswordBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_change_password is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTCHATADMIN: {
+          if ("layout/fragment_chat_admin_0".equals(tag)) {
+            return new FragmentChatAdminBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_chat_admin is invalid. Received: " + tag);
         }
         case  LAYOUT_FRAGMENTCOMPANYPROFILE: {
           if ("layout/fragment_company_profile_0".equals(tag)) {
@@ -202,6 +246,24 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new FragmentLoginBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_login is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTMYORDERS: {
+          if ("layout/fragment_my_orders_0".equals(tag)) {
+            return new FragmentMyOrdersBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_my_orders is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTNOTIFICATIONS: {
+          if ("layout/fragment_notifications_0".equals(tag)) {
+            return new FragmentNotificationsBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_notifications is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTOFFERS: {
+          if ("layout/fragment_offers_0".equals(tag)) {
+            return new FragmentOffersBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_offers is invalid. Received: " + tag);
         }
         case  LAYOUT_FRAGMENTORDERDETAIL: {
           if ("layout/fragment_order_detail_0".equals(tag)) {
@@ -263,11 +325,29 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for item_category is invalid. Received: " + tag);
         }
+        case  LAYOUT_ITEMCHATADMIN: {
+          if ("layout/item_chat_admin_0".equals(tag)) {
+            return new ItemChatAdminBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_chat_admin is invalid. Received: " + tag);
+        }
         case  LAYOUT_ITEMMENU: {
           if ("layout/item_menu_0".equals(tag)) {
             return new ItemMenuBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for item_menu is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMNOTIFICATION: {
+          if ("layout/item_notification_0".equals(tag)) {
+            return new ItemNotificationBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_notification is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMOFFER: {
+          if ("layout/item_offer_0".equals(tag)) {
+            return new ItemOfferBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_offer is invalid. Received: " + tag);
         }
         case  LAYOUT_ITEMORDER: {
           if ("layout/item_order_0".equals(tag)) {
@@ -356,7 +436,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(33);
+    static final SparseArray<String> sKeys = new SparseArray<String>(42);
 
     static {
       sKeys.put(0, "_all");
@@ -365,50 +445,64 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(3, "categoriesAdapter");
       sKeys.put(4, "categoryData");
       sKeys.put(5, "changePasswordViewModel");
-      sKeys.put(6, "checked");
-      sKeys.put(7, "citiesList");
-      sKeys.put(8, "companyProfile");
-      sKeys.put(9, "departmentsItems");
-      sKeys.put(10, "forgetPasswordViewModel");
-      sKeys.put(11, "homeData");
-      sKeys.put(12, "homeViewModel");
-      sKeys.put(13, "itemHomeViewModel");
-      sKeys.put(14, "itemMenuViewModel");
-      sKeys.put(15, "itemViewModel");
-      sKeys.put(16, "loginViewModel");
-      sKeys.put(17, "mapAddressViewModel");
-      sKeys.put(18, "menuModel");
-      sKeys.put(19, "menuViewModel");
-      sKeys.put(20, "ordersAdapter");
-      sKeys.put(21, "ordersData");
-      sKeys.put(22, "packagesAdapter");
-      sKeys.put(23, "packagesData");
-      sKeys.put(24, "passingObject");
-      sKeys.put(25, "privacyData");
-      sKeys.put(26, "privacyViewModel");
-      sKeys.put(27, "registerStep1ViewModel");
-      sKeys.put(28, "sliderAdapter");
-      sKeys.put(29, "splashViewModel");
-      sKeys.put(30, "suggestionViewModel");
-      sKeys.put(31, "verificationCodeViewModel");
-      sKeys.put(32, "viewModel");
+      sKeys.put(6, "chat");
+      sKeys.put(7, "checked");
+      sKeys.put(8, "citiesList");
+      sKeys.put(9, "companyProfile");
+      sKeys.put(10, "departmentsItems");
+      sKeys.put(11, "forgetPasswordViewModel");
+      sKeys.put(12, "homeData");
+      sKeys.put(13, "homeViewModel");
+      sKeys.put(14, "itemChatViewModel");
+      sKeys.put(15, "itemHomeViewModel");
+      sKeys.put(16, "itemMenuViewModel");
+      sKeys.put(17, "itemNotificationViewModel");
+      sKeys.put(18, "itemViewModel");
+      sKeys.put(19, "loginViewModel");
+      sKeys.put(20, "manager");
+      sKeys.put(21, "mapAddressViewModel");
+      sKeys.put(22, "menuModel");
+      sKeys.put(23, "menuViewModel");
+      sKeys.put(24, "notificationsAdapter");
+      sKeys.put(25, "notificationsData");
+      sKeys.put(26, "offersAdapter");
+      sKeys.put(27, "offersData");
+      sKeys.put(28, "ordersAdapter");
+      sKeys.put(29, "ordersData");
+      sKeys.put(30, "packagesAdapter");
+      sKeys.put(31, "packagesData");
+      sKeys.put(32, "passingObject");
+      sKeys.put(33, "privacyData");
+      sKeys.put(34, "privacyViewModel");
+      sKeys.put(35, "registerStep1ViewModel");
+      sKeys.put(36, "sliderAdapter");
+      sKeys.put(37, "splashViewModel");
+      sKeys.put(38, "suggestionViewModel");
+      sKeys.put(39, "verificationCodeViewModel");
+      sKeys.put(40, "viewModel");
+      sKeys.put(41, "viewmodel");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(28);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(36);
 
     static {
       sKeys.put("layout/activity_base_0", apps.app.altcompany.R.layout.activity_base);
       sKeys.put("layout/activity_main_0", apps.app.altcompany.R.layout.activity_main);
       sKeys.put("layout/activity_map_address_0", apps.app.altcompany.R.layout.activity_map_address);
       sKeys.put("layout/fragment_about_0", apps.app.altcompany.R.layout.fragment_about);
+      sKeys.put("layout/fragment_add_offer_0", apps.app.altcompany.R.layout.fragment_add_offer);
       sKeys.put("layout/fragment_change_password_0", apps.app.altcompany.R.layout.fragment_change_password);
+      sKeys.put("layout/fragment_chat_admin_0", apps.app.altcompany.R.layout.fragment_chat_admin);
       sKeys.put("layout/fragment_company_profile_0", apps.app.altcompany.R.layout.fragment_company_profile);
       sKeys.put("layout/fragment_confirm_code_0", apps.app.altcompany.R.layout.fragment_confirm_code);
       sKeys.put("layout/fragment_forget_password_0", apps.app.altcompany.R.layout.fragment_forget_password);
       sKeys.put("layout/fragment_home_0", apps.app.altcompany.R.layout.fragment_home);
       sKeys.put("layout/fragment_login_0", apps.app.altcompany.R.layout.fragment_login);
+      sKeys.put("layout/fragment_my_orders_0", apps.app.altcompany.R.layout.fragment_my_orders);
+      sKeys.put("layout/fragment_notifications_0", apps.app.altcompany.R.layout.fragment_notifications);
+      sKeys.put("layout/fragment_offers_0", apps.app.altcompany.R.layout.fragment_offers);
       sKeys.put("layout/fragment_order_detail_0", apps.app.altcompany.R.layout.fragment_order_detail);
       sKeys.put("layout/fragment_privacy_0", apps.app.altcompany.R.layout.fragment_privacy);
       sKeys.put("layout/fragment_register_step1_0", apps.app.altcompany.R.layout.fragment_register_step1);
@@ -419,7 +513,10 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_suggestion_0", apps.app.altcompany.R.layout.fragment_suggestion);
       sKeys.put("layout/fragment_user_details_0", apps.app.altcompany.R.layout.fragment_user_details);
       sKeys.put("layout/item_category_0", apps.app.altcompany.R.layout.item_category);
+      sKeys.put("layout/item_chat_admin_0", apps.app.altcompany.R.layout.item_chat_admin);
       sKeys.put("layout/item_menu_0", apps.app.altcompany.R.layout.item_menu);
+      sKeys.put("layout/item_notification_0", apps.app.altcompany.R.layout.item_notification);
+      sKeys.put("layout/item_offer_0", apps.app.altcompany.R.layout.item_offer);
       sKeys.put("layout/item_order_0", apps.app.altcompany.R.layout.item_order);
       sKeys.put("layout/item_recharge_0", apps.app.altcompany.R.layout.item_recharge);
       sKeys.put("layout/layout_action_bar_back_0", apps.app.altcompany.R.layout.layout_action_bar_back);

@@ -21,7 +21,7 @@
             android:id="@+id/slider_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dp12h"
+            android:layout_margin="@dimen/dp5h"
             app:cardCornerRadius="@dimen/dp12h"
             app:cardElevation="4dp"
             app:cardUseCompatPadding="true"
@@ -45,7 +45,7 @@
                 app:sliderIndicatorRadius="2dp"
                 app:sliderIndicatorSelectedColor="@color/colorPrimary"
                 app:sliderIndicatorUnselectedColor="#777777"
-                app:sliderScrollTimeInSec="3"
+                app:sliderScrollTimeInSec="4"
                 app:sliderStartAutoCycle="true" />
 
         </androidx.cardview.widget.CardView>

@@ -18,7 +18,7 @@ public class ItemOrderBindingImpl extends ItemOrderBinding implements apps.app.a
     // views
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback31;
+    private final android.view.View.OnClickListener mCallback37;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,7 +41,7 @@ public class ItemOrderBindingImpl extends ItemOrderBinding implements apps.app.a
         this.tvItemOrderStatus.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback31 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback37 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -116,10 +116,10 @@ public class ItemOrderBindingImpl extends ItemOrderBinding implements apps.app.a
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        java.lang.String itemHomeViewModelOrdersDataOrdersStatusInt0TvItemOrderStatusAndroidStringWaitingTvItemOrderStatusAndroidStringFinished = null;
         java.lang.String itemHomeViewModelOrdersDataUserUsersImg = null;
         apps.app.altcompany.pages.home.viewModels.ItemHomeViewModel itemHomeViewModel = mItemHomeViewModel;
         apps.app.altcompany.pages.home.models.UserDetails itemHomeViewModelOrdersDataUser = null;
-        java.lang.String itemHomeViewModelOrdersDataOrdersStatusInt0JavaLangStringJavaLangString = null;
         int itemHomeViewModelOrdersDataOrdersStatus = 0;
         boolean itemHomeViewModelOrdersDataOrdersStatusInt0 = false;
         apps.app.altcompany.pages.home.models.OrdersData itemHomeViewModelOrdersData = null;
@@ -164,8 +164,8 @@ public class ItemOrderBindingImpl extends ItemOrderBinding implements apps.app.a
             }
 
 
-                // read itemHomeViewModel.ordersData.ordersStatus != 0 ? "" : ""
-                itemHomeViewModelOrdersDataOrdersStatusInt0JavaLangStringJavaLangString = ((itemHomeViewModelOrdersDataOrdersStatusInt0) ? ("") : (""));
+                // read itemHomeViewModel.ordersData.ordersStatus != 0 ? @android:string/waiting : @android:string/finished
+                itemHomeViewModelOrdersDataOrdersStatusInt0TvItemOrderStatusAndroidStringWaitingTvItemOrderStatusAndroidStringFinished = ((itemHomeViewModelOrdersDataOrdersStatusInt0) ? (tvItemOrderStatus.getResources().getString(R.string.waiting)) : (tvItemOrderStatus.getResources().getString(R.string.finished)));
         }
         // batch finished
         if ((dirtyFlags & 0x7L) != 0) {
@@ -174,12 +174,12 @@ public class ItemOrderBindingImpl extends ItemOrderBinding implements apps.app.a
             apps.app.altcompany.base.ApplicationBinding.loadImage(this.imgItemOrder, itemHomeViewModelOrdersDataUserUsersImg);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvItemOrderCompany, itemHomeViewModelOrdersDataUserUsersUsername);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvItemOrderDesc, itemHomeViewModelOrdersDataOrdersDesc);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvItemOrderStatus, itemHomeViewModelOrdersDataOrdersStatusInt0JavaLangStringJavaLangString);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvItemOrderStatus, itemHomeViewModelOrdersDataOrdersStatusInt0TvItemOrderStatusAndroidStringWaitingTvItemOrderStatusAndroidStringFinished);
         }
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.rlItemOrderContainer.setOnClickListener(mCallback31);
+            this.rlItemOrderContainer.setOnClickListener(mCallback37);
         }
     }
     // Listener Stub Implementations
@@ -206,8 +206,8 @@ public class ItemOrderBindingImpl extends ItemOrderBinding implements apps.app.a
         flag 0 (0x1L): itemHomeViewModel
         flag 1 (0x2L): itemHomeViewModel.ordersData
         flag 2 (0x3L): null
-        flag 3 (0x4L): itemHomeViewModel.ordersData.ordersStatus != 0 ? "" : ""
-        flag 4 (0x5L): itemHomeViewModel.ordersData.ordersStatus != 0 ? "" : ""
+        flag 3 (0x4L): itemHomeViewModel.ordersData.ordersStatus != 0 ? @android:string/waiting : @android:string/finished
+        flag 4 (0x5L): itemHomeViewModel.ordersData.ordersStatus != 0 ? @android:string/waiting : @android:string/finished
     flag mapping end*/
     //end
 }

@@ -27,9 +27,11 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
     private final androidx.appcompat.widget.AppCompatButton mboundView5;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback10;
+    private final android.view.View.OnClickListener mCallback14;
     @Nullable
-    private final android.view.View.OnClickListener mCallback11;
+    private final android.view.View.OnClickListener mCallback15;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback13;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -55,15 +57,16 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
         this.userImg.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback10 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
-        mCallback11 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
+        mCallback14 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
+        mCallback15 = new apps.app.altcompany.generated.callback.OnClickListener(this, 3);
+        mCallback13 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x4L;
+                mDirtyFlags = 0x8L;
         }
         requestRebind();
     }
@@ -121,6 +124,12 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
             }
             return true;
         }
+        else if (fieldId == BR.passingObject) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x4L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -132,60 +141,155 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
             mDirtyFlags = 0;
         }
         java.lang.String viewModelOrdersDataUserUsersImg = null;
-        java.lang.String viewModelOrdersDataOrdersImgorVideo = null;
         apps.app.altcompany.pages.home.models.UserDetails viewModelOrdersDataUser = null;
+        boolean viewModelPassingObjectObjectEqualsJavaLangString1 = false;
         java.lang.String viewModelOrdersDataOrdersDesc = null;
+        java.lang.String viewModelOrdersDataOrdersImg = null;
         apps.app.altcompany.pages.home.models.OrdersData viewModelOrdersData = null;
+        apps.app.altcompany.PassingObject viewModelPassingObject = null;
         java.lang.String viewModelOrdersDataUserUsersUsername = null;
         apps.app.altcompany.pages.home.viewModels.OrderDetailsViewModel viewModel = mViewModel;
+        java.lang.String viewModelPassingObjectObject = null;
+        java.lang.String viewModelPassingObjectObjectEqualsJavaLangString1MboundView5AndroidStringSendOfferMboundView5AndroidStringChat = null;
 
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xfL) != 0) {
 
 
+            if ((dirtyFlags & 0xbL) != 0) {
 
-                if (viewModel != null) {
-                    // read viewModel.ordersData
-                    viewModelOrdersData = viewModel.getOrdersData();
+                    if (viewModel != null) {
+                        // read viewModel.ordersData
+                        viewModelOrdersData = viewModel.getOrdersData();
+                    }
+
+
+                    if (viewModelOrdersData != null) {
+                        // read viewModel.ordersData.user
+                        viewModelOrdersDataUser = viewModelOrdersData.getUser();
+                        // read viewModel.ordersData.ordersDesc
+                        viewModelOrdersDataOrdersDesc = viewModelOrdersData.getOrdersDesc();
+                        // read viewModel.ordersData.orders_img
+                        viewModelOrdersDataOrdersImg = viewModelOrdersData.getOrders_img();
+                    }
+
+
+                    if (viewModelOrdersDataUser != null) {
+                        // read viewModel.ordersData.user.users_img
+                        viewModelOrdersDataUserUsersImg = viewModelOrdersDataUser.getUsers_img();
+                        // read viewModel.ordersData.user.users_username
+                        viewModelOrdersDataUserUsersUsername = viewModelOrdersDataUser.getUsers_username();
+                    }
+            }
+            if ((dirtyFlags & 0xdL) != 0) {
+
+                    if (viewModel != null) {
+                        // read viewModel.passingObject
+                        viewModelPassingObject = viewModel.getPassingObject();
+                    }
+
+
+                    if (viewModelPassingObject != null) {
+                        // read viewModel.passingObject.object
+                        viewModelPassingObjectObject = viewModelPassingObject.getObject();
+                    }
+
+
+                    if (viewModelPassingObjectObject != null) {
+                        // read viewModel.passingObject.object.equals("-1")
+                        viewModelPassingObjectObjectEqualsJavaLangString1 = viewModelPassingObjectObject.equals("-1");
+                    }
+                if((dirtyFlags & 0xdL) != 0) {
+                    if(viewModelPassingObjectObjectEqualsJavaLangString1) {
+                            dirtyFlags |= 0x20L;
+                    }
+                    else {
+                            dirtyFlags |= 0x10L;
+                    }
                 }
 
 
-                if (viewModelOrdersData != null) {
-                    // read viewModel.ordersData.ordersImgorVideo
-                    viewModelOrdersDataOrdersImgorVideo = viewModelOrdersData.getOrdersImgorVideo();
-                    // read viewModel.ordersData.user
-                    viewModelOrdersDataUser = viewModelOrdersData.getUser();
-                    // read viewModel.ordersData.ordersDesc
-                    viewModelOrdersDataOrdersDesc = viewModelOrdersData.getOrdersDesc();
-                }
-
-
-                if (viewModelOrdersDataUser != null) {
-                    // read viewModel.ordersData.user.users_img
-                    viewModelOrdersDataUserUsersImg = viewModelOrdersDataUser.getUsers_img();
-                    // read viewModel.ordersData.user.users_username
-                    viewModelOrdersDataUserUsersUsername = viewModelOrdersDataUser.getUsers_username();
-                }
+                    // read viewModel.passingObject.object.equals("-1") ? @android:string/send_offer : @android:string/chat
+                    viewModelPassingObjectObjectEqualsJavaLangString1MboundView5AndroidStringSendOfferMboundView5AndroidStringChat = ((viewModelPassingObjectObjectEqualsJavaLangString1) ? (mboundView5.getResources().getString(R.string.send_offer)) : (mboundView5.getResources().getString(R.string.chat)));
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewModelOrdersDataUserUsersUsername);
-            apps.app.altcompany.base.ApplicationBinding.loadImage(this.mboundView3, viewModelOrdersDataOrdersImgorVideo);
+            apps.app.altcompany.base.ApplicationBinding.loadImage(this.mboundView3, viewModelOrdersDataOrdersImg);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.txtDetails, viewModelOrdersDataOrdersDesc);
             apps.app.altcompany.base.ApplicationBinding.loadImage(this.userImg, viewModelOrdersDataUserUsersImg);
         }
-        if ((dirtyFlags & 0x4L) != 0) {
+        if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView5.setOnClickListener(mCallback11);
-            this.userImg.setOnClickListener(mCallback10);
+            this.mboundView3.setOnClickListener(mCallback14);
+            this.mboundView5.setOnClickListener(mCallback15);
+            this.userImg.setOnClickListener(mCallback13);
+        }
+        if ((dirtyFlags & 0xdL) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView5, viewModelPassingObjectObjectEqualsJavaLangString1MboundView5AndroidStringSendOfferMboundView5AndroidStringChat);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewModel.ordersData
+                apps.app.altcompany.pages.home.models.OrdersData viewModelOrdersData = null;
+                // viewModel.ordersData != null
+                boolean viewModelOrdersDataJavaLangObjectNull = false;
+                // viewModel
+                apps.app.altcompany.pages.home.viewModels.OrderDetailsViewModel viewModel = mViewModel;
+                // viewModel.ordersData.orders_img
+                java.lang.String viewModelOrdersDataOrdersImg = null;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+
+
+                    viewModelOrdersData = viewModel.getOrdersData();
+
+                    viewModelOrdersDataJavaLangObjectNull = (viewModelOrdersData) != (null);
+                    if (viewModelOrdersDataJavaLangObjectNull) {
+
+
+                        viewModelOrdersDataOrdersImg = viewModelOrdersData.getOrders_img();
+
+
+                        viewModel.showImage(viewModelOrdersDataOrdersImg, callbackArg_0);
+                    }
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewModel
+                apps.app.altcompany.pages.home.viewModels.OrderDetailsViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+                    viewModel.sendOffer();
+                }
+                break;
+            }
             case 1: {
                 // localize variables for thread safety
                 // viewModel
@@ -203,23 +307,6 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
                 }
                 break;
             }
-            case 2: {
-                // localize variables for thread safety
-                // viewModel
-                apps.app.altcompany.pages.home.viewModels.OrderDetailsViewModel viewModel = mViewModel;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
-
-
-
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
-
-
-                    viewModel.sendOffer();
-                }
-                break;
-            }
         }
     }
     // dirty flag
@@ -227,7 +314,10 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
     /* flag mapping
         flag 0 (0x1L): viewModel
         flag 1 (0x2L): viewModel.ordersData
-        flag 2 (0x3L): null
+        flag 2 (0x3L): viewModel.passingObject
+        flag 3 (0x4L): null
+        flag 4 (0x5L): viewModel.passingObject.object.equals("-1") ? @android:string/send_offer : @android:string/chat
+        flag 5 (0x6L): viewModel.passingObject.object.equals("-1") ? @android:string/send_offer : @android:string/chat
     flag mapping end*/
     //end
 }

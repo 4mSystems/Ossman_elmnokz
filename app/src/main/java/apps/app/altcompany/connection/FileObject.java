@@ -33,7 +33,7 @@ public class FileObject implements Serializable {
         this.filePath=filePath;
         this.fileType=fileType;
         this.file = new File(filePath);
-        compressImage();
+        //compressImage();
     }
 
     public FileObject() {

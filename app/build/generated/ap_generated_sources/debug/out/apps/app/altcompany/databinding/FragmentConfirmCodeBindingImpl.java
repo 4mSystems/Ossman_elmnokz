@@ -23,7 +23,7 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
     private final apps.app.altcompany.customViews.views.CustomTextViewMedium mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback12;
+    private final android.view.View.OnClickListener mCallback16;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -80,7 +80,7 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
         this.pinView.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback12 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback16 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -172,7 +172,7 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.mboundView2.setOnClickListener(mCallback12);
+            this.mboundView2.setOnClickListener(mCallback16);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.pinView, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, pinViewandroidTextAttrChanged);
         }
         if ((dirtyFlags & 0x3L) != 0) {

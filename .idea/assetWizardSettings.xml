@@ -169,7 +169,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\MAymanM\Desktop\refresh.svg" />
+                                                <entry key="imagePath" value="F:\mostafa elnagar\app_design\Alt\cutting android\send.png" />
                                                 <entry key="paddingPercent" value="50" />
                                               </map>
                                             </option>
@@ -203,10 +203,10 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="backgroundColor" value="296bb5" />
+                                      <entry key="backgroundColor" value="3b3734" />
                                       <entry key="iconShape" value="CIRCLE" />
-                                      <entry key="imageAsset" value="C:\Users\MAymanM\Desktop\refresh.svg" />
-                                      <entry key="outputName" value="ic_refresh" />
+                                      <entry key="imageAsset" value="F:\mostafa elnagar\app_design\Alt\cutting android\send.png" />
+                                      <entry key="outputName" value="ic_send_chat" />
                                     </map>
                                   </option>
                                 </PersistentState>

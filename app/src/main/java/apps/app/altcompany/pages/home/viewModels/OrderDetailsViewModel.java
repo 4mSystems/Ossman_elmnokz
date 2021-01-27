@@ -34,7 +34,10 @@ public class OrderDetailsViewModel extends BaseViewModel {
     }
 
     public void sendOffer() {
-        compositeDisposable.add(ordersRepository.sendOffer(getPassingObject().getId()));
+        if (getPassingObject().getObject().equals("-1"))
+            compositeDisposable.add(ordersRepository.sendOffer(getPassingObject().getId()));
+        else
+            liveData.setValue(new Mutable(Constants.CHAT));
     }
 
     public void toUserDetails() {
