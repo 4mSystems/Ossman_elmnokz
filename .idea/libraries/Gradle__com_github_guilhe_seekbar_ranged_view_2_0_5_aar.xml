@@ -4,6 +4,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/084c2cfd2b3172582caaec1c1c1beba7/jetified-seekbar-ranged-view-2.0.5/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/084c2cfd2b3172582caaec1c1c1beba7/jetified-seekbar-ranged-view-2.0.5/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/084c2cfd2b3172582caaec1c1c1beba7/jetified-seekbar-ranged-view-2.0.5/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2ea7483a635b43583587147835f3b59/jetified-seekbar-ranged-view-2.0.5/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2ea7483a635b43583587147835f3b59/jetified-seekbar-ranged-view-2.0.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2ea7483a635b43583587147835f3b59/jetified-seekbar-ranged-view-2.0.5/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.guilhe/seekbar-ranged-view/2.0.5/c1fc968f0d488c0b30162f4c07940d2dadd6ac66/seekbar-ranged-view-2.0.5-javadoc.jar!/" />
