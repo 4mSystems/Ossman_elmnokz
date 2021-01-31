@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
+import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
 
@@ -32,10 +33,11 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     public void onMessageReceived(@NotNull RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
         if (remoteMessage.getData().get("chat") != null) {
+            Log.e("onMessageReceived", "onMessageReceived: "+remoteMessage.getData());
             showNotification(remoteMessage.getData());
             Intent intent = new Intent();
             intent.putExtra("chat", remoteMessage.getData().get("chat"));
-            intent.setAction("app.te.receiver");
+            intent.setAction("apps.app.altcompany.receiver");
             sendBroadcast(intent);
         } else {
             showNotification(remoteMessage.getData());
@@ -45,6 +47,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private void showNotification(Map<String, String> notification) {
         Intent intent = new Intent(this, BaseActivity.class);
         intent.putExtra("is_notification", true);
+        intent.putExtra("type", notification.get("type"));
+        intent.putExtra("order_id", notification.get("order_id"));
         // Set the Activity to start in a new, empty task
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
                 PendingIntent.FLAG_ONE_SHOT);

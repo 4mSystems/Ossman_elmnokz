@@ -1,6 +1,5 @@
 package apps.app.altcompany.pages.auth.register;
 
-import android.util.Log;
 
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
@@ -27,11 +26,11 @@ import io.reactivex.disposables.CompositeDisposable;
 
 public class RegisterViewModel extends BaseViewModel {
     MutableLiveData<Mutable> liveData;
-    private List<FileObject> fileObject;
+    List<FileObject> fileObject;
     @Inject
     AuthRepository repository;
-    private CompositeDisposable compositeDisposable = new CompositeDisposable();
-    private RegisterRequest request;
+    CompositeDisposable compositeDisposable = new CompositeDisposable();
+    RegisterRequest request;
     private List<Cities> citiesList;
     private List<DepartmentsItem> departmentsItems;
     private boolean checked;

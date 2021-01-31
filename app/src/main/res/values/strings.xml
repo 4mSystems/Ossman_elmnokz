@@ -58,18 +58,18 @@
     <string name="label_yes">Yes</string>
     <string name="label_no">No</string>
     <string name="action_send">Send</string>
-    <string name="hint_write_something">Write something ...</string>
+    <string name="hint_write_something">Write something …</string>
     <string name="label_choose_your_language">Choose your language</string>
     <string name="label_arabic">Arabic</string>
     <string name="label_english">English</string>
-    <string name="label_ok">Ok</string>
+    <string name="label_ok">OK</string>
     <string name="label_cancel">Cancel</string>
     <string name="label_select_time_period">Select Time Period</string>
     <string name="label_home">Home</string>
     <string name="label_my_products">My Products</string>
     <string name="label_favourite">Favourite</string>
     <string name="label_notification">Notification</string>
-    <string name="label_language">Language</string>
+    <string name="label_language">Change language</string>
     <string name="label_privacy_policy">Privacy policy</string>
     <string name="label_suggestions">Suggestions</string>
     <string name="label_share_app">Share app</string>
@@ -206,7 +206,7 @@
     <string name="user_details">User details</string>
     <string name="points">points</string>
     <string name="company_profile">Company profile</string>
-    <string name="chat_hint">Write your message...</string>
+    <string name="chat_hint">Write your message…</string>
     <string name="finished">Finished</string>
     <string name="waiting">Waiting</string>
 </resources>

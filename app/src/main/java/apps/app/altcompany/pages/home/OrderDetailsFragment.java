@@ -1,6 +1,7 @@
 package apps.app.altcompany.pages.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,6 +21,7 @@ import javax.inject.Inject;
 
 import apps.app.altcompany.PassingObject;
 import apps.app.altcompany.R;
+import apps.app.altcompany.activity.ExoPlayerActivity;
 import apps.app.altcompany.base.BaseFragment;
 import apps.app.altcompany.base.IApplicationComponent;
 import apps.app.altcompany.base.MyApplication;
@@ -51,7 +53,6 @@ public class OrderDetailsFragment extends BaseFragment {
         if (bundle != null) {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
-            Log.e("onCreateView", "onCreateView: " + viewModel.getPassingObject().getObject());
             viewModel.orderDetails();
         }
         setEvent();
@@ -73,6 +74,14 @@ public class OrderDetailsFragment extends BaseFragment {
                     break;
                 case Constants.USER_DETAILS:
                     MovementHelper.startActivityWithBundle(context, new PassingObject(viewModel.getOrdersData()), getString(R.string.user_details), UserDetailsFragment.class.getName(), null);
+                    break;
+                case Constants.VIEW_IMAGE:
+                    viewModel.showImage(viewModel.getOrdersData().getOrders_img(), binding.orderMedia);
+                    break;
+                case Constants.VIEW_VIDEO:
+                    Intent mIntent = ExoPlayerActivity.getStartIntent(context, viewModel.getOrdersData().getOrders_video());
+                    mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(mIntent);
                     break;
                 case Constants.CHAT:
                     MovementHelper.startActivityWithBundle(context, new PassingObject(viewModel.getPassingObject().getId(), Constants.CHAT), getString(R.string.chat), ChatAdminFragment.class.getName(), null);

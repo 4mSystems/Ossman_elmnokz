@@ -62,7 +62,7 @@
                 android:id="@+id/tv_item_notification_desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="start"
+                android:textAlignment="viewStart"
                 android:text="@={itemNotificationViewModel.notificationsData.title}"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/sp11" />

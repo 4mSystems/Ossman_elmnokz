@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+                                                        
+
+    
+
+                 
+                                    
+                                                                                 
+           
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl_item_order_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp5w"
+        android:background="@drawable/border_silver_round_line"
+        android:tag="layout/item_order_0"                        
+        android:padding="@dimen/dp5h"  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_item_order"
+            android:layout_width="@dimen/dp60w"
+            android:layout_height="@dimen/dp60w"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/dp5w"
+            android:src="@drawable/ic_logo"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="1dp"
+            android:tag="binding_1"                                      
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <apps.app.altcompany.customViews.views.CustomTextViewMedium
+            android:id="@+id/tv_item_order_company"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp4w"
+            android:layout_marginEnd="@dimen/dp4w"
+            android:tag="binding_2"                                           
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintEnd_toStartOf="@id/tv_item_order_status"
+            app:layout_constraintStart_toEndOf="@id/img_item_order"
+            app:layout_constraintTop_toTopOf="@id/img_item_order" />
+
+
+        <apps.app.altcompany.customViews.views.CustomTextViewMedium
+            android:id="@+id/tv_item_order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="binding_3"                                                                        
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/sp11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/img_item_order" />
+
+
+        <apps.app.altcompany.customViews.views.CustomTextViewMedium
+            android:id="@+id/tv_item_order_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp4w"
+            android:layout_marginTop="@dimen/dp3h"
+            android:ellipsize="end"
+            android:lines="2"
+            android:tag="binding_4"                                  
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_item_order"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_order_company" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+         

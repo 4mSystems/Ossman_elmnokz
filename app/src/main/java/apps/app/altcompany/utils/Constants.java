@@ -58,8 +58,8 @@ public class Constants {
     public static final String REMOVE_OFFER = "REMOVE_OFFER";
     public static final String MY_ORDERS = "MY_ORDERS";
     public static final String CHAT_ADMIN = "CHAT_ADMIN";
-    public static final String MY_ADS = "MY_ORDERS";
-    public static final String SORT_DIALOG = "SORT_DIALOG";
+    public static final String VIEW_IMAGE = "VIEW_IMAGE";
+    public static final String VIEW_VIDEO = "VIEW_VIDEO";
     public static final String CATEGORIES = "CATEGORIES";
     public static final String DELEGATE_DOCUMNET = "DELEGATE_DOCUMNET";
     public static final String GET_USER_DOCUMENTS = "GET_USER_DOCUMENTS";

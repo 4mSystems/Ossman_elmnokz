@@ -3,21 +3,30 @@ package apps.app.altcompany.activity;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 
+import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.MutableLiveData;
 
+import com.google.gson.Gson;
+
+import apps.app.altcompany.PassingObject;
 import apps.app.altcompany.R;
 import apps.app.altcompany.base.IApplicationComponent;
 import apps.app.altcompany.base.MyApplication;
 import apps.app.altcompany.base.ParentActivity;
 import apps.app.altcompany.customViews.actionbar.BackActionBarView;
 import apps.app.altcompany.databinding.ActivityBaseBinding;
+import apps.app.altcompany.pages.chatAdmin.view.ChatAdminFragment;
+import apps.app.altcompany.pages.home.OrderDetailsFragment;
 import apps.app.altcompany.pages.splash.SplashFragment;
 import apps.app.altcompany.utils.Constants;
 import apps.app.altcompany.utils.helper.MovementHelper;
+import apps.app.altcompany.utils.resources.ResourceManager;
 
 public class BaseActivity extends ParentActivity {
     private static final String TAG = "BaseActivity";
@@ -57,45 +66,57 @@ public class BaseActivity extends ParentActivity {
         });
     }
 
-    private void setTitleName() {
-        if (getIntent().hasExtra(Constants.NAME_BAR)) {
-            backActionBarView = new BackActionBarView(this);
-            backActionBarView.setTitle(getIntent().getStringExtra(Constants.NAME_BAR));
-            activityBaseBinding.llBaseActionBarContainer.addView(backActionBarView);
+    private void setTitleName(@Nullable String title) {
+        backActionBarView = new BackActionBarView(this);
+        if (title != null) {
+            backActionBarView.setTitle(title);
+        } else {
+            if (getIntent().hasExtra(Constants.NAME_BAR)) {
+                backActionBarView.setTitle(getIntent().getStringExtra(Constants.NAME_BAR));
+            }
         }
+        activityBaseBinding.llBaseActionBarContainer.addView(backActionBarView);
     }
 
     public void getNotification() {
 //        Log.d(TAG, "Notification GET");
-//        if (getIntent().getExtras() != null && getIntent().hasExtra(Constants.BUNDLE_NOTIFICATION)) {
-//            Log.d(TAG, "Notification HAS EXTRA");
-//            Bundle bundle = getIntent().getBundleExtra(Constants.BUNDLE_NOTIFICATION);
-//            NotificationGCMModel model = (NotificationGCMModel) bundle.getSerializable(Constants.BUNDLE_NOTIFICATION);
-//            if (model != null) {
-//                if(model.notification_type == 1){
-//                    setTitleName(ResourceManager.getString(R.string.notifications));
-//                    notification_checked = true;
-//                    MovementHelper.replaceFragment(this, new NotificationFragment(), "");
-//                    return;
-//                }else if(model.notification_type == 2){
-//                    setTitleName(ResourceManager.getString(R.string.order_number) + " (" + model.orderNumber + ")");
-//                    notification_checked = true;
-//                    OrderDetailsFragment orderDetailsFragment = new OrderDetailsFragment();
-//                    bundle.putInt(Constants.ID,model.orderId);
-//                    bundle.putBoolean(Constants.ACTION,false);
-//                    orderDetailsFragment.setArguments(bundle);
-//                    MovementHelper.replaceFragment(this,orderDetailsFragment, "");
-//                    return;
-//                }else if(model.notification_type == 3){
-//                    setTitleName(ResourceManager.getString(R.string.chat));
-//                    notification_checked = true;
-//                    MovementHelper.replaceFragment(this, new ChatFragment(), "");
-//                    return;
+        if (getIntent() != null && getIntent().getBooleanExtra("is_notification", false)) {
+            notification_checked = true;
+            String typeNotifications = getIntent().getStringExtra("type");
+            String orderId = getIntent().getStringExtra("order_id");
+            Log.e(TAG, "getNotification: " + orderId);
+            Bundle bundle = new Bundle();
+            switch (typeNotifications) {
+                case "0":  // new Offer
+                    setTitleName(ResourceManager.getString(R.string.order_details));
+                    OrderDetailsFragment homeMainFragment = new OrderDetailsFragment();
+                    bundle.putString(Constants.BUNDLE, new Gson().toJson(new PassingObject(Integer.parseInt(orderId))));
+                    homeMainFragment.setArguments(bundle);
+                    MovementHelper.replaceFragmentTag(this, homeMainFragment, homeMainFragment.getClass().getName(), "");
+                    break;
+                case "1": { // chat
+                    if (!TextUtils.isEmpty(orderId)) {
+                        setTitleName(ResourceManager.getString(R.string.chat));
+                        ChatAdminFragment fragment = new ChatAdminFragment();
+                        bundle.putString(Constants.BUNDLE, new Gson().toJson(new PassingObject(Integer.parseInt(orderId))));
+                        fragment.setArguments(bundle);
+                        MovementHelper.replaceFragmentTag(this, fragment, fragment.getClass().getName(), "");
+                    } else {
+                        setTitleName(ResourceManager.getString(R.string.admin_chat));
+                        ChatAdminFragment fragment = new ChatAdminFragment();
+                        MovementHelper.replaceFragmentTag(this, fragment, fragment.getClass().getName(), "");
+                    }
+
+                    break;
+                }
+//                case "2": { // chatAdmin
+//                    setTitleName(ResourceManager.getString(R.string.admin_chat));
+//                    ChatAdminFragment fragment = new ChatAdminFragment();
+//                    MovementHelper.replaceFragmentTag(this, fragment, fragment.getClass().getName(), "");
+//                    break;
 //                }
-//            }
-//            return;
-//
-//        }
+            }
+        }
     }
 
     private Fragment getBundle(Fragment fragment) {
@@ -103,7 +124,7 @@ public class BaseActivity extends ParentActivity {
         bundle.putString(Constants.BUNDLE, getIntent().getStringExtra(Constants.BUNDLE));
         fragment.setArguments(bundle);
         if (getIntent().hasExtra(Constants.NAME_BAR)) {
-            setTitleName();
+            setTitleName(null);
         }
 
         return fragment;

@@ -120,8 +120,8 @@ public class ItemOrderBindingImpl extends ItemOrderBinding implements apps.app.a
         java.lang.String itemHomeViewModelOrdersDataUserUsersImg = null;
         apps.app.altcompany.pages.home.viewModels.ItemHomeViewModel itemHomeViewModel = mItemHomeViewModel;
         apps.app.altcompany.pages.home.models.UserDetails itemHomeViewModelOrdersDataUser = null;
-        int itemHomeViewModelOrdersDataOrdersStatus = 0;
         boolean itemHomeViewModelOrdersDataOrdersStatusInt0 = false;
+        int itemHomeViewModelOrdersDataOrdersStatus = 0;
         apps.app.altcompany.pages.home.models.OrdersData itemHomeViewModelOrdersData = null;
         java.lang.String itemHomeViewModelOrdersDataUserUsersUsername = null;
         java.lang.String itemHomeViewModelOrdersDataOrdersDesc = null;
@@ -152,8 +152,8 @@ public class ItemOrderBindingImpl extends ItemOrderBinding implements apps.app.a
                     // read itemHomeViewModel.ordersData.user.users_username
                     itemHomeViewModelOrdersDataUserUsersUsername = itemHomeViewModelOrdersDataUser.getUsers_username();
                 }
-                // read itemHomeViewModel.ordersData.ordersStatus != 0
-                itemHomeViewModelOrdersDataOrdersStatusInt0 = (itemHomeViewModelOrdersDataOrdersStatus) != (0);
+                // read itemHomeViewModel.ordersData.ordersStatus == 0
+                itemHomeViewModelOrdersDataOrdersStatusInt0 = (itemHomeViewModelOrdersDataOrdersStatus) == (0);
             if((dirtyFlags & 0x7L) != 0) {
                 if(itemHomeViewModelOrdersDataOrdersStatusInt0) {
                         dirtyFlags |= 0x10L;
@@ -164,7 +164,7 @@ public class ItemOrderBindingImpl extends ItemOrderBinding implements apps.app.a
             }
 
 
-                // read itemHomeViewModel.ordersData.ordersStatus != 0 ? @android:string/waiting : @android:string/finished
+                // read itemHomeViewModel.ordersData.ordersStatus == 0 ? @android:string/waiting : @android:string/finished
                 itemHomeViewModelOrdersDataOrdersStatusInt0TvItemOrderStatusAndroidStringWaitingTvItemOrderStatusAndroidStringFinished = ((itemHomeViewModelOrdersDataOrdersStatusInt0) ? (tvItemOrderStatus.getResources().getString(R.string.waiting)) : (tvItemOrderStatus.getResources().getString(R.string.finished)));
         }
         // batch finished
@@ -206,8 +206,8 @@ public class ItemOrderBindingImpl extends ItemOrderBinding implements apps.app.a
         flag 0 (0x1L): itemHomeViewModel
         flag 1 (0x2L): itemHomeViewModel.ordersData
         flag 2 (0x3L): null
-        flag 3 (0x4L): itemHomeViewModel.ordersData.ordersStatus != 0 ? @android:string/waiting : @android:string/finished
-        flag 4 (0x5L): itemHomeViewModel.ordersData.ordersStatus != 0 ? @android:string/waiting : @android:string/finished
+        flag 3 (0x4L): itemHomeViewModel.ordersData.ordersStatus == 0 ? @android:string/waiting : @android:string/finished
+        flag 4 (0x5L): itemHomeViewModel.ordersData.ordersStatus == 0 ? @android:string/waiting : @android:string/finished
     flag mapping end*/
     //end
 }

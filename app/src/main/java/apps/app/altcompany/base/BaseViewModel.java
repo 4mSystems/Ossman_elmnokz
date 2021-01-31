@@ -18,6 +18,7 @@ import apps.app.altcompany.R;
 import apps.app.altcompany.pages.auth.login.models.UserData;
 import apps.app.altcompany.utils.images.PhotoFullPopupWindow;
 import apps.app.altcompany.utils.resources.ResourceManager;
+import apps.app.altcompany.utils.session.LanguagesHelper;
 import apps.app.altcompany.utils.session.UserHelper;
 
 
@@ -26,7 +27,7 @@ public class BaseViewModel extends ViewModel implements Observable {
     private ObservableField<String> message = new ObservableField<>();
     private PropertyChangeRegistry mCallBacks;
     private PassingObject passingObject = new PassingObject();
-    private String countryCurrency;
+    public String lang = LanguagesHelper.getCurrentLanguage();
     public UserData userData = UserHelper.getInstance(MyApplication.getInstance()).getUserData();
 
 

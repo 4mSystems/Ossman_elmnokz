@@ -7,6 +7,7 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 
+import apps.app.altcompany.pages.chatAdmin.model.ChatAdmin;
 
 
 public class RealTimeReceiver extends BroadcastReceiver {
@@ -15,12 +16,12 @@ public class RealTimeReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         if (intent != null) {
 
-            if (intent.getAction().equals("app.te.receiver")) {
+            if (intent.getAction().equals("apps.app.altcompany.receiver")) {
                 if (intent.getSerializableExtra("chat") != null) {
                     String details = String.valueOf(intent.getSerializableExtra("chat"));
-                    Log.i("onReceive", "onReceive: " + details);
-//                    Chat messagesItem = new Gson().fromJson(details, Chat.class);
-//                    messageReceiverListene.onMessageChanged(messagesItem);
+                    Log.e("onReceive", "onReceive: " + details);
+                    ChatAdmin messagesItem = new Gson().fromJson(details, ChatAdmin.class);
+                    messageReceiverListene.onMessageChanged(messagesItem);
                 }
             }
         } else
@@ -28,6 +29,6 @@ public class RealTimeReceiver extends BroadcastReceiver {
     }
 
     public interface MessageReceiverListener {
-//        void onMessageChanged(Chat messagesItem);
+        void onMessageChanged(ChatAdmin messagesItem);
     }
 }

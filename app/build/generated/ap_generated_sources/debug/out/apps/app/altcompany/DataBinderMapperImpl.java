@@ -7,6 +7,7 @@ import androidx.databinding.DataBinderMapper;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
 import apps.app.altcompany.databinding.ActivityBaseBindingImpl;
+import apps.app.altcompany.databinding.ActivityExoPlayerBindingImpl;
 import apps.app.altcompany.databinding.ActivityMainBindingImpl;
 import apps.app.altcompany.databinding.ActivityMapAddressBindingImpl;
 import apps.app.altcompany.databinding.FragmentAboutBindingImpl;
@@ -55,80 +56,83 @@ import java.util.List;
 public class DataBinderMapperImpl extends DataBinderMapper {
   private static final int LAYOUT_ACTIVITYBASE = 1;
 
-  private static final int LAYOUT_ACTIVITYMAIN = 2;
+  private static final int LAYOUT_ACTIVITYEXOPLAYER = 2;
 
-  private static final int LAYOUT_ACTIVITYMAPADDRESS = 3;
+  private static final int LAYOUT_ACTIVITYMAIN = 3;
 
-  private static final int LAYOUT_FRAGMENTABOUT = 4;
+  private static final int LAYOUT_ACTIVITYMAPADDRESS = 4;
 
-  private static final int LAYOUT_FRAGMENTADDOFFER = 5;
+  private static final int LAYOUT_FRAGMENTABOUT = 5;
 
-  private static final int LAYOUT_FRAGMENTCHANGEPASSWORD = 6;
+  private static final int LAYOUT_FRAGMENTADDOFFER = 6;
 
-  private static final int LAYOUT_FRAGMENTCHATADMIN = 7;
+  private static final int LAYOUT_FRAGMENTCHANGEPASSWORD = 7;
 
-  private static final int LAYOUT_FRAGMENTCOMPANYPROFILE = 8;
+  private static final int LAYOUT_FRAGMENTCHATADMIN = 8;
 
-  private static final int LAYOUT_FRAGMENTCONFIRMCODE = 9;
+  private static final int LAYOUT_FRAGMENTCOMPANYPROFILE = 9;
 
-  private static final int LAYOUT_FRAGMENTFORGETPASSWORD = 10;
+  private static final int LAYOUT_FRAGMENTCONFIRMCODE = 10;
 
-  private static final int LAYOUT_FRAGMENTHOME = 11;
+  private static final int LAYOUT_FRAGMENTFORGETPASSWORD = 11;
 
-  private static final int LAYOUT_FRAGMENTLOGIN = 12;
+  private static final int LAYOUT_FRAGMENTHOME = 12;
 
-  private static final int LAYOUT_FRAGMENTMYORDERS = 13;
+  private static final int LAYOUT_FRAGMENTLOGIN = 13;
 
-  private static final int LAYOUT_FRAGMENTNOTIFICATIONS = 14;
+  private static final int LAYOUT_FRAGMENTMYORDERS = 14;
 
-  private static final int LAYOUT_FRAGMENTOFFERS = 15;
+  private static final int LAYOUT_FRAGMENTNOTIFICATIONS = 15;
 
-  private static final int LAYOUT_FRAGMENTORDERDETAIL = 16;
+  private static final int LAYOUT_FRAGMENTOFFERS = 16;
 
-  private static final int LAYOUT_FRAGMENTPRIVACY = 17;
+  private static final int LAYOUT_FRAGMENTORDERDETAIL = 17;
 
-  private static final int LAYOUT_FRAGMENTREGISTERSTEP1 = 18;
+  private static final int LAYOUT_FRAGMENTPRIVACY = 18;
 
-  private static final int LAYOUT_FRAGMENTREGISTERSTEP2 = 19;
+  private static final int LAYOUT_FRAGMENTREGISTERSTEP1 = 19;
 
-  private static final int LAYOUT_FRAGMENTREGISTERSTEP3 = 20;
+  private static final int LAYOUT_FRAGMENTREGISTERSTEP2 = 20;
 
-  private static final int LAYOUT_FRAGMENTREGISTERSTEP4 = 21;
+  private static final int LAYOUT_FRAGMENTREGISTERSTEP3 = 21;
 
-  private static final int LAYOUT_FRAGMENTSPLASH = 22;
+  private static final int LAYOUT_FRAGMENTREGISTERSTEP4 = 22;
 
-  private static final int LAYOUT_FRAGMENTSUGGESTION = 23;
+  private static final int LAYOUT_FRAGMENTSPLASH = 23;
 
-  private static final int LAYOUT_FRAGMENTUSERDETAILS = 24;
+  private static final int LAYOUT_FRAGMENTSUGGESTION = 24;
 
-  private static final int LAYOUT_ITEMCATEGORY = 25;
+  private static final int LAYOUT_FRAGMENTUSERDETAILS = 25;
 
-  private static final int LAYOUT_ITEMCHATADMIN = 26;
+  private static final int LAYOUT_ITEMCATEGORY = 26;
 
-  private static final int LAYOUT_ITEMMENU = 27;
+  private static final int LAYOUT_ITEMCHATADMIN = 27;
 
-  private static final int LAYOUT_ITEMNOTIFICATION = 28;
+  private static final int LAYOUT_ITEMMENU = 28;
 
-  private static final int LAYOUT_ITEMOFFER = 29;
+  private static final int LAYOUT_ITEMNOTIFICATION = 29;
 
-  private static final int LAYOUT_ITEMORDER = 30;
+  private static final int LAYOUT_ITEMOFFER = 30;
 
-  private static final int LAYOUT_ITEMRECHARGE = 31;
+  private static final int LAYOUT_ITEMORDER = 31;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 32;
+  private static final int LAYOUT_ITEMRECHARGE = 32;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 33;
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 33;
 
-  private static final int LAYOUT_LAYOUTGRAND = 34;
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 34;
 
-  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 35;
+  private static final int LAYOUT_LAYOUTGRAND = 35;
 
-  private static final int LAYOUT_TERMSDIALOG = 36;
+  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 36;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(36);
+  private static final int LAYOUT_TERMSDIALOG = 37;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(37);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.activity_exo_player, LAYOUT_ACTIVITYEXOPLAYER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.activity_map_address, LAYOUT_ACTIVITYMAPADDRESS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(apps.app.altcompany.R.layout.fragment_about, LAYOUT_FRAGMENTABOUT);
@@ -180,6 +184,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new ActivityBaseBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for activity_base is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ACTIVITYEXOPLAYER: {
+          if ("layout/activity_exo_player_0".equals(tag)) {
+            return new ActivityExoPlayerBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_exo_player is invalid. Received: " + tag);
         }
         case  LAYOUT_ACTIVITYMAIN: {
           if ("layout/activity_main_0".equals(tag)) {
@@ -485,10 +495,11 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(36);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(37);
 
     static {
       sKeys.put("layout/activity_base_0", apps.app.altcompany.R.layout.activity_base);
+      sKeys.put("layout/activity_exo_player_0", apps.app.altcompany.R.layout.activity_exo_player);
       sKeys.put("layout/activity_main_0", apps.app.altcompany.R.layout.activity_main);
       sKeys.put("layout/activity_map_address_0", apps.app.altcompany.R.layout.activity_map_address);
       sKeys.put("layout/fragment_about_0", apps.app.altcompany.R.layout.fragment_about);

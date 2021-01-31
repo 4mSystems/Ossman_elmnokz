@@ -113,6 +113,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="apps.app.altcompany.activity.ExoPlayerActivity"
+            android:screenOrientation="portrait" />
         <!-- grandapps2005@gmail.com -->
         <service
             android:name="apps.app.altcompany.base.MyFirebaseMessagingService"

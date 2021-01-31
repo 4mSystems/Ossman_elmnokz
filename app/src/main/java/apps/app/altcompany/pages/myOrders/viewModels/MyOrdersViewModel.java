@@ -25,8 +25,8 @@ public class MyOrdersViewModel extends BaseViewModel {
         ordersRepository.setLiveData(liveData);
     }
 
-    public void myOrders() {
-        compositeDisposable.add(ordersRepository.myOrders());
+    public void myOrders(int orderType) {
+        compositeDisposable.add(ordersRepository.myOrders(orderType));
     }
 
     @Bindable

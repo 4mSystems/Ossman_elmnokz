@@ -26,6 +26,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 import org.imaginativeworld.oopsnointernet.NoInternetDialog;
 
+import apps.app.altcompany.pages.chatAdmin.model.ChatAdmin;
 import apps.app.altcompany.utils.services.RealTimeReceiver;
 import es.dmoral.toasty.Toasty;
 import apps.app.altcompany.R;
@@ -39,7 +40,7 @@ import apps.app.altcompany.utils.session.MyContextWrapper;
 import apps.app.altcompany.utils.session.UserHelper;
 
 public class ParentActivity extends AppCompatActivity implements
-        ConnectivityReceiver.ConnectivityReceiverListener {
+        ConnectivityReceiver.ConnectivityReceiverListener ,RealTimeReceiver.MessageReceiverListener{
     public NoInternetDialog noInternetDialog;
     public MutableLiveData<Boolean> ConnectionLiveData;
     ConnectivityReceiver connectivityReceiver = new ConnectivityReceiver();
@@ -82,14 +83,14 @@ public class ParentActivity extends AppCompatActivity implements
     public void onResume() {
         super.onResume();
         MyApplication.getInstance().setConnectivityListener(this);
-//        MyApplication.getInstance().setMessageReceiverListener(this);
+        MyApplication.getInstance().setMessageReceiverListener(this);
 
     }
 
-//    @Override
-//    public void onMessageChanged(Chat messagesItem) {
-//
-//    }
+    @Override
+    public void onMessageChanged(ChatAdmin messagesItem) {
+
+    }
 
     @Override
     protected void onStart() {
@@ -97,7 +98,7 @@ public class ParentActivity extends AppCompatActivity implements
         IntentFilter intentFilter = new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE");
         intentFilter.addCategory(Intent.CATEGORY_DEFAULT);
         registerReceiver(connectivityReceiver, intentFilter);
-        IntentFilter chatFilter = new IntentFilter("app.te.receiver");
+        IntentFilter chatFilter = new IntentFilter("apps.app.altcompany.receiver");
         chatFilter.addCategory(Intent.CATEGORY_DEFAULT);
         registerReceiver(realTimeReceiver, chatFilter);
     }

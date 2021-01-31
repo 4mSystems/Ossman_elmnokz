@@ -149,8 +149,11 @@ public class FragmentChatAdminBindingImpl extends FragmentChatAdminBinding imple
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        int viewmodelLangEqualsJavaLangStringArInt180Int0 = 0;
         apps.app.altcompany.pages.chatAdmin.model.ChatAdminRequest viewmodelRequest = null;
         java.lang.String viewmodelRequestMessage = null;
+        boolean viewmodelLangEqualsJavaLangStringAr = false;
+        java.lang.String viewmodelLang = null;
         apps.app.altcompany.pages.chatAdmin.adapter.ChatAdminAdapter viewmodelAdapter = null;
         apps.app.altcompany.pages.chatAdmin.viewmodel.ChatAdminViewModel viewmodel = mViewmodel;
 
@@ -161,6 +164,8 @@ public class FragmentChatAdminBindingImpl extends FragmentChatAdminBinding imple
                 if (viewmodel != null) {
                     // read viewmodel.request
                     viewmodelRequest = viewmodel.request;
+                    // read viewmodel.lang
+                    viewmodelLang = viewmodel.lang;
                     // read viewmodel.adapter
                     viewmodelAdapter = viewmodel.adapter;
                 }
@@ -170,6 +175,22 @@ public class FragmentChatAdminBindingImpl extends FragmentChatAdminBinding imple
                     // read viewmodel.request.message
                     viewmodelRequestMessage = viewmodelRequest.getMessage();
                 }
+                if (viewmodelLang != null) {
+                    // read viewmodel.lang.equals("ar")
+                    viewmodelLangEqualsJavaLangStringAr = viewmodelLang.equals("ar");
+                }
+            if((dirtyFlags & 0x3L) != 0) {
+                if(viewmodelLangEqualsJavaLangStringAr) {
+                        dirtyFlags |= 0x8L;
+                }
+                else {
+                        dirtyFlags |= 0x4L;
+                }
+            }
+
+
+                // read viewmodel.lang.equals("ar") ? 180 : 0
+                viewmodelLangEqualsJavaLangStringArInt180Int0 = ((viewmodelLangEqualsJavaLangStringAr) ? (180) : (0));
         }
         // batch finished
         if ((dirtyFlags & 0x3L) != 0) {
@@ -177,6 +198,11 @@ public class FragmentChatAdminBindingImpl extends FragmentChatAdminBinding imple
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.edMessage, viewmodelRequestMessage);
             apps.app.altcompany.base.ApplicationBinding.getItemsV2Binding(this.rcChat, viewmodelAdapter, "1", "1");
+            // api target 11
+            if(getBuildSdkInt() >= 11) {
+
+                this.sendChat.setRotation(viewmodelLangEqualsJavaLangStringArInt180Int0);
+            }
         }
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
@@ -208,6 +234,8 @@ public class FragmentChatAdminBindingImpl extends FragmentChatAdminBinding imple
     /* flag mapping
         flag 0 (0x1L): viewmodel
         flag 1 (0x2L): null
+        flag 2 (0x3L): viewmodel.lang.equals("ar") ? 180 : 0
+        flag 3 (0x4L): viewmodel.lang.equals("ar") ? 180 : 0
     flag mapping end*/
     //end
 }

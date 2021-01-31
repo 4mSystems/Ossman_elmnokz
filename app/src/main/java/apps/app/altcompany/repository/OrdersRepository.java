@@ -43,8 +43,8 @@ public class OrdersRepository extends BaseRepository {
                 Constants.HOME, true);
     }
 
-    public Disposable myOrders() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.MY_ORDERS, new Object(), OrdersResponse.class,
+    public Disposable myOrders(int orderId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.MY_ORDERS + "/" + orderId, new Object(), OrdersResponse.class,
                 Constants.MY_ORDERS, true);
     }
 

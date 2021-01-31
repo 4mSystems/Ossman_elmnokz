@@ -361,7 +361,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/radio_button_unchecked/baseline_radio_button_unchecked_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/g_translate/baseline_g_translate_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -372,8 +372,8 @@
                         <option name="values">
                           <map>
                             <entry key="autoMirrored" value="true" />
-                            <entry key="color" value="926d4a" />
-                            <entry key="outputName" value="ic_radio_empty" />
+                            <entry key="color" value="8a98a3" />
+                            <entry key="outputName" value="ic_lang" />
                             <entry key="sourceFile" value="C:\Users\MAymanM\android-files\Akary\icons\official-documents.svg" />
                           </map>
                         </option>

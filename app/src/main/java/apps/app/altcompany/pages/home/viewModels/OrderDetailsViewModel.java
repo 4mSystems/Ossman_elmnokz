@@ -1,6 +1,8 @@
 
 package apps.app.altcompany.pages.home.viewModels;
 
+import android.text.TextUtils;
+
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
@@ -42,6 +44,13 @@ public class OrderDetailsViewModel extends BaseViewModel {
 
     public void toUserDetails() {
         liveData.setValue(new Mutable(Constants.USER_DETAILS));
+    }
+
+    public void toViewProduct() {
+        if (!TextUtils.isEmpty(getOrdersData().getOrders_img()))
+            liveData.setValue(new Mutable(Constants.VIEW_IMAGE));
+        else
+            liveData.setValue(new Mutable(Constants.VIEW_VIDEO));
     }
 
     @Bindable

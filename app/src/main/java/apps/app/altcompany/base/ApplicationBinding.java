@@ -20,8 +20,8 @@ public class ApplicationBinding {
 
     @BindingAdapter("imageUrl")
     public static void loadImage(ImageView imageView, Object image) {
+        Log.e(TAG, "loadImage: " + image);
         if (image instanceof String && !TextUtils.isEmpty((String) image)) {
-            Log.e(TAG, "loadImage: " + image);
             Glide
                     .with(imageView.getContext())
                     .load((String) image)

@@ -660,10 +660,6 @@
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\drawable\\border_white_accent_round.xml"
     },
     {
-        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_video_primary.xml.flat",
-        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\drawable-anydpi\\ic_video_primary.xml"
-    },
-    {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_orders_black.png.flat",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\drawable-hdpi\\ic_orders_black.png"
     },
@@ -768,6 +764,10 @@
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\mipmap-hdpi\\whats.png"
     },
     {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_exo_player.xml.flat",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\activity_exo_player.xml"
+    },
+    {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_send_chat.png.flat",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\mipmap-hdpi\\ic_send_chat.png"
     },
@@ -846,6 +846,10 @@
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_about_us_black.png.flat",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\drawable-xxhdpi\\ic_about_us_black.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_lang.xml.flat",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\drawable\\ic_lang.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_splash.jpg.flat",

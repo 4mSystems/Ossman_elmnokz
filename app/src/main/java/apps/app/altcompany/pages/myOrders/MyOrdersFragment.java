@@ -40,18 +40,18 @@ public class MyOrdersFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewModel(viewModel);
-        viewModel.myOrders();
+        viewModel.myOrders(0);
         binding.tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 if (tab.getPosition() == 0) {
                     viewModel.getOrdersAdapter().ordersDataList.clear();
                     viewModel.getOrdersAdapter().orderType = 0;
-                    viewModel.myOrders();
+                    viewModel.myOrders(0);
                 } else if (tab.getPosition() == 1) {
                     viewModel.getOrdersAdapter().ordersDataList.clear();
                     viewModel.getOrdersAdapter().orderType = 1;
-                    viewModel.myOrders();
+                    viewModel.myOrders(1);
                 }
             }
 

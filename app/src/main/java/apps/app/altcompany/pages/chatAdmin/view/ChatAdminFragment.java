@@ -25,12 +25,14 @@ import apps.app.altcompany.base.IApplicationComponent;
 import apps.app.altcompany.base.MyApplication;
 import apps.app.altcompany.databinding.FragmentChatAdminBinding;
 import apps.app.altcompany.model.base.Mutable;
+import apps.app.altcompany.pages.chatAdmin.model.ChatAdmin;
 import apps.app.altcompany.pages.chatAdmin.model.ChatAdminResponse;
 import apps.app.altcompany.pages.chatAdmin.model.ChatAdminSendResponse;
 import apps.app.altcompany.pages.chatAdmin.viewmodel.ChatAdminViewModel;
 import apps.app.altcompany.utils.Constants;
+import apps.app.altcompany.utils.services.RealTimeReceiver;
 
-public class ChatAdminFragment extends BaseFragment {
+public class ChatAdminFragment extends BaseFragment implements RealTimeReceiver.MessageReceiverListener {
 
     private Context context;
     private FragmentChatAdminBinding binding;
@@ -47,7 +49,7 @@ public class ChatAdminFragment extends BaseFragment {
         if (bundle != null) {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
-            if (viewModel.getPassingObject().getObject().equals(Constants.CHAT_ADMIN))
+            if (viewModel.getPassingObject().getObject() != null && viewModel.getPassingObject().getObject().equals(Constants.CHAT_ADMIN))
                 viewModel.chatAdmin();
             else
                 viewModel.chatOrder();
@@ -81,6 +83,16 @@ public class ChatAdminFragment extends BaseFragment {
     public void onResume() {
         super.onResume();
         viewModel.repository.setLiveData(viewModel.liveData);
+        MyApplication.getInstance().setMessageReceiverListener(this);
+    }
+
+    @Override
+    public void onMessageChanged(ChatAdmin messagesItem) {
+        if (messagesItem != null) {
+            viewModel.adapter.getChatList().add(messagesItem);
+            viewModel.adapter.notifyItemInserted(viewModel.adapter.getChatList().size() - 1);
+            binding.rcChat.scrollToPosition(viewModel.adapter.getChatList().size() - 1);
+        }
     }
 
     @Override

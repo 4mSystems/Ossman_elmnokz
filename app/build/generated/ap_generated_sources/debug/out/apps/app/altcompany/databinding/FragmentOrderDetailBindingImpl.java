@@ -22,16 +22,14 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
     @NonNull
     private final apps.app.altcompany.customViews.views.CustomTextViewMedium mboundView2;
     @NonNull
-    private final androidx.appcompat.widget.AppCompatImageView mboundView3;
-    @NonNull
     private final androidx.appcompat.widget.AppCompatButton mboundView5;
     // variables
-    @Nullable
-    private final android.view.View.OnClickListener mCallback14;
     @Nullable
     private final android.view.View.OnClickListener mCallback15;
     @Nullable
     private final android.view.View.OnClickListener mCallback13;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback14;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -42,6 +40,7 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
     private FragmentOrderDetailBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (androidx.cardview.widget.CardView) bindings[6]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
             , (apps.app.altcompany.customViews.views.CustomTextViewMedium) bindings[4]
             , (de.hdodenhof.circleimageview.CircleImageView) bindings[1]
             );
@@ -49,17 +48,16 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
         this.mboundView0.setTag(null);
         this.mboundView2 = (apps.app.altcompany.customViews.views.CustomTextViewMedium) bindings[2];
         this.mboundView2.setTag(null);
-        this.mboundView3 = (androidx.appcompat.widget.AppCompatImageView) bindings[3];
-        this.mboundView3.setTag(null);
         this.mboundView5 = (androidx.appcompat.widget.AppCompatButton) bindings[5];
         this.mboundView5.setTag(null);
+        this.orderMedia.setTag(null);
         this.txtDetails.setTag(null);
         this.userImg.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback14 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
         mCallback15 = new apps.app.altcompany.generated.callback.OnClickListener(this, 3);
         mCallback13 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback14 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -141,45 +139,23 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
             mDirtyFlags = 0;
         }
         java.lang.String viewModelOrdersDataUserUsersImg = null;
+        boolean textUtilsIsEmptyViewModelOrdersDataOrdersImg = false;
         apps.app.altcompany.pages.home.models.UserDetails viewModelOrdersDataUser = null;
-        boolean viewModelPassingObjectObjectEqualsJavaLangString1 = false;
         java.lang.String viewModelOrdersDataOrdersDesc = null;
         java.lang.String viewModelOrdersDataOrdersImg = null;
-        apps.app.altcompany.pages.home.models.OrdersData viewModelOrdersData = null;
         apps.app.altcompany.PassingObject viewModelPassingObject = null;
         java.lang.String viewModelOrdersDataUserUsersUsername = null;
-        apps.app.altcompany.pages.home.viewModels.OrderDetailsViewModel viewModel = mViewModel;
         java.lang.String viewModelPassingObjectObject = null;
         java.lang.String viewModelPassingObjectObjectEqualsJavaLangString1MboundView5AndroidStringSendOfferMboundView5AndroidStringChat = null;
+        java.lang.String textUtilsIsEmptyViewModelOrdersDataOrdersImgViewModelOrdersDataOrdersImgJavaLangString = null;
+        boolean TextUtilsIsEmptyViewModelOrdersDataOrdersImg1 = false;
+        boolean viewModelPassingObjectObjectEqualsJavaLangString1 = false;
+        apps.app.altcompany.pages.home.models.OrdersData viewModelOrdersData = null;
+        apps.app.altcompany.pages.home.viewModels.OrderDetailsViewModel viewModel = mViewModel;
 
         if ((dirtyFlags & 0xfL) != 0) {
 
 
-            if ((dirtyFlags & 0xbL) != 0) {
-
-                    if (viewModel != null) {
-                        // read viewModel.ordersData
-                        viewModelOrdersData = viewModel.getOrdersData();
-                    }
-
-
-                    if (viewModelOrdersData != null) {
-                        // read viewModel.ordersData.user
-                        viewModelOrdersDataUser = viewModelOrdersData.getUser();
-                        // read viewModel.ordersData.ordersDesc
-                        viewModelOrdersDataOrdersDesc = viewModelOrdersData.getOrdersDesc();
-                        // read viewModel.ordersData.orders_img
-                        viewModelOrdersDataOrdersImg = viewModelOrdersData.getOrders_img();
-                    }
-
-
-                    if (viewModelOrdersDataUser != null) {
-                        // read viewModel.ordersData.user.users_img
-                        viewModelOrdersDataUserUsersImg = viewModelOrdersDataUser.getUsers_img();
-                        // read viewModel.ordersData.user.users_username
-                        viewModelOrdersDataUserUsersUsername = viewModelOrdersDataUser.getUsers_username();
-                    }
-            }
             if ((dirtyFlags & 0xdL) != 0) {
 
                     if (viewModel != null) {
@@ -211,21 +187,67 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
                     // read viewModel.passingObject.object.equals("-1") ? @android:string/send_offer : @android:string/chat
                     viewModelPassingObjectObjectEqualsJavaLangString1MboundView5AndroidStringSendOfferMboundView5AndroidStringChat = ((viewModelPassingObjectObjectEqualsJavaLangString1) ? (mboundView5.getResources().getString(R.string.send_offer)) : (mboundView5.getResources().getString(R.string.chat)));
             }
+            if ((dirtyFlags & 0xbL) != 0) {
+
+                    if (viewModel != null) {
+                        // read viewModel.ordersData
+                        viewModelOrdersData = viewModel.getOrdersData();
+                    }
+
+
+                    if (viewModelOrdersData != null) {
+                        // read viewModel.ordersData.user
+                        viewModelOrdersDataUser = viewModelOrdersData.getUser();
+                        // read viewModel.ordersData.ordersDesc
+                        viewModelOrdersDataOrdersDesc = viewModelOrdersData.getOrdersDesc();
+                        // read viewModel.ordersData.orders_img
+                        viewModelOrdersDataOrdersImg = viewModelOrdersData.getOrders_img();
+                    }
+
+
+                    if (viewModelOrdersDataUser != null) {
+                        // read viewModel.ordersData.user.users_img
+                        viewModelOrdersDataUserUsersImg = viewModelOrdersDataUser.getUsers_img();
+                        // read viewModel.ordersData.user.users_username
+                        viewModelOrdersDataUserUsersUsername = viewModelOrdersDataUser.getUsers_username();
+                    }
+                    // read TextUtils.isEmpty(viewModel.ordersData.orders_img)
+                    textUtilsIsEmptyViewModelOrdersDataOrdersImg = android.text.TextUtils.isEmpty(viewModelOrdersDataOrdersImg);
+
+
+                    // read !TextUtils.isEmpty(viewModel.ordersData.orders_img)
+                    TextUtilsIsEmptyViewModelOrdersDataOrdersImg1 = !textUtilsIsEmptyViewModelOrdersDataOrdersImg;
+                if((dirtyFlags & 0xbL) != 0) {
+                    if(TextUtilsIsEmptyViewModelOrdersDataOrdersImg1) {
+                            dirtyFlags |= 0x80L;
+                    }
+                    else {
+                            dirtyFlags |= 0x40L;
+                    }
+                }
+            }
+        }
+        // batch finished
+
+        if ((dirtyFlags & 0xbL) != 0) {
+
+                // read !TextUtils.isEmpty(viewModel.ordersData.orders_img) ? viewModel.ordersData.orders_img : ""
+                textUtilsIsEmptyViewModelOrdersDataOrdersImgViewModelOrdersDataOrdersImgJavaLangString = ((TextUtilsIsEmptyViewModelOrdersDataOrdersImg1) ? (viewModelOrdersDataOrdersImg) : (""));
         }
         // batch finished
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewModelOrdersDataUserUsersUsername);
-            apps.app.altcompany.base.ApplicationBinding.loadImage(this.mboundView3, viewModelOrdersDataOrdersImg);
+            apps.app.altcompany.base.ApplicationBinding.loadImage(this.orderMedia, textUtilsIsEmptyViewModelOrdersDataOrdersImgViewModelOrdersDataOrdersImgJavaLangString);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.txtDetails, viewModelOrdersDataOrdersDesc);
             apps.app.altcompany.base.ApplicationBinding.loadImage(this.userImg, viewModelOrdersDataUserUsersImg);
         }
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView3.setOnClickListener(mCallback14);
             this.mboundView5.setOnClickListener(mCallback15);
+            this.orderMedia.setOnClickListener(mCallback14);
             this.userImg.setOnClickListener(mCallback13);
         }
         if ((dirtyFlags & 0xdL) != 0) {
@@ -238,41 +260,6 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewModel.ordersData
-                apps.app.altcompany.pages.home.models.OrdersData viewModelOrdersData = null;
-                // viewModel.ordersData != null
-                boolean viewModelOrdersDataJavaLangObjectNull = false;
-                // viewModel
-                apps.app.altcompany.pages.home.viewModels.OrderDetailsViewModel viewModel = mViewModel;
-                // viewModel.ordersData.orders_img
-                java.lang.String viewModelOrdersDataOrdersImg = null;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
-
-
-
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
-
-
-
-
-                    viewModelOrdersData = viewModel.getOrdersData();
-
-                    viewModelOrdersDataJavaLangObjectNull = (viewModelOrdersData) != (null);
-                    if (viewModelOrdersDataJavaLangObjectNull) {
-
-
-                        viewModelOrdersDataOrdersImg = viewModelOrdersData.getOrders_img();
-
-
-                        viewModel.showImage(viewModelOrdersDataOrdersImg, callbackArg_0);
-                    }
-                }
-                break;
-            }
             case 3: {
                 // localize variables for thread safety
                 // viewModel
@@ -307,6 +294,23 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
                 }
                 break;
             }
+            case 2: {
+                // localize variables for thread safety
+                // viewModel
+                apps.app.altcompany.pages.home.viewModels.OrderDetailsViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+                    viewModel.toViewProduct();
+                }
+                break;
+            }
         }
     }
     // dirty flag
@@ -318,6 +322,8 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
         flag 3 (0x4L): null
         flag 4 (0x5L): viewModel.passingObject.object.equals("-1") ? @android:string/send_offer : @android:string/chat
         flag 5 (0x6L): viewModel.passingObject.object.equals("-1") ? @android:string/send_offer : @android:string/chat
+        flag 6 (0x7L): !TextUtils.isEmpty(viewModel.ordersData.orders_img) ? viewModel.ordersData.orders_img : ""
+        flag 7 (0x8L): !TextUtils.isEmpty(viewModel.ordersData.orders_img) ? viewModel.ordersData.orders_img : ""
     flag mapping end*/
     //end
 }

@@ -17,6 +17,7 @@ import apps.app.altcompany.databinding.ActivityMainBinding;
 import apps.app.altcompany.model.base.Mutable;
 import apps.app.altcompany.pages.home.HomeFragment;
 import apps.app.altcompany.utils.helper.MovementHelper;
+import apps.app.altcompany.utils.resources.ResourceManager;
 
 public class MainActivity extends ParentActivity {
     public HomeActionBarView homeActionBarView = null;
@@ -39,7 +40,7 @@ public class MainActivity extends ParentActivity {
         homeActionBarView.setNavigation(navigationDrawerView);
         homeActionBarView.connectDrawer(navigationDrawerView.layoutNavigationDrawerBinding.dlMainNavigationMenu, true);
         navigationDrawerView.setActionBar(homeActionBarView);
-        homeActionBarView.setTitle("Home");
+        homeActionBarView.setTitle(ResourceManager.getString(R.string.label_home));
         MovementHelper.replaceFragment(this, new HomeFragment(), "");
         setEvents();
     }
