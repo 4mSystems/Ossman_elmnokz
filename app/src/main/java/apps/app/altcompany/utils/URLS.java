@@ -30,7 +30,7 @@ public class URLS {
     public final static String TERMS = "privacypolicy";
 
 
-    public static final String CONTACT_US = "settings/contact-us";
+    public static final String CONTACT_US = "contactus";
     public static final String NOTIFICATIONS = "notifications";
     public final static String GET_USER_DOCUMENTS = "delegate/delegate-documents";
     public final static String REMOVE_OFFER = "deleteoffer";

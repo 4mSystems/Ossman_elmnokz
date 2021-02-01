@@ -31,9 +31,9 @@ public class FragmentCompanyProfileBindingImpl extends FragmentCompanyProfileBin
     private final androidx.appcompat.widget.AppCompatButton mboundView8;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback35;
+    private final android.view.View.OnClickListener mCallback37;
     @Nullable
-    private final android.view.View.OnClickListener mCallback33;
+    private final android.view.View.OnClickListener mCallback35;
     @Nullable
     private final android.view.View.OnClickListener mCallback36;
     @Nullable
@@ -225,10 +225,10 @@ public class FragmentCompanyProfileBindingImpl extends FragmentCompanyProfileBin
         this.userPoints.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback35 = new apps.app.altcompany.generated.callback.OnClickListener(this, 3);
-        mCallback33 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
-        mCallback36 = new apps.app.altcompany.generated.callback.OnClickListener(this, 4);
-        mCallback34 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
+        mCallback37 = new apps.app.altcompany.generated.callback.OnClickListener(this, 4);
+        mCallback35 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
+        mCallback36 = new apps.app.altcompany.generated.callback.OnClickListener(this, 3);
+        mCallback34 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -358,14 +358,14 @@ public class FragmentCompanyProfileBindingImpl extends FragmentCompanyProfileBin
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView8.setOnClickListener(mCallback36);
+            this.mboundView8.setOnClickListener(mCallback37);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.txtCompanyBio, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, txtCompanyBioandroidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.txtEmail, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, txtEmailandroidTextAttrChanged);
-            this.txtLocaction.setOnClickListener(mCallback35);
+            this.txtLocaction.setOnClickListener(mCallback36);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.txtLocaction, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, txtLocactionandroidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.txtPhone, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, txtPhoneandroidTextAttrChanged);
-            this.userImg.setOnClickListener(mCallback33);
-            this.userName.setOnClickListener(mCallback34);
+            this.userImg.setOnClickListener(mCallback34);
+            this.userName.setOnClickListener(mCallback35);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -383,40 +383,6 @@ public class FragmentCompanyProfileBindingImpl extends FragmentCompanyProfileBin
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 3: {
-                // localize variables for thread safety
-                // viewModel
-                apps.app.altcompany.pages.companies.viewModels.CompaniesViewModel viewModel = mViewModel;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
-
-
-
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
-
-
-                    viewModel.address();
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // viewModel
-                apps.app.altcompany.pages.companies.viewModels.CompaniesViewModel viewModel = mViewModel;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
-
-
-
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
-
-
-                    viewModel.imageSubmit();
-                }
-                break;
-            }
             case 4: {
                 // localize variables for thread safety
                 // viewModel
@@ -448,6 +414,40 @@ public class FragmentCompanyProfileBindingImpl extends FragmentCompanyProfileBin
 
 
                     viewModel.toUpdateCategories();
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewModel
+                apps.app.altcompany.pages.companies.viewModels.CompaniesViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+                    viewModel.address();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewModel
+                apps.app.altcompany.pages.companies.viewModels.CompaniesViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+                    viewModel.imageSubmit();
                 }
                 break;
             }

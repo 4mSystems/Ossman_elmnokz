@@ -21,7 +21,7 @@ public class FragmentRegisterStep4BindingImpl extends FragmentRegisterStep4Bindi
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback30;
+    private final android.view.View.OnClickListener mCallback31;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -39,7 +39,7 @@ public class FragmentRegisterStep4BindingImpl extends FragmentRegisterStep4Bindi
         this.submit.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback30 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback31 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -113,7 +113,7 @@ public class FragmentRegisterStep4BindingImpl extends FragmentRegisterStep4Bindi
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.submit.setOnClickListener(mCallback30);
+            this.submit.setOnClickListener(mCallback31);
         }
     }
     // Listener Stub Implementations

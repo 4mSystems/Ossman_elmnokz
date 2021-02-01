@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                  
+                                                  
+
+    
+
+                                           
+
+                 
+                                 
+                                                                                     
+           
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" android:tag="layout/fragment_contact_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context=".views.fragments.TermFragment">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_contact"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp200h"
+            android:scaleType="center"
+            android:src="@drawable/img_contact" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_contact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_phone"
+            android:layout_below="@+id/img_contact"
+            tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/item_contact"
+            android:tag="binding_1"                         
+                                    
+                              />
+
+
+        <LinearLayout
+            android:id="@+id/ll_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_item_contact"
+                android:layout_width="@dimen/dp30w"
+                android:layout_height="@dimen/dp30h"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_phone_social" />
+
+
+            <apps.app.altcompany.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autoLink="phone"
+                android:tag="binding_2"                                  
+                                                                           
+                android:textSize="@dimen/sp15"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </RelativeLayout>
+         

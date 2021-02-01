@@ -25,6 +25,7 @@ import apps.app.altcompany.pages.myOrders.MyOrdersFragment;
 import apps.app.altcompany.pages.notifications.NotificationsFragment;
 import apps.app.altcompany.pages.offers.OffersFragment;
 import apps.app.altcompany.pages.settings.AboutFragment;
+import apps.app.altcompany.pages.settings.ContactUsFragment;
 import apps.app.altcompany.pages.settings.PrivacyFragment;
 import apps.app.altcompany.pages.settings.SuggestionsFragment;
 import apps.app.altcompany.pages.splash.SplashFragment;
@@ -93,6 +94,8 @@ public class NavigationDrawerView extends RelativeLayout {
                 MovementHelper.startActivity(context, PrivacyFragment.class.getName(), ResourceManager.getString(R.string.label_privacy_policy), null);
             } else if (position == 8) {
                 MovementHelper.startActivity(context, SuggestionsFragment.class.getName(), ResourceManager.getString(R.string.label_suggestions), null);
+            } else if (position == 12) {
+                MovementHelper.startActivity(context, ContactUsFragment.class.getName(), ResourceManager.getString(R.string.contact_us), null);
             } else if (position == 9) {
                 if (LanguagesHelper.getCurrentLanguage().equals("en"))
                     LanguagesHelper.setLanguage("ar");

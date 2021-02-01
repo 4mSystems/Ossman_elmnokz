@@ -16,6 +16,7 @@ import apps.app.altcompany.pages.notifications.NotificationsFragment;
 import apps.app.altcompany.pages.offers.AddOfferFragment;
 import apps.app.altcompany.pages.offers.OffersFragment;
 import apps.app.altcompany.pages.settings.AboutFragment;
+import apps.app.altcompany.pages.settings.ContactUsFragment;
 import apps.app.altcompany.pages.settings.PrivacyFragment;
 import apps.app.altcompany.pages.settings.SuggestionsFragment;
 import apps.app.altcompany.utils.locations.MapAddressActivity;
@@ -77,7 +78,10 @@ public interface IApplicationComponent {
     void inject(AddOfferFragment addOfferFragment);
 
     void inject(NotificationsFragment notificationsFragment);
+
     void inject(ChatAdminFragment chatAdminFragment);
+
+    void inject(ContactUsFragment contactUsFragment);
 
 
     @Component.Builder

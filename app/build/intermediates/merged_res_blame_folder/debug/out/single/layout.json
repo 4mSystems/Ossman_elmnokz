@@ -32,12 +32,12 @@
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_company_profile.xml"
     },
     {
-        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_order.xml",
-        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\item_order.xml"
-    },
-    {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_chat_admin.xml",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_chat_admin.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_order.xml",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\item_order.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_confirm_code.xml",
@@ -84,6 +84,10 @@
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\item_notification.xml"
     },
     {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_contact.xml",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_contact.xml"
+    },
+    {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_offers.xml",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_offers.xml"
     },
@@ -98,6 +102,10 @@
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_user_details.xml",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_user_details.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_contact.xml",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\item_contact.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_suggestion.xml",

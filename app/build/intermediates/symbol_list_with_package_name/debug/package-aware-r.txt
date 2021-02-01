@@ -4572,10 +4572,12 @@ id image_flag
 id img_action_bar_cancel
 id img_airplane
 id img_clear_query
+id img_contact
 id img_dismiss
 id img_grand_close
 id img_home_bar_menu
 id img_home_bar_menu_notifications
+id img_item_contact
 id img_item_notification
 id img_item_order
 id img_login_facebook
@@ -4617,6 +4619,7 @@ id list_item
 id listview
 id ll_base_action_bar_container
 id ll_base_container
+id ll_phone
 id loading
 id logo
 id lottie_layer_name
@@ -4782,6 +4785,8 @@ id rl_grand_whats
 id rl_header
 id rl_holder
 id rl_item_chat
+id rl_item_contact
+id rl_item_contact_container
 id rl_item_notification_container
 id rl_item_notification_image
 id rl_item_order_container
@@ -4798,6 +4803,7 @@ id rl_title
 id root
 id rounded
 id row_index_key
+id rv_contact
 id rv_navigation_drawer_list
 id satellite
 id save_non_transition_alpha
@@ -4947,6 +4953,7 @@ id tv_grand_phone
 id tv_grand_url
 id tv_home_bar_text
 id tv_home_header
+id tv_item_contact
 id tv_item_notification_date
 id tv_item_notification_desc
 id tv_item_order_company
@@ -4954,6 +4961,7 @@ id tv_item_order_desc
 id tv_item_order_status
 id tv_menu_item
 id tv_message
+id tv_phone
 id tv_please_turn_off
 id tv_please_turn_on
 id tv_title
@@ -5105,6 +5113,7 @@ layout fragment_change_password
 layout fragment_chat_admin
 layout fragment_company_profile
 layout fragment_confirm_code
+layout fragment_contact
 layout fragment_doc_picker
 layout fragment_forget_password
 layout fragment_home
@@ -5153,6 +5162,7 @@ layout fui_welcome_back_password_prompt_layout
 layout home_slider
 layout item_category
 layout item_chat_admin
+layout item_contact
 layout item_doc_layout
 layout item_folder_layout
 layout item_menu

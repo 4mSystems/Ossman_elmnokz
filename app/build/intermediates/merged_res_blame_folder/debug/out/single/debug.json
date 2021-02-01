@@ -4,12 +4,12 @@
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_add_offer.xml"
     },
     {
-        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_grand_exit.png.flat",
-        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\mipmap-xxxhdpi\\grand_exit.png"
-    },
-    {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_delete.png.flat",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_delete.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_grand_exit.png.flat",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\mipmap-xxxhdpi\\grand_exit.png"
     },
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_clock_black.png.flat",
@@ -98,6 +98,10 @@
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_contact.xml.flat",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\fragment_contact.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\raw_uber_style_map.json.flat",
@@ -1358,6 +1362,10 @@
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_close.png.flat",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\mipmap-hdpi\\ic_close.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_contact.xml.flat",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\layout\\item_contact.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_mail_black.png.flat",

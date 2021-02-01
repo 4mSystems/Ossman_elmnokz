@@ -14,6 +14,8 @@ apps/app/altcompany/pages/auth/forgetPassword/ForgetPasswordViewModel.java
  apps.app.altcompany.pages.auth.forgetPassword.ForgetPasswordViewModel
 apps/app/altcompany/pages/auth/models/LoginRequest.java
  apps.app.altcompany.pages.auth.models.LoginRequest
+apps/app/altcompany/pages/settings/models/ContactResponse.java
+ apps.app.altcompany.pages.settings.models.ContactResponse
 apps/app/altcompany/pages/auth/register/viewModels/ItemPackagesViewModel.java
  apps.app.altcompany.pages.auth.register.viewModels.ItemPackagesViewModel
 apps/app/altcompany/databinding/ActivityExoPlayerBinding.java
@@ -28,8 +30,8 @@ apps/app/altcompany/utils/VideoPlayerConfig.java
  apps.app.altcompany.utils.VideoPlayerConfig
 apps/app/altcompany/pages/chatAdmin/viewmodel/ChatAdminViewModel.java
  apps.app.altcompany.pages.chatAdmin.viewmodel.ChatAdminViewModel
-apps/app/altcompany/databinding/FragmentSuggestionBinding.java
- apps.app.altcompany.databinding.FragmentSuggestionBinding
+apps/app/altcompany/pages/auth/register/models/PrivacyResponse.java
+ apps.app.altcompany.pages.auth.register.models.PrivacyResponse
 apps/app/altcompany/pages/home/viewModels/ItemHomeViewModel.java
  apps.app.altcompany.pages.home.viewModels.ItemHomeViewModel
 apps/app/altcompany/customViews/actionbar/MenuActionBarView.java
@@ -46,8 +48,8 @@ apps/app/altcompany/utils/helper/AppHelper.java
  apps.app.altcompany.utils.helper.AppHelper
 apps/app/altcompany/pages/auth/login/LoginViewModel.java
  apps.app.altcompany.pages.auth.login.LoginViewModel
-apps/app/altcompany/pages/settings/AboutFragment.java
- apps.app.altcompany.pages.settings.AboutFragment
+apps/app/altcompany/customViews/menu/MenuViewModel.java
+ apps.app.altcompany.customViews.menu.MenuViewModel
 apps/app/altcompany/databinding/ItemRechargeBinding.java
  apps.app.altcompany.databinding.ItemRechargeBinding
 apps/app/altcompany/pages/auth/register/models/packages/PackageResponse.java
@@ -63,19 +65,21 @@ apps/app/altcompany/utils/locations/MapAddress.java
  apps.app.altcompany.utils.locations.MapAddress$1
 apps/app/altcompany/pages/offers/viewModels/OffersViewModel.java
  apps.app.altcompany.pages.offers.viewModels.OffersViewModel
+apps/app/altcompany/databinding/ItemContactBinding.java
+ apps.app.altcompany.databinding.ItemContactBinding
 apps/app/altcompany/base/BaseFragment.java
  apps.app.altcompany.base.BaseFragment
-apps/app/altcompany/base/IApplicationComponent.java
- apps.app.altcompany.base.IApplicationComponent
- apps.app.altcompany.base.IApplicationComponent$Builder
+apps/app/altcompany/connection/Api.java
+ apps.app.altcompany.connection.Api
 apps/app/altcompany/pages/home/models/orderDetails/OrderDetailsRequest.java
  apps.app.altcompany.pages.home.models.orderDetails.OrderDetailsRequest
 apps/app/altcompany/pages/auth/confirmCode/CodeViewModel.java
  apps.app.altcompany.pages.auth.confirmCode.CodeViewModel
-apps/app/altcompany/databinding/FragmentAboutBinding.java
- apps.app.altcompany.databinding.FragmentAboutBinding
-apps/app/altcompany/pages/settings/SuggestionsFragment.java
- apps.app.altcompany.pages.settings.SuggestionsFragment
+apps/app/altcompany/pages/chatAdmin/adapter/ChatAdminAdapter.java
+ apps.app.altcompany.pages.chatAdmin.adapter.ChatAdminAdapter
+ apps.app.altcompany.pages.chatAdmin.adapter.ChatAdminAdapter$ViewHolder
+apps/app/altcompany/databinding/ItemMenuBinding.java
+ apps.app.altcompany.databinding.ItemMenuBinding
 apps/app/altcompany/databinding/FragmentForgetPasswordBinding.java
  apps.app.altcompany.databinding.FragmentForgetPasswordBinding
 apps/app/altcompany/pages/auth/login/models/UsersResponse.java
@@ -87,6 +91,8 @@ apps/app/altcompany/customViews/menu/MenuAdapter.java
  apps.app.altcompany.customViews.menu.MenuAdapter$MenuView
 apps/app/altcompany/customViews/menu/MenuModel.java
  apps.app.altcompany.customViews.menu.MenuModel
+apps/app/altcompany/pages/settings/viewModels/ItemContactViewModel.java
+ apps.app.altcompany.pages.settings.viewModels.ItemContactViewModel
 apps/app/altcompany/pages/auth/models/SocialRequest.java
  apps.app.altcompany.pages.auth.models.SocialRequest
 apps/app/altcompany/activity/ExoPlayerActivity.java
@@ -108,8 +114,8 @@ apps/app/altcompany/model/base/StatusMessage.java
  apps.app.altcompany.model.base.StatusMessage
 apps/app/altcompany/databinding/ActivityMapAddressBinding.java
  apps.app.altcompany.databinding.ActivityMapAddressBinding
-apps/app/altcompany/pages/settings/viewModels/SettingsViewModel.java
- apps.app.altcompany.pages.settings.viewModels.SettingsViewModel
+apps/app/altcompany/pages/auth/register/models/packages/PackagesData.java
+ apps.app.altcompany.pages.auth.register.models.packages.PackagesData
 apps/app/altcompany/DataBindingTriggerClass.java
  apps.app.altcompany.DataBindingTriggerClass
 apps/app/altcompany/pages/notifications/viewModels/NotificationsViewModels.java
@@ -154,6 +160,9 @@ apps/app/altcompany/pages/notifications/itemViewModels/NotificationsItemViewMode
 apps/app/altcompany/pages/auth/login/LoginFragment.java
  apps.app.altcompany.pages.auth.login.LoginFragment
  apps.app.altcompany.pages.auth.login.LoginFragment$1
+apps/app/altcompany/pages/settings/adapters/ContactUsAdapter.java
+ apps.app.altcompany.pages.settings.adapters.ContactUsAdapter
+ apps.app.altcompany.pages.settings.adapters.ContactUsAdapter$ViewHolder
 apps/app/altcompany/activity/MainActivity.java
  apps.app.altcompany.activity.MainActivity
 apps/app/altcompany/pages/offers/adapters/OffersAdapter.java
@@ -175,6 +184,8 @@ apps/app/altcompany/utils/images/PhotoFullPopupWindow.java
  apps.app.altcompany.utils.images.PhotoFullPopupWindow
  apps.app.altcompany.utils.images.PhotoFullPopupWindow$1
  apps.app.altcompany.utils.images.PhotoFullPopupWindow$2
+apps/app/altcompany/pages/settings/models/ContactData.java
+ apps.app.altcompany.pages.settings.models.ContactData
 apps/app/altcompany/databinding/LayoutNavigationDrawerBinding.java
  apps.app.altcompany.databinding.LayoutNavigationDrawerBinding
 apps/app/altcompany/pages/auth/register/models/categories/DepartmentsItem.java
@@ -204,10 +215,12 @@ apps/app/altcompany/utils/upload/FileOperations.java
  apps.app.altcompany.utils.upload.FileOperations
 apps/app/altcompany/utils/URLS.java
  apps.app.altcompany.utils.URLS
-apps/app/altcompany/databinding/FragmentPrivacyBinding.java
- apps.app.altcompany.databinding.FragmentPrivacyBinding
+apps/app/altcompany/connection/FileObject.java
+ apps.app.altcompany.connection.FileObject
 apps/app/altcompany/customViews/views/CustomTextViewBold.java
  apps.app.altcompany.customViews.views.CustomTextViewBold
+apps/app/altcompany/pages/settings/models/SocialsItem.java
+ apps.app.altcompany.pages.settings.models.SocialsItem
 apps/app/altcompany/utils/PopUp/PopUpInterface.java
  apps.app.altcompany.utils.PopUp.PopUpInterface
 apps/app/altcompany/base/BaseViewModel.java
@@ -252,8 +265,14 @@ apps/app/altcompany/connection/ConnectionListenerInterFace.java
  apps.app.altcompany.connection.ConnectionListenerInterFace
 apps/app/altcompany/pages/notifications/models/NotificationsResponse.java
  apps.app.altcompany.pages.notifications.models.NotificationsResponse
-apps/app/altcompany/base/MyApplication.java
- apps.app.altcompany.base.MyApplication
+apps/app/altcompany/customViews/grandDialog/GrandImageDialog.java
+ apps.app.altcompany.customViews.grandDialog.GrandDialog
+ apps.app.altcompany.customViews.grandDialog.GrandDialog$1
+ apps.app.altcompany.customViews.grandDialog.GrandDialog$2
+ apps.app.altcompany.customViews.grandDialog.GrandDialog$3
+ apps.app.altcompany.customViews.grandDialog.GrandDialog$4
+ apps.app.altcompany.customViews.grandDialog.GrandImageDialog
+ apps.app.altcompany.customViews.grandDialog.GrandImageDialog$1
 apps/app/altcompany/pages/auth/models/ForgetPasswordRequest.java
  apps.app.altcompany.pages.auth.models.ForgetPasswordRequest
 apps/app/altcompany/databinding/FragmentAddOfferBinding.java
@@ -334,8 +353,8 @@ apps/app/altcompany/pages/auth/changePassword/ChangePasswordFragment.java
  apps.app.altcompany.pages.auth.changePassword.ChangePasswordFragment
 apps/app/altcompany/pages/home/models/HomeData.java
  apps.app.altcompany.pages.home.models.HomeData
-apps/app/altcompany/pages/settings/PrivacyFragment.java
- apps.app.altcompany.pages.settings.PrivacyFragment
+apps/app/altcompany/databinding/ActivityMainBinding.java
+ apps.app.altcompany.databinding.ActivityMainBinding
 apps/app/altcompany/pages/auth/confirmCode/ConfirmCodeFragment.java
  apps.app.altcompany.pages.auth.confirmCode.ConfirmCodeFragment
 apps/app/altcompany/pages/home/models/OrdersData.java
@@ -379,8 +398,8 @@ apps/app/altcompany/pages/auth/register/adapters/PackagesAdapter.java
  apps.app.altcompany.pages.auth.register.adapters.PackagesAdapter$ViewHolder
 apps/app/altcompany/pages/splash/SplashFragment.java
  apps.app.altcompany.pages.splash.SplashFragment
-apps/app/altcompany/base/ApplicationComponent.java
- apps.app.altcompany.base.ApplicationComponent
+apps/app/altcompany/utils/session/UserHelper.java
+ apps.app.altcompany.utils.session.UserHelper
 apps/app/altcompany/base/ConnectivityReceiver.java
  apps.app.altcompany.base.ConnectivityReceiver
  apps.app.altcompany.base.ConnectivityReceiver$ConnectivityReceiverListener
@@ -394,36 +413,34 @@ apps/app/altcompany/repository/BaseRepository.java
  apps.app.altcompany.repository.BaseRepository
 apps/app/altcompany/pages/auth/models/RegisterRequest.java
  apps.app.altcompany.pages.auth.models.RegisterRequest
-apps/app/altcompany/databinding/FragmentUserDetailsBinding.java
- apps.app.altcompany.databinding.FragmentUserDetailsBinding
-apps/app/altcompany/pages/auth/register/models/packages/PackagesData.java
- apps.app.altcompany.pages.auth.register.models.packages.PackagesData
-apps/app/altcompany/utils/resources/ResourceManager.java
- apps.app.altcompany.utils.resources.ResourceManager
-apps/app/altcompany/databinding/ItemMenuBinding.java
- apps.app.altcompany.databinding.ItemMenuBinding
-apps/app/altcompany/pages/chatAdmin/adapter/ChatAdminAdapter.java
- apps.app.altcompany.pages.chatAdmin.adapter.ChatAdminAdapter
- apps.app.altcompany.pages.chatAdmin.adapter.ChatAdminAdapter$ViewHolder
-apps/app/altcompany/databinding/ActivityMainBinding.java
- apps.app.altcompany.databinding.ActivityMainBinding
 apps/app/altcompany/databinding/LayoutActionBarBackBinding.java
  apps.app.altcompany.databinding.LayoutActionBarBackBinding
-apps/app/altcompany/customViews/grandDialog/GrandImageDialog.java
- apps.app.altcompany.customViews.grandDialog.GrandDialog
- apps.app.altcompany.customViews.grandDialog.GrandDialog$1
- apps.app.altcompany.customViews.grandDialog.GrandDialog$2
- apps.app.altcompany.customViews.grandDialog.GrandDialog$3
- apps.app.altcompany.customViews.grandDialog.GrandDialog$4
- apps.app.altcompany.customViews.grandDialog.GrandImageDialog
- apps.app.altcompany.customViews.grandDialog.GrandImageDialog$1
-apps/app/altcompany/pages/auth/register/models/PrivacyResponse.java
- apps.app.altcompany.pages.auth.register.models.PrivacyResponse
-apps/app/altcompany/connection/FileObject.java
- apps.app.altcompany.connection.FileObject
-apps/app/altcompany/utils/session/UserHelper.java
- apps.app.altcompany.utils.session.UserHelper
-apps/app/altcompany/customViews/menu/MenuViewModel.java
- apps.app.altcompany.customViews.menu.MenuViewModel
-apps/app/altcompany/connection/Api.java
- apps.app.altcompany.connection.Api
+apps/app/altcompany/databinding/FragmentUserDetailsBinding.java
+ apps.app.altcompany.databinding.FragmentUserDetailsBinding
+apps/app/altcompany/utils/resources/ResourceManager.java
+ apps.app.altcompany.utils.resources.ResourceManager
+apps/app/altcompany/base/IApplicationComponent.java
+ apps.app.altcompany.base.IApplicationComponent
+ apps.app.altcompany.base.IApplicationComponent$Builder
+apps/app/altcompany/pages/settings/AboutFragment.java
+ apps.app.altcompany.pages.settings.AboutFragment
+apps/app/altcompany/base/ApplicationComponent.java
+ apps.app.altcompany.base.ApplicationComponent
+apps/app/altcompany/databinding/FragmentPrivacyBinding.java
+ apps.app.altcompany.databinding.FragmentPrivacyBinding
+apps/app/altcompany/databinding/FragmentSuggestionBinding.java
+ apps.app.altcompany.databinding.FragmentSuggestionBinding
+apps/app/altcompany/base/MyApplication.java
+ apps.app.altcompany.base.MyApplication
+apps/app/altcompany/pages/settings/ContactUsFragment.java
+ apps.app.altcompany.pages.settings.ContactUsFragment
+apps/app/altcompany/pages/settings/PrivacyFragment.java
+ apps.app.altcompany.pages.settings.PrivacyFragment
+apps/app/altcompany/databinding/FragmentAboutBinding.java
+ apps.app.altcompany.databinding.FragmentAboutBinding
+apps/app/altcompany/pages/settings/SuggestionsFragment.java
+ apps.app.altcompany.pages.settings.SuggestionsFragment
+apps/app/altcompany/databinding/FragmentContactBinding.java
+ apps.app.altcompany.databinding.FragmentContactBinding
+apps/app/altcompany/pages/settings/viewModels/SettingsViewModel.java
+ apps.app.altcompany.pages.settings.viewModels.SettingsViewModel

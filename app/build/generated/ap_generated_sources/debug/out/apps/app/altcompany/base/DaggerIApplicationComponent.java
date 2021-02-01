@@ -83,6 +83,8 @@ import apps.app.altcompany.pages.offers.viewModels.OffersViewModel_Factory;
 import apps.app.altcompany.pages.offers.viewModels.OffersViewModel_MembersInjector;
 import apps.app.altcompany.pages.settings.AboutFragment;
 import apps.app.altcompany.pages.settings.AboutFragment_MembersInjector;
+import apps.app.altcompany.pages.settings.ContactUsFragment;
+import apps.app.altcompany.pages.settings.ContactUsFragment_MembersInjector;
 import apps.app.altcompany.pages.settings.PrivacyFragment;
 import apps.app.altcompany.pages.settings.PrivacyFragment_MembersInjector;
 import apps.app.altcompany.pages.settings.SuggestionsFragment;
@@ -329,6 +331,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     injectChatAdminFragment(chatAdminFragment);
   }
 
+  @Override
+  public void inject(ContactUsFragment contactUsFragment) {
+    injectContactUsFragment(contactUsFragment);
+  }
+
   private MainActivity injectMainActivity(MainActivity instance) {
     MainActivity_MembersInjector.injectLiveData(instance, getMutableLiveDataProvider.get());
     return instance;
@@ -511,6 +518,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private ChatAdminFragment injectChatAdminFragment(ChatAdminFragment instance) {
     ChatAdminFragment_MembersInjector.injectViewModel(instance, chatAdminViewModel());
+    return instance;
+  }
+
+  private ContactUsFragment injectContactUsFragment(ContactUsFragment instance) {
+    ContactUsFragment_MembersInjector.injectViewModel(instance, settingsViewModel());
     return instance;
   }
 

@@ -12,6 +12,7 @@ import apps.app.altcompany.model.base.StatusMessage;
 import apps.app.altcompany.pages.auth.models.cities.CitiesResponse;
 import apps.app.altcompany.pages.auth.register.models.PrivacyResponse;
 import apps.app.altcompany.pages.notifications.models.NotificationsResponse;
+import apps.app.altcompany.pages.settings.models.ContactResponse;
 import apps.app.altcompany.pages.settings.models.SuggestionsRequest;
 import apps.app.altcompany.utils.Constants;
 import apps.app.altcompany.utils.URLS;
@@ -41,6 +42,11 @@ public class SettingsRepository extends BaseRepository {
     public Disposable getAbout() {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.ABOUT, new Object(), PrivacyResponse.class,
                 Constants.ABOUT, true);
+    }
+
+    public Disposable getContact() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CONTACT_US, new Object(), ContactResponse.class,
+                Constants.CONTACT, true);
     }
 
     public Disposable sendSuggest(SuggestionsRequest suggestionsRequest) {
