@@ -38,6 +38,7 @@ import apps.app.altcompany.databinding.TermsDialogBinding;
 import apps.app.altcompany.model.base.Mutable;
 import apps.app.altcompany.pages.auth.confirmCode.ConfirmCodeFragment;
 import apps.app.altcompany.pages.auth.models.cities.CitiesResponse;
+import apps.app.altcompany.pages.auth.models.countries.CountriesResponse;
 import apps.app.altcompany.pages.auth.register.models.PrivacyResponse;
 import apps.app.altcompany.pages.auth.register.models.RegisterStep1Response;
 import apps.app.altcompany.utils.Constants;
@@ -58,7 +59,7 @@ public class RegisterFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setRegisterStep1ViewModel(viewModel);
-        viewModel.getCities();
+        viewModel.getCountries();
         setEvent();
         return binding.getRoot();
     }
@@ -88,8 +89,14 @@ public class RegisterFragment extends BaseFragment {
                 case Constants.CITIES:
                     viewModel.setCitiesList(((CitiesResponse) mutable.object).getCitiesList());
                     break;
+                case Constants.COUNTRIES:
+                    viewModel.setCountriesList(((CountriesResponse) mutable.object).getData());
+                    break;
                 case Constants.SHOW_CITIES:
                     showCities();
+                    break;
+                case Constants.SHOW_COUNTRIES:
+                    showCountries();
                     break;
                 case Constants.TERMS:
                     showDialog(((PrivacyResponse) mutable.object).getData().getDetails());
@@ -105,6 +112,15 @@ public class RegisterFragment extends BaseFragment {
                     break;
 
             }
+        });
+    }
+
+    private void showCountries() {
+        PopUpMenuHelper.showCountriesPopUp(context, binding.edtRegisterStep1Country, viewModel.getCountriesList()).setOnMenuItemClickListener(item -> {
+            binding.edtRegisterStep1Country.setText(viewModel.getCountriesList().get(item.getItemId()).getName());
+            viewModel.getRequest().setFK_countries_id(String.valueOf(viewModel.getCountriesList().get(item.getItemId()).getId()));
+            viewModel.getCities( viewModel.getRequest().getFK_countries_id());
+            return false;
         });
     }
 

@@ -16,6 +16,7 @@ import apps.app.altcompany.connection.FileObject;
 import apps.app.altcompany.model.base.Mutable;
 import apps.app.altcompany.pages.auth.models.RegisterRequest;
 import apps.app.altcompany.pages.auth.models.cities.Cities;
+import apps.app.altcompany.pages.auth.models.countries.Countries;
 import apps.app.altcompany.pages.auth.register.adapters.CategoriesAdapter;
 import apps.app.altcompany.pages.auth.register.adapters.PackagesAdapter;
 import apps.app.altcompany.pages.auth.register.models.categories.DepartmentsItem;
@@ -32,6 +33,7 @@ public class RegisterViewModel extends BaseViewModel {
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     RegisterRequest request;
     private List<Cities> citiesList;
+    private List<Countries> countriesList;
     private List<DepartmentsItem> departmentsItems;
     private boolean checked;
     private CategoriesAdapter categoriesAdapter;
@@ -40,6 +42,7 @@ public class RegisterViewModel extends BaseViewModel {
     @Inject
     public RegisterViewModel(AuthRepository repository) {
         citiesList = new ArrayList<>();
+        countriesList = new ArrayList<>();
         departmentsItems = new ArrayList<>();
         fileObject = new ArrayList<>();
         this.repository = repository;
@@ -86,8 +89,12 @@ public class RegisterViewModel extends BaseViewModel {
         compositeDisposable.add(repository.registerStep4(request));
     }
 
-    public void getCities() {
-        compositeDisposable.add(repository.getCities());
+    public void getCities(String countryId) {
+        compositeDisposable.add(repository.getCities(countryId));
+    }
+
+    public void getCountries() {
+        compositeDisposable.add(repository.getCountries());
     }
 
     public void getCategories() {
@@ -108,6 +115,10 @@ public class RegisterViewModel extends BaseViewModel {
 
     public void cities() {
         liveData.setValue(new Mutable(Constants.SHOW_CITIES));
+    }
+
+    public void countries() {
+        liveData.setValue(new Mutable(Constants.SHOW_COUNTRIES));
     }
 
     public void address() {
@@ -156,6 +167,17 @@ public class RegisterViewModel extends BaseViewModel {
     public void setCitiesList(List<Cities> citiesList) {
         notifyChange(BR.citiesList);
         this.citiesList = citiesList;
+    }
+
+    @Bindable
+    public List<Countries> getCountriesList() {
+        return countriesList;
+    }
+
+    @Bindable
+    public void setCountriesList(List<Countries> countriesList) {
+        notifyChange(BR.countriesList);
+        this.countriesList = countriesList;
     }
 
     @Bindable

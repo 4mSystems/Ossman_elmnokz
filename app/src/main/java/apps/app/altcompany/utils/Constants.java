@@ -61,14 +61,8 @@ public class Constants {
     public static final String VIEW_IMAGE = "VIEW_IMAGE";
     public static final String VIEW_VIDEO = "VIEW_VIDEO";
     public static final String CATEGORIES = "CATEGORIES";
-    public static final String DELEGATE_DOCUMNET = "DELEGATE_DOCUMNET";
-    public static final String GET_USER_DOCUMENTS = "GET_USER_DOCUMENTS";
+    public static final String SHOW_COUNTRIES = "SHOW_COUNTRIES";
     public static final String SHARE_BAR = "SHARE_BAR";
-    public static final String PROFILE = "PROFILE";
-    public static final String NEW_IMAGE = "NEW_IMAGE";
-    public static final String REMOVE_IMAGE = "REMOVE_IMAGE";
-
-
     //REQUESTS
     public final static int POST_REQUEST = 200;
     public final static int GET_REQUEST = 201;
@@ -94,82 +88,25 @@ public class Constants {
     public final static int FILE_TYPE_VIDEO = 379;
     public final static int CHECK_CONFIRM_NAV_REGISTER = 0;
     public final static int CHECK_CONFIRM_NAV_FORGET = 1;
-
-    public static final String front_car_image = "front_car_image";
     public static final int RC_SIGN_IN = 9001;
-
-    public static final String back_car_image = "back_car_image";
-    public static final int back_car_code = 381;
-
-    public static final String insurance_image = "insurance_image";
-    public static final int insurance_image_code = 382;
-
-    public static final String license_image = "license_image";
-    public static final int license_image_code = 383;
-
-    public static final String civil_image = "civil_image";
-    public static final int civil_image_code = 384;
-    public static final String RATE_APP = "RATE_APP";
     public static final String ABOUT = "about";
     public static final String TERMS = "terms";
     public static final String FIELD = "FIELD";
     public static final String LOGIN = "login";
-    public static final String REMOVE_VIDEO = "REMOVE_VIDEO";
     public static final String FORGET_PASSWORD = "forget_password";
     public static final String GOOGLE = "GOOGLE";
     public static final String FACEBOOK = "FACEBOOK";
-    public static final String WARNING = "WARNING";
-    public static final String PROFILE_DATA = "PROFILE_DATA";
-    public static final String RESET = "RESET";
-    public static final String MAP_STYLE = "MAP_STYLE";
-
-
     public static final String REGISTER = "register";
     public static final String CURRENT_LOCATION = "CURRENT_LOCATION";
-
-
     public static boolean DATA_CHANGED = false;
-
-    public static final String SEARCH_LISTING_TYPE = "SEARCH_LISTING_TYPE";
-    public static final String RESULT_SEARCH_LISTING_TYPE = "RESULT_SEARCH_LISTING_TYPE";
-    public static final String REMOVE_FAVO = "REMOVE_FAVO";
-    public static final String REMOVE_ADD_FAVORITE = "REMOVE_ADD_FAVORITE";
-    public static final String MY_LISTING = "MY_LISTING";
-    public static final String MY_PREMIUM_ADS = "MY_PREMIUM_ADS";
-    public final static String REMOVE_AD = "REMOVE_AD";
-    public static final String GET_AD_DETAILS = "GET_AD_DETAILS";
-    public static final String CALL = "CALL";
-    public static final String REPORT = "REPORT";
     public static final String CONTACT = "CONTACT";
-    public static final String SEND_REPORT = "SEND_REPORT";
-
-    public static final String UPDATE_AD_DATE = "UPDATE_AD_DATE";
-    public static final String EDIT_DIALOG = "EDIT_DIALOG";
-    public static final String UPDATE_IMAGES = "UPDATE_IMAGES";
     public static final String NOTIFICATIONS = "notifications";
-    public static final String SELECT = "select";
-    public static final String UPDATE_AD_DATA = "UPDATE_AD_DATA";
-
     public static final String CHANGE_PASSWORD = "forget-password";
-    public static final String EDIT_AD_DETAILS = "EDIT_AD_DETAILS";
-    public static final String SERVICES = "services";
-    public static final String REMOVE_DIALOG = "REMOVE_DIALOG";
-    public static final String CONVERSATIONS = "CONVERSATIONS";
-    public static final String DISMISS = "dismiss";
-
     public static final String CHAT = "chat";
     public static final String SEND_MESSAGE = "SEND_MESSAGE";
     public static final int CUSTOM_REQUEST_CODE = 532;
-    public static final String FILTER = "FILTER";
-    public static final String FILTER_DATA = "FILTER_DATA";
-    public static final String SEARCH = "SEARCH";
     public static final String SUPPORT = "SUPPORT";
-    public static final String MENU_HOME = "menu_home";
-    public static final String MENU_FAVORITE = "menu_favorite";
-    public static final String MENU_ADD_AD = "menu_ad";
-    public static final String MENU_CONVERSATIONS = "menu_conversations";
-    public static final String NEXT = "next";
-    public static final String BOARD = "board";
     public static final String MENu = "menu";
+    public static final String COUNTRIES = "COUNTRIES";
 }
 

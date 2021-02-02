@@ -30,6 +30,9 @@ public abstract class FragmentRegisterStep1Binding extends ViewDataBinding {
   public final CustomEditText edtRegisterStep1City;
 
   @NonNull
+  public final CustomEditText edtRegisterStep1Country;
+
+  @NonNull
   public final CircleImageView imgRegisterUpdate;
 
   @NonNull
@@ -46,13 +49,14 @@ public abstract class FragmentRegisterStep1Binding extends ViewDataBinding {
 
   protected FragmentRegisterStep1Binding(Object _bindingComponent, View _root, int _localFieldCount,
       CustomEditText businessRegister, CustomEditText edAddress,
-      CustomEditText edtRegisterStep1City, CircleImageView imgRegisterUpdate,
-      RelativeLayout rlRegisterImage, NestedScrollView svRegisterStep1,
-      StateProgressBar yourStateProgressBarId) {
+      CustomEditText edtRegisterStep1City, CustomEditText edtRegisterStep1Country,
+      CircleImageView imgRegisterUpdate, RelativeLayout rlRegisterImage,
+      NestedScrollView svRegisterStep1, StateProgressBar yourStateProgressBarId) {
     super(_bindingComponent, _root, _localFieldCount);
     this.businessRegister = businessRegister;
     this.edAddress = edAddress;
     this.edtRegisterStep1City = edtRegisterStep1City;
+    this.edtRegisterStep1Country = edtRegisterStep1Country;
     this.imgRegisterUpdate = imgRegisterUpdate;
     this.rlRegisterImage = rlRegisterImage;
     this.svRegisterStep1 = svRegisterStep1;

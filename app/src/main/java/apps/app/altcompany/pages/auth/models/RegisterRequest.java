@@ -20,6 +20,8 @@ public class RegisterRequest {
     private String password;
     @SerializedName("FK_cities_id")
     private String FK_cities_id;
+    @SerializedName("FK_countries_id")
+    private String FK_countries_id;
     @SerializedName("workers_address")
     private String workers_address;
     @SerializedName("firebase_token")
@@ -56,6 +58,7 @@ public class RegisterRequest {
     public transient ObservableField<String> nameError = new ObservableField<>();
     public transient ObservableField<String> emailError = new ObservableField<>();
     public transient ObservableField<String> phoneError = new ObservableField<>();
+    public transient ObservableField<String> countryError = new ObservableField<>();
     public transient ObservableField<String> cityError = new ObservableField<>();
     public transient ObservableField<String> addressError = new ObservableField<>();
     public transient ObservableField<String> desError = new ObservableField<>();
@@ -76,6 +79,9 @@ public class RegisterRequest {
             isValid = false;
         } else if (!Validate.isValid(password, Constants.FIELD)) {
             passwordError.set(Validate.error);
+            isValid = false;
+        } else if (!Validate.isValid(FK_countries_id, Constants.FIELD)) {
+            countryError.set(Validate.error);
             isValid = false;
         } else if (!Validate.isValid(FK_cities_id, Constants.FIELD)) {
             cityError.set(Validate.error);
@@ -253,6 +259,14 @@ public class RegisterRequest {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public String getFK_countries_id() {
+        return FK_countries_id;
+    }
+
+    public void setFK_countries_id(String FK_countries_id) {
+        this.FK_countries_id = FK_countries_id;
     }
 
     @Override

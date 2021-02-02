@@ -3,7 +3,7 @@ package apps.app.altcompany.utils;
 public class URLS {
     public final static String BASE_URL = "https://alti.my-staff.net/api/";
     public final static String CATEGORIES = "getcategories";
-    public final static String CITIES = "allcities";
+    public final static String CITIES = "allcities/";
 
     public final static String PACKAGES = "packages";
     public final static String LOGIN_PHONE = "loginworker";
@@ -32,7 +32,7 @@ public class URLS {
 
     public static final String CONTACT_US = "contactus";
     public static final String NOTIFICATIONS = "notifications";
-    public final static String GET_USER_DOCUMENTS = "delegate/delegate-documents";
+    public final static String COUNTRIES = "countries";
     public final static String REMOVE_OFFER = "deleteoffer";
     public final static String GET_AD_DETAILS = "listings/listing/";
     public final static String REMOVE_IMAGE = "listings/delete-img/";

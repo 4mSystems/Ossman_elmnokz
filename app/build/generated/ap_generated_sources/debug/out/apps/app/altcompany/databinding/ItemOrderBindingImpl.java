@@ -18,7 +18,7 @@ public class ItemOrderBindingImpl extends ItemOrderBinding implements apps.app.a
     // views
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback38;
+    private final android.view.View.OnClickListener mCallback39;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,7 +41,7 @@ public class ItemOrderBindingImpl extends ItemOrderBinding implements apps.app.a
         this.tvItemOrderStatus.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback38 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback39 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -179,7 +179,7 @@ public class ItemOrderBindingImpl extends ItemOrderBinding implements apps.app.a
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.rlItemOrderContainer.setOnClickListener(mCallback38);
+            this.rlItemOrderContainer.setOnClickListener(mCallback39);
         }
     }
     // Listener Stub Implementations

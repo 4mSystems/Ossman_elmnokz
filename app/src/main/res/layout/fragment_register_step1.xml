@@ -190,6 +190,40 @@
 
 
                 <apps.app.altcompany.customViews.views.CustomEditText
+                    android:id="@+id/edt_register_step1_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dp5w"
+                    android:layout_marginEnd="@dimen/dp5w"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:hint="@string/hint_country"
+                    android:inputType="text"
+                    android:onClick="@{() -> registerStep1ViewModel.countries()}"
+                    android:padding="@dimen/dp5w"
+                    android:paddingStart="@dimen/dp10w"
+                    android:paddingEnd="@dimen/dp10w"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:error="@{registerStep1ViewModel.request.countryError}"
+                    app:met_errorColor="@android:color/holo_red_dark"
+                    app:met_hideUnderline="true"
+                    app:met_primaryColor="@color/colorPrimary"
+                    app:met_underlineColor="@color/colorPrimary" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp10h"
+                android:background="@drawable/border_white_accent_round"
+                android:gravity="center">
+
+
+                <apps.app.altcompany.customViews.views.CustomEditText
                     android:id="@+id/edt_register_step1_city"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -205,7 +239,6 @@
                     android:paddingStart="@dimen/dp10w"
                     android:paddingEnd="@dimen/dp10w"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textSize="@dimen/sp11"
                     app:error="@{registerStep1ViewModel.request.cityError}"
                     app:met_errorColor="@android:color/holo_red_dark"
                     app:met_hideUnderline="true"

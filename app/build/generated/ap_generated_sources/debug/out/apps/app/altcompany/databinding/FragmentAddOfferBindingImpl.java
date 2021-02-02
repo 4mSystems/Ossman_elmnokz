@@ -24,7 +24,7 @@ public class FragmentAddOfferBindingImpl extends FragmentAddOfferBinding impleme
     private final androidx.cardview.widget.CardView mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback32;
+    private final android.view.View.OnClickListener mCallback34;
     @Nullable
     private final android.view.View.OnClickListener mCallback33;
     // values
@@ -47,8 +47,8 @@ public class FragmentAddOfferBindingImpl extends FragmentAddOfferBinding impleme
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback32 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
-        mCallback33 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
+        mCallback34 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
+        mCallback33 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -122,31 +122,14 @@ public class FragmentAddOfferBindingImpl extends FragmentAddOfferBinding impleme
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.addOffer.setOnClickListener(mCallback33);
-            this.mboundView1.setOnClickListener(mCallback32);
+            this.addOffer.setOnClickListener(mCallback34);
+            this.mboundView1.setOnClickListener(mCallback33);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
-                // localize variables for thread safety
-                // viewModel
-                apps.app.altcompany.pages.offers.viewModels.OffersViewModel viewModel = mViewModel;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
-
-
-
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
-
-
-                    viewModel.selectImage();
-                }
-                break;
-            }
             case 2: {
                 // localize variables for thread safety
                 // viewModel
@@ -161,6 +144,23 @@ public class FragmentAddOfferBindingImpl extends FragmentAddOfferBinding impleme
 
 
                     viewModel.addNewOffer();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewModel
+                apps.app.altcompany.pages.offers.viewModels.OffersViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+                    viewModel.selectImage();
                 }
                 break;
             }

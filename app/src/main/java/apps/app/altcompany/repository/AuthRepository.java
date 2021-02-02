@@ -21,6 +21,7 @@ import apps.app.altcompany.pages.auth.models.LoginRequest;
 import apps.app.altcompany.pages.auth.models.RegisterRequest;
 import apps.app.altcompany.pages.auth.models.SocialRequest;
 import apps.app.altcompany.pages.auth.models.cities.CitiesResponse;
+import apps.app.altcompany.pages.auth.models.countries.CountriesResponse;
 import apps.app.altcompany.pages.auth.register.models.PrivacyResponse;
 import apps.app.altcompany.pages.auth.register.models.RegisterStep1Response;
 import apps.app.altcompany.pages.auth.register.models.categories.CategoriesResponse;
@@ -45,9 +46,14 @@ public class AuthRepository extends BaseRepository {
         connectionHelper.liveData = liveData;
     }
 
-    public Disposable getCities() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CITIES, new Object(), CitiesResponse.class,
+    public Disposable getCities(String countryId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CITIES+countryId, new Object(), CitiesResponse.class,
                 Constants.CITIES, true);
+    }
+
+    public Disposable getCountries() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.COUNTRIES, new Object(), CountriesResponse.class,
+                Constants.COUNTRIES, true);
     }
 
     public Disposable login(LoginRequest request) {

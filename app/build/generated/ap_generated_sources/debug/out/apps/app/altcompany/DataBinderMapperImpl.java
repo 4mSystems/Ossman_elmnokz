@@ -466,7 +466,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(46);
+    static final SparseArray<String> sKeys = new SparseArray<String>(47);
 
     static {
       sKeys.put(0, "_all");
@@ -481,40 +481,41 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(9, "companyProfile");
       sKeys.put(10, "contactResponse");
       sKeys.put(11, "contactUsAdapter");
-      sKeys.put(12, "departmentsItems");
-      sKeys.put(13, "forgetPasswordViewModel");
-      sKeys.put(14, "homeData");
-      sKeys.put(15, "homeViewModel");
-      sKeys.put(16, "itemChatViewModel");
-      sKeys.put(17, "itemContactViewModel");
-      sKeys.put(18, "itemHomeViewModel");
-      sKeys.put(19, "itemMenuViewModel");
-      sKeys.put(20, "itemNotificationViewModel");
-      sKeys.put(21, "itemViewModel");
-      sKeys.put(22, "loginViewModel");
-      sKeys.put(23, "manager");
-      sKeys.put(24, "mapAddressViewModel");
-      sKeys.put(25, "menuModel");
-      sKeys.put(26, "menuViewModel");
-      sKeys.put(27, "notificationsAdapter");
-      sKeys.put(28, "notificationsData");
-      sKeys.put(29, "offersAdapter");
-      sKeys.put(30, "offersData");
-      sKeys.put(31, "ordersAdapter");
-      sKeys.put(32, "ordersData");
-      sKeys.put(33, "packagesAdapter");
-      sKeys.put(34, "packagesData");
-      sKeys.put(35, "passingObject");
-      sKeys.put(36, "privacyData");
-      sKeys.put(37, "privacyViewModel");
-      sKeys.put(38, "registerStep1ViewModel");
-      sKeys.put(39, "sliderAdapter");
-      sKeys.put(40, "socialsItem");
-      sKeys.put(41, "splashViewModel");
-      sKeys.put(42, "suggestionViewModel");
-      sKeys.put(43, "verificationCodeViewModel");
-      sKeys.put(44, "viewModel");
-      sKeys.put(45, "viewmodel");
+      sKeys.put(12, "countriesList");
+      sKeys.put(13, "departmentsItems");
+      sKeys.put(14, "forgetPasswordViewModel");
+      sKeys.put(15, "homeData");
+      sKeys.put(16, "homeViewModel");
+      sKeys.put(17, "itemChatViewModel");
+      sKeys.put(18, "itemContactViewModel");
+      sKeys.put(19, "itemHomeViewModel");
+      sKeys.put(20, "itemMenuViewModel");
+      sKeys.put(21, "itemNotificationViewModel");
+      sKeys.put(22, "itemViewModel");
+      sKeys.put(23, "loginViewModel");
+      sKeys.put(24, "manager");
+      sKeys.put(25, "mapAddressViewModel");
+      sKeys.put(26, "menuModel");
+      sKeys.put(27, "menuViewModel");
+      sKeys.put(28, "notificationsAdapter");
+      sKeys.put(29, "notificationsData");
+      sKeys.put(30, "offersAdapter");
+      sKeys.put(31, "offersData");
+      sKeys.put(32, "ordersAdapter");
+      sKeys.put(33, "ordersData");
+      sKeys.put(34, "packagesAdapter");
+      sKeys.put(35, "packagesData");
+      sKeys.put(36, "passingObject");
+      sKeys.put(37, "privacyData");
+      sKeys.put(38, "privacyViewModel");
+      sKeys.put(39, "registerStep1ViewModel");
+      sKeys.put(40, "sliderAdapter");
+      sKeys.put(41, "socialsItem");
+      sKeys.put(42, "splashViewModel");
+      sKeys.put(43, "suggestionViewModel");
+      sKeys.put(44, "verificationCodeViewModel");
+      sKeys.put(45, "viewModel");
+      sKeys.put(46, "viewmodel");
     }
   }
 
