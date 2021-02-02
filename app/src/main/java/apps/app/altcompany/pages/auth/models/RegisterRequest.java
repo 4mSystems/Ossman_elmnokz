@@ -20,7 +20,7 @@ public class RegisterRequest {
     private String password;
     @SerializedName("FK_cities_id")
     private String FK_cities_id;
-    @SerializedName("FK_countries_id")
+    @SerializedName("country_id")
     private String FK_countries_id;
     @SerializedName("workers_address")
     private String workers_address;
