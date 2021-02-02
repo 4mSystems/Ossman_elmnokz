@@ -87,10 +87,10 @@ public class BaseActivity extends ParentActivity {
             Log.e(TAG, "getNotification: " + orderId);
             Bundle bundle = new Bundle();
             switch (typeNotifications) {
-                case "0":  // new Offer
+                case "0":  // Offers
                     setTitleName(ResourceManager.getString(R.string.order_details));
                     OrderDetailsFragment homeMainFragment = new OrderDetailsFragment();
-                    bundle.putString(Constants.BUNDLE, new Gson().toJson(new PassingObject(Integer.parseInt(orderId))));
+                    bundle.putString(Constants.BUNDLE, new Gson().toJson(new PassingObject(Integer.parseInt(orderId), "1")));
                     homeMainFragment.setArguments(bundle);
                     MovementHelper.replaceFragmentTag(this, homeMainFragment, homeMainFragment.getClass().getName(), "");
                     break;
