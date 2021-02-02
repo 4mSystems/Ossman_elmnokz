@@ -138,12 +138,15 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        int viewModelOrdersDataOrdersStatusInt0ViewVISIBLEViewGONE = 0;
         java.lang.String viewModelOrdersDataUserUsersImg = null;
         boolean textUtilsIsEmptyViewModelOrdersDataOrdersImg = false;
         apps.app.altcompany.pages.home.models.UserDetails viewModelOrdersDataUser = null;
+        int viewModelOrdersDataOrdersStatus = 0;
         java.lang.String viewModelOrdersDataOrdersDesc = null;
         java.lang.String viewModelOrdersDataOrdersImg = null;
         apps.app.altcompany.PassingObject viewModelPassingObject = null;
+        boolean viewModelOrdersDataOrdersStatusInt0 = false;
         java.lang.String viewModelOrdersDataUserUsersUsername = null;
         java.lang.String viewModelPassingObjectObject = null;
         java.lang.String viewModelPassingObjectObjectEqualsJavaLangString1MboundView5AndroidStringSendOfferMboundView5AndroidStringChat = null;
@@ -176,10 +179,10 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
                     }
                 if((dirtyFlags & 0xdL) != 0) {
                     if(viewModelPassingObjectObjectEqualsJavaLangString1) {
-                            dirtyFlags |= 0x20L;
+                            dirtyFlags |= 0x80L;
                     }
                     else {
-                            dirtyFlags |= 0x10L;
+                            dirtyFlags |= 0x40L;
                     }
                 }
 
@@ -198,6 +201,8 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
                     if (viewModelOrdersData != null) {
                         // read viewModel.ordersData.user
                         viewModelOrdersDataUser = viewModelOrdersData.getUser();
+                        // read viewModel.ordersData.ordersStatus
+                        viewModelOrdersDataOrdersStatus = viewModelOrdersData.getOrdersStatus();
                         // read viewModel.ordersData.ordersDesc
                         viewModelOrdersDataOrdersDesc = viewModelOrdersData.getOrdersDesc();
                         // read viewModel.ordersData.orders_img
@@ -211,18 +216,30 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
                         // read viewModel.ordersData.user.users_username
                         viewModelOrdersDataUserUsersUsername = viewModelOrdersDataUser.getUsers_username();
                     }
+                    // read viewModel.ordersData.ordersStatus == 0
+                    viewModelOrdersDataOrdersStatusInt0 = (viewModelOrdersDataOrdersStatus) == (0);
                     // read TextUtils.isEmpty(viewModel.ordersData.orders_img)
                     textUtilsIsEmptyViewModelOrdersDataOrdersImg = android.text.TextUtils.isEmpty(viewModelOrdersDataOrdersImg);
+                if((dirtyFlags & 0xbL) != 0) {
+                    if(viewModelOrdersDataOrdersStatusInt0) {
+                            dirtyFlags |= 0x20L;
+                    }
+                    else {
+                            dirtyFlags |= 0x10L;
+                    }
+                }
 
 
+                    // read viewModel.ordersData.ordersStatus == 0 ? View.VISIBLE : View.GONE
+                    viewModelOrdersDataOrdersStatusInt0ViewVISIBLEViewGONE = ((viewModelOrdersDataOrdersStatusInt0) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
                     // read !TextUtils.isEmpty(viewModel.ordersData.orders_img)
                     TextUtilsIsEmptyViewModelOrdersDataOrdersImg1 = !textUtilsIsEmptyViewModelOrdersDataOrdersImg;
                 if((dirtyFlags & 0xbL) != 0) {
                     if(TextUtilsIsEmptyViewModelOrdersDataOrdersImg1) {
-                            dirtyFlags |= 0x80L;
+                            dirtyFlags |= 0x200L;
                     }
                     else {
-                            dirtyFlags |= 0x40L;
+                            dirtyFlags |= 0x100L;
                     }
                 }
             }
@@ -239,6 +256,7 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewModelOrdersDataUserUsersUsername);
+            this.mboundView5.setVisibility(viewModelOrdersDataOrdersStatusInt0ViewVISIBLEViewGONE);
             apps.app.altcompany.base.ApplicationBinding.loadImage(this.orderMedia, textUtilsIsEmptyViewModelOrdersDataOrdersImgViewModelOrdersDataOrdersImgJavaLangString);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.txtDetails, viewModelOrdersDataOrdersDesc);
             apps.app.altcompany.base.ApplicationBinding.loadImage(this.userImg, viewModelOrdersDataUserUsersImg);
@@ -320,10 +338,12 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
         flag 1 (0x2L): viewModel.ordersData
         flag 2 (0x3L): viewModel.passingObject
         flag 3 (0x4L): null
-        flag 4 (0x5L): viewModel.passingObject.object.equals("-1") ? @android:string/send_offer : @android:string/chat
-        flag 5 (0x6L): viewModel.passingObject.object.equals("-1") ? @android:string/send_offer : @android:string/chat
-        flag 6 (0x7L): !TextUtils.isEmpty(viewModel.ordersData.orders_img) ? viewModel.ordersData.orders_img : ""
-        flag 7 (0x8L): !TextUtils.isEmpty(viewModel.ordersData.orders_img) ? viewModel.ordersData.orders_img : ""
+        flag 4 (0x5L): viewModel.ordersData.ordersStatus == 0 ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): viewModel.ordersData.ordersStatus == 0 ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): viewModel.passingObject.object.equals("-1") ? @android:string/send_offer : @android:string/chat
+        flag 7 (0x8L): viewModel.passingObject.object.equals("-1") ? @android:string/send_offer : @android:string/chat
+        flag 8 (0x9L): !TextUtils.isEmpty(viewModel.ordersData.orders_img) ? viewModel.ordersData.orders_img : ""
+        flag 9 (0xaL): !TextUtils.isEmpty(viewModel.ordersData.orders_img) ? viewModel.ordersData.orders_img : ""
     flag mapping end*/
     //end
 }

@@ -96,6 +96,7 @@
                 android:layout_marginBottom="@dimen/dp15h"
                 android:onClick="@{()-> viewModel.sendOffer()}"
                 android:text="@{viewModel.passingObject.object.equals(`-1`)?@string/send_offer:@string/chat}"
+                android:visibility="@{viewModel.ordersData.ordersStatus==0?View.VISIBLE:View.GONE,default=gone}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txt_details" />
         </androidx.constraintlayout.widget.ConstraintLayout>
