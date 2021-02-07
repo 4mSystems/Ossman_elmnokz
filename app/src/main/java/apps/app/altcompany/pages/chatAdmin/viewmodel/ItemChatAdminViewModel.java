@@ -24,7 +24,6 @@ public class ItemChatAdminViewModel extends BaseViewModel {
 
     @BindingAdapter("android:layoutDirection")
     public static void chatAdminDirection(ConstraintLayout constraintLayout, int senderType) {
-        Log.e("chatAdminDirection", "chatAdminDirection: "+senderType );
         if (senderType == 1) {
             constraintLayout.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
         } else

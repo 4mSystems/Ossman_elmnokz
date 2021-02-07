@@ -98,7 +98,7 @@ public class BaseActivity extends ParentActivity {
                     if (!TextUtils.isEmpty(orderId)) {
                         setTitleName(ResourceManager.getString(R.string.chat));
                         ChatAdminFragment fragment = new ChatAdminFragment();
-                        bundle.putString(Constants.BUNDLE, new Gson().toJson(new PassingObject(Integer.parseInt(orderId))));
+                        bundle.putString(Constants.BUNDLE, new Gson().toJson(new PassingObject(Integer.parseInt(orderId), Constants.CHAT)));
                         fragment.setArguments(bundle);
                         MovementHelper.replaceFragmentTag(this, fragment, fragment.getClass().getName(), "");
                     } else {
