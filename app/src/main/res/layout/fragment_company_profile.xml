@@ -182,7 +182,6 @@
                     android:focusable="false"
                     android:onClick="@{() -> viewModel.address()}"
                     android:padding="@dimen/dp8h"
-                    android:text="@={viewModel.companyProfile.workers_address}"
                     android:textAlignment="viewStart"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@color/black"

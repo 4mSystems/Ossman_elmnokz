@@ -92,7 +92,6 @@ public class MapAddressActivity extends FragmentActivity implements
                     intent.putExtra(Constants.ADDRESS, address);
                     setResult(Activity.RESULT_OK, intent);
                     finish();
-                    Log.e("setClickEvent", "setClickEvent: " + city);
                 } else {
                     activityMapAddressBinding.mapProgress.setVisibility(View.GONE);
                     ((ParentActivity) getApplicationContext()).showError(getResources().getString(R.string.location_warning));
@@ -163,18 +162,22 @@ public class MapAddressActivity extends FragmentActivity implements
                 != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
-        List<String> providers = mLocationManager.getProviders(true);
-        Location bestLocation = null;
-        for (String provider : providers) {
-            Location l = mLocationManager.getLastKnownLocation(provider);
-            if (l == null) {
-                continue;
+        if (mapAddressViewModel.getPassingObject() == null) {
+            List<String> providers = mLocationManager.getProviders(true);
+            Location bestLocation = null;
+            for (String provider : providers) {
+                Location l = mLocationManager.getLastKnownLocation(provider);
+                if (l == null) {
+                    continue;
+                }
+                if (bestLocation == null || l.getAccuracy() < bestLocation.getAccuracy()) {
+                    // Found best last known location: %s", l);
+                    bestLocation = l;
+                    mapAddressViewModel.mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(bestLocation.getLatitude(), bestLocation.getLongitude()), 17.0f));
+                }
             }
-            if (bestLocation == null || l.getAccuracy() < bestLocation.getAccuracy()) {
-                // Found best last known location: %s", l);
-                bestLocation = l;
-                mapAddressViewModel.mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(bestLocation.getLatitude(), bestLocation.getLongitude()), 17.0f));
-            }
+        } else {
+            mapAddressViewModel.mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(Double.parseDouble(mapAddressViewModel.getPassingObject().getObject()), Double.parseDouble(mapAddressViewModel.getPassingObject().getObject2())), 17.0f));
         }
     }
 

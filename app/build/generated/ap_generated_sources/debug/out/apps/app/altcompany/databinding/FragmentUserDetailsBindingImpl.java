@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentUserDetailsBindingImpl extends FragmentUserDetailsBinding  {
+public class FragmentUserDetailsBindingImpl extends FragmentUserDetailsBinding implements apps.app.altcompany.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -23,6 +23,8 @@ public class FragmentUserDetailsBindingImpl extends FragmentUserDetailsBinding  
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback1;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -51,6 +53,7 @@ public class FragmentUserDetailsBindingImpl extends FragmentUserDetailsBinding  
         this.userImg.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback1 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -127,7 +130,6 @@ public class FragmentUserDetailsBindingImpl extends FragmentUserDetailsBinding  
         }
         java.lang.String viewModelOrdersDataUserUsersImg = null;
         apps.app.altcompany.pages.home.models.UserDetails viewModelOrdersDataUser = null;
-        java.lang.String viewModelOrdersDataUserUsersAddress = null;
         apps.app.altcompany.pages.home.models.OrdersData viewModelOrdersData = null;
         java.lang.String viewModelOrdersDataUserUsersPhoneNumber = null;
         java.lang.String viewModelOrdersDataUserUsersUsername = null;
@@ -153,8 +155,6 @@ public class FragmentUserDetailsBindingImpl extends FragmentUserDetailsBinding  
                 if (viewModelOrdersDataUser != null) {
                     // read viewModel.ordersData.user.users_img
                     viewModelOrdersDataUserUsersImg = viewModelOrdersDataUser.getUsers_img();
-                    // read viewModel.ordersData.user.users_address
-                    viewModelOrdersDataUserUsersAddress = viewModelOrdersDataUser.getUsers_address();
                     // read viewModel.ordersData.user.users_phone_number
                     viewModelOrdersDataUserUsersPhoneNumber = viewModelOrdersDataUser.getUsers_phone_number();
                     // read viewModel.ordersData.user.users_username
@@ -169,13 +169,33 @@ public class FragmentUserDetailsBindingImpl extends FragmentUserDetailsBinding  
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.txtDetails, viewModelOrdersDataUserUsersUsername);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.txtEmail, viewModelOrdersDataUserEmail);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.txtLocaction, viewModelOrdersDataUserUsersAddress);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.txtPhone, viewModelOrdersDataUserUsersPhoneNumber);
             apps.app.altcompany.base.ApplicationBinding.loadImage(this.userImg, viewModelOrdersDataUserUsersImg);
+        }
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.txtLocaction.setOnClickListener(mCallback1);
         }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // viewModel
+        apps.app.altcompany.pages.home.viewModels.OrderDetailsViewModel viewModel = mViewModel;
+        // viewModel != null
+        boolean viewModelJavaLangObjectNull = false;
+
+
+
+        viewModelJavaLangObjectNull = (viewModel) != (null);
+        if (viewModelJavaLangObjectNull) {
+
+
+            viewModel.toLocation();
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

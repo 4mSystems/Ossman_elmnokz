@@ -2,6 +2,7 @@
 package apps.app.altcompany.pages.home.viewModels;
 
 import android.text.TextUtils;
+import android.util.Log;
 
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
@@ -44,6 +45,10 @@ public class OrderDetailsViewModel extends BaseViewModel {
 
     public void toUserDetails() {
         liveData.setValue(new Mutable(Constants.USER_DETAILS));
+    }
+
+    public void toLocation() {
+        liveData.setValue(new Mutable(Constants.CURRENT_LOCATION));
     }
 
     public void toViewProduct() {

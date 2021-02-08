@@ -28,6 +28,11 @@ public class PassingObject implements Serializable {
         this.object2 = object2;
     }
 
+    public PassingObject(String object, String object2) {
+        this.object = object;
+        this.object2 = object2;
+    }
+
     public PassingObject(String object, Object objectClass) {
         this.objectClass = objectClass;
         this.object = object;

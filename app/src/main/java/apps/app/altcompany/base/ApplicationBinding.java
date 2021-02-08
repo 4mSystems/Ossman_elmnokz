@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.squareup.picasso.Picasso;
 
 import apps.app.altcompany.R;
 import apps.app.altcompany.utils.helper.AppHelper;
@@ -20,21 +21,16 @@ public class ApplicationBinding {
 
     @BindingAdapter("imageUrl")
     public static void loadImage(ImageView imageView, Object image) {
-        Log.e(TAG, "loadImage: " + image);
         if (image instanceof String && !TextUtils.isEmpty((String) image)) {
-            Glide
-                    .with(imageView.getContext())
-                    .load((String) image)
-                    .transition(DrawableTransitionOptions.withCrossFade())
-                    .centerCrop()
-                    .placeholder(R.drawable.ic_logo)
-                    .into(imageView);
+            Log.e(TAG, "loadImage: " + image);
+            Picasso.get().load((String) image).placeholder(R.drawable.ic_logo).into(imageView);
         } else if (image instanceof Integer) {
             imageView.setImageResource((Integer) image);
         } else if (TextUtils.isEmpty((String) image)) {
             imageView.setImageResource(R.drawable.image_placeholder);
         }
     }
+
 
 
     @BindingAdapter("imageZoomUrl")

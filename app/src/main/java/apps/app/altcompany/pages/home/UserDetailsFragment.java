@@ -2,6 +2,7 @@ package apps.app.altcompany.pages.home;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +33,8 @@ import apps.app.altcompany.pages.home.models.orderDetails.OrderDetailsResponse;
 import apps.app.altcompany.pages.home.viewModels.OrderDetailsViewModel;
 import apps.app.altcompany.utils.Constants;
 import apps.app.altcompany.utils.helper.MovementHelper;
+import apps.app.altcompany.utils.locations.MapAddress;
+import apps.app.altcompany.utils.locations.MapAddressInterface;
 
 public class UserDetailsFragment extends BaseFragment {
     Context context;
@@ -50,8 +53,31 @@ public class UserDetailsFragment extends BaseFragment {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
             viewModel.setOrdersData(new Gson().fromJson(String.valueOf(viewModel.getPassingObject().getObjectClass()), OrdersData.class));
+            getAddress(Double.parseDouble(viewModel.getOrdersData().getUser().getUsers_lat()), Double.parseDouble(viewModel.getOrdersData().getUser().getUsers_lang()), (address, city) -> {
+                binding.txtLocaction.setText(address);
+            });
         }
+        setEvent();
         return binding.getRoot();
+
+    }
+
+    private void setEvent() {
+        viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
+            Mutable mutable = (Mutable) o;
+            handleActions(mutable);
+            if (mutable.message.equals(Constants.CURRENT_LOCATION)){
+                MovementHelper.startMapActivityForResultWithBundle(context, new PassingObject(viewModel.getOrdersData().getUser().getUsers_lat(),viewModel.getOrdersData().getUser().getUsers_lang()));
+            }
+        });
+    }
+
+    private void getAddress(final double lat, final double lng, MapAddressInterface mapAddressInterface) {
+        MapAddress mapAddress = new MapAddress(getActivity(), lat, lng);
+        mapAddress.getAddressFromUrl((address, city) -> {
+            if (mapAddressInterface != null)
+                mapAddressInterface.fetchFullAddress(address, city);
+        });
 
     }
 

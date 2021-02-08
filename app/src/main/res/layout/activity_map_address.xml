@@ -6,6 +6,8 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
             name="mapAddressViewModel"
             type="apps.app.altcompany.utils.locations.MapAddressViewModel" />
@@ -68,7 +70,7 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <ImageView
+                <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/img_marker_center"
                     android:layout_width="@dimen/dp40w"
                     android:layout_height="@dimen/dp40h"
@@ -95,6 +97,7 @@
             android:onClick="@{()-> mapAddressViewModel.submit()}"
             android:text="@string/confirmPickUpLocation"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:visibility="@{mapAddressViewModel.passingObject!=null?View.GONE:View.VISIBLE}" />
     </RelativeLayout>
 </layout>

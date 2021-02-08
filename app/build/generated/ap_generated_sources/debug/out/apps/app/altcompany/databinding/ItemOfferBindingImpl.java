@@ -22,7 +22,7 @@ public class ItemOfferBindingImpl extends ItemOfferBinding implements apps.app.a
     @Nullable
     private final android.view.View.OnClickListener mCallback3;
     @Nullable
-    private final android.view.View.OnClickListener mCallback2;
+    private final android.view.View.OnClickListener mCallback4;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,8 +41,8 @@ public class ItemOfferBindingImpl extends ItemOfferBinding implements apps.app.a
         this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback3 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
-        mCallback2 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback3 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback4 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -140,8 +140,8 @@ public class ItemOfferBindingImpl extends ItemOfferBinding implements apps.app.a
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.imgOffer.setOnClickListener(mCallback2);
-            this.mboundView2.setOnClickListener(mCallback3);
+            this.imgOffer.setOnClickListener(mCallback3);
+            this.mboundView2.setOnClickListener(mCallback4);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -153,23 +153,6 @@ public class ItemOfferBindingImpl extends ItemOfferBinding implements apps.app.a
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // itemHomeViewModel
-                apps.app.altcompany.pages.offers.viewModels.ItemOfferViewModel itemHomeViewModel = mItemHomeViewModel;
-                // itemHomeViewModel != null
-                boolean itemHomeViewModelJavaLangObjectNull = false;
-
-
-
-                itemHomeViewModelJavaLangObjectNull = (itemHomeViewModel) != (null);
-                if (itemHomeViewModelJavaLangObjectNull) {
-
-
-                    itemHomeViewModel.removeOffer();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // itemHomeViewModel.offersData
@@ -202,6 +185,23 @@ public class ItemOfferBindingImpl extends ItemOfferBinding implements apps.app.a
 
                         itemHomeViewModel.showImage(itemHomeViewModelOffersDataOffersImg, callbackArg_0);
                     }
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // itemHomeViewModel
+                apps.app.altcompany.pages.offers.viewModels.ItemOfferViewModel itemHomeViewModel = mItemHomeViewModel;
+                // itemHomeViewModel != null
+                boolean itemHomeViewModelJavaLangObjectNull = false;
+
+
+
+                itemHomeViewModelJavaLangObjectNull = (itemHomeViewModel) != (null);
+                if (itemHomeViewModelJavaLangObjectNull) {
+
+
+                    itemHomeViewModel.removeOffer();
                 }
                 break;
             }

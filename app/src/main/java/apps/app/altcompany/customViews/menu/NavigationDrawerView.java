@@ -41,7 +41,7 @@ public class NavigationDrawerView extends RelativeLayout {
     public LayoutNavigationDrawerBinding layoutNavigationDrawerBinding;
     AppCompatActivity context;
     HomeActionBarView homeActionBarView;
-    private MenuViewModel menuViewModel;
+    public MenuViewModel menuViewModel;
 
     public NavigationDrawerView(AppCompatActivity context) {
         super(context);

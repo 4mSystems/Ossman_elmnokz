@@ -37,7 +37,7 @@ MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\MAymanM\
 MERGED from [com.google.android.gms:play-services-auth:19.0.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\b152d34311af8a91df03541c1fa1bfd5\jetified-play-services-auth-19.0.0\AndroidManifest.xml:17:1-40:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\660b305c660c012100fcee222517d1e7\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.bumptech.glide:okhttp3-integration:4.11.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\5cad25290509d35a12a18df3f9a98cd7\jetified-okhttp3-integration-4.11.0\AndroidManifest.xml:2:1-16:12
-MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\15a5c9331da58772959dc481e8e94f81\jetified-glide-4.11.0\AndroidManifest.xml:2:1-12:12
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fa5267a049763373dec180b48ec1e898\jetified-glide-4.12.0\AndroidManifest.xml:2:1-12:12
 MERGED from [com.google.firebase:firebase-auth:20.0.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\651373a4267b7e77b69b7af3b5bef922\jetified-firebase-auth-20.0.1\AndroidManifest.xml:17:1-83:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4498b12664dd922c94b3507146783133\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-location:17.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\600f6c460dfd16bcab99e519c37bf4ed\jetified-play-services-location-17.1.0\AndroidManifest.xml:2:1-9:12
@@ -121,8 +121,8 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\MAymanM\
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\b10edfb2eba831861a537887020eef65\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.dagger:dagger-android:2.30.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\7d27f6fb9e3e8d1b7d273f1601fc0d7a\jetified-dagger-android-2.30.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-components:16.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\f70ed655149d1a59fe767fc81de716ce\jetified-firebase-components-16.1.0\AndroidManifest.xml:15:1-23:12
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\ba4b72954e214b6fd0ddd2bd8b178d0d\exifinterface-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\3f6b16e4ac5dd06aba0d023b31d90334\jetified-gifdecoder-4.11.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\9dcaceee3aa1d60532ac1329f1ebebbb\exifinterface-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\3f6b16e4ac5dd06aba0d023b31d90334\jetified-gifdecoder-4.11.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\067299e1fc75ca8a5fac36288cf39833\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.exoplayer:exoplayer-dash:2.7.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\ba7df1a4a7ee52e0931f9892cffa463e\jetified-exoplayer-dash-2.7.3\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.exoplayer:exoplayer-hls:2.7.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\89e067ab4733dd06fddaeba9e4437031\jetified-exoplayer-hls-2.7.3\AndroidManifest.xml:17:1-24:12
@@ -288,8 +288,8 @@ MERGED from [com.google.android.gms:play-services-auth:19.0.0] C:\Users\MAymanM\
 MERGED from [com.google.android.gms:play-services-auth:19.0.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\b152d34311af8a91df03541c1fa1bfd5\jetified-play-services-auth-19.0.0\AndroidManifest.xml:22:5-38:19
 MERGED from [com.github.bumptech.glide:okhttp3-integration:4.11.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\5cad25290509d35a12a18df3f9a98cd7\jetified-okhttp3-integration-4.11.0\AndroidManifest.xml:10:5-14:19
 MERGED from [com.github.bumptech.glide:okhttp3-integration:4.11.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\5cad25290509d35a12a18df3f9a98cd7\jetified-okhttp3-integration-4.11.0\AndroidManifest.xml:10:5-14:19
-MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\15a5c9331da58772959dc481e8e94f81\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
-MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\15a5c9331da58772959dc481e8e94f81\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fa5267a049763373dec180b48ec1e898\jetified-glide-4.12.0\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fa5267a049763373dec180b48ec1e898\jetified-glide-4.12.0\AndroidManifest.xml:10:5-20
 MERGED from [com.google.firebase:firebase-auth:20.0.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\651373a4267b7e77b69b7af3b5bef922\jetified-firebase-auth-20.0.1\AndroidManifest.xml:26:5-81:19
 MERGED from [com.google.firebase:firebase-auth:20.0.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\651373a4267b7e77b69b7af3b5bef922\jetified-firebase-auth-20.0.1\AndroidManifest.xml:26:5-81:19
 MERGED from [com.google.android.gms:play-services-location:17.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\600f6c460dfd16bcab99e519c37bf4ed\jetified-play-services-location-17.1.0\AndroidManifest.xml:7:5-20
@@ -364,8 +364,8 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\MAymanM\.gradl
 MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\00c950af8d83bb2cfde05b9b315381e1\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:24:5-30:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\48cebe5fd2af6fb86f883cd0edd05aed\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\48cebe5fd2af6fb86f883cd0edd05aed\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
-MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\3f6b16e4ac5dd06aba0d023b31d90334\jetified-gifdecoder-4.11.0\AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\3f6b16e4ac5dd06aba0d023b31d90334\jetified-gifdecoder-4.11.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\3f6b16e4ac5dd06aba0d023b31d90334\jetified-gifdecoder-4.11.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\3f6b16e4ac5dd06aba0d023b31d90334\jetified-gifdecoder-4.11.0\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\9dce573ef305211a49d50594c9a9afd4\jetified-transport-runtime-2.2.5\AndroidManifest.xml:25:5-39:19
 MERGED from [com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\9dce573ef305211a49d50594c9a9afd4\jetified-transport-runtime-2.2.5\AndroidManifest.xml:25:5-39:19
 MERGED from [com.android.volley:volley:1.1.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a43375e4748c44419239ea1c06ddc221\jetified-volley-1.1.1\AndroidManifest.xml:9:5-20
@@ -616,8 +616,8 @@ MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\MAymanM\.gradle\c
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\660b305c660c012100fcee222517d1e7\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.github.bumptech.glide:okhttp3-integration:4.11.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\5cad25290509d35a12a18df3f9a98cd7\jetified-okhttp3-integration-4.11.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.github.bumptech.glide:okhttp3-integration:4.11.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\5cad25290509d35a12a18df3f9a98cd7\jetified-okhttp3-integration-4.11.0\AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\15a5c9331da58772959dc481e8e94f81\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\15a5c9331da58772959dc481e8e94f81\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fa5267a049763373dec180b48ec1e898\jetified-glide-4.12.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fa5267a049763373dec180b48ec1e898\jetified-glide-4.12.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-auth:20.0.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\651373a4267b7e77b69b7af3b5bef922\jetified-firebase-auth-20.0.1\AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-auth:20.0.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\651373a4267b7e77b69b7af3b5bef922\jetified-firebase-auth-20.0.1\AndroidManifest.xml:21:5-44
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4498b12664dd922c94b3507146783133\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
@@ -784,10 +784,10 @@ MERGED from [com.google.dagger:dagger-android:2.30.1] C:\Users\MAymanM\.gradle\c
 MERGED from [com.google.dagger:dagger-android:2.30.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\7d27f6fb9e3e8d1b7d273f1601fc0d7a\jetified-dagger-android-2.30.1\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-components:16.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\f70ed655149d1a59fe767fc81de716ce\jetified-firebase-components-16.1.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-components:16.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\f70ed655149d1a59fe767fc81de716ce\jetified-firebase-components-16.1.0\AndroidManifest.xml:19:5-21:41
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\ba4b72954e214b6fd0ddd2bd8b178d0d\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\ba4b72954e214b6fd0ddd2bd8b178d0d\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\3f6b16e4ac5dd06aba0d023b31d90334\jetified-gifdecoder-4.11.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\3f6b16e4ac5dd06aba0d023b31d90334\jetified-gifdecoder-4.11.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\9dcaceee3aa1d60532ac1329f1ebebbb\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\9dcaceee3aa1d60532ac1329f1ebebbb\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\3f6b16e4ac5dd06aba0d023b31d90334\jetified-gifdecoder-4.11.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\3f6b16e4ac5dd06aba0d023b31d90334\jetified-gifdecoder-4.11.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\067299e1fc75ca8a5fac36288cf39833\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\067299e1fc75ca8a5fac36288cf39833\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.exoplayer:exoplayer-dash:2.7.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\ba7df1a4a7ee52e0931f9892cffa463e\jetified-exoplayer-dash-2.7.3\AndroidManifest.xml:20:5-22:41

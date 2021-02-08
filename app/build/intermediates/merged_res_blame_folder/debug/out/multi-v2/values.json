@@ -607,23 +607,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\MAymanM\\.gradle\\caches\\transforms-2\\files-2.1\\15a5c9331da58772959dc481e8e94f81\\jetified-glide-4.11.0\\res\\values\\values.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "57",
-                        "endOffsets": "108"
-                    },
-                    "to": {
-                        "startLines": "1553",
-                        "startColumns": "4",
-                        "startOffsets": "88755",
-                        "endColumns": "57",
-                        "endOffsets": "88808"
-                    }
-                },
-                {
                     "source": "C:\\Users\\MAymanM\\.gradle\\caches\\transforms-2\\files-2.1\\e9e0147d404afb4820ee0cf9d980f659\\jetified-ccp-2.4.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
@@ -957,6 +940,23 @@
                         "endLines": "445,463,464,998,999,1012,1198,1199,1200,1201,1492,1493,1670,1679,1680,1681,1682,1685,1686,1774,1782,1921,1942,2053,2054,2070,2071,2098,2118,2125,2146,2150,2155,2180,4351,4487,4817,9536",
                         "endColumns": "41,48,58,44,64,53,47,46,54,49,55,62,52,47,49,49,49,64,76,37,43,69,41,78,57,41,105,41,61,60,41,41,42,79,12,12,12,24",
                         "endOffsets": "21439,22667,22726,53162,53227,54070,66208,66255,66310,66360,85567,85630,95809,96269,96319,96369,96419,96683,96760,104562,105065,124017,125391,137883,137941,139306,139412,141304,142404,142800,144014,144240,144467,146193,285375,292979,314214,604355"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\MAymanM\\.gradle\\caches\\transforms-2\\files-2.1\\fa5267a049763373dec180b48ec1e898\\jetified-glide-4.12.0\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "57",
+                        "endOffsets": "108"
+                    },
+                    "to": {
+                        "startLines": "1553",
+                        "startColumns": "4",
+                        "startOffsets": "88755",
+                        "endColumns": "57",
+                        "endOffsets": "88808"
                     }
                 }
             ]

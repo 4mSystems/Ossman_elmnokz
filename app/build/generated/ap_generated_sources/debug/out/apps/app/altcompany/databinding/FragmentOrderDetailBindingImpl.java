@@ -25,11 +25,11 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
     private final androidx.appcompat.widget.AppCompatButton mboundView5;
     // variables
     @Nullable
+    private final android.view.View.OnClickListener mCallback17;
+    @Nullable
     private final android.view.View.OnClickListener mCallback15;
     @Nullable
     private final android.view.View.OnClickListener mCallback16;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback14;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -55,9 +55,9 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
         this.userImg.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback15 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
-        mCallback16 = new apps.app.altcompany.generated.callback.OnClickListener(this, 3);
-        mCallback14 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback17 = new apps.app.altcompany.generated.callback.OnClickListener(this, 3);
+        mCallback15 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback16 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -264,9 +264,9 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView5.setOnClickListener(mCallback16);
-            this.orderMedia.setOnClickListener(mCallback15);
-            this.userImg.setOnClickListener(mCallback14);
+            this.mboundView5.setOnClickListener(mCallback17);
+            this.orderMedia.setOnClickListener(mCallback16);
+            this.userImg.setOnClickListener(mCallback15);
         }
         if ((dirtyFlags & 0xdL) != 0) {
             // api target 1
@@ -278,23 +278,6 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewModel
-                apps.app.altcompany.pages.home.viewModels.OrderDetailsViewModel viewModel = mViewModel;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
-
-
-
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
-
-
-                    viewModel.toViewProduct();
-                }
-                break;
-            }
             case 3: {
                 // localize variables for thread safety
                 // viewModel
@@ -326,6 +309,23 @@ public class FragmentOrderDetailBindingImpl extends FragmentOrderDetailBinding i
 
 
                     viewModel.toUserDetails();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewModel
+                apps.app.altcompany.pages.home.viewModels.OrderDetailsViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+                    viewModel.toViewProduct();
                 }
                 break;
             }

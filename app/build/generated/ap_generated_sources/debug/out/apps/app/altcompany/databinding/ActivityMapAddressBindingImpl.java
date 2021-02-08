@@ -26,7 +26,7 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
     private final androidx.appcompat.widget.AppCompatButton mboundView3;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback12;
+    private final android.view.View.OnClickListener mCallback14;
     @Nullable
     private final android.view.View.OnClickListener mCallback13;
     // values
@@ -39,7 +39,7 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
     private ActivityMapAddressBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
             , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
-            , (android.widget.ImageView) bindings[6]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[6]
             , (android.widget.ProgressBar) bindings[7]
             , (com.google.android.gms.maps.MapView) bindings[2]
             , (android.widget.RelativeLayout) bindings[4]
@@ -53,15 +53,15 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
         this.mboundView3.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback12 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
-        mCallback13 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
+        mCallback14 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
+        mCallback13 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x4L;
+                mDirtyFlags = 0x8L;
         }
         requestRebind();
     }
@@ -89,10 +89,10 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
     }
 
     public void setMapAddressViewModel(@Nullable apps.app.altcompany.utils.locations.MapAddressViewModel MapAddressViewModel) {
-        updateRegistration(0, MapAddressViewModel);
+        updateRegistration(1, MapAddressViewModel);
         this.mMapAddressViewModel = MapAddressViewModel;
         synchronized(this) {
-            mDirtyFlags |= 0x1L;
+            mDirtyFlags |= 0x2L;
         }
         notifyPropertyChanged(BR.mapAddressViewModel);
         super.requestRebind();
@@ -102,13 +102,13 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeMapAddressViewModel((apps.app.altcompany.utils.locations.MapAddressViewModel) object, fieldId);
-            case 1 :
                 return onChangeMapAddressViewModelMMapLatLng((androidx.databinding.ObservableField<com.google.android.gms.maps.model.LatLng>) object, fieldId);
+            case 1 :
+                return onChangeMapAddressViewModel((apps.app.altcompany.utils.locations.MapAddressViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeMapAddressViewModel(apps.app.altcompany.utils.locations.MapAddressViewModel MapAddressViewModel, int fieldId) {
+    private boolean onChangeMapAddressViewModelMMapLatLng(androidx.databinding.ObservableField<com.google.android.gms.maps.model.LatLng> MapAddressViewModelMMapLatLng, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -117,10 +117,16 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
         }
         return false;
     }
-    private boolean onChangeMapAddressViewModelMMapLatLng(androidx.databinding.ObservableField<com.google.android.gms.maps.model.LatLng> MapAddressViewModelMMapLatLng, int fieldId) {
+    private boolean onChangeMapAddressViewModel(apps.app.altcompany.utils.locations.MapAddressViewModel MapAddressViewModel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.passingObject) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x4L;
             }
             return true;
         }
@@ -134,43 +140,93 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        apps.app.altcompany.utils.locations.MapAddressViewModel mapAddressViewModel = mMapAddressViewModel;
         androidx.databinding.ObservableField<com.google.android.gms.maps.model.LatLng> mapAddressViewModelMMapLatLng = null;
         com.google.android.gms.maps.model.LatLng mapAddressViewModelMMapLatLngGet = null;
+        boolean mapAddressViewModelPassingObjectJavaLangObjectNull = false;
+        int mapAddressViewModelPassingObjectJavaLangObjectNullViewGONEViewVISIBLE = 0;
+        apps.app.altcompany.PassingObject mapAddressViewModelPassingObject = null;
+        apps.app.altcompany.utils.locations.MapAddressViewModel mapAddressViewModel = mMapAddressViewModel;
 
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xfL) != 0) {
 
 
+            if ((dirtyFlags & 0xbL) != 0) {
 
-                if (mapAddressViewModel != null) {
-                    // read mapAddressViewModel.mMapLatLng
-                    mapAddressViewModelMMapLatLng = mapAddressViewModel.mMapLatLng;
+                    if (mapAddressViewModel != null) {
+                        // read mapAddressViewModel.mMapLatLng
+                        mapAddressViewModelMMapLatLng = mapAddressViewModel.mMapLatLng;
+                    }
+                    updateRegistration(0, mapAddressViewModelMMapLatLng);
+
+
+                    if (mapAddressViewModelMMapLatLng != null) {
+                        // read mapAddressViewModel.mMapLatLng.get()
+                        mapAddressViewModelMMapLatLngGet = mapAddressViewModelMMapLatLng.get();
+                    }
+            }
+            if ((dirtyFlags & 0xeL) != 0) {
+
+                    if (mapAddressViewModel != null) {
+                        // read mapAddressViewModel.passingObject
+                        mapAddressViewModelPassingObject = mapAddressViewModel.getPassingObject();
+                    }
+
+
+                    // read mapAddressViewModel.passingObject != null
+                    mapAddressViewModelPassingObjectJavaLangObjectNull = (mapAddressViewModelPassingObject) != (null);
+                if((dirtyFlags & 0xeL) != 0) {
+                    if(mapAddressViewModelPassingObjectJavaLangObjectNull) {
+                            dirtyFlags |= 0x20L;
+                    }
+                    else {
+                            dirtyFlags |= 0x10L;
+                    }
                 }
-                updateRegistration(1, mapAddressViewModelMMapLatLng);
 
 
-                if (mapAddressViewModelMMapLatLng != null) {
-                    // read mapAddressViewModel.mMapLatLng.get()
-                    mapAddressViewModelMMapLatLngGet = mapAddressViewModelMMapLatLng.get();
-                }
+                    // read mapAddressViewModel.passingObject != null ? View.GONE : View.VISIBLE
+                    mapAddressViewModelPassingObjectJavaLangObjectNullViewGONEViewVISIBLE = ((mapAddressViewModelPassingObjectJavaLangObjectNull) ? (android.view.View.GONE) : (android.view.View.VISIBLE));
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x4L) != 0) {
+        if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.imgMapSubmit.setOnClickListener(mCallback12);
-            this.mboundView3.setOnClickListener(mCallback13);
+            this.imgMapSubmit.setOnClickListener(mCallback13);
+            this.mboundView3.setOnClickListener(mCallback14);
         }
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
 
             apps.app.altcompany.utils.locations.MapAddressViewModel.initMap(this.mapView, mapAddressViewModelMMapLatLngGet);
+        }
+        if ((dirtyFlags & 0xeL) != 0) {
+            // api target 1
+
+            this.mboundView3.setVisibility(mapAddressViewModelPassingObjectJavaLangObjectNullViewGONEViewVISIBLE);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // mapAddressViewModel
+                apps.app.altcompany.utils.locations.MapAddressViewModel mapAddressViewModel = mMapAddressViewModel;
+                // mapAddressViewModel != null
+                boolean mapAddressViewModelJavaLangObjectNull = false;
+
+
+
+                mapAddressViewModelJavaLangObjectNull = (mapAddressViewModel) != (null);
+                if (mapAddressViewModelJavaLangObjectNull) {
+
+
+                    mapAddressViewModel.submit();
+                }
+                break;
+            }
             case 1: {
                 // localize variables for thread safety
                 // mapAddressViewModel
@@ -189,31 +245,17 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
                 }
                 break;
             }
-            case 2: {
-                // localize variables for thread safety
-                // mapAddressViewModel
-                apps.app.altcompany.utils.locations.MapAddressViewModel mapAddressViewModel = mMapAddressViewModel;
-                // mapAddressViewModel != null
-                boolean mapAddressViewModelJavaLangObjectNull = false;
-
-
-
-                mapAddressViewModelJavaLangObjectNull = (mapAddressViewModel) != (null);
-                if (mapAddressViewModelJavaLangObjectNull) {
-
-
-                    mapAddressViewModel.submit();
-                }
-                break;
-            }
         }
     }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): mapAddressViewModel
-        flag 1 (0x2L): mapAddressViewModel.mMapLatLng
-        flag 2 (0x3L): null
+        flag 0 (0x1L): mapAddressViewModel.mMapLatLng
+        flag 1 (0x2L): mapAddressViewModel
+        flag 2 (0x3L): mapAddressViewModel.passingObject
+        flag 3 (0x4L): null
+        flag 4 (0x5L): mapAddressViewModel.passingObject != null ? View.GONE : View.VISIBLE
+        flag 5 (0x6L): mapAddressViewModel.passingObject != null ? View.GONE : View.VISIBLE
     flag mapping end*/
     //end
 }

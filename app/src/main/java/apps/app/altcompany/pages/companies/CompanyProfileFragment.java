@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,8 @@ import apps.app.altcompany.pages.auth.register.RegisterStep2Fragment;
 import apps.app.altcompany.pages.companies.viewModels.CompaniesViewModel;
 import apps.app.altcompany.utils.Constants;
 import apps.app.altcompany.utils.helper.MovementHelper;
+import apps.app.altcompany.utils.locations.MapAddress;
+import apps.app.altcompany.utils.locations.MapAddressInterface;
 import apps.app.altcompany.utils.session.UserHelper;
 import apps.app.altcompany.utils.upload.FileOperations;
 
@@ -63,15 +66,20 @@ public class CompanyProfileFragment extends BaseFragment {
             switch (mutable.message) {
                 case Constants.COMPANY_PROFILE:
                     viewModel.setCompanyProfile(((UsersResponse) mutable.object).getData());
+                    getAddress(Double.parseDouble(viewModel.getCompanyProfile().getWorkersLat()), Double.parseDouble(viewModel.getCompanyProfile().getWorkersLang()), (address, city) -> {
+                        Log.e("setEvent", "setEvent: "+address );
+                        binding.txtLocaction.setText(address);
+                    });
                     break;
                 case Constants.CURRENT_LOCATION:
-                    MovementHelper.startMapActivityForResultWithBundle(context, new PassingObject());
+                    MovementHelper.startMapActivityForResultWithBundle(context, new PassingObject(viewModel.getCompanyProfile().getWorkersLat(), viewModel.getCompanyProfile().getWorkersLang()));
                     break;
                 case Constants.IMAGE:
+                    Log.e("imageSubmit", "setEvent: " );
                     pickImageDialogSelect(Constants.FILE_TYPE_IMAGE);
                     break;
                 case Constants.CATEGORIES:
-                    MovementHelper.startActivity(context, RegisterStep2Fragment.class.getName(), getString(R.string.settings), null);
+                    MovementHelper.startActivity(context, RegisterStep2Fragment.class.getName(), getString(R.string.permission_settings), null);
                     break;
                 case Constants.UPDATE_PROFILE:
                     toastMessage(((UsersResponse) mutable.object).mMessage);
@@ -96,6 +104,15 @@ public class CompanyProfileFragment extends BaseFragment {
             binding.txtLocaction.setText(viewModel.getRegisterRequest().getWorkers_address());
         }
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    private void getAddress(final double lat, final double lng, MapAddressInterface mapAddressInterface) {
+        MapAddress mapAddress = new MapAddress(getActivity(), lat, lng);
+        mapAddress.getAddressFromUrl((address, city) -> {
+            if (mapAddressInterface != null)
+                mapAddressInterface.fetchFullAddress(address, city);
+        });
+
     }
 
     @Override

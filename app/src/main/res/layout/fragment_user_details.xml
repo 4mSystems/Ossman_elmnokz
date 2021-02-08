@@ -136,7 +136,7 @@
                     android:drawableEnd="@drawable/ic_location_map"
                     android:drawablePadding="@dimen/dp20w"
                     android:padding="@dimen/dp8h"
-                    android:text="@{viewModel.ordersData.user.users_address}"
+                    android:onClick="@{()->viewModel.toLocation()}"
                     android:textAlignment="viewStart"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@color/colorAccent"

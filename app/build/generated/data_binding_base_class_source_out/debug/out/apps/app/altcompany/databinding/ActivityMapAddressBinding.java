@@ -4,7 +4,6 @@ package apps.app.altcompany.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
@@ -25,7 +24,7 @@ public abstract class ActivityMapAddressBinding extends ViewDataBinding {
   public final AppCompatImageView imgMapSubmit;
 
   @NonNull
-  public final ImageView imgMarkerCenter;
+  public final AppCompatImageView imgMarkerCenter;
 
   @NonNull
   public final ProgressBar mapProgress;
@@ -43,7 +42,7 @@ public abstract class ActivityMapAddressBinding extends ViewDataBinding {
   protected MapAddressViewModel mMapAddressViewModel;
 
   protected ActivityMapAddressBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatImageView imgMapSubmit, ImageView imgMarkerCenter, ProgressBar mapProgress,
+      AppCompatImageView imgMapSubmit, AppCompatImageView imgMarkerCenter, ProgressBar mapProgress,
       MapView mapView, RelativeLayout rlHeader, CustomTextViewMedium tvHomeHeader) {
     super(_bindingComponent, _root, _localFieldCount);
     this.imgMapSubmit = imgMapSubmit;
