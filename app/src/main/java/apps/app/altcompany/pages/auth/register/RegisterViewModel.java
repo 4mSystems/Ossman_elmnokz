@@ -101,6 +101,10 @@ public class RegisterViewModel extends BaseViewModel {
         compositeDisposable.add(repository.categories());
     }
 
+    public void getSubCategories(int catId) {
+        compositeDisposable.add(repository.subCategories(catId));
+    }
+
     public void getPackages() {
         compositeDisposable.add(repository.packages());
     }

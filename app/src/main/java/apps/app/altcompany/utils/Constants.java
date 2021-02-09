@@ -61,6 +61,7 @@ public class Constants {
     public static final String VIEW_IMAGE = "VIEW_IMAGE";
     public static final String VIEW_VIDEO = "VIEW_VIDEO";
     public static final String CATEGORIES = "CATEGORIES";
+    public static final String SUB_CATEGORIES = "SUB_CATEGORIES";
     public static final String SHOW_COUNTRIES = "SHOW_COUNTRIES";
     public static final String SHARE_BAR = "SHARE_BAR";
     //REQUESTS

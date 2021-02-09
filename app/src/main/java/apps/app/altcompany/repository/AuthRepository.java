@@ -24,6 +24,7 @@ import apps.app.altcompany.pages.auth.models.cities.CitiesResponse;
 import apps.app.altcompany.pages.auth.models.countries.CountriesResponse;
 import apps.app.altcompany.pages.auth.register.models.PrivacyResponse;
 import apps.app.altcompany.pages.auth.register.models.RegisterStep1Response;
+import apps.app.altcompany.pages.auth.register.models.SubCategoriesResponse;
 import apps.app.altcompany.pages.auth.register.models.categories.CategoriesResponse;
 import apps.app.altcompany.pages.auth.register.models.packages.PackageResponse;
 import apps.app.altcompany.utils.Constants;
@@ -47,7 +48,7 @@ public class AuthRepository extends BaseRepository {
     }
 
     public Disposable getCities(String countryId) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CITIES+countryId, new Object(), CitiesResponse.class,
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CITIES + countryId, new Object(), CitiesResponse.class,
                 Constants.CITIES, true);
     }
 
@@ -125,6 +126,11 @@ public class AuthRepository extends BaseRepository {
     public Disposable categories() {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CATEGORIES, new Object(), CategoriesResponse.class,
                 Constants.CATEGORIES, true);
+    }
+
+    public Disposable subCategories(int catId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SUB_CATEGORIES + catId, new Object(), SubCategoriesResponse.class,
+                Constants.SUB_CATEGORIES, true);
     }
 
     public Disposable packages() {

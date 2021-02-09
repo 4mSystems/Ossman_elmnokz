@@ -4,13 +4,13 @@ import com.google.gson.annotations.SerializedName;
 
 public class RelatedSubCategoriesItem {
 
-    @SerializedName("sub_categories_id")
+    @SerializedName("categories_id")
     private int subCategoriesId;
 
     @SerializedName("sub_categories_img")
     private String subCategoriesImg;
 
-    @SerializedName("sub_categories_name")
+    @SerializedName("categories_name")
     private String subCategoriesName;
     private transient boolean checked = false;
 

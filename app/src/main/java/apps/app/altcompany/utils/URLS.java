@@ -3,6 +3,7 @@ package apps.app.altcompany.utils;
 public class URLS {
     public final static String BASE_URL = "https://alti.my-staff.net/api/";
     public final static String CATEGORIES = "getcategories";
+    public final static String SUB_CATEGORIES = "getsubcategory/";
     public final static String CITIES = "allcities/";
 
     public final static String PACKAGES = "packages";

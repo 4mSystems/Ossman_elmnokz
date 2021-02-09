@@ -24,6 +24,7 @@ import apps.app.altcompany.databinding.FragmentRegisterStep2Binding;
 import apps.app.altcompany.model.base.Mutable;
 import apps.app.altcompany.model.base.StatusMessage;
 import apps.app.altcompany.pages.auth.register.models.RegisterStep1Response;
+import apps.app.altcompany.pages.auth.register.models.SubCategoriesResponse;
 import apps.app.altcompany.pages.auth.register.models.categories.CategoriesResponse;
 import apps.app.altcompany.utils.Constants;
 import apps.app.altcompany.utils.PopUp.PopUpMenuHelper;
@@ -55,6 +56,10 @@ public class RegisterStep2Fragment extends BaseFragment {
                 case Constants.CATEGORIES:
                     viewModel.setDepartmentsItems(((CategoriesResponse) mutable.object).getAllDepartments().getCategories());
                     break;
+                case Constants.SUB_CATEGORIES:
+                    viewModel.getCategoriesAdapter().getSelectedCategories().clear();
+                    viewModel.getCategoriesAdapter().update(((SubCategoriesResponse) mutable.object).getSubCategoriesItems());
+                    break;
                 case Constants.UPDATE_CATEGORY:
                     toastMessage(((StatusMessage) mutable.object).mMessage);
                     finishActivity();
@@ -81,8 +86,7 @@ public class RegisterStep2Fragment extends BaseFragment {
             binding.departments.setText(viewModel.getDepartmentsItems().get(item.getItemId()).getCategoriesName());
             viewModel.getRequest().setCategory_id(String.valueOf(viewModel.getDepartmentsItems().get(item.getItemId()).getCategoriesId()));
             viewModel.getRequest().setCategory(String.valueOf(viewModel.getDepartmentsItems().get(item.getItemId()).getCategoriesId()));
-            viewModel.getCategoriesAdapter().getSelectedCategories().clear();
-            viewModel.getCategoriesAdapter().update(viewModel.getDepartmentsItems().get(item.getItemId()).getRelatedSubCategories());
+            viewModel.getSubCategories(Integer.parseInt(viewModel.getRequest().getCategory_id()));
             return false;
         });
     }
