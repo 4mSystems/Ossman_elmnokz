@@ -67,7 +67,6 @@ public class CompanyProfileFragment extends BaseFragment {
                 case Constants.COMPANY_PROFILE:
                     viewModel.setCompanyProfile(((UsersResponse) mutable.object).getData());
                     getAddress(Double.parseDouble(viewModel.getCompanyProfile().getWorkersLat()), Double.parseDouble(viewModel.getCompanyProfile().getWorkersLang()), (address, city) -> {
-                        Log.e("setEvent", "setEvent: "+address );
                         binding.txtLocaction.setText(address);
                     });
                     break;
@@ -75,7 +74,6 @@ public class CompanyProfileFragment extends BaseFragment {
                     MovementHelper.startMapActivityForResultWithBundle(context, new PassingObject(viewModel.getCompanyProfile().getWorkersLat(), viewModel.getCompanyProfile().getWorkersLang()));
                     break;
                 case Constants.IMAGE:
-                    Log.e("imageSubmit", "setEvent: " );
                     pickImageDialogSelect(Constants.FILE_TYPE_IMAGE);
                     break;
                 case Constants.CATEGORIES:

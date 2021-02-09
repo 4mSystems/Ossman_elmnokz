@@ -15,7 +15,6 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
 
-import apps.app.altcompany.PassingObject;
 import apps.app.altcompany.R;
 import apps.app.altcompany.base.BaseFragment;
 import apps.app.altcompany.base.IApplicationComponent;
@@ -24,7 +23,6 @@ import apps.app.altcompany.base.ParentActivity;
 import apps.app.altcompany.databinding.FragmentRegisterStep2Binding;
 import apps.app.altcompany.model.base.Mutable;
 import apps.app.altcompany.model.base.StatusMessage;
-import apps.app.altcompany.pages.auth.confirmCode.ConfirmCodeFragment;
 import apps.app.altcompany.pages.auth.register.models.RegisterStep1Response;
 import apps.app.altcompany.pages.auth.register.models.categories.CategoriesResponse;
 import apps.app.altcompany.utils.Constants;

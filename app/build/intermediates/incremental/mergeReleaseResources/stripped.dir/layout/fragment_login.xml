@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                  
+                                                
+
+    
+
+                 
+                                 
+                                                                         
+           
+
+    <RelativeLayout
+        android:id="@+id/rl_login_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash" android:tag="layout/fragment_login_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context=".ui.fragments.LoginFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp10w"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp150w"
+                    android:layout_height="@dimen/dp150h"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_logo" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:background="@drawable/border_white_accent_round"
+                    android:gravity="center">
+
+
+                    <apps.app.altcompany.customViews.views.CustomEditText
+                        android:id="@+id/edt_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp5w"
+                        android:layout_marginEnd="@dimen/dp5w"
+                        android:gravity="center"
+                        android:hint="@string/hint_phone_number"
+                        android:inputType="phone"
+                        android:padding="@dimen/dp5w"
+                        android:paddingStart="@dimen/dp10w"
+                        android:paddingEnd="@dimen/dp10w"
+                        android:tag="binding_1"                             
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColorHint="@color/colorBlack"
+                        android:textStyle="bold"
+                                                                              
+                        app:met_errorColor="@android:color/holo_red_dark"
+                        app:met_hideUnderline="true"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_underlineColor="@color/colorPrimary" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:background="@drawable/border_white_accent_round"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <apps.app.altcompany.customViews.views.CustomEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp5w"
+                        android:layout_marginEnd="@dimen/dp5w"
+                        android:gravity="center"
+                        android:hint="@string/hint_password"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:padding="@dimen/dp5w"
+                        android:paddingStart="@dimen/dp10w"
+                        android:paddingEnd="@dimen/dp10w"
+                        android:tag="binding_2"                                
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColorHint="@color/colorBlack"
+                        android:textStyle="bold"
+                                                                                 
+                        app:met_errorColor="@android:color/holo_red_dark"
+                        app:met_hideUnderline="true"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_underlineColor="@color/colorPrimary" />
+                </RelativeLayout>
+
+                <apps.app.altcompany.customViews.views.CustomTextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:gravity="end"
+                    android:tag="binding_3"                                   
+                    android:text="@string/label_forget_password_question"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold" />
+
+
+                <apps.app.altcompany.customViews.views.CustomTextViewMedium
+                    style="@style/btn_submit_primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:tag="binding_4"                               
+                    android:paddingStart="@dimen/dp70h"
+                    android:paddingEnd="@dimen/dp70h"
+                    android:text="@string/label_login"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp5w"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_accent_round"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp3h"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/img_login_facebook"
+                            android:layout_width="@dimen/dp30w"
+                            android:layout_height="@dimen/dp30h"
+                            android:layout_gravity="start"
+                            android:src="@drawable/ic_facebook" />
+
+                        <apps.app.altcompany.customViews.views.CustomTextViewMedium
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:src="@drawable/ic_facebook"
+                            android:text="@string/label_facebook"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/sp14" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp5w"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_accent_round"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp3h"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/img_login_google"
+                            android:layout_width="@dimen/dp30w"
+                            android:layout_height="@dimen/dp30h"
+                            android:layout_gravity="start"
+                            android:src="@drawable/ic_google" />
+
+                        <apps.app.altcompany.customViews.views.CustomTextViewMedium
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:src="@drawable/ic_google"
+                            android:text="@string/label_google"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/sp14" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <apps.app.altcompany.customViews.views.CustomTextViewMedium
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:gravity="center"
+                    android:tag="binding_5"                             
+                    android:text="@string/label_create_new_account"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </RelativeLayout>
+         

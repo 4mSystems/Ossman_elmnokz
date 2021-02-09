@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                  
+                                                            
+
+    
+
+                                           
+
+                 
+                            
+                                                                                     
+           
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/fragment_user_details_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context=".views.fragments.ProductDetailsFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_img"
+                android:layout_width="@dimen/dp80w"
+                android:layout_height="@dimen/dp80h"
+                android:layout_margin="@dimen/dp10h"
+                android:src="@drawable/ic_user"
+                app:civ_border_color="@color/colorAccent"
+                app:civ_border_width="1dp"
+                android:tag="binding_1"                              
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10w"
+                android:layout_marginTop="@dimen/dp20h"
+                android:layout_marginEnd="@dimen/dp10w"
+                app:cardCornerRadius="@dimen/dp10h"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/user_img">
+
+                <apps.app.altcompany.customViews.views.CustomTextViewMedium
+                    android:id="@+id/txt_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_profile_black"
+                    android:drawablePadding="@dimen/dp20w"
+                    android:padding="@dimen/dp8h"
+                    android:tag="binding_2"                                   
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorAccent"
+                    app:layout_constraintTop_toBottomOf="@id/card_img" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10w"
+                android:layout_marginTop="@dimen/dp20h"
+                android:layout_marginEnd="@dimen/dp10w"
+                app:cardCornerRadius="@dimen/dp10h"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_name">
+
+                <apps.app.altcompany.customViews.views.CustomTextViewMedium
+                    android:id="@+id/txt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_mail_black"
+                    android:drawablePadding="@dimen/dp20w"
+                    android:padding="@dimen/dp8h"
+                    android:tag="binding_3"                          
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorAccent"
+                    app:layout_constraintTop_toBottomOf="@id/card_img" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10w"
+                android:layout_marginTop="@dimen/dp20h"
+                android:layout_marginEnd="@dimen/dp10w"
+                app:cardCornerRadius="@dimen/dp10h"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_email">
+
+                <apps.app.altcompany.customViews.views.CustomTextViewMedium
+                    android:id="@+id/txt_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_phone_black"
+                    android:drawablePadding="@dimen/dp20w"
+                    android:padding="@dimen/dp8h"
+                    android:tag="binding_4"                                       
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorAccent"
+                    app:layout_constraintTop_toBottomOf="@id/card_img" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10w"
+                android:layout_marginTop="@dimen/dp20h"
+                android:layout_marginEnd="@dimen/dp10w"
+                app:cardCornerRadius="@dimen/dp10h"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_phone">
+
+                <apps.app.altcompany.customViews.views.CustomTextViewMedium
+                    android:id="@+id/txt_locaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_location"
+                    android:drawableEnd="@drawable/ic_location_map"
+                    android:drawablePadding="@dimen/dp20w"
+                    android:padding="@dimen/dp8h"
+                    android:tag="binding_5"                        
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorAccent"
+                    app:layout_constraintTop_toBottomOf="@id/card_img" />
+
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+         
