@@ -173,8 +173,9 @@ apps/app/altcompany/pages/offers/adapters/OffersAdapter.java
 apps/app/altcompany/customViews/views/CustomEditText.java
  apps.app.altcompany.customViews.views.CustomEditText
  apps.app.altcompany.customViews.views.CustomEditText$Validator
-apps/app/altcompany/connection/FileObject.java
- apps.app.altcompany.connection.FileObject
+apps/app/altcompany/pages/auth/register/adapters/CategoriesAdapter.java
+ apps.app.altcompany.pages.auth.register.adapters.CategoriesAdapter
+ apps.app.altcompany.pages.auth.register.adapters.CategoriesAdapter$ViewHolder
 apps/app/altcompany/databinding/LayoutGrandBinding.java
  apps.app.altcompany.databinding.LayoutGrandBinding
 apps/app/altcompany/pages/offers/models/OffersResponse.java
@@ -206,8 +207,8 @@ apps/app/altcompany/connection/ConnectionHelper.java
  apps.app.altcompany.connection.ConnectionHelper$3
 apps/app/altcompany/pages/splash/models/SettingData.java
  apps.app.altcompany.pages.splash.models.SettingData
-apps/app/altcompany/pages/auth/register/models/PrivacyResponse.java
- apps.app.altcompany.pages.auth.register.models.PrivacyResponse
+apps/app/altcompany/pages/auth/register/viewModels/ItemCategoriesViewModel.java
+ apps.app.altcompany.pages.auth.register.viewModels.ItemCategoriesViewModel
 apps/app/altcompany/pages/auth/forgetPassword/ForgetPasswordFragment.java
  apps.app.altcompany.pages.auth.forgetPassword.ForgetPasswordFragment
 apps/app/altcompany/base/LiveData.java
@@ -228,8 +229,8 @@ apps/app/altcompany/utils/PopUp/PopUpInterface.java
  apps.app.altcompany.utils.PopUp.PopUpInterface
 apps/app/altcompany/base/BaseViewModel.java
  apps.app.altcompany.base.BaseViewModel
-apps/app/altcompany/customViews/menu/MenuViewModel.java
- apps.app.altcompany.customViews.menu.MenuViewModel
+apps/app/altcompany/databinding/ItemCategoryBinding.java
+ apps.app.altcompany.databinding.ItemCategoryBinding
 apps/app/altcompany/utils/helper/MovementHelper.java
  apps.app.altcompany.utils.helper.MovementHelper
 apps/app/altcompany/pages/chatAdmin/model/ChatAdmin.java
@@ -302,8 +303,8 @@ apps/app/altcompany/pages/notifications/models/NotificationsData.java
  apps.app.altcompany.pages.notifications.models.NotificationsData
 apps/app/altcompany/ResponseHeader.java
  apps.app.altcompany.ResponseHeader
-apps/app/altcompany/connection/Api.java
- apps.app.altcompany.connection.Api
+apps/app/altcompany/pages/auth/register/models/categories/RelatedSubCategoriesItem.java
+ apps.app.altcompany.pages.auth.register.models.categories.RelatedSubCategoriesItem
 apps/app/altcompany/pages/settings/models/SuggestionsRequest.java
  apps.app.altcompany.pages.settings.models.SuggestionsRequest
 apps/app/altcompany/pages/splash/models/BannersItem.java
@@ -397,8 +398,8 @@ apps/app/altcompany/pages/auth/register/adapters/PackagesAdapter.java
  apps.app.altcompany.pages.auth.register.adapters.PackagesAdapter$ViewHolder
 apps/app/altcompany/pages/splash/SplashFragment.java
  apps.app.altcompany.pages.splash.SplashFragment
-apps/app/altcompany/utils/session/UserHelper.java
- apps.app.altcompany.utils.session.UserHelper
+apps/app/altcompany/base/ApplicationComponent.java
+ apps.app.altcompany.base.ApplicationComponent
 apps/app/altcompany/base/ConnectivityReceiver.java
  apps.app.altcompany.base.ConnectivityReceiver
  apps.app.altcompany.base.ConnectivityReceiver$ConnectivityReceiverListener
@@ -439,14 +440,13 @@ apps/app/altcompany/customViews/grandDialog/GrandImageDialog.java
  apps.app.altcompany.customViews.grandDialog.GrandDialog$4
  apps.app.altcompany.customViews.grandDialog.GrandImageDialog
  apps.app.altcompany.customViews.grandDialog.GrandImageDialog$1
-apps/app/altcompany/pages/auth/register/models/categories/RelatedSubCategoriesItem.java
- apps.app.altcompany.pages.auth.register.models.categories.RelatedSubCategoriesItem
-apps/app/altcompany/databinding/ItemCategoryBinding.java
- apps.app.altcompany.databinding.ItemCategoryBinding
-apps/app/altcompany/base/ApplicationComponent.java
- apps.app.altcompany.base.ApplicationComponent
-apps/app/altcompany/pages/auth/register/adapters/CategoriesAdapter.java
- apps.app.altcompany.pages.auth.register.adapters.CategoriesAdapter
- apps.app.altcompany.pages.auth.register.adapters.CategoriesAdapter$ViewHolder
-apps/app/altcompany/pages/auth/register/viewModels/ItemCategoriesViewModel.java
- apps.app.altcompany.pages.auth.register.viewModels.ItemCategoriesViewModel
+apps/app/altcompany/pages/auth/register/models/PrivacyResponse.java
+ apps.app.altcompany.pages.auth.register.models.PrivacyResponse
+apps/app/altcompany/connection/FileObject.java
+ apps.app.altcompany.connection.FileObject
+apps/app/altcompany/utils/session/UserHelper.java
+ apps.app.altcompany.utils.session.UserHelper
+apps/app/altcompany/customViews/menu/MenuViewModel.java
+ apps.app.altcompany.customViews.menu.MenuViewModel
+apps/app/altcompany/connection/Api.java
+ apps.app.altcompany.connection.Api

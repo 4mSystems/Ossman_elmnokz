@@ -162,7 +162,7 @@ public class MapAddressActivity extends FragmentActivity implements
                 != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
-        if (mapAddressViewModel.getPassingObject() == null) {
+        if (mapAddressViewModel.getPassingObject().getId() == 0) {
             List<String> providers = mLocationManager.getProviders(true);
             Location bestLocation = null;
             for (String provider : providers) {

@@ -28,12 +28,12 @@
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\drawable-mdpi\\ic_home_black.png"
     },
     {
-        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_camera_primary.png.flat",
-        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\drawable-xxhdpi\\ic_camera_primary.png"
-    },
-    {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_camera_primary.png.flat",
+        "source": "F:\\mostafa elnagar\\AltiCompany\\app\\src\\main\\res\\drawable-xxhdpi\\ic_camera_primary.png"
     },
     {
         "merged": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_star_empty.png.flat",

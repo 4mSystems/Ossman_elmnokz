@@ -98,6 +98,6 @@
             android:text="@string/confirmPickUpLocation"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/white"
-            android:visibility="@{mapAddressViewModel.passingObject!=null?View.GONE:View.VISIBLE}" />
+            android:visibility="@{mapAddressViewModel.passingObject.id!=0?View.GONE:View.VISIBLE}" />
     </RelativeLayout>
 </layout>

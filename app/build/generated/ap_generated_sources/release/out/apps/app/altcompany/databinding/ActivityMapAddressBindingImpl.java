@@ -142,10 +142,11 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
         }
         androidx.databinding.ObservableField<com.google.android.gms.maps.model.LatLng> mapAddressViewModelMMapLatLng = null;
         com.google.android.gms.maps.model.LatLng mapAddressViewModelMMapLatLngGet = null;
-        boolean mapAddressViewModelPassingObjectJavaLangObjectNull = false;
-        int mapAddressViewModelPassingObjectJavaLangObjectNullViewGONEViewVISIBLE = 0;
+        boolean mapAddressViewModelPassingObjectIdInt0 = false;
+        int mapAddressViewModelPassingObjectIdInt0ViewGONEViewVISIBLE = 0;
         apps.app.altcompany.PassingObject mapAddressViewModelPassingObject = null;
         apps.app.altcompany.utils.locations.MapAddressViewModel mapAddressViewModel = mMapAddressViewModel;
+        int mapAddressViewModelPassingObjectId = 0;
 
         if ((dirtyFlags & 0xfL) != 0) {
 
@@ -172,10 +173,16 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
                     }
 
 
-                    // read mapAddressViewModel.passingObject != null
-                    mapAddressViewModelPassingObjectJavaLangObjectNull = (mapAddressViewModelPassingObject) != (null);
+                    if (mapAddressViewModelPassingObject != null) {
+                        // read mapAddressViewModel.passingObject.id
+                        mapAddressViewModelPassingObjectId = mapAddressViewModelPassingObject.getId();
+                    }
+
+
+                    // read mapAddressViewModel.passingObject.id != 0
+                    mapAddressViewModelPassingObjectIdInt0 = (mapAddressViewModelPassingObjectId) != (0);
                 if((dirtyFlags & 0xeL) != 0) {
-                    if(mapAddressViewModelPassingObjectJavaLangObjectNull) {
+                    if(mapAddressViewModelPassingObjectIdInt0) {
                             dirtyFlags |= 0x20L;
                     }
                     else {
@@ -184,8 +191,8 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
                 }
 
 
-                    // read mapAddressViewModel.passingObject != null ? View.GONE : View.VISIBLE
-                    mapAddressViewModelPassingObjectJavaLangObjectNullViewGONEViewVISIBLE = ((mapAddressViewModelPassingObjectJavaLangObjectNull) ? (android.view.View.GONE) : (android.view.View.VISIBLE));
+                    // read mapAddressViewModel.passingObject.id != 0 ? View.GONE : View.VISIBLE
+                    mapAddressViewModelPassingObjectIdInt0ViewGONEViewVISIBLE = ((mapAddressViewModelPassingObjectIdInt0) ? (android.view.View.GONE) : (android.view.View.VISIBLE));
             }
         }
         // batch finished
@@ -203,7 +210,7 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
         if ((dirtyFlags & 0xeL) != 0) {
             // api target 1
 
-            this.mboundView3.setVisibility(mapAddressViewModelPassingObjectJavaLangObjectNullViewGONEViewVISIBLE);
+            this.mboundView3.setVisibility(mapAddressViewModelPassingObjectIdInt0ViewGONEViewVISIBLE);
         }
     }
     // Listener Stub Implementations
@@ -254,8 +261,8 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
         flag 1 (0x2L): mapAddressViewModel
         flag 2 (0x3L): mapAddressViewModel.passingObject
         flag 3 (0x4L): null
-        flag 4 (0x5L): mapAddressViewModel.passingObject != null ? View.GONE : View.VISIBLE
-        flag 5 (0x6L): mapAddressViewModel.passingObject != null ? View.GONE : View.VISIBLE
+        flag 4 (0x5L): mapAddressViewModel.passingObject.id != 0 ? View.GONE : View.VISIBLE
+        flag 5 (0x6L): mapAddressViewModel.passingObject.id != 0 ? View.GONE : View.VISIBLE
     flag mapping end*/
     //end
 }

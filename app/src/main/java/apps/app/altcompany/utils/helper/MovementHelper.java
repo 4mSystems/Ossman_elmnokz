@@ -127,6 +127,7 @@ public class MovementHelper {
         ((ParentActivity) context).setResult(RESULT_OK, intent);
         ((Activity) context).finish();
     }
+
     public static void startMapActivityForResultWithBundle(Context from, PassingObject passingObject) {
         Intent intent = new Intent(from, MapAddressActivity.class);
         intent.putExtra(Constants.BUNDLE, new Gson().toJson(passingObject));
@@ -211,6 +212,7 @@ public class MovementHelper {
 
         return bitmap;
     }
+
     public static void openDialNumber(String number, Context context) {
         if (ContextCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(((Activity) context), new String[]{Manifest.permission.CALL_PHONE}, 1);
