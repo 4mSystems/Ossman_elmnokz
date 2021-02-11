@@ -177,7 +177,7 @@
     <string name="title">العنوان</string>
     <string name="message">الرسالة</string>
     <string name="select_image">إختر الصورة</string>
-    <string name="send_offer">إرسال عرض</string>
+    <string name="send_offer">تواصل مع العميل</string>
     <string name="chat">المحادثه</string>
     <string name="recharge">إعاده الاشتراك</string>
     <string name="current_orders">الطلبات</string>
@@ -207,5 +207,11 @@
     <string name="chat_hint">اكتب رسالتك…</string>
     <string name="finished">انتهت</string>
     <string name="waiting">فى الانتظار</string>
+    <string name="company_emp_num">Employee number</string>
+    <string name="company_register_date">company register date</string>
+    <string name="cover">Cover (optional)</string>
+    <string name="my_works">My works</string>
+    <string name="max_files">You reached max selected images</string>
+    <string name="pick_file_title">Choose your images</string>
 
 </resources>

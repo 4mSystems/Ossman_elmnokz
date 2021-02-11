@@ -14,16 +14,16 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.your_state_progress_bar_id, 14);
-        sViewsWithIds.put(R.id.rl_register_image, 15);
+        sViewsWithIds.put(R.id.your_state_progress_bar_id, 17);
+        sViewsWithIds.put(R.id.rl_register_image, 18);
     }
     // views
     @NonNull
-    private final android.widget.CheckBox mboundView11;
+    private final android.widget.CheckBox mboundView14;
     @NonNull
-    private final apps.app.altcompany.customViews.views.CustomTextViewMedium mboundView12;
+    private final apps.app.altcompany.customViews.views.CustomTextViewMedium mboundView15;
     @NonNull
-    private final apps.app.altcompany.customViews.views.CustomTextViewMedium mboundView13;
+    private final apps.app.altcompany.customViews.views.CustomTextViewMedium mboundView16;
     @NonNull
     private final apps.app.altcompany.customViews.views.CustomEditText mboundView2;
     @NonNull
@@ -36,21 +36,23 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
     private final apps.app.altcompany.customViews.views.CustomEditText mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback27;
+    private final android.view.View.OnClickListener mCallback35;
     @Nullable
     private final android.view.View.OnClickListener mCallback30;
     @Nullable
     private final android.view.View.OnClickListener mCallback28;
     @Nullable
+    private final android.view.View.OnClickListener mCallback36;
+    @Nullable
     private final android.view.View.OnClickListener mCallback32;
     @Nullable
     private final android.view.View.OnClickListener mCallback31;
     @Nullable
-    private final android.view.View.OnClickListener mCallback25;
+    private final android.view.View.OnClickListener mCallback33;
     @Nullable
     private final android.view.View.OnClickListener mCallback29;
     @Nullable
-    private final android.view.View.OnClickListener mCallback26;
+    private final android.view.View.OnClickListener mCallback34;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -87,6 +89,117 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
 
 
                     registerStep1ViewModelRequest.setBussinessregister(((java.lang.String) (callbackArg_0)));
+                }
+            }
+        }
+    };
+    private androidx.databinding.InverseBindingListener companyEmpNumandroidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+        @Override
+        public void onChange() {
+            // Inverse of registerStep1ViewModel.request.employees
+            //         is registerStep1ViewModel.request.setEmployees((java.lang.String) callbackArg_0)
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(companyEmpNum);
+            // localize variables for thread safety
+            // registerStep1ViewModel != null
+            boolean registerStep1ViewModelJavaLangObjectNull = false;
+            // registerStep1ViewModel
+            apps.app.altcompany.pages.auth.register.RegisterViewModel registerStep1ViewModel = mRegisterStep1ViewModel;
+            // registerStep1ViewModel.request != null
+            boolean registerStep1ViewModelRequestJavaLangObjectNull = false;
+            // registerStep1ViewModel.request
+            apps.app.altcompany.pages.auth.models.RegisterRequest registerStep1ViewModelRequest = null;
+            // registerStep1ViewModel.request.employees
+            java.lang.String registerStep1ViewModelRequestEmployees = null;
+
+
+
+            registerStep1ViewModelJavaLangObjectNull = (registerStep1ViewModel) != (null);
+            if (registerStep1ViewModelJavaLangObjectNull) {
+
+
+                registerStep1ViewModelRequest = registerStep1ViewModel.getRequest();
+
+                registerStep1ViewModelRequestJavaLangObjectNull = (registerStep1ViewModelRequest) != (null);
+                if (registerStep1ViewModelRequestJavaLangObjectNull) {
+
+
+
+
+                    registerStep1ViewModelRequest.setEmployees(((java.lang.String) (callbackArg_0)));
+                }
+            }
+        }
+    };
+    private androidx.databinding.InverseBindingListener companyRegisterCoverandroidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+        @Override
+        public void onChange() {
+            // Inverse of registerStep1ViewModel.request.cover
+            //         is registerStep1ViewModel.request.setCover((java.lang.String) callbackArg_0)
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(companyRegisterCover);
+            // localize variables for thread safety
+            // registerStep1ViewModel != null
+            boolean registerStep1ViewModelJavaLangObjectNull = false;
+            // registerStep1ViewModel
+            apps.app.altcompany.pages.auth.register.RegisterViewModel registerStep1ViewModel = mRegisterStep1ViewModel;
+            // registerStep1ViewModel.request != null
+            boolean registerStep1ViewModelRequestJavaLangObjectNull = false;
+            // registerStep1ViewModel.request.cover
+            java.lang.String registerStep1ViewModelRequestCover = null;
+            // registerStep1ViewModel.request
+            apps.app.altcompany.pages.auth.models.RegisterRequest registerStep1ViewModelRequest = null;
+
+
+
+            registerStep1ViewModelJavaLangObjectNull = (registerStep1ViewModel) != (null);
+            if (registerStep1ViewModelJavaLangObjectNull) {
+
+
+                registerStep1ViewModelRequest = registerStep1ViewModel.getRequest();
+
+                registerStep1ViewModelRequestJavaLangObjectNull = (registerStep1ViewModelRequest) != (null);
+                if (registerStep1ViewModelRequestJavaLangObjectNull) {
+
+
+
+
+                    registerStep1ViewModelRequest.setCover(((java.lang.String) (callbackArg_0)));
+                }
+            }
+        }
+    };
+    private androidx.databinding.InverseBindingListener companyRegisterDateandroidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+        @Override
+        public void onChange() {
+            // Inverse of registerStep1ViewModel.request.date
+            //         is registerStep1ViewModel.request.setDate((java.lang.String) callbackArg_0)
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(companyRegisterDate);
+            // localize variables for thread safety
+            // registerStep1ViewModel != null
+            boolean registerStep1ViewModelJavaLangObjectNull = false;
+            // registerStep1ViewModel
+            apps.app.altcompany.pages.auth.register.RegisterViewModel registerStep1ViewModel = mRegisterStep1ViewModel;
+            // registerStep1ViewModel.request != null
+            boolean registerStep1ViewModelRequestJavaLangObjectNull = false;
+            // registerStep1ViewModel.request.date
+            java.lang.String registerStep1ViewModelRequestDate = null;
+            // registerStep1ViewModel.request
+            apps.app.altcompany.pages.auth.models.RegisterRequest registerStep1ViewModelRequest = null;
+
+
+
+            registerStep1ViewModelJavaLangObjectNull = (registerStep1ViewModel) != (null);
+            if (registerStep1ViewModelJavaLangObjectNull) {
+
+
+                registerStep1ViewModelRequest = registerStep1ViewModel.getRequest();
+
+                registerStep1ViewModelRequestJavaLangObjectNull = (registerStep1ViewModelRequest) != (null);
+                if (registerStep1ViewModelRequestJavaLangObjectNull) {
+
+
+
+
+                    registerStep1ViewModelRequest.setDate(((java.lang.String) (callbackArg_0)));
                 }
             }
         }
@@ -315,30 +428,36 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
     };
 
     public FragmentRegisterStep1BindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 16, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 19, sIncludes, sViewsWithIds));
     }
     private FragmentRegisterStep1BindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 10
+        super(bindingComponent, root, 12
             , (apps.app.altcompany.customViews.views.CustomEditText) bindings[10]
+            , (apps.app.altcompany.customViews.views.CustomEditText) bindings[11]
+            , (apps.app.altcompany.customViews.views.CustomEditText) bindings[13]
+            , (apps.app.altcompany.customViews.views.DateEditText) bindings[12]
             , (apps.app.altcompany.customViews.views.CustomEditText) bindings[8]
             , (apps.app.altcompany.customViews.views.CustomEditText) bindings[7]
             , (apps.app.altcompany.customViews.views.CustomEditText) bindings[6]
             , (de.hdodenhof.circleimageview.CircleImageView) bindings[1]
-            , (android.widget.RelativeLayout) bindings[15]
+            , (android.widget.RelativeLayout) bindings[18]
             , (androidx.core.widget.NestedScrollView) bindings[0]
-            , (com.kofigyan.stateprogressbar.StateProgressBar) bindings[14]
+            , (com.kofigyan.stateprogressbar.StateProgressBar) bindings[17]
             );
         this.businessRegister.setTag(null);
+        this.companyEmpNum.setTag(null);
+        this.companyRegisterCover.setTag(null);
+        this.companyRegisterDate.setTag(null);
         this.edAddress.setTag(null);
         this.edtRegisterStep1City.setTag(null);
         this.edtRegisterStep1Country.setTag(null);
         this.imgRegisterUpdate.setTag(null);
-        this.mboundView11 = (android.widget.CheckBox) bindings[11];
-        this.mboundView11.setTag(null);
-        this.mboundView12 = (apps.app.altcompany.customViews.views.CustomTextViewMedium) bindings[12];
-        this.mboundView12.setTag(null);
-        this.mboundView13 = (apps.app.altcompany.customViews.views.CustomTextViewMedium) bindings[13];
-        this.mboundView13.setTag(null);
+        this.mboundView14 = (android.widget.CheckBox) bindings[14];
+        this.mboundView14.setTag(null);
+        this.mboundView15 = (apps.app.altcompany.customViews.views.CustomTextViewMedium) bindings[15];
+        this.mboundView15.setTag(null);
+        this.mboundView16 = (apps.app.altcompany.customViews.views.CustomTextViewMedium) bindings[16];
+        this.mboundView16.setTag(null);
         this.mboundView2 = (apps.app.altcompany.customViews.views.CustomEditText) bindings[2];
         this.mboundView2.setTag(null);
         this.mboundView3 = (apps.app.altcompany.customViews.views.CustomEditText) bindings[3];
@@ -352,21 +471,22 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
         this.svRegisterStep1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback27 = new apps.app.altcompany.generated.callback.OnClickListener(this, 3);
-        mCallback30 = new apps.app.altcompany.generated.callback.OnClickListener(this, 6);
-        mCallback28 = new apps.app.altcompany.generated.callback.OnClickListener(this, 4);
-        mCallback32 = new apps.app.altcompany.generated.callback.OnClickListener(this, 8);
-        mCallback31 = new apps.app.altcompany.generated.callback.OnClickListener(this, 7);
-        mCallback25 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
-        mCallback29 = new apps.app.altcompany.generated.callback.OnClickListener(this, 5);
-        mCallback26 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
+        mCallback35 = new apps.app.altcompany.generated.callback.OnClickListener(this, 8);
+        mCallback30 = new apps.app.altcompany.generated.callback.OnClickListener(this, 3);
+        mCallback28 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback36 = new apps.app.altcompany.generated.callback.OnClickListener(this, 9);
+        mCallback32 = new apps.app.altcompany.generated.callback.OnClickListener(this, 5);
+        mCallback31 = new apps.app.altcompany.generated.callback.OnClickListener(this, 4);
+        mCallback33 = new apps.app.altcompany.generated.callback.OnClickListener(this, 6);
+        mCallback29 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
+        mCallback34 = new apps.app.altcompany.generated.callback.OnClickListener(this, 7);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x400L;
+                mDirtyFlags = 0x1000L;
         }
         requestRebind();
     }
@@ -394,10 +514,10 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
     }
 
     public void setRegisterStep1ViewModel(@Nullable apps.app.altcompany.pages.auth.register.RegisterViewModel RegisterStep1ViewModel) {
-        updateRegistration(7, RegisterStep1ViewModel);
+        updateRegistration(8, RegisterStep1ViewModel);
         this.mRegisterStep1ViewModel = RegisterStep1ViewModel;
         synchronized(this) {
-            mDirtyFlags |= 0x80L;
+            mDirtyFlags |= 0x100L;
         }
         notifyPropertyChanged(BR.registerStep1ViewModel);
         super.requestRebind();
@@ -421,11 +541,15 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
             case 6 :
                 return onChangeRegisterStep1ViewModelRequestBusinessError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 7 :
-                return onChangeRegisterStep1ViewModel((apps.app.altcompany.pages.auth.register.RegisterViewModel) object, fieldId);
+                return onChangeRegisterStep1ViewModelRequestRegisterDateError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 8 :
-                return onChangeRegisterStep1ViewModelRequestAddressError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+                return onChangeRegisterStep1ViewModel((apps.app.altcompany.pages.auth.register.RegisterViewModel) object, fieldId);
             case 9 :
+                return onChangeRegisterStep1ViewModelRequestAddressError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+            case 10 :
                 return onChangeRegisterStep1ViewModelRequestNameError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+            case 11 :
+                return onChangeRegisterStep1ViewModelRequestEmpNumError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
         }
         return false;
     }
@@ -492,7 +616,7 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
         }
         return false;
     }
-    private boolean onChangeRegisterStep1ViewModel(apps.app.altcompany.pages.auth.register.RegisterViewModel RegisterStep1ViewModel, int fieldId) {
+    private boolean onChangeRegisterStep1ViewModelRequestRegisterDateError(androidx.databinding.ObservableField<java.lang.String> RegisterStep1ViewModelRequestRegisterDateError, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x80L;
@@ -501,7 +625,7 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
         }
         return false;
     }
-    private boolean onChangeRegisterStep1ViewModelRequestAddressError(androidx.databinding.ObservableField<java.lang.String> RegisterStep1ViewModelRequestAddressError, int fieldId) {
+    private boolean onChangeRegisterStep1ViewModel(apps.app.altcompany.pages.auth.register.RegisterViewModel RegisterStep1ViewModel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x100L;
@@ -510,10 +634,28 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
         }
         return false;
     }
-    private boolean onChangeRegisterStep1ViewModelRequestNameError(androidx.databinding.ObservableField<java.lang.String> RegisterStep1ViewModelRequestNameError, int fieldId) {
+    private boolean onChangeRegisterStep1ViewModelRequestAddressError(androidx.databinding.ObservableField<java.lang.String> RegisterStep1ViewModelRequestAddressError, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x200L;
+            }
+            return true;
+        }
+        return false;
+    }
+    private boolean onChangeRegisterStep1ViewModelRequestNameError(androidx.databinding.ObservableField<java.lang.String> RegisterStep1ViewModelRequestNameError, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x400L;
+            }
+            return true;
+        }
+        return false;
+    }
+    private boolean onChangeRegisterStep1ViewModelRequestEmpNumError(androidx.databinding.ObservableField<java.lang.String> RegisterStep1ViewModelRequestEmpNumError, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x800L;
             }
             return true;
         }
@@ -533,6 +675,8 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
         java.lang.String registerStep1ViewModelRequestBusinessErrorGet = null;
         androidx.databinding.ObservableField<java.lang.String> registerStep1ViewModelRequestCountryError = null;
         androidx.databinding.ObservableField<java.lang.String> registerStep1ViewModelRequestDesError = null;
+        java.lang.String registerStep1ViewModelRequestEmpNumErrorGet = null;
+        java.lang.String registerStep1ViewModelRequestRegisterDateErrorGet = null;
         androidx.databinding.ObservableField<java.lang.String> registerStep1ViewModelRequestPasswordError = null;
         androidx.databinding.ObservableField<java.lang.String> registerStep1ViewModelRequestCityError = null;
         androidx.databinding.ObservableField<java.lang.String> registerStep1ViewModelRequestEmailError = null;
@@ -545,17 +689,22 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
         java.lang.String registerStep1ViewModelRequestCountryErrorGet = null;
         java.lang.String registerStep1ViewModelRequestAddressErrorGet = null;
         androidx.databinding.ObservableField<java.lang.String> registerStep1ViewModelRequestBusinessError = null;
+        java.lang.String registerStep1ViewModelRequestEmployees = null;
         java.lang.String registerStep1ViewModelRequestWorkersDesc = null;
         java.lang.String registerStep1ViewModelRequestEmail = null;
+        androidx.databinding.ObservableField<java.lang.String> registerStep1ViewModelRequestRegisterDateError = null;
         apps.app.altcompany.pages.auth.register.RegisterViewModel registerStep1ViewModel = mRegisterStep1ViewModel;
         java.lang.String registerStep1ViewModelRequestPasswordErrorGet = null;
         androidx.databinding.ObservableField<java.lang.String> registerStep1ViewModelRequestAddressError = null;
+        java.lang.String registerStep1ViewModelRequestCover = null;
         java.lang.String registerStep1ViewModelRequestPassword = null;
         java.lang.String registerStep1ViewModelRequestWorkersAddress = null;
         androidx.databinding.ObservableField<java.lang.String> registerStep1ViewModelRequestNameError = null;
+        androidx.databinding.ObservableField<java.lang.String> registerStep1ViewModelRequestEmpNumError = null;
+        java.lang.String registerStep1ViewModelRequestDate = null;
         java.lang.String registerStep1ViewModelRequestPhoneErrorGet = null;
 
-        if ((dirtyFlags & 0x7ffL) != 0) {
+        if ((dirtyFlags & 0x1fffL) != 0) {
 
 
 
@@ -564,7 +713,7 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
                     registerStep1ViewModelRequest = registerStep1ViewModel.getRequest();
                 }
 
-            if ((dirtyFlags & 0x480L) != 0) {
+            if ((dirtyFlags & 0x1100L) != 0) {
 
                     if (registerStep1ViewModelRequest != null) {
                         // read registerStep1ViewModel.request.phone
@@ -573,17 +722,23 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
                         registerStep1ViewModelRequestName = registerStep1ViewModelRequest.getName();
                         // read registerStep1ViewModel.request.bussinessregister
                         registerStep1ViewModelRequestBussinessregister = registerStep1ViewModelRequest.getBussinessregister();
+                        // read registerStep1ViewModel.request.employees
+                        registerStep1ViewModelRequestEmployees = registerStep1ViewModelRequest.getEmployees();
                         // read registerStep1ViewModel.request.workers_desc
                         registerStep1ViewModelRequestWorkersDesc = registerStep1ViewModelRequest.getWorkers_desc();
                         // read registerStep1ViewModel.request.email
                         registerStep1ViewModelRequestEmail = registerStep1ViewModelRequest.getEmail();
+                        // read registerStep1ViewModel.request.cover
+                        registerStep1ViewModelRequestCover = registerStep1ViewModelRequest.getCover();
                         // read registerStep1ViewModel.request.password
                         registerStep1ViewModelRequestPassword = registerStep1ViewModelRequest.getPassword();
                         // read registerStep1ViewModel.request.workers_address
                         registerStep1ViewModelRequestWorkersAddress = registerStep1ViewModelRequest.getWorkers_address();
+                        // read registerStep1ViewModel.request.date
+                        registerStep1ViewModelRequestDate = registerStep1ViewModelRequest.getDate();
                     }
             }
-            if ((dirtyFlags & 0x481L) != 0) {
+            if ((dirtyFlags & 0x1101L) != 0) {
 
                     if (registerStep1ViewModelRequest != null) {
                         // read registerStep1ViewModel.request.phoneError
@@ -597,7 +752,7 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
                         registerStep1ViewModelRequestPhoneErrorGet = registerStep1ViewModelRequestPhoneError.get();
                     }
             }
-            if ((dirtyFlags & 0x482L) != 0) {
+            if ((dirtyFlags & 0x1102L) != 0) {
 
                     if (registerStep1ViewModelRequest != null) {
                         // read registerStep1ViewModel.request.countryError
@@ -611,7 +766,7 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
                         registerStep1ViewModelRequestCountryErrorGet = registerStep1ViewModelRequestCountryError.get();
                     }
             }
-            if ((dirtyFlags & 0x484L) != 0) {
+            if ((dirtyFlags & 0x1104L) != 0) {
 
                     if (registerStep1ViewModelRequest != null) {
                         // read registerStep1ViewModel.request.desError
@@ -625,7 +780,7 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
                         registerStep1ViewModelRequestDesErrorGet = registerStep1ViewModelRequestDesError.get();
                     }
             }
-            if ((dirtyFlags & 0x488L) != 0) {
+            if ((dirtyFlags & 0x1108L) != 0) {
 
                     if (registerStep1ViewModelRequest != null) {
                         // read registerStep1ViewModel.request.passwordError
@@ -639,7 +794,7 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
                         registerStep1ViewModelRequestPasswordErrorGet = registerStep1ViewModelRequestPasswordError.get();
                     }
             }
-            if ((dirtyFlags & 0x490L) != 0) {
+            if ((dirtyFlags & 0x1110L) != 0) {
 
                     if (registerStep1ViewModelRequest != null) {
                         // read registerStep1ViewModel.request.cityError
@@ -653,7 +808,7 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
                         registerStep1ViewModelRequestCityErrorGet = registerStep1ViewModelRequestCityError.get();
                     }
             }
-            if ((dirtyFlags & 0x4a0L) != 0) {
+            if ((dirtyFlags & 0x1120L) != 0) {
 
                     if (registerStep1ViewModelRequest != null) {
                         // read registerStep1ViewModel.request.emailError
@@ -667,7 +822,7 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
                         registerStep1ViewModelRequestEmailErrorGet = registerStep1ViewModelRequestEmailError.get();
                     }
             }
-            if ((dirtyFlags & 0x4c0L) != 0) {
+            if ((dirtyFlags & 0x1140L) != 0) {
 
                     if (registerStep1ViewModelRequest != null) {
                         // read registerStep1ViewModel.request.businessError
@@ -681,13 +836,27 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
                         registerStep1ViewModelRequestBusinessErrorGet = registerStep1ViewModelRequestBusinessError.get();
                     }
             }
-            if ((dirtyFlags & 0x580L) != 0) {
+            if ((dirtyFlags & 0x1180L) != 0) {
+
+                    if (registerStep1ViewModelRequest != null) {
+                        // read registerStep1ViewModel.request.registerDateError
+                        registerStep1ViewModelRequestRegisterDateError = registerStep1ViewModelRequest.registerDateError;
+                    }
+                    updateRegistration(7, registerStep1ViewModelRequestRegisterDateError);
+
+
+                    if (registerStep1ViewModelRequestRegisterDateError != null) {
+                        // read registerStep1ViewModel.request.registerDateError.get()
+                        registerStep1ViewModelRequestRegisterDateErrorGet = registerStep1ViewModelRequestRegisterDateError.get();
+                    }
+            }
+            if ((dirtyFlags & 0x1300L) != 0) {
 
                     if (registerStep1ViewModelRequest != null) {
                         // read registerStep1ViewModel.request.addressError
                         registerStep1ViewModelRequestAddressError = registerStep1ViewModelRequest.addressError;
                     }
-                    updateRegistration(8, registerStep1ViewModelRequestAddressError);
+                    updateRegistration(9, registerStep1ViewModelRequestAddressError);
 
 
                     if (registerStep1ViewModelRequestAddressError != null) {
@@ -695,13 +864,13 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
                         registerStep1ViewModelRequestAddressErrorGet = registerStep1ViewModelRequestAddressError.get();
                     }
             }
-            if ((dirtyFlags & 0x680L) != 0) {
+            if ((dirtyFlags & 0x1500L) != 0) {
 
                     if (registerStep1ViewModelRequest != null) {
                         // read registerStep1ViewModel.request.nameError
                         registerStep1ViewModelRequestNameError = registerStep1ViewModelRequest.nameError;
                     }
-                    updateRegistration(9, registerStep1ViewModelRequestNameError);
+                    updateRegistration(10, registerStep1ViewModelRequestNameError);
 
 
                     if (registerStep1ViewModelRequestNameError != null) {
@@ -709,31 +878,52 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
                         registerStep1ViewModelRequestNameErrorGet = registerStep1ViewModelRequestNameError.get();
                     }
             }
+            if ((dirtyFlags & 0x1900L) != 0) {
+
+                    if (registerStep1ViewModelRequest != null) {
+                        // read registerStep1ViewModel.request.empNumError
+                        registerStep1ViewModelRequestEmpNumError = registerStep1ViewModelRequest.empNumError;
+                    }
+                    updateRegistration(11, registerStep1ViewModelRequestEmpNumError);
+
+
+                    if (registerStep1ViewModelRequestEmpNumError != null) {
+                        // read registerStep1ViewModel.request.empNumError.get()
+                        registerStep1ViewModelRequestEmpNumErrorGet = registerStep1ViewModelRequestEmpNumError.get();
+                    }
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x400L) != 0) {
+        if ((dirtyFlags & 0x1000L) != 0) {
             // api target 1
 
-            this.businessRegister.setOnClickListener(mCallback29);
+            this.businessRegister.setOnClickListener(mCallback32);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.businessRegister, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, businessRegisterandroidTextAttrChanged);
-            this.edAddress.setOnClickListener(mCallback28);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.companyEmpNum, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, companyEmpNumandroidTextAttrChanged);
+            this.companyRegisterCover.setOnClickListener(mCallback33);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.companyRegisterCover, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, companyRegisterCoverandroidTextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.companyRegisterDate, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, companyRegisterDateandroidTextAttrChanged);
+            this.edAddress.setOnClickListener(mCallback31);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.edAddress, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, edAddressandroidTextAttrChanged);
-            this.edtRegisterStep1City.setOnClickListener(mCallback27);
-            this.edtRegisterStep1Country.setOnClickListener(mCallback26);
-            this.imgRegisterUpdate.setOnClickListener(mCallback25);
-            this.mboundView11.setOnClickListener(mCallback30);
-            this.mboundView12.setOnClickListener(mCallback31);
-            this.mboundView13.setOnClickListener(mCallback32);
+            this.edtRegisterStep1City.setOnClickListener(mCallback30);
+            this.edtRegisterStep1Country.setOnClickListener(mCallback29);
+            this.imgRegisterUpdate.setOnClickListener(mCallback28);
+            this.mboundView14.setOnClickListener(mCallback34);
+            this.mboundView15.setOnClickListener(mCallback35);
+            this.mboundView16.setOnClickListener(mCallback36);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView3, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView3androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView5, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView5androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView9, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView9androidTextAttrChanged);
         }
-        if ((dirtyFlags & 0x480L) != 0) {
+        if ((dirtyFlags & 0x1100L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.businessRegister, registerStep1ViewModelRequestBussinessregister);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.companyEmpNum, registerStep1ViewModelRequestEmployees);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.companyRegisterCover, registerStep1ViewModelRequestCover);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.companyRegisterDate, registerStep1ViewModelRequestDate);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.edAddress, registerStep1ViewModelRequestWorkersAddress);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, registerStep1ViewModelRequestName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView3, registerStep1ViewModelRequestEmail);
@@ -741,47 +931,57 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView5, registerStep1ViewModelRequestPassword);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView9, registerStep1ViewModelRequestWorkersDesc);
         }
-        if ((dirtyFlags & 0x4c0L) != 0) {
+        if ((dirtyFlags & 0x1140L) != 0) {
             // api target 1
 
             apps.app.altcompany.customViews.views.BaseEditText.setError(this.businessRegister, registerStep1ViewModelRequestBusinessErrorGet);
         }
-        if ((dirtyFlags & 0x580L) != 0) {
+        if ((dirtyFlags & 0x1900L) != 0) {
+            // api target 1
+
+            apps.app.altcompany.customViews.views.BaseEditText.setError(this.companyEmpNum, registerStep1ViewModelRequestEmpNumErrorGet);
+        }
+        if ((dirtyFlags & 0x1180L) != 0) {
+            // api target 1
+
+            this.companyRegisterDate.setError(registerStep1ViewModelRequestRegisterDateErrorGet);
+        }
+        if ((dirtyFlags & 0x1300L) != 0) {
             // api target 1
 
             apps.app.altcompany.customViews.views.BaseEditText.setError(this.edAddress, registerStep1ViewModelRequestAddressErrorGet);
         }
-        if ((dirtyFlags & 0x490L) != 0) {
+        if ((dirtyFlags & 0x1110L) != 0) {
             // api target 1
 
             apps.app.altcompany.customViews.views.BaseEditText.setError(this.edtRegisterStep1City, registerStep1ViewModelRequestCityErrorGet);
         }
-        if ((dirtyFlags & 0x482L) != 0) {
+        if ((dirtyFlags & 0x1102L) != 0) {
             // api target 1
 
             apps.app.altcompany.customViews.views.BaseEditText.setError(this.edtRegisterStep1Country, registerStep1ViewModelRequestCountryErrorGet);
         }
-        if ((dirtyFlags & 0x680L) != 0) {
+        if ((dirtyFlags & 0x1500L) != 0) {
             // api target 1
 
             apps.app.altcompany.customViews.views.BaseEditText.setError(this.mboundView2, registerStep1ViewModelRequestNameErrorGet);
         }
-        if ((dirtyFlags & 0x4a0L) != 0) {
+        if ((dirtyFlags & 0x1120L) != 0) {
             // api target 1
 
             apps.app.altcompany.customViews.views.BaseEditText.setError(this.mboundView3, registerStep1ViewModelRequestEmailErrorGet);
         }
-        if ((dirtyFlags & 0x481L) != 0) {
+        if ((dirtyFlags & 0x1101L) != 0) {
             // api target 1
 
             apps.app.altcompany.customViews.views.BaseEditText.setError(this.mboundView4, registerStep1ViewModelRequestPhoneErrorGet);
         }
-        if ((dirtyFlags & 0x488L) != 0) {
+        if ((dirtyFlags & 0x1108L) != 0) {
             // api target 1
 
             apps.app.altcompany.customViews.views.BaseEditText.setError(this.mboundView5, registerStep1ViewModelRequestPasswordErrorGet);
         }
-        if ((dirtyFlags & 0x484L) != 0) {
+        if ((dirtyFlags & 0x1104L) != 0) {
             // api target 1
 
             apps.app.altcompany.customViews.views.BaseEditText.setError(this.mboundView9, registerStep1ViewModelRequestDesErrorGet);
@@ -791,6 +991,23 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 8: {
+                // localize variables for thread safety
+                // registerStep1ViewModel != null
+                boolean registerStep1ViewModelJavaLangObjectNull = false;
+                // registerStep1ViewModel
+                apps.app.altcompany.pages.auth.register.RegisterViewModel registerStep1ViewModel = mRegisterStep1ViewModel;
+
+
+
+                registerStep1ViewModelJavaLangObjectNull = (registerStep1ViewModel) != (null);
+                if (registerStep1ViewModelJavaLangObjectNull) {
+
+
+                    registerStep1ViewModel.terms();
+                }
+                break;
+            }
             case 3: {
                 // localize variables for thread safety
                 // registerStep1ViewModel != null
@@ -805,74 +1022,6 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
 
 
                     registerStep1ViewModel.cities();
-                }
-                break;
-            }
-            case 6: {
-                // localize variables for thread safety
-                // registerStep1ViewModel != null
-                boolean registerStep1ViewModelJavaLangObjectNull = false;
-                // registerStep1ViewModel
-                apps.app.altcompany.pages.auth.register.RegisterViewModel registerStep1ViewModel = mRegisterStep1ViewModel;
-
-
-
-                registerStep1ViewModelJavaLangObjectNull = (registerStep1ViewModel) != (null);
-                if (registerStep1ViewModelJavaLangObjectNull) {
-
-
-                    registerStep1ViewModel.check();
-                }
-                break;
-            }
-            case 4: {
-                // localize variables for thread safety
-                // registerStep1ViewModel != null
-                boolean registerStep1ViewModelJavaLangObjectNull = false;
-                // registerStep1ViewModel
-                apps.app.altcompany.pages.auth.register.RegisterViewModel registerStep1ViewModel = mRegisterStep1ViewModel;
-
-
-
-                registerStep1ViewModelJavaLangObjectNull = (registerStep1ViewModel) != (null);
-                if (registerStep1ViewModelJavaLangObjectNull) {
-
-
-                    registerStep1ViewModel.address();
-                }
-                break;
-            }
-            case 8: {
-                // localize variables for thread safety
-                // registerStep1ViewModel != null
-                boolean registerStep1ViewModelJavaLangObjectNull = false;
-                // registerStep1ViewModel
-                apps.app.altcompany.pages.auth.register.RegisterViewModel registerStep1ViewModel = mRegisterStep1ViewModel;
-
-
-
-                registerStep1ViewModelJavaLangObjectNull = (registerStep1ViewModel) != (null);
-                if (registerStep1ViewModelJavaLangObjectNull) {
-
-
-                    registerStep1ViewModel.register();
-                }
-                break;
-            }
-            case 7: {
-                // localize variables for thread safety
-                // registerStep1ViewModel != null
-                boolean registerStep1ViewModelJavaLangObjectNull = false;
-                // registerStep1ViewModel
-                apps.app.altcompany.pages.auth.register.RegisterViewModel registerStep1ViewModel = mRegisterStep1ViewModel;
-
-
-
-                registerStep1ViewModelJavaLangObjectNull = (registerStep1ViewModel) != (null);
-                if (registerStep1ViewModelJavaLangObjectNull) {
-
-
-                    registerStep1ViewModel.terms();
                 }
                 break;
             }
@@ -893,6 +1042,23 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
                 }
                 break;
             }
+            case 9: {
+                // localize variables for thread safety
+                // registerStep1ViewModel != null
+                boolean registerStep1ViewModelJavaLangObjectNull = false;
+                // registerStep1ViewModel
+                apps.app.altcompany.pages.auth.register.RegisterViewModel registerStep1ViewModel = mRegisterStep1ViewModel;
+
+
+
+                registerStep1ViewModelJavaLangObjectNull = (registerStep1ViewModel) != (null);
+                if (registerStep1ViewModelJavaLangObjectNull) {
+
+
+                    registerStep1ViewModel.register();
+                }
+                break;
+            }
             case 5: {
                 // localize variables for thread safety
                 // registerStep1ViewModel != null
@@ -907,6 +1073,40 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
 
 
                     registerStep1ViewModel.toBusinessRegister();
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // registerStep1ViewModel != null
+                boolean registerStep1ViewModelJavaLangObjectNull = false;
+                // registerStep1ViewModel
+                apps.app.altcompany.pages.auth.register.RegisterViewModel registerStep1ViewModel = mRegisterStep1ViewModel;
+
+
+
+                registerStep1ViewModelJavaLangObjectNull = (registerStep1ViewModel) != (null);
+                if (registerStep1ViewModelJavaLangObjectNull) {
+
+
+                    registerStep1ViewModel.address();
+                }
+                break;
+            }
+            case 6: {
+                // localize variables for thread safety
+                // registerStep1ViewModel != null
+                boolean registerStep1ViewModelJavaLangObjectNull = false;
+                // registerStep1ViewModel
+                apps.app.altcompany.pages.auth.register.RegisterViewModel registerStep1ViewModel = mRegisterStep1ViewModel;
+
+
+
+                registerStep1ViewModelJavaLangObjectNull = (registerStep1ViewModel) != (null);
+                if (registerStep1ViewModelJavaLangObjectNull) {
+
+
+                    registerStep1ViewModel.toCover();
                 }
                 break;
             }
@@ -927,6 +1127,23 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
                 }
                 break;
             }
+            case 7: {
+                // localize variables for thread safety
+                // registerStep1ViewModel != null
+                boolean registerStep1ViewModelJavaLangObjectNull = false;
+                // registerStep1ViewModel
+                apps.app.altcompany.pages.auth.register.RegisterViewModel registerStep1ViewModel = mRegisterStep1ViewModel;
+
+
+
+                registerStep1ViewModelJavaLangObjectNull = (registerStep1ViewModel) != (null);
+                if (registerStep1ViewModelJavaLangObjectNull) {
+
+
+                    registerStep1ViewModel.check();
+                }
+                break;
+            }
         }
     }
     // dirty flag
@@ -939,10 +1156,12 @@ public class FragmentRegisterStep1BindingImpl extends FragmentRegisterStep1Bindi
         flag 4 (0x5L): registerStep1ViewModel.request.cityError
         flag 5 (0x6L): registerStep1ViewModel.request.emailError
         flag 6 (0x7L): registerStep1ViewModel.request.businessError
-        flag 7 (0x8L): registerStep1ViewModel
-        flag 8 (0x9L): registerStep1ViewModel.request.addressError
-        flag 9 (0xaL): registerStep1ViewModel.request.nameError
-        flag 10 (0xbL): null
+        flag 7 (0x8L): registerStep1ViewModel.request.registerDateError
+        flag 8 (0x9L): registerStep1ViewModel
+        flag 9 (0xaL): registerStep1ViewModel.request.addressError
+        flag 10 (0xbL): registerStep1ViewModel.request.nameError
+        flag 11 (0xcL): registerStep1ViewModel.request.empNumError
+        flag 12 (0xdL): null
     flag mapping end*/
     //end
 }

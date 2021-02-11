@@ -80,7 +80,7 @@
                     android:paddingStart="@dimen/dp10w"
                     android:paddingEnd="@dimen/dp10w"
                     android:text="@={registerStep1ViewModel.request.name}"
-                    android:textSize="@dimen/sp11"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     app:error="@{registerStep1ViewModel.request.nameError}"
                     app:met_errorColor="@android:color/holo_red_dark"
                     app:met_hideUnderline="true"
@@ -173,7 +173,6 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     app:error="@{registerStep1ViewModel.request.passwordError}"
                     app:met_errorColor="@android:color/holo_red_dark"
-
                     app:met_hideUnderline="true"
                     app:met_primaryColor="@color/colorPrimary"
                     app:met_underlineColor="@color/colorPrimary" />
@@ -274,7 +273,6 @@
                     android:paddingEnd="@dimen/dp10w"
                     android:text="@={registerStep1ViewModel.request.workers_address}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textSize="@dimen/sp11"
                     app:error="@{registerStep1ViewModel.request.addressError}"
                     app:met_errorColor="@android:color/holo_red_dark"
                     app:met_hideUnderline="true"
@@ -307,7 +305,6 @@
                     android:paddingEnd="@dimen/dp10w"
                     android:text="@={registerStep1ViewModel.request.workers_desc}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textSize="@dimen/sp11"
                     app:error="@{registerStep1ViewModel.request.desError}"
                     app:met_errorColor="@android:color/holo_red_dark"
                     app:met_hideUnderline="true"
@@ -341,8 +338,91 @@
                     android:paddingEnd="@dimen/dp10w"
                     android:text="@={registerStep1ViewModel.request.bussinessregister}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textSize="@dimen/sp11"
                     app:error="@{registerStep1ViewModel.request.businessError}"
+                    app:met_errorColor="@android:color/holo_red_dark"
+                    app:met_hideUnderline="true"
+                    app:met_primaryColor="@color/colorPrimary"
+                    app:met_underlineColor="@color/colorPrimary" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp10h"
+                android:background="@drawable/border_white_accent_round"
+                android:gravity="center">
+
+
+                <apps.app.altcompany.customViews.views.CustomEditText
+                    android:id="@+id/company_emp_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dp5w"
+                    android:layout_marginEnd="@dimen/dp5w"
+                    android:gravity="center"
+                    android:hint="@string/company_emp_num"
+                    android:inputType="number"
+                    android:padding="@dimen/dp5w"
+                    android:paddingStart="@dimen/dp10w"
+                    android:paddingEnd="@dimen/dp10w"
+                    android:text="@={registerStep1ViewModel.request.employees}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:error="@{registerStep1ViewModel.request.empNumError}"
+                    app:met_errorColor="@android:color/holo_red_dark"
+                    app:met_hideUnderline="true"
+                    app:met_primaryColor="@color/colorPrimary"
+                    app:met_underlineColor="@color/colorPrimary" />
+            </RelativeLayout>
+
+
+            <apps.app.altcompany.customViews.views.DateEditText
+                android:id="@+id/company_register_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp10h"
+                android:background="@drawable/border_white_accent_round"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="@string/company_register_date"
+                android:inputType="text"
+                android:padding="@dimen/dp10h"
+                android:text="@={registerStep1ViewModel.request.date}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:error="@{registerStep1ViewModel.request.registerDateError}"
+                app:met_errorColor="@android:color/holo_red_dark"
+                app:met_hideUnderline="true"
+                app:met_primaryColor="@color/colorPrimary"
+                app:met_underlineColor="@color/colorPrimary" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp10h"
+                android:background="@drawable/border_white_accent_round"
+                android:gravity="center">
+
+
+                <apps.app.altcompany.customViews.views.CustomEditText
+                    android:id="@+id/company_register_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dp5w"
+                    android:layout_marginEnd="@dimen/dp5w"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:hint="@string/cover"
+                    android:inputType="text"
+                    android:onClick="@{()-> registerStep1ViewModel.toCover()}"
+                    android:padding="@dimen/dp5w"
+                    android:paddingStart="@dimen/dp10w"
+                    android:paddingEnd="@dimen/dp10w"
+                    android:text="@={registerStep1ViewModel.request.cover}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     app:met_errorColor="@android:color/holo_red_dark"
                     app:met_hideUnderline="true"
                     app:met_primaryColor="@color/colorPrimary"

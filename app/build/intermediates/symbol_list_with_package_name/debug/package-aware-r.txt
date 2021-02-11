@@ -4374,6 +4374,7 @@ id card_email
 id card_facebook
 id card_img
 id card_location
+id card_my_works
 id card_name
 id card_phone
 id card_points
@@ -4410,6 +4411,9 @@ id com_facebook_smart_instructions_or
 id com_facebook_tooltip_bubble_view_bottom_pointer
 id com_facebook_tooltip_bubble_view_text_body
 id com_facebook_tooltip_bubble_view_top_pointer
+id company_emp_num
+id company_register_cover
+id company_register_date
 id confirm_button
 id confirmation_code
 id confirmation_code_layout
@@ -4422,6 +4426,7 @@ id cos
 id counterclockwise
 id countryCodeHolder
 id country_list
+id cover
 id cross_device_linking_body
 id custom
 id customPanel
@@ -4973,6 +4978,7 @@ id txt_details
 id txt_email
 id txt_facebook
 id txt_locaction
+id txt_my_works
 id txt_phone
 id txt_twitter
 id unchecked
@@ -5122,6 +5128,7 @@ layout fragment_login
 layout fragment_media_folder_picker
 layout fragment_media_picker
 layout fragment_my_orders
+layout fragment_my_works
 layout fragment_notifications
 layout fragment_offers
 layout fragment_order_detail
@@ -5167,6 +5174,7 @@ layout item_contact
 layout item_doc_layout
 layout item_folder_layout
 layout item_menu
+layout item_my_works
 layout item_notification
 layout item_offer
 layout item_order
@@ -5449,7 +5457,9 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string company_emp_num
 string company_profile
+string company_register_date
 string confirmPickUpLocation
 string congratulation
 string connection_AirPlane
@@ -5462,6 +5472,7 @@ string connection_invaild_body
 string connection_invaild_msg
 string contact_us
 string continue_
+string cover
 string current_orders
 string default_airplane_mode_message
 string default_airplane_mode_snackbar_message
@@ -5701,6 +5712,7 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string max_files
 string message
 string messenger_send_button_text
 string mobile_data
@@ -5741,6 +5753,7 @@ string mtrl_picker_toggle_to_calendar_input_mode
 string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
+string my_works
 string nearest
 string next
 string no_camera_exists
@@ -5769,6 +5782,7 @@ string permission_package
 string permission_settings
 string phone_not_valid
 string photos
+string pick_file_title
 string places_autocomplete_clear_button
 string places_autocomplete_label
 string places_autocomplete_no_results_for_query
@@ -6089,6 +6103,7 @@ style ExoMediaButton_Play
 style ExoMediaButton_Previous
 style ExoMediaButton_Rewind
 style ExoMediaButton_Shuffle
+style FilePickerTheme
 style FirebaseUI
 style FirebaseUI_AuthMethodPicker
 style FirebaseUI_AuthMethodPicker_ButtonHolder

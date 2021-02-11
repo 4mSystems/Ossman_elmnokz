@@ -13,6 +13,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import apps.app.altcompany.R;
 import apps.app.altcompany.customViews.views.CustomEditText;
+import apps.app.altcompany.customViews.views.DateEditText;
 import apps.app.altcompany.pages.auth.register.RegisterViewModel;
 import com.kofigyan.stateprogressbar.StateProgressBar;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -22,6 +23,15 @@ import java.lang.Object;
 public abstract class FragmentRegisterStep1Binding extends ViewDataBinding {
   @NonNull
   public final CustomEditText businessRegister;
+
+  @NonNull
+  public final CustomEditText companyEmpNum;
+
+  @NonNull
+  public final CustomEditText companyRegisterCover;
+
+  @NonNull
+  public final DateEditText companyRegisterDate;
 
   @NonNull
   public final CustomEditText edAddress;
@@ -48,12 +58,17 @@ public abstract class FragmentRegisterStep1Binding extends ViewDataBinding {
   protected RegisterViewModel mRegisterStep1ViewModel;
 
   protected FragmentRegisterStep1Binding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomEditText businessRegister, CustomEditText edAddress,
-      CustomEditText edtRegisterStep1City, CustomEditText edtRegisterStep1Country,
-      CircleImageView imgRegisterUpdate, RelativeLayout rlRegisterImage,
-      NestedScrollView svRegisterStep1, StateProgressBar yourStateProgressBarId) {
+      CustomEditText businessRegister, CustomEditText companyEmpNum,
+      CustomEditText companyRegisterCover, DateEditText companyRegisterDate,
+      CustomEditText edAddress, CustomEditText edtRegisterStep1City,
+      CustomEditText edtRegisterStep1Country, CircleImageView imgRegisterUpdate,
+      RelativeLayout rlRegisterImage, NestedScrollView svRegisterStep1,
+      StateProgressBar yourStateProgressBarId) {
     super(_bindingComponent, _root, _localFieldCount);
     this.businessRegister = businessRegister;
+    this.companyEmpNum = companyEmpNum;
+    this.companyRegisterCover = companyRegisterCover;
+    this.companyRegisterDate = companyRegisterDate;
     this.edAddress = edAddress;
     this.edtRegisterStep1City = edtRegisterStep1City;
     this.edtRegisterStep1Country = edtRegisterStep1Country;

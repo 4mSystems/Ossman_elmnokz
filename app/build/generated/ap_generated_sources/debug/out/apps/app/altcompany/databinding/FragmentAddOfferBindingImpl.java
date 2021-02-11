@@ -24,9 +24,9 @@ public class FragmentAddOfferBindingImpl extends FragmentAddOfferBinding impleme
     private final androidx.cardview.widget.CardView mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback34;
+    private final android.view.View.OnClickListener mCallback38;
     @Nullable
-    private final android.view.View.OnClickListener mCallback35;
+    private final android.view.View.OnClickListener mCallback39;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -47,8 +47,8 @@ public class FragmentAddOfferBindingImpl extends FragmentAddOfferBinding impleme
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback34 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
-        mCallback35 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
+        mCallback38 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback39 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -122,8 +122,8 @@ public class FragmentAddOfferBindingImpl extends FragmentAddOfferBinding impleme
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.addOffer.setOnClickListener(mCallback35);
-            this.mboundView1.setOnClickListener(mCallback34);
+            this.addOffer.setOnClickListener(mCallback39);
+            this.mboundView1.setOnClickListener(mCallback38);
         }
     }
     // Listener Stub Implementations

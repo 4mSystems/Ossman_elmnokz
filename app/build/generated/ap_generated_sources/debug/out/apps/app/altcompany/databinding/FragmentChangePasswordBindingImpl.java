@@ -28,7 +28,7 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
     private final apps.app.altcompany.customViews.views.CustomTextViewRegular mboundView4;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback12;
+    private final android.view.View.OnClickListener mCallback14;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -162,7 +162,7 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
         this.mboundView4.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback12 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback14 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -337,7 +337,7 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView1, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView1androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView3, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView3androidTextAttrChanged);
-            this.mboundView4.setOnClickListener(mCallback12);
+            this.mboundView4.setOnClickListener(mCallback14);
         }
     }
     // Listener Stub Implementations

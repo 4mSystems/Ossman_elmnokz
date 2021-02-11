@@ -44,8 +44,6 @@
                     android:layout_marginTop="@dimen/dp10h"
                     android:background="@drawable/border_white_accent_round"
                     android:gravity="center">
-
-
                     <apps.app.altcompany.customViews.views.CustomEditText
                         android:id="@+id/edt_login"
                         android:layout_width="match_parent"

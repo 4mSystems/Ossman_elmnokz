@@ -346,4 +346,30 @@ public class FileOperations {
         }
     }
 
+    public static void pickImages(final Context context, ArrayList<Uri> photoPaths, int size, boolean isVideoEnabled) {
+        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission(context, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+            int maxCount = size - photoPaths.size();
+            if (photoPaths.size() == size) {
+                ((ParentActivity) context).showError(ResourceManager.getString(R.string.max_files));
+            } else {
+                FilePickerBuilder.getInstance()
+                        .setMaxCount(maxCount)
+                        .setSelectedFiles(photoPaths) //this is optional
+                        .setActivityTheme(R.style.FilePickerTheme)
+                        .setActivityTitle(ResourceManager.getString(R.string.pick_file_title))
+                        .enableVideoPicker(isVideoEnabled)
+                        .enableCameraSupport(false)
+                        .showFolderView(true)
+                        .enableSelectAll(false)
+                        .enableImagePicker(true)
+                        .setCameraPlaceholder(R.drawable.ic_camera)
+                        .withOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
+                        .pickPhoto((Activity) context, CUSTOM_REQUEST_CODE);
+            }
+        } else {
+            ActivityCompat.requestPermissions((Activity) context, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 1007);
+        }
+    }
 }

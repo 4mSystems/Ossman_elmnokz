@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.cardview.widget.CardView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
@@ -32,6 +33,9 @@ public abstract class FragmentCompanyProfileBinding extends ViewDataBinding {
   public final CardView cardLocation;
 
   @NonNull
+  public final CardView cardMyWorks;
+
+  @NonNull
   public final CardView cardPhone;
 
   @NonNull
@@ -39,6 +43,9 @@ public abstract class FragmentCompanyProfileBinding extends ViewDataBinding {
 
   @NonNull
   public final CardView cardTwitter;
+
+  @NonNull
+  public final AppCompatImageView cover;
 
   @NonNull
   public final TextInputEditText txtCompanyBio;
@@ -51,6 +58,9 @@ public abstract class FragmentCompanyProfileBinding extends ViewDataBinding {
 
   @NonNull
   public final TextInputEditText txtLocaction;
+
+  @NonNull
+  public final CustomTextViewMedium txtMyWorks;
 
   @NonNull
   public final TextInputEditText txtPhone;
@@ -72,22 +82,26 @@ public abstract class FragmentCompanyProfileBinding extends ViewDataBinding {
 
   protected FragmentCompanyProfileBinding(Object _bindingComponent, View _root,
       int _localFieldCount, CardView cardBio, CardView cardEmail, CardView cardFacebook,
-      CardView cardLocation, CardView cardPhone, CardView cardPoints, CardView cardTwitter,
-      TextInputEditText txtCompanyBio, TextInputEditText txtEmail, TextInputEditText txtFacebook,
-      TextInputEditText txtLocaction, TextInputEditText txtPhone, TextInputEditText txtTwitter,
+      CardView cardLocation, CardView cardMyWorks, CardView cardPhone, CardView cardPoints,
+      CardView cardTwitter, AppCompatImageView cover, TextInputEditText txtCompanyBio,
+      TextInputEditText txtEmail, TextInputEditText txtFacebook, TextInputEditText txtLocaction,
+      CustomTextViewMedium txtMyWorks, TextInputEditText txtPhone, TextInputEditText txtTwitter,
       CircleImageView userImg, CustomTextViewMedium userName, CustomTextViewMedium userPoints) {
     super(_bindingComponent, _root, _localFieldCount);
     this.cardBio = cardBio;
     this.cardEmail = cardEmail;
     this.cardFacebook = cardFacebook;
     this.cardLocation = cardLocation;
+    this.cardMyWorks = cardMyWorks;
     this.cardPhone = cardPhone;
     this.cardPoints = cardPoints;
     this.cardTwitter = cardTwitter;
+    this.cover = cover;
     this.txtCompanyBio = txtCompanyBio;
     this.txtEmail = txtEmail;
     this.txtFacebook = txtFacebook;
     this.txtLocaction = txtLocaction;
+    this.txtMyWorks = txtMyWorks;
     this.txtPhone = txtPhone;
     this.txtTwitter = txtTwitter;
     this.userImg = userImg;

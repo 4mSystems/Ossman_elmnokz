@@ -4,6 +4,7 @@ package apps.app.altcompany.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
@@ -23,6 +24,9 @@ public abstract class FragmentOrderDetailBinding extends ViewDataBinding {
   public final CardView cardImg;
 
   @NonNull
+  public final RelativeLayout edtLogin;
+
+  @NonNull
   public final AppCompatImageView orderMedia;
 
   @NonNull
@@ -35,10 +39,11 @@ public abstract class FragmentOrderDetailBinding extends ViewDataBinding {
   protected OrderDetailsViewModel mViewModel;
 
   protected FragmentOrderDetailBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CardView cardImg, AppCompatImageView orderMedia, CustomTextViewMedium txtDetails,
-      CircleImageView userImg) {
+      CardView cardImg, RelativeLayout edtLogin, AppCompatImageView orderMedia,
+      CustomTextViewMedium txtDetails, CircleImageView userImg) {
     super(_bindingComponent, _root, _localFieldCount);
     this.cardImg = cardImg;
+    this.edtLogin = edtLogin;
     this.orderMedia = orderMedia;
     this.txtDetails = txtDetails;
     this.userImg = userImg;

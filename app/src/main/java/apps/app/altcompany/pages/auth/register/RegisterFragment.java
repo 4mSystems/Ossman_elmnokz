@@ -76,6 +76,9 @@ public class RegisterFragment extends BaseFragment {
                 case Constants.IMAGE_BUSINESS:
                     pickImageDialogSelect(Constants.FILE_TYPE_IMAGE_BUSINESS);
                     break;
+                case Constants.IMAGE_COVER:
+                    pickImageDialogSelect(Constants.FILE_TYPE_IMAGE_COVER);
+                    break;
                 case Constants.REGISTER:
                     toastMessage(((Mutable) o).message);
                     viewModel.goBack(context);
@@ -168,6 +171,11 @@ public class RegisterFragment extends BaseFragment {
             viewModel.getFileObject().add(fileObject);
             binding.businessRegister.setText(getString(R.string.image_selected));
             viewModel.getRequest().setBussinessregister("SELECTED"); // for error
+        }else if (requestCode == Constants.FILE_TYPE_IMAGE_COVER) {
+            FileObject fileObject = FileOperations.getFileObject(getActivity(), data, Constants.IMAGE_COVER, Constants.FILE_TYPE_IMAGE_COVER);
+            viewModel.getFileObject().add(fileObject);
+            binding.companyRegisterCover.setText(getString(R.string.image_selected));
+            viewModel.getRequest().setCover("SELECTED"); // for error
         } else if (requestCode == Constants.RESULT_CODE) {
             viewModel.getRequest().setWorkers_lat(String.valueOf(data.getDoubleExtra(Constants.LAT, 0.0)));
             viewModel.getRequest().setWorkers_lang(String.valueOf(data.getDoubleExtra(Constants.LNG, 0.0)));

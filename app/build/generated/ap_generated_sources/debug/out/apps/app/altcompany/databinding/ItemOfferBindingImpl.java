@@ -20,9 +20,9 @@ public class ItemOfferBindingImpl extends ItemOfferBinding implements apps.app.a
     private final androidx.appcompat.widget.AppCompatImageView mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback3;
+    private final android.view.View.OnClickListener mCallback5;
     @Nullable
-    private final android.view.View.OnClickListener mCallback4;
+    private final android.view.View.OnClickListener mCallback6;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,8 +41,8 @@ public class ItemOfferBindingImpl extends ItemOfferBinding implements apps.app.a
         this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback3 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
-        mCallback4 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
+        mCallback5 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback6 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -140,8 +140,8 @@ public class ItemOfferBindingImpl extends ItemOfferBinding implements apps.app.a
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.imgOffer.setOnClickListener(mCallback3);
-            this.mboundView2.setOnClickListener(mCallback4);
+            this.imgOffer.setOnClickListener(mCallback5);
+            this.mboundView2.setOnClickListener(mCallback6);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

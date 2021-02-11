@@ -1,8 +1,6 @@
 
 package apps.app.altcompany.pages.companies.viewModels;
 
-import android.util.Log;
-
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
@@ -55,13 +53,20 @@ public class CompaniesViewModel extends BaseViewModel {
         liveData.setValue(new Mutable(Constants.CURRENT_LOCATION));
     }
 
+    public void toMyWorks() {
+        liveData.setValue(new Mutable(Constants.MY_WORKS));
+    }
+
     public void toUpdateCategories() {
         liveData.setValue(new Mutable(Constants.CATEGORIES));
     }
 
     public void imageSubmit() {
-        Log.e("imageSubmit", "imageSubmit: " );
         liveData.setValue(new Mutable(Constants.IMAGE));
+    }
+
+    public void toCover() {
+        liveData.setValue(new Mutable(Constants.IMAGE_COVER));
     }
 
     public RegisterRequest getRegisterRequest() {

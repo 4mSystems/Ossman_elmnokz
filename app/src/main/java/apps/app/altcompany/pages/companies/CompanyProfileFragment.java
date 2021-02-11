@@ -34,6 +34,7 @@ import apps.app.altcompany.model.base.Mutable;
 import apps.app.altcompany.pages.auth.login.models.UsersResponse;
 import apps.app.altcompany.pages.auth.register.RegisterStep2Fragment;
 import apps.app.altcompany.pages.companies.viewModels.CompaniesViewModel;
+import apps.app.altcompany.pages.myWorks.MyWorksFragment;
 import apps.app.altcompany.utils.Constants;
 import apps.app.altcompany.utils.helper.MovementHelper;
 import apps.app.altcompany.utils.locations.MapAddress;
@@ -73,8 +74,14 @@ public class CompanyProfileFragment extends BaseFragment {
                 case Constants.CURRENT_LOCATION:
                     MovementHelper.startMapActivityForResultWithBundle(context, new PassingObject(viewModel.getCompanyProfile().getWorkersLat(), viewModel.getCompanyProfile().getWorkersLang()));
                     break;
+                case Constants.MY_WORKS:
+                    MovementHelper.startActivity(context, MyWorksFragment.class.getName(), getString(R.string.my_works), null);
+                    break;
                 case Constants.IMAGE:
                     pickImageDialogSelect(Constants.FILE_TYPE_IMAGE);
+                    break;
+                case Constants.IMAGE_COVER:
+                    pickImageDialogSelect(Constants.FILE_TYPE_IMAGE_COVER);
                     break;
                 case Constants.CATEGORIES:
                     MovementHelper.startActivity(context, RegisterStep2Fragment.class.getName(), getString(R.string.permission_settings), null);
@@ -100,6 +107,10 @@ public class CompanyProfileFragment extends BaseFragment {
             viewModel.getRegisterRequest().setWorkers_lang(String.valueOf(data.getDoubleExtra(Constants.LNG, 0.0)));
             viewModel.getRegisterRequest().setWorkers_address(Objects.requireNonNull(data.getStringExtra(Constants.ADDRESS)));
             binding.txtLocaction.setText(viewModel.getRegisterRequest().getWorkers_address());
+        } else if (requestCode == Constants.FILE_TYPE_IMAGE_COVER) {
+            FileObject fileObject = FileOperations.getFileObject(getActivity(), data, Constants.IMAGE_COVER, Constants.FILE_TYPE_IMAGE_COVER);
+            viewModel.getFileObjectList().add(fileObject);
+            binding.cover.setImageURI(Uri.fromFile(new File(fileObject.getFilePath())));
         }
         super.onActivityResult(requestCode, resultCode, data);
     }

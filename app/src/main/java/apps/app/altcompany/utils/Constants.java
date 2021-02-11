@@ -27,6 +27,7 @@ public class Constants {
     public final static String IMAGE = "workers_img";
     public final static String IMAGE_OFFER = "offer_img";
     public final static String IMAGE_BUSINESS = "workers_bussinessregister";
+    public final static String IMAGE_COVER = "cover";
     public final static String DEPARTMENT = "DEPARTMENT";
     public final static String PACKAGES = "PACKAGES";
     public final static String HOME = "HOME";
@@ -71,7 +72,7 @@ public class Constants {
 
     //RESPONSES
     public static final int RESPONSE_SUCCESS = 200;
-    public final static int RESPONSE_ERROR = 203;
+    public final static String MY_WORKS = "MY_WORKS";
     public static final int RESPONSE_TRIP_FAILED = 401;
     public static final int RESPONSE_JWT_EXPIRE = 403;
     public static final int RESPONSE_404 = 404;
@@ -80,12 +81,11 @@ public class Constants {
     public static final int LOCATION_REQUEST = 407;
     public static final int RATE_REQUEST = 408;
     public static final int FILTER_REQUEST = 409;
-    public static final int SEARCH_REQUEST = 410;
-
     public static final int RESULT_CODE = 6000;
     public final static int DEPARTMENT_3 = 3;
     public final static int FILE_TYPE_IMAGE = 378;
     public final static int FILE_TYPE_IMAGE_BUSINESS = 380;
+    public final static int FILE_TYPE_IMAGE_COVER = 410;
     public final static int FILE_TYPE_VIDEO = 379;
     public final static int CHECK_CONFIRM_NAV_REGISTER = 0;
     public final static int CHECK_CONFIRM_NAV_FORGET = 1;

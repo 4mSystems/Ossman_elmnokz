@@ -83,4 +83,10 @@
     <style name="CustomToolbarTheme" parent="Base.ThemeOverlay.AppCompat.ActionBar">
         <item name="android:textColorPrimary">@color/colorPrimary</item>
     </style>
+    <style name="FilePickerTheme" parent="LibAppTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
 </resources>

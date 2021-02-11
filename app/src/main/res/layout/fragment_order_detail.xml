@@ -86,6 +86,40 @@
                 android:textColor="@color/colorAccent"
                 app:layout_constraintTop_toBottomOf="@id/card_img" />
 
+            <RelativeLayout
+                android:id="@+id/edt_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dp10w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:layout_marginEnd="@dimen/dp10w"
+                android:background="@drawable/border_white_accent_round"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/txt_details">
+
+                <apps.app.altcompany.customViews.views.CustomEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp100h"
+                    android:layout_marginStart="@dimen/dp5w"
+                    android:layout_marginEnd="@dimen/dp5w"
+                    android:gravity="top"
+                    android:hint="@string/description"
+                    android:inputType="textMultiLine"
+                    android:padding="@dimen/dp5w"
+                    android:paddingStart="@dimen/dp10w"
+                    android:paddingEnd="@dimen/dp10w"
+                    android:text="@={viewModel.orderDetailsRequest.offer_desc}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColorHint="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:visibility="@{viewModel.passingObject.object.equals(`-1`)?View.VISIBLE:View.GONE,default=gone}"
+                    app:met_errorColor="@android:color/holo_red_dark"
+                    app:met_hideUnderline="true"
+                    app:met_primaryColor="@color/colorPrimary"
+                    app:met_underlineColor="@color/colorPrimary" />
+            </RelativeLayout>
+
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/btn_submit_primary"
                 android:layout_width="match_parent"
@@ -98,7 +132,7 @@
                 android:text="@{viewModel.passingObject.object.equals(`-1`)?@string/send_offer:@string/chat}"
                 android:visibility="@{viewModel.ordersData.ordersStatus==0?View.VISIBLE:View.GONE,default=gone}"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txt_details" />
+                app:layout_constraintTop_toBottomOf="@id/edt_login" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>

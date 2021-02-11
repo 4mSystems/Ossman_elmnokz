@@ -143,4 +143,8 @@ public class AuthRepository extends BaseRepository {
                 Constants.COMPANY_PROFILE, true);
     }
 
+    public Disposable updateWorks(ArrayList<FileObject> fileObjectArrayList) {
+        return connectionHelper.requestApi(URLS.UPDATE_PROFILE, new Object(), fileObjectArrayList, UsersResponse.class,
+                Constants.COMPANY_PROFILE, true);
+    }
 }

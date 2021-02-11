@@ -12,6 +12,7 @@ import apps.app.altcompany.pages.home.HomeFragment;
 import apps.app.altcompany.pages.home.OrderDetailsFragment;
 import apps.app.altcompany.pages.home.UserDetailsFragment;
 import apps.app.altcompany.pages.myOrders.MyOrdersFragment;
+import apps.app.altcompany.pages.myWorks.MyWorksFragment;
 import apps.app.altcompany.pages.notifications.NotificationsFragment;
 import apps.app.altcompany.pages.offers.AddOfferFragment;
 import apps.app.altcompany.pages.offers.OffersFragment;
@@ -82,6 +83,8 @@ public interface IApplicationComponent {
     void inject(ChatAdminFragment chatAdminFragment);
 
     void inject(ContactUsFragment contactUsFragment);
+
+    void inject(MyWorksFragment myWorksFragment);
 
 
     @Component.Builder

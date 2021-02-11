@@ -1,6 +1,8 @@
 package apps.app.altcompany.pages.auth.register;
 
 
+import android.util.Log;
+
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
@@ -54,6 +56,7 @@ public class RegisterViewModel extends BaseViewModel {
     public void register() {
         getRequest().setFirebase_token(UserHelper.getInstance(MyApplication.getInstance()).getToken());
         getRequest().setStep("1");
+        Log.e("register", "register: "+getRequest() );
         if (getRequest().isValidStep1()) {
             if (isChecked())
                 compositeDisposable.add(repository.register(request, fileObject));
@@ -136,6 +139,10 @@ public class RegisterViewModel extends BaseViewModel {
 
     public void toBusinessRegister() {
         liveData.setValue(new Mutable(Constants.IMAGE_BUSINESS));
+    }
+
+    public void toCover() {
+        liveData.setValue(new Mutable(Constants.IMAGE_COVER));
     }
 
     public void toSelectDepartment() {

@@ -23,7 +23,7 @@ public class ItemRechargeBindingImpl extends ItemRechargeBinding implements apps
     private final apps.app.altcompany.customViews.views.CustomTextViewMedium mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback2;
+    private final android.view.View.OnClickListener mCallback4;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -43,7 +43,7 @@ public class ItemRechargeBindingImpl extends ItemRechargeBinding implements apps
         this.packeName.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback2 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback4 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -144,7 +144,7 @@ public class ItemRechargeBindingImpl extends ItemRechargeBinding implements apps
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback2);
+            this.mboundView0.setOnClickListener(mCallback4);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

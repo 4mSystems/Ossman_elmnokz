@@ -23,7 +23,7 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
     private final android.widget.RelativeLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback41;
+    private final android.view.View.OnClickListener mCallback47;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -45,7 +45,7 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
         this.tvPhone.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback41 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback47 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -171,7 +171,7 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.tvPhone.setOnClickListener(mCallback41);
+            this.tvPhone.setOnClickListener(mCallback47);
         }
         if ((dirtyFlags & 0xdL) != 0) {
             // api target 1

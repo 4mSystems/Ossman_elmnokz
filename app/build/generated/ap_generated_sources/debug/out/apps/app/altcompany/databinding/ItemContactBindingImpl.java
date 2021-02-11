@@ -19,7 +19,7 @@ public class ItemContactBindingImpl extends ItemContactBinding implements apps.a
     // views
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback6;
+    private final android.view.View.OnClickListener mCallback8;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -39,7 +39,7 @@ public class ItemContactBindingImpl extends ItemContactBinding implements apps.a
         this.tvItemContact.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback6 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback8 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -146,7 +146,7 @@ public class ItemContactBindingImpl extends ItemContactBinding implements apps.a
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.rlItemContact.setOnClickListener(mCallback6);
+            this.rlItemContact.setOnClickListener(mCallback8);
         }
     }
     // Listener Stub Implementations

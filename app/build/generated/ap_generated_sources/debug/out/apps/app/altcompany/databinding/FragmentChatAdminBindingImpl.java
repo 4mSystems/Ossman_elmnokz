@@ -21,7 +21,7 @@ public class FragmentChatAdminBindingImpl extends FragmentChatAdminBinding imple
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback42;
+    private final android.view.View.OnClickListener mCallback48;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -80,7 +80,7 @@ public class FragmentChatAdminBindingImpl extends FragmentChatAdminBinding imple
         this.sendChat.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback42 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback48 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -208,7 +208,7 @@ public class FragmentChatAdminBindingImpl extends FragmentChatAdminBinding imple
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.edMessage, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, edMessageandroidTextAttrChanged);
-            this.sendChat.setOnClickListener(mCallback42);
+            this.sendChat.setOnClickListener(mCallback48);
         }
     }
     // Listener Stub Implementations

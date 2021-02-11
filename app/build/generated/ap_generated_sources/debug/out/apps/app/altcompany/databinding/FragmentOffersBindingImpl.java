@@ -24,7 +24,7 @@ public class FragmentOffersBindingImpl extends FragmentOffersBinding implements 
     private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView3;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback5;
+    private final android.view.View.OnClickListener mCallback7;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -45,7 +45,7 @@ public class FragmentOffersBindingImpl extends FragmentOffersBinding implements 
         this.mboundView3.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback5 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback7 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -167,7 +167,7 @@ public class FragmentOffersBindingImpl extends FragmentOffersBinding implements 
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView3.setOnClickListener(mCallback5);
+            this.mboundView3.setOnClickListener(mCallback7);
         }
     }
     // Listener Stub Implementations

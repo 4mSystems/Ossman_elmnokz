@@ -51,6 +51,11 @@ public class RegisterRequest {
     private String workers_tw;
     @SerializedName("payment_success")
     private String payment_success;
+    @SerializedName("Employees")
+    private String employees;
+    @SerializedName("date")
+    private String date;
+    private transient String cover;
 
     public transient ObservableField<String> passwordError = new ObservableField<>();
     public transient ObservableField<String> OldPasswordError = new ObservableField<>();
@@ -64,6 +69,8 @@ public class RegisterRequest {
     public transient ObservableField<String> desError = new ObservableField<>();
     public transient ObservableField<String> businessError = new ObservableField<>();
     public transient ObservableField<String> categoryIdError = new ObservableField<>();
+    public transient ObservableField<String> empNumError = new ObservableField<>();
+    public transient ObservableField<String> registerDateError = new ObservableField<>();
 
 
     public boolean isValidStep1() {
@@ -94,6 +101,12 @@ public class RegisterRequest {
             isValid = false;
         } else if (!Validate.isValid(bussinessregister, Constants.FIELD)) {
             businessError.set(Validate.error);
+            isValid = false;
+        } else if (!Validate.isValid(employees, Constants.FIELD)) {
+            empNumError.set(Validate.error);
+            isValid = false;
+        } else if (!Validate.isValid(bussinessregister, Constants.FIELD)) {
+            registerDateError.set(Validate.error);
             isValid = false;
         }
         return isValid;
@@ -269,6 +282,30 @@ public class RegisterRequest {
         this.FK_countries_id = FK_countries_id;
     }
 
+    public String getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(String employees) {
+        this.employees = employees;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getCover() {
+        return cover;
+    }
+
+    public void setCover(String cover) {
+        this.cover = cover;
+    }
+
     @Override
     public String toString() {
         return "RegisterRequest{" +
@@ -276,30 +313,39 @@ public class RegisterRequest {
                 ", phone='" + phone + '\'' +
                 ", password='" + password + '\'' +
                 ", FK_cities_id='" + FK_cities_id + '\'' +
+                ", FK_countries_id='" + FK_countries_id + '\'' +
                 ", workers_address='" + workers_address + '\'' +
                 ", firebase_token='" + firebase_token + '\'' +
                 ", email='" + email + '\'' +
                 ", workers_lat='" + workers_lat + '\'' +
                 ", workers_lang='" + workers_lang + '\'' +
-                ", workers_bussinessregister='" + bussinessregister + '\'' +
+                ", bussinessregister='" + bussinessregister + '\'' +
                 ", workers_desc='" + workers_desc + '\'' +
                 ", step='" + step + '\'' +
                 ", category_id='" + category_id + '\'' +
+                ", category='" + category + '\'' +
                 ", sub_categories=" + sub_categories +
                 ", package_id='" + package_id + '\'' +
                 ", workers_fb='" + workers_fb + '\'' +
                 ", workers_tw='" + workers_tw + '\'' +
                 ", payment_success='" + payment_success + '\'' +
+                ", employees='" + employees + '\'' +
+                ", date='" + date + '\'' +
+                ", cover='" + cover + '\'' +
                 ", passwordError=" + passwordError +
                 ", OldPasswordError=" + OldPasswordError +
                 ", confirmPasswordError=" + confirmPasswordError +
                 ", nameError=" + nameError +
                 ", emailError=" + emailError +
                 ", phoneError=" + phoneError +
+                ", countryError=" + countryError +
                 ", cityError=" + cityError +
                 ", addressError=" + addressError +
                 ", desError=" + desError +
                 ", businessError=" + businessError +
+                ", categoryIdError=" + categoryIdError +
+                ", empNumError=" + empNumError +
+                ", registerDateError=" + registerDateError +
                 '}';
     }
 }

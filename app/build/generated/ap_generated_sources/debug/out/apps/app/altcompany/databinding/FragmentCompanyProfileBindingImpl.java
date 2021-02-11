@@ -14,30 +14,36 @@ public class FragmentCompanyProfileBindingImpl extends FragmentCompanyProfileBin
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.card_points, 9);
-        sViewsWithIds.put(R.id.card_bio, 10);
-        sViewsWithIds.put(R.id.card_email, 11);
-        sViewsWithIds.put(R.id.card_phone, 12);
-        sViewsWithIds.put(R.id.card_location, 13);
-        sViewsWithIds.put(R.id.card_facebook, 14);
-        sViewsWithIds.put(R.id.txt_facebook, 15);
-        sViewsWithIds.put(R.id.card_twitter, 16);
-        sViewsWithIds.put(R.id.txt_twitter, 17);
+        sViewsWithIds.put(R.id.card_points, 13);
+        sViewsWithIds.put(R.id.card_my_works, 14);
+        sViewsWithIds.put(R.id.card_email, 15);
+        sViewsWithIds.put(R.id.card_phone, 16);
+        sViewsWithIds.put(R.id.card_location, 17);
+        sViewsWithIds.put(R.id.card_facebook, 18);
+        sViewsWithIds.put(R.id.txt_facebook, 19);
+        sViewsWithIds.put(R.id.card_twitter, 20);
+        sViewsWithIds.put(R.id.txt_twitter, 21);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
     @NonNull
-    private final androidx.appcompat.widget.AppCompatButton mboundView8;
+    private final androidx.appcompat.widget.AppCompatButton mboundView12;
+    @NonNull
+    private final androidx.appcompat.widget.AppCompatImageView mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback39;
+    private final android.view.View.OnClickListener mCallback43;
     @Nullable
-    private final android.view.View.OnClickListener mCallback37;
+    private final android.view.View.OnClickListener mCallback42;
     @Nullable
-    private final android.view.View.OnClickListener mCallback38;
+    private final android.view.View.OnClickListener mCallback44;
     @Nullable
-    private final android.view.View.OnClickListener mCallback36;
+    private final android.view.View.OnClickListener mCallback45;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback40;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback41;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -154,44 +160,54 @@ public class FragmentCompanyProfileBindingImpl extends FragmentCompanyProfileBin
     };
 
     public FragmentCompanyProfileBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 18, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 22, sIncludes, sViewsWithIds));
     }
     private FragmentCompanyProfileBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.cardview.widget.CardView) bindings[10]
-            , (androidx.cardview.widget.CardView) bindings[11]
+            , (androidx.cardview.widget.CardView) bindings[7]
+            , (androidx.cardview.widget.CardView) bindings[15]
+            , (androidx.cardview.widget.CardView) bindings[18]
+            , (androidx.cardview.widget.CardView) bindings[17]
             , (androidx.cardview.widget.CardView) bindings[14]
-            , (androidx.cardview.widget.CardView) bindings[13]
-            , (androidx.cardview.widget.CardView) bindings[12]
-            , (androidx.cardview.widget.CardView) bindings[9]
             , (androidx.cardview.widget.CardView) bindings[16]
-            , (com.google.android.material.textfield.TextInputEditText) bindings[4]
-            , (com.google.android.material.textfield.TextInputEditText) bindings[5]
-            , (com.google.android.material.textfield.TextInputEditText) bindings[15]
-            , (com.google.android.material.textfield.TextInputEditText) bindings[7]
-            , (com.google.android.material.textfield.TextInputEditText) bindings[6]
-            , (com.google.android.material.textfield.TextInputEditText) bindings[17]
-            , (de.hdodenhof.circleimageview.CircleImageView) bindings[1]
-            , (apps.app.altcompany.customViews.views.CustomTextViewMedium) bindings[2]
-            , (apps.app.altcompany.customViews.views.CustomTextViewMedium) bindings[3]
+            , (androidx.cardview.widget.CardView) bindings[13]
+            , (androidx.cardview.widget.CardView) bindings[20]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[8]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[9]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[19]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[11]
+            , (apps.app.altcompany.customViews.views.CustomTextViewMedium) bindings[6]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[10]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[21]
+            , (de.hdodenhof.circleimageview.CircleImageView) bindings[3]
+            , (apps.app.altcompany.customViews.views.CustomTextViewMedium) bindings[4]
+            , (apps.app.altcompany.customViews.views.CustomTextViewMedium) bindings[5]
             );
+        this.cardBio.setTag(null);
+        this.cover.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView8 = (androidx.appcompat.widget.AppCompatButton) bindings[8];
-        this.mboundView8.setTag(null);
+        this.mboundView12 = (androidx.appcompat.widget.AppCompatButton) bindings[12];
+        this.mboundView12.setTag(null);
+        this.mboundView2 = (androidx.appcompat.widget.AppCompatImageView) bindings[2];
+        this.mboundView2.setTag(null);
         this.txtCompanyBio.setTag(null);
         this.txtEmail.setTag(null);
         this.txtLocaction.setTag(null);
+        this.txtMyWorks.setTag(null);
         this.txtPhone.setTag(null);
         this.userImg.setTag(null);
         this.userName.setTag(null);
         this.userPoints.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback39 = new apps.app.altcompany.generated.callback.OnClickListener(this, 4);
-        mCallback37 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
-        mCallback38 = new apps.app.altcompany.generated.callback.OnClickListener(this, 3);
-        mCallback36 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback43 = new apps.app.altcompany.generated.callback.OnClickListener(this, 4);
+        mCallback42 = new apps.app.altcompany.generated.callback.OnClickListener(this, 3);
+        mCallback44 = new apps.app.altcompany.generated.callback.OnClickListener(this, 5);
+        mCallback45 = new apps.app.altcompany.generated.callback.OnClickListener(this, 6);
+        mCallback40 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback41 = new apps.app.altcompany.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -266,20 +282,49 @@ public class FragmentCompanyProfileBindingImpl extends FragmentCompanyProfileBin
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        apps.app.altcompany.pages.auth.login.models.UserData viewModelCompanyProfile = null;
-        java.lang.String viewModelCompanyProfileWorkersImg = null;
         java.lang.String viewModelCompanyProfileEmail = null;
-        java.lang.String viewModelCompanyProfileWorkersDesc = null;
+        java.lang.String viewModelCompanyProfileCover = null;
         java.lang.String viewModelCompanyProfileWorkersUsername = null;
-        java.lang.String viewModelCompanyProfileWorkersPoints = null;
         java.lang.String viewModelCompanyProfileWorkersPhoneNumber = null;
         java.lang.String viewModelCompanyProfileWorkersPointsConcatJavaLangString = null;
+        java.lang.String viewModelLang = null;
+        int viewModelLangEqualsJavaLangStringEnInt180Int0 = 0;
+        apps.app.altcompany.pages.auth.login.models.UserData viewModelCompanyProfile = null;
+        java.lang.String viewModelCompanyProfileWorkersImg = null;
+        boolean viewModelLangEqualsJavaLangStringEn = false;
+        java.lang.String viewModelCompanyProfileWorkersDesc = null;
+        java.lang.String viewModelCompanyProfileWorkersPoints = null;
         java.lang.String viewModelCompanyProfileWorkersPointsConcatJavaLangStringConcatUserPointsAndroidStringPoints = null;
         apps.app.altcompany.pages.companies.viewModels.CompaniesViewModel viewModel = mViewModel;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
 
+            if ((dirtyFlags & 0x5L) != 0) {
+
+                    if (viewModel != null) {
+                        // read viewModel.lang
+                        viewModelLang = viewModel.lang;
+                    }
+
+
+                    if (viewModelLang != null) {
+                        // read viewModel.lang.equals("en")
+                        viewModelLangEqualsJavaLangStringEn = viewModelLang.equals("en");
+                    }
+                if((dirtyFlags & 0x5L) != 0) {
+                    if(viewModelLangEqualsJavaLangStringEn) {
+                            dirtyFlags |= 0x10L;
+                    }
+                    else {
+                            dirtyFlags |= 0x8L;
+                    }
+                }
+
+
+                    // read viewModel.lang.equals("en") ? 180 : 0
+                    viewModelLangEqualsJavaLangStringEnInt180Int0 = ((viewModelLangEqualsJavaLangStringEn) ? (180) : (0));
+            }
 
                 if (viewModel != null) {
                     // read viewModel.companyProfile
@@ -288,18 +333,20 @@ public class FragmentCompanyProfileBindingImpl extends FragmentCompanyProfileBin
 
 
                 if (viewModelCompanyProfile != null) {
-                    // read viewModel.companyProfile.workersImg
-                    viewModelCompanyProfileWorkersImg = viewModelCompanyProfile.getWorkersImg();
                     // read viewModel.companyProfile.email
                     viewModelCompanyProfileEmail = viewModelCompanyProfile.getEmail();
-                    // read viewModel.companyProfile.workersDesc
-                    viewModelCompanyProfileWorkersDesc = viewModelCompanyProfile.getWorkersDesc();
+                    // read viewModel.companyProfile.cover
+                    viewModelCompanyProfileCover = viewModelCompanyProfile.getCover();
                     // read viewModel.companyProfile.workersUsername
                     viewModelCompanyProfileWorkersUsername = viewModelCompanyProfile.getWorkersUsername();
-                    // read viewModel.companyProfile.workersPoints
-                    viewModelCompanyProfileWorkersPoints = viewModelCompanyProfile.getWorkersPoints();
                     // read viewModel.companyProfile.workersPhoneNumber
                     viewModelCompanyProfileWorkersPhoneNumber = viewModelCompanyProfile.getWorkersPhoneNumber();
+                    // read viewModel.companyProfile.workersImg
+                    viewModelCompanyProfileWorkersImg = viewModelCompanyProfile.getWorkersImg();
+                    // read viewModel.companyProfile.workersDesc
+                    viewModelCompanyProfileWorkersDesc = viewModelCompanyProfile.getWorkersDesc();
+                    // read viewModel.companyProfile.workersPoints
+                    viewModelCompanyProfileWorkersPoints = viewModelCompanyProfile.getWorkersPoints();
                 }
 
 
@@ -315,26 +362,36 @@ public class FragmentCompanyProfileBindingImpl extends FragmentCompanyProfileBin
                 }
         }
         // batch finished
-        if ((dirtyFlags & 0x4L) != 0) {
-            // api target 1
+        if ((dirtyFlags & 0x5L) != 0) {
+            // api target 11
+            if(getBuildSdkInt() >= 11) {
 
-            this.mboundView8.setOnClickListener(mCallback39);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.txtCompanyBio, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, txtCompanyBioandroidTextAttrChanged);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.txtEmail, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, txtEmailandroidTextAttrChanged);
-            this.txtLocaction.setOnClickListener(mCallback38);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.txtPhone, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, txtPhoneandroidTextAttrChanged);
-            this.userImg.setOnClickListener(mCallback36);
-            this.userName.setOnClickListener(mCallback37);
+                this.cardBio.setRotation(viewModelLangEqualsJavaLangStringEnInt180Int0);
+            }
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
+            apps.app.altcompany.base.ApplicationBinding.loadImage(this.cover, viewModelCompanyProfileCover);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.txtCompanyBio, viewModelCompanyProfileWorkersDesc);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.txtEmail, viewModelCompanyProfileEmail);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.txtPhone, viewModelCompanyProfileWorkersPhoneNumber);
             apps.app.altcompany.base.ApplicationBinding.loadImage(this.userImg, viewModelCompanyProfileWorkersImg);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.userName, viewModelCompanyProfileWorkersUsername);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.userPoints, viewModelCompanyProfileWorkersPointsConcatJavaLangStringConcatUserPointsAndroidStringPoints);
+        }
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.mboundView12.setOnClickListener(mCallback45);
+            this.mboundView2.setOnClickListener(mCallback40);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.txtCompanyBio, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, txtCompanyBioandroidTextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.txtEmail, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, txtEmailandroidTextAttrChanged);
+            this.txtLocaction.setOnClickListener(mCallback44);
+            this.txtMyWorks.setOnClickListener(mCallback43);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.txtPhone, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, txtPhoneandroidTextAttrChanged);
+            this.userImg.setOnClickListener(mCallback41);
+            this.userName.setOnClickListener(mCallback42);
         }
     }
     // Listener Stub Implementations
@@ -354,24 +411,7 @@ public class FragmentCompanyProfileBindingImpl extends FragmentCompanyProfileBin
                 if (viewModelJavaLangObjectNull) {
 
 
-                    viewModel.updateProfile();
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewModel
-                apps.app.altcompany.pages.companies.viewModels.CompaniesViewModel viewModel = mViewModel;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
-
-
-
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
-
-
-                    viewModel.toUpdateCategories();
+                    viewModel.toMyWorks();
                 }
                 break;
             }
@@ -388,11 +428,62 @@ public class FragmentCompanyProfileBindingImpl extends FragmentCompanyProfileBin
                 if (viewModelJavaLangObjectNull) {
 
 
+                    viewModel.toUpdateCategories();
+                }
+                break;
+            }
+            case 5: {
+                // localize variables for thread safety
+                // viewModel
+                apps.app.altcompany.pages.companies.viewModels.CompaniesViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
                     viewModel.address();
                 }
                 break;
             }
+            case 6: {
+                // localize variables for thread safety
+                // viewModel
+                apps.app.altcompany.pages.companies.viewModels.CompaniesViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+                    viewModel.updateProfile();
+                }
+                break;
+            }
             case 1: {
+                // localize variables for thread safety
+                // viewModel
+                apps.app.altcompany.pages.companies.viewModels.CompaniesViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+                    viewModel.toCover();
+                }
+                break;
+            }
+            case 2: {
                 // localize variables for thread safety
                 // viewModel
                 apps.app.altcompany.pages.companies.viewModels.CompaniesViewModel viewModel = mViewModel;
@@ -417,6 +508,8 @@ public class FragmentCompanyProfileBindingImpl extends FragmentCompanyProfileBin
         flag 0 (0x1L): viewModel
         flag 1 (0x2L): viewModel.companyProfile
         flag 2 (0x3L): null
+        flag 3 (0x4L): viewModel.lang.equals("en") ? 180 : 0
+        flag 4 (0x5L): viewModel.lang.equals("en") ? 180 : 0
     flag mapping end*/
     //end
 }

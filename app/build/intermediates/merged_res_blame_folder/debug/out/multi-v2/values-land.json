@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\mostafa elnagar\\AltiCompany\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "/home/elnagar/AndroidStudioProjects/alticompanynew/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\MAymanM\\.gradle\\caches\\transforms-2\\files-2.1\\bdad276e0a56eb7d23b67fb0cd111a1e\\appcompat-1.2.0\\res\\values-land\\values-land.xml",
+                    "source": "/home/elnagar/.gradle/caches/transforms-2/files-2.1/bdad276e0a56eb7d23b67fb0cd111a1e/appcompat-1.2.0/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\MAymanM\\.gradle\\caches\\transforms-2\\files-2.1\\41f7791d7ff1d8fa93c057e26c386fb2\\material-1.3.0-beta01\\res\\values-land\\values-land.xml",
+                    "source": "/home/elnagar/.gradle/caches/transforms-2/files-2.1/41f7791d7ff1d8fa93c057e26c386fb2/material-1.3.0-beta01/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,24,30",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

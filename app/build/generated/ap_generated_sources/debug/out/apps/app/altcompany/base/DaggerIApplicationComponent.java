@@ -69,6 +69,11 @@ import apps.app.altcompany.pages.myOrders.MyOrdersFragment_MembersInjector;
 import apps.app.altcompany.pages.myOrders.viewModels.MyOrdersViewModel;
 import apps.app.altcompany.pages.myOrders.viewModels.MyOrdersViewModel_Factory;
 import apps.app.altcompany.pages.myOrders.viewModels.MyOrdersViewModel_MembersInjector;
+import apps.app.altcompany.pages.myWorks.MyWorksFragment;
+import apps.app.altcompany.pages.myWorks.MyWorksFragment_MembersInjector;
+import apps.app.altcompany.pages.myWorks.viewModels.MyWorksViewModel;
+import apps.app.altcompany.pages.myWorks.viewModels.MyWorksViewModel_Factory;
+import apps.app.altcompany.pages.myWorks.viewModels.MyWorksViewModel_MembersInjector;
 import apps.app.altcompany.pages.notifications.NotificationsFragment;
 import apps.app.altcompany.pages.notifications.NotificationsFragment_MembersInjector;
 import apps.app.altcompany.pages.notifications.viewModels.NotificationsViewModels;
@@ -198,6 +203,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private ChatAdminViewModel chatAdminViewModel() {
     return injectChatAdminViewModel(ChatAdminViewModel_Factory.newInstance(chatRepositoryProvider.get()));
+  }
+
+  private MyWorksViewModel myWorksViewModel() {
+    return injectMyWorksViewModel(MyWorksViewModel_Factory.newInstance(authRepositoryProvider.get()));
   }
 
   @SuppressWarnings("unchecked")
@@ -334,6 +343,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(ContactUsFragment contactUsFragment) {
     injectContactUsFragment(contactUsFragment);
+  }
+
+  @Override
+  public void inject(MyWorksFragment myWorksFragment) {
+    injectMyWorksFragment(myWorksFragment);
   }
 
   private MainActivity injectMainActivity(MainActivity instance) {
@@ -523,6 +537,16 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private ContactUsFragment injectContactUsFragment(ContactUsFragment instance) {
     ContactUsFragment_MembersInjector.injectViewModel(instance, settingsViewModel());
+    return instance;
+  }
+
+  private MyWorksViewModel injectMyWorksViewModel(MyWorksViewModel instance) {
+    MyWorksViewModel_MembersInjector.injectOrdersRepository(instance, authRepositoryProvider.get());
+    return instance;
+  }
+
+  private MyWorksFragment injectMyWorksFragment(MyWorksFragment instance) {
+    MyWorksFragment_MembersInjector.injectViewModel(instance, myWorksViewModel());
     return instance;
   }
 

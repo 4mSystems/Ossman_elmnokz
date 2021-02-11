@@ -53,8 +53,8 @@ public class OrdersRepository extends BaseRepository {
                 Constants.ORDER_DETAILS, true);
     }
 
-    public Disposable sendOffer(int orderId) {
-        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.SEND_OFFER, new OrderDetailsRequest(orderId), StatusMessage.class,
+    public Disposable sendOffer(OrderDetailsRequest orderDetailsRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.SEND_OFFER, orderDetailsRequest, StatusMessage.class,
                 Constants.SEND_OFFER, true);
     }
 

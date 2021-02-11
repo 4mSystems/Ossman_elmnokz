@@ -179,7 +179,7 @@
     <string name="title">Title</string>
     <string name="message">Message</string>
     <string name="select_image">Select Image</string>
-    <string name="send_offer">Send offer</string>
+    <string name="send_offer">Contact with customer</string>
     <string name="chat">Chat</string>
     <string name="recharge">Recharge</string>
     <string name="current_orders">Orders</string>
@@ -209,4 +209,10 @@
     <string name="chat_hint">Write your message…</string>
     <string name="finished">Finished</string>
     <string name="waiting">Waiting</string>
+    <string name="company_emp_num">Employee number</string>
+    <string name="company_register_date">company register date</string>
+    <string name="cover">Cover (optional)</string>
+    <string name="my_works">My works</string>
+    <string name="max_files">You reached max selected images</string>
+    <string name="pick_file_title">Choose your images</string>
 </resources>

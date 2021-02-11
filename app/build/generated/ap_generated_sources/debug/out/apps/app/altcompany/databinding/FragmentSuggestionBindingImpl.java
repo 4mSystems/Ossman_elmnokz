@@ -22,7 +22,7 @@ public class FragmentSuggestionBindingImpl extends FragmentSuggestionBinding imp
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback19;
+    private final android.view.View.OnClickListener mCallback21;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -119,7 +119,7 @@ public class FragmentSuggestionBindingImpl extends FragmentSuggestionBinding imp
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback19 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
+        mCallback21 = new apps.app.altcompany.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -214,7 +214,7 @@ public class FragmentSuggestionBindingImpl extends FragmentSuggestionBinding imp
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.btnSubmitPrimary.setOnClickListener(mCallback19);
+            this.btnSubmitPrimary.setOnClickListener(mCallback21);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.edtComplainDetails, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, edtComplainDetailsandroidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.edtSuggstion, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, edtSuggstionandroidTextAttrChanged);
         }
