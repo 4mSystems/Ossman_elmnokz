@@ -18,13 +18,6 @@
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
-    <style name="ratingMedium" parent="@android:style/Widget.RatingBar">
-        <item name="android:progressDrawable">@drawable/ratingstars</item>
-        <item name="android:minHeight">30dip</item>
-        <item name="android:maxHeight">30dip</item>
-    </style>
-
-    <style name="ratingSmall" parent="android:style/Widget.Material.RatingBar.Small"></style>
 
     <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
         <item name="android:textSize">20sp</item>
@@ -48,7 +41,7 @@
     </style>
 
     <style name="PauseDialogAnimation">
-        <item name="android:windowEnterAnimation">@anim/fui_slide_out_left</item>
+        <item name="android:windowEnterAnimation">@anim/blink</item>
         <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>
     </style>
 
@@ -63,7 +56,6 @@
         <!-- Customize your theme here. -->
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:gravity">center</item>
-        <item name="android:background">@drawable/border_accent_round</item>
         <item name="android:layout_marginBottom">@dimen/dp5h</item>
         <item name="android:minHeight">45dp</item>
         <item name="android:textSize">@dimen/sp14</item>
@@ -82,11 +74,5 @@
 
     <style name="CustomToolbarTheme" parent="Base.ThemeOverlay.AppCompat.ActionBar">
         <item name="android:textColorPrimary">@color/colorPrimary</item>
-    </style>
-    <style name="FilePickerTheme" parent="LibAppTheme">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimaryDark</item>
-        <item name="colorPrimaryDark">@color/colorPrimary</item>
-        <item name="colorAccent">@color/colorAccent</item>
     </style>
 </resources>
