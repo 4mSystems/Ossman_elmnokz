@@ -23,13 +23,14 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp4h">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/dp8h"
-                    android:src="@drawable/ic_favorite_fill"
+                    android:src="@{viewmodel.productDetails.product.favorite?@drawable/ic_favorite_fill:@drawable/ic_favorite_border}"
                     app:layout_constraintEnd_toEndOf="@id/imageSlider"
                     app:layout_constraintTop_toTopOf="@id/imageSlider" />
 
@@ -61,7 +62,7 @@
                     android:layout_margin="@dimen/dp4h"
                     android:ellipsize="marquee"
                     android:singleLine="true"
-                    android:text="عطور"
+                    android:text="@{viewmodel.productDetails.product.title}"
                     android:textAlignment="viewStart"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@color/colorPrimary"
@@ -78,7 +79,7 @@
                     android:layout_marginBottom="@dimen/dp4h"
                     android:ellipsize="marquee"
                     android:singleLine="true"
-                    android:text="500 جنيه"
+                    android:text="@{viewmodel.productDetails.product.price!=null?viewmodel.productDetails.product.price.concat(` `).concat(`ج.م`):``}"
                     android:textAlignment="viewStart"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/colordark"
@@ -87,17 +88,49 @@
                     app:layout_constraintTop_toBottomOf="@id/product_name" />
 
                 <te.app.mezzastore.customViews.views.CustomTextViewRegular
+                    android:id="@+id/product_desc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/dp4w"
-                    android:text="The extended FAB is wider, and it includes a text label. The extended FAB is wider, and it includes a text label."
+                    android:text="@{viewmodel.productDetails.product.description}"
                     android:textAlignment="viewStart"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/product_color" />
+
+                <te.app.mezzastore.customViews.views.CustomTextViewRegular
+                    android:id="@+id/product_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp4w"
+                    android:text="@{@string/brand.concat(` `).concat(viewmodel.productDetails.product.brand!=null?viewmodel.productDetails.product.brand.title:``)}"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/product_price" />
 
+                <te.app.mezzastore.customViews.views.CustomTextViewRegular
+                    android:id="@+id/product_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp4w"
+                    android:text="@{@string/color.concat(` `).concat(viewmodel.productDetails.product.colors!=null?viewmodel.productDetails.product.colors:``)}"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/product_brand" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:adapter="@{viewmodel.productsAdapter}"
+                    app:layout_constraintTop_toBottomOf="@id/product_desc"
+                    app:orientation="@{`1`}"
+                    app:span="@{`2`}"
+                    tools:listitem="@layout/item_products" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.core.widget.NestedScrollView>
 
@@ -106,6 +139,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryDark"
+            android:onClick="@{()-> viewmodel.addToCart()}"
             android:text="@string/add_cart"
             android:textAllCaps="false"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"

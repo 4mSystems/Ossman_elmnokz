@@ -4,6 +4,10 @@
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/loader_animation.xml"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_fragment_create_order.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_create_order.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_fragment_home.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_home.xml"
     },
@@ -16,8 +20,20 @@
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/drawable_ic_back.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/drawable/ic_back.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/anim_shake_vibrate.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/anim/shake_vibrate.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/drawable_logo.png.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/drawable/logo.png"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_fragment_favorites.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_favorites.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/drawable_ic_contact.xml.flat",
@@ -44,6 +60,10 @@
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/mipmap-xxhdpi/grand_g.png"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_item_cart.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/item_cart.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/anim_slide.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/anim/slide.xml"
     },
@@ -56,8 +76,16 @@
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/anim/clockwise.xml"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/drawable_ic_favorite_fill.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/drawable/ic_favorite_fill.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_whats.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/mipmap-xxxhdpi/whats.png"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_incremental_view.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/incremental_view.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/mipmap-hdpi_grand.png.flat",
@@ -80,8 +108,16 @@
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/drawable/ic_list_fav.xml"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_fragment_cart.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_cart.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/mipmap-mdpi_whats.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/mipmap-mdpi/whats.png"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/drawable_ic_favorite_border.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/drawable/ic_favorite_border.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/mipmap-hdpi_whats.png.flat",
@@ -96,12 +132,20 @@
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/mipmap-mdpi/grand.png"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/drawable_ic_delete.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/drawable/ic_delete.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/anim_dialog_slide_bottom.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/anim/dialog_slide_bottom.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/anim_blink.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/anim/blink.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/drawable_ic_remove.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/drawable/ic_remove.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
@@ -138,6 +182,10 @@
     {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_layout_action_bar_home.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/layout_action_bar_home.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/drawable_ic_add.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/drawable/ic_add.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/anim_image_click.xml.flat",
@@ -180,6 +228,14 @@
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/mipmap-xxxhdpi/grand.png"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_item_products.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/item_products.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_fragment_product_details.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_product_details.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
@@ -192,8 +248,16 @@
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/anim/left_to_right.xml"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_item_favorite.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/item_favorite.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/drawable_corner_view_overlay.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/drawable/corner_view_overlay.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_fragment_sub_categories.xml.flat",
@@ -214,6 +278,10 @@
     {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/anim_fade.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/anim/fade.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_fragment_products.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_products.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/font_medium.otf.flat",

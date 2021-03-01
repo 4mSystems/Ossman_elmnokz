@@ -18,10 +18,50 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="@dimen/dp4h"
+            app:adapter="@{viewmodel.cartAdapter}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toTopOf="@id/add_cart"
+            app:layout_constraintBottom_toTopOf="@id/total"
             app:layout_constraintTop_toTopOf="parent"
+            app:orientation="@{`1`}"
+            app:span="@{`1`}"
             tools:listitem="@layout/item_cart" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp8h"
+            app:cardCornerRadius="@dimen/dp8h"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@id/add_cart">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp6h">
+
+                <te.app.mezzastore.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <te.app.mezzastore.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_total_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/add_cart"

@@ -20,7 +20,7 @@ import te.app.mezzastore.R;
 public class IncrementalView extends ConstraintLayout {
     private View view;
     private TextView incrementalViewText;
-    private ImageView increment, decrement;
+    public ImageView increment, decrement;
     public String value = "1";
 
     public IncrementalView(@NonNull Context context) {

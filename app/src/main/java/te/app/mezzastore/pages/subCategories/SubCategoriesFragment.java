@@ -11,17 +11,22 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 
+import com.google.gson.Gson;
+
 import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
 
+import te.app.mezzastore.PassingObject;
 import te.app.mezzastore.R;
 import te.app.mezzastore.base.BaseFragment;
 import te.app.mezzastore.base.IApplicationComponent;
 import te.app.mezzastore.base.MyApplication;
 import te.app.mezzastore.databinding.FragmentSubCategoriesBinding;
 import te.app.mezzastore.model.base.Mutable;
+import te.app.mezzastore.pages.subCategories.models.SubCategoriesResponse;
 import te.app.mezzastore.pages.subCategories.viewModels.SubCategoriesViewModel;
+import te.app.mezzastore.utils.Constants;
 
 
 public class SubCategoriesFragment extends BaseFragment {
@@ -36,6 +41,12 @@ public class SubCategoriesFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
+        Bundle bundle = this.getArguments();
+        if (bundle != null) {
+            String passingObject = bundle.getString(Constants.BUNDLE);
+            viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
+            viewModel.subCategories();
+        }
         setEvent();
         return binding.getRoot();
     }
@@ -44,13 +55,10 @@ public class SubCategoriesFragment extends BaseFragment {
         viewModel.liveData.observe(((LifecycleOwner) context), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-//            if (Constants.STORES.equals(((Mutable) o).message)) {
-//                MovementHelper.startActivity(context, MarketsFragment.class.getName(), getResources().getString(R.string.market_page), null);
-//            } else if (Constants.ORDER_ANY_THING.equals(((Mutable) o).message)) {
-//                MovementHelper.startActivity(context, PublicOrdersFragment.class.getName(), getResources().getString(R.string.public_order_bar_name), Constants.SHARE_BAR);
-//            } else if (Constants.NOTIFICATIONS.equals(((Mutable) o).message)) {
-//                MovementHelper.startActivity(context, NotificationsFragment.class.getName(), getResources().getString(R.string.menuNotifications), null);
-//            }
+            if (Constants.SUB_CATEGORIES.equals(((Mutable) o).message)) {
+                viewModel.getCategoriesAdapter().update(((SubCategoriesResponse) mutable.object).getCategoriesItemList());
+                viewModel.getCategoriesAdapter().pageType = Constants.PRODUCTS;
+            }
         });
     }
 

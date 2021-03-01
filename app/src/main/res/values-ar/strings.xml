@@ -11,21 +11,24 @@
     <string name="connection_invaild_msg">Poor Internet Connection</string>
     <string name="please_select_another_file">Please select another file</string>
 
-    <!--layout_grand-->
     <string name="design_program">تصميم وبرمجة</string>
     <string name="call">Call</string>
     <string name="whats">Whatsapp</string>
     <string name="msg_server_error">Error ,try again</string>
-    <string name="home">Home</string>
-    <string name="contact_us">Contact us</string>
-    <string name="add_cart">Add to cart</string>
-    <string name="finish_order">Finish order</string>
-    <string name="client_name">Name</string>
-    <string name="client_phone">Phone number</string>
-    <string name="client_address">Write your address in details</string>
-    <string name="client_notes">"Write your notes "</string>
-    <string name="send">Send order</string>
-    <!--end_grand-->
+    <string name="home">الرئيسية</string>
+    <string name="contact_us">تواصل معنا</string>
+    <string name="add_cart">أضف الى عربه السله</string>
+    <string name="finish_order">إنهاء الطلب</string>
+    <string name="client_name">الاسم</string>
+    <string name="client_phone">الموبايل</string>
+    <string name="client_address">عنوانك بالتفصيل</string>
+    <string name="client_notes">ملاحظاتك</string>
+    <string name="send">إرسال الطلب</string>
+    <string name="brand">الماركة :</string>
+    <string name="color">لون المنتج :</string>
+    <string name="cart">السلة</string>
+    <string name="total">الاجمالى</string>
+    <string name="add_cart_successfully">تم الاضافه بناج الى السلة</string>
 
 
 </resources>

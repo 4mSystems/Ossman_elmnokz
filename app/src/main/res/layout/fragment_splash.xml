@@ -10,9 +10,14 @@
             type="te.app.mezzastore.pages.splash.SplashViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp120w"
+            android:layout_height="@dimen/dp120h"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/ic_launcher" />
+    </RelativeLayout>
 </layout>

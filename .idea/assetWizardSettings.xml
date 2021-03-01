@@ -102,6 +102,8 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+                                                <entry key="imagePath" value="$USER_HOME$/Downloads/MezzaLogoFINAL-01.png" />
+                                                <entry key="scalingPercent" value="45" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -131,6 +133,12 @@
                                       </entry>
                                     </map>
                                   </option>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="backgroundAssetType" value="COLOR" />
+                                      <entry key="backgroundColor" value="ffffff" />
+                                    </map>
+                                  </option>
                                 </PersistentState>
                               </value>
                             </entry>
@@ -145,7 +153,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="ffffff" />
-                                                <entry key="imagePath" value="C:\Users\MAymanM\AppData\Local\Temp\baseline_share_24.xml" />
+                                                <entry key="imagePath" value="/tmp/ic_android_black_24dp.xml" />
                                                 <entry key="paddingPercent" value="10" />
                                               </map>
                                             </option>
@@ -158,7 +166,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="$USER_HOME$/Downloads/contact.png" />
+                                                <entry key="imagePath" value="$USER_HOME$/Downloads/MezzaLogoFINAL-01.png" />
                                                 <entry key="paddingPercent" value="50" />
                                               </map>
                                             </option>
@@ -193,7 +201,7 @@
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="iconShape" value="CIRCLE" />
-                                      <entry key="imageAsset" value="$USER_HOME$/Downloads/contact.png" />
+                                      <entry key="imageAsset" value="$USER_HOME$/Downloads/MezzaLogoFINAL-01.png" />
                                       <entry key="outputName" value="ic_send_chat" />
                                     </map>
                                   </option>
@@ -321,11 +329,6 @@
                             </entry>
                           </map>
                         </option>
-                        <option name="values">
-                          <map>
-                            <entry key="outputIconType" value="LAUNCHER_LEGACY" />
-                          </map>
-                        </option>
                       </PersistentState>
                     </value>
                   </entry>
@@ -349,7 +352,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:$USER_HOME$/Android/Sdk/icons/material/materialicons/delete_forever/baseline_delete_forever_24.xml" />
+                                      <entry key="url" value="file:$USER_HOME$/Android/Sdk/icons/material/materialicons/arrow_forward_ios/baseline_arrow_forward_ios_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -361,7 +364,7 @@
                           <map>
                             <entry key="autoMirrored" value="true" />
                             <entry key="color" value="8a98a3" />
-                            <entry key="outputName" value="ic_delete" />
+                            <entry key="outputName" value="ic_back" />
                             <entry key="sourceFile" value="$USER_HOME$/Downloads/contact.svg" />
                           </map>
                         </option>

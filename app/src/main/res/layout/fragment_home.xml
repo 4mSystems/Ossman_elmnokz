@@ -28,6 +28,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/dp8h"
+                    android:onClick="@{()->viewmodel.toCart()}"
                     android:src="@drawable/ic_shopping_cart"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -46,10 +47,9 @@
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/ic_fav"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/dp35w"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/dp8h"
-                    android:src="@drawable/ic_list_fav"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -88,9 +88,12 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    app:adapter="@{viewmodel.categoriesAdapter}"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/slider_container"
+                    app:orientation="@{`1`}"
+                    app:span="@{`2`}"
                     tools:listitem="@layout/item_home" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -102,11 +105,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:layout_margin="@dimen/dp12w"
-            app:backgroundTint="@color/white"
             android:text="@string/contact_us"
             android:textAllCaps="false"
-            android:textColor="@color/colorPrimaryDark"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark"
+            app:backgroundTint="@color/white"
             app:fabSize="normal"
             app:icon="@drawable/ic_contact" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

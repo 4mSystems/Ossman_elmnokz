@@ -10,12 +10,8 @@ public class StatusMessage {
     @SerializedName("msg")
     @Expose
     public String mMessage;
-    @SerializedName("status")
-    @Expose
-    public String mStatus;
     @SerializedName("code")
     @Expose
     public int code;
-
 
 }

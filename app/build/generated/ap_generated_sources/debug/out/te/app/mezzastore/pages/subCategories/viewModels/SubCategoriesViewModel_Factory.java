@@ -2,26 +2,38 @@
 package te.app.mezzastore.pages.subCategories.viewModels;
 
 import dagger.internal.Factory;
+import javax.inject.Provider;
+import te.app.mezzastore.repository.HomeRepository;
 
 @SuppressWarnings({
     "unchecked",
     "rawtypes"
 })
 public final class SubCategoriesViewModel_Factory implements Factory<SubCategoriesViewModel> {
+  private final Provider<HomeRepository> homeRepositoryProvider;
+
+  private final Provider<HomeRepository> homeRepositoryProvider2;
+
+  public SubCategoriesViewModel_Factory(Provider<HomeRepository> homeRepositoryProvider,
+      Provider<HomeRepository> homeRepositoryProvider2) {
+    this.homeRepositoryProvider = homeRepositoryProvider;
+    this.homeRepositoryProvider2 = homeRepositoryProvider2;
+  }
+
   @Override
   public SubCategoriesViewModel get() {
-    return newInstance();
+    SubCategoriesViewModel instance = newInstance(homeRepositoryProvider.get());
+    SubCategoriesViewModel_MembersInjector.injectHomeRepository(instance, homeRepositoryProvider2.get());
+    return instance;
   }
 
-  public static SubCategoriesViewModel_Factory create() {
-    return InstanceHolder.INSTANCE;
+  public static SubCategoriesViewModel_Factory create(
+      Provider<HomeRepository> homeRepositoryProvider,
+      Provider<HomeRepository> homeRepositoryProvider2) {
+    return new SubCategoriesViewModel_Factory(homeRepositoryProvider, homeRepositoryProvider2);
   }
 
-  public static SubCategoriesViewModel newInstance() {
-    return new SubCategoriesViewModel();
-  }
-
-  private static final class InstanceHolder {
-    private static final SubCategoriesViewModel_Factory INSTANCE = new SubCategoriesViewModel_Factory();
+  public static SubCategoriesViewModel newInstance(HomeRepository homeRepository) {
+    return new SubCategoriesViewModel(homeRepository);
   }
 }

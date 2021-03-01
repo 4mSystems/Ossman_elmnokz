@@ -59,6 +59,11 @@
             android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
             android:value="GlideModule" />
 
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
+
         <provider
             android:name="com.squareup.picasso.PicassoProvider"
             android:authorities="te.app.mezzastore.com.squareup.picasso"

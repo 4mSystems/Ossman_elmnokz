@@ -39,7 +39,7 @@ public class FragmentSubCategoriesBindingImpl extends FragmentSubCategoriesBindi
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -67,7 +67,13 @@ public class FragmentSubCategoriesBindingImpl extends FragmentSubCategoriesBindi
     }
 
     public void setViewmodel(@Nullable te.app.mezzastore.pages.subCategories.viewModels.SubCategoriesViewModel Viewmodel) {
+        updateRegistration(0, Viewmodel);
         this.mViewmodel = Viewmodel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.viewmodel);
+        super.requestRebind();
     }
 
     @Override
@@ -85,6 +91,12 @@ public class FragmentSubCategoriesBindingImpl extends FragmentSubCategoriesBindi
             }
             return true;
         }
+        else if (fieldId == BR.categoriesAdapter) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -95,7 +107,24 @@ public class FragmentSubCategoriesBindingImpl extends FragmentSubCategoriesBindi
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        te.app.mezzastore.pages.home.adapters.CategoriesAdapter viewmodelCategoriesAdapter = null;
+        te.app.mezzastore.pages.subCategories.viewModels.SubCategoriesViewModel viewmodel = mViewmodel;
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+
+
+                if (viewmodel != null) {
+                    // read viewmodel.categoriesAdapter
+                    viewmodelCategoriesAdapter = viewmodel.getCategoriesAdapter();
+                }
+        }
         // batch finished
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            te.app.mezzastore.base.ApplicationBinding.getItemsV2Binding(this.mboundView0, viewmodelCategoriesAdapter, "2", "1");
+        }
     }
     // Listener Stub Implementations
     // callback impls
@@ -103,7 +132,8 @@ public class FragmentSubCategoriesBindingImpl extends FragmentSubCategoriesBindi
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): null
+        flag 1 (0x2L): viewmodel.categoriesAdapter
+        flag 2 (0x3L): null
     flag mapping end*/
     //end
 }

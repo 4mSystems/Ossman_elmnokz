@@ -74,6 +74,11 @@ dependencies {
     //noinspection LifecycleAnnotationProcessorWithJava8
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata:2.3.0"
+    implementation "androidx.room:room-runtime:2.2.6"
+    annotationProcessor "androidx.room:room-compiler:2.2.6"
+    implementation "androidx.room:room-rxjava2:2.2.6"
     //pin view
     implementation 'com.chaos.view:pinview:1.4.3'
 

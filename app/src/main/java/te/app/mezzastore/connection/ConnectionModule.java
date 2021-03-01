@@ -72,9 +72,9 @@ public class ConnectionModule {
 
 
                     Request.Builder newRequest = request.newBuilder();
-                    if (LanguagesHelper.getJwt() != null) {
-                        newRequest.header("jwt", LanguagesHelper.getJwt());
-                    }
+//                    if (LanguagesHelper.getJwt() != null) {
+                        newRequest.header("Authorization", "$2y$12$ZtgKLOyfvyXH33JE67Ei0.qupt771t62d21M4/OJumBmsZ1bexxpCPiuhfdRKz");
+//                    }
                     newRequest.addHeader("lang", LanguagesHelper.getCurrentLanguage());
                     return chain.proceed(newRequest.build());
                 }

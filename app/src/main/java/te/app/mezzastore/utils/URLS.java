@@ -1,15 +1,15 @@
 package te.app.mezzastore.utils;
 
 public class URLS {
-    public final static String BASE_URL = "https://alti.my-staff.net/api/";
-    public final static String CATEGORIES = "getcategories";
-    public final static String SUB_CATEGORIES = "getsubcategory/";
-    public final static String CITIES = "allcities/";
+    public final static String BASE_URL = "https://mezza-store.com/api/";
+    public final static String PRODUCT_DETAILS = "products/details/";
+    public final static String SUB_CATEGORIES = "sub_categories/level1/";
+    public final static String PRODUCTS = "products/last-level/5/ar/v1?category_id=";
 
     public final static String PACKAGES = "packages";
     public final static String LOGIN_PHONE = "loginworker";
     public final static String LOGIN_SOCIAL = "user/social-login";
-    public final static String HOME = "getallrequests";
+    public final static String HOME = "categories/ar/v1";
     public final static String REGISTER = "registerworker";
     public final static String ORDER_DETAILS = "oneorderworker";
     public final static String CONFIRM_CODE = "verifycodeworker";

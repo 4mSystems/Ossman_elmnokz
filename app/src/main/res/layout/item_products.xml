@@ -16,6 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp4h"
         app:cardCornerRadius="@dimen/dp8h"
+        android:onClick="@{()-> itemViewModel.itemAction()}"
         app:cardElevation="4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -27,22 +28,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp150h"
                 android:src="@color/overlayBackground"
+                app:imageUrl="@{itemViewModel.product.image}"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <te.app.mezzastore.customViews.views.CustomTextViewMedium
+                android:id="@+id/product_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp4h"
                 android:ellipsize="marquee"
                 android:singleLine="true"
-                android:text="عطور"
-                android:id="@+id/product_name"
+                android:text="@{itemViewModel.product.title}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/colorPrimary"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/product_image" />
+
             <te.app.mezzastore.customViews.views.CustomTextViewMedium
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -51,7 +54,7 @@
                 android:layout_marginBottom="@dimen/dp4h"
                 android:ellipsize="marquee"
                 android:singleLine="true"
-                android:text="500 جنيه"
+                android:text="@{itemViewModel.product.price.concat(`ج.م`)}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark"

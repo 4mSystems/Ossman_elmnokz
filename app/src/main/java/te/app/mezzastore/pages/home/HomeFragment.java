@@ -11,6 +11,8 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
+
 import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
@@ -21,7 +23,11 @@ import te.app.mezzastore.base.IApplicationComponent;
 import te.app.mezzastore.base.MyApplication;
 import te.app.mezzastore.databinding.FragmentHomeBinding;
 import te.app.mezzastore.model.base.Mutable;
+import te.app.mezzastore.pages.cart.CartFragment;
+import te.app.mezzastore.pages.home.models.HomeResponse;
 import te.app.mezzastore.pages.home.viewModels.HomeViewModel;
+import te.app.mezzastore.utils.Constants;
+import te.app.mezzastore.utils.helper.MovementHelper;
 
 
 public class HomeFragment extends BaseFragment {
@@ -29,13 +35,16 @@ public class HomeFragment extends BaseFragment {
     private Context context;
     @Inject
     HomeViewModel viewModel;
+    FragmentHomeBinding binding;
 
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        FragmentHomeBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false);
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
+        binding.imageSlider.setIndicatorAnimation(IndicatorAnimationType.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
+        viewModel.homeData();
         setEvent();
         return binding.getRoot();
     }
@@ -44,13 +53,12 @@ public class HomeFragment extends BaseFragment {
         viewModel.liveData.observe(((LifecycleOwner) context), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-//            if (Constants.STORES.equals(((Mutable) o).message)) {
-//                MovementHelper.startActivity(context, MarketsFragment.class.getName(), getResources().getString(R.string.market_page), null);
-//            } else if (Constants.ORDER_ANY_THING.equals(((Mutable) o).message)) {
-//                MovementHelper.startActivity(context, PublicOrdersFragment.class.getName(), getResources().getString(R.string.public_order_bar_name), Constants.SHARE_BAR);
-//            } else if (Constants.NOTIFICATIONS.equals(((Mutable) o).message)) {
-//                MovementHelper.startActivity(context, NotificationsFragment.class.getName(), getResources().getString(R.string.menuNotifications), null);
-//            }
+            if (Constants.HOME.equals(((Mutable) o).message)) {
+                viewModel.setHomeData(((HomeResponse) mutable.object).getHomeData());
+                viewModel.setupSlider(binding.imageSlider);
+            } else if (Constants.CART.equals(((Mutable) o).message)) {
+                MovementHelper.startActivity(context, CartFragment.class.getName(), getString(R.string.cart), null);
+            }
         });
     }
 

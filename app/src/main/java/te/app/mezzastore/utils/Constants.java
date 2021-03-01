@@ -2,17 +2,17 @@ package te.app.mezzastore.utils;
 
 public class Constants {
 
-    public static final String IMAGE_WARNING = "IMAGE_WARNING";
-    public static final String SHOW_CITIES = "SHOW_CITIES";
-    public static final String TERMS_WARNING = "TERMS_WARNING";
+    public static final String IMAGE_BASE_URL = "https://res.cloudinary.com/dwevccen7/image/upload/v1614430614/";
+    public static final int PRODUCTS = 1;
+    public static final String PRODUCTS_RESPONSE = "PRODUCTS_RESPONSE";
 
-    public final static String REMOVE_CAT = "REMOVE_CAT";
+    public final static String CART = "CART";
     public final static String START_APP = "START_APP";
-    public final static String CONFIRM_CODE = "CONFIRM_CODE";
+    public final static String ADD_TO_CART = "ADD_TO_CART";
     public final static String NOT_VERIFIED = "NOT_VERIFIED";
-    public final static String CITIES = "CITIES";
-    public static final String PICKED_SUCCESSFULLY = "PICKED_SUCCESSFULLY";
-    public static final String LAT = "LAT";
+    public final static String MINUS = "MINUS";
+    public static final String PLUS = "PLUS";
+    public static final String REMOVE_FROM_CART = "REMOVE_FROM_CART";
     public static final String LNG = "LNG";
     public static final String ADDRESS = "ADDRESS";
 
@@ -34,7 +34,7 @@ public class Constants {
     public final static String EMPTY_WARNING = "EMPTY_WARNING";
 
     public final static String LOGOUT = "logout";
-    public final static String ORDER_DETAILS = "ORDER_DETAILS";
+    public final static String Product_DETAILS = "ORDER_DETAILS";
 
     public final static String SEND_OFFER = "SEND_OFFER";
     public final static String USER_DETAILS = "USER_DETAILS";
@@ -51,7 +51,7 @@ public class Constants {
     public final static String OFFERS = "OFFERS";
 
     public final static String LANGUAGE = "language";
-    public static final String DEFAULT_LANGUAGE = "en";
+    public static final String DEFAULT_LANGUAGE = "ar";
     public static final String ADD_OFFER = "ADD_OFFER";
     public static final String PAGE = "page";
     public final static String NAME_BAR = "name_bar";

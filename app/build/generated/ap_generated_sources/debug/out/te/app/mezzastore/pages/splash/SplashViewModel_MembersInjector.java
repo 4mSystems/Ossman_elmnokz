@@ -4,21 +4,21 @@ package te.app.mezzastore.pages.splash;
 import dagger.MembersInjector;
 import dagger.internal.InjectedFieldSignature;
 import javax.inject.Provider;
-import te.app.mezzastore.repository.AuthRepository;
+import te.app.mezzastore.repository.HomeRepository;
 
 @SuppressWarnings({
     "unchecked",
     "rawtypes"
 })
 public final class SplashViewModel_MembersInjector implements MembersInjector<SplashViewModel> {
-  private final Provider<AuthRepository> repositoryProvider;
+  private final Provider<HomeRepository> repositoryProvider;
 
-  public SplashViewModel_MembersInjector(Provider<AuthRepository> repositoryProvider) {
+  public SplashViewModel_MembersInjector(Provider<HomeRepository> repositoryProvider) {
     this.repositoryProvider = repositoryProvider;
   }
 
   public static MembersInjector<SplashViewModel> create(
-      Provider<AuthRepository> repositoryProvider) {
+      Provider<HomeRepository> repositoryProvider) {
     return new SplashViewModel_MembersInjector(repositoryProvider);
   }
 
@@ -28,7 +28,7 @@ public final class SplashViewModel_MembersInjector implements MembersInjector<Sp
   }
 
   @InjectedFieldSignature("te.app.mezzastore.pages.splash.SplashViewModel.repository")
-  public static void injectRepository(SplashViewModel instance, AuthRepository repository) {
+  public static void injectRepository(SplashViewModel instance, HomeRepository repository) {
     instance.repository = repository;
   }
 }

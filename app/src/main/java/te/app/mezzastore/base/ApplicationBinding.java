@@ -8,19 +8,23 @@ import android.widget.RatingBar;
 
 import androidx.databinding.BindingAdapter;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.squareup.picasso.Picasso;
 
 import te.app.mezzastore.R;
 import te.app.mezzastore.utils.helper.AppHelper;
+
+import static te.app.mezzastore.utils.Constants.IMAGE_BASE_URL;
 
 public class ApplicationBinding {
     private static final String TAG = "ApplicationBinding";
 
     @BindingAdapter("imageUrl")
     public static void loadImage(ImageView imageView, Object image) {
+        Log.e(TAG, "loadImage: " + IMAGE_BASE_URL.concat((String) image));
         if (image instanceof String && !TextUtils.isEmpty((String) image)) {
-            Log.e(TAG, "loadImage: " + image);
-            Picasso.get().load((String) image).placeholder(R.color.bg_grand_call).into(imageView);
+            Log.e(TAG, "loadImage: " + IMAGE_BASE_URL.concat((String) image));
+            Picasso.get().load(IMAGE_BASE_URL.concat((String) image)).placeholder(R.color.overlayBackground).into(imageView);
         } else if (image instanceof Integer) {
             imageView.setImageResource((Integer) image);
         }

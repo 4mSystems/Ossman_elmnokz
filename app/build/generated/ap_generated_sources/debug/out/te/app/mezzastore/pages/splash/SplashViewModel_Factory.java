@@ -3,19 +3,19 @@ package te.app.mezzastore.pages.splash;
 
 import dagger.internal.Factory;
 import javax.inject.Provider;
-import te.app.mezzastore.repository.AuthRepository;
+import te.app.mezzastore.repository.HomeRepository;
 
 @SuppressWarnings({
     "unchecked",
     "rawtypes"
 })
 public final class SplashViewModel_Factory implements Factory<SplashViewModel> {
-  private final Provider<AuthRepository> repositoryProvider;
+  private final Provider<HomeRepository> repositoryProvider;
 
-  private final Provider<AuthRepository> repositoryProvider2;
+  private final Provider<HomeRepository> repositoryProvider2;
 
-  public SplashViewModel_Factory(Provider<AuthRepository> repositoryProvider,
-      Provider<AuthRepository> repositoryProvider2) {
+  public SplashViewModel_Factory(Provider<HomeRepository> repositoryProvider,
+      Provider<HomeRepository> repositoryProvider2) {
     this.repositoryProvider = repositoryProvider;
     this.repositoryProvider2 = repositoryProvider2;
   }
@@ -27,12 +27,12 @@ public final class SplashViewModel_Factory implements Factory<SplashViewModel> {
     return instance;
   }
 
-  public static SplashViewModel_Factory create(Provider<AuthRepository> repositoryProvider,
-      Provider<AuthRepository> repositoryProvider2) {
+  public static SplashViewModel_Factory create(Provider<HomeRepository> repositoryProvider,
+      Provider<HomeRepository> repositoryProvider2) {
     return new SplashViewModel_Factory(repositoryProvider, repositoryProvider2);
   }
 
-  public static SplashViewModel newInstance(AuthRepository repository) {
+  public static SplashViewModel newInstance(HomeRepository repository) {
     return new SplashViewModel(repository);
   }
 }

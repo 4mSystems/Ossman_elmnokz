@@ -2,26 +2,37 @@
 package te.app.mezzastore.pages.home.viewModels;
 
 import dagger.internal.Factory;
+import javax.inject.Provider;
+import te.app.mezzastore.repository.HomeRepository;
 
 @SuppressWarnings({
     "unchecked",
     "rawtypes"
 })
 public final class HomeViewModel_Factory implements Factory<HomeViewModel> {
+  private final Provider<HomeRepository> homeRepositoryProvider;
+
+  private final Provider<HomeRepository> homeRepositoryProvider2;
+
+  public HomeViewModel_Factory(Provider<HomeRepository> homeRepositoryProvider,
+      Provider<HomeRepository> homeRepositoryProvider2) {
+    this.homeRepositoryProvider = homeRepositoryProvider;
+    this.homeRepositoryProvider2 = homeRepositoryProvider2;
+  }
+
   @Override
   public HomeViewModel get() {
-    return newInstance();
+    HomeViewModel instance = newInstance(homeRepositoryProvider.get());
+    HomeViewModel_MembersInjector.injectHomeRepository(instance, homeRepositoryProvider2.get());
+    return instance;
   }
 
-  public static HomeViewModel_Factory create() {
-    return InstanceHolder.INSTANCE;
+  public static HomeViewModel_Factory create(Provider<HomeRepository> homeRepositoryProvider,
+      Provider<HomeRepository> homeRepositoryProvider2) {
+    return new HomeViewModel_Factory(homeRepositoryProvider, homeRepositoryProvider2);
   }
 
-  public static HomeViewModel newInstance() {
-    return new HomeViewModel();
-  }
-
-  private static final class InstanceHolder {
-    private static final HomeViewModel_Factory INSTANCE = new HomeViewModel_Factory();
+  public static HomeViewModel newInstance(HomeRepository homeRepository) {
+    return new HomeViewModel(homeRepository);
   }
 }

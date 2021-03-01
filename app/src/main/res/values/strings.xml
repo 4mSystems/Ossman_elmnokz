@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mezza Store</string>
+    <string name="app_name">ميزه ستور</string>
     <string name="connection_invaild_body">Check your Internet connection and try again</string>
     <string name="connection_On">Please turn on</string>
     <string name="connection_Wifi">Wifi</string>
@@ -24,5 +24,10 @@
     <string name="client_address">Write your address in details</string>
     <string name="client_notes">"Write your notes "</string>
     <string name="send">Send order</string>
+    <string name="brand">الماركة :</string>
+    <string name="color">لون المنتج :</string>
+    <string name="cart">السلة</string>
+    <string name="total">الاجمالى</string>
+    <string name="add_cart_successfully">تم الاضافه بناج الى السلة</string>
     <!--end_grand-->
 </resources>

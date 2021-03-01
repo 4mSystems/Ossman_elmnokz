@@ -17,7 +17,7 @@ public class FragmentSplashBindingImpl extends FragmentSplashBinding  {
     }
     // views
     @NonNull
-    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
+    private final android.widget.RelativeLayout mboundView0;
     // variables
     // values
     // listeners
@@ -29,7 +29,7 @@ public class FragmentSplashBindingImpl extends FragmentSplashBinding  {
     private FragmentSplashBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             );
-        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
+        this.mboundView0 = (android.widget.RelativeLayout) bindings[0];
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
