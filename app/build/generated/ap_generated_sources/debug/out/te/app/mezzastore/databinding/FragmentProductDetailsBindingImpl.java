@@ -25,7 +25,7 @@ public class FragmentProductDetailsBindingImpl extends FragmentProductDetailsBin
     private final androidx.recyclerview.widget.RecyclerView mboundView7;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback7;
+    private final android.view.View.OnClickListener mCallback15;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -57,7 +57,7 @@ public class FragmentProductDetailsBindingImpl extends FragmentProductDetailsBin
         this.productPrice.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback7 = new te.app.mezzastore.generated.callback.OnClickListener(this, 1);
+        mCallback15 = new te.app.mezzastore.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -290,7 +290,7 @@ public class FragmentProductDetailsBindingImpl extends FragmentProductDetailsBin
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.addCart.setOnClickListener(mCallback7);
+            this.addCart.setOnClickListener(mCallback15);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1

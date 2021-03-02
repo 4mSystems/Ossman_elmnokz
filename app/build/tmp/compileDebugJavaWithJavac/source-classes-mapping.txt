@@ -10,6 +10,8 @@ te/app/mezzastore/databinding/ActivityMainBinding.java
  te.app.mezzastore.databinding.ActivityMainBinding
 te/app/mezzastore/base/BaseFragment.java
  te.app.mezzastore.base.BaseFragment
+te/app/mezzastore/pages/settings/ContactUsFragment.java
+ te.app.mezzastore.pages.settings.ContactUsFragment
 te/app/mezzastore/pages/cart/viewModels/CreateOrderViewModel.java
  te.app.mezzastore.pages.cart.viewModels.CreateOrderViewModel
 te/app/mezzastore/utils/upload/FileUpload.java
@@ -33,6 +35,8 @@ te/app/mezzastore/utils/session/MyContextWrapper.java
  te.app.mezzastore.utils.session.MyContextWrapper
 te/app/mezzastore/pages/products/ProductsFragment.java
  te.app.mezzastore.pages.products.ProductsFragment
+te/app/mezzastore/databinding/FilterDialogBinding.java
+ te.app.mezzastore.databinding.FilterDialogBinding
 te/app/mezzastore/pages/splash/SplashViewModel.java
  te.app.mezzastore.pages.splash.SplashViewModel
 te/app/mezzastore/pages/home/models/CategoriesItem.java
@@ -72,6 +76,7 @@ te/app/mezzastore/databinding/ActivityBaseBinding.java
 te/app/mezzastore/repository/CartRepository.java
  te.app.mezzastore.repository.CartRepository
  te.app.mezzastore.repository.CartRepository$DeleteProductAsyncTask
+ te.app.mezzastore.repository.CartRepository$EmptyCartAsyncTask
  te.app.mezzastore.repository.CartRepository$InsertProductAsyncTask
  te.app.mezzastore.repository.CartRepository$UpdateProductAsyncTask
 te/app/mezzastore/databinding/FragmentSubCategoriesBinding.java
@@ -79,6 +84,8 @@ te/app/mezzastore/databinding/FragmentSubCategoriesBinding.java
 te/app/mezzastore/customViews/views/CustomEditText.java
  te.app.mezzastore.customViews.views.CustomEditText
  te.app.mezzastore.customViews.views.CustomEditText$Validator
+te/app/mezzastore/pages/cart/models/CreateOrder.java
+ te.app.mezzastore.pages.cart.models.CreateOrder
 te/app/mezzastore/pages/cart/CartFragment.java
  te.app.mezzastore.pages.cart.CartFragment
 te/app/mezzastore/pages/products/viewModels/ItemProductsViewModel.java
@@ -103,6 +110,8 @@ te/app/mezzastore/pages/products/models/productDetails/ProductDetailsResponse.ja
  te.app.mezzastore.pages.products.models.productDetails.ProductDetailsResponse
 te/app/mezzastore/BuildConfig.java
  te.app.mezzastore.BuildConfig
+te/app/mezzastore/pages/settings/models/ContactRequest.java
+ te.app.mezzastore.pages.settings.models.ContactRequest
 te/app/mezzastore/databinding/FragmentHomeBinding.java
  te.app.mezzastore.databinding.FragmentHomeBinding
 te/app/mezzastore/repository/ProductRepository.java
@@ -124,6 +133,8 @@ te/app/mezzastore/databinding/FragmentCreateOrderBinding.java
  te.app.mezzastore.databinding.FragmentCreateOrderBinding
 te/app/mezzastore/pages/home/viewModels/HomeViewModel.java
  te.app.mezzastore.pages.home.viewModels.HomeViewModel
+te/app/mezzastore/databinding/FragmentContactBinding.java
+ te.app.mezzastore.databinding.FragmentContactBinding
 te/app/mezzastore/customViews/actionbar/MenuActionBarView.java
  te.app.mezzastore.customViews.actionbar.MenuActionBarView
 te/app/mezzastore/databinding/FragmentProductsBinding.java
@@ -142,6 +153,8 @@ te/app/mezzastore/repository/HomeRepository.java
  te.app.mezzastore.repository.HomeRepository
 te/app/mezzastore/pages/splash/SplashFragment.java
  te.app.mezzastore.pages.splash.SplashFragment
+te/app/mezzastore/repository/SettingsRepository.java
+ te.app.mezzastore.repository.SettingsRepository
 te/app/mezzastore/pages/home/viewModels/ItemCategoryViewModel.java
  te.app.mezzastore.pages.home.viewModels.ItemCategoryViewModel
 te/app/mezzastore/PassingObject.java
@@ -192,6 +205,8 @@ te/app/mezzastore/pages/products/models/productDetails/ProductDetails.java
  te.app.mezzastore.pages.products.models.productDetails.ProductDetails
 te/app/mezzastore/activity/BaseActivity.java
  te.app.mezzastore.activity.BaseActivity
+te/app/mezzastore/pages/settings/viewModels/SettingsViewModel.java
+ te.app.mezzastore.pages.settings.viewModels.SettingsViewModel
 te/app/mezzastore/databinding/LayoutActionBarBackBinding.java
  te.app.mezzastore.databinding.LayoutActionBarBackBinding
 te/app/mezzastore/utils/PopUp/PopUpMenuHelper.java

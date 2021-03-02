@@ -29,6 +29,12 @@
     <string name="cart">السلة</string>
     <string name="total">الاجمالى</string>
     <string name="add_cart_successfully">تم الاضافه بناج الى السلة</string>
+    <string name="send_successfully">تم إرسال الطلب بنجاح, سوف يتم التواصل معكم قريبا</string>
+    <string name="high_price">السعر من الاعلى الى الاقل</string>
+    <string name="low_price">السعر من الاقل الى الاعلى</string>
+    <string name="latest">التاريخ من الجديد الى القديم</string>
+    <string name="oldest">التاريخ من القديم الى الجديد</string>
+    <string name="send_contact">إرسال</string>
 
 
 </resources>

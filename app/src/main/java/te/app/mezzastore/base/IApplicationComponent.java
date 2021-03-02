@@ -13,6 +13,7 @@ import te.app.mezzastore.pages.favorites.FavoritesFragment;
 import te.app.mezzastore.pages.home.HomeFragment;
 import te.app.mezzastore.pages.products.ProductDetailsFragment;
 import te.app.mezzastore.pages.products.ProductsFragment;
+import te.app.mezzastore.pages.settings.ContactUsFragment;
 import te.app.mezzastore.pages.splash.SplashFragment;
 import te.app.mezzastore.pages.subCategories.SubCategoriesFragment;
 
@@ -38,6 +39,8 @@ public interface IApplicationComponent {
     void inject(CreateOrderFragment createOrderFragment);
 
     void inject(FavoritesFragment favoritesFragment);
+
+    void inject(ContactUsFragment contactUsFragment);
 
 
     @Component.Builder

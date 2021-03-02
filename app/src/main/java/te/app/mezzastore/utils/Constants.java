@@ -13,8 +13,8 @@ public class Constants {
     public final static String MINUS = "MINUS";
     public static final String PLUS = "PLUS";
     public static final String REMOVE_FROM_CART = "REMOVE_FROM_CART";
-    public static final String LNG = "LNG";
-    public static final String ADDRESS = "ADDRESS";
+    public static final String FINISH_ORDER = "FINISH_ORDER";
+    public static final String SEND_ORDER = "SEND_ORDER";
 
     public final static String ADD_CAT = "ADD_CAT";
     public final static String EMAIL = "email";

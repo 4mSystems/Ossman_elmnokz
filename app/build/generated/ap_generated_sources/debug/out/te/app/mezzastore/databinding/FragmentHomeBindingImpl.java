@@ -14,10 +14,9 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.ic_fav, 3);
-        sViewsWithIds.put(R.id.slider_container, 4);
-        sViewsWithIds.put(R.id.imageSlider, 5);
-        sViewsWithIds.put(R.id.floating_action_button, 6);
+        sViewsWithIds.put(R.id.ic_fav, 4);
+        sViewsWithIds.put(R.id.slider_container, 5);
+        sViewsWithIds.put(R.id.imageSlider, 6);
     }
     // views
     @NonNull
@@ -26,7 +25,9 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     private final androidx.recyclerview.widget.RecyclerView mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback6;
+    private final android.view.View.OnClickListener mCallback14;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback13;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -36,12 +37,13 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     }
     private FragmentHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton) bindings[6]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
+            , (com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton) bindings[3]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[4]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
-            , (com.smarteist.autoimageslider.SliderView) bindings[5]
-            , (androidx.cardview.widget.CardView) bindings[4]
+            , (com.smarteist.autoimageslider.SliderView) bindings[6]
+            , (androidx.cardview.widget.CardView) bindings[5]
             );
+        this.floatingActionButton.setTag(null);
         this.icShoppingCart.setTag(null);
         this.mboundView0 = (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0];
         this.mboundView0.setTag(null);
@@ -49,7 +51,8 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback6 = new te.app.mezzastore.generated.callback.OnClickListener(this, 1);
+        mCallback14 = new te.app.mezzastore.generated.callback.OnClickListener(this, 2);
+        mCallback13 = new te.app.mezzastore.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -140,7 +143,8 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.icShoppingCart.setOnClickListener(mCallback6);
+            this.floatingActionButton.setOnClickListener(mCallback14);
+            this.icShoppingCart.setOnClickListener(mCallback13);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -151,19 +155,41 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // viewmodel != null
-        boolean viewmodelJavaLangObjectNull = false;
-        // viewmodel
-        te.app.mezzastore.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+        switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.mezzastore.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
 
 
 
-        viewmodelJavaLangObjectNull = (viewmodel) != (null);
-        if (viewmodelJavaLangObjectNull) {
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
 
 
-            viewmodel.toCart();
+                    viewmodel.toContact();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.mezzastore.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toCart();
+                }
+                break;
+            }
         }
     }
     // dirty flag

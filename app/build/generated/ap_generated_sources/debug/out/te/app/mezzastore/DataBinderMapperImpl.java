@@ -17,7 +17,9 @@ import java.util.HashMap;
 import java.util.List;
 import te.app.mezzastore.databinding.ActivityBaseBindingImpl;
 import te.app.mezzastore.databinding.ActivityMainBindingImpl;
+import te.app.mezzastore.databinding.FilterDialogBindingImpl;
 import te.app.mezzastore.databinding.FragmentCartBindingImpl;
+import te.app.mezzastore.databinding.FragmentContactBindingImpl;
 import te.app.mezzastore.databinding.FragmentCreateOrderBindingImpl;
 import te.app.mezzastore.databinding.FragmentFavoritesBindingImpl;
 import te.app.mezzastore.databinding.FragmentHomeBindingImpl;
@@ -37,40 +39,46 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_ACTIVITYMAIN = 2;
 
-  private static final int LAYOUT_FRAGMENTCART = 3;
+  private static final int LAYOUT_FILTERDIALOG = 3;
 
-  private static final int LAYOUT_FRAGMENTCREATEORDER = 4;
+  private static final int LAYOUT_FRAGMENTCART = 4;
 
-  private static final int LAYOUT_FRAGMENTFAVORITES = 5;
+  private static final int LAYOUT_FRAGMENTCONTACT = 5;
 
-  private static final int LAYOUT_FRAGMENTHOME = 6;
+  private static final int LAYOUT_FRAGMENTCREATEORDER = 6;
 
-  private static final int LAYOUT_FRAGMENTPRODUCTDETAILS = 7;
+  private static final int LAYOUT_FRAGMENTFAVORITES = 7;
 
-  private static final int LAYOUT_FRAGMENTPRODUCTS = 8;
+  private static final int LAYOUT_FRAGMENTHOME = 8;
 
-  private static final int LAYOUT_FRAGMENTSPLASH = 9;
+  private static final int LAYOUT_FRAGMENTPRODUCTDETAILS = 9;
 
-  private static final int LAYOUT_FRAGMENTSUBCATEGORIES = 10;
+  private static final int LAYOUT_FRAGMENTPRODUCTS = 10;
 
-  private static final int LAYOUT_ITEMCART = 11;
+  private static final int LAYOUT_FRAGMENTSPLASH = 11;
 
-  private static final int LAYOUT_ITEMFAVORITE = 12;
+  private static final int LAYOUT_FRAGMENTSUBCATEGORIES = 12;
 
-  private static final int LAYOUT_ITEMHOME = 13;
+  private static final int LAYOUT_ITEMCART = 13;
 
-  private static final int LAYOUT_ITEMPRODUCTS = 14;
+  private static final int LAYOUT_ITEMFAVORITE = 14;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 15;
+  private static final int LAYOUT_ITEMHOME = 15;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 16;
+  private static final int LAYOUT_ITEMPRODUCTS = 16;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(16);
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 17;
+
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 18;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(18);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.mezzastore.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.mezzastore.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.mezzastore.R.layout.filter_dialog, LAYOUT_FILTERDIALOG);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.mezzastore.R.layout.fragment_cart, LAYOUT_FRAGMENTCART);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.mezzastore.R.layout.fragment_contact, LAYOUT_FRAGMENTCONTACT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.mezzastore.R.layout.fragment_create_order, LAYOUT_FRAGMENTCREATEORDER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.mezzastore.R.layout.fragment_favorites, LAYOUT_FRAGMENTFAVORITES);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.mezzastore.R.layout.fragment_home, LAYOUT_FRAGMENTHOME);
@@ -107,11 +115,23 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for activity_main is invalid. Received: " + tag);
         }
+        case  LAYOUT_FILTERDIALOG: {
+          if ("layout/filter_dialog_0".equals(tag)) {
+            return new FilterDialogBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for filter_dialog is invalid. Received: " + tag);
+        }
         case  LAYOUT_FRAGMENTCART: {
           if ("layout/fragment_cart_0".equals(tag)) {
             return new FragmentCartBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_cart is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTCONTACT: {
+          if ("layout/fragment_contact_0".equals(tag)) {
+            return new FragmentContactBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_contact is invalid. Received: " + tag);
         }
         case  LAYOUT_FRAGMENTCREATEORDER: {
           if ("layout/fragment_create_order_0".equals(tag)) {
@@ -257,12 +277,14 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(16);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(18);
 
     static {
       sKeys.put("layout/activity_base_0", te.app.mezzastore.R.layout.activity_base);
       sKeys.put("layout/activity_main_0", te.app.mezzastore.R.layout.activity_main);
+      sKeys.put("layout/filter_dialog_0", te.app.mezzastore.R.layout.filter_dialog);
       sKeys.put("layout/fragment_cart_0", te.app.mezzastore.R.layout.fragment_cart);
+      sKeys.put("layout/fragment_contact_0", te.app.mezzastore.R.layout.fragment_contact);
       sKeys.put("layout/fragment_create_order_0", te.app.mezzastore.R.layout.fragment_create_order);
       sKeys.put("layout/fragment_favorites_0", te.app.mezzastore.R.layout.fragment_favorites);
       sKeys.put("layout/fragment_home_0", te.app.mezzastore.R.layout.fragment_home);

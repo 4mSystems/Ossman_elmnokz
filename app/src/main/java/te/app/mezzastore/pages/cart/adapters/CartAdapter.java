@@ -59,11 +59,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
         Product product = productList.get(position);
         ItemCartViewModel itemMenuViewModel = new ItemCartViewModel(product);
-        itemMenuViewModel.getLiveData().observe(((LifecycleOwner) context), o -> {
-            if (o.equals(Constants.PLUS) || o.equals(Constants.MINUS) || o.equals(Constants.REMOVE_FROM_CART)) {
-                notifyItemRangeChanged(position, productList.size());
-            }
-        });
         holder.setViewModel(itemMenuViewModel);
     }
 

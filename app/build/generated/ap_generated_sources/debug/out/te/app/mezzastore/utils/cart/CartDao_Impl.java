@@ -31,6 +31,8 @@ public final class CartDao_Impl implements CartDao {
 
   private final SharedSQLiteStatement __preparedStmtOfUpdateProductQuantity;
 
+  private final SharedSQLiteStatement __preparedStmtOfEmptyProductCart;
+
   public CartDao_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfProduct = new EntityInsertionAdapter<Product>(__db) {
@@ -102,6 +104,13 @@ public final class CartDao_Impl implements CartDao {
         return _query;
       }
     };
+    this.__preparedStmtOfEmptyProductCart = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "DELETE FROM PRODUCT";
+        return _query;
+      }
+    };
   }
 
   @Override
@@ -160,6 +169,20 @@ public final class CartDao_Impl implements CartDao {
     } finally {
       __db.endTransaction();
       __preparedStmtOfUpdateProductQuantity.release(_stmt);
+    }
+  }
+
+  @Override
+  public void emptyProductCart() {
+    __db.assertNotSuspendingTransaction();
+    final SupportSQLiteStatement _stmt = __preparedStmtOfEmptyProductCart.acquire();
+    __db.beginTransaction();
+    try {
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfEmptyProductCart.release(_stmt);
     }
   }
 

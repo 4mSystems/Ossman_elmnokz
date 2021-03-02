@@ -11,10 +11,13 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 
+import com.google.gson.Gson;
+
 import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
 
+import te.app.mezzastore.PassingObject;
 import te.app.mezzastore.R;
 import te.app.mezzastore.base.BaseFragment;
 import te.app.mezzastore.base.IApplicationComponent;
@@ -22,8 +25,11 @@ import te.app.mezzastore.base.MyApplication;
 import te.app.mezzastore.databinding.FragmentCartBinding;
 import te.app.mezzastore.databinding.FragmentCreateOrderBinding;
 import te.app.mezzastore.model.base.Mutable;
+import te.app.mezzastore.pages.cart.models.CreateOrder;
 import te.app.mezzastore.pages.cart.viewModels.CartViewModel;
 import te.app.mezzastore.pages.cart.viewModels.CreateOrderViewModel;
+import te.app.mezzastore.utils.Constants;
+import te.app.mezzastore.utils.helper.MovementHelper;
 
 
 public class CreateOrderFragment extends BaseFragment {
@@ -38,6 +44,12 @@ public class CreateOrderFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
+        Bundle bundle = this.getArguments();
+        if (bundle != null) {
+            String passingObject = bundle.getString(Constants.BUNDLE);
+            viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
+            viewModel.setCreateOrder(new Gson().fromJson(String.valueOf(viewModel.getPassingObject().getObjectClass()), CreateOrder.class));
+        }
         setEvent();
         return binding.getRoot();
     }
@@ -46,13 +58,11 @@ public class CreateOrderFragment extends BaseFragment {
         viewModel.liveData.observe(((LifecycleOwner) context), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-//            if (Constants.STORES.equals(((Mutable) o).message)) {
-//                MovementHelper.startActivity(context, MarketsFragment.class.getName(), getResources().getString(R.string.market_page), null);
-//            } else if (Constants.ORDER_ANY_THING.equals(((Mutable) o).message)) {
-//                MovementHelper.startActivity(context, PublicOrdersFragment.class.getName(), getResources().getString(R.string.public_order_bar_name), Constants.SHARE_BAR);
-//            } else if (Constants.NOTIFICATIONS.equals(((Mutable) o).message)) {
-//                MovementHelper.startActivity(context, NotificationsFragment.class.getName(), getResources().getString(R.string.menuNotifications), null);
-//            }
+            if (Constants.SEND_ORDER.equals(((Mutable) o).message)) {
+                toastMessage(getString(R.string.send_successfully));
+                MovementHelper.finishWithResult(new PassingObject(), context);
+                finishActivity();
+            }
         });
     }
 

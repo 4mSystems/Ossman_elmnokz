@@ -19,6 +19,8 @@ import te.app.mezzastore.pages.cart.CreateOrderFragment;
 import te.app.mezzastore.pages.cart.CreateOrderFragment_MembersInjector;
 import te.app.mezzastore.pages.cart.viewModels.CartViewModel;
 import te.app.mezzastore.pages.cart.viewModels.CreateOrderViewModel;
+import te.app.mezzastore.pages.cart.viewModels.CreateOrderViewModel_Factory;
+import te.app.mezzastore.pages.cart.viewModels.CreateOrderViewModel_MembersInjector;
 import te.app.mezzastore.pages.favorites.FavoritesFragment;
 import te.app.mezzastore.pages.favorites.FavoritesFragment_MembersInjector;
 import te.app.mezzastore.pages.favorites.viewModels.FavoritesViewModel;
@@ -37,6 +39,11 @@ import te.app.mezzastore.pages.products.viewModels.ProductDetailsViewModel_Membe
 import te.app.mezzastore.pages.products.viewModels.ProductsViewModel;
 import te.app.mezzastore.pages.products.viewModels.ProductsViewModel_Factory;
 import te.app.mezzastore.pages.products.viewModels.ProductsViewModel_MembersInjector;
+import te.app.mezzastore.pages.settings.ContactUsFragment;
+import te.app.mezzastore.pages.settings.ContactUsFragment_MembersInjector;
+import te.app.mezzastore.pages.settings.viewModels.SettingsViewModel;
+import te.app.mezzastore.pages.settings.viewModels.SettingsViewModel_Factory;
+import te.app.mezzastore.pages.settings.viewModels.SettingsViewModel_MembersInjector;
 import te.app.mezzastore.pages.splash.SplashFragment;
 import te.app.mezzastore.pages.splash.SplashFragment_MembersInjector;
 import te.app.mezzastore.pages.splash.SplashViewModel;
@@ -51,6 +58,8 @@ import te.app.mezzastore.repository.HomeRepository;
 import te.app.mezzastore.repository.HomeRepository_Factory;
 import te.app.mezzastore.repository.ProductRepository;
 import te.app.mezzastore.repository.ProductRepository_Factory;
+import te.app.mezzastore.repository.SettingsRepository;
+import te.app.mezzastore.repository.SettingsRepository_Factory;
 
 @SuppressWarnings({
     "unchecked",
@@ -66,6 +75,8 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   private Provider<HomeRepository> homeRepositoryProvider;
 
   private Provider<ProductRepository> productRepositoryProvider;
+
+  private Provider<SettingsRepository> settingsRepositoryProvider;
 
   private DaggerIApplicationComponent(ConnectionModule connectionModuleParam,
       LiveData liveDataParam) {
@@ -101,6 +112,14 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectProductDetailsViewModel(ProductDetailsViewModel_Factory.newInstance(productRepositoryProvider.get()));
   }
 
+  private CreateOrderViewModel createOrderViewModel() {
+    return injectCreateOrderViewModel(CreateOrderViewModel_Factory.newInstance(productRepositoryProvider.get()));
+  }
+
+  private SettingsViewModel settingsViewModel() {
+    return injectSettingsViewModel(SettingsViewModel_Factory.newInstance(settingsRepositoryProvider.get()));
+  }
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam,
       final LiveData liveDataParam) {
@@ -109,6 +128,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     this.connectionHelperProvider = DoubleCheck.provider(ConnectionHelper_Factory.create(webServiceProvider, webServiceProvider));
     this.homeRepositoryProvider = DoubleCheck.provider(HomeRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
     this.productRepositoryProvider = DoubleCheck.provider(ProductRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
+    this.settingsRepositoryProvider = DoubleCheck.provider(SettingsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
   }
 
   @Override
@@ -158,6 +178,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(FavoritesFragment favoritesFragment) {
     injectFavoritesFragment(favoritesFragment);
+  }
+
+  @Override
+  public void inject(ContactUsFragment contactUsFragment) {
+    injectContactUsFragment(contactUsFragment);
   }
 
   private MainActivity injectMainActivity(MainActivity instance) {
@@ -220,13 +245,28 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
+  private CreateOrderViewModel injectCreateOrderViewModel(CreateOrderViewModel instance) {
+    CreateOrderViewModel_MembersInjector.injectProductRepository(instance, productRepositoryProvider.get());
+    return instance;
+  }
+
   private CreateOrderFragment injectCreateOrderFragment(CreateOrderFragment instance) {
-    CreateOrderFragment_MembersInjector.injectViewModel(instance, new CreateOrderViewModel());
+    CreateOrderFragment_MembersInjector.injectViewModel(instance, createOrderViewModel());
     return instance;
   }
 
   private FavoritesFragment injectFavoritesFragment(FavoritesFragment instance) {
     FavoritesFragment_MembersInjector.injectViewModel(instance, new FavoritesViewModel());
+    return instance;
+  }
+
+  private SettingsViewModel injectSettingsViewModel(SettingsViewModel instance) {
+    SettingsViewModel_MembersInjector.injectRepository(instance, settingsRepositoryProvider.get());
+    return instance;
+  }
+
+  private ContactUsFragment injectContactUsFragment(ContactUsFragment instance) {
+    ContactUsFragment_MembersInjector.injectViewModel(instance, settingsViewModel());
     return instance;
   }
 

@@ -16,6 +16,7 @@ public class LayoutActionBarBackBindingImpl extends LayoutActionBarBackBinding  
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.img_action_bar_cancel, 1);
         sViewsWithIds.put(R.id.tv_action_bar_title, 2);
+        sViewsWithIds.put(R.id.img_action_bar_filter, 3);
     }
     // views
     @NonNull
@@ -26,11 +27,12 @@ public class LayoutActionBarBackBindingImpl extends LayoutActionBarBackBinding  
     // Inverse Binding Event Handlers
 
     public LayoutActionBarBackBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private LayoutActionBarBackBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
             , (te.app.mezzastore.customViews.views.CustomTextViewMedium) bindings[2]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];

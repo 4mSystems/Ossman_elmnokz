@@ -34,16 +34,16 @@
                     android:layout_marginEnd="@dimen/dp6w"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
-                    <!--                app:error="@{viewmodel.addNoteRequest.noteError}"-->
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="top"
                         android:hint="@string/client_name"
                         android:inputType="text"
+                        android:text="@={viewmodel.createOrder.name}"
                         android:textColor="@color/colorPrimaryDark"
                         android:textColorHint="@color/overlayBackground" />
-                    <!--                android:text="@={viewmodel.addNoteRequest.notes}"-->
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -56,15 +56,15 @@
                     android:layout_marginEnd="@dimen/dp6w"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/client_name">
-                    <!--                app:error="@{viewmodel.addNoteRequest.noteError}"-->
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/client_phone"
                         android:inputType="phone"
+                        android:text="@={viewmodel.createOrder.phone}"
                         android:textColor="@color/colorPrimaryDark"
                         android:textColorHint="@color/overlayBackground" />
-                    <!--                android:text="@={viewmodel.addNoteRequest.notes}"-->
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -77,16 +77,16 @@
                     android:layout_marginEnd="@dimen/dp6w"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/client_phone">
-                    <!--                app:error="@{viewmodel.addNoteRequest.noteError}"-->
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="top"
                         android:hint="@string/client_address"
                         android:inputType="text"
+                        android:text="@={viewmodel.createOrder.address}"
                         android:textColor="@color/colorPrimaryDark"
                         android:textColorHint="@color/overlayBackground" />
-                    <!--                android:text="@={viewmodel.addNoteRequest.notes}"-->
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -99,16 +99,16 @@
                     android:layout_marginEnd="@dimen/dp6w"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/client_address">
-                    <!--                app:error="@{viewmodel.addNoteRequest.noteError}"-->
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/dp100h"
                         android:gravity="top"
                         android:hint="@string/client_notes"
                         android:inputType="text"
+                        android:text="@={viewmodel.createOrder.notes}"
                         android:textColor="@color/colorPrimaryDark"
                         android:textColorHint="@color/overlayBackground" />
-                    <!--                android:text="@={viewmodel.addNoteRequest.notes}"-->
                 </com.google.android.material.textfield.TextInputLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -121,6 +121,7 @@
             android:background="@color/colorPrimaryDark"
             android:text="@string/send"
             android:textAllCaps="false"
+            android:onClick="@{()->viewmodel.sendOrder()}"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent" />

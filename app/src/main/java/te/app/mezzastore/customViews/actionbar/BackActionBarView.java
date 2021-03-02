@@ -16,6 +16,7 @@ import te.app.mezzastore.utils.session.LanguagesHelper;
 
 public class BackActionBarView extends RelativeLayout {
     public LayoutActionBarBackBinding layoutActionBarBackBinding;
+
     public BackActionBarView(Context context) {
         super(context);
         init();
@@ -49,6 +50,5 @@ public class BackActionBarView extends RelativeLayout {
     public void setTitle(String title) {
         layoutActionBarBackBinding.tvActionBarTitle.setText(title);
     }
-
 
 }

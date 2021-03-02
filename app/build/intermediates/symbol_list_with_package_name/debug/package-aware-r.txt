@@ -2926,6 +2926,7 @@ drawable ic_delete
 drawable ic_error_outline_white_24dp
 drawable ic_favorite_border
 drawable ic_favorite_fill
+drawable ic_filter
 drawable ic_info_outline_white_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_list_fav
@@ -3197,6 +3198,7 @@ id ignoreRequest
 id image
 id imageSlider
 id img_action_bar_cancel
+id img_action_bar_filter
 id img_airplane
 id img_home_bar_menu
 id increment
@@ -3549,7 +3551,9 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_no_internet
+layout filter_dialog
 layout fragment_cart
+layout fragment_contact
 layout fragment_create_order
 layout fragment_favorites
 layout fragment_home
@@ -3719,10 +3723,13 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string finish_order
 string hide_bottom_view_on_scroll_behavior
+string high_price
 string home
 string icon_content_description
 string item_view_role_description
+string latest
 string library_name
+string low_price
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection
@@ -3776,6 +3783,7 @@ string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string ok
+string oldest
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -3786,6 +3794,8 @@ string please_turn_off
 string please_turn_on
 string search_menu_title
 string send
+string send_contact
+string send_successfully
 string settings
 string status_bar_notification_info_overflow
 string toast_message

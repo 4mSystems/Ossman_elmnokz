@@ -42,6 +42,10 @@ public class HomeViewModel extends BaseViewModel {
         liveData.setValue(new Mutable(Constants.CART));
     }
 
+    public void toContact() {
+        liveData.setValue(new Mutable(Constants.CONTACT));
+    }
+
     @Bindable
     public HomeData getHomeData() {
         return homeData;

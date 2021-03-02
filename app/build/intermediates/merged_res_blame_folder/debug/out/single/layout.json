@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_contact.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_contact.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_create_order.xml",
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_create_order.xml"
     },
@@ -26,6 +30,10 @@
     {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_sub_categories.xml",
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_sub_categories.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/filter_dialog.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/filter_dialog.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_base.xml",

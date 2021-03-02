@@ -26,10 +26,13 @@ public interface CartDao {
 
     @Query("UPDATE PRODUCT SET quantity=:quantity where id=:productId")
     void updateProductQuantity(int quantity, int productId);
+
     @Update
     void updateProduct(Product product);
 
     @Query("select sum(price * quantity) from product")
     LiveData<String> getCartTotal();
 
+    @Query("DELETE FROM PRODUCT")
+    void emptyProductCart();
 }

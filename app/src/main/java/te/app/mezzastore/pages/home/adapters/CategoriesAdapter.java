@@ -60,7 +60,7 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
                 if (pageType == 0)
                     MovementHelper.startActivityWithBundle(context, new PassingObject(categoriesData.getId()), categoriesData.getTitle(), SubCategoriesFragment.class.getName(), null);
                 else
-                    MovementHelper.startActivityWithBundle(context, new PassingObject(categoriesData.getId()), categoriesData.getTitle(), ProductsFragment.class.getName(), null);
+                    MovementHelper.startActivityWithBundle(context, new PassingObject(categoriesData.getId()), categoriesData.getTitle(), ProductsFragment.class.getName(), "VISIBLE");
             }
         });
         holder.setViewModel(itemMenuViewModel);

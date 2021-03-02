@@ -12,9 +12,9 @@ import te.app.mezzastore.utils.cart.CartDao;
 import te.app.mezzastore.utils.cart.CartDataBase;
 
 public class CartRepository {
-    private CartDao cartDao;
-    private LiveData<List<Product>> allProducts;
-    private LiveData<String> cartTotal;
+    CartDao cartDao;
+    LiveData<List<Product>> allProducts;
+    LiveData<String> cartTotal;
 
     public CartRepository(Application application) {
         CartDataBase cartDataBase = CartDataBase.getInstance(application);
@@ -29,14 +29,15 @@ public class CartRepository {
 
     public void update(Product product) {
         new UpdateProductAsyncTask(cartDao).execute(product);
-
     }
 
     public void deleteItem(int productId) {
         new DeleteProductAsyncTask(cartDao).execute(productId);
 
     }
-
+    public void emptyCart() {
+        new EmptyCartAsyncTask(cartDao).execute();
+    }
     public LiveData<List<Product>> getAllProducts() {
         return allProducts;
     }
@@ -88,6 +89,18 @@ public class CartRepository {
             return null;
         }
     }
+    private static class EmptyCartAsyncTask extends AsyncTask<Void, Void, Void> {
+        private CartDao cartDao;
 
+        public EmptyCartAsyncTask(CartDao cartDao) {
+            this.cartDao = cartDao;
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            cartDao.emptyProductCart();
+            return null;
+        }
+    }
 
 }

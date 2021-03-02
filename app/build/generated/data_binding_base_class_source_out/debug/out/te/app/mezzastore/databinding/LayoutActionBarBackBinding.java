@@ -19,12 +19,17 @@ public abstract class LayoutActionBarBackBinding extends ViewDataBinding {
   public final AppCompatImageView imgActionBarCancel;
 
   @NonNull
+  public final AppCompatImageView imgActionBarFilter;
+
+  @NonNull
   public final CustomTextViewMedium tvActionBarTitle;
 
   protected LayoutActionBarBackBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatImageView imgActionBarCancel, CustomTextViewMedium tvActionBarTitle) {
+      AppCompatImageView imgActionBarCancel, AppCompatImageView imgActionBarFilter,
+      CustomTextViewMedium tvActionBarTitle) {
     super(_bindingComponent, _root, _localFieldCount);
     this.imgActionBarCancel = imgActionBarCancel;
+    this.imgActionBarFilter = imgActionBarFilter;
     this.tvActionBarTitle = tvActionBarTitle;
   }
 

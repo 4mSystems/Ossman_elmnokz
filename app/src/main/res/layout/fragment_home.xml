@@ -107,6 +107,7 @@
             android:layout_margin="@dimen/dp12w"
             android:text="@string/contact_us"
             android:textAllCaps="false"
+            android:onClick="@{()-> viewmodel.toContact()}"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/colorPrimaryDark"
             app:backgroundTint="@color/white"

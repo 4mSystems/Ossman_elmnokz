@@ -26,6 +26,7 @@ import te.app.mezzastore.model.base.Mutable;
 import te.app.mezzastore.pages.cart.CartFragment;
 import te.app.mezzastore.pages.home.models.HomeResponse;
 import te.app.mezzastore.pages.home.viewModels.HomeViewModel;
+import te.app.mezzastore.pages.settings.ContactUsFragment;
 import te.app.mezzastore.utils.Constants;
 import te.app.mezzastore.utils.helper.MovementHelper;
 
@@ -58,6 +59,8 @@ public class HomeFragment extends BaseFragment {
                 viewModel.setupSlider(binding.imageSlider);
             } else if (Constants.CART.equals(((Mutable) o).message)) {
                 MovementHelper.startActivity(context, CartFragment.class.getName(), getString(R.string.cart), null);
+            } else if (Constants.CONTACT.equals(((Mutable) o).message)) {
+                MovementHelper.startActivity(context, ContactUsFragment.class.getName(), getString(R.string.contact_us), null);
             }
         });
     }
@@ -66,6 +69,7 @@ public class HomeFragment extends BaseFragment {
     @Override
     public void onResume() {
         super.onResume();
+        viewModel.getHomeRepository().setLiveData(viewModel.liveData);
     }
 
     @Override

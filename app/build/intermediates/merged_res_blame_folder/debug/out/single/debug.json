@@ -4,12 +4,12 @@
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/loader_animation.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_fragment_create_order.xml.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_create_order.xml"
-    },
-    {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_fragment_home.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_fragment_create_order.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_create_order.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/mipmap-mdpi_grand_exit.png.flat",
@@ -20,16 +20,16 @@
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_filter_dialog.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/filter_dialog.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/drawable_ic_back.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/drawable/ic_back.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/anim_shake_vibrate.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/anim/shake_vibrate.xml"
-    },
-    {
-        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/drawable_logo.png.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/drawable/logo.png"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_fragment_favorites.xml.flat",
@@ -160,6 +160,10 @@
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/item_home.xml"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/drawable_ic_filter.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/drawable/ic_filter.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_home_slider.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/home_slider.xml"
     },
@@ -190,6 +194,10 @@
     {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/anim_image_click.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/anim/image_click.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_fragment_contact.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_contact.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_layout_action_bar_back.xml.flat",
@@ -234,6 +242,10 @@
     {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/layout_fragment_product_details.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_product_details.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_logo.png.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/drawable-xxxhdpi/logo.png"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",

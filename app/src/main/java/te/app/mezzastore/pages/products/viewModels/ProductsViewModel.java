@@ -29,6 +29,11 @@ public class ProductsViewModel extends BaseViewModel {
     public void getProducts() {
         compositeDisposable.add(productRepository.getProducts(getPassingObject().getId()));
     }
+
+    public void filter(int type) {
+        compositeDisposable.add(productRepository.filter(type, getPassingObject().getId()));
+    }
+
     @Bindable
     public ProductsAdapter getProductsAdapter() {
         return this.productsAdapter == null ? this.productsAdapter = new ProductsAdapter() : this.productsAdapter;

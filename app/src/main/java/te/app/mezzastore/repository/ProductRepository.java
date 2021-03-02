@@ -9,6 +9,8 @@ import javax.inject.Singleton;
 import io.reactivex.disposables.Disposable;
 import te.app.mezzastore.connection.ConnectionHelper;
 import te.app.mezzastore.model.base.Mutable;
+import te.app.mezzastore.model.base.StatusMessage;
+import te.app.mezzastore.pages.cart.models.CreateOrder;
 import te.app.mezzastore.pages.home.models.HomeResponse;
 import te.app.mezzastore.pages.products.models.ProductResponse;
 import te.app.mezzastore.pages.products.models.productDetails.ProductDetailsResponse;
@@ -36,8 +38,19 @@ public class ProductRepository extends BaseRepository {
                 Constants.PRODUCTS_RESPONSE, true);
     }
 
+    public Disposable filter(int type, int catId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.FILTER + catId + "&type=" + type, new Object(), ProductResponse.class,
+                Constants.PRODUCTS_RESPONSE, true);
+    }
+
     public Disposable getProductDetails(int productId) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.PRODUCT_DETAILS + productId + "/ar/v1", new Object(), ProductDetailsResponse.class,
                 Constants.Product_DETAILS, true);
     }
+
+    public Disposable sendOrder(CreateOrder createOrder) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.SEND_ORDER, createOrder, StatusMessage.class,
+                Constants.SEND_ORDER, true);
+    }
+
 }

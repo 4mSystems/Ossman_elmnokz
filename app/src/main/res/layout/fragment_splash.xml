@@ -18,6 +18,6 @@
             android:layout_width="@dimen/dp120w"
             android:layout_height="@dimen/dp120h"
             android:layout_centerInParent="true"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@drawable/logo" />
     </RelativeLayout>
 </layout>

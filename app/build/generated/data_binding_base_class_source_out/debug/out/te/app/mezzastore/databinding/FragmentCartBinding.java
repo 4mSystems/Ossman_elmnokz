@@ -11,6 +11,7 @@ import androidx.cardview.widget.CardView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.airbnb.lottie.LottieAnimationView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.mezzastore.R;
@@ -20,6 +21,9 @@ import te.app.mezzastore.pages.cart.viewModels.CartViewModel;
 public abstract class FragmentCartBinding extends ViewDataBinding {
   @NonNull
   public final AppCompatButton addCart;
+
+  @NonNull
+  public final LottieAnimationView pbBaseLoadingBar;
 
   @NonNull
   public final CardView total;
@@ -34,10 +38,11 @@ public abstract class FragmentCartBinding extends ViewDataBinding {
   protected CartViewModel mViewmodel;
 
   protected FragmentCartBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatButton addCart, CardView total, CustomTextViewMedium tvTotal,
-      CustomTextViewMedium tvTotalValue) {
+      AppCompatButton addCart, LottieAnimationView pbBaseLoadingBar, CardView total,
+      CustomTextViewMedium tvTotal, CustomTextViewMedium tvTotalValue) {
     super(_bindingComponent, _root, _localFieldCount);
     this.addCart = addCart;
+    this.pbBaseLoadingBar = pbBaseLoadingBar;
     this.total = total;
     this.tvTotal = tvTotal;
     this.tvTotalValue = tvTotalValue;

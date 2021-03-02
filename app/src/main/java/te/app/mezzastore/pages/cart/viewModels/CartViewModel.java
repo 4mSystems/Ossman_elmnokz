@@ -15,6 +15,7 @@ import te.app.mezzastore.model.base.Mutable;
 import te.app.mezzastore.pages.cart.adapters.CartAdapter;
 import te.app.mezzastore.pages.products.models.productDetails.Product;
 import te.app.mezzastore.repository.CartRepository;
+import te.app.mezzastore.utils.Constants;
 
 public class CartViewModel extends BaseViewModel {
 
@@ -45,6 +46,11 @@ public class CartViewModel extends BaseViewModel {
     @Bindable
     public CartAdapter getCartAdapter() {
         return this.cartAdapter == null ? this.cartAdapter = new CartAdapter() : this.cartAdapter;
+    }
+
+    public void toFinishOrder() {
+        if (getCartAdapter().getItemCount() > 0)
+            liveData.setValue(new Mutable(Constants.FINISH_ORDER));
     }
 
     public CartRepository getCartRepository() {

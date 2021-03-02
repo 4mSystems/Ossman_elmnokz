@@ -3,6 +3,8 @@ package te.app.mezzastore.activity;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.view.View;
+
 import androidx.core.app.ActivityCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
@@ -51,6 +53,8 @@ public class BaseActivity extends ParentActivity {
         backActionBarView = new BackActionBarView(this);
         if (getIntent().hasExtra(Constants.NAME_BAR)) {
             backActionBarView.setTitle(getIntent().getStringExtra(Constants.NAME_BAR));
+        }if (getIntent().hasExtra(Constants.SHARE_BAR)) {
+            backActionBarView.layoutActionBarBackBinding.imgActionBarFilter.setVisibility(View.VISIBLE);
         }
         activityBaseBinding.llBaseActionBarContainer.addView(backActionBarView);
     }
