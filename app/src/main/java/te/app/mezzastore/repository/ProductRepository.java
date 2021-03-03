@@ -34,7 +34,7 @@ public class ProductRepository extends BaseRepository {
     }
 
     public Disposable getProducts(int catId) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.PRODUCTS + catId, new Object(), ProductResponse.class,
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.PRODUCTS + catId+" /ar/v1", new Object(), ProductResponse.class,
                 Constants.PRODUCTS_RESPONSE, true);
     }
 

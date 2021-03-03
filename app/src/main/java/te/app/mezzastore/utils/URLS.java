@@ -4,7 +4,7 @@ public class URLS {
     public final static String BASE_URL = "https://mezza-store.com/api/";
     public final static String PRODUCT_DETAILS = "products/details/";
     public final static String SUB_CATEGORIES = "sub_categories/level1/";
-    public final static String PRODUCTS = "products/last-level/5/ar/v1?category_id=";
+    public final static String PRODUCTS = "products/last-level/";
 
     public final static String SEND_ORDER = "make_order/ar/v1";
     public final static String FILTER = "products/sort-last-level/5/ar/v1?category_id=";

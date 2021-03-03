@@ -5,6 +5,8 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.smarteist.autoimageslider.SliderView;
 
+import java.util.Collections;
+
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
@@ -72,6 +74,7 @@ public class ProductDetailsViewModel extends BaseViewModel {
     }
 
     public void setupSlider(SliderView sliderView) {
+        Collections.reverse(getProductDetails().getProduct().getImages());
         getOnBoardAdapter().updateData(getProductDetails().getProduct().getImages());
         sliderView.setSliderAdapter(getOnBoardAdapter());
     }

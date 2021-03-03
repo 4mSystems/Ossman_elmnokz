@@ -1,4 +1,4 @@
-#Wed Mar 03 17:13:42 EET 2021
+#Wed Mar 03 20:17:08 EET 2021
 base.0=/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
 path.1=classes2.dex
 renamed.1=classes2.dex
