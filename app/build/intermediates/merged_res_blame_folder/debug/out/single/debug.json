@@ -12,6 +12,10 @@
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_create_order.xml"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/drawable-xxhdpi_tes.png.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/drawable-xxhdpi/tes.png"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/res/merged/debug/mipmap-mdpi_grand_exit.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/mipmap-mdpi/grand_exit.png"
     },

@@ -63,8 +63,8 @@ public class CartFragment extends BaseFragment {
         viewModel.getCartTotal().observe(((LifecycleOwner) context), s -> {
             if (s != null) {
                 binding.tvTotalValue.setText(s.concat(" ").concat("ج.م"));
-
-            }
+            }else
+                finishActivity();
         });
     }
 

@@ -35,5 +35,6 @@
     <string name="latest">التاريخ من الجديد الى القديم</string>
     <string name="oldest">التاريخ من القديم الى الجديد</string>
     <string name="send_contact">إرسال</string>
+    <string name="related_products">منتجات ذات صلة</string>
 
 </resources>

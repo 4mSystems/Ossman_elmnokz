@@ -2973,6 +2973,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable tes
 drawable test_custom_background
 drawable toast_frame
 drawable tooltip_frame_dark
@@ -3319,6 +3320,7 @@ id product_desc
 id product_image
 id product_name
 id product_price
+id product_related
 id progress_circular
 id progress_horizontal
 id radio
@@ -3792,6 +3794,7 @@ string path_password_strike_through
 string please_select_another_file
 string please_turn_off
 string please_turn_on
+string related_products
 string search_menu_title
 string send
 string send_contact

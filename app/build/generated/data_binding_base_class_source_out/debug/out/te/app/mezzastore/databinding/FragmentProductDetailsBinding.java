@@ -40,6 +40,9 @@ public abstract class FragmentProductDetailsBinding extends ViewDataBinding {
   @NonNull
   public final CustomTextViewMedium productPrice;
 
+  @NonNull
+  public final CustomTextViewRegular productRelated;
+
   @Bindable
   protected ProductDetailsViewModel mViewmodel;
 
@@ -47,7 +50,7 @@ public abstract class FragmentProductDetailsBinding extends ViewDataBinding {
       int _localFieldCount, AppCompatButton addCart, SliderView imageSlider,
       CustomTextViewRegular productBrand, CustomTextViewRegular productColor,
       CustomTextViewRegular productDesc, CustomTextViewMedium productName,
-      CustomTextViewMedium productPrice) {
+      CustomTextViewMedium productPrice, CustomTextViewRegular productRelated) {
     super(_bindingComponent, _root, _localFieldCount);
     this.addCart = addCart;
     this.imageSlider = imageSlider;
@@ -56,6 +59,7 @@ public abstract class FragmentProductDetailsBinding extends ViewDataBinding {
     this.productDesc = productDesc;
     this.productName = productName;
     this.productPrice = productPrice;
+    this.productRelated = productRelated;
   }
 
   public abstract void setViewmodel(@Nullable ProductDetailsViewModel viewmodel);

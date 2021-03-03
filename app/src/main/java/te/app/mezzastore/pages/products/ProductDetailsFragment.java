@@ -44,8 +44,6 @@ public class ProductDetailsFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
-        binding.imageSlider.setIndicatorAnimation(IndicatorAnimationType.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
-        binding.imageSlider.setAutoCycle(true);
         Bundle bundle = this.getArguments();
         if (bundle != null) {
             String passingObject = bundle.getString(Constants.BUNDLE);

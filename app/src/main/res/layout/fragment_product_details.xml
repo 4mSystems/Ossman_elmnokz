@@ -37,7 +37,7 @@
                 <com.smarteist.autoimageslider.SliderView
                     android:id="@+id/imageSlider"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/dp150h"
+                    android:layout_height="@dimen/dp200h"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -52,7 +52,7 @@
                     app:sliderIndicatorRadius="2dp"
                     app:sliderIndicatorSelectedColor="@color/colorPrimary"
                     app:sliderIndicatorUnselectedColor="#777777"
-                    app:sliderScrollTimeInSec="4"
+                    app:sliderScrollTimeInSec="2"
                     app:sliderStartAutoCycle="true" />
 
                 <te.app.mezzastore.customViews.views.CustomTextViewMedium
@@ -123,11 +123,24 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/product_brand" />
 
+                <te.app.mezzastore.customViews.views.CustomTextViewRegular
+                    android:id="@+id/product_related"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp4w"
+                    android:text="@string/related_products"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/product_desc" />
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:adapter="@{viewmodel.productsAdapter}"
-                    app:layout_constraintTop_toBottomOf="@id/product_desc"
+                    app:layout_constraintTop_toBottomOf="@id/product_related"
                     app:orientation="@{`1`}"
                     app:span="@{`2`}"
                     tools:listitem="@layout/item_products" />

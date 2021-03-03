@@ -15,6 +15,7 @@ public class FragmentProductDetailsBindingImpl extends FragmentProductDetailsBin
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.imageSlider, 9);
+        sViewsWithIds.put(R.id.product_related, 10);
     }
     // views
     @NonNull
@@ -31,7 +32,7 @@ public class FragmentProductDetailsBindingImpl extends FragmentProductDetailsBin
     // Inverse Binding Event Handlers
 
     public FragmentProductDetailsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 11, sIncludes, sViewsWithIds));
     }
     private FragmentProductDetailsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
@@ -42,6 +43,7 @@ public class FragmentProductDetailsBindingImpl extends FragmentProductDetailsBin
             , (te.app.mezzastore.customViews.views.CustomTextViewRegular) bindings[4]
             , (te.app.mezzastore.customViews.views.CustomTextViewMedium) bindings[2]
             , (te.app.mezzastore.customViews.views.CustomTextViewMedium) bindings[3]
+            , (te.app.mezzastore.customViews.views.CustomTextViewRegular) bindings[10]
             );
         this.addCart.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
