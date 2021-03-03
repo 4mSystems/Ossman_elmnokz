@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "apps.app.altcompany",
+  "applicationId": "te.app.mezzastore",
   "variantName": "processReleaseResources",
   "elements": [
     {
