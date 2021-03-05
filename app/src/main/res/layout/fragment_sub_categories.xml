@@ -7,7 +7,7 @@
 
         <variable
             name="viewmodel"
-            type="te.app.mezzastore.pages.subCategories.viewModels.SubCategoriesViewModel" />
+            type="te.app.ossman_elmonkz.pages.subCategories.viewModels.SubCategoriesViewModel" />
     </data>
 
     <androidx.recyclerview.widget.RecyclerView

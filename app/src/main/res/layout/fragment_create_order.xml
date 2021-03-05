@@ -7,7 +7,7 @@
 
         <variable
             name="viewmodel"
-            type="te.app.mezzastore.pages.cart.viewModels.CreateOrderViewModel" />
+            type="te.app.ossman_elmonkz.pages.cart.viewModels.CreateOrderViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

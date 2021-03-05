@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="te.app.mezzastore">
+    package="te.app.ossman_elmonkz">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -13,7 +13,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name="te.app.mezzastore.base.MyApplication"
+        android:name="te.app.ossman_elmonkz.base.MyApplication"
         android:allowBackup="false"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -34,12 +34,12 @@
             android:resource="@color/colorPrimary" />
 
         <activity
-            android:name="te.app.mezzastore.activity.MainActivity"
+            android:name="te.app.ossman_elmonkz.activity.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <activity
-            android:name="te.app.mezzastore.activity.BaseActivity"
+            android:name="te.app.ossman_elmonkz.activity.BaseActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>

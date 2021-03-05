@@ -6,7 +6,7 @@
 
         <variable
             name="itemViewModel"
-            type="te.app.mezzastore.pages.home.viewModels.ItemCategoryViewModel" />
+            type="te.app.ossman_elmonkz.pages.home.viewModels.ItemCategoryViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -29,7 +29,7 @@
                 app:imageUrl="@{itemViewModel.categoriesItem.image}"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <te.app.mezzastore.customViews.views.CustomTextViewRegular
+            <te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp4h"

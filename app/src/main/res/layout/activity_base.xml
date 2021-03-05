@@ -11,7 +11,7 @@
 
         <variable
             name="baseViewModel"
-            type="te.app.mezzastore.base.BaseViewModel" />
+            type="te.app.ossman_elmonkz.base.BaseViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

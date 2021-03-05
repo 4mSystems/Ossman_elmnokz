@@ -8,7 +8,7 @@
 
         <variable
             name="viewmodel"
-            type="te.app.mezzastore.pages.home.viewModels.HomeViewModel" />
+            type="te.app.ossman_elmonkz.pages.home.viewModels.HomeViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -33,7 +33,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <te.app.mezzastore.customViews.views.CustomTextViewMedium
+                <te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/home"

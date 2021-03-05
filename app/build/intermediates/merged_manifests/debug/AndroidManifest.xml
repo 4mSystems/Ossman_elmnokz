@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="te.app.mezzastore"
+    package="te.app.ossman_elmonkz"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -17,7 +17,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name="te.app.mezzastore.base.MyApplication"
+        android:name="te.app.ossman_elmonkz.base.MyApplication"
         android:allowBackup="false"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -40,11 +40,11 @@
             android:resource="@color/colorPrimary" />
 
         <activity
-            android:name="te.app.mezzastore.activity.MainActivity"
+            android:name="te.app.ossman_elmonkz.activity.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name="te.app.mezzastore.activity.BaseActivity"
+            android:name="te.app.ossman_elmonkz.activity.BaseActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="stateHidden|adjustResize" >
             <intent-filter>
@@ -66,11 +66,11 @@
 
         <provider
             android:name="com.squareup.picasso.PicassoProvider"
-            android:authorities="te.app.mezzastore.com.squareup.picasso"
+            android:authorities="te.app.ossman_elmonkz.com.squareup.picasso"
             android:exported="false" />
         <provider
             android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-            android:authorities="te.app.mezzastore.lifecycle-process"
+            android:authorities="te.app.ossman_elmonkz.lifecycle-process"
             android:exported="false"
             android:multiprocess="true" />
     </application>

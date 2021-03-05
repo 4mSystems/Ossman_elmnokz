@@ -8,61 +8,23 @@
 
         <variable
             name="itemViewModel"
-            type="te.app.mezzastore.pages.products.viewModels.ItemProductsViewModel" />
+            type="te.app.ossman_elmonkz.pages.products.viewModels.ItemProductsViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp4h"
-        app:cardCornerRadius="@dimen/dp8h"
         android:onClick="@{()-> itemViewModel.itemAction()}"
+        app:cardCornerRadius="@dimen/dp8h"
         app:cardElevation="4dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/product_image"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/product_image"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp150h"
-                android:src="@color/overlayBackground"
-                app:imageUrl="@{itemViewModel.product.image}"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <te.app.mezzastore.customViews.views.CustomTextViewMedium
-                android:id="@+id/product_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp4h"
-                android:ellipsize="marquee"
-                android:singleLine="true"
-                android:text="@{itemViewModel.product.title}"
-                android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/product_image" />
-
-            <te.app.mezzastore.customViews.views.CustomTextViewMedium
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp4w"
-                android:layout_marginEnd="@dimen/dp4w"
-                android:layout_marginBottom="@dimen/dp4h"
-                android:ellipsize="marquee"
-                android:singleLine="true"
-                android:text="@{itemViewModel.product.price.concat(`ج.م`)}"
-                android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/colordark"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/product_name" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="@dimen/dp150h"
+            android:src="@color/overlayBackground"
+            app:imageUrl="@{itemViewModel.product.image}"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.cardview.widget.CardView>
 </layout>

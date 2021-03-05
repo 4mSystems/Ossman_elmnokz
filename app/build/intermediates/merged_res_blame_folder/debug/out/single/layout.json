@@ -1,74 +1,110 @@
 [
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_contact.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_contact.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_home.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/item_home.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_create_order.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_create_order.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_sub_category_search.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_sub_category_search.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_cart.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/item_cart.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_products.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_products.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_action_bar_back.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/layout_action_bar_back.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_home.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_home.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_products.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/item_products.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_search.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/item_search.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_cart.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_cart.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_sub_categories.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_sub_categories.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_product_details.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_product_details.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_action_bar_back.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/layout_action_bar_back.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/filter_dialog.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/filter_dialog.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_clients.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/item_clients.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_sub_categories.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_sub_categories.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/filter_dialog.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/filter_dialog.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_base.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/activity_base.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_more.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_more.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_splash.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_splash.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_create_order.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_create_order.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_favorite.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/item_favorite.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_splash.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_splash.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_action_bar_home.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/layout_action_bar_home.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_clients.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_clients.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_home.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/item_home.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_suggestions.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_suggestions.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_home.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_home.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_agents.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/item_agents.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_favorites.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_favorites.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_buying.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_buying.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_products.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/fragment_products.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_about.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_about.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/MezzaStore/app/src/main/res/layout/activity_main.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_products.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/item_products.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_agents.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_agents.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_base.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/activity_base.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_cart.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/item_cart.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_gallery.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_gallery.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_contacts.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_contacts.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_action_bar_home.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/layout_action_bar_home.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_cart.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_cart.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_tes.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/layout_tes.xml"
     }
 ]

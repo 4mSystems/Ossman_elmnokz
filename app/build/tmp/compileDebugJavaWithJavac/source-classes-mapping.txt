@@ -1,252 +1,300 @@
-te/app/mezzastore/base/ApplicationBinding.java
- te.app.mezzastore.base.ApplicationBinding
-te/app/mezzastore/pages/products/ProductDetailsFragment.java
- te.app.mezzastore.pages.products.ProductDetailsFragment
-te/app/mezzastore/pages/home/models/SliderAdsItem.java
- te.app.mezzastore.pages.home.models.SliderAdsItem
-te/app/mezzastore/databinding/ItemProductsBinding.java
- te.app.mezzastore.databinding.ItemProductsBinding
-te/app/mezzastore/databinding/ActivityMainBinding.java
- te.app.mezzastore.databinding.ActivityMainBinding
-te/app/mezzastore/base/BaseFragment.java
- te.app.mezzastore.base.BaseFragment
-te/app/mezzastore/pages/settings/ContactUsFragment.java
- te.app.mezzastore.pages.settings.ContactUsFragment
-te/app/mezzastore/pages/cart/viewModels/CreateOrderViewModel.java
- te.app.mezzastore.pages.cart.viewModels.CreateOrderViewModel
-te/app/mezzastore/utils/upload/FileUpload.java
- te.app.mezzastore.utils.upload.FileUpload
-te/app/mezzastore/databinding/FragmentProductDetailsBinding.java
- te.app.mezzastore.databinding.FragmentProductDetailsBinding
-te/app/mezzastore/pages/home/HomeFragment.java
- te.app.mezzastore.pages.home.HomeFragment
-te/app/mezzastore/pages/products/models/ProductResponse.java
- te.app.mezzastore.pages.products.models.ProductResponse
-te/app/mezzastore/utils/Constants.java
- te.app.mezzastore.utils.Constants
-te/app/mezzastore/pages/cart/CreateOrderFragment.java
- te.app.mezzastore.pages.cart.CreateOrderFragment
-te/app/mezzastore/DataBindingTriggerClass.java
- te.app.mezzastore.DataBindingTriggerClass
-te/app/mezzastore/pages/home/adapters/HomeSliderAdapter.java
- te.app.mezzastore.pages.home.adapters.HomeSliderAdapter
- te.app.mezzastore.pages.home.adapters.HomeSliderAdapter$SliderAdapterVH
-te/app/mezzastore/utils/session/MyContextWrapper.java
- te.app.mezzastore.utils.session.MyContextWrapper
-te/app/mezzastore/pages/products/ProductsFragment.java
- te.app.mezzastore.pages.products.ProductsFragment
-te/app/mezzastore/databinding/FilterDialogBinding.java
- te.app.mezzastore.databinding.FilterDialogBinding
-te/app/mezzastore/pages/splash/SplashViewModel.java
- te.app.mezzastore.pages.splash.SplashViewModel
-te/app/mezzastore/pages/home/models/CategoriesItem.java
- te.app.mezzastore.pages.home.models.CategoriesItem
-te/app/mezzastore/pages/splash/models/SettingsResponse.java
- te.app.mezzastore.pages.splash.models.SettingsResponse
-te/app/mezzastore/pages/favorites/viewModels/ItemFavoritesViewModel.java
- te.app.mezzastore.pages.favorites.viewModels.ItemFavoritesViewModel
-te/app/mezzastore/customViews/views/IncrementalView.java
- te.app.mezzastore.customViews.views.IncrementalView
- te.app.mezzastore.customViews.views.IncrementalView$1
-te/app/mezzastore/connection/ConnectionModule.java
- te.app.mezzastore.connection.ConnectionModule
- te.app.mezzastore.connection.ConnectionModule$1
-te/app/mezzastore/utils/PopUp/PopUpInterface.java
- te.app.mezzastore.utils.PopUp.PopUpInterface
-te/app/mezzastore/utils/PopUp/PopUp.java
- te.app.mezzastore.utils.PopUp.PopUp
-te/app/mezzastore/customViews/actionbar/HomeActionBarView.java
- te.app.mezzastore.customViews.actionbar.HomeActionBarView
-te/app/mezzastore/pages/splash/models/ReasonsItem.java
- te.app.mezzastore.pages.splash.models.ReasonsItem
-te/app/mezzastore/pages/favorites/FavoritesFragment.java
- te.app.mezzastore.pages.favorites.FavoritesFragment
-te/app/mezzastore/customViews/views/CustomTextViewBold.java
- te.app.mezzastore.customViews.views.CustomTextViewBold
-te/app/mezzastore/utils/validation/Validate.java
- te.app.mezzastore.utils.validation.Validate
-te/app/mezzastore/pages/subCategories/models/SubCategoriesResponse.java
- te.app.mezzastore.pages.subCategories.models.SubCategoriesResponse
-te/app/mezzastore/base/ParentActivity.java
- te.app.mezzastore.base.ParentActivity
-te/app/mezzastore/pages/products/viewModels/ProductDetailsViewModel.java
- te.app.mezzastore.pages.products.viewModels.ProductDetailsViewModel
-te/app/mezzastore/databinding/ActivityBaseBinding.java
- te.app.mezzastore.databinding.ActivityBaseBinding
-te/app/mezzastore/repository/CartRepository.java
- te.app.mezzastore.repository.CartRepository
- te.app.mezzastore.repository.CartRepository$DeleteProductAsyncTask
- te.app.mezzastore.repository.CartRepository$EmptyCartAsyncTask
- te.app.mezzastore.repository.CartRepository$InsertProductAsyncTask
- te.app.mezzastore.repository.CartRepository$UpdateProductAsyncTask
-te/app/mezzastore/databinding/FragmentSubCategoriesBinding.java
- te.app.mezzastore.databinding.FragmentSubCategoriesBinding
-te/app/mezzastore/customViews/views/CustomEditText.java
- te.app.mezzastore.customViews.views.CustomEditText
- te.app.mezzastore.customViews.views.CustomEditText$Validator
-te/app/mezzastore/pages/cart/models/CreateOrder.java
- te.app.mezzastore.pages.cart.models.CreateOrder
-te/app/mezzastore/pages/cart/CartFragment.java
- te.app.mezzastore.pages.cart.CartFragment
-te/app/mezzastore/pages/products/viewModels/ItemProductsViewModel.java
- te.app.mezzastore.pages.products.viewModels.ItemProductsViewModel
-te/app/mezzastore/pages/products/models/productDetails/Brand.java
- te.app.mezzastore.pages.products.models.productDetails.Brand
-te/app/mezzastore/utils/images/ImageConstants.java
- te.app.mezzastore.utils.images.ImageConstants
-te/app/mezzastore/utils/resources/ResourceManager.java
- te.app.mezzastore.utils.resources.ResourceManager
-te/app/mezzastore/customViews/views/DateEditText.java
- te.app.mezzastore.customViews.views.DateEditText
-te/app/mezzastore/utils/helper/MovementHelper.java
- te.app.mezzastore.utils.helper.MovementHelper
-te/app/mezzastore/activity/MainActivity.java
- te.app.mezzastore.activity.MainActivity
-te/app/mezzastore/base/LiveData.java
- te.app.mezzastore.base.LiveData
-te/app/mezzastore/pages/subCategories/SubCategoriesFragment.java
- te.app.mezzastore.pages.subCategories.SubCategoriesFragment
-te/app/mezzastore/pages/products/models/productDetails/ProductDetailsResponse.java
- te.app.mezzastore.pages.products.models.productDetails.ProductDetailsResponse
-te/app/mezzastore/BuildConfig.java
- te.app.mezzastore.BuildConfig
-te/app/mezzastore/pages/settings/models/ContactRequest.java
- te.app.mezzastore.pages.settings.models.ContactRequest
-te/app/mezzastore/databinding/FragmentHomeBinding.java
- te.app.mezzastore.databinding.FragmentHomeBinding
-te/app/mezzastore/repository/ProductRepository.java
- te.app.mezzastore.repository.ProductRepository
-te/app/mezzastore/pages/splash/models/SettingData.java
- te.app.mezzastore.pages.splash.models.SettingData
-te/app/mezzastore/databinding/FragmentCartBinding.java
- te.app.mezzastore.databinding.FragmentCartBinding
-te/app/mezzastore/utils/session/LanguagesHelper.java
- te.app.mezzastore.utils.session.LanguagesHelper
-te/app/mezzastore/pages/cart/adapters/CartAdapter.java
- te.app.mezzastore.pages.cart.adapters.CartAdapter
- te.app.mezzastore.pages.cart.adapters.CartAdapter$ViewHolder
-te/app/mezzastore/utils/cart/CartDao.java
- te.app.mezzastore.utils.cart.CartDao
-te/app/mezzastore/databinding/FragmentFavoritesBinding.java
- te.app.mezzastore.databinding.FragmentFavoritesBinding
-te/app/mezzastore/databinding/FragmentCreateOrderBinding.java
- te.app.mezzastore.databinding.FragmentCreateOrderBinding
-te/app/mezzastore/pages/home/viewModels/HomeViewModel.java
- te.app.mezzastore.pages.home.viewModels.HomeViewModel
-te/app/mezzastore/databinding/FragmentContactBinding.java
- te.app.mezzastore.databinding.FragmentContactBinding
-te/app/mezzastore/customViews/actionbar/MenuActionBarView.java
- te.app.mezzastore.customViews.actionbar.MenuActionBarView
-te/app/mezzastore/databinding/FragmentProductsBinding.java
- te.app.mezzastore.databinding.FragmentProductsBinding
-te/app/mezzastore/databinding/ItemHomeBinding.java
- te.app.mezzastore.databinding.ItemHomeBinding
-te/app/mezzastore/utils/upload/FileOperations.java
- te.app.mezzastore.utils.upload.FileOperations
-te/app/mezzastore/connection/FileObject.java
- te.app.mezzastore.connection.FileObject
-te/app/mezzastore/databinding/LayoutActionBarHomeBinding.java
- te.app.mezzastore.databinding.LayoutActionBarHomeBinding
-te/app/mezzastore/pages/cart/viewModels/ItemCartViewModel.java
- te.app.mezzastore.pages.cart.viewModels.ItemCartViewModel
-te/app/mezzastore/repository/HomeRepository.java
- te.app.mezzastore.repository.HomeRepository
-te/app/mezzastore/pages/splash/SplashFragment.java
- te.app.mezzastore.pages.splash.SplashFragment
-te/app/mezzastore/repository/SettingsRepository.java
- te.app.mezzastore.repository.SettingsRepository
-te/app/mezzastore/pages/home/viewModels/ItemCategoryViewModel.java
- te.app.mezzastore.pages.home.viewModels.ItemCategoryViewModel
-te/app/mezzastore/PassingObject.java
- te.app.mezzastore.PassingObject
-te/app/mezzastore/pages/home/models/HomeResponse.java
- te.app.mezzastore.pages.home.models.HomeResponse
-te/app/mezzastore/customViews/views/BaseEditText.java
- te.app.mezzastore.customViews.views.BaseEditText
- te.app.mezzastore.customViews.views.BaseEditText$1
-te/app/mezzastore/model/base/StatusMessage.java
- te.app.mezzastore.model.base.StatusMessage
-te/app/mezzastore/utils/helper/AppHelper.java
- te.app.mezzastore.utils.helper.AppHelper
-te/app/mezzastore/connection/Api.java
- te.app.mezzastore.connection.Api
-te/app/mezzastore/connection/ConnectionListenerInterFace.java
- te.app.mezzastore.connection.ConnectionListenerInterFace
-te/app/mezzastore/pages/products/models/productDetails/Product.java
- te.app.mezzastore.pages.products.models.productDetails.Product
-te/app/mezzastore/pages/products/adapters/OnBoardAdapter.java
- te.app.mezzastore.pages.products.adapters.OnBoardAdapter
- te.app.mezzastore.pages.products.adapters.OnBoardAdapter$SliderAdapterVH
-te/app/mezzastore/base/ApplicationComponent.java
- te.app.mezzastore.base.ApplicationComponent
-te/app/mezzastore/base/MyApplication.java
- te.app.mezzastore.base.MyApplication
-te/app/mezzastore/utils/images/PhotoFullPopupWindow.java
- te.app.mezzastore.utils.images.PhotoFullPopupWindow
- te.app.mezzastore.utils.images.PhotoFullPopupWindow$1
- te.app.mezzastore.utils.images.PhotoFullPopupWindow$2
-te/app/mezzastore/customViews/views/CustomTextViewMedium.java
- te.app.mezzastore.customViews.views.CustomTextViewMedium
-te/app/mezzastore/pages/home/models/HomeData.java
- te.app.mezzastore.pages.home.models.HomeData
-te/app/mezzastore/utils/session/SharedPreferenceHelper.java
- te.app.mezzastore.utils.session.SharedPreferenceHelper
-te/app/mezzastore/utils/cart/CartDataBase.java
- te.app.mezzastore.utils.cart.CartDataBase
-te/app/mezzastore/pages/cart/viewModels/CartViewModel.java
- te.app.mezzastore.pages.cart.viewModels.CartViewModel
-te/app/mezzastore/pages/products/viewModels/ProductsViewModel.java
- te.app.mezzastore.pages.products.viewModels.ProductsViewModel
-te/app/mezzastore/databinding/ItemFavoriteBinding.java
- te.app.mezzastore.databinding.ItemFavoriteBinding
-te/app/mezzastore/utils/URLS.java
- te.app.mezzastore.utils.URLS
-te/app/mezzastore/pages/products/models/productDetails/ProductDetails.java
- te.app.mezzastore.pages.products.models.productDetails.ProductDetails
-te/app/mezzastore/activity/BaseActivity.java
- te.app.mezzastore.activity.BaseActivity
-te/app/mezzastore/pages/settings/viewModels/SettingsViewModel.java
- te.app.mezzastore.pages.settings.viewModels.SettingsViewModel
-te/app/mezzastore/databinding/LayoutActionBarBackBinding.java
- te.app.mezzastore.databinding.LayoutActionBarBackBinding
-te/app/mezzastore/utils/PopUp/PopUpMenuHelper.java
- te.app.mezzastore.utils.PopUp.PopUpMenuHelper
-te/app/mezzastore/model/base/Mutable.java
- te.app.mezzastore.model.base.Mutable
-te/app/mezzastore/pages/splash/models/BannersItem.java
- te.app.mezzastore.pages.splash.models.BannersItem
-te/app/mezzastore/databinding/FragmentSplashBinding.java
- te.app.mezzastore.databinding.FragmentSplashBinding
-te/app/mezzastore/base/ConnectivityReceiver.java
- te.app.mezzastore.base.ConnectivityReceiver
- te.app.mezzastore.base.ConnectivityReceiver$ConnectivityReceiverListener
-te/app/mezzastore/customViews/views/CustomTextViewRegular.java
- te.app.mezzastore.customViews.views.CustomTextViewRegular
-te/app/mezzastore/customViews/actionbar/BackActionBarView.java
- te.app.mezzastore.customViews.actionbar.BackActionBarView
-te/app/mezzastore/utils/session/UserHelper.java
- te.app.mezzastore.utils.session.UserHelper
-te/app/mezzastore/repository/BaseRepository.java
- te.app.mezzastore.repository.BaseRepository
-te/app/mezzastore/pages/favorites/viewModels/FavoritesViewModel.java
- te.app.mezzastore.pages.favorites.viewModels.FavoritesViewModel
-te/app/mezzastore/pages/subCategories/viewModels/SubCategoriesViewModel.java
- te.app.mezzastore.pages.subCategories.viewModels.SubCategoriesViewModel
-te/app/mezzastore/pages/home/adapters/CategoriesAdapter.java
- te.app.mezzastore.pages.home.adapters.CategoriesAdapter
- te.app.mezzastore.pages.home.adapters.CategoriesAdapter$ViewHolder
-te/app/mezzastore/databinding/ItemCartBinding.java
- te.app.mezzastore.databinding.ItemCartBinding
-te/app/mezzastore/pages/products/adapters/ProductsAdapter.java
- te.app.mezzastore.pages.products.adapters.ProductsAdapter
- te.app.mezzastore.pages.products.adapters.ProductsAdapter$ViewHolder
-te/app/mezzastore/base/BaseViewModel.java
- te.app.mezzastore.base.BaseViewModel
-te/app/mezzastore/base/IApplicationComponent.java
- te.app.mezzastore.base.IApplicationComponent
- te.app.mezzastore.base.IApplicationComponent$Builder
-te/app/mezzastore/connection/ConnectionHelper.java
- te.app.mezzastore.connection.ConnectionHelper
- te.app.mezzastore.connection.ConnectionHelper$1
- te.app.mezzastore.connection.ConnectionHelper$2
- te.app.mezzastore.connection.ConnectionHelper$3
+te/app/ossman_elmonkz/pages/gallery/viewModels/ItemGalleryViewModel.java
+ te.app.ossman_elmonkz.pages.gallery.viewModels.ItemGalleryViewModel
+te/app/ossman_elmonkz/databinding/ItemClientsBinding.java
+ te.app.ossman_elmonkz.databinding.ItemClientsBinding
+te/app/ossman_elmonkz/databinding/FragmentSubCategorySearchBinding.java
+ te.app.ossman_elmonkz.databinding.FragmentSubCategorySearchBinding
+te/app/ossman_elmonkz/utils/validation/Validate.java
+ te.app.ossman_elmonkz.utils.validation.Validate
+te/app/ossman_elmonkz/pages/splash/models/SettingsResponse.java
+ te.app.ossman_elmonkz.pages.splash.models.SettingsResponse
+te/app/ossman_elmonkz/base/BaseViewModel.java
+ te.app.ossman_elmonkz.base.BaseViewModel
+te/app/ossman_elmonkz/pages/more/viewModels/MoreViewModel.java
+ te.app.ossman_elmonkz.pages.more.viewModels.MoreViewModel
+te/app/ossman_elmonkz/pages/products/models/productDetails/ProductDetailsResponse.java
+ te.app.ossman_elmonkz.pages.products.models.productDetails.ProductDetailsResponse
+te/app/ossman_elmonkz/connection/ConnectionListenerInterFace.java
+ te.app.ossman_elmonkz.connection.ConnectionListenerInterFace
+te/app/ossman_elmonkz/databinding/ItemAgentsBinding.java
+ te.app.ossman_elmonkz.databinding.ItemAgentsBinding
+te/app/ossman_elmonkz/pages/agentsAndClients/ClientsFragment.java
+ te.app.ossman_elmonkz.pages.agentsAndClients.ClientsFragment
+te/app/ossman_elmonkz/customViews/actionbar/HomeActionBarView.java
+ te.app.ossman_elmonkz.customViews.actionbar.HomeActionBarView
+te/app/ossman_elmonkz/utils/session/MyContextWrapper.java
+ te.app.ossman_elmonkz.utils.session.MyContextWrapper
+te/app/ossman_elmonkz/databinding/FragmentGalleryBinding.java
+ te.app.ossman_elmonkz.databinding.FragmentGalleryBinding
+te/app/ossman_elmonkz/pages/buying/BuyingFragment.java
+ te.app.ossman_elmonkz.pages.buying.BuyingFragment
+te/app/ossman_elmonkz/utils/session/LanguagesHelper.java
+ te.app.ossman_elmonkz.utils.session.LanguagesHelper
+te/app/ossman_elmonkz/databinding/FragmentCartBinding.java
+ te.app.ossman_elmonkz.databinding.FragmentCartBinding
+te/app/ossman_elmonkz/pages/gallery/GalleryFragment.java
+ te.app.ossman_elmonkz.pages.gallery.GalleryFragment
+te/app/ossman_elmonkz/customViews/tesDialog/TesImageDialog.java
+ te.app.ossman_elmonkz.customViews.tesDialog.TesDialog
+ te.app.ossman_elmonkz.customViews.tesDialog.TesDialog$1
+ te.app.ossman_elmonkz.customViews.tesDialog.TesImageDialog
+te/app/ossman_elmonkz/databinding/FragmentAboutBinding.java
+ te.app.ossman_elmonkz.databinding.FragmentAboutBinding
+te/app/ossman_elmonkz/connection/ConnectionModule.java
+ te.app.ossman_elmonkz.connection.ConnectionModule
+ te.app.ossman_elmonkz.connection.ConnectionModule$1
+te/app/ossman_elmonkz/repository/ProductRepository.java
+ te.app.ossman_elmonkz.repository.ProductRepository
+te/app/ossman_elmonkz/pages/products/models/productDetails/Brand.java
+ te.app.ossman_elmonkz.pages.products.models.productDetails.Brand
+te/app/ossman_elmonkz/pages/subCategories/viewModels/SubCategoriesViewModel.java
+ te.app.ossman_elmonkz.pages.subCategories.viewModels.SubCategoriesViewModel
+te/app/ossman_elmonkz/utils/images/ImageConstants.java
+ te.app.ossman_elmonkz.utils.images.ImageConstants
+te/app/ossman_elmonkz/pages/gallery/adapters/GalleryAdapter.java
+ te.app.ossman_elmonkz.pages.gallery.adapters.GalleryAdapter
+ te.app.ossman_elmonkz.pages.gallery.adapters.GalleryAdapter$ViewHolder
+te/app/ossman_elmonkz/pages/subCategories/models/SubCategoriesResponse.java
+ te.app.ossman_elmonkz.pages.subCategories.models.SubCategoriesResponse
+te/app/ossman_elmonkz/pages/home/viewModels/ItemCategoryViewModel.java
+ te.app.ossman_elmonkz.pages.home.viewModels.ItemCategoryViewModel
+te/app/ossman_elmonkz/pages/buying/viewModels/BuyingViewModel.java
+ te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel
+te/app/ossman_elmonkz/databinding/ActivityMainBinding.java
+ te.app.ossman_elmonkz.databinding.ActivityMainBinding
+te/app/ossman_elmonkz/utils/Constants.java
+ te.app.ossman_elmonkz.utils.Constants
+te/app/ossman_elmonkz/pages/splash/models/SettingData.java
+ te.app.ossman_elmonkz.pages.splash.models.SettingData
+te/app/ossman_elmonkz/utils/helper/AppHelper.java
+ te.app.ossman_elmonkz.utils.helper.AppHelper
+te/app/ossman_elmonkz/pages/splash/models/BannersItem.java
+ te.app.ossman_elmonkz.pages.splash.models.BannersItem
+te/app/ossman_elmonkz/pages/agentsAndClients/AgentsFragment.java
+ te.app.ossman_elmonkz.pages.agentsAndClients.AgentsFragment
+te/app/ossman_elmonkz/customViews/views/DateEditText.java
+ te.app.ossman_elmonkz.customViews.views.DateEditText
+te/app/ossman_elmonkz/pages/subCategories/SubCategorySearchFragment.java
+ te.app.ossman_elmonkz.pages.subCategories.SubCategorySearchFragment
+te/app/ossman_elmonkz/pages/subCategories/viewModels/ItemSearchViewModel.java
+ te.app.ossman_elmonkz.pages.subCategories.viewModels.ItemSearchViewModel
+te/app/ossman_elmonkz/PassingObject.java
+ te.app.ossman_elmonkz.PassingObject
+te/app/ossman_elmonkz/pages/home/models/HomeData.java
+ te.app.ossman_elmonkz.pages.home.models.HomeData
+te/app/ossman_elmonkz/connection/FileObject.java
+ te.app.ossman_elmonkz.connection.FileObject
+te/app/ossman_elmonkz/databinding/ItemSearchBinding.java
+ te.app.ossman_elmonkz.databinding.ItemSearchBinding
+te/app/ossman_elmonkz/customViews/views/CustomTextViewMedium.java
+ te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium
+te/app/ossman_elmonkz/databinding/ActivityBaseBinding.java
+ te.app.ossman_elmonkz.databinding.ActivityBaseBinding
+te/app/ossman_elmonkz/pages/buying/viewModels/ItemFavoritesViewModel.java
+ te.app.ossman_elmonkz.pages.buying.viewModels.ItemFavoritesViewModel
+te/app/ossman_elmonkz/pages/subCategories/viewModels/SubCategoriesSearchViewModel.java
+ te.app.ossman_elmonkz.pages.subCategories.viewModels.SubCategoriesSearchViewModel
+te/app/ossman_elmonkz/pages/gallery/viewModels/GalleryViewModel.java
+ te.app.ossman_elmonkz.pages.gallery.viewModels.GalleryViewModel
+te/app/ossman_elmonkz/utils/cart/CartDao.java
+ te.app.ossman_elmonkz.utils.cart.CartDao
+te/app/ossman_elmonkz/base/ConnectivityReceiver.java
+ te.app.ossman_elmonkz.base.ConnectivityReceiver
+ te.app.ossman_elmonkz.base.ConnectivityReceiver$ConnectivityReceiverListener
+te/app/ossman_elmonkz/pages/subCategories/SubCategoriesFragment.java
+ te.app.ossman_elmonkz.pages.subCategories.SubCategoriesFragment
+te/app/ossman_elmonkz/pages/cart/viewModels/CreateOrderViewModel.java
+ te.app.ossman_elmonkz.pages.cart.viewModels.CreateOrderViewModel
+te/app/ossman_elmonkz/pages/splash/models/ReasonsItem.java
+ te.app.ossman_elmonkz.pages.splash.models.ReasonsItem
+te/app/ossman_elmonkz/databinding/LayoutTesBinding.java
+ te.app.ossman_elmonkz.databinding.LayoutTesBinding
+te/app/ossman_elmonkz/utils/cart/CartDataBase.java
+ te.app.ossman_elmonkz.utils.cart.CartDataBase
+te/app/ossman_elmonkz/repository/BaseRepository.java
+ te.app.ossman_elmonkz.repository.BaseRepository
+te/app/ossman_elmonkz/databinding/FragmentSuggestionsBinding.java
+ te.app.ossman_elmonkz.databinding.FragmentSuggestionsBinding
+te/app/ossman_elmonkz/pages/home/adapters/CategoriesAdapter.java
+ te.app.ossman_elmonkz.pages.home.adapters.CategoriesAdapter
+ te.app.ossman_elmonkz.pages.home.adapters.CategoriesAdapter$ViewHolder
+te/app/ossman_elmonkz/utils/upload/FileUpload.java
+ te.app.ossman_elmonkz.utils.upload.FileUpload
+te/app/ossman_elmonkz/pages/cart/viewModels/CartViewModel.java
+ te.app.ossman_elmonkz.pages.cart.viewModels.CartViewModel
+te/app/ossman_elmonkz/pages/home/models/HomeResponse.java
+ te.app.ossman_elmonkz.pages.home.models.HomeResponse
+te/app/ossman_elmonkz/databinding/FragmentMoreBinding.java
+ te.app.ossman_elmonkz.databinding.FragmentMoreBinding
+te/app/ossman_elmonkz/activity/MainActivity.java
+ te.app.ossman_elmonkz.activity.MainActivity
+te/app/ossman_elmonkz/databinding/FilterDialogBinding.java
+ te.app.ossman_elmonkz.databinding.FilterDialogBinding
+te/app/ossman_elmonkz/base/ParentActivity.java
+ te.app.ossman_elmonkz.base.ParentActivity
+te/app/ossman_elmonkz/pages/products/models/productDetails/Product.java
+ te.app.ossman_elmonkz.pages.products.models.productDetails.Product
+te/app/ossman_elmonkz/base/IApplicationComponent.java
+ te.app.ossman_elmonkz.base.IApplicationComponent
+ te.app.ossman_elmonkz.base.IApplicationComponent$Builder
+te/app/ossman_elmonkz/activity/BaseActivity.java
+ te.app.ossman_elmonkz.activity.BaseActivity
+te/app/ossman_elmonkz/pages/home/HomeFragment.java
+ te.app.ossman_elmonkz.pages.home.HomeFragment
+te/app/ossman_elmonkz/pages/cart/viewModels/ItemCartViewModel.java
+ te.app.ossman_elmonkz.pages.cart.viewModels.ItemCartViewModel
+te/app/ossman_elmonkz/utils/upload/FileOperations.java
+ te.app.ossman_elmonkz.utils.upload.FileOperations
+te/app/ossman_elmonkz/pages/cart/adapters/CartAdapter.java
+ te.app.ossman_elmonkz.pages.cart.adapters.CartAdapter
+ te.app.ossman_elmonkz.pages.cart.adapters.CartAdapter$ViewHolder
+te/app/ossman_elmonkz/customViews/views/CustomEditText.java
+ te.app.ossman_elmonkz.customViews.views.CustomEditText
+ te.app.ossman_elmonkz.customViews.views.CustomEditText$Validator
+te/app/ossman_elmonkz/utils/PopUp/PopUp.java
+ te.app.ossman_elmonkz.utils.PopUp.PopUp
+te/app/ossman_elmonkz/utils/resources/ResourceManager.java
+ te.app.ossman_elmonkz.utils.resources.ResourceManager
+te/app/ossman_elmonkz/utils/helper/MovementHelper.java
+ te.app.ossman_elmonkz.utils.helper.MovementHelper
+te/app/ossman_elmonkz/databinding/FragmentBuyingBinding.java
+ te.app.ossman_elmonkz.databinding.FragmentBuyingBinding
+te/app/ossman_elmonkz/databinding/FragmentContactsBinding.java
+ te.app.ossman_elmonkz.databinding.FragmentContactsBinding
+te/app/ossman_elmonkz/customViews/views/CustomTextViewRegular.java
+ te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular
+te/app/ossman_elmonkz/utils/PopUp/PopUpInterface.java
+ te.app.ossman_elmonkz.utils.PopUp.PopUpInterface
+te/app/ossman_elmonkz/model/base/StatusMessage.java
+ te.app.ossman_elmonkz.model.base.StatusMessage
+te/app/ossman_elmonkz/BuildConfig.java
+ te.app.ossman_elmonkz.BuildConfig
+te/app/ossman_elmonkz/repository/CartRepository.java
+ te.app.ossman_elmonkz.repository.CartRepository
+ te.app.ossman_elmonkz.repository.CartRepository$DeleteProductAsyncTask
+ te.app.ossman_elmonkz.repository.CartRepository$EmptyCartAsyncTask
+ te.app.ossman_elmonkz.repository.CartRepository$InsertProductAsyncTask
+ te.app.ossman_elmonkz.repository.CartRepository$UpdateProductAsyncTask
+te/app/ossman_elmonkz/utils/images/PhotoFullPopupWindow.java
+ te.app.ossman_elmonkz.utils.images.PhotoFullPopupWindow
+ te.app.ossman_elmonkz.utils.images.PhotoFullPopupWindow$1
+ te.app.ossman_elmonkz.utils.images.PhotoFullPopupWindow$2
+te/app/ossman_elmonkz/pages/products/viewModels/ItemProductsViewModel.java
+ te.app.ossman_elmonkz.pages.products.viewModels.ItemProductsViewModel
+te/app/ossman_elmonkz/databinding/FragmentHomeBinding.java
+ te.app.ossman_elmonkz.databinding.FragmentHomeBinding
+te/app/ossman_elmonkz/repository/HomeRepository.java
+ te.app.ossman_elmonkz.repository.HomeRepository
+te/app/ossman_elmonkz/databinding/LayoutActionBarBackBinding.java
+ te.app.ossman_elmonkz.databinding.LayoutActionBarBackBinding
+te/app/ossman_elmonkz/databinding/FragmentAgentsBinding.java
+ te.app.ossman_elmonkz.databinding.FragmentAgentsBinding
+te/app/ossman_elmonkz/pages/settings/models/ContactRequest.java
+ te.app.ossman_elmonkz.pages.settings.models.ContactRequest
+te/app/ossman_elmonkz/pages/home/adapters/HomeSliderAdapter.java
+ te.app.ossman_elmonkz.pages.home.adapters.HomeSliderAdapter
+ te.app.ossman_elmonkz.pages.home.adapters.HomeSliderAdapter$SliderAdapterVH
+te/app/ossman_elmonkz/pages/products/models/productDetails/ProductDetails.java
+ te.app.ossman_elmonkz.pages.products.models.productDetails.ProductDetails
+te/app/ossman_elmonkz/base/LiveData.java
+ te.app.ossman_elmonkz.base.LiveData
+te/app/ossman_elmonkz/databinding/FragmentSubCategoriesBinding.java
+ te.app.ossman_elmonkz.databinding.FragmentSubCategoriesBinding
+te/app/ossman_elmonkz/base/ApplicationComponent.java
+ te.app.ossman_elmonkz.base.ApplicationComponent
+te/app/ossman_elmonkz/pages/products/models/ProductResponse.java
+ te.app.ossman_elmonkz.pages.products.models.ProductResponse
+te/app/ossman_elmonkz/pages/settings/viewModels/SettingsViewModel.java
+ te.app.ossman_elmonkz.pages.settings.viewModels.SettingsViewModel
+te/app/ossman_elmonkz/databinding/LayoutActionBarHomeBinding.java
+ te.app.ossman_elmonkz.databinding.LayoutActionBarHomeBinding
+te/app/ossman_elmonkz/DataBindingTriggerClass.java
+ te.app.ossman_elmonkz.DataBindingTriggerClass
+te/app/ossman_elmonkz/databinding/ItemHomeBinding.java
+ te.app.ossman_elmonkz.databinding.ItemHomeBinding
+te/app/ossman_elmonkz/base/MyApplication.java
+ te.app.ossman_elmonkz.base.MyApplication
+te/app/ossman_elmonkz/pages/settings/SuggestionsFragment.java
+ te.app.ossman_elmonkz.pages.settings.SuggestionsFragment
+te/app/ossman_elmonkz/customViews/actionbar/MenuActionBarView.java
+ te.app.ossman_elmonkz.customViews.actionbar.MenuActionBarView
+te/app/ossman_elmonkz/pages/home/models/CategoriesItem.java
+ te.app.ossman_elmonkz.pages.home.models.CategoriesItem
+te/app/ossman_elmonkz/pages/home/viewModels/HomeViewModel.java
+ te.app.ossman_elmonkz.pages.home.viewModels.HomeViewModel
+ te.app.ossman_elmonkz.pages.home.viewModels.HomeViewModel$DataBindingAdapter
+te/app/ossman_elmonkz/utils/URLS.java
+ te.app.ossman_elmonkz.utils.URLS
+te/app/ossman_elmonkz/connection/Api.java
+ te.app.ossman_elmonkz.connection.Api
+te/app/ossman_elmonkz/base/BaseFragment.java
+ te.app.ossman_elmonkz.base.BaseFragment
+te/app/ossman_elmonkz/pages/agentsAndClients/viewModels/AgentsClientsViewModel.java
+ te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.AgentsClientsViewModel
+te/app/ossman_elmonkz/pages/splash/SplashFragment.java
+ te.app.ossman_elmonkz.pages.splash.SplashFragment
+te/app/ossman_elmonkz/databinding/FragmentCreateOrderBinding.java
+ te.app.ossman_elmonkz.databinding.FragmentCreateOrderBinding
+te/app/ossman_elmonkz/databinding/FragmentClientsBinding.java
+ te.app.ossman_elmonkz.databinding.FragmentClientsBinding
+te/app/ossman_elmonkz/utils/session/SharedPreferenceHelper.java
+ te.app.ossman_elmonkz.utils.session.SharedPreferenceHelper
+te/app/ossman_elmonkz/utils/PopUp/PopUpMenuHelper.java
+ te.app.ossman_elmonkz.utils.PopUp.PopUpMenuHelper
+te/app/ossman_elmonkz/pages/cart/models/CreateOrder.java
+ te.app.ossman_elmonkz.pages.cart.models.CreateOrder
+te/app/ossman_elmonkz/pages/products/viewModels/ProductsViewModel.java
+ te.app.ossman_elmonkz.pages.products.viewModels.ProductsViewModel
+te/app/ossman_elmonkz/repository/SettingsRepository.java
+ te.app.ossman_elmonkz.repository.SettingsRepository
+te/app/ossman_elmonkz/pages/products/adapters/ProductsAdapter.java
+ te.app.ossman_elmonkz.pages.products.adapters.ProductsAdapter
+ te.app.ossman_elmonkz.pages.products.adapters.ProductsAdapter$ViewHolder
+te/app/ossman_elmonkz/customViews/views/CustomTextViewBold.java
+ te.app.ossman_elmonkz.customViews.views.CustomTextViewBold
+te/app/ossman_elmonkz/databinding/ItemCartBinding.java
+ te.app.ossman_elmonkz.databinding.ItemCartBinding
+te/app/ossman_elmonkz/pages/subCategories/adapters/SearchAdapter.java
+ te.app.ossman_elmonkz.pages.subCategories.adapters.SearchAdapter
+ te.app.ossman_elmonkz.pages.subCategories.adapters.SearchAdapter$ViewHolder
+te/app/ossman_elmonkz/pages/more/MoreFragment.java
+ te.app.ossman_elmonkz.pages.more.MoreFragment
+te/app/ossman_elmonkz/pages/home/models/SliderAdsItem.java
+ te.app.ossman_elmonkz.pages.home.models.SliderAdsItem
+te/app/ossman_elmonkz/pages/settings/ContactFragment.java
+ te.app.ossman_elmonkz.pages.settings.ContactFragment
+te/app/ossman_elmonkz/databinding/ItemProductsBinding.java
+ te.app.ossman_elmonkz.databinding.ItemProductsBinding
+te/app/ossman_elmonkz/pages/splash/SplashViewModel.java
+ te.app.ossman_elmonkz.pages.splash.SplashViewModel
+te/app/ossman_elmonkz/connection/ConnectionHelper.java
+ te.app.ossman_elmonkz.connection.ConnectionHelper
+ te.app.ossman_elmonkz.connection.ConnectionHelper$1
+ te.app.ossman_elmonkz.connection.ConnectionHelper$2
+ te.app.ossman_elmonkz.connection.ConnectionHelper$3
+te/app/ossman_elmonkz/customViews/views/IncrementalView.java
+ te.app.ossman_elmonkz.customViews.views.IncrementalView
+ te.app.ossman_elmonkz.customViews.views.IncrementalView$1
+te/app/ossman_elmonkz/base/ApplicationBinding.java
+ te.app.ossman_elmonkz.base.ApplicationBinding
+te/app/ossman_elmonkz/databinding/FragmentSplashBinding.java
+ te.app.ossman_elmonkz.databinding.FragmentSplashBinding
+te/app/ossman_elmonkz/databinding/FragmentProductsBinding.java
+ te.app.ossman_elmonkz.databinding.FragmentProductsBinding
+te/app/ossman_elmonkz/customViews/actionbar/BackActionBarView.java
+ te.app.ossman_elmonkz.customViews.actionbar.BackActionBarView
+te/app/ossman_elmonkz/pages/settings/AboutAppFragment.java
+ te.app.ossman_elmonkz.pages.settings.AboutAppFragment
+te/app/ossman_elmonkz/pages/cart/CreateOrderFragment.java
+ te.app.ossman_elmonkz.pages.cart.CreateOrderFragment
+te/app/ossman_elmonkz/model/base/Mutable.java
+ te.app.ossman_elmonkz.model.base.Mutable
+te/app/ossman_elmonkz/pages/cart/CartFragment.java
+ te.app.ossman_elmonkz.pages.cart.CartFragment
+te/app/ossman_elmonkz/pages/products/ProductsFragment.java
+ te.app.ossman_elmonkz.pages.products.ProductsFragment
+te/app/ossman_elmonkz/customViews/views/BaseEditText.java
+ te.app.ossman_elmonkz.customViews.views.BaseEditText
+ te.app.ossman_elmonkz.customViews.views.BaseEditText$1
+te/app/ossman_elmonkz/utils/session/UserHelper.java
+ te.app.ossman_elmonkz.utils.session.UserHelper

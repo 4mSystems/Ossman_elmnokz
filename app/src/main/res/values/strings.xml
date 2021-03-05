@@ -36,5 +36,27 @@
     <string name="oldest">التاريخ من القديم الى الجديد</string>
     <string name="send_contact">إرسال</string>
     <string name="related_products">منتجات ذات صلة</string>
+    <string name="menuHome">الرئيسيه</string>
+    <string name="menuMore">اخرى</string>
+    <string name="home_search_hint">ابحث عن توافق</string>
+    <string name="department_name_hint">اختار القسم من هنا</string>
+    <string name="brand_name_hint">اختار الماركة من هنا</string>
+    <string name="model_name_hint">اختار الموديل من هنا</string>
+    <string name="quanity">الكمية</string>
+    <string name="menuProducts">منتجات المنقذ</string>
+    <string name="elmonkz_systems_text">سيستم المنقذ :</string>
+    <string name="prePayment_text">مقدم الحجز :</string>
+    <string name="on_hand">عند الاستلام :</string>
+    <string name="product_warning1">للحجز يرجى التواصل مع مسئول الحجز مهندس / محمد المنقذ</string>
+    <string name="product_warning2">سيتم فتح باب الحجز ابتداء من ---- الى ---</string>
+    <string name="product_warning3">تم غلق باب الحجز لشهر ---</string>
+    <string name="suggest_title">يسعدنا تلقى اقتراحاتكم وشكواكم ونسعى جاهدا لحلها</string>
+    <string name="contact_title">تواصل معنا للرد على استفسارتك</string>
+    <string name="about">عن التطبيق</string>
+    <string name="suggest">الشكاوى والمقترحات</string>
+    <string name="share">مشاركة التطبيق</string>
+    <string name="rate">تقييم التطبيق</string>
+    <string name="members">العملاء</string>
+    <string name="agents">الوكلاء</string>
 
 </resources>
