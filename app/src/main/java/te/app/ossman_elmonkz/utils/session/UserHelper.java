@@ -76,7 +76,18 @@ public class UserHelper {
         editor.apply();
 
     }
+    public void addIsFirst(boolean isFirst) {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean("isFirst", isFirst);
+        editor.apply();
 
+    }
+
+    public boolean getIsFirst() {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getBoolean("isFirst", true);
+    }
     public String getStep() {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return sharedPreferences.getString("step", "");

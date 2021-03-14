@@ -7,12 +7,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
-import androidx.cardview.widget.CardView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
-import com.smarteist.autoimageslider.SliderView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.ossman_elmonkz.R;
@@ -20,32 +17,19 @@ import te.app.ossman_elmonkz.pages.home.viewModels.HomeViewModel;
 
 public abstract class FragmentHomeBinding extends ViewDataBinding {
   @NonNull
-  public final ExtendedFloatingActionButton floatingActionButton;
-
-  @NonNull
   public final AppCompatImageView icFav;
 
   @NonNull
   public final AppCompatImageView icShoppingCart;
 
-  @NonNull
-  public final SliderView imageSlider;
-
-  @NonNull
-  public final CardView sliderContainer;
-
   @Bindable
   protected HomeViewModel mViewmodel;
 
   protected FragmentHomeBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      ExtendedFloatingActionButton floatingActionButton, AppCompatImageView icFav,
-      AppCompatImageView icShoppingCart, SliderView imageSlider, CardView sliderContainer) {
+      AppCompatImageView icFav, AppCompatImageView icShoppingCart) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.floatingActionButton = floatingActionButton;
     this.icFav = icFav;
     this.icShoppingCart = icShoppingCart;
-    this.imageSlider = imageSlider;
-    this.sliderContainer = sliderContainer;
   }
 
   public abstract void setViewmodel(@Nullable HomeViewModel viewmodel);

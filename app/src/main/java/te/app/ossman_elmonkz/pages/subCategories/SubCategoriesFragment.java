@@ -24,6 +24,7 @@ import te.app.ossman_elmonkz.base.IApplicationComponent;
 import te.app.ossman_elmonkz.base.MyApplication;
 import te.app.ossman_elmonkz.databinding.FragmentSubCategoriesBinding;
 import te.app.ossman_elmonkz.model.base.Mutable;
+import te.app.ossman_elmonkz.pages.home.models.CategoriesItem;
 import te.app.ossman_elmonkz.pages.subCategories.models.SubCategoriesResponse;
 import te.app.ossman_elmonkz.pages.subCategories.viewModels.SubCategoriesViewModel;
 import te.app.ossman_elmonkz.utils.Constants;
@@ -45,7 +46,8 @@ public class SubCategoriesFragment extends BaseFragment {
         if (bundle != null) {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
-            viewModel.subCategories();
+            viewModel.setCategoriesItem(new Gson().fromJson(String.valueOf(viewModel.getPassingObject().getObjectClass()), CategoriesItem.class));
+
         }
         setEvent();
         return binding.getRoot();

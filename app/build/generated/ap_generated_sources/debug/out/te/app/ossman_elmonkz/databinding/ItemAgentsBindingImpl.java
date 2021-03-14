@@ -13,11 +13,7 @@ public class ItemAgentsBindingImpl extends ItemAgentsBinding  {
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.product_image, 1);
-        sViewsWithIds.put(R.id.product_name, 2);
-        sViewsWithIds.put(R.id.phone, 3);
-        sViewsWithIds.put(R.id.address, 4);
+        sViewsWithIds = null;
     }
     // views
     @NonNull
@@ -37,8 +33,12 @@ public class ItemAgentsBindingImpl extends ItemAgentsBinding  {
             , (de.hdodenhof.circleimageview.CircleImageView) bindings[1]
             , (te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium) bindings[2]
             );
+        this.address.setTag(null);
         this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
+        this.phone.setTag(null);
+        this.productImage.setTag(null);
+        this.productName.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -47,7 +47,7 @@ public class ItemAgentsBindingImpl extends ItemAgentsBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -66,7 +66,7 @@ public class ItemAgentsBindingImpl extends ItemAgentsBinding  {
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.itemViewModel == variableId) {
-            setItemViewModel((te.app.ossman_elmonkz.pages.products.viewModels.ItemProductsViewModel) variable);
+            setItemViewModel((te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.ItemAgentViewModel) variable);
         }
         else {
             variableSet = false;
@@ -74,22 +74,34 @@ public class ItemAgentsBindingImpl extends ItemAgentsBinding  {
             return variableSet;
     }
 
-    public void setItemViewModel(@Nullable te.app.ossman_elmonkz.pages.products.viewModels.ItemProductsViewModel ItemViewModel) {
+    public void setItemViewModel(@Nullable te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.ItemAgentViewModel ItemViewModel) {
+        updateRegistration(0, ItemViewModel);
         this.mItemViewModel = ItemViewModel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.itemViewModel);
+        super.requestRebind();
     }
 
     @Override
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeItemViewModel((te.app.ossman_elmonkz.pages.products.viewModels.ItemProductsViewModel) object, fieldId);
+                return onChangeItemViewModel((te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.ItemAgentViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeItemViewModel(te.app.ossman_elmonkz.pages.products.viewModels.ItemProductsViewModel ItemViewModel, int fieldId) {
+    private boolean onChangeItemViewModel(te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.ItemAgentViewModel ItemViewModel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.agentData) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
             }
             return true;
         }
@@ -103,7 +115,43 @@ public class ItemAgentsBindingImpl extends ItemAgentsBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.ItemAgentViewModel itemViewModel = mItemViewModel;
+        java.lang.String itemViewModelAgentDataAddress = null;
+        te.app.ossman_elmonkz.pages.agentsAndClients.models.AgentData itemViewModelAgentData = null;
+        java.lang.String itemViewModelAgentDataImage = null;
+        java.lang.String itemViewModelAgentDataName = null;
+        java.lang.String itemViewModelAgentDataPhone = null;
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+
+
+                if (itemViewModel != null) {
+                    // read itemViewModel.agentData
+                    itemViewModelAgentData = itemViewModel.getAgentData();
+                }
+
+
+                if (itemViewModelAgentData != null) {
+                    // read itemViewModel.agentData.address
+                    itemViewModelAgentDataAddress = itemViewModelAgentData.getAddress();
+                    // read itemViewModel.agentData.image
+                    itemViewModelAgentDataImage = itemViewModelAgentData.getImage();
+                    // read itemViewModel.agentData.name
+                    itemViewModelAgentDataName = itemViewModelAgentData.getName();
+                    // read itemViewModel.agentData.phone
+                    itemViewModelAgentDataPhone = itemViewModelAgentData.getPhone();
+                }
+        }
         // batch finished
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.address, itemViewModelAgentDataAddress);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.phone, itemViewModelAgentDataPhone);
+            te.app.ossman_elmonkz.base.ApplicationBinding.loadImage(this.productImage, itemViewModelAgentDataImage);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.productName, itemViewModelAgentDataName);
+        }
     }
     // Listener Stub Implementations
     // callback impls
@@ -111,7 +159,8 @@ public class ItemAgentsBindingImpl extends ItemAgentsBinding  {
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): itemViewModel
-        flag 1 (0x2L): null
+        flag 1 (0x2L): itemViewModel.agentData
+        flag 2 (0x3L): null
     flag mapping end*/
     //end
 }

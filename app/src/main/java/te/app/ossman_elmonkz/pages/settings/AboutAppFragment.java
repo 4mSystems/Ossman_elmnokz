@@ -21,6 +21,7 @@ import te.app.ossman_elmonkz.base.IApplicationComponent;
 import te.app.ossman_elmonkz.base.MyApplication;
 import te.app.ossman_elmonkz.databinding.FragmentAboutBinding;
 import te.app.ossman_elmonkz.model.base.Mutable;
+import te.app.ossman_elmonkz.pages.settings.models.AboutResponse;
 import te.app.ossman_elmonkz.pages.settings.viewModels.SettingsViewModel;
 import te.app.ossman_elmonkz.utils.Constants;
 
@@ -36,7 +37,7 @@ public class AboutAppFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
-//        viewModel.getAbout();
+        viewModel.about();
         setEvent();
         return binding.getRoot();
     }
@@ -46,7 +47,7 @@ public class AboutAppFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (((Mutable) o).message.equals(Constants.ABOUT)) {
-//                viewModel.setAboutData(((AboutResponse) ((Mutable) o).object).getAboutData());
+                viewModel.setAboutMain(((AboutResponse) ((Mutable) o).object).getData());
             }
         });
 

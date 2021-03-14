@@ -15,34 +15,25 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-import te.app.ossman_elmonkz.PassingObject;
 import te.app.ossman_elmonkz.R;
-import te.app.ossman_elmonkz.databinding.ItemHomeBinding;
-import te.app.ossman_elmonkz.pages.home.models.CategoriesItem;
-import te.app.ossman_elmonkz.pages.home.viewModels.ItemCategoryViewModel;
-import te.app.ossman_elmonkz.pages.products.ProductsFragment;
-import te.app.ossman_elmonkz.pages.subCategories.SubCategoriesFragment;
-import te.app.ossman_elmonkz.utils.Constants;
-import te.app.ossman_elmonkz.utils.helper.MovementHelper;
+import te.app.ossman_elmonkz.databinding.ItemSearchBinding;
+import te.app.ossman_elmonkz.pages.subCategories.models.search.EqualItemsItem;
+import te.app.ossman_elmonkz.pages.subCategories.viewModels.ItemSearchViewModel;
 
 
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder> {
-    List<CategoriesItem> categoriesDataList;
+    List<EqualItemsItem> searchItems;
     Context context;
-    public int pageType;
 
     public SearchAdapter() {
-        this.categoriesDataList = new ArrayList<>();
+        this.searchItems = new ArrayList<>();
     }
 
-    public List<CategoriesItem> getCategoriesDataList() {
-        return categoriesDataList;
-    }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_home,
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_search,
                 parent, false);
         this.context = parent.getContext();
         return new ViewHolder(itemView);
@@ -51,23 +42,15 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
-        CategoriesItem categoriesData = categoriesDataList.get(position);
-        ItemCategoryViewModel itemMenuViewModel = new ItemCategoryViewModel(categoriesData);
-        itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
-            if (o.equals(Constants.SUB_CATEGORIES)) {
-                if (pageType == 0)
-                    MovementHelper.startActivityWithBundle(context, new PassingObject(categoriesData.getId()), categoriesData.getTitle(), SubCategoriesFragment.class.getName(), null);
-                else
-                    MovementHelper.startActivityWithBundle(context, new PassingObject(categoriesData.getId()), categoriesData.getTitle(), ProductsFragment.class.getName(), "VISIBLE");
-            }
-        });
+        EqualItemsItem categoriesData = searchItems.get(position);
+        ItemSearchViewModel itemMenuViewModel = new ItemSearchViewModel(categoriesData);
         holder.setViewModel(itemMenuViewModel);
     }
 
 
-    public void update(List<CategoriesItem> dataList) {
-        this.categoriesDataList.clear();
-        categoriesDataList.addAll(dataList);
+    public void update(List<EqualItemsItem> dataList) {
+        this.searchItems.clear();
+        searchItems.addAll(dataList);
         notifyDataSetChanged();
     }
 
@@ -85,11 +68,11 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
 
     @Override
     public int getItemCount() {
-        return categoriesDataList.size();
+        return searchItems.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public ItemHomeBinding itemMenuBinding;
+        public ItemSearchBinding itemMenuBinding;
 
         ViewHolder(View itemView) {
             super(itemView);
@@ -109,7 +92,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
             }
         }
 
-        void setViewModel(ItemCategoryViewModel itemViewModels) {
+        void setViewModel(ItemSearchViewModel itemViewModels) {
             if (itemMenuBinding != null) {
                 itemMenuBinding.setItemViewModel(itemViewModels);
             }

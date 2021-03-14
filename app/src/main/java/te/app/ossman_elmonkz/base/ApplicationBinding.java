@@ -2,7 +2,6 @@ package te.app.ossman_elmonkz.base;
 
 import android.graphics.Color;
 import android.text.TextUtils;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 
@@ -17,14 +16,10 @@ import te.app.ossman_elmonkz.utils.helper.AppHelper;
 import static te.app.ossman_elmonkz.utils.Constants.IMAGE_BASE_URL;
 
 public class ApplicationBinding {
-    private static final String TAG = "ApplicationBinding";
-
     @BindingAdapter("imageUrl")
     public static void loadImage(ImageView imageView, Object image) {
-        Log.e(TAG, "loadImage: " + IMAGE_BASE_URL.concat((String) image));
         if (image instanceof String && !TextUtils.isEmpty((String) image)) {
-            Log.e(TAG, "loadImage: " + IMAGE_BASE_URL.concat((String) image));
-            Picasso.get().load(IMAGE_BASE_URL.concat((String) image)).placeholder(R.color.overlayBackground).into(imageView);
+            Picasso.get().load(IMAGE_BASE_URL.concat((String) image)).placeholder(R.drawable.logo).into(imageView);
         } else if (image instanceof Integer) {
             imageView.setImageResource((Integer) image);
         }

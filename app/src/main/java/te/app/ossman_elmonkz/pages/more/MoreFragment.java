@@ -21,6 +21,8 @@ import te.app.ossman_elmonkz.base.IApplicationComponent;
 import te.app.ossman_elmonkz.base.MyApplication;
 import te.app.ossman_elmonkz.databinding.FragmentMoreBinding;
 import te.app.ossman_elmonkz.model.base.Mutable;
+import te.app.ossman_elmonkz.pages.agentsAndClients.AgentsFragment;
+import te.app.ossman_elmonkz.pages.agentsAndClients.ClientsFragment;
 import te.app.ossman_elmonkz.pages.more.viewModels.MoreViewModel;
 import te.app.ossman_elmonkz.pages.settings.AboutAppFragment;
 import te.app.ossman_elmonkz.pages.settings.ContactFragment;
@@ -57,6 +59,12 @@ public class MoreFragment extends BaseFragment {
                     break;
                 case Constants.CONTACT:
                     MovementHelper.startActivity(context, ContactFragment.class.getName(), getResources().getString(R.string.contact_us), null);
+                    break;
+                case Constants.AGENTS:
+                    MovementHelper.startActivity(context, AgentsFragment.class.getName(), getResources().getString(R.string.agents), null);
+                    break;
+                case Constants.CLIENTS:
+                    MovementHelper.startActivity(context, ClientsFragment.class.getName(), getResources().getString(R.string.members), null);
                     break;
 
             }

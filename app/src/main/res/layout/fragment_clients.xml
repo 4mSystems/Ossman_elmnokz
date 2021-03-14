@@ -5,6 +5,8 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
             name="viewmodel"
             type="te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.AgentsClientsViewModel" />
@@ -14,19 +16,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp8h"
+            android:background="@drawable/corner_view_border"
+            android:drawableEnd="@drawable/ic_arrow_down"
+            android:drawablePadding="@dimen/dp8w"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:hint="@string/gov_hint"
+            android:onClick="@{()-> viewmodel.showGovs()}"
+            android:padding="@dimen/dp8h"
+            android:text="@={viewmodel.selectGov}"
+            android:textColorHint="@color/medium_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rc_products"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp4h"
+            app:adapter="@{viewmodel.clientsAdapter}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_input"
+            app:orientation="@{`1`}"
+            app:span="@{`1`}"
             tools:listitem="@layout/item_clients" />
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/pb_base_loading_bar"
             android:layout_width="@dimen/dp100w"
             android:layout_height="@dimen/dp100h"
+            android:visibility="@{viewmodel.clientsAdapter.itemCount==0?View.VISIBLE:View.GONE}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

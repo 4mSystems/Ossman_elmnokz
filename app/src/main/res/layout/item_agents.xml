@@ -8,7 +8,7 @@
 
         <variable
             name="itemViewModel"
-            type="te.app.ossman_elmonkz.pages.products.viewModels.ItemProductsViewModel" />
+            type="te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.ItemAgentViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -28,6 +28,7 @@
                 android:layout_height="@dimen/dp50h"
                 android:layout_margin="@dimen/dp6h"
                 android:src="@color/overlayBackground"
+                app:imageUrl="@{itemViewModel.agentData.image}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -39,10 +40,10 @@
                 android:layout_margin="@dimen/dp4h"
                 android:ellipsize="marquee"
                 android:singleLine="true"
-                android:text="عطور"
+                android:text="@{itemViewModel.agentData.name}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorPrimaryDark"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/product_image"
                 app:layout_constraintTop_toTopOf="@id/product_image" />
@@ -55,7 +56,7 @@
                 android:layout_marginEnd="@dimen/dp4w"
                 android:ellipsize="marquee"
                 android:singleLine="true"
-                android:text="500 جنيه"
+                android:text="@{itemViewModel.agentData.phone}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark"
@@ -71,7 +72,7 @@
                 android:layout_marginEnd="@dimen/dp4w"
                 android:ellipsize="marquee"
                 android:singleLine="true"
-                android:text="500 جنيه"
+                android:text="@{itemViewModel.agentData.address}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark"

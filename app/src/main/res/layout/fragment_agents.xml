@@ -5,6 +5,8 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
             name="viewmodel"
             type="te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.AgentsClientsViewModel" />
@@ -19,14 +21,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp4h"
+            app:adapter="@{viewmodel.agentsAdapter}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintTop_toTopOf="parent"
+            app:orientation="@{`1`}"
+            app:span="@{`1`}"
             tools:listitem="@layout/item_agents" />
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/pb_base_loading_bar"
             android:layout_width="@dimen/dp100w"
             android:layout_height="@dimen/dp100h"
+            android:visibility="@{viewmodel.agentsAdapter.itemCount==0?View.VISIBLE:View.GONE,default=gone}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

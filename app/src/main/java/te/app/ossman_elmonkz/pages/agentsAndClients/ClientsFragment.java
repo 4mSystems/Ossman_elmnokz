@@ -13,17 +13,23 @@ import androidx.lifecycle.Observer;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.inject.Inject;
 
+import te.app.ossman_elmonkz.BR;
 import te.app.ossman_elmonkz.R;
 import te.app.ossman_elmonkz.base.BaseFragment;
 import te.app.ossman_elmonkz.base.IApplicationComponent;
 import te.app.ossman_elmonkz.base.MyApplication;
-import te.app.ossman_elmonkz.databinding.FragmentAgentsBinding;
 import te.app.ossman_elmonkz.databinding.FragmentClientsBinding;
 import te.app.ossman_elmonkz.model.base.Mutable;
+import te.app.ossman_elmonkz.model.govs.GovsResponse;
+import te.app.ossman_elmonkz.pages.agentsAndClients.models.clients.ClientsResponse;
 import te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.AgentsClientsViewModel;
 import te.app.ossman_elmonkz.utils.Constants;
+import te.app.ossman_elmonkz.utils.PopUp.PopUpMenuHelper;
 
 public class ClientsFragment extends BaseFragment {
 
@@ -38,6 +44,7 @@ public class ClientsFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
+        viewModel.getGovs();
         setEvent();
         return binding.getRoot();
     }
@@ -46,11 +53,27 @@ public class ClientsFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            if (((Mutable) o).message.equals(Constants.CONTACT)) {
-                toastMessage(getString(R.string.send_successfully));
-                finishActivity();
-            }
+            if (((Mutable) o).message.equals(Constants.GOVS)) {
+                viewModel.govsDataList = ((GovsResponse) mutable.object).getData();
+                if (viewModel.govsDataList.size() > 0) {
+                    viewModel.selectGov = viewModel.govsDataList.get(0).getName();
+                    viewModel.getClients(viewModel.govsDataList.get(0).getId());
+                }
 
+            } else if (((Mutable) o).message.equals(Constants.CLIENTS)) {
+                viewModel.getClientsAdapter().update(((ClientsResponse) mutable.object).getData());
+                viewModel.notifyChange(BR.clientsAdapter);
+            } else if (((Mutable) o).message.equals(Constants.SHOW_GOVS)) {
+                showGovs();
+            }
+        });
+    }
+
+    private void showGovs() {
+        PopUpMenuHelper.showGovsPopUp(context, binding.searchInput, viewModel.govsDataList).setOnMenuItemClickListener(item -> {
+            viewModel.selectGov = viewModel.govsDataList.get(item.getItemId()).getName();
+            viewModel.getClients(viewModel.govsDataList.get(item.getItemId()).getId());
+            return false;
         });
     }
 

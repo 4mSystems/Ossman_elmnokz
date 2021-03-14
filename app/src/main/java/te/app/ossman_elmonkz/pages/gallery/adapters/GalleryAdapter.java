@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.LifecycleOwner;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
@@ -15,30 +14,24 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-import te.app.ossman_elmonkz.PassingObject;
 import te.app.ossman_elmonkz.R;
-import te.app.ossman_elmonkz.databinding.ItemProductsBinding;
-import te.app.ossman_elmonkz.pages.products.models.productDetails.Product;
-import te.app.ossman_elmonkz.pages.products.viewModels.ItemProductsViewModel;
-import te.app.ossman_elmonkz.utils.helper.MovementHelper;
+import te.app.ossman_elmonkz.databinding.ItemGalleryBinding;
+import te.app.ossman_elmonkz.pages.gallery.models.GalleryData;
+import te.app.ossman_elmonkz.pages.gallery.viewModels.ItemGalleryViewModel;
 
 
 public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHolder> {
-    List<Product> productList;
+    List<GalleryData> galleryDataList;
     Context context;
 
     public GalleryAdapter() {
-        this.productList = new ArrayList<>();
-    }
-
-    public List<Product> getProductList() {
-        return productList;
+        this.galleryDataList = new ArrayList<>();
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_products,
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_gallery,
                 parent, false);
         this.context = parent.getContext();
         return new ViewHolder(itemView);
@@ -47,15 +40,15 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
-        Product product = productList.get(position);
-        ItemProductsViewModel itemMenuViewModel = new ItemProductsViewModel(product);
+        GalleryData product = galleryDataList.get(position);
+        ItemGalleryViewModel itemMenuViewModel = new ItemGalleryViewModel(product);
         holder.setViewModel(itemMenuViewModel);
     }
 
 
-    public void update(List<Product> dataList) {
-        this.productList.clear();
-        productList.addAll(dataList);
+    public void update(List<GalleryData> dataList) {
+        this.galleryDataList.clear();
+        galleryDataList.addAll(dataList);
         notifyDataSetChanged();
     }
 
@@ -73,11 +66,11 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return productList.size();
+        return galleryDataList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public ItemProductsBinding itemMenuBinding;
+        public ItemGalleryBinding itemMenuBinding;
 
         ViewHolder(View itemView) {
             super(itemView);
@@ -97,7 +90,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHold
             }
         }
 
-        void setViewModel(ItemProductsViewModel itemViewModels) {
+        void setViewModel(ItemGalleryViewModel itemViewModels) {
             if (itemMenuBinding != null) {
                 itemMenuBinding.setItemViewModel(itemViewModels);
             }

@@ -13,7 +13,7 @@ import te.app.ossman_elmonkz.utils.Constants;
 public class MoreViewModel extends BaseViewModel {
 
     public MutableLiveData<Mutable> liveData;
-     CompositeDisposable compositeDisposable = new CompositeDisposable();
+    CompositeDisposable compositeDisposable = new CompositeDisposable();
     @Inject
     SettingsRepository repository;
 
@@ -34,8 +34,12 @@ public class MoreViewModel extends BaseViewModel {
         liveData.setValue(new Mutable(Constants.TERMS));
     }
 
-    public void toLogout() {
-        liveData.setValue(new Mutable(Constants.LOGOUT));
+    public void toAgents() {
+        liveData.setValue(new Mutable(Constants.AGENTS));
+    }
+
+    public void toClients() {
+        liveData.setValue(new Mutable(Constants.CLIENTS));
     }
 
     public void toContact() {

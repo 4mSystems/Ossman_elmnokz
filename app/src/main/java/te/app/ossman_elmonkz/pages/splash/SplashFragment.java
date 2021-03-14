@@ -22,9 +22,10 @@ import te.app.ossman_elmonkz.base.MyApplication;
 import te.app.ossman_elmonkz.model.base.Mutable;
 import te.app.ossman_elmonkz.R;
 import te.app.ossman_elmonkz.databinding.FragmentSplashBinding;
-import te.app.ossman_elmonkz.pages.home.HomeFragment;
+import te.app.ossman_elmonkz.pages.onBoard.OnBoardFragment;
 import te.app.ossman_elmonkz.utils.Constants;
 import te.app.ossman_elmonkz.utils.helper.MovementHelper;
+import te.app.ossman_elmonkz.utils.session.UserHelper;
 
 public class SplashFragment extends BaseFragment {
     private Context context;
@@ -49,7 +50,10 @@ public class SplashFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (mutable.message.equals(Constants.HOME)) {
-                MovementHelper.startActivityMain(context);
+                if (UserHelper.getInstance(context).getIsFirst())
+                    MovementHelper.startActivityBase(context, OnBoardFragment.class.getName(), null, null);
+                else
+                    MovementHelper.startActivityMain(context);
             }
         });
     }

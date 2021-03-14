@@ -58,6 +58,10 @@
     <string name="rate">تقييم التطبيق</string>
     <string name="members">العملاء</string>
     <string name="agents">الوكلاء</string>
+    <string name="startApp">بدأ التطبيق</string>
+    <string name="next">التالى</string>
+    <string name="gov_hint">اختار المحافظه لاظهار العملاء</string>
+    <string name="t_word">ت/</string>
 
 
 </resources>

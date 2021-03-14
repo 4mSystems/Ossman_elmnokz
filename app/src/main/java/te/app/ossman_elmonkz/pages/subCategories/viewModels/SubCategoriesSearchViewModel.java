@@ -33,14 +33,14 @@ public class SubCategoriesSearchViewModel extends BaseViewModel {
         homeRepository.setLiveData(liveData);
     }
 
-    public void subCategories() {
-        compositeDisposable.add(homeRepository.getSubCategories(getPassingObject().getId()));
+    public void search() {
+        compositeDisposable.add(homeRepository.search(getPassingObject().getId(),getPassingObject().getObject(),search));
     }
     public void onTextChanged(CharSequence s, int start, int before, int count) {
         if (!TextUtils.isEmpty(s)) {
             setSearchProgressVisible(View.VISIBLE);
-//            search = s.toString();
-//            searchMarkets();
+            search = s.toString();
+            search();
         } else
             setSearchProgressVisible(View.GONE);
     }

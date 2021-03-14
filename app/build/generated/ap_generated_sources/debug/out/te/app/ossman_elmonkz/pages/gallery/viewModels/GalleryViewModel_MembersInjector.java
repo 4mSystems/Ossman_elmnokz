@@ -4,32 +4,32 @@ package te.app.ossman_elmonkz.pages.gallery.viewModels;
 import dagger.MembersInjector;
 import dagger.internal.InjectedFieldSignature;
 import javax.inject.Provider;
-import te.app.ossman_elmonkz.repository.ProductRepository;
+import te.app.ossman_elmonkz.repository.SettingsRepository;
 
 @SuppressWarnings({
     "unchecked",
     "rawtypes"
 })
 public final class GalleryViewModel_MembersInjector implements MembersInjector<GalleryViewModel> {
-  private final Provider<ProductRepository> productRepositoryProvider;
+  private final Provider<SettingsRepository> settingsRepositoryProvider;
 
-  public GalleryViewModel_MembersInjector(Provider<ProductRepository> productRepositoryProvider) {
-    this.productRepositoryProvider = productRepositoryProvider;
+  public GalleryViewModel_MembersInjector(Provider<SettingsRepository> settingsRepositoryProvider) {
+    this.settingsRepositoryProvider = settingsRepositoryProvider;
   }
 
   public static MembersInjector<GalleryViewModel> create(
-      Provider<ProductRepository> productRepositoryProvider) {
-    return new GalleryViewModel_MembersInjector(productRepositoryProvider);
+      Provider<SettingsRepository> settingsRepositoryProvider) {
+    return new GalleryViewModel_MembersInjector(settingsRepositoryProvider);
   }
 
   @Override
   public void injectMembers(GalleryViewModel instance) {
-    injectProductRepository(instance, productRepositoryProvider.get());
+    injectSettingsRepository(instance, settingsRepositoryProvider.get());
   }
 
-  @InjectedFieldSignature("te.app.ossman_elmonkz.pages.gallery.viewModels.GalleryViewModel.productRepository")
-  public static void injectProductRepository(GalleryViewModel instance,
-      ProductRepository productRepository) {
-    instance.productRepository = productRepository;
+  @InjectedFieldSignature("te.app.ossman_elmonkz.pages.gallery.viewModels.GalleryViewModel.settingsRepository")
+  public static void injectSettingsRepository(GalleryViewModel instance,
+      SettingsRepository settingsRepository) {
+    instance.settingsRepository = settingsRepository;
   }
 }

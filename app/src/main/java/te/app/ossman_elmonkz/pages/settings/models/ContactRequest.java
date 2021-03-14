@@ -9,11 +9,21 @@ public class ContactRequest {
     private String name;
     @SerializedName("phone")
     private String phone;
-    @SerializedName("describtion")
+    @SerializedName("address")
+    private String address;
+    @SerializedName("message")
     private String message;
 
     public boolean isValid() {
-        return (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(phone) && !TextUtils.isEmpty(message));
+        return (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(phone)&& !TextUtils.isEmpty(address) && !TextUtils.isEmpty(message));
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getName() {

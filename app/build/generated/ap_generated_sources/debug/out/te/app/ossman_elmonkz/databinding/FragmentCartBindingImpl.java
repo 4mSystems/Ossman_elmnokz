@@ -25,7 +25,7 @@ public class FragmentCartBindingImpl extends FragmentCartBinding implements te.a
     private final androidx.recyclerview.widget.RecyclerView mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback7;
+    private final android.view.View.OnClickListener mCallback6;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -49,7 +49,7 @@ public class FragmentCartBindingImpl extends FragmentCartBinding implements te.a
         this.pbBaseLoadingBar.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback7 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
+        mCallback6 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -165,7 +165,7 @@ public class FragmentCartBindingImpl extends FragmentCartBinding implements te.a
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.addCart.setOnClickListener(mCallback7);
+            this.addCart.setOnClickListener(mCallback6);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

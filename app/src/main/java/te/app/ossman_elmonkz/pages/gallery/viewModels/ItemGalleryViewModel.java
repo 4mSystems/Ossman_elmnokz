@@ -3,19 +3,19 @@ package te.app.ossman_elmonkz.pages.gallery.viewModels;
 import androidx.databinding.Bindable;
 
 import te.app.ossman_elmonkz.base.BaseViewModel;
-import te.app.ossman_elmonkz.pages.products.models.productDetails.Product;
+import te.app.ossman_elmonkz.pages.gallery.models.GalleryData;
 import te.app.ossman_elmonkz.utils.Constants;
 
 public class ItemGalleryViewModel extends BaseViewModel {
-    public Product product;
+    public GalleryData galleryData;
 
-    public ItemGalleryViewModel(Product menuModel) {
-        this.product = menuModel;
+    public ItemGalleryViewModel(GalleryData menuModel) {
+        this.galleryData = menuModel;
     }
 
     @Bindable
-    public Product getProduct() {
-        return product;
+    public GalleryData getGalleryData() {
+        return galleryData;
     }
 
     public void itemAction() {

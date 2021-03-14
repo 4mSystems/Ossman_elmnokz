@@ -14,9 +14,8 @@ public class ActivityMainBindingImpl extends ActivityMainBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.ll_base_container, 2);
-        sViewsWithIds.put(R.id.ll_base_action_bar_container, 3);
-        sViewsWithIds.put(R.id.fl_home_container, 4);
+        sViewsWithIds.put(R.id.ll_base_action_bar_container, 2);
+        sViewsWithIds.put(R.id.fl_home_container, 3);
     }
     // views
     // variables
@@ -26,18 +25,17 @@ public class ActivityMainBindingImpl extends ActivityMainBinding  {
     // Inverse Binding Event Handlers
 
     public ActivityMainBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private ActivityMainBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (android.widget.FrameLayout) bindings[4]
+            , (android.widget.FrameLayout) bindings[3]
             , (com.google.android.material.bottomnavigation.BottomNavigationView) bindings[1]
-            , (android.widget.LinearLayout) bindings[3]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[2]
-            , (androidx.swiperefreshlayout.widget.SwipeRefreshLayout) bindings[0]
+            , (android.widget.LinearLayout) bindings[2]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[0]
             );
         this.homeNavigationMenu.setTag(null);
-        this.swipeContainer.setTag(null);
+        this.llBaseContainer.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();

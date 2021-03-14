@@ -12,7 +12,6 @@ import te.app.ossman_elmonkz.model.base.Mutable;
 import te.app.ossman_elmonkz.model.base.StatusMessage;
 import te.app.ossman_elmonkz.pages.cart.models.CreateOrder;
 import te.app.ossman_elmonkz.pages.products.models.ProductResponse;
-import te.app.ossman_elmonkz.pages.products.models.productDetails.ProductDetailsResponse;
 import te.app.ossman_elmonkz.utils.Constants;
 import te.app.ossman_elmonkz.utils.URLS;
 
@@ -35,16 +34,6 @@ public class ProductRepository extends BaseRepository {
     public Disposable getProducts(int catId) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.PRODUCTS + catId+" /ar/v1", new Object(), ProductResponse.class,
                 Constants.PRODUCTS_RESPONSE, true);
-    }
-
-    public Disposable filter(int type, int catId) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.FILTER + catId + "&type=" + type, new Object(), ProductResponse.class,
-                Constants.PRODUCTS_RESPONSE, true);
-    }
-
-    public Disposable getProductDetails(int productId) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.PRODUCT_DETAILS + productId + "/ar/v1", new Object(), ProductDetailsResponse.class,
-                Constants.Product_DETAILS, true);
     }
 
     public Disposable sendOrder(CreateOrder createOrder) {

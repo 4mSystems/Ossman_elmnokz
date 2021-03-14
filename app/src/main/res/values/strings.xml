@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ميزه ستور</string>
+    <string name="app_name">عثمان المنقذ</string>
     <string name="connection_invaild_body">Check your Internet connection and try again</string>
     <string name="connection_On">Please turn on</string>
     <string name="connection_Wifi">Wifi</string>
@@ -58,5 +58,9 @@
     <string name="rate">تقييم التطبيق</string>
     <string name="members">العملاء</string>
     <string name="agents">الوكلاء</string>
+    <string name="startApp">بدأ التطبيق</string>
+    <string name="next">التالى</string>
+    <string name="gov_hint">اختار المحافظه لاظهار العملاء</string>
+    <string name="t_word">ت/</string>
 
 </resources>

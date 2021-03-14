@@ -15,6 +15,7 @@ import te.app.ossman_elmonkz.pages.buying.BuyingFragment;
 import te.app.ossman_elmonkz.pages.gallery.GalleryFragment;
 import te.app.ossman_elmonkz.pages.home.HomeFragment;
 import te.app.ossman_elmonkz.pages.more.MoreFragment;
+import te.app.ossman_elmonkz.pages.onBoard.OnBoardFragment;
 import te.app.ossman_elmonkz.pages.products.ProductsFragment;
 import te.app.ossman_elmonkz.pages.settings.AboutAppFragment;
 import te.app.ossman_elmonkz.pages.settings.ContactFragment;
@@ -32,6 +33,8 @@ public interface IApplicationComponent {
 
     void inject(SplashFragment splashFragment);
 
+    void inject(OnBoardFragment onBoardFragment);
+
     void inject(HomeFragment homeFragment);
 
     void inject(SubCategoriesFragment subCategoriesFragment);
@@ -39,6 +42,7 @@ public interface IApplicationComponent {
     void inject(ProductsFragment productsFragment);
 
     void inject(GalleryFragment galleryFragment);
+
 
     void inject(CartFragment cartFragment);
 
@@ -57,6 +61,7 @@ public interface IApplicationComponent {
     void inject(ContactFragment contactFragment);
 
     void inject(AboutAppFragment aboutAppFragment);
+
     void inject(MoreFragment moreFragment);
 
 

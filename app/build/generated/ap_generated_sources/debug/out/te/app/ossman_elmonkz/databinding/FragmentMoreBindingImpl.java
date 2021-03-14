@@ -14,14 +14,11 @@ public class FragmentMoreBindingImpl extends FragmentMoreBinding implements te.a
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.more_title, 3);
-        sViewsWithIds.put(R.id.login_container, 4);
-        sViewsWithIds.put(R.id.tv_members, 5);
-        sViewsWithIds.put(R.id.view_profile, 6);
-        sViewsWithIds.put(R.id.tv_agents, 7);
-        sViewsWithIds.put(R.id.view_agent, 8);
-        sViewsWithIds.put(R.id.view_contact, 9);
-        sViewsWithIds.put(R.id.tv_support, 10);
+        sViewsWithIds.put(R.id.more_title, 6);
+        sViewsWithIds.put(R.id.login_container, 7);
+        sViewsWithIds.put(R.id.view_profile, 8);
+        sViewsWithIds.put(R.id.view_agent, 9);
+        sViewsWithIds.put(R.id.view_contact, 10);
         sViewsWithIds.put(R.id.view_support, 11);
         sViewsWithIds.put(R.id.view_terms, 12);
         sViewsWithIds.put(R.id.tv_share, 13);
@@ -34,9 +31,15 @@ public class FragmentMoreBindingImpl extends FragmentMoreBinding implements te.a
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback9;
+    private final android.view.View.OnClickListener mCallback11;
     @Nullable
     private final android.view.View.OnClickListener mCallback8;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback12;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback10;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback9;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -47,30 +50,36 @@ public class FragmentMoreBindingImpl extends FragmentMoreBinding implements te.a
     private FragmentMoreBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (te.app.ossman_elmonkz.customViews.tesDialog.TesImageDialog) bindings[16]
-            , (androidx.cardview.widget.CardView) bindings[4]
-            , (te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium) bindings[3]
-            , (te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular) bindings[7]
+            , (androidx.cardview.widget.CardView) bindings[7]
+            , (te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium) bindings[6]
+            , (te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular) bindings[2]
+            , (te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular) bindings[3]
             , (te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular) bindings[1]
-            , (te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular) bindings[5]
             , (te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular) bindings[15]
             , (te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular) bindings[13]
-            , (te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular) bindings[10]
-            , (te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular) bindings[2]
-            , (android.view.View) bindings[8]
+            , (te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular) bindings[4]
+            , (te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular) bindings[5]
             , (android.view.View) bindings[9]
-            , (android.view.View) bindings[6]
+            , (android.view.View) bindings[10]
+            , (android.view.View) bindings[8]
             , (android.view.View) bindings[14]
             , (android.view.View) bindings[11]
             , (android.view.View) bindings[12]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.tvAgents.setTag(null);
         this.tvContact.setTag(null);
+        this.tvMembers.setTag(null);
+        this.tvSupport.setTag(null);
         this.tvTerms.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback9 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 2);
+        mCallback11 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 4);
         mCallback8 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
+        mCallback12 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 5);
+        mCallback10 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 3);
+        mCallback9 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -144,15 +153,18 @@ public class FragmentMoreBindingImpl extends FragmentMoreBinding implements te.a
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.tvContact.setOnClickListener(mCallback8);
-            this.tvTerms.setOnClickListener(mCallback9);
+            this.tvAgents.setOnClickListener(mCallback9);
+            this.tvContact.setOnClickListener(mCallback10);
+            this.tvMembers.setOnClickListener(mCallback8);
+            this.tvSupport.setOnClickListener(mCallback11);
+            this.tvTerms.setOnClickListener(mCallback12);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
+            case 4: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -165,7 +177,7 @@ public class FragmentMoreBindingImpl extends FragmentMoreBinding implements te.a
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.toTerms();
+                    viewmodel.toAbout();
                 }
                 break;
             }
@@ -182,7 +194,58 @@ public class FragmentMoreBindingImpl extends FragmentMoreBinding implements te.a
                 if (viewmodelJavaLangObjectNull) {
 
 
+                    viewmodel.toClients();
+                }
+                break;
+            }
+            case 5: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.ossman_elmonkz.pages.more.viewModels.MoreViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toTerms();
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.ossman_elmonkz.pages.more.viewModels.MoreViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
                     viewmodel.toContact();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.ossman_elmonkz.pages.more.viewModels.MoreViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toAgents();
                 }
                 break;
             }

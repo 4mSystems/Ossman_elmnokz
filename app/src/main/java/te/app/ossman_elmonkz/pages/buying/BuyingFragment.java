@@ -11,10 +11,13 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 
+import com.google.gson.Gson;
+
 import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
 
+import te.app.ossman_elmonkz.PassingObject;
 import te.app.ossman_elmonkz.R;
 import te.app.ossman_elmonkz.base.BaseFragment;
 import te.app.ossman_elmonkz.base.IApplicationComponent;
@@ -22,6 +25,8 @@ import te.app.ossman_elmonkz.base.MyApplication;
 import te.app.ossman_elmonkz.databinding.FragmentBuyingBinding;
 import te.app.ossman_elmonkz.model.base.Mutable;
 import te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel;
+import te.app.ossman_elmonkz.pages.home.models.CategoriesItem;
+import te.app.ossman_elmonkz.utils.Constants;
 
 
 public class BuyingFragment extends BaseFragment {
@@ -36,6 +41,11 @@ public class BuyingFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
+        Bundle bundle = this.getArguments();
+        if (bundle != null) {
+            String passingObject = bundle.getString(Constants.BUNDLE);
+            viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
+        }
         setEvent();
         return binding.getRoot();
     }

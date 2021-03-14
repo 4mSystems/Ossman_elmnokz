@@ -14,10 +14,11 @@ public class FragmentSuggestionsBindingImpl extends FragmentSuggestionsBinding i
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.text, 5);
-        sViewsWithIds.put(R.id.client_name, 6);
-        sViewsWithIds.put(R.id.client_phone, 7);
-        sViewsWithIds.put(R.id.client_notes, 8);
+        sViewsWithIds.put(R.id.text, 6);
+        sViewsWithIds.put(R.id.client_name, 7);
+        sViewsWithIds.put(R.id.client_phone, 8);
+        sViewsWithIds.put(R.id.client_address, 9);
+        sViewsWithIds.put(R.id.client_notes, 10);
     }
     // views
     @NonNull
@@ -28,9 +29,11 @@ public class FragmentSuggestionsBindingImpl extends FragmentSuggestionsBinding i
     private final com.google.android.material.textfield.TextInputEditText mboundView2;
     @NonNull
     private final com.google.android.material.textfield.TextInputEditText mboundView3;
+    @NonNull
+    private final com.google.android.material.textfield.TextInputEditText mboundView4;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback15;
+    private final android.view.View.OnClickListener mCallback18;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -111,9 +114,46 @@ public class FragmentSuggestionsBindingImpl extends FragmentSuggestionsBinding i
     private androidx.databinding.InverseBindingListener mboundView3androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
+            // Inverse of viewmodel.contactRequest.address
+            //         is viewmodel.contactRequest.setAddress((java.lang.String) callbackArg_0)
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView3);
+            // localize variables for thread safety
+            // viewmodel.contactRequest != null
+            boolean viewmodelContactRequestJavaLangObjectNull = false;
+            // viewmodel != null
+            boolean viewmodelJavaLangObjectNull = false;
+            // viewmodel.contactRequest.address
+            java.lang.String viewmodelContactRequestAddress = null;
+            // viewmodel
+            te.app.ossman_elmonkz.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
+            // viewmodel.contactRequest
+            te.app.ossman_elmonkz.pages.settings.models.ContactRequest viewmodelContactRequest = null;
+
+
+
+            viewmodelJavaLangObjectNull = (viewmodel) != (null);
+            if (viewmodelJavaLangObjectNull) {
+
+
+                viewmodelContactRequest = viewmodel.getContactRequest();
+
+                viewmodelContactRequestJavaLangObjectNull = (viewmodelContactRequest) != (null);
+                if (viewmodelContactRequestJavaLangObjectNull) {
+
+
+
+
+                    viewmodelContactRequest.setAddress(((java.lang.String) (callbackArg_0)));
+                }
+            }
+        }
+    };
+    private androidx.databinding.InverseBindingListener mboundView4androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+        @Override
+        public void onChange() {
             // Inverse of viewmodel.contactRequest.message
             //         is viewmodel.contactRequest.setMessage((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView3);
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView4);
             // localize variables for thread safety
             // viewmodel.contactRequest != null
             boolean viewmodelContactRequestJavaLangObjectNull = false;
@@ -147,15 +187,16 @@ public class FragmentSuggestionsBindingImpl extends FragmentSuggestionsBinding i
     };
 
     public FragmentSuggestionsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 9, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 11, sIncludes, sViewsWithIds));
     }
     private FragmentSuggestionsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatButton) bindings[4]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[6]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[8]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[5]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[9]
             , (com.google.android.material.textfield.TextInputLayout) bindings[7]
-            , (te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium) bindings[5]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[10]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[8]
+            , (te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium) bindings[6]
             );
         this.addCart.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
@@ -166,9 +207,11 @@ public class FragmentSuggestionsBindingImpl extends FragmentSuggestionsBinding i
         this.mboundView2.setTag(null);
         this.mboundView3 = (com.google.android.material.textfield.TextInputEditText) bindings[3];
         this.mboundView3.setTag(null);
+        this.mboundView4 = (com.google.android.material.textfield.TextInputEditText) bindings[4];
+        this.mboundView4.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback15 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
+        mCallback18 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -237,6 +280,7 @@ public class FragmentSuggestionsBindingImpl extends FragmentSuggestionsBinding i
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        java.lang.String viewmodelContactRequestAddress = null;
         java.lang.String viewmodelContactRequestPhone = null;
         java.lang.String viewmodelContactRequestMessage = null;
         te.app.ossman_elmonkz.pages.settings.models.ContactRequest viewmodelContactRequest = null;
@@ -254,6 +298,8 @@ public class FragmentSuggestionsBindingImpl extends FragmentSuggestionsBinding i
 
 
                 if (viewmodelContactRequest != null) {
+                    // read viewmodel.contactRequest.address
+                    viewmodelContactRequestAddress = viewmodelContactRequest.getAddress();
                     // read viewmodel.contactRequest.phone
                     viewmodelContactRequestPhone = viewmodelContactRequest.getPhone();
                     // read viewmodel.contactRequest.message
@@ -266,17 +312,19 @@ public class FragmentSuggestionsBindingImpl extends FragmentSuggestionsBinding i
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.addCart.setOnClickListener(mCallback15);
+            this.addCart.setOnClickListener(mCallback18);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView1, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView1androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView3, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView3androidTextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView1, viewmodelContactRequestName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewmodelContactRequestPhone);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView3, viewmodelContactRequestMessage);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView3, viewmodelContactRequestAddress);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView4, viewmodelContactRequestMessage);
         }
     }
     // Listener Stub Implementations

@@ -14,7 +14,6 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.department_name, 1);
         sViewsWithIds.put(R.id.brand_name, 2);
         sViewsWithIds.put(R.id.model_name, 3);
         sViewsWithIds.put(R.id.customTextViewMedium, 4);
@@ -43,6 +42,7 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding  {
             , (te.app.ossman_elmonkz.customViews.views.IncrementalView) bindings[5]
             , (com.google.android.material.textfield.TextInputLayout) bindings[3]
             );
+        this.departmentName.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
         setRootTag(root);
@@ -53,7 +53,7 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -81,7 +81,13 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding  {
     }
 
     public void setViewmodel(@Nullable te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel Viewmodel) {
+        updateRegistration(0, Viewmodel);
         this.mViewmodel = Viewmodel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.viewmodel);
+        super.requestRebind();
     }
 
     @Override
@@ -99,6 +105,12 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding  {
             }
             return true;
         }
+        else if (fieldId == BR.passingObject) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -109,7 +121,51 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        java.lang.String viewmodelPassingObjectObject = null;
+        te.app.ossman_elmonkz.PassingObject viewmodelPassingObject = null;
+        boolean viewmodelPassingObjectObjectEqualsJavaLangString8 = false;
+        int viewmodelPassingObjectObjectEqualsJavaLangString8ViewVISIBLEViewGONE = 0;
+        te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel viewmodel = mViewmodel;
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+
+
+                if (viewmodel != null) {
+                    // read viewmodel.passingObject
+                    viewmodelPassingObject = viewmodel.getPassingObject();
+                }
+
+
+                if (viewmodelPassingObject != null) {
+                    // read viewmodel.passingObject.object
+                    viewmodelPassingObjectObject = viewmodelPassingObject.getObject();
+                }
+
+
+                if (viewmodelPassingObjectObject != null) {
+                    // read viewmodel.passingObject.object.equals("8")
+                    viewmodelPassingObjectObjectEqualsJavaLangString8 = viewmodelPassingObjectObject.equals("8");
+                }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(viewmodelPassingObjectObjectEqualsJavaLangString8) {
+                        dirtyFlags |= 0x10L;
+                }
+                else {
+                        dirtyFlags |= 0x8L;
+                }
+            }
+
+
+                // read viewmodel.passingObject.object.equals("8") ? View.VISIBLE : View.GONE
+                viewmodelPassingObjectObjectEqualsJavaLangString8ViewVISIBLEViewGONE = ((viewmodelPassingObjectObjectEqualsJavaLangString8) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+        }
         // batch finished
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            this.departmentName.setVisibility(viewmodelPassingObjectObjectEqualsJavaLangString8ViewVISIBLEViewGONE);
+        }
     }
     // Listener Stub Implementations
     // callback impls
@@ -117,7 +173,10 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding  {
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): null
+        flag 1 (0x2L): viewmodel.passingObject
+        flag 2 (0x3L): null
+        flag 3 (0x4L): viewmodel.passingObject.object.equals("8") ? View.VISIBLE : View.GONE
+        flag 4 (0x5L): viewmodel.passingObject.object.equals("8") ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

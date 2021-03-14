@@ -1,6 +1,7 @@
 package te.app.ossman_elmonkz.pages.home.adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +19,12 @@ import java.util.List;
 import te.app.ossman_elmonkz.PassingObject;
 import te.app.ossman_elmonkz.R;
 import te.app.ossman_elmonkz.databinding.ItemHomeBinding;
+import te.app.ossman_elmonkz.pages.agentsAndClients.AgentsFragment;
+import te.app.ossman_elmonkz.pages.gallery.GalleryFragment;
 import te.app.ossman_elmonkz.pages.home.models.CategoriesItem;
 import te.app.ossman_elmonkz.pages.home.viewModels.ItemCategoryViewModel;
 import te.app.ossman_elmonkz.pages.products.ProductsFragment;
+import te.app.ossman_elmonkz.pages.settings.SuggestionsFragment;
 import te.app.ossman_elmonkz.pages.subCategories.SubCategoriesFragment;
 import te.app.ossman_elmonkz.utils.Constants;
 import te.app.ossman_elmonkz.utils.helper.MovementHelper;
@@ -55,10 +59,16 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
         ItemCategoryViewModel itemMenuViewModel = new ItemCategoryViewModel(categoriesData);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
             if (o.equals(Constants.SUB_CATEGORIES)) {
-                if (pageType == 0)
-                    MovementHelper.startActivityWithBundle(context, new PassingObject(categoriesData.getId()), categoriesData.getTitle(), SubCategoriesFragment.class.getName(), null);
+                if (categoriesData.getId() == Constants.GALLERY_ID)
+                    MovementHelper.startActivity(context, GalleryFragment.class.getName(), categoriesData.getTitle(), null);
+                else if (categoriesData.getId() == Constants.SYSTEM_PRODUCTS)
+                    MovementHelper.startActivityWithBundle(context, new PassingObject(categoriesData), categoriesData.getTitle(), ProductsFragment.class.getName(), null);
+                else if (categoriesData.getId() == Constants.AGENTS_ID)
+                    MovementHelper.startActivityWithBundle(context, new PassingObject(categoriesData), categoriesData.getTitle(), AgentsFragment.class.getName(), null);
+                else if (categoriesData.getId() == Constants.TERMS_ID)
+                    MovementHelper.startActivityWithBundle(context, new PassingObject(categoriesData), categoriesData.getTitle(), SuggestionsFragment.class.getName(), null);
                 else
-                    MovementHelper.startActivityWithBundle(context, new PassingObject(categoriesData.getId()), categoriesData.getTitle(), ProductsFragment.class.getName(), "VISIBLE");
+                    MovementHelper.startActivityWithBundle(context, new PassingObject(categoriesData), categoriesData.getTitle(), SubCategoriesFragment.class.getName(), null);
             }
         });
         holder.setViewModel(itemMenuViewModel);

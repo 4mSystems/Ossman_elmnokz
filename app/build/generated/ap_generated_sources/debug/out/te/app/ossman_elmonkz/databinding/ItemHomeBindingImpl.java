@@ -22,7 +22,7 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.ossma
     private final te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback6;
+    private final android.view.View.OnClickListener mCallback5;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,7 +41,7 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.ossma
         this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback6 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
+        mCallback5 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -148,7 +148,7 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.ossma
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback6);
+            this.mboundView0.setOnClickListener(mCallback5);
         }
     }
     // Listener Stub Implementations

@@ -40,6 +40,10 @@
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_more.xml"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_gallery.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/item_gallery.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_create_order.xml",
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_create_order.xml"
     },
@@ -68,12 +72,12 @@
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_about.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_products.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/item_products.xml"
-    },
-    {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_onboard.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_onboard.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_agents.xml",

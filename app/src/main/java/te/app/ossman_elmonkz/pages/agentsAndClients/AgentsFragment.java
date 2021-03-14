@@ -15,15 +15,15 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
 
+import te.app.ossman_elmonkz.BR;
 import te.app.ossman_elmonkz.R;
 import te.app.ossman_elmonkz.base.BaseFragment;
 import te.app.ossman_elmonkz.base.IApplicationComponent;
 import te.app.ossman_elmonkz.base.MyApplication;
 import te.app.ossman_elmonkz.databinding.FragmentAgentsBinding;
-import te.app.ossman_elmonkz.databinding.FragmentSuggestionsBinding;
 import te.app.ossman_elmonkz.model.base.Mutable;
+import te.app.ossman_elmonkz.pages.agentsAndClients.models.AgentsResponse;
 import te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.AgentsClientsViewModel;
-import te.app.ossman_elmonkz.pages.settings.viewModels.SettingsViewModel;
 import te.app.ossman_elmonkz.utils.Constants;
 
 public class AgentsFragment extends BaseFragment {
@@ -39,6 +39,7 @@ public class AgentsFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
+        viewModel.getAgents();
         setEvent();
         return binding.getRoot();
     }
@@ -47,11 +48,10 @@ public class AgentsFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            if (((Mutable) o).message.equals(Constants.CONTACT)) {
-                toastMessage(getString(R.string.send_successfully));
-                finishActivity();
+            if (((Mutable) o).message.equals(Constants.AGENTS)) {
+                viewModel.getAgentsAdapter().update(((AgentsResponse) mutable.object).getData());
+                viewModel.notifyChange(BR.agentsAdapter);
             }
-
         });
     }
 

@@ -14,7 +14,7 @@ import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.ossman_elmonkz.R;
 import te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium;
-import te.app.ossman_elmonkz.pages.products.viewModels.ItemProductsViewModel;
+import te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.ItemAgentViewModel;
 
 public abstract class ItemAgentsBinding extends ViewDataBinding {
   @NonNull
@@ -30,7 +30,7 @@ public abstract class ItemAgentsBinding extends ViewDataBinding {
   public final CustomTextViewMedium productName;
 
   @Bindable
-  protected ItemProductsViewModel mItemViewModel;
+  protected ItemAgentViewModel mItemViewModel;
 
   protected ItemAgentsBinding(Object _bindingComponent, View _root, int _localFieldCount,
       CustomTextViewMedium address, CustomTextViewMedium phone, CircleImageView productImage,
@@ -42,10 +42,10 @@ public abstract class ItemAgentsBinding extends ViewDataBinding {
     this.productName = productName;
   }
 
-  public abstract void setItemViewModel(@Nullable ItemProductsViewModel itemViewModel);
+  public abstract void setItemViewModel(@Nullable ItemAgentViewModel itemViewModel);
 
   @Nullable
-  public ItemProductsViewModel getItemViewModel() {
+  public ItemAgentViewModel getItemViewModel() {
     return mItemViewModel;
   }
 

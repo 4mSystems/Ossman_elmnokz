@@ -50,9 +50,6 @@ public abstract class FragmentProductsBinding extends ViewDataBinding {
   public final CustomTextViewRegular productWarning2;
 
   @NonNull
-  public final CustomTextViewRegular productWarning3;
-
-  @NonNull
   public final RecyclerView rcProducts;
 
   @NonNull
@@ -67,6 +64,9 @@ public abstract class FragmentProductsBinding extends ViewDataBinding {
   @NonNull
   public final CustomTextViewRegular warning1;
 
+  @NonNull
+  public final CustomTextViewRegular warningPhone;
+
   @Bindable
   protected ProductsViewModel mViewmodel;
 
@@ -75,8 +75,8 @@ public abstract class FragmentProductsBinding extends ViewDataBinding {
       CustomTextViewRegular elmonkzSystemsVal, CustomTextViewMedium onHandText,
       CustomTextViewRegular onHandVal, CustomTextViewMedium prePaymentText,
       CustomTextViewRegular prePaymentTextVal, CustomTextViewRegular productWarning2,
-      CustomTextViewRegular productWarning3, RecyclerView rcProducts, View v1, View v2, View v3,
-      CustomTextViewRegular warning1) {
+      RecyclerView rcProducts, View v1, View v2, View v3, CustomTextViewRegular warning1,
+      CustomTextViewRegular warningPhone) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br1 = br1;
     this.br2 = br2;
@@ -88,12 +88,12 @@ public abstract class FragmentProductsBinding extends ViewDataBinding {
     this.prePaymentText = prePaymentText;
     this.prePaymentTextVal = prePaymentTextVal;
     this.productWarning2 = productWarning2;
-    this.productWarning3 = productWarning3;
     this.rcProducts = rcProducts;
     this.v1 = v1;
     this.v2 = v2;
     this.v3 = v3;
     this.warning1 = warning1;
+    this.warningPhone = warningPhone;
   }
 
   public abstract void setViewmodel(@Nullable ProductsViewModel viewmodel);

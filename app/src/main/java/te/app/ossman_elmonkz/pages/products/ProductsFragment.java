@@ -11,24 +11,22 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 
-import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.gson.Gson;
 
 import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
 
-import te.app.ossman_elmonkz.BR;
 import te.app.ossman_elmonkz.PassingObject;
 import te.app.ossman_elmonkz.R;
 import te.app.ossman_elmonkz.base.BaseFragment;
 import te.app.ossman_elmonkz.base.IApplicationComponent;
 import te.app.ossman_elmonkz.base.MyApplication;
-import te.app.ossman_elmonkz.databinding.FilterDialogBinding;
 import te.app.ossman_elmonkz.databinding.FragmentProductsBinding;
 import te.app.ossman_elmonkz.model.base.Mutable;
-import te.app.ossman_elmonkz.pages.products.models.ProductResponse;
+import te.app.ossman_elmonkz.pages.home.models.CategoriesItem;
 import te.app.ossman_elmonkz.pages.products.viewModels.ProductsViewModel;
+import te.app.ossman_elmonkz.pages.settings.models.AboutResponse;
 import te.app.ossman_elmonkz.utils.Constants;
 
 
@@ -37,7 +35,6 @@ public class ProductsFragment extends BaseFragment {
     private Context context;
     @Inject
     ProductsViewModel viewModel;
-    BottomSheetDialog sheetDialog;
 
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -49,7 +46,8 @@ public class ProductsFragment extends BaseFragment {
         if (bundle != null) {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
-            viewModel.getProducts();
+            viewModel.setCategoriesItem(new Gson().fromJson(String.valueOf(viewModel.getPassingObject().getObjectClass()), CategoriesItem.class));
+            viewModel.about();
         }
         setEvent();
         return binding.getRoot();
@@ -59,29 +57,17 @@ public class ProductsFragment extends BaseFragment {
         viewModel.liveData.observe(((LifecycleOwner) context), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            if (Constants.PRODUCTS_RESPONSE.equals(((Mutable) o).message)) {
-                if (sheetDialog != null)
-                    sheetDialog.dismiss();
-                viewModel.getProductsAdapter().update(((ProductResponse) mutable.object).getProductList());
-                viewModel.notifyChange(BR.productsAdapter);
+            if (Constants.ABOUT.equals(((Mutable) o).message)) {
+                viewModel.setAboutMain(((AboutResponse) mutable.object).getData());
             }
         });
-        baseActivity().backActionBarView.layoutActionBarBackBinding.imgActionBarFilter.setOnClickListener(v -> showFilter());
-    }
-
-    private void showFilter() {
-        FilterDialogBinding sortBinding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.filter_dialog, null, false);
-        sheetDialog = new BottomSheetDialog(context);
-        sheetDialog.setContentView(sortBinding.getRoot());
-        sortBinding.setViewmodel(viewModel);
-        sheetDialog.show();
     }
 
 
     @Override
     public void onResume() {
         super.onResume();
-        viewModel.getProductRepository().setLiveData(viewModel.liveData);
+        viewModel.getSettingsRepository().setLiveData(viewModel.liveData);
     }
 
     @Override

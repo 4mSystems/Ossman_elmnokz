@@ -3,7 +3,6 @@ package te.app.ossman_elmonkz.activity;
 import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 
 import javax.inject.Inject;
@@ -27,7 +26,6 @@ public class MainActivity extends ParentActivity {
     @Inject
     HomeViewModel viewModel;
     HomeActionBarView homeActionBarView;
-    MutableLiveData<Boolean> refreshingLiveData = new MutableLiveData<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,23 +50,15 @@ public class MainActivity extends ParentActivity {
             handleActions(mutable);
             switch (((Mutable) o).message) {
                 case Constants.MENU_HOME:
-//                    setHomeActionTitle(getResources().getString(R.string.menuHome), "Visible");
                     MovementHelper.replaceFragment(this, new HomeFragment(), "");
                     break;
-                case Constants.MENU_PRODUCTS:
-//                    setHomeActionTitle(getResources().getString(R.string.menuFavorites), null);
-                    MovementHelper.replaceFragment(this, new ProductsFragment(), "");
-                    break;
-                case Constants.MENU_MORE:
-//                    setHomeActionTitle(getResources().getString(R.string.menuAccount), null);
+               case Constants.MENU_MORE:
                     MovementHelper.replaceFragment(this, new MoreFragment(), "");
                     break;
 
             }
         });
-        activityMainBinding.swipeContainer.setOnRefreshListener(() -> {
-            refreshingLiveData.setValue(true);
-        });
+
     }
 
     private void setHomeActionTitle(String title, String notificationVisible) {
@@ -79,16 +69,5 @@ public class MainActivity extends ParentActivity {
 //            homeActionBarView.notificationVisible(View.GONE);
     }
 
-    public void enableRefresh(boolean status) {
-        activityMainBinding.swipeContainer.setEnabled(status);
-    }
-
-    public void stopRefresh(boolean status) {
-        activityMainBinding.swipeContainer.setRefreshing(status);
-    }
-
-    public MutableLiveData<Boolean> getRefreshingLiveData() {
-        return refreshingLiveData;
-    }
 
 }

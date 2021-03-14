@@ -10,12 +10,11 @@ import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import de.hdodenhof.circleimageview.CircleImageView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.ossman_elmonkz.R;
 import te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium;
-import te.app.ossman_elmonkz.pages.products.viewModels.ItemProductsViewModel;
+import te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.ItemClientViewModel;
 
 public abstract class ItemClientsBinding extends ViewDataBinding {
   @NonNull
@@ -28,7 +27,7 @@ public abstract class ItemClientsBinding extends ViewDataBinding {
   public final CustomTextViewMedium phone;
 
   @NonNull
-  public final CircleImageView productImage;
+  public final CustomTextViewMedium productImage;
 
   @NonNull
   public final CustomTextViewMedium productName;
@@ -37,11 +36,11 @@ public abstract class ItemClientsBinding extends ViewDataBinding {
   public final CustomTextViewMedium shopName;
 
   @Bindable
-  protected ItemProductsViewModel mItemViewModel;
+  protected ItemClientViewModel mItemViewModel;
 
   protected ItemClientsBinding(Object _bindingComponent, View _root, int _localFieldCount,
       CustomTextViewMedium address, Barrier br4, CustomTextViewMedium phone,
-      CircleImageView productImage, CustomTextViewMedium productName,
+      CustomTextViewMedium productImage, CustomTextViewMedium productName,
       CustomTextViewMedium shopName) {
     super(_bindingComponent, _root, _localFieldCount);
     this.address = address;
@@ -52,10 +51,10 @@ public abstract class ItemClientsBinding extends ViewDataBinding {
     this.shopName = shopName;
   }
 
-  public abstract void setItemViewModel(@Nullable ItemProductsViewModel itemViewModel);
+  public abstract void setItemViewModel(@Nullable ItemClientViewModel itemViewModel);
 
   @Nullable
-  public ItemProductsViewModel getItemViewModel() {
+  public ItemClientViewModel getItemViewModel() {
     return mItemViewModel;
   }
 

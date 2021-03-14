@@ -3,23 +3,18 @@ package te.app.ossman_elmonkz.pages.subCategories.viewModels;
 import androidx.databinding.Bindable;
 
 import te.app.ossman_elmonkz.base.BaseViewModel;
-import te.app.ossman_elmonkz.pages.home.models.CategoriesItem;
-import te.app.ossman_elmonkz.utils.Constants;
+import te.app.ossman_elmonkz.pages.subCategories.models.search.EqualItemsItem;
 
 public class ItemSearchViewModel extends BaseViewModel {
-    public CategoriesItem categoriesItem;
+    public EqualItemsItem searchItem;
 
-    public ItemSearchViewModel(CategoriesItem categoriesItem) {
-        this.categoriesItem = categoriesItem;
+    public ItemSearchViewModel(EqualItemsItem searchItem) {
+        this.searchItem = searchItem;
     }
 
     @Bindable
-    public CategoriesItem getCategoriesItem() {
-        return categoriesItem;
-    }
-
-    public void itemAction() {
-        getLiveData().setValue(Constants.SUB_CATEGORIES);
+    public EqualItemsItem getSearchItem() {
+        return searchItem;
     }
 
 }

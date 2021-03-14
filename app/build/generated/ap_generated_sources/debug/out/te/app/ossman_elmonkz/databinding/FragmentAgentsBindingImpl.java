@@ -13,9 +13,7 @@ public class FragmentAgentsBindingImpl extends FragmentAgentsBinding  {
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.rc_products, 1);
-        sViewsWithIds.put(R.id.pb_base_loading_bar, 2);
+        sViewsWithIds = null;
     }
     // views
     @NonNull
@@ -35,6 +33,8 @@ public class FragmentAgentsBindingImpl extends FragmentAgentsBinding  {
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.pbBaseLoadingBar.setTag(null);
+        this.rcProducts.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -43,7 +43,7 @@ public class FragmentAgentsBindingImpl extends FragmentAgentsBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -71,7 +71,13 @@ public class FragmentAgentsBindingImpl extends FragmentAgentsBinding  {
     }
 
     public void setViewmodel(@Nullable te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.AgentsClientsViewModel Viewmodel) {
+        updateRegistration(0, Viewmodel);
         this.mViewmodel = Viewmodel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.viewmodel);
+        super.requestRebind();
     }
 
     @Override
@@ -89,6 +95,12 @@ public class FragmentAgentsBindingImpl extends FragmentAgentsBinding  {
             }
             return true;
         }
+        else if (fieldId == BR.agentsAdapter) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -99,7 +111,50 @@ public class FragmentAgentsBindingImpl extends FragmentAgentsBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        int viewmodelAgentsAdapterItemCount = 0;
+        te.app.ossman_elmonkz.pages.agentsAndClients.adapters.AgentsAdapter viewmodelAgentsAdapter = null;
+        boolean viewmodelAgentsAdapterItemCountInt0 = false;
+        int viewmodelAgentsAdapterItemCountInt0ViewVISIBLEViewGONE = 0;
+        te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.AgentsClientsViewModel viewmodel = mViewmodel;
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+
+
+                if (viewmodel != null) {
+                    // read viewmodel.agentsAdapter
+                    viewmodelAgentsAdapter = viewmodel.getAgentsAdapter();
+                }
+
+
+                if (viewmodelAgentsAdapter != null) {
+                    // read viewmodel.agentsAdapter.itemCount
+                    viewmodelAgentsAdapterItemCount = viewmodelAgentsAdapter.getItemCount();
+                }
+
+
+                // read viewmodel.agentsAdapter.itemCount == 0
+                viewmodelAgentsAdapterItemCountInt0 = (viewmodelAgentsAdapterItemCount) == (0);
+            if((dirtyFlags & 0x7L) != 0) {
+                if(viewmodelAgentsAdapterItemCountInt0) {
+                        dirtyFlags |= 0x10L;
+                }
+                else {
+                        dirtyFlags |= 0x8L;
+                }
+            }
+
+
+                // read viewmodel.agentsAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
+                viewmodelAgentsAdapterItemCountInt0ViewVISIBLEViewGONE = ((viewmodelAgentsAdapterItemCountInt0) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+        }
         // batch finished
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            this.pbBaseLoadingBar.setVisibility(viewmodelAgentsAdapterItemCountInt0ViewVISIBLEViewGONE);
+            te.app.ossman_elmonkz.base.ApplicationBinding.getItemsV2Binding(this.rcProducts, viewmodelAgentsAdapter, "1", "1");
+        }
     }
     // Listener Stub Implementations
     // callback impls
@@ -107,7 +162,10 @@ public class FragmentAgentsBindingImpl extends FragmentAgentsBinding  {
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): null
+        flag 1 (0x2L): viewmodel.agentsAdapter
+        flag 2 (0x3L): null
+        flag 3 (0x4L): viewmodel.agentsAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
+        flag 4 (0x5L): viewmodel.agentsAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

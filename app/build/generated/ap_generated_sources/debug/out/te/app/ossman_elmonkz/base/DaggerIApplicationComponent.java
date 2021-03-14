@@ -44,6 +44,8 @@ import te.app.ossman_elmonkz.pages.more.MoreFragment_MembersInjector;
 import te.app.ossman_elmonkz.pages.more.viewModels.MoreViewModel;
 import te.app.ossman_elmonkz.pages.more.viewModels.MoreViewModel_Factory;
 import te.app.ossman_elmonkz.pages.more.viewModels.MoreViewModel_MembersInjector;
+import te.app.ossman_elmonkz.pages.onBoard.OnBoardFragment;
+import te.app.ossman_elmonkz.pages.onBoard.OnBoardFragment_MembersInjector;
 import te.app.ossman_elmonkz.pages.products.ProductsFragment;
 import te.app.ossman_elmonkz.pages.products.ProductsFragment_MembersInjector;
 import te.app.ossman_elmonkz.pages.products.viewModels.ProductsViewModel;
@@ -91,9 +93,9 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private Provider<HomeRepository> homeRepositoryProvider;
 
-  private Provider<ProductRepository> productRepositoryProvider;
-
   private Provider<SettingsRepository> settingsRepositoryProvider;
+
+  private Provider<ProductRepository> productRepositoryProvider;
 
   private DaggerIApplicationComponent(ConnectionModule connectionModuleParam) {
 
@@ -121,11 +123,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private ProductsViewModel productsViewModel() {
-    return injectProductsViewModel(ProductsViewModel_Factory.newInstance(productRepositoryProvider.get()));
+    return injectProductsViewModel(ProductsViewModel_Factory.newInstance(settingsRepositoryProvider.get()));
   }
 
   private GalleryViewModel galleryViewModel() {
-    return injectGalleryViewModel(GalleryViewModel_Factory.newInstance(productRepositoryProvider.get()));
+    return injectGalleryViewModel(GalleryViewModel_Factory.newInstance(settingsRepositoryProvider.get()));
   }
 
   private CreateOrderViewModel createOrderViewModel() {
@@ -153,8 +155,8 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     this.webServiceProvider = DoubleCheck.provider(ConnectionModule_WebServiceFactory.create(connectionModuleParam));
     this.connectionHelperProvider = DoubleCheck.provider(ConnectionHelper_Factory.create(webServiceProvider, webServiceProvider));
     this.homeRepositoryProvider = DoubleCheck.provider(HomeRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
-    this.productRepositoryProvider = DoubleCheck.provider(ProductRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
     this.settingsRepositoryProvider = DoubleCheck.provider(SettingsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
+    this.productRepositoryProvider = DoubleCheck.provider(ProductRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
   }
 
   @Override
@@ -169,6 +171,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(SplashFragment splashFragment) {
     injectSplashFragment(splashFragment);
+  }
+
+  @Override
+  public void inject(OnBoardFragment onBoardFragment) {
+    injectOnBoardFragment(onBoardFragment);
   }
 
   @Override
@@ -261,6 +268,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
+  private OnBoardFragment injectOnBoardFragment(OnBoardFragment instance) {
+    OnBoardFragment_MembersInjector.injectViewModel(instance, splashViewModel());
+    return instance;
+  }
+
   private HomeFragment injectHomeFragment(HomeFragment instance) {
     HomeFragment_MembersInjector.injectViewModel(instance, homeViewModel());
     return instance;
@@ -277,7 +289,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private ProductsViewModel injectProductsViewModel(ProductsViewModel instance) {
-    ProductsViewModel_MembersInjector.injectProductRepository(instance, productRepositoryProvider.get());
+    ProductsViewModel_MembersInjector.injectSettingsRepository(instance, settingsRepositoryProvider.get());
     return instance;
   }
 
@@ -287,7 +299,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private GalleryViewModel injectGalleryViewModel(GalleryViewModel instance) {
-    GalleryViewModel_MembersInjector.injectProductRepository(instance, productRepositoryProvider.get());
+    GalleryViewModel_MembersInjector.injectSettingsRepository(instance, settingsRepositoryProvider.get());
     return instance;
   }
 

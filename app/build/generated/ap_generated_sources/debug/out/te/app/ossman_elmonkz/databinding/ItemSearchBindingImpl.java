@@ -13,8 +13,7 @@ public class ItemSearchBindingImpl extends ItemSearchBinding  {
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.product_name, 1);
+        sViewsWithIds = null;
     }
     // views
     @NonNull
@@ -33,6 +32,7 @@ public class ItemSearchBindingImpl extends ItemSearchBinding  {
             );
         this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
+        this.productName.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -41,7 +41,7 @@ public class ItemSearchBindingImpl extends ItemSearchBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -69,7 +69,13 @@ public class ItemSearchBindingImpl extends ItemSearchBinding  {
     }
 
     public void setItemViewModel(@Nullable te.app.ossman_elmonkz.pages.subCategories.viewModels.ItemSearchViewModel ItemViewModel) {
+        updateRegistration(0, ItemViewModel);
         this.mItemViewModel = ItemViewModel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.itemViewModel);
+        super.requestRebind();
     }
 
     @Override
@@ -87,6 +93,12 @@ public class ItemSearchBindingImpl extends ItemSearchBinding  {
             }
             return true;
         }
+        else if (fieldId == BR.searchItem) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -97,7 +109,31 @@ public class ItemSearchBindingImpl extends ItemSearchBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        te.app.ossman_elmonkz.pages.subCategories.viewModels.ItemSearchViewModel itemViewModel = mItemViewModel;
+        te.app.ossman_elmonkz.pages.subCategories.models.search.EqualItemsItem itemViewModelSearchItem = null;
+        java.lang.String itemViewModelSearchItemName = null;
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+
+
+                if (itemViewModel != null) {
+                    // read itemViewModel.searchItem
+                    itemViewModelSearchItem = itemViewModel.getSearchItem();
+                }
+
+
+                if (itemViewModelSearchItem != null) {
+                    // read itemViewModel.searchItem.name
+                    itemViewModelSearchItemName = itemViewModelSearchItem.getName();
+                }
+        }
         // batch finished
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.productName, itemViewModelSearchItemName);
+        }
     }
     // Listener Stub Implementations
     // callback impls
@@ -105,7 +141,8 @@ public class ItemSearchBindingImpl extends ItemSearchBinding  {
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): itemViewModel
-        flag 1 (0x2L): null
+        flag 1 (0x2L): itemViewModel.searchItem
+        flag 2 (0x3L): null
     flag mapping end*/
     //end
 }

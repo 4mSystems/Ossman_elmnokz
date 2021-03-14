@@ -34,12 +34,14 @@
             android:resource="@color/colorPrimary" />
 
         <activity
+            android:screenOrientation="portrait"
             android:name="te.app.ossman_elmonkz.activity.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <activity
             android:name="te.app.ossman_elmonkz.activity.BaseActivity"
+            android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>

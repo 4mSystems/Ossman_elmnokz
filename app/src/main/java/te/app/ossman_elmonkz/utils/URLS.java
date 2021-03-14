@@ -1,23 +1,23 @@
 package te.app.ossman_elmonkz.utils;
 
 public class URLS {
-    public final static String BASE_URL = "https://mezza-store.com/api/";
+    public final static String BASE_URL = "https://el3amd.com/api/";
     public final static String PRODUCT_DETAILS = "products/details/";
     public final static String SUB_CATEGORIES = "sub_categories/level1/";
     public final static String PRODUCTS = "products/last-level/";
 
     public final static String SEND_ORDER = "make_order/ar/v1";
     public final static String FILTER = "products/sort-last-level/5/ar/v1?category_id=";
-    public final static String CONTACT = "contactus/ar/v1";
-    public final static String HOME = "categories/ar/v1";
-    public final static String REGISTER = "registerworker";
-    public final static String ORDER_DETAILS = "oneorderworker";
-    public final static String CONFIRM_CODE = "verifycodeworker";
-    public final static String UPDATE_PROFILE = "updateworkerprofile";
-    public static final String FORGET_PASSWORD = "sendcodeworker";
-    public static final String CHANGE_PASSWORD = "changepasswordworker";
+    public final static String CONTACT = "app/complains_suggestions";
+    public final static String HOME = "app/categories_subcategories";
+    public final static String BOARD = "app/app-explanation";
+    public final static String SEARCH = "app/search?category_id=";
+    public final static String GALLERY = "app/get-albums";
+    public final static String AGENTS = "app/get-agents";
+    public static final String GOVS = "app/govs";
+    public static final String CLIENTS = "app/get-clients?gov_id=";
 
-    public final static String SEND_OFFER = "togglerequest";
+    public final static String SYSTEM_IMAGES = "app/get-sub-category-images?sub_category_id=";
     //    public  final static String COMPANIES = "company/companies?category_id=5&lat=30.1341689&lng=31.3655877&city_id=1";
     public final static String COMPANY_PROFILE = "workerprofile";
     public final static String UPDATE_CATEGORY = "editcategory";
@@ -27,7 +27,7 @@ public class URLS {
     public final static String ADD_OFFER = "createoffer";
     public final static String MY_ORDERS = "getlastordersworker";
     public static final String CHAT_ADMIN = "getallmessagesadmin";
-    public final static String ABOUT = "aboutus";
+    public final static String ABOUT = "app/about-us";
     public final static String TERMS = "privacypolicy";
 
 

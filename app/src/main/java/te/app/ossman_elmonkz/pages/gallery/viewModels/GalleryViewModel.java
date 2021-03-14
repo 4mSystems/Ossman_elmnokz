@@ -1,5 +1,7 @@
 package te.app.ossman_elmonkz.pages.gallery.viewModels;
 
+import android.util.Log;
+
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
@@ -8,39 +10,39 @@ import javax.inject.Inject;
 import io.reactivex.disposables.CompositeDisposable;
 import te.app.ossman_elmonkz.base.BaseViewModel;
 import te.app.ossman_elmonkz.model.base.Mutable;
-import te.app.ossman_elmonkz.pages.products.adapters.ProductsAdapter;
-import te.app.ossman_elmonkz.repository.ProductRepository;
+import te.app.ossman_elmonkz.pages.gallery.adapters.GalleryAdapter;
+import te.app.ossman_elmonkz.repository.SettingsRepository;
 
 public class GalleryViewModel extends BaseViewModel {
 
     public MutableLiveData<Mutable> liveData;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     @Inject
-    ProductRepository productRepository;
-    ProductsAdapter productsAdapter;
+    SettingsRepository settingsRepository;
+    GalleryAdapter galleryAdapter;
 
     @Inject
-    public GalleryViewModel(ProductRepository productRepository) {
-        this.productRepository = productRepository;
+    public GalleryViewModel(SettingsRepository settingsRepository) {
+        this.settingsRepository = settingsRepository;
         this.liveData = new MutableLiveData<>();
-        this.productRepository.setLiveData(liveData);
+        this.settingsRepository.setLiveData(liveData);
     }
 
-    public void getProducts() {
-        compositeDisposable.add(productRepository.getProducts(getPassingObject().getId()));
+    public void getGallery() {
+        compositeDisposable.add(settingsRepository.getGallery());
     }
 
-    public void filter(int type) {
-        compositeDisposable.add(productRepository.filter(type, getPassingObject().getId()));
+    public void systemImages() {
+        compositeDisposable.add(settingsRepository.getSystemsImages(getPassingObject().getId()));
     }
 
     @Bindable
-    public ProductsAdapter getProductsAdapter() {
-        return this.productsAdapter == null ? this.productsAdapter = new ProductsAdapter() : this.productsAdapter;
+    public GalleryAdapter getGalleryAdapter() {
+        return this.galleryAdapter == null ? this.galleryAdapter = new GalleryAdapter() : this.galleryAdapter;
     }
 
-    public ProductRepository getProductRepository() {
-        return productRepository;
+    public SettingsRepository getSettingsRepository() {
+        return settingsRepository;
     }
 
     protected void unSubscribeFromObservable() {

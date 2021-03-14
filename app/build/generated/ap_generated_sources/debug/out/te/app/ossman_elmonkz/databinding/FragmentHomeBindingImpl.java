@@ -14,45 +14,36 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.ic_fav, 4);
-        sViewsWithIds.put(R.id.slider_container, 5);
-        sViewsWithIds.put(R.id.imageSlider, 6);
+        sViewsWithIds.put(R.id.ic_fav, 3);
     }
     // views
     @NonNull
-    private final androidx.coordinatorlayout.widget.CoordinatorLayout mboundView0;
+    private final androidx.core.widget.NestedScrollView mboundView0;
     @NonNull
     private final androidx.recyclerview.widget.RecyclerView mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback10;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback11;
+    private final android.view.View.OnClickListener mCallback13;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentHomeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private FragmentHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton) bindings[3]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[4]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
-            , (com.smarteist.autoimageslider.SliderView) bindings[6]
-            , (androidx.cardview.widget.CardView) bindings[5]
             );
-        this.floatingActionButton.setTag(null);
         this.icShoppingCart.setTag(null);
-        this.mboundView0 = (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0];
+        this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
         this.mboundView2 = (androidx.recyclerview.widget.RecyclerView) bindings[2];
         this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback10 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
-        mCallback11 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 2);
+        mCallback13 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -143,8 +134,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.floatingActionButton.setOnClickListener(mCallback11);
-            this.icShoppingCart.setOnClickListener(mCallback10);
+            this.icShoppingCart.setOnClickListener(mCallback13);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -155,41 +145,19 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        switch(sourceId) {
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.ossman_elmonkz.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+        // localize variables for thread safety
+        // viewmodel != null
+        boolean viewmodelJavaLangObjectNull = false;
+        // viewmodel
+        te.app.ossman_elmonkz.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
 
 
 
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
+        viewmodelJavaLangObjectNull = (viewmodel) != (null);
+        if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.toCart();
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.ossman_elmonkz.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.toContact();
-                }
-                break;
-            }
+            viewmodel.toCart();
         }
     }
     // dirty flag

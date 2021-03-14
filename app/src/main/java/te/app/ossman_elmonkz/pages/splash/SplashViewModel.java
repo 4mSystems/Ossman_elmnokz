@@ -2,11 +2,15 @@ package te.app.ossman_elmonkz.pages.splash;
 
 import android.os.Handler;
 
+import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
+
+import com.smarteist.autoimageslider.SliderView;
 
 import javax.inject.Inject;
 
 import te.app.ossman_elmonkz.base.BaseViewModel;
+import te.app.ossman_elmonkz.pages.onBoard.OnBoardAdapter;
 import te.app.ossman_elmonkz.repository.HomeRepository;
 import te.app.ossman_elmonkz.model.base.Mutable;
 import te.app.ossman_elmonkz.utils.Constants;
@@ -18,6 +22,7 @@ public class SplashViewModel extends BaseViewModel {
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     @Inject
     HomeRepository repository;
+    OnBoardAdapter onBoardAdapter;
 
     @Inject
     public SplashViewModel(HomeRepository repository) {
@@ -34,6 +39,22 @@ public class SplashViewModel extends BaseViewModel {
         return repository;
     }
 
+    public void getSlider() {
+        compositeDisposable.add(repository.getBoard());
+    }
+
+    public void setupSlider(SliderView sliderView) {
+        sliderView.setSliderAdapter(onBoardAdapter);
+    }
+
+    public void toNext() {
+        liveData.setValue(new Mutable(Constants.NEXT));
+    }
+
+    @Bindable
+    public OnBoardAdapter getOnBoardAdapter() {
+        return this.onBoardAdapter == null ? this.onBoardAdapter = new OnBoardAdapter() : this.onBoardAdapter;
+    }
 
     protected void unSubscribeFromObservable() {
         if (compositeDisposable != null && !compositeDisposable.isDisposed()) {
@@ -47,7 +68,4 @@ public class SplashViewModel extends BaseViewModel {
         unSubscribeFromObservable();
     }
 
-    public void toLogin() {
-        liveData.setValue(new Mutable(Constants.START_APP));
-    }
 }

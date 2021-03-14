@@ -12,7 +12,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -32,22 +31,17 @@ public abstract class ActivityMainBinding extends ViewDataBinding {
   @NonNull
   public final ConstraintLayout llBaseContainer;
 
-  @NonNull
-  public final SwipeRefreshLayout swipeContainer;
-
   @Bindable
   protected HomeViewModel mViewModel;
 
   protected ActivityMainBinding(Object _bindingComponent, View _root, int _localFieldCount,
       FrameLayout flHomeContainer, BottomNavigationView homeNavigationMenu,
-      LinearLayout llBaseActionBarContainer, ConstraintLayout llBaseContainer,
-      SwipeRefreshLayout swipeContainer) {
+      LinearLayout llBaseActionBarContainer, ConstraintLayout llBaseContainer) {
     super(_bindingComponent, _root, _localFieldCount);
     this.flHomeContainer = flHomeContainer;
     this.homeNavigationMenu = homeNavigationMenu;
     this.llBaseActionBarContainer = llBaseActionBarContainer;
     this.llBaseContainer = llBaseContainer;
-    this.swipeContainer = swipeContainer;
   }
 
   public abstract void setViewModel(@Nullable HomeViewModel viewModel);

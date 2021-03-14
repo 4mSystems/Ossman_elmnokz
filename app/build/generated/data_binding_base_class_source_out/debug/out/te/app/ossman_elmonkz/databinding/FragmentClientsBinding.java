@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
 import com.airbnb.lottie.LottieAnimationView;
+import com.google.android.material.textfield.TextInputEditText;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.ossman_elmonkz.R;
@@ -23,14 +24,19 @@ public abstract class FragmentClientsBinding extends ViewDataBinding {
   @NonNull
   public final RecyclerView rcProducts;
 
+  @NonNull
+  public final TextInputEditText searchInput;
+
   @Bindable
   protected AgentsClientsViewModel mViewmodel;
 
   protected FragmentClientsBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      LottieAnimationView pbBaseLoadingBar, RecyclerView rcProducts) {
+      LottieAnimationView pbBaseLoadingBar, RecyclerView rcProducts,
+      TextInputEditText searchInput) {
     super(_bindingComponent, _root, _localFieldCount);
     this.pbBaseLoadingBar = pbBaseLoadingBar;
     this.rcProducts = rcProducts;
+    this.searchInput = searchInput;
   }
 
   public abstract void setViewmodel(@Nullable AgentsClientsViewModel viewmodel);

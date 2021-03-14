@@ -107,7 +107,7 @@ public class FragmentSubCategoriesBindingImpl extends FragmentSubCategoriesBindi
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        te.app.ossman_elmonkz.pages.home.adapters.CategoriesAdapter viewmodelCategoriesAdapter = null;
+        te.app.ossman_elmonkz.pages.subCategories.adapters.SubCategoriesAdapter viewmodelCategoriesAdapter = null;
         te.app.ossman_elmonkz.pages.subCategories.viewModels.SubCategoriesViewModel viewmodel = mViewmodel;
 
         if ((dirtyFlags & 0x7L) != 0) {

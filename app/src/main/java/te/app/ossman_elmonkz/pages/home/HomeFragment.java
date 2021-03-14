@@ -17,6 +17,7 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
 
+import te.app.ossman_elmonkz.BR;
 import te.app.ossman_elmonkz.R;
 import te.app.ossman_elmonkz.base.BaseFragment;
 import te.app.ossman_elmonkz.base.IApplicationComponent;
@@ -44,7 +45,6 @@ public class HomeFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
-        binding.imageSlider.setIndicatorAnimation(IndicatorAnimationType.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
         viewModel.homeData();
         setEvent();
         return binding.getRoot();
@@ -55,12 +55,10 @@ public class HomeFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (Constants.HOME.equals(((Mutable) o).message)) {
-                viewModel.setHomeData(((HomeResponse) mutable.object).getHomeData());
-                viewModel.setupSlider(binding.imageSlider);
+                viewModel.getCategoriesAdapter().update(((HomeResponse) mutable.object).getCategories());
+                viewModel.notifyChange(BR.categoriesAdapter);
             } else if (Constants.CART.equals(((Mutable) o).message)) {
                 MovementHelper.startActivity(context, CartFragment.class.getName(), getString(R.string.cart), null);
-            } else if (Constants.CONTACT.equals(((Mutable) o).message)) {
-                MovementHelper.startActivity(context, SuggestionsFragment.class.getName(), getString(R.string.contact_us), null);
             }
         });
     }

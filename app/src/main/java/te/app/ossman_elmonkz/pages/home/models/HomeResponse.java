@@ -2,16 +2,18 @@ package te.app.ossman_elmonkz.pages.home.models;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 import te.app.ossman_elmonkz.model.base.StatusMessage;
 
 public class HomeResponse extends StatusMessage {
 
     @SerializedName("data")
-    private HomeData homeData;
+    private List<CategoriesItem> categories;
 
-
-    public HomeData getHomeData() {
-        return homeData;
+    public List<CategoriesItem> getCategories(){
+        return categories;
     }
+
 
 }

@@ -22,6 +22,9 @@ public abstract class FragmentSuggestionsBinding extends ViewDataBinding {
   public final AppCompatButton addCart;
 
   @NonNull
+  public final TextInputLayout clientAddress;
+
+  @NonNull
   public final TextInputLayout clientName;
 
   @NonNull
@@ -37,10 +40,11 @@ public abstract class FragmentSuggestionsBinding extends ViewDataBinding {
   protected SettingsViewModel mViewmodel;
 
   protected FragmentSuggestionsBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatButton addCart, TextInputLayout clientName, TextInputLayout clientNotes,
-      TextInputLayout clientPhone, CustomTextViewMedium text) {
+      AppCompatButton addCart, TextInputLayout clientAddress, TextInputLayout clientName,
+      TextInputLayout clientNotes, TextInputLayout clientPhone, CustomTextViewMedium text) {
     super(_bindingComponent, _root, _localFieldCount);
     this.addCart = addCart;
+    this.clientAddress = clientAddress;
     this.clientName = clientName;
     this.clientNotes = clientNotes;
     this.clientPhone = clientPhone;

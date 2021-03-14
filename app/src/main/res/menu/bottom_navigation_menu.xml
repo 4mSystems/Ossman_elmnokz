@@ -5,11 +5,6 @@
         android:color="@color/dark_grey"
         android:icon="@drawable/ic_home"
         android:title="@string/menuHome" />
- <item
-        android:id="@+id/menuProducts"
-        android:color="@color/dark_grey"
-        android:icon="@drawable/ic_products"
-        android:title="@string/menuProducts" />
 
     <item
         android:id="@+id/menuMore"

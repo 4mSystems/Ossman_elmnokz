@@ -89,7 +89,7 @@ public class FragmentGalleryBindingImpl extends FragmentGalleryBinding  {
             }
             return true;
         }
-        else if (fieldId == BR.productsAdapter) {
+        else if (fieldId == BR.galleryAdapter) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
             }
@@ -105,7 +105,7 @@ public class FragmentGalleryBindingImpl extends FragmentGalleryBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        te.app.ossman_elmonkz.pages.products.adapters.ProductsAdapter viewmodelProductsAdapter = null;
+        te.app.ossman_elmonkz.pages.gallery.adapters.GalleryAdapter viewmodelGalleryAdapter = null;
         te.app.ossman_elmonkz.pages.gallery.viewModels.GalleryViewModel viewmodel = mViewmodel;
 
         if ((dirtyFlags & 0x7L) != 0) {
@@ -113,15 +113,15 @@ public class FragmentGalleryBindingImpl extends FragmentGalleryBinding  {
 
 
                 if (viewmodel != null) {
-                    // read viewmodel.productsAdapter
-                    viewmodelProductsAdapter = viewmodel.getProductsAdapter();
+                    // read viewmodel.galleryAdapter
+                    viewmodelGalleryAdapter = viewmodel.getGalleryAdapter();
                 }
         }
         // batch finished
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            te.app.ossman_elmonkz.base.ApplicationBinding.getItemsV2Binding(this.rcProducts, viewmodelProductsAdapter, "2", "1");
+            te.app.ossman_elmonkz.base.ApplicationBinding.getItemsV2Binding(this.rcProducts, viewmodelGalleryAdapter, "2", "1");
         }
     }
     // Listener Stub Implementations
@@ -130,7 +130,7 @@ public class FragmentGalleryBindingImpl extends FragmentGalleryBinding  {
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): viewmodel.productsAdapter
+        flag 1 (0x2L): viewmodel.galleryAdapter
         flag 2 (0x3L): null
     flag mapping end*/
     //end

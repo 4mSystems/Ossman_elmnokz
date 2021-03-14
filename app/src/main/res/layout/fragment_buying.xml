@@ -5,6 +5,8 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
             name="viewmodel"
             type="te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel" />
@@ -26,6 +28,7 @@
                 android:layout_marginStart="@dimen/dp6w"
                 android:layout_marginTop="@dimen/dp10h"
                 android:layout_marginEnd="@dimen/dp6w"
+                android:visibility="@{viewmodel.passingObject.object.equals(`8`)?View.VISIBLE:View.GONE}"
                 app:endIconDrawable="@drawable/ic_arrow_down"
                 app:endIconMode="custom"
                 app:layout_constraintStart_toStartOf="parent"

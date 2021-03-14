@@ -7,7 +7,7 @@ public class Constants {
     public static final String PRODUCTS_RESPONSE = "PRODUCTS_RESPONSE";
 
     public final static String CART = "CART";
-    public final static String START_APP = "START_APP";
+    public final static String SEARCH = "SEARCH";
     public final static String ADD_TO_CART = "ADD_TO_CART";
     public final static String NOT_VERIFIED = "NOT_VERIFIED";
     public final static String MINUS = "MINUS";
@@ -21,17 +21,21 @@ public class Constants {
     public final static String MENU_MORE = "MENU_MORE";
     public final static String MENU_PRODUCTS = "MENU_PRODUCTS";
 
-    public final static String UPDATE_PROFILE = "update_profile";
+    public final static String NEXT = "NEXT";
 
 
-    public final static String IMAGE = "workers_img";
-    public final static String IMAGE_OFFER = "offer_img";
-    public final static String IMAGE_BUSINESS = "workers_bussinessregister";
-    public final static String IMAGE_COVER = "cover";
-    public final static String DEPARTMENT = "DEPARTMENT";
-    public final static String PACKAGES = "PACKAGES";
+    public final static String BOARD = "BOARD";
+    public final static String GALLERY = "GALLERY";
+    public final static int SYSTEM_PRODUCTS = 3;
+    public final static int GALLERY_ID = 5;
+    public final static String AGENTS = "AGENTS";
+    public final static int AGENTS_ID = 4;
+    public final static String CLIENTS = "CLIENTS";
+    public final static String GOVS = "GOVS";
+    public final static String SHOW_GOVS = "SHOW_GOVS";
     public final static String HOME = "HOME";
-    public final static String EMPTY_WARNING = "EMPTY_WARNING";
+    public final static int PRESSURE_ID_IMAGE = 9; // صور المكبس
+    public final static int SMOKE_ID_IMAGE = 10; // صور غرفه الغاز
 
     public final static String LOGOUT = "logout";
     public final static String Product_DETAILS = "ORDER_DETAILS";
@@ -92,13 +96,14 @@ public class Constants {
     public static final int RC_SIGN_IN = 9001;
     public static final String ABOUT = "about";
     public static final String TERMS = "terms";
+    public static final int TERMS_ID = 6;
     public static final String FIELD = "FIELD";
     public static final String LOGIN = "login";
     public static final String FORGET_PASSWORD = "forget_password";
     public static final String GOOGLE = "GOOGLE";
     public static final String FACEBOOK = "FACEBOOK";
-    public static final String REGISTER = "register";
-    public static final String CURRENT_LOCATION = "CURRENT_LOCATION";
+    public static final String YOUTUBE = "YOUTUBE";
+    public static final String WHATS = "WHATS";
     public static boolean DATA_CHANGED = false;
     public static final String CONTACT = "CONTACT";
     public static final String NOTIFICATIONS = "notifications";

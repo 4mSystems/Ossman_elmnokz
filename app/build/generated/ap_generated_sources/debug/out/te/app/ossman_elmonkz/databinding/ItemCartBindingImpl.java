@@ -23,11 +23,11 @@ public class ItemCartBindingImpl extends ItemCartBinding implements te.app.ossma
     private final androidx.appcompat.widget.AppCompatImageView mboundView7;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback14;
+    private final android.view.View.OnClickListener mCallback16;
     @Nullable
-    private final android.view.View.OnClickListener mCallback12;
+    private final android.view.View.OnClickListener mCallback17;
     @Nullable
-    private final android.view.View.OnClickListener mCallback13;
+    private final android.view.View.OnClickListener mCallback15;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -57,9 +57,9 @@ public class ItemCartBindingImpl extends ItemCartBinding implements te.app.ossma
         this.productPrice.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback14 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 3);
-        mCallback12 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
-        mCallback13 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 2);
+        mCallback16 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 2);
+        mCallback17 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 3);
+        mCallback15 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -183,9 +183,9 @@ public class ItemCartBindingImpl extends ItemCartBinding implements te.app.ossma
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.decrement.setOnClickListener(mCallback13);
-            this.increment.setOnClickListener(mCallback12);
-            this.mboundView7.setOnClickListener(mCallback14);
+            this.decrement.setOnClickListener(mCallback16);
+            this.increment.setOnClickListener(mCallback15);
+            this.mboundView7.setOnClickListener(mCallback17);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -200,6 +200,23 @@ public class ItemCartBindingImpl extends ItemCartBinding implements te.app.ossma
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.ossman_elmonkz.pages.cart.viewModels.ItemCartViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.minusItem();
+                }
+                break;
+            }
             case 3: {
                 // localize variables for thread safety
                 // itemViewModel
@@ -231,23 +248,6 @@ public class ItemCartBindingImpl extends ItemCartBinding implements te.app.ossma
 
 
                     itemViewModel.plusItem();
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // itemViewModel
-                te.app.ossman_elmonkz.pages.cart.viewModels.ItemCartViewModel itemViewModel = mItemViewModel;
-                // itemViewModel != null
-                boolean itemViewModelJavaLangObjectNull = false;
-
-
-
-                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
-                if (itemViewModelJavaLangObjectNull) {
-
-
-                    itemViewModel.minusItem();
                 }
                 break;
             }

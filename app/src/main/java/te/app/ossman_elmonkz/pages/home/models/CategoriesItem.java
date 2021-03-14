@@ -2,26 +2,40 @@ package te.app.ossman_elmonkz.pages.home.models;
 
 import com.google.gson.annotations.SerializedName;
 
-public class CategoriesItem{
+import java.util.List;
 
-	@SerializedName("image")
-	private String image;
+public class CategoriesItem {
 
-	@SerializedName("id")
-	private int id;
+    @SerializedName("image")
+    private String image;
 
-	@SerializedName("title")
-	private String title;
+    @SerializedName("id")
+    private int id;
+    @SerializedName("category_id")
+    private int category_id;
 
-	public String getImage(){
-		return image;
-	}
+    @SerializedName("name")
+    private String title;
+    @SerializedName("sub_categories")
+    private List<CategoriesItem> subCategoriesItems;
 
-	public int getId(){
-		return id;
-	}
+    public String getImage() {
+        return image;
+    }
 
-	public String getTitle(){
-		return title;
-	}
+    public int getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public List<CategoriesItem> getSubCategoriesItems() {
+        return subCategoriesItems;
+    }
+
+    public int getCategory_id() {
+        return category_id;
+    }
 }
