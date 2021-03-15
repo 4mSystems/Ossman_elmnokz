@@ -17,12 +17,12 @@ import java.util.List;
 
 import te.app.ossman_elmonkz.R;
 import te.app.ossman_elmonkz.databinding.ItemCartBinding;
+import te.app.ossman_elmonkz.pages.buying.models.OrderRequest;
 import te.app.ossman_elmonkz.pages.cart.viewModels.ItemCartViewModel;
-import te.app.ossman_elmonkz.pages.products.models.productDetails.Product;
 
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
-    List<Product> productList;
+    List<OrderRequest> productList;
     Context context;
     private MutableLiveData<Integer> liveDataAdapter = new MutableLiveData<>();
 
@@ -34,7 +34,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
         return liveDataAdapter;
     }
 
-    public List<Product> getProductList() {
+    public List<OrderRequest> getProductList() {
         return productList;
     }
 
@@ -50,13 +50,13 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
-        Product product = productList.get(position);
+        OrderRequest product = productList.get(position);
         ItemCartViewModel itemMenuViewModel = new ItemCartViewModel(product);
         holder.setViewModel(itemMenuViewModel);
     }
 
 
-    public void update(List<Product> dataList) {
+    public void update(List<OrderRequest> dataList) {
         this.productList.clear();
         productList.addAll(dataList);
         notifyDataSetChanged();

@@ -23,11 +23,11 @@ public class ItemCartBindingImpl extends ItemCartBinding implements te.app.ossma
     private final androidx.appcompat.widget.AppCompatImageView mboundView7;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback16;
+    private final android.view.View.OnClickListener mCallback23;
     @Nullable
-    private final android.view.View.OnClickListener mCallback17;
+    private final android.view.View.OnClickListener mCallback21;
     @Nullable
-    private final android.view.View.OnClickListener mCallback15;
+    private final android.view.View.OnClickListener mCallback22;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,9 +41,9 @@ public class ItemCartBindingImpl extends ItemCartBinding implements te.app.ossma
             , (androidx.appcompat.widget.AppCompatImageView) bindings[5]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[4]
             , (com.google.android.material.textview.MaterialTextView) bindings[6]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
             , (te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium) bindings[2]
             , (te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium) bindings[3]
+            , (te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium) bindings[1]
             );
         this.decrement.setTag(null);
         this.increment.setTag(null);
@@ -52,14 +52,14 @@ public class ItemCartBindingImpl extends ItemCartBinding implements te.app.ossma
         this.mboundView0.setTag(null);
         this.mboundView7 = (androidx.appcompat.widget.AppCompatImageView) bindings[7];
         this.mboundView7.setTag(null);
-        this.productImage.setTag(null);
+        this.productBrand.setTag(null);
+        this.productModel.setTag(null);
         this.productName.setTag(null);
-        this.productPrice.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback16 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 2);
-        mCallback17 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 3);
-        mCallback15 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
+        mCallback23 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 3);
+        mCallback21 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
+        mCallback22 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -134,15 +134,22 @@ public class ItemCartBindingImpl extends ItemCartBinding implements te.app.ossma
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        java.lang.String stringValueOfItemViewModelProductQuantity = null;
+        java.lang.String productModelAndroidStringModelConcatJavaLangStringConcatItemViewModelProductModelNameJavaLangObjectNullItemViewModelProductModelNameJavaLangString = null;
+        java.lang.String productNameAndroidStringDepartmentConcatJavaLangStringConcatItemViewModelProductPartNameJavaLangObjectNullItemViewModelProductPartNameJavaLangString = null;
+        java.lang.String itemViewModelProductModelNameJavaLangObjectNullItemViewModelProductModelNameJavaLangString = null;
+        java.lang.String itemViewModelProductBrandName = null;
+        te.app.ossman_elmonkz.pages.buying.models.OrderRequest itemViewModelProduct = null;
+        boolean itemViewModelProductBrandNameJavaLangObjectNull = false;
+        boolean itemViewModelProductPartNameJavaLangObjectNull = false;
+        java.lang.String itemViewModelProductQuantity = null;
+        java.lang.String productBrandAndroidStringBrandConcatJavaLangStringConcatItemViewModelProductBrandNameJavaLangObjectNullItemViewModelProductBrandNameJavaLangString = null;
+        java.lang.String itemViewModelProductPartName = null;
+        java.lang.String itemViewModelProductPartNameJavaLangObjectNullItemViewModelProductPartNameJavaLangString = null;
+        java.lang.String itemViewModelProductModelName = null;
+        java.lang.String itemViewModelProductBrandNameJavaLangObjectNullItemViewModelProductBrandNameJavaLangString = null;
         te.app.ossman_elmonkz.pages.cart.viewModels.ItemCartViewModel itemViewModel = mItemViewModel;
-        java.lang.String itemViewModelProductPrice = null;
-        java.lang.String itemViewModelProductTitle = null;
-        te.app.ossman_elmonkz.pages.products.models.productDetails.Product itemViewModelProduct = null;
-        java.lang.String itemViewModelProductPriceConcatJavaLangString = null;
-        java.lang.String itemViewModelProductPriceConcatJavaLangStringConcatJavaLangString = null;
-        java.lang.String itemViewModelProductMainImage = null;
-        int itemViewModelProductQuantity = 0;
+        int itemViewModelProductPartNameJavaLangObjectNullViewVISIBLEViewGONE = 0;
+        boolean itemViewModelProductModelNameJavaLangObjectNull = false;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
@@ -155,68 +162,95 @@ public class ItemCartBindingImpl extends ItemCartBinding implements te.app.ossma
 
 
                 if (itemViewModelProduct != null) {
-                    // read itemViewModel.product.price
-                    itemViewModelProductPrice = itemViewModelProduct.getPrice();
-                    // read itemViewModel.product.title
-                    itemViewModelProductTitle = itemViewModelProduct.getTitle();
-                    // read itemViewModel.product.main_image
-                    itemViewModelProductMainImage = itemViewModelProduct.getMain_image();
+                    // read itemViewModel.product.brandName
+                    itemViewModelProductBrandName = itemViewModelProduct.getBrandName();
                     // read itemViewModel.product.quantity
                     itemViewModelProductQuantity = itemViewModelProduct.getQuantity();
+                    // read itemViewModel.product.partName
+                    itemViewModelProductPartName = itemViewModelProduct.getPartName();
+                    // read itemViewModel.product.modelName
+                    itemViewModelProductModelName = itemViewModelProduct.getModelName();
                 }
 
 
-                if (itemViewModelProductPrice != null) {
-                    // read itemViewModel.product.price.concat(" ")
-                    itemViewModelProductPriceConcatJavaLangString = itemViewModelProductPrice.concat(" ");
+                // read itemViewModel.product.brandName != null
+                itemViewModelProductBrandNameJavaLangObjectNull = (itemViewModelProductBrandName) != (null);
+                // read itemViewModel.product.partName != null
+                itemViewModelProductPartNameJavaLangObjectNull = (itemViewModelProductPartName) != (null);
+                // read itemViewModel.product.modelName != null
+                itemViewModelProductModelNameJavaLangObjectNull = (itemViewModelProductModelName) != (null);
+            if((dirtyFlags & 0x7L) != 0) {
+                if(itemViewModelProductBrandNameJavaLangObjectNull) {
+                        dirtyFlags |= 0x100L;
                 }
-                // read String.valueOf(itemViewModel.product.quantity)
-                stringValueOfItemViewModelProductQuantity = java.lang.String.valueOf(itemViewModelProductQuantity);
+                else {
+                        dirtyFlags |= 0x80L;
+                }
+            }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(itemViewModelProductPartNameJavaLangObjectNull) {
+                        dirtyFlags |= 0x40L;
+                        dirtyFlags |= 0x400L;
+                }
+                else {
+                        dirtyFlags |= 0x20L;
+                        dirtyFlags |= 0x200L;
+                }
+            }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(itemViewModelProductModelNameJavaLangObjectNull) {
+                        dirtyFlags |= 0x10L;
+                }
+                else {
+                        dirtyFlags |= 0x8L;
+                }
+            }
 
 
-                if (itemViewModelProductPriceConcatJavaLangString != null) {
-                    // read itemViewModel.product.price.concat(" ").concat("ج.م")
-                    itemViewModelProductPriceConcatJavaLangStringConcatJavaLangString = itemViewModelProductPriceConcatJavaLangString.concat("ج.م");
-                }
+                // read itemViewModel.product.partName != null ? View.VISIBLE : View.GONE
+                itemViewModelProductPartNameJavaLangObjectNullViewVISIBLEViewGONE = ((itemViewModelProductPartNameJavaLangObjectNull) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+        }
+        // batch finished
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+                // read itemViewModel.product.modelName != null ? itemViewModel.product.modelName : ""
+                itemViewModelProductModelNameJavaLangObjectNullItemViewModelProductModelNameJavaLangString = ((itemViewModelProductModelNameJavaLangObjectNull) ? (itemViewModelProductModelName) : (""));
+                // read itemViewModel.product.partName != null ? itemViewModel.product.partName : ""
+                itemViewModelProductPartNameJavaLangObjectNullItemViewModelProductPartNameJavaLangString = ((itemViewModelProductPartNameJavaLangObjectNull) ? (itemViewModelProductPartName) : (""));
+                // read itemViewModel.product.brandName != null ? itemViewModel.product.brandName : ""
+                itemViewModelProductBrandNameJavaLangObjectNullItemViewModelProductBrandNameJavaLangString = ((itemViewModelProductBrandNameJavaLangObjectNull) ? (itemViewModelProductBrandName) : (""));
+
+
+                // read @android:string/model.concat(" ").concat(itemViewModel.product.modelName != null ? itemViewModel.product.modelName : "")
+                productModelAndroidStringModelConcatJavaLangStringConcatItemViewModelProductModelNameJavaLangObjectNullItemViewModelProductModelNameJavaLangString = productModel.getResources().getString(R.string.model).concat(" ").concat(itemViewModelProductModelNameJavaLangObjectNullItemViewModelProductModelNameJavaLangString);
+                // read @android:string/department.concat(" ").concat(itemViewModel.product.partName != null ? itemViewModel.product.partName : "")
+                productNameAndroidStringDepartmentConcatJavaLangStringConcatItemViewModelProductPartNameJavaLangObjectNullItemViewModelProductPartNameJavaLangString = productName.getResources().getString(R.string.department).concat(" ").concat(itemViewModelProductPartNameJavaLangObjectNullItemViewModelProductPartNameJavaLangString);
+                // read @android:string/brand.concat(" ").concat(itemViewModel.product.brandName != null ? itemViewModel.product.brandName : "")
+                productBrandAndroidStringBrandConcatJavaLangStringConcatItemViewModelProductBrandNameJavaLangObjectNullItemViewModelProductBrandNameJavaLangString = productBrand.getResources().getString(R.string.brand).concat(" ").concat(itemViewModelProductBrandNameJavaLangObjectNullItemViewModelProductBrandNameJavaLangString);
         }
         // batch finished
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.decrement.setOnClickListener(mCallback16);
-            this.increment.setOnClickListener(mCallback15);
-            this.mboundView7.setOnClickListener(mCallback17);
+            this.decrement.setOnClickListener(mCallback22);
+            this.increment.setOnClickListener(mCallback21);
+            this.mboundView7.setOnClickListener(mCallback23);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.incrementalViewText, stringValueOfItemViewModelProductQuantity);
-            te.app.ossman_elmonkz.base.ApplicationBinding.loadImage(this.productImage, itemViewModelProductMainImage);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.productName, itemViewModelProductTitle);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.productPrice, itemViewModelProductPriceConcatJavaLangStringConcatJavaLangString);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.incrementalViewText, itemViewModelProductQuantity);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.productBrand, productBrandAndroidStringBrandConcatJavaLangStringConcatItemViewModelProductBrandNameJavaLangObjectNullItemViewModelProductBrandNameJavaLangString);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.productModel, productModelAndroidStringModelConcatJavaLangStringConcatItemViewModelProductModelNameJavaLangObjectNullItemViewModelProductModelNameJavaLangString);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.productName, productNameAndroidStringDepartmentConcatJavaLangStringConcatItemViewModelProductPartNameJavaLangObjectNullItemViewModelProductPartNameJavaLangString);
+            this.productName.setVisibility(itemViewModelProductPartNameJavaLangObjectNullViewVISIBLEViewGONE);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // itemViewModel
-                te.app.ossman_elmonkz.pages.cart.viewModels.ItemCartViewModel itemViewModel = mItemViewModel;
-                // itemViewModel != null
-                boolean itemViewModelJavaLangObjectNull = false;
-
-
-
-                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
-                if (itemViewModelJavaLangObjectNull) {
-
-
-                    itemViewModel.minusItem();
-                }
-                break;
-            }
             case 3: {
                 // localize variables for thread safety
                 // itemViewModel
@@ -251,6 +285,23 @@ public class ItemCartBindingImpl extends ItemCartBinding implements te.app.ossma
                 }
                 break;
             }
+            case 2: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.ossman_elmonkz.pages.cart.viewModels.ItemCartViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.minusItem();
+                }
+                break;
+            }
         }
     }
     // dirty flag
@@ -259,6 +310,14 @@ public class ItemCartBindingImpl extends ItemCartBinding implements te.app.ossma
         flag 0 (0x1L): itemViewModel
         flag 1 (0x2L): itemViewModel.product
         flag 2 (0x3L): null
+        flag 3 (0x4L): itemViewModel.product.modelName != null ? itemViewModel.product.modelName : ""
+        flag 4 (0x5L): itemViewModel.product.modelName != null ? itemViewModel.product.modelName : ""
+        flag 5 (0x6L): itemViewModel.product.partName != null ? itemViewModel.product.partName : ""
+        flag 6 (0x7L): itemViewModel.product.partName != null ? itemViewModel.product.partName : ""
+        flag 7 (0x8L): itemViewModel.product.brandName != null ? itemViewModel.product.brandName : ""
+        flag 8 (0x9L): itemViewModel.product.brandName != null ? itemViewModel.product.brandName : ""
+        flag 9 (0xaL): itemViewModel.product.partName != null ? View.VISIBLE : View.GONE
+        flag 10 (0xbL): itemViewModel.product.partName != null ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

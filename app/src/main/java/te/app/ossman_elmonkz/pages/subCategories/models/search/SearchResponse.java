@@ -8,9 +8,9 @@ import te.app.ossman_elmonkz.model.base.StatusMessage;
 
 public class SearchResponse extends StatusMessage {
     @SerializedName("data")
-    private List<SearchData> data;
+    private List<EqualItemsItem> data;
 
-    public List<SearchData> getData() {
+    public List<EqualItemsItem> getData() {
         return data;
     }
 

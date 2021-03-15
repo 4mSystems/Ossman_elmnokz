@@ -8,7 +8,7 @@ import io.reactivex.disposables.CompositeDisposable;
 import te.app.ossman_elmonkz.base.BaseViewModel;
 import te.app.ossman_elmonkz.model.base.Mutable;
 import te.app.ossman_elmonkz.pages.cart.models.CreateOrder;
-import te.app.ossman_elmonkz.repository.ProductRepository;
+import te.app.ossman_elmonkz.repository.BuyingRepository;
 
 public class CreateOrderViewModel extends BaseViewModel {
 
@@ -16,10 +16,10 @@ public class CreateOrderViewModel extends BaseViewModel {
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     CreateOrder createOrder;
     @Inject
-    ProductRepository productRepository;
+    BuyingRepository productRepository;
 
     @Inject
-    public CreateOrderViewModel(ProductRepository productRepository) {
+    public CreateOrderViewModel(BuyingRepository productRepository) {
         this.productRepository = productRepository;
         this.liveData = new MutableLiveData<>();
         this.productRepository.setLiveData(liveData);
@@ -39,7 +39,7 @@ public class CreateOrderViewModel extends BaseViewModel {
         this.createOrder = createOrder;
     }
 
-    public ProductRepository getProductRepository() {
+    public BuyingRepository getProductRepository() {
         return productRepository;
     }
 

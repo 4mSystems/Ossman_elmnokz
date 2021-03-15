@@ -6,9 +6,9 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import te.app.ossman_elmonkz.pages.products.models.productDetails.Product;
+import te.app.ossman_elmonkz.pages.buying.models.OrderRequest;
 
-@Database(entities = {Product.class}, version = 2)
+@Database(entities = {OrderRequest.class}, version = 3)
 public abstract class CartDataBase extends RoomDatabase {
     private static CartDataBase instance;
 

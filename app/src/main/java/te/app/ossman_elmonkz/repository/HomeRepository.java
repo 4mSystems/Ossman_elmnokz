@@ -48,6 +48,6 @@ public class HomeRepository extends BaseRepository {
 
     public Disposable search(int categoryId, String subCatId, String search) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SEARCH+categoryId+"&sub_category_id="+subCatId+"&search_key="+search, new Object(), SearchResponse.class,
-                Constants.SEARCH, true);
+                Constants.SEARCH, false);
     }
 }

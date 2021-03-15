@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -18,6 +19,9 @@ import te.app.ossman_elmonkz.pages.subCategories.viewModels.SubCategoriesSearchV
 
 public abstract class FragmentSubCategorySearchBinding extends ViewDataBinding {
   @NonNull
+  public final AppCompatButton searchBtn;
+
+  @NonNull
   public final TextInputEditText searchInput;
 
   @NonNull
@@ -27,8 +31,10 @@ public abstract class FragmentSubCategorySearchBinding extends ViewDataBinding {
   protected SubCategoriesSearchViewModel mViewmodel;
 
   protected FragmentSubCategorySearchBinding(Object _bindingComponent, View _root,
-      int _localFieldCount, TextInputEditText searchInput, ProgressBar searchProgress) {
+      int _localFieldCount, AppCompatButton searchBtn, TextInputEditText searchInput,
+      ProgressBar searchProgress) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.searchBtn = searchBtn;
     this.searchInput = searchInput;
     this.searchProgress = searchProgress;
   }

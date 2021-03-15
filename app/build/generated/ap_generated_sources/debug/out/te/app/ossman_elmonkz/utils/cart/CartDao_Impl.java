@@ -17,15 +17,15 @@ import java.lang.SuppressWarnings;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
-import te.app.ossman_elmonkz.pages.products.models.productDetails.Product;
+import te.app.ossman_elmonkz.pages.buying.models.OrderRequest;
 
 @SuppressWarnings({"unchecked", "deprecation"})
 public final class CartDao_Impl implements CartDao {
   private final RoomDatabase __db;
 
-  private final EntityInsertionAdapter<Product> __insertionAdapterOfProduct;
+  private final EntityInsertionAdapter<OrderRequest> __insertionAdapterOfOrderRequest;
 
-  private final EntityDeletionOrUpdateAdapter<Product> __updateAdapterOfProduct;
+  private final EntityDeletionOrUpdateAdapter<OrderRequest> __updateAdapterOfOrderRequest;
 
   private final SharedSQLiteStatement __preparedStmtOfDeleteItem;
 
@@ -35,90 +35,128 @@ public final class CartDao_Impl implements CartDao {
 
   public CartDao_Impl(RoomDatabase __db) {
     this.__db = __db;
-    this.__insertionAdapterOfProduct = new EntityInsertionAdapter<Product>(__db) {
+    this.__insertionAdapterOfOrderRequest = new EntityInsertionAdapter<OrderRequest>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR IGNORE INTO `product` (`main_image`,`title`,`price`,`quantity`,`id`) VALUES (?,?,?,?,?)";
+        return "INSERT OR IGNORE INTO `order` (`partName`,`partId`,`brandName`,`brandId`,`modelName`,`modelId`,`quantity`,`id`) VALUES (?,?,?,?,?,?,?,?)";
       }
 
       @Override
-      public void bind(SupportSQLiteStatement stmt, Product value) {
-        if (value.getMain_image() == null) {
+      public void bind(SupportSQLiteStatement stmt, OrderRequest value) {
+        if (value.getPartName() == null) {
           stmt.bindNull(1);
         } else {
-          stmt.bindString(1, value.getMain_image());
+          stmt.bindString(1, value.getPartName());
         }
-        if (value.getTitle() == null) {
+        if (value.getPartId() == null) {
           stmt.bindNull(2);
         } else {
-          stmt.bindString(2, value.getTitle());
+          stmt.bindString(2, value.getPartId());
         }
-        if (value.getPrice() == null) {
+        if (value.getBrandName() == null) {
           stmt.bindNull(3);
         } else {
-          stmt.bindString(3, value.getPrice());
+          stmt.bindString(3, value.getBrandName());
         }
-        stmt.bindLong(4, value.getQuantity());
-        stmt.bindLong(5, value.getId());
+        if (value.getBrandId() == null) {
+          stmt.bindNull(4);
+        } else {
+          stmt.bindString(4, value.getBrandId());
+        }
+        if (value.getModelName() == null) {
+          stmt.bindNull(5);
+        } else {
+          stmt.bindString(5, value.getModelName());
+        }
+        if (value.getModelId() == null) {
+          stmt.bindNull(6);
+        } else {
+          stmt.bindString(6, value.getModelId());
+        }
+        if (value.getQuantity() == null) {
+          stmt.bindNull(7);
+        } else {
+          stmt.bindString(7, value.getQuantity());
+        }
+        stmt.bindLong(8, value.getId());
       }
     };
-    this.__updateAdapterOfProduct = new EntityDeletionOrUpdateAdapter<Product>(__db) {
+    this.__updateAdapterOfOrderRequest = new EntityDeletionOrUpdateAdapter<OrderRequest>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `product` SET `main_image` = ?,`title` = ?,`price` = ?,`quantity` = ?,`id` = ? WHERE `id` = ?";
+        return "UPDATE OR ABORT `order` SET `partName` = ?,`partId` = ?,`brandName` = ?,`brandId` = ?,`modelName` = ?,`modelId` = ?,`quantity` = ?,`id` = ? WHERE `id` = ?";
       }
 
       @Override
-      public void bind(SupportSQLiteStatement stmt, Product value) {
-        if (value.getMain_image() == null) {
+      public void bind(SupportSQLiteStatement stmt, OrderRequest value) {
+        if (value.getPartName() == null) {
           stmt.bindNull(1);
         } else {
-          stmt.bindString(1, value.getMain_image());
+          stmt.bindString(1, value.getPartName());
         }
-        if (value.getTitle() == null) {
+        if (value.getPartId() == null) {
           stmt.bindNull(2);
         } else {
-          stmt.bindString(2, value.getTitle());
+          stmt.bindString(2, value.getPartId());
         }
-        if (value.getPrice() == null) {
+        if (value.getBrandName() == null) {
           stmt.bindNull(3);
         } else {
-          stmt.bindString(3, value.getPrice());
+          stmt.bindString(3, value.getBrandName());
         }
-        stmt.bindLong(4, value.getQuantity());
-        stmt.bindLong(5, value.getId());
-        stmt.bindLong(6, value.getId());
+        if (value.getBrandId() == null) {
+          stmt.bindNull(4);
+        } else {
+          stmt.bindString(4, value.getBrandId());
+        }
+        if (value.getModelName() == null) {
+          stmt.bindNull(5);
+        } else {
+          stmt.bindString(5, value.getModelName());
+        }
+        if (value.getModelId() == null) {
+          stmt.bindNull(6);
+        } else {
+          stmt.bindString(6, value.getModelId());
+        }
+        if (value.getQuantity() == null) {
+          stmt.bindNull(7);
+        } else {
+          stmt.bindString(7, value.getQuantity());
+        }
+        stmt.bindLong(8, value.getId());
+        stmt.bindLong(9, value.getId());
       }
     };
     this.__preparedStmtOfDeleteItem = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
-        final String _query = "DELETE FROM PRODUCT WHERE id=?";
+        final String _query = "DELETE FROM `order` WHERE id=?";
         return _query;
       }
     };
     this.__preparedStmtOfUpdateProductQuantity = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
-        final String _query = "UPDATE PRODUCT SET quantity=? where id=?";
+        final String _query = "UPDATE `order` SET quantity=? where id=?";
         return _query;
       }
     };
     this.__preparedStmtOfEmptyProductCart = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
-        final String _query = "DELETE FROM PRODUCT";
+        final String _query = "DELETE FROM `order`";
         return _query;
       }
     };
   }
 
   @Override
-  public long addProduct(final Product productDetails) {
+  public long addProduct(final OrderRequest productDetails) {
     __db.assertNotSuspendingTransaction();
     __db.beginTransaction();
     try {
-      long _result = __insertionAdapterOfProduct.insertAndReturnId(productDetails);
+      long _result = __insertionAdapterOfOrderRequest.insertAndReturnId(productDetails);
       __db.setTransactionSuccessful();
       return _result;
     } finally {
@@ -127,11 +165,11 @@ public final class CartDao_Impl implements CartDao {
   }
 
   @Override
-  public void updateProduct(final Product product) {
+  public void updateProduct(final OrderRequest product) {
     __db.assertNotSuspendingTransaction();
     __db.beginTransaction();
     try {
-      __updateAdapterOfProduct.handle(product);
+      __updateAdapterOfOrderRequest.handle(product);
       __db.setTransactionSuccessful();
     } finally {
       __db.endTransaction();
@@ -187,69 +225,51 @@ public final class CartDao_Impl implements CartDao {
   }
 
   @Override
-  public LiveData<List<Product>> getProducts() {
-    final String _sql = "select * from product";
+  public LiveData<List<OrderRequest>> getProducts() {
+    final String _sql = "select * from `order`";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
-    return __db.getInvalidationTracker().createLiveData(new String[]{"product"}, false, new Callable<List<Product>>() {
+    return __db.getInvalidationTracker().createLiveData(new String[]{"order"}, false, new Callable<List<OrderRequest>>() {
       @Override
-      public List<Product> call() throws Exception {
+      public List<OrderRequest> call() throws Exception {
         final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
         try {
-          final int _cursorIndexOfMainImage = CursorUtil.getColumnIndexOrThrow(_cursor, "main_image");
-          final int _cursorIndexOfTitle = CursorUtil.getColumnIndexOrThrow(_cursor, "title");
-          final int _cursorIndexOfPrice = CursorUtil.getColumnIndexOrThrow(_cursor, "price");
+          final int _cursorIndexOfPartName = CursorUtil.getColumnIndexOrThrow(_cursor, "partName");
+          final int _cursorIndexOfPartId = CursorUtil.getColumnIndexOrThrow(_cursor, "partId");
+          final int _cursorIndexOfBrandName = CursorUtil.getColumnIndexOrThrow(_cursor, "brandName");
+          final int _cursorIndexOfBrandId = CursorUtil.getColumnIndexOrThrow(_cursor, "brandId");
+          final int _cursorIndexOfModelName = CursorUtil.getColumnIndexOrThrow(_cursor, "modelName");
+          final int _cursorIndexOfModelId = CursorUtil.getColumnIndexOrThrow(_cursor, "modelId");
           final int _cursorIndexOfQuantity = CursorUtil.getColumnIndexOrThrow(_cursor, "quantity");
           final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
-          final List<Product> _result = new ArrayList<Product>(_cursor.getCount());
+          final List<OrderRequest> _result = new ArrayList<OrderRequest>(_cursor.getCount());
           while(_cursor.moveToNext()) {
-            final Product _item;
-            _item = new Product();
-            final String _tmpMain_image;
-            _tmpMain_image = _cursor.getString(_cursorIndexOfMainImage);
-            _item.setMain_image(_tmpMain_image);
-            final String _tmpTitle;
-            _tmpTitle = _cursor.getString(_cursorIndexOfTitle);
-            _item.setTitle(_tmpTitle);
-            final String _tmpPrice;
-            _tmpPrice = _cursor.getString(_cursorIndexOfPrice);
-            _item.setPrice(_tmpPrice);
-            final int _tmpQuantity;
-            _tmpQuantity = _cursor.getInt(_cursorIndexOfQuantity);
+            final OrderRequest _item;
+            _item = new OrderRequest();
+            final String _tmpPartName;
+            _tmpPartName = _cursor.getString(_cursorIndexOfPartName);
+            _item.setPartName(_tmpPartName);
+            final String _tmpPartId;
+            _tmpPartId = _cursor.getString(_cursorIndexOfPartId);
+            _item.setPartId(_tmpPartId);
+            final String _tmpBrandName;
+            _tmpBrandName = _cursor.getString(_cursorIndexOfBrandName);
+            _item.setBrandName(_tmpBrandName);
+            final String _tmpBrandId;
+            _tmpBrandId = _cursor.getString(_cursorIndexOfBrandId);
+            _item.setBrandId(_tmpBrandId);
+            final String _tmpModelName;
+            _tmpModelName = _cursor.getString(_cursorIndexOfModelName);
+            _item.setModelName(_tmpModelName);
+            final String _tmpModelId;
+            _tmpModelId = _cursor.getString(_cursorIndexOfModelId);
+            _item.setModelId(_tmpModelId);
+            final String _tmpQuantity;
+            _tmpQuantity = _cursor.getString(_cursorIndexOfQuantity);
             _item.setQuantity(_tmpQuantity);
             final int _tmpId;
             _tmpId = _cursor.getInt(_cursorIndexOfId);
             _item.setId(_tmpId);
             _result.add(_item);
-          }
-          return _result;
-        } finally {
-          _cursor.close();
-        }
-      }
-
-      @Override
-      protected void finalize() {
-        _statement.release();
-      }
-    });
-  }
-
-  @Override
-  public LiveData<String> getCartTotal() {
-    final String _sql = "select sum(price * quantity) from product";
-    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
-    return __db.getInvalidationTracker().createLiveData(new String[]{"product"}, false, new Callable<String>() {
-      @Override
-      public String call() throws Exception {
-        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
-        try {
-          final String _result;
-          if(_cursor.moveToFirst()) {
-            final String _tmp;
-            _tmp = _cursor.getString(0);
-            _result = _tmp;
-          } else {
-            _result = null;
           }
           return _result;
         } finally {

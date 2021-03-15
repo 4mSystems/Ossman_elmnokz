@@ -24,9 +24,8 @@
             android:drawablePadding="@dimen/dp8w"
             android:gravity="center_vertical"
             android:hint="@string/home_search_hint"
-            android:onTextChanged="@{viewmodel.onTextChanged}"
             android:padding="@dimen/dp8h"
-            android:text="@{viewmodel.search}"
+            android:text="@={viewmodel.search}"
             android:textColorHint="@color/medium_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -46,10 +45,24 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="@dimen/dp4h"
+            app:adapter="@{viewmodel.searchAdapter}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/search_btn"
             app:layout_constraintTop_toBottomOf="@id/search_progress"
+            app:orientation="@{`1`}"
+            app:span="@{`1`}"
             tools:listitem="@layout/item_search" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/search_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="@{()-> viewmodel.search()}"
+            android:text="@string/search_btn"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

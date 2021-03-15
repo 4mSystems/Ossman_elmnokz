@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -37,8 +36,11 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:focusable="false"
                     android:hint="@string/department_name_hint"
                     android:inputType="text"
+                    android:onClick="@{()->viewmodel.toPart()}"
+                    android:text="@={viewmodel.orderRequest.partName}"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -59,8 +61,11 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:focusable="false"
                     android:hint="@string/brand_name_hint"
                     android:inputType="text"
+                    android:onClick="@{()->viewmodel.toBrand()}"
+                    android:text="@={viewmodel.orderRequest.brandName}"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -81,15 +86,18 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:focusable="false"
                     android:hint="@string/model_name_hint"
                     android:inputType="text"
+                    android:onClick="@{()->viewmodel.toModel()}"
+                    android:text="@={viewmodel.orderRequest.modelName}"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium
                 android:id="@+id/customTextViewMedium"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp6w"
                 android:layout_marginTop="@dimen/dp6h"
@@ -97,22 +105,22 @@
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/black"
-                app:layout_constraintEnd_toStartOf="@+id/incrementalViewFloorNumber"
+                app:layout_constraintBottom_toBottomOf="@id/incrementalViewFloorNumber"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/model_name" />
+                app:layout_constraintTop_toTopOf="@id/incrementalViewFloorNumber" />
 
             <te.app.ossman_elmonkz.customViews.views.IncrementalView
                 android:id="@+id/incrementalViewFloorNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp6w"
                 android:layout_marginTop="@dimen/dp6h"
-                android:layout_marginEnd="@dimen/dp6w"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/customTextViewMedium"
-                app:layout_constraintTop_toBottomOf="@id/model_name" />
-            <!--            app:value="@={viewmodel.createAdRequest.floor_no}"-->
+                app:layout_constraintTop_toBottomOf="@id/model_name"
+                app:value="@={viewmodel.orderRequest.quantity}" />
+
             <androidx.constraintlayout.widget.Barrier
                 android:id="@+id/br"
                 android:layout_width="match_parent"
@@ -128,6 +136,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp12w"
                 android:gravity="center"
+                android:onClick="@{()-> viewmodel.addToCart()}"
                 android:text="@string/add_cart"
                 android:textAppearance="?attr/textAppearanceButton"
                 android:textColor="@color/white"

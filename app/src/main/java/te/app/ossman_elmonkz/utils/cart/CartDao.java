@@ -10,29 +10,29 @@ import androidx.room.Update;
 
 import java.util.List;
 
-import te.app.ossman_elmonkz.pages.products.models.productDetails.Product;
+import te.app.ossman_elmonkz.pages.buying.models.OrderRequest;
 
 @Dao
 public interface CartDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    long addProduct(Product productDetails);
+    long addProduct(OrderRequest productDetails);
 
-    @Query("select * from product")
-    LiveData<List<Product>> getProducts();
+    @Query("select * from `order`")
+    LiveData<List<OrderRequest>> getProducts();
 
-    @Query("DELETE FROM PRODUCT WHERE id=:productId")
+    @Query("DELETE FROM `order` WHERE id=:productId")
     void deleteItem(int productId);
 
 
-    @Query("UPDATE PRODUCT SET quantity=:quantity where id=:productId")
+    @Query("UPDATE `order` SET quantity=:quantity where id=:productId")
     void updateProductQuantity(int quantity, int productId);
 
     @Update
-    void updateProduct(Product product);
+    void updateProduct(OrderRequest product);
 
-    @Query("select sum(price * quantity) from product")
-    LiveData<String> getCartTotal();
+//    @Query("select sum(price * quantity) from product")
+//    LiveData<String> getCartTotal();
 
-    @Query("DELETE FROM PRODUCT")
+    @Query("DELETE FROM `order`")
     void emptyProductCart();
 }

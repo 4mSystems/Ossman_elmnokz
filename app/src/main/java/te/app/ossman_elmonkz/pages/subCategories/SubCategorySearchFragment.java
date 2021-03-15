@@ -17,6 +17,7 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
 
+import te.app.ossman_elmonkz.BR;
 import te.app.ossman_elmonkz.PassingObject;
 import te.app.ossman_elmonkz.R;
 import te.app.ossman_elmonkz.base.BaseFragment;
@@ -24,6 +25,7 @@ import te.app.ossman_elmonkz.base.IApplicationComponent;
 import te.app.ossman_elmonkz.base.MyApplication;
 import te.app.ossman_elmonkz.databinding.FragmentSubCategorySearchBinding;
 import te.app.ossman_elmonkz.model.base.Mutable;
+import te.app.ossman_elmonkz.pages.subCategories.models.search.SearchResponse;
 import te.app.ossman_elmonkz.pages.subCategories.viewModels.SubCategoriesSearchViewModel;
 import te.app.ossman_elmonkz.utils.Constants;
 
@@ -54,7 +56,9 @@ public class SubCategorySearchFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (Constants.SEARCH.equals(((Mutable) o).message)) {
-//                viewModel.getSearchAdapter().update(((SearchResponse)mutable.object).getData());
+                viewModel.getSearchAdapter().update(((SearchResponse) mutable.object).getData());
+                viewModel.setSearchProgressVisible(View.GONE);
+                viewModel.notifyChange(BR.searchAdapter);
             }
         });
     }

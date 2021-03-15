@@ -2,9 +2,8 @@ package te.app.ossman_elmonkz.utils;
 
 public class Constants {
 
-    public static final String IMAGE_BASE_URL = "https://res.cloudinary.com/dwevccen7/image/upload/v1614430614/";
     public static final int PRODUCTS = 1;
-    public static final String PRODUCTS_RESPONSE = "PRODUCTS_RESPONSE";
+    public static final String BRAND_MODEL_RESPONSE = "BRAND_MODEL_RESPONSE";
 
     public final static String CART = "CART";
     public final static String SEARCH = "SEARCH";
@@ -19,7 +18,7 @@ public class Constants {
     public final static String MENU_HOME = "MENU_HOME";
     public final static String EMAIL = "email";
     public final static String MENU_MORE = "MENU_MORE";
-    public final static String MENU_PRODUCTS = "MENU_PRODUCTS";
+    public final static String SELECT_BRAND = "SELECT_BRAND";
 
     public final static String NEXT = "NEXT";
 
@@ -38,9 +37,10 @@ public class Constants {
     public final static int SMOKE_ID_IMAGE = 10; // صور غرفه الغاز
 
     public final static String LOGOUT = "logout";
-    public final static String Product_DETAILS = "ORDER_DETAILS";
+    public final static String SELECT_PART = "SELECT_PART";
+    public final static String EMPTY_WARNING = "EMPTY_WARNING";
 
-    public final static String SEND_OFFER = "SEND_OFFER";
+    public final static String SELECT_MODELS = "SELECT_MODELS";
     public final static String USER_DETAILS = "USER_DETAILS";
     public final static String COMPANY_PROFILE = "COMPANY_PROFILE";
     public final static String ERROR_TOAST = "error_toast";
@@ -77,12 +77,12 @@ public class Constants {
     //RESPONSES
     public static final int RESPONSE_SUCCESS = 200;
     public final static String MY_WORKS = "MY_WORKS";
-    public static final int RESPONSE_TRIP_FAILED = 401;
+    public static int PART_REQUEST = 4000;
+    public static int BRAND_REQUEST = 5000;
+    public static int MODEL_REQUEST = 7000;
     public static final int RESPONSE_JWT_EXPIRE = 403;
-    public static final int RESPONSE_404 = 404;
     public static final int RESPONSE_405 = 405;
     public static final int RESPONSE_402 = 402;
-    public static final int LOCATION_REQUEST = 407;
     public static final int RATE_REQUEST = 408;
     public static final int FILTER_REQUEST = 409;
     public static final int RESULT_CODE = 6000;

@@ -7,27 +7,27 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
-import te.app.ossman_elmonkz.pages.products.models.productDetails.Product;
+import te.app.ossman_elmonkz.pages.buying.models.OrderRequest;
 import te.app.ossman_elmonkz.utils.cart.CartDao;
 import te.app.ossman_elmonkz.utils.cart.CartDataBase;
 
 public class CartRepository {
     CartDao cartDao;
-    LiveData<List<Product>> allProducts;
+    LiveData<List<OrderRequest>> allProducts;
     LiveData<String> cartTotal;
 
     public CartRepository(Application application) {
         CartDataBase cartDataBase = CartDataBase.getInstance(application);
         cartDao = cartDataBase.cartDao();
         allProducts = cartDao.getProducts();
-        cartTotal = cartDao.getCartTotal();
+//        cartTotal = cartDao.getCartTotal();
     }
 
-    public void insert(Product product) {
+    public void insert(OrderRequest product) {
         new InsertProductAsyncTask(cartDao).execute(product);
     }
 
-    public void update(Product product) {
+    public void update(OrderRequest product) {
         new UpdateProductAsyncTask(cartDao).execute(product);
     }
 
@@ -38,7 +38,7 @@ public class CartRepository {
     public void emptyCart() {
         new EmptyCartAsyncTask(cartDao).execute();
     }
-    public LiveData<List<Product>> getAllProducts() {
+    public LiveData<List<OrderRequest>> getAllProducts() {
         return allProducts;
     }
 
@@ -47,7 +47,7 @@ public class CartRepository {
     }
 
 
-    private static class InsertProductAsyncTask extends AsyncTask<Product, Void, Void> {
+    private static class InsertProductAsyncTask extends AsyncTask<OrderRequest, Void, Void> {
         CartDao cartDao;
         long var_room_id;
 
@@ -56,13 +56,13 @@ public class CartRepository {
         }
 
         @Override
-        protected Void doInBackground(Product... products) {
+        protected Void doInBackground(OrderRequest... products) {
             var_room_id = cartDao.addProduct(products[0]);
             return null;
         }
     }
 
-    private static class UpdateProductAsyncTask extends AsyncTask<Product, Void, Void> {
+    private static class UpdateProductAsyncTask extends AsyncTask<OrderRequest, Void, Void> {
         private CartDao cartDao;
 
         public UpdateProductAsyncTask(CartDao cartDao) {
@@ -70,7 +70,7 @@ public class CartRepository {
         }
 
         @Override
-        protected Void doInBackground(Product... products) {
+        protected Void doInBackground(OrderRequest... products) {
             cartDao.updateProduct(products[0]);
             return null;
         }

@@ -31,9 +31,9 @@ public class FragmentMoreBindingImpl extends FragmentMoreBinding implements te.a
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback11;
+    private final android.view.View.OnClickListener mCallback13;
     @Nullable
-    private final android.view.View.OnClickListener mCallback8;
+    private final android.view.View.OnClickListener mCallback11;
     @Nullable
     private final android.view.View.OnClickListener mCallback12;
     @Nullable
@@ -75,11 +75,11 @@ public class FragmentMoreBindingImpl extends FragmentMoreBinding implements te.a
         this.tvTerms.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback11 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 4);
-        mCallback8 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
-        mCallback12 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 5);
-        mCallback10 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 3);
-        mCallback9 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 2);
+        mCallback13 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 5);
+        mCallback11 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 3);
+        mCallback12 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 4);
+        mCallback10 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 2);
+        mCallback9 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -153,51 +153,17 @@ public class FragmentMoreBindingImpl extends FragmentMoreBinding implements te.a
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.tvAgents.setOnClickListener(mCallback9);
-            this.tvContact.setOnClickListener(mCallback10);
-            this.tvMembers.setOnClickListener(mCallback8);
-            this.tvSupport.setOnClickListener(mCallback11);
-            this.tvTerms.setOnClickListener(mCallback12);
+            this.tvAgents.setOnClickListener(mCallback10);
+            this.tvContact.setOnClickListener(mCallback11);
+            this.tvMembers.setOnClickListener(mCallback9);
+            this.tvSupport.setOnClickListener(mCallback12);
+            this.tvTerms.setOnClickListener(mCallback13);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 4: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.ossman_elmonkz.pages.more.viewModels.MoreViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.toAbout();
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.ossman_elmonkz.pages.more.viewModels.MoreViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.toClients();
-                }
-                break;
-            }
             case 5: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -232,6 +198,23 @@ public class FragmentMoreBindingImpl extends FragmentMoreBinding implements te.a
                 }
                 break;
             }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.ossman_elmonkz.pages.more.viewModels.MoreViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toAbout();
+                }
+                break;
+            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -246,6 +229,23 @@ public class FragmentMoreBindingImpl extends FragmentMoreBinding implements te.a
 
 
                     viewmodel.toAgents();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.ossman_elmonkz.pages.more.viewModels.MoreViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toClients();
                 }
                 break;
             }

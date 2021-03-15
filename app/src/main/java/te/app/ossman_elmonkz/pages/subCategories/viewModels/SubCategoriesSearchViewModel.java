@@ -34,8 +34,14 @@ public class SubCategoriesSearchViewModel extends BaseViewModel {
     }
 
     public void search() {
-        compositeDisposable.add(homeRepository.search(getPassingObject().getId(),getPassingObject().getObject(),search));
+        if (!TextUtils.isEmpty(search)) {
+            setSearchProgressVisible(View.VISIBLE);
+            compositeDisposable.add(homeRepository.search(getPassingObject().getId(), getPassingObject().getObject(), search));
+        } else
+            setSearchProgressVisible(View.GONE);
+
     }
+
     public void onTextChanged(CharSequence s, int start, int before, int count) {
         if (!TextUtils.isEmpty(s)) {
             setSearchProgressVisible(View.VISIBLE);
@@ -44,6 +50,7 @@ public class SubCategoriesSearchViewModel extends BaseViewModel {
         } else
             setSearchProgressVisible(View.GONE);
     }
+
     @Bindable
     public int getSearchProgressVisible() {
         return searchProgressVisible;
@@ -54,6 +61,7 @@ public class SubCategoriesSearchViewModel extends BaseViewModel {
         notifyChange(BR.searchProgressVisible);
         this.searchProgressVisible = searchProgressVisible;
     }
+
     @Bindable
     public SearchAdapter getSearchAdapter() {
         return this.searchAdapter == null ? this.searchAdapter = new SearchAdapter() : this.searchAdapter;

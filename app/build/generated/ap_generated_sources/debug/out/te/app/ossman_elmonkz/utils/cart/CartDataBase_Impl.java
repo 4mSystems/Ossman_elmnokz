@@ -27,17 +27,17 @@ public final class CartDataBase_Impl extends CartDataBase {
 
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(2) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(3) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `product` (`main_image` TEXT, `title` TEXT, `price` TEXT, `quantity` INTEGER NOT NULL, `id` INTEGER NOT NULL, PRIMARY KEY(`id`))");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `order` (`partName` TEXT, `partId` TEXT, `brandName` TEXT, `brandId` TEXT, `modelName` TEXT, `modelId` TEXT, `quantity` TEXT, `id` INTEGER NOT NULL, PRIMARY KEY(`id`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'c473d9acdafe3a32feea06af1a42a771')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '68c539d058ec3a117799c01de8ad2b54')");
       }
 
       @Override
       public void dropAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("DROP TABLE IF EXISTS `product`");
+        _db.execSQL("DROP TABLE IF EXISTS `order`");
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
             mCallbacks.get(_i).onDestructiveMigration(_db);
@@ -76,24 +76,27 @@ public final class CartDataBase_Impl extends CartDataBase {
 
       @Override
       protected RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsProduct = new HashMap<String, TableInfo.Column>(5);
-        _columnsProduct.put("main_image", new TableInfo.Column("main_image", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsProduct.put("title", new TableInfo.Column("title", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsProduct.put("price", new TableInfo.Column("price", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsProduct.put("quantity", new TableInfo.Column("quantity", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsProduct.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
-        final HashSet<TableInfo.ForeignKey> _foreignKeysProduct = new HashSet<TableInfo.ForeignKey>(0);
-        final HashSet<TableInfo.Index> _indicesProduct = new HashSet<TableInfo.Index>(0);
-        final TableInfo _infoProduct = new TableInfo("product", _columnsProduct, _foreignKeysProduct, _indicesProduct);
-        final TableInfo _existingProduct = TableInfo.read(_db, "product");
-        if (! _infoProduct.equals(_existingProduct)) {
-          return new RoomOpenHelper.ValidationResult(false, "product(te.app.ossman_elmonkz.pages.products.models.productDetails.Product).\n"
-                  + " Expected:\n" + _infoProduct + "\n"
-                  + " Found:\n" + _existingProduct);
+        final HashMap<String, TableInfo.Column> _columnsOrder = new HashMap<String, TableInfo.Column>(8);
+        _columnsOrder.put("partName", new TableInfo.Column("partName", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsOrder.put("partId", new TableInfo.Column("partId", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsOrder.put("brandName", new TableInfo.Column("brandName", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsOrder.put("brandId", new TableInfo.Column("brandId", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsOrder.put("modelName", new TableInfo.Column("modelName", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsOrder.put("modelId", new TableInfo.Column("modelId", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsOrder.put("quantity", new TableInfo.Column("quantity", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsOrder.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysOrder = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesOrder = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoOrder = new TableInfo("order", _columnsOrder, _foreignKeysOrder, _indicesOrder);
+        final TableInfo _existingOrder = TableInfo.read(_db, "order");
+        if (! _infoOrder.equals(_existingOrder)) {
+          return new RoomOpenHelper.ValidationResult(false, "order(te.app.ossman_elmonkz.pages.buying.models.OrderRequest).\n"
+                  + " Expected:\n" + _infoOrder + "\n"
+                  + " Found:\n" + _existingOrder);
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "c473d9acdafe3a32feea06af1a42a771", "6876c163a9df7b75a43c551693ffaf9a");
+    }, "68c539d058ec3a117799c01de8ad2b54", "a68eae68a38bf9e3ae9e8722c4c11b74");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -106,7 +109,7 @@ public final class CartDataBase_Impl extends CartDataBase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "product");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "order");
   }
 
   @Override
@@ -115,7 +118,7 @@ public final class CartDataBase_Impl extends CartDataBase {
     final SupportSQLiteDatabase _db = super.getOpenHelper().getWritableDatabase();
     try {
       super.beginTransaction();
-      _db.execSQL("DELETE FROM `product`");
+      _db.execSQL("DELETE FROM `order`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();

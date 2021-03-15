@@ -11,39 +11,47 @@ public class BR {
 
   public static final int baseViewModel = 4;
 
-  public static final int cartAdapter = 5;
+  public static final int brandModelAdapter = 5;
 
-  public static final int categoriesAdapter = 6;
+  public static final int brandModelsPartionMain = 6;
 
-  public static final int categoriesItem = 7;
+  public static final int brandsModellsItem = 7;
 
-  public static final int clientData = 8;
+  public static final int cartAdapter = 8;
 
-  public static final int clientsAdapter = 9;
+  public static final int categoriesAdapter = 9;
 
-  public static final int galleryAdapter = 10;
+  public static final int categoriesItem = 10;
 
-  public static final int galleryData = 11;
+  public static final int clientData = 11;
 
-  public static final int itemViewModel = 12;
+  public static final int clientsAdapter = 12;
 
-  public static final int onBoardAdapter = 13;
+  public static final int galleryAdapter = 13;
 
-  public static final int onBoardViewModels = 14;
+  public static final int galleryData = 14;
 
-  public static final int passingObject = 15;
+  public static final int itemViewModel = 15;
 
-  public static final int product = 16;
+  public static final int modellsItem = 16;
 
-  public static final int productsAdapter = 17;
+  public static final int onBoardAdapter = 17;
 
-  public static final int searchAdapter = 18;
+  public static final int onBoardViewModels = 18;
 
-  public static final int searchItem = 19;
+  public static final int passingObject = 19;
 
-  public static final int searchProgressVisible = 20;
+  public static final int product = 20;
 
-  public static final int viewModel = 21;
+  public static final int productsAdapter = 21;
 
-  public static final int viewmodel = 22;
+  public static final int searchAdapter = 22;
+
+  public static final int searchItem = 23;
+
+  public static final int searchProgressVisible = 24;
+
+  public static final int viewModel = 25;
+
+  public static final int viewmodel = 26;
 }

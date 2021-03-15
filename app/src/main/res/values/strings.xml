@@ -62,5 +62,11 @@
     <string name="next">التالى</string>
     <string name="gov_hint">اختار المحافظه لاظهار العملاء</string>
     <string name="t_word">ت/</string>
+    <string name="search">اكتب اللى بتدور عليه…</string>
+    <string name="select_brand">"اختار الماركة "</string>
+    <string name="search_btn">ابحث</string>
+    <string name="department"><font fgcolor='#0076BC'>القسم :</font></string>
+    <string name="brand_cart"><font fgcolor='#0076BC'>الماركة :</font></string>
+    <string name="model"><font fgcolor='#0076BC'>الموديل :</font></string>
 
 </resources>

@@ -4,22 +4,22 @@ package te.app.ossman_elmonkz.pages.cart.viewModels;
 import dagger.MembersInjector;
 import dagger.internal.InjectedFieldSignature;
 import javax.inject.Provider;
-import te.app.ossman_elmonkz.repository.ProductRepository;
+import te.app.ossman_elmonkz.repository.BuyingRepository;
 
 @SuppressWarnings({
     "unchecked",
     "rawtypes"
 })
 public final class CreateOrderViewModel_MembersInjector implements MembersInjector<CreateOrderViewModel> {
-  private final Provider<ProductRepository> productRepositoryProvider;
+  private final Provider<BuyingRepository> productRepositoryProvider;
 
   public CreateOrderViewModel_MembersInjector(
-      Provider<ProductRepository> productRepositoryProvider) {
+      Provider<BuyingRepository> productRepositoryProvider) {
     this.productRepositoryProvider = productRepositoryProvider;
   }
 
   public static MembersInjector<CreateOrderViewModel> create(
-      Provider<ProductRepository> productRepositoryProvider) {
+      Provider<BuyingRepository> productRepositoryProvider) {
     return new CreateOrderViewModel_MembersInjector(productRepositoryProvider);
   }
 
@@ -30,7 +30,7 @@ public final class CreateOrderViewModel_MembersInjector implements MembersInject
 
   @InjectedFieldSignature("te.app.ossman_elmonkz.pages.cart.viewModels.CreateOrderViewModel.productRepository")
   public static void injectProductRepository(CreateOrderViewModel instance,
-      ProductRepository productRepository) {
+      BuyingRepository productRepository) {
     instance.productRepository = productRepository;
   }
 }

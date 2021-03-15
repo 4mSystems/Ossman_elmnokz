@@ -6,11 +6,11 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import te.app.ossman_elmonkz.pages.products.models.productDetails.Product;
+import te.app.ossman_elmonkz.pages.buying.models.OrderRequest;
 
 public class CreateOrder {
     @SerializedName("data")
-    private List<Product> productList;
+    private List<OrderRequest> productList;
     @SerializedName("name")
     private String name;
     @SerializedName("phone")
@@ -24,7 +24,7 @@ public class CreateOrder {
     public CreateOrder() {
     }
 
-    public CreateOrder(List<Product> productList) {
+    public CreateOrder(List<OrderRequest> productList) {
         this.productList = productList;
     }
 
@@ -32,11 +32,11 @@ public class CreateOrder {
         return (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(phone) && !TextUtils.isEmpty(address));
     }
 
-    public List<Product> getProductList() {
+    public List<OrderRequest> getProductList() {
         return productList;
     }
 
-    public void setProductList(List<Product> productList) {
+    public void setProductList(List<OrderRequest> productList) {
         this.productList = productList;
     }
 

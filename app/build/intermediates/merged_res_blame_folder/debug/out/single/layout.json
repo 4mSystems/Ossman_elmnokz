@@ -32,10 +32,6 @@
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/item_clients.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/filter_dialog.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/filter_dialog.xml"
-    },
-    {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_more.xml",
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_more.xml"
     },
@@ -74,6 +70,14 @@
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_brand.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/item_brand.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_brand_models_partion.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_brand_models_partion.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_onboard.xml",

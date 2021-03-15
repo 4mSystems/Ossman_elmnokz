@@ -13,13 +13,12 @@ import com.squareup.picasso.Picasso;
 import te.app.ossman_elmonkz.R;
 import te.app.ossman_elmonkz.utils.helper.AppHelper;
 
-import static te.app.ossman_elmonkz.utils.Constants.IMAGE_BASE_URL;
 
 public class ApplicationBinding {
     @BindingAdapter("imageUrl")
     public static void loadImage(ImageView imageView, Object image) {
         if (image instanceof String && !TextUtils.isEmpty((String) image)) {
-            Picasso.get().load(IMAGE_BASE_URL.concat((String) image)).placeholder(R.drawable.logo).into(imageView);
+            Picasso.get().load((String) image).placeholder(R.drawable.logo).into(imageView);
         } else if (image instanceof Integer) {
             imageView.setImageResource((Integer) image);
         }

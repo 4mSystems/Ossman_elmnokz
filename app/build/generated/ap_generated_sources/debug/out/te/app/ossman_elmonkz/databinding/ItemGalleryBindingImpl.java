@@ -22,7 +22,7 @@ public class ItemGalleryBindingImpl extends ItemGalleryBinding implements te.app
     private final te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback7;
+    private final android.view.View.OnClickListener mCallback8;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,7 +41,7 @@ public class ItemGalleryBindingImpl extends ItemGalleryBinding implements te.app
         this.productImage.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback7 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
+        mCallback8 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -160,7 +160,7 @@ public class ItemGalleryBindingImpl extends ItemGalleryBinding implements te.app
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback7);
+            this.mboundView0.setOnClickListener(mCallback8);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

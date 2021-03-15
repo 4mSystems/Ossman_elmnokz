@@ -6,6 +6,8 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
             name="itemViewModel"
             type="te.app.ossman_elmonkz.pages.cart.viewModels.ItemCartViewModel" />
@@ -22,57 +24,55 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/product_image"
-                android:layout_width="@dimen/dp100w"
-                android:layout_height="0dp"
-                android:src="@color/overlayBackground"
-                app:imageUrl="@{itemViewModel.product.main_image}"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
             <te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium
                 android:id="@+id/product_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp4h"
-                android:ellipsize="marquee"
-                android:singleLine="true"
-                android:text="@{itemViewModel.product.title}"
+                android:text="@{@string/department.concat(` `).concat(itemViewModel.product.partName!=null?itemViewModel.product.partName:``)}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/colorPrimary"
+                android:visibility="@{itemViewModel.product.partName!=null?View.VISIBLE:View.GONE}"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/product_image"
-                app:layout_constraintTop_toTopOf="@id/product_image" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium
-                android:id="@+id/product_price"
+                android:id="@+id/product_brand"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp4w"
-                android:layout_marginEnd="@dimen/dp4w"
-                android:layout_marginBottom="@dimen/dp4h"
-                android:ellipsize="marquee"
-                android:singleLine="true"
-                android:text="@{itemViewModel.product.price.concat(` `).concat(`ج.م`)}"
+                android:layout_margin="@dimen/dp4w"
+                android:text="@{@string/brand.concat(` `).concat(itemViewModel.product.brandName!=null?itemViewModel.product.brandName:``)}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/product_image"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/product_name" />
+
+            <te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium
+                android:id="@+id/product_model"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp4w"
+                android:text="@{@string/model.concat(` `).concat(itemViewModel.product.modelName!=null?itemViewModel.product.modelName:``)}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_brand" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/increment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp6h"
-                android:src="@drawable/ic_add"
                 android:onClick="@{()-> itemViewModel.plusItem()}"
-                app:layout_constraintStart_toEndOf="@id/product_image"
-                app:layout_constraintTop_toBottomOf="@id/product_price"
+                android:src="@drawable/ic_add"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_model"
                 app:tint="@color/black" />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -80,10 +80,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp6h"
-                android:src="@drawable/ic_remove"
                 android:onClick="@{()-> itemViewModel.minusItem()}"
+                android:src="@drawable/ic_remove"
                 app:layout_constraintStart_toEndOf="@+id/incrementalViewText"
-                app:layout_constraintTop_toBottomOf="@id/product_price"
+                app:layout_constraintTop_toBottomOf="@id/product_model"
                 app:tint="@color/black" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -92,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp9w"
                 android:layout_marginEnd="@dimen/dp9w"
-                android:text="@{String.valueOf(itemViewModel.product.quantity)}"
+                android:text="@{itemViewModel.product.quantity}"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/black"
@@ -111,8 +111,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp4h"
-                android:src="@drawable/ic_delete"
                 android:onClick="@{()-> itemViewModel.deleteItem()}"
+                android:src="@drawable/ic_delete"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/br" />
         </androidx.constraintlayout.widget.ConstraintLayout>

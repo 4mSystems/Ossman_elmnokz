@@ -19,6 +19,7 @@ import te.app.ossman_elmonkz.databinding.ActivityBaseBindingImpl;
 import te.app.ossman_elmonkz.databinding.ActivityMainBindingImpl;
 import te.app.ossman_elmonkz.databinding.FragmentAboutBindingImpl;
 import te.app.ossman_elmonkz.databinding.FragmentAgentsBindingImpl;
+import te.app.ossman_elmonkz.databinding.FragmentBrandModelsPartionBindingImpl;
 import te.app.ossman_elmonkz.databinding.FragmentBuyingBindingImpl;
 import te.app.ossman_elmonkz.databinding.FragmentCartBindingImpl;
 import te.app.ossman_elmonkz.databinding.FragmentClientsBindingImpl;
@@ -34,6 +35,7 @@ import te.app.ossman_elmonkz.databinding.FragmentSubCategoriesBindingImpl;
 import te.app.ossman_elmonkz.databinding.FragmentSubCategorySearchBindingImpl;
 import te.app.ossman_elmonkz.databinding.FragmentSuggestionsBindingImpl;
 import te.app.ossman_elmonkz.databinding.ItemAgentsBindingImpl;
+import te.app.ossman_elmonkz.databinding.ItemBrandBindingImpl;
 import te.app.ossman_elmonkz.databinding.ItemCartBindingImpl;
 import te.app.ossman_elmonkz.databinding.ItemClientsBindingImpl;
 import te.app.ossman_elmonkz.databinding.ItemGalleryBindingImpl;
@@ -52,59 +54,64 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_FRAGMENTAGENTS = 4;
 
-  private static final int LAYOUT_FRAGMENTBUYING = 5;
+  private static final int LAYOUT_FRAGMENTBRANDMODELSPARTION = 5;
 
-  private static final int LAYOUT_FRAGMENTCART = 6;
+  private static final int LAYOUT_FRAGMENTBUYING = 6;
 
-  private static final int LAYOUT_FRAGMENTCLIENTS = 7;
+  private static final int LAYOUT_FRAGMENTCART = 7;
 
-  private static final int LAYOUT_FRAGMENTCONTACTS = 8;
+  private static final int LAYOUT_FRAGMENTCLIENTS = 8;
 
-  private static final int LAYOUT_FRAGMENTCREATEORDER = 9;
+  private static final int LAYOUT_FRAGMENTCONTACTS = 9;
 
-  private static final int LAYOUT_FRAGMENTGALLERY = 10;
+  private static final int LAYOUT_FRAGMENTCREATEORDER = 10;
 
-  private static final int LAYOUT_FRAGMENTHOME = 11;
+  private static final int LAYOUT_FRAGMENTGALLERY = 11;
 
-  private static final int LAYOUT_FRAGMENTMORE = 12;
+  private static final int LAYOUT_FRAGMENTHOME = 12;
 
-  private static final int LAYOUT_FRAGMENTONBOARD = 13;
+  private static final int LAYOUT_FRAGMENTMORE = 13;
 
-  private static final int LAYOUT_FRAGMENTPRODUCTS = 14;
+  private static final int LAYOUT_FRAGMENTONBOARD = 14;
 
-  private static final int LAYOUT_FRAGMENTSPLASH = 15;
+  private static final int LAYOUT_FRAGMENTPRODUCTS = 15;
 
-  private static final int LAYOUT_FRAGMENTSUBCATEGORIES = 16;
+  private static final int LAYOUT_FRAGMENTSPLASH = 16;
 
-  private static final int LAYOUT_FRAGMENTSUBCATEGORYSEARCH = 17;
+  private static final int LAYOUT_FRAGMENTSUBCATEGORIES = 17;
 
-  private static final int LAYOUT_FRAGMENTSUGGESTIONS = 18;
+  private static final int LAYOUT_FRAGMENTSUBCATEGORYSEARCH = 18;
 
-  private static final int LAYOUT_ITEMAGENTS = 19;
+  private static final int LAYOUT_FRAGMENTSUGGESTIONS = 19;
 
-  private static final int LAYOUT_ITEMCART = 20;
+  private static final int LAYOUT_ITEMAGENTS = 20;
 
-  private static final int LAYOUT_ITEMCLIENTS = 21;
+  private static final int LAYOUT_ITEMBRAND = 21;
 
-  private static final int LAYOUT_ITEMGALLERY = 22;
+  private static final int LAYOUT_ITEMCART = 22;
 
-  private static final int LAYOUT_ITEMHOME = 23;
+  private static final int LAYOUT_ITEMCLIENTS = 23;
 
-  private static final int LAYOUT_ITEMSEARCH = 24;
+  private static final int LAYOUT_ITEMGALLERY = 24;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 25;
+  private static final int LAYOUT_ITEMHOME = 25;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 26;
+  private static final int LAYOUT_ITEMSEARCH = 26;
 
-  private static final int LAYOUT_LAYOUTTES = 27;
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 27;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(27);
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 28;
+
+  private static final int LAYOUT_LAYOUTTES = 29;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(29);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.fragment_about, LAYOUT_FRAGMENTABOUT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.fragment_agents, LAYOUT_FRAGMENTAGENTS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.fragment_brand_models_partion, LAYOUT_FRAGMENTBRANDMODELSPARTION);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.fragment_buying, LAYOUT_FRAGMENTBUYING);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.fragment_cart, LAYOUT_FRAGMENTCART);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.fragment_clients, LAYOUT_FRAGMENTCLIENTS);
@@ -120,6 +127,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.fragment_sub_category_search, LAYOUT_FRAGMENTSUBCATEGORYSEARCH);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.fragment_suggestions, LAYOUT_FRAGMENTSUGGESTIONS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.item_agents, LAYOUT_ITEMAGENTS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.item_brand, LAYOUT_ITEMBRAND);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.item_cart, LAYOUT_ITEMCART);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.item_clients, LAYOUT_ITEMCLIENTS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.item_gallery, LAYOUT_ITEMGALLERY);
@@ -162,6 +170,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new FragmentAgentsBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_agents is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTBRANDMODELSPARTION: {
+          if ("layout/fragment_brand_models_partion_0".equals(tag)) {
+            return new FragmentBrandModelsPartionBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_brand_models_partion is invalid. Received: " + tag);
         }
         case  LAYOUT_FRAGMENTBUYING: {
           if ("layout/fragment_buying_0".equals(tag)) {
@@ -252,6 +266,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new ItemAgentsBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for item_agents is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMBRAND: {
+          if ("layout/item_brand_0".equals(tag)) {
+            return new ItemBrandBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_brand is invalid. Received: " + tag);
         }
         case  LAYOUT_ITEMCART: {
           if ("layout/item_cart_0".equals(tag)) {
@@ -346,7 +366,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(23);
+    static final SparseArray<String> sKeys = new SparseArray<String>(27);
 
     static {
       sKeys.put(0, "_all");
@@ -354,35 +374,40 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(2, "agentData");
       sKeys.put(3, "agentsAdapter");
       sKeys.put(4, "baseViewModel");
-      sKeys.put(5, "cartAdapter");
-      sKeys.put(6, "categoriesAdapter");
-      sKeys.put(7, "categoriesItem");
-      sKeys.put(8, "clientData");
-      sKeys.put(9, "clientsAdapter");
-      sKeys.put(10, "galleryAdapter");
-      sKeys.put(11, "galleryData");
-      sKeys.put(12, "itemViewModel");
-      sKeys.put(13, "onBoardAdapter");
-      sKeys.put(14, "onBoardViewModels");
-      sKeys.put(15, "passingObject");
-      sKeys.put(16, "product");
-      sKeys.put(17, "productsAdapter");
-      sKeys.put(18, "searchAdapter");
-      sKeys.put(19, "searchItem");
-      sKeys.put(20, "searchProgressVisible");
-      sKeys.put(21, "viewModel");
-      sKeys.put(22, "viewmodel");
+      sKeys.put(5, "brandModelAdapter");
+      sKeys.put(6, "brandModelsPartionMain");
+      sKeys.put(7, "brandsModellsItem");
+      sKeys.put(8, "cartAdapter");
+      sKeys.put(9, "categoriesAdapter");
+      sKeys.put(10, "categoriesItem");
+      sKeys.put(11, "clientData");
+      sKeys.put(12, "clientsAdapter");
+      sKeys.put(13, "galleryAdapter");
+      sKeys.put(14, "galleryData");
+      sKeys.put(15, "itemViewModel");
+      sKeys.put(16, "modellsItem");
+      sKeys.put(17, "onBoardAdapter");
+      sKeys.put(18, "onBoardViewModels");
+      sKeys.put(19, "passingObject");
+      sKeys.put(20, "product");
+      sKeys.put(21, "productsAdapter");
+      sKeys.put(22, "searchAdapter");
+      sKeys.put(23, "searchItem");
+      sKeys.put(24, "searchProgressVisible");
+      sKeys.put(25, "viewModel");
+      sKeys.put(26, "viewmodel");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(27);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(29);
 
     static {
       sKeys.put("layout/activity_base_0", te.app.ossman_elmonkz.R.layout.activity_base);
       sKeys.put("layout/activity_main_0", te.app.ossman_elmonkz.R.layout.activity_main);
       sKeys.put("layout/fragment_about_0", te.app.ossman_elmonkz.R.layout.fragment_about);
       sKeys.put("layout/fragment_agents_0", te.app.ossman_elmonkz.R.layout.fragment_agents);
+      sKeys.put("layout/fragment_brand_models_partion_0", te.app.ossman_elmonkz.R.layout.fragment_brand_models_partion);
       sKeys.put("layout/fragment_buying_0", te.app.ossman_elmonkz.R.layout.fragment_buying);
       sKeys.put("layout/fragment_cart_0", te.app.ossman_elmonkz.R.layout.fragment_cart);
       sKeys.put("layout/fragment_clients_0", te.app.ossman_elmonkz.R.layout.fragment_clients);
@@ -398,6 +423,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_sub_category_search_0", te.app.ossman_elmonkz.R.layout.fragment_sub_category_search);
       sKeys.put("layout/fragment_suggestions_0", te.app.ossman_elmonkz.R.layout.fragment_suggestions);
       sKeys.put("layout/item_agents_0", te.app.ossman_elmonkz.R.layout.item_agents);
+      sKeys.put("layout/item_brand_0", te.app.ossman_elmonkz.R.layout.item_brand);
       sKeys.put("layout/item_cart_0", te.app.ossman_elmonkz.R.layout.item_cart);
       sKeys.put("layout/item_clients_0", te.app.ossman_elmonkz.R.layout.item_clients);
       sKeys.put("layout/item_gallery_0", te.app.ossman_elmonkz.R.layout.item_gallery);

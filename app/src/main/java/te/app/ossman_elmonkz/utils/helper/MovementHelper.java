@@ -105,7 +105,7 @@ public class MovementHelper {
         from.startActivity(intent);
     }
 
-    public static void startActivityForResultWithBundle(Context from, PassingObject passingObject, String name, String page, String shareBar) {
+    public static void startActivityForResultWithBundle(Context from, PassingObject passingObject, String name, String page, String shareBar, int requestCode) {
         Intent intent = new Intent(from, BaseActivity.class);
         intent.putExtra(Constants.PAGE, page);
         intent.putExtra(Constants.BUNDLE, new Gson().toJson(passingObject));
@@ -115,7 +115,7 @@ public class MovementHelper {
         if (shareBar != null) {
             intent.putExtra(Constants.SHARE_BAR, shareBar);
         }
-        ((ParentActivity) from).startActivityForResult(intent, Constants.RESULT_CODE);
+        ((ParentActivity) from).startActivityForResult(intent, requestCode);
     }
 
     public static void finishWithResult(PassingObject passingObject, Context context) {

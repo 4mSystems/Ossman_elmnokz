@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentSubCategorySearchBindingImpl extends FragmentSubCategorySearchBinding  {
+public class FragmentSubCategorySearchBindingImpl extends FragmentSubCategorySearchBinding implements te.app.ossman_elmonkz.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -18,33 +18,65 @@ public class FragmentSubCategorySearchBindingImpl extends FragmentSubCategorySea
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
+    @NonNull
+    private final androidx.recyclerview.widget.RecyclerView mboundView3;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback7;
     // values
     // listeners
-    private OnTextChangedImpl mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
     // Inverse Binding Event Handlers
+    private androidx.databinding.InverseBindingListener searchInputandroidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+        @Override
+        public void onChange() {
+            // Inverse of viewmodel.search
+            //         is viewmodel.search = (java.lang.String) callbackArg_0
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(searchInput);
+            // localize variables for thread safety
+            // viewmodel != null
+            boolean viewmodelJavaLangObjectNull = false;
+            // viewmodel.search
+            java.lang.String viewmodelSearch = null;
+            // viewmodel
+            te.app.ossman_elmonkz.pages.subCategories.viewModels.SubCategoriesSearchViewModel viewmodel = mViewmodel;
+
+
+
+            viewmodelJavaLangObjectNull = (viewmodel) != (null);
+            if (viewmodelJavaLangObjectNull) {
+
+
+                viewmodel.search = ((java.lang.String) (callbackArg_0));
+            }
+        }
+    };
 
     public FragmentSubCategorySearchBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
     }
     private FragmentSubCategorySearchBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
+            , (androidx.appcompat.widget.AppCompatButton) bindings[4]
             , (com.google.android.material.textfield.TextInputEditText) bindings[1]
             , (android.widget.ProgressBar) bindings[2]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView3 = (androidx.recyclerview.widget.RecyclerView) bindings[3];
+        this.mboundView3.setTag(null);
+        this.searchBtn.setTag(null);
         this.searchInput.setTag(null);
         this.searchProgress.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback7 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x4L;
+                mDirtyFlags = 0x8L;
         }
         requestRebind();
     }
@@ -102,6 +134,12 @@ public class FragmentSubCategorySearchBindingImpl extends FragmentSubCategorySea
             }
             return true;
         }
+        else if (fieldId == BR.searchAdapter) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x4L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -114,59 +152,82 @@ public class FragmentSubCategorySearchBindingImpl extends FragmentSubCategorySea
         }
         java.lang.String viewmodelSearch = null;
         int viewmodelSearchProgressVisible = 0;
-        androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = null;
+        te.app.ossman_elmonkz.pages.subCategories.adapters.SearchAdapter viewmodelSearchAdapter = null;
         te.app.ossman_elmonkz.pages.subCategories.viewModels.SubCategoriesSearchViewModel viewmodel = mViewmodel;
 
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xfL) != 0) {
 
 
-            if ((dirtyFlags & 0x5L) != 0) {
+            if ((dirtyFlags & 0x9L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.search
                         viewmodelSearch = viewmodel.search;
-                        // read viewmodel::onTextChanged
-                        viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = (((mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged == null) ? (mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = new OnTextChangedImpl()) : mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged).setValue(viewmodel));
                     }
             }
+            if ((dirtyFlags & 0xbL) != 0) {
 
-                if (viewmodel != null) {
-                    // read viewmodel.searchProgressVisible
-                    viewmodelSearchProgressVisible = viewmodel.getSearchProgressVisible();
-                }
+                    if (viewmodel != null) {
+                        // read viewmodel.searchProgressVisible
+                        viewmodelSearchProgressVisible = viewmodel.getSearchProgressVisible();
+                    }
+            }
+            if ((dirtyFlags & 0xdL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.searchAdapter
+                        viewmodelSearchAdapter = viewmodel.getSearchAdapter();
+                    }
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x5L) != 0) {
+        if ((dirtyFlags & 0xdL) != 0) {
+            // api target 1
+
+            te.app.ossman_elmonkz.base.ApplicationBinding.getItemsV2Binding(this.mboundView3, viewmodelSearchAdapter, "1", "1");
+        }
+        if ((dirtyFlags & 0x8L) != 0) {
+            // api target 1
+
+            this.searchBtn.setOnClickListener(mCallback7);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.searchInput, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, searchInputandroidTextAttrChanged);
+        }
+        if ((dirtyFlags & 0x9L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.searchInput, viewmodelSearch);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.searchInput, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, (androidx.databinding.InverseBindingListener)null);
         }
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
 
             this.searchProgress.setVisibility(viewmodelSearchProgressVisible);
         }
     }
     // Listener Stub Implementations
-    public static class OnTextChangedImpl implements androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged{
-        private te.app.ossman_elmonkz.pages.subCategories.viewModels.SubCategoriesSearchViewModel value;
-        public OnTextChangedImpl setValue(te.app.ossman_elmonkz.pages.subCategories.viewModels.SubCategoriesSearchViewModel value) {
-            this.value = value;
-            return value == null ? null : this;
-        }
-        @Override
-        public void onTextChanged(java.lang.CharSequence arg0, int arg1, int arg2, int arg3) {
-            this.value.onTextChanged(arg0, arg1, arg2, arg3); 
+    // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // viewmodel != null
+        boolean viewmodelJavaLangObjectNull = false;
+        // viewmodel
+        te.app.ossman_elmonkz.pages.subCategories.viewModels.SubCategoriesSearchViewModel viewmodel = mViewmodel;
+
+
+
+        viewmodelJavaLangObjectNull = (viewmodel) != (null);
+        if (viewmodelJavaLangObjectNull) {
+
+
+            viewmodel.search();
         }
     }
-    // callback impls
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel
         flag 1 (0x2L): viewmodel.searchProgressVisible
-        flag 2 (0x3L): null
+        flag 2 (0x3L): viewmodel.searchAdapter
+        flag 3 (0x4L): null
     flag mapping end*/
     //end
 }

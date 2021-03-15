@@ -12,8 +12,8 @@ import io.reactivex.disposables.CompositeDisposable;
 import te.app.ossman_elmonkz.base.BaseViewModel;
 import te.app.ossman_elmonkz.base.MyApplication;
 import te.app.ossman_elmonkz.model.base.Mutable;
+import te.app.ossman_elmonkz.pages.buying.models.OrderRequest;
 import te.app.ossman_elmonkz.pages.cart.adapters.CartAdapter;
-import te.app.ossman_elmonkz.pages.products.models.productDetails.Product;
 import te.app.ossman_elmonkz.repository.CartRepository;
 import te.app.ossman_elmonkz.utils.Constants;
 
@@ -23,7 +23,7 @@ public class CartViewModel extends BaseViewModel {
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     CartRepository cartRepository;
     LiveData<String> cartTotal;
-    LiveData<List<Product>> cartLiveData;
+    LiveData<List<OrderRequest>> cartLiveData;
     CartAdapter cartAdapter;
 
     @Inject
@@ -31,11 +31,11 @@ public class CartViewModel extends BaseViewModel {
         this.liveData = new MutableLiveData<>();
         cartRepository = new CartRepository(MyApplication.getInstance());
         cartLiveData = cartRepository.getAllProducts();
-        cartTotal = cartRepository.getCartTotal();
+//        cartTotal = cartRepository.getCartTotal();
 
     }
 
-    public LiveData<List<Product>> getCartLiveData() {
+    public LiveData<List<OrderRequest>> getCartLiveData() {
         return cartLiveData;
     }
 

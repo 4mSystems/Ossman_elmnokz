@@ -23,7 +23,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     private final androidx.recyclerview.widget.RecyclerView mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback13;
+    private final android.view.View.OnClickListener mCallback14;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -43,7 +43,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback13 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
+        mCallback14 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -134,7 +134,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.icShoppingCart.setOnClickListener(mCallback13);
+            this.icShoppingCart.setOnClickListener(mCallback14);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

@@ -3364,9 +3364,10 @@ id position
 id postLayout
 id prePayment_text
 id prePayment_text_val
+id product_brand
 id product_image
+id product_model
 id product_name
-id product_price
 id product_warning2
 id progress_circular
 id progress_horizontal
@@ -3401,6 +3402,7 @@ id scrollable
 id searchContainer
 id search_badge
 id search_bar
+id search_btn
 id search_button
 id search_close_btn
 id search_edit_frame
@@ -3632,6 +3634,7 @@ layout design_text_input_start_icon
 layout dialog_no_internet
 layout fragment_about
 layout fragment_agents
+layout fragment_brand_models_partion
 layout fragment_buying
 layout fragment_cart
 layout fragment_clients
@@ -3649,6 +3652,7 @@ layout fragment_suggestions
 layout home_slider
 layout incremental_view
 layout item_agents
+layout item_brand
 layout item_cart
 layout item_clients
 layout item_gallery
@@ -3782,6 +3786,7 @@ string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
 string brand
+string brand_cart
 string brand_name_hint
 string call
 string cart
@@ -3810,6 +3815,7 @@ string default_airplane_mode_snackbar_message
 string default_message
 string default_snackbar_message
 string default_title
+string department
 string department_name_hint
 string design_program
 string elmonkz_systems_text
@@ -3848,6 +3854,7 @@ string menuHome
 string menuMore
 string menuProducts
 string mobile_data
+string model
 string model_name_hint
 string msg_server_error
 string mtrl_badge_numberless_content_description
@@ -3904,7 +3911,10 @@ string product_warning3
 string quanity
 string rate
 string related_products
+string search
+string search_btn
 string search_menu_title
+string select_brand
 string send
 string send_contact
 string send_successfully

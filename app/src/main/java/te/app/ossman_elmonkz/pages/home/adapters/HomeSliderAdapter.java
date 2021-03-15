@@ -20,7 +20,6 @@ import te.app.ossman_elmonkz.pages.home.models.SliderAdsItem;
 import te.app.ossman_elmonkz.utils.Constants;
 import te.app.ossman_elmonkz.utils.images.PhotoFullPopupWindow;
 
-import static te.app.ossman_elmonkz.utils.Constants.IMAGE_BASE_URL;
 
 
 public class HomeSliderAdapter extends SliderViewAdapter<HomeSliderAdapter.SliderAdapterVH> {
@@ -41,8 +40,8 @@ public class HomeSliderAdapter extends SliderViewAdapter<HomeSliderAdapter.Slide
     @Override
     public void onBindViewHolder(SliderAdapterVH viewHolder, int position) {
         SliderAdsItem introItem = pagerList.get(position);
-        Glide.with(context).load(Constants.IMAGE_BASE_URL.concat(introItem.getImage())).placeholder(R.color.overlayBackground).into(viewHolder.imageViewBackground);
-        viewHolder.imageViewBackground.setOnClickListener(v -> new PhotoFullPopupWindow(MyApplication.getInstance(), R.layout.popup_photo_full, viewHolder.imageViewBackground, IMAGE_BASE_URL.concat(introItem.getImage()), null));
+        Glide.with(context).load(introItem.getImage()).placeholder(R.color.overlayBackground).into(viewHolder.imageViewBackground);
+        viewHolder.imageViewBackground.setOnClickListener(v -> new PhotoFullPopupWindow(MyApplication.getInstance(), R.layout.popup_photo_full, viewHolder.imageViewBackground, introItem.getImage(), null));
     }
 
     @Override

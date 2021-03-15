@@ -15,12 +15,12 @@ te/app/ossman_elmonkz/pages/settings/models/AboutData.java
  te.app.ossman_elmonkz.pages.settings.models.AboutData
 te/app/ossman_elmonkz/pages/splash/models/SettingsResponse.java
  te.app.ossman_elmonkz.pages.splash.models.SettingsResponse
+te/app/ossman_elmonkz/pages/buying/SelectBrandModelPartionFragment.java
+ te.app.ossman_elmonkz.pages.buying.SelectBrandModelPartionFragment
 te/app/ossman_elmonkz/base/BaseViewModel.java
  te.app.ossman_elmonkz.base.BaseViewModel
 te/app/ossman_elmonkz/pages/more/viewModels/MoreViewModel.java
  te.app.ossman_elmonkz.pages.more.viewModels.MoreViewModel
-te/app/ossman_elmonkz/pages/products/models/productDetails/ProductDetailsResponse.java
- te.app.ossman_elmonkz.pages.products.models.productDetails.ProductDetailsResponse
 te/app/ossman_elmonkz/connection/ConnectionListenerInterFace.java
  te.app.ossman_elmonkz.connection.ConnectionListenerInterFace
 te/app/ossman_elmonkz/databinding/ItemAgentsBinding.java
@@ -52,10 +52,6 @@ te/app/ossman_elmonkz/databinding/FragmentAboutBinding.java
 te/app/ossman_elmonkz/connection/ConnectionModule.java
  te.app.ossman_elmonkz.connection.ConnectionModule
  te.app.ossman_elmonkz.connection.ConnectionModule$1
-te/app/ossman_elmonkz/repository/ProductRepository.java
- te.app.ossman_elmonkz.repository.ProductRepository
-te/app/ossman_elmonkz/pages/products/models/productDetails/Brand.java
- te.app.ossman_elmonkz.pages.products.models.productDetails.Brand
 te/app/ossman_elmonkz/pages/subCategories/viewModels/SubCategoriesViewModel.java
  te.app.ossman_elmonkz.pages.subCategories.viewModels.SubCategoriesViewModel
 te/app/ossman_elmonkz/utils/images/ImageConstants.java
@@ -84,8 +80,12 @@ te/app/ossman_elmonkz/utils/helper/AppHelper.java
  te.app.ossman_elmonkz.utils.helper.AppHelper
 te/app/ossman_elmonkz/pages/onBoard/models/OnBoard.java
  te.app.ossman_elmonkz.pages.onBoard.models.OnBoard
+te/app/ossman_elmonkz/pages/buying/models/OrderRequest.java
+ te.app.ossman_elmonkz.pages.buying.models.OrderRequest
 te/app/ossman_elmonkz/pages/splash/models/BannersItem.java
  te.app.ossman_elmonkz.pages.splash.models.BannersItem
+te/app/ossman_elmonkz/pages/buying/models/BrandModelsPartionMain.java
+ te.app.ossman_elmonkz.pages.buying.models.BrandModelsPartionMain
 te/app/ossman_elmonkz/pages/agentsAndClients/AgentsFragment.java
  te.app.ossman_elmonkz.pages.agentsAndClients.AgentsFragment
 te/app/ossman_elmonkz/model/govs/GovsResponse.java
@@ -113,8 +113,8 @@ te/app/ossman_elmonkz/databinding/ActivityBaseBinding.java
  te.app.ossman_elmonkz.databinding.ActivityBaseBinding
 te/app/ossman_elmonkz/pages/subCategories/models/search/SearchData.java
  te.app.ossman_elmonkz.pages.subCategories.models.search.SearchData
-te/app/ossman_elmonkz/pages/buying/viewModels/ItemFavoritesViewModel.java
- te.app.ossman_elmonkz.pages.buying.viewModels.ItemFavoritesViewModel
+te/app/ossman_elmonkz/pages/buying/models/BrandModelsPartionResponse.java
+ te.app.ossman_elmonkz.pages.buying.models.BrandModelsPartionResponse
 te/app/ossman_elmonkz/pages/subCategories/viewModels/SubCategoriesSearchViewModel.java
  te.app.ossman_elmonkz.pages.subCategories.viewModels.SubCategoriesSearchViewModel
 te/app/ossman_elmonkz/pages/gallery/viewModels/GalleryViewModel.java
@@ -159,8 +159,6 @@ te/app/ossman_elmonkz/activity/MainActivity.java
  te.app.ossman_elmonkz.activity.MainActivity
 te/app/ossman_elmonkz/base/ParentActivity.java
  te.app.ossman_elmonkz.base.ParentActivity
-te/app/ossman_elmonkz/pages/products/models/productDetails/Product.java
- te.app.ossman_elmonkz.pages.products.models.productDetails.Product
 te/app/ossman_elmonkz/pages/agentsAndClients/viewModels/ItemClientViewModel.java
  te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.ItemClientViewModel
 te/app/ossman_elmonkz/base/IApplicationComponent.java
@@ -172,8 +170,12 @@ te/app/ossman_elmonkz/pages/home/HomeFragment.java
  te.app.ossman_elmonkz.pages.home.HomeFragment
 te/app/ossman_elmonkz/pages/onBoard/models/BoardResponse.java
  te.app.ossman_elmonkz.pages.onBoard.models.BoardResponse
+te/app/ossman_elmonkz/pages/buying/models/BrandsModellsItem.java
+ te.app.ossman_elmonkz.pages.buying.models.BrandsModellsItem
 te/app/ossman_elmonkz/pages/cart/viewModels/ItemCartViewModel.java
  te.app.ossman_elmonkz.pages.cart.viewModels.ItemCartViewModel
+te/app/ossman_elmonkz/pages/buying/viewModels/ItemBrandModelViewModel.java
+ te.app.ossman_elmonkz.pages.buying.viewModels.ItemBrandModelViewModel
 te/app/ossman_elmonkz/utils/upload/FileOperations.java
  te.app.ossman_elmonkz.utils.upload.FileOperations
 te/app/ossman_elmonkz/pages/cart/adapters/CartAdapter.java
@@ -194,6 +196,8 @@ te/app/ossman_elmonkz/databinding/FragmentContactsBinding.java
  te.app.ossman_elmonkz.databinding.FragmentContactsBinding
 te/app/ossman_elmonkz/customViews/views/CustomTextViewRegular.java
  te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular
+te/app/ossman_elmonkz/repository/BuyingRepository.java
+ te.app.ossman_elmonkz.repository.BuyingRepository
 te/app/ossman_elmonkz/utils/PopUp/PopUpInterface.java
  te.app.ossman_elmonkz.utils.PopUp.PopUpInterface
 te/app/ossman_elmonkz/model/base/StatusMessage.java
@@ -210,8 +214,6 @@ te/app/ossman_elmonkz/utils/images/PhotoFullPopupWindow.java
  te.app.ossman_elmonkz.utils.images.PhotoFullPopupWindow
  te.app.ossman_elmonkz.utils.images.PhotoFullPopupWindow$1
  te.app.ossman_elmonkz.utils.images.PhotoFullPopupWindow$2
-te/app/ossman_elmonkz/pages/products/viewModels/ItemProductsViewModel.java
- te.app.ossman_elmonkz.pages.products.viewModels.ItemProductsViewModel
 te/app/ossman_elmonkz/pages/subCategories/adapters/SubCategoriesAdapter.java
  te.app.ossman_elmonkz.pages.subCategories.adapters.SubCategoriesAdapter
  te.app.ossman_elmonkz.pages.subCategories.adapters.SubCategoriesAdapter$ViewHolder
@@ -225,23 +227,23 @@ te/app/ossman_elmonkz/databinding/FragmentAgentsBinding.java
  te.app.ossman_elmonkz.databinding.FragmentAgentsBinding
 te/app/ossman_elmonkz/pages/settings/models/ContactRequest.java
  te.app.ossman_elmonkz.pages.settings.models.ContactRequest
+te/app/ossman_elmonkz/databinding/ItemBrandBinding.java
+ te.app.ossman_elmonkz.databinding.ItemBrandBinding
 te/app/ossman_elmonkz/pages/home/adapters/HomeSliderAdapter.java
  te.app.ossman_elmonkz.pages.home.adapters.HomeSliderAdapter
  te.app.ossman_elmonkz.pages.home.adapters.HomeSliderAdapter$SliderAdapterVH
 te/app/ossman_elmonkz/pages/gallery/models/GalleryData.java
  te.app.ossman_elmonkz.pages.gallery.models.GalleryData
-te/app/ossman_elmonkz/pages/products/models/productDetails/ProductDetails.java
- te.app.ossman_elmonkz.pages.products.models.productDetails.ProductDetails
 te/app/ossman_elmonkz/base/LiveData.java
  te.app.ossman_elmonkz.base.LiveData
 te/app/ossman_elmonkz/databinding/FragmentSubCategoriesBinding.java
  te.app.ossman_elmonkz.databinding.FragmentSubCategoriesBinding
 te/app/ossman_elmonkz/base/ApplicationComponent.java
  te.app.ossman_elmonkz.base.ApplicationComponent
-te/app/ossman_elmonkz/pages/products/models/ProductResponse.java
- te.app.ossman_elmonkz.pages.products.models.ProductResponse
 te/app/ossman_elmonkz/pages/settings/viewModels/SettingsViewModel.java
  te.app.ossman_elmonkz.pages.settings.viewModels.SettingsViewModel
+te/app/ossman_elmonkz/databinding/FragmentBrandModelsPartionBinding.java
+ te.app.ossman_elmonkz.databinding.FragmentBrandModelsPartionBinding
 te/app/ossman_elmonkz/databinding/LayoutActionBarHomeBinding.java
  te.app.ossman_elmonkz.databinding.LayoutActionBarHomeBinding
 te/app/ossman_elmonkz/DataBindingTriggerClass.java
@@ -289,15 +291,16 @@ te/app/ossman_elmonkz/pages/products/viewModels/ProductsViewModel.java
  te.app.ossman_elmonkz.pages.products.viewModels.ProductsViewModel
 te/app/ossman_elmonkz/pages/settings/models/News.java
  te.app.ossman_elmonkz.pages.settings.models.News
+te/app/ossman_elmonkz/pages/buying/adapter/BrandModelAdapter.java
+ te.app.ossman_elmonkz.pages.buying.adapter.BrandModelAdapter
+ te.app.ossman_elmonkz.pages.buying.adapter.BrandModelAdapter$1
+ te.app.ossman_elmonkz.pages.buying.adapter.BrandModelAdapter$ViewHolder
 te/app/ossman_elmonkz/pages/settings/models/AboutResponse.java
  te.app.ossman_elmonkz.pages.settings.models.AboutResponse
 te/app/ossman_elmonkz/repository/SettingsRepository.java
  te.app.ossman_elmonkz.repository.SettingsRepository
 te/app/ossman_elmonkz/databinding/ItemGalleryBinding.java
  te.app.ossman_elmonkz.databinding.ItemGalleryBinding
-te/app/ossman_elmonkz/pages/products/adapters/ProductsAdapter.java
- te.app.ossman_elmonkz.pages.products.adapters.ProductsAdapter
- te.app.ossman_elmonkz.pages.products.adapters.ProductsAdapter$ViewHolder
 te/app/ossman_elmonkz/customViews/views/CustomTextViewBold.java
  te.app.ossman_elmonkz.customViews.views.CustomTextViewBold
 te/app/ossman_elmonkz/databinding/ItemCartBinding.java
@@ -327,6 +330,8 @@ te/app/ossman_elmonkz/databinding/FragmentSplashBinding.java
  te.app.ossman_elmonkz.databinding.FragmentSplashBinding
 te/app/ossman_elmonkz/databinding/FragmentProductsBinding.java
  te.app.ossman_elmonkz.databinding.FragmentProductsBinding
+te/app/ossman_elmonkz/pages/buying/viewModels/BrandModelViewModel.java
+ te.app.ossman_elmonkz.pages.buying.viewModels.BrandModelViewModel
 te/app/ossman_elmonkz/customViews/actionbar/BackActionBarView.java
  te.app.ossman_elmonkz.customViews.actionbar.BackActionBarView
 te/app/ossman_elmonkz/pages/onBoard/OnBoardFragment.java

@@ -20,7 +20,14 @@ import te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.AgentsClientsView
 import te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.AgentsClientsViewModel_MembersInjector;
 import te.app.ossman_elmonkz.pages.buying.BuyingFragment;
 import te.app.ossman_elmonkz.pages.buying.BuyingFragment_MembersInjector;
+import te.app.ossman_elmonkz.pages.buying.SelectBrandModelPartionFragment;
+import te.app.ossman_elmonkz.pages.buying.SelectBrandModelPartionFragment_MembersInjector;
+import te.app.ossman_elmonkz.pages.buying.viewModels.BrandModelViewModel;
+import te.app.ossman_elmonkz.pages.buying.viewModels.BrandModelViewModel_Factory;
+import te.app.ossman_elmonkz.pages.buying.viewModels.BrandModelViewModel_MembersInjector;
 import te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel;
+import te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel_Factory;
+import te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel_MembersInjector;
 import te.app.ossman_elmonkz.pages.cart.CartFragment;
 import te.app.ossman_elmonkz.pages.cart.CartFragment_MembersInjector;
 import te.app.ossman_elmonkz.pages.cart.CreateOrderFragment;
@@ -75,10 +82,10 @@ import te.app.ossman_elmonkz.pages.subCategories.viewModels.SubCategoriesSearchV
 import te.app.ossman_elmonkz.pages.subCategories.viewModels.SubCategoriesViewModel;
 import te.app.ossman_elmonkz.pages.subCategories.viewModels.SubCategoriesViewModel_Factory;
 import te.app.ossman_elmonkz.pages.subCategories.viewModels.SubCategoriesViewModel_MembersInjector;
+import te.app.ossman_elmonkz.repository.BuyingRepository;
+import te.app.ossman_elmonkz.repository.BuyingRepository_Factory;
 import te.app.ossman_elmonkz.repository.HomeRepository;
 import te.app.ossman_elmonkz.repository.HomeRepository_Factory;
-import te.app.ossman_elmonkz.repository.ProductRepository;
-import te.app.ossman_elmonkz.repository.ProductRepository_Factory;
 import te.app.ossman_elmonkz.repository.SettingsRepository;
 import te.app.ossman_elmonkz.repository.SettingsRepository_Factory;
 
@@ -95,7 +102,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private Provider<SettingsRepository> settingsRepositoryProvider;
 
-  private Provider<ProductRepository> productRepositoryProvider;
+  private Provider<BuyingRepository> buyingRepositoryProvider;
 
   private DaggerIApplicationComponent(ConnectionModule connectionModuleParam) {
 
@@ -131,7 +138,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private CreateOrderViewModel createOrderViewModel() {
-    return injectCreateOrderViewModel(CreateOrderViewModel_Factory.newInstance(productRepositoryProvider.get()));
+    return injectCreateOrderViewModel(CreateOrderViewModel_Factory.newInstance(buyingRepositoryProvider.get()));
+  }
+
+  private BuyingViewModel buyingViewModel() {
+    return injectBuyingViewModel(BuyingViewModel_Factory.newInstance(buyingRepositoryProvider.get()));
   }
 
   private SettingsViewModel settingsViewModel() {
@@ -150,13 +161,17 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectMoreViewModel(MoreViewModel_Factory.newInstance(settingsRepositoryProvider.get()));
   }
 
+  private BrandModelViewModel brandModelViewModel() {
+    return injectBrandModelViewModel(BrandModelViewModel_Factory.newInstance(buyingRepositoryProvider.get()));
+  }
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam) {
     this.webServiceProvider = DoubleCheck.provider(ConnectionModule_WebServiceFactory.create(connectionModuleParam));
     this.connectionHelperProvider = DoubleCheck.provider(ConnectionHelper_Factory.create(webServiceProvider, webServiceProvider));
     this.homeRepositoryProvider = DoubleCheck.provider(HomeRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
     this.settingsRepositoryProvider = DoubleCheck.provider(SettingsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
-    this.productRepositoryProvider = DoubleCheck.provider(ProductRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
+    this.buyingRepositoryProvider = DoubleCheck.provider(BuyingRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
   }
 
   @Override
@@ -248,6 +263,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     injectMoreFragment(moreFragment);
   }
 
+  @Override
+  public void inject(SelectBrandModelPartionFragment selectBrandModelPartionFragment) {
+    injectSelectBrandModelPartionFragment(selectBrandModelPartionFragment);
+  }
+
   private HomeViewModel injectHomeViewModel(HomeViewModel instance) {
     HomeViewModel_MembersInjector.injectHomeRepository(instance, homeRepositoryProvider.get());
     return instance;
@@ -314,7 +334,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private CreateOrderViewModel injectCreateOrderViewModel(CreateOrderViewModel instance) {
-    CreateOrderViewModel_MembersInjector.injectProductRepository(instance, productRepositoryProvider.get());
+    CreateOrderViewModel_MembersInjector.injectProductRepository(instance, buyingRepositoryProvider.get());
     return instance;
   }
 
@@ -323,8 +343,13 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
+  private BuyingViewModel injectBuyingViewModel(BuyingViewModel instance) {
+    BuyingViewModel_MembersInjector.injectBuyingRepository(instance, buyingRepositoryProvider.get());
+    return instance;
+  }
+
   private BuyingFragment injectBuyingFragment(BuyingFragment instance) {
-    BuyingFragment_MembersInjector.injectViewModel(instance, new BuyingViewModel());
+    BuyingFragment_MembersInjector.injectViewModel(instance, buyingViewModel());
     return instance;
   }
 
@@ -382,6 +407,17 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private MoreFragment injectMoreFragment(MoreFragment instance) {
     MoreFragment_MembersInjector.injectViewModel(instance, moreViewModel());
+    return instance;
+  }
+
+  private BrandModelViewModel injectBrandModelViewModel(BrandModelViewModel instance) {
+    BrandModelViewModel_MembersInjector.injectBuyingRepository(instance, buyingRepositoryProvider.get());
+    return instance;
+  }
+
+  private SelectBrandModelPartionFragment injectSelectBrandModelPartionFragment(
+      SelectBrandModelPartionFragment instance) {
+    SelectBrandModelPartionFragment_MembersInjector.injectViewModel(instance, brandModelViewModel());
     return instance;
   }
 

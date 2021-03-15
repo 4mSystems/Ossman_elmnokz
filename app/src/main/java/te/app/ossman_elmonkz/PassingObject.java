@@ -41,12 +41,19 @@ public class PassingObject implements Serializable {
     }
 
 
-
     public PassingObject(Object objectClass) {
         Gson gson = new Gson();
         String json = gson.toJson(objectClass);
 
         this.objectClass = (String) json;
+    }
+
+    public PassingObject(Object objectClass, int id) {
+        Gson gson = new Gson();
+        String json = gson.toJson(objectClass);
+
+        this.objectClass = (String) json;
+        this.id = id;
     }
 
     public String getObject2() {

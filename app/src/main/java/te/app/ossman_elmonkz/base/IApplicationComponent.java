@@ -9,6 +9,7 @@ import te.app.ossman_elmonkz.activity.MainActivity;
 import te.app.ossman_elmonkz.connection.ConnectionModule;
 import te.app.ossman_elmonkz.pages.agentsAndClients.AgentsFragment;
 import te.app.ossman_elmonkz.pages.agentsAndClients.ClientsFragment;
+import te.app.ossman_elmonkz.pages.buying.SelectBrandModelPartionFragment;
 import te.app.ossman_elmonkz.pages.cart.CartFragment;
 import te.app.ossman_elmonkz.pages.cart.CreateOrderFragment;
 import te.app.ossman_elmonkz.pages.buying.BuyingFragment;
@@ -63,6 +64,8 @@ public interface IApplicationComponent {
     void inject(AboutAppFragment aboutAppFragment);
 
     void inject(MoreFragment moreFragment);
+
+    void inject(SelectBrandModelPartionFragment selectBrandModelPartionFragment);
 
 
     @Component.Builder

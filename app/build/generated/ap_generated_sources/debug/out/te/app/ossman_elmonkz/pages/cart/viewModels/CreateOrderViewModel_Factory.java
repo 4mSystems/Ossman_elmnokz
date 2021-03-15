@@ -3,19 +3,19 @@ package te.app.ossman_elmonkz.pages.cart.viewModels;
 
 import dagger.internal.Factory;
 import javax.inject.Provider;
-import te.app.ossman_elmonkz.repository.ProductRepository;
+import te.app.ossman_elmonkz.repository.BuyingRepository;
 
 @SuppressWarnings({
     "unchecked",
     "rawtypes"
 })
 public final class CreateOrderViewModel_Factory implements Factory<CreateOrderViewModel> {
-  private final Provider<ProductRepository> productRepositoryProvider;
+  private final Provider<BuyingRepository> productRepositoryProvider;
 
-  private final Provider<ProductRepository> productRepositoryProvider2;
+  private final Provider<BuyingRepository> productRepositoryProvider2;
 
-  public CreateOrderViewModel_Factory(Provider<ProductRepository> productRepositoryProvider,
-      Provider<ProductRepository> productRepositoryProvider2) {
+  public CreateOrderViewModel_Factory(Provider<BuyingRepository> productRepositoryProvider,
+      Provider<BuyingRepository> productRepositoryProvider2) {
     this.productRepositoryProvider = productRepositoryProvider;
     this.productRepositoryProvider2 = productRepositoryProvider2;
   }
@@ -28,12 +28,12 @@ public final class CreateOrderViewModel_Factory implements Factory<CreateOrderVi
   }
 
   public static CreateOrderViewModel_Factory create(
-      Provider<ProductRepository> productRepositoryProvider,
-      Provider<ProductRepository> productRepositoryProvider2) {
+      Provider<BuyingRepository> productRepositoryProvider,
+      Provider<BuyingRepository> productRepositoryProvider2) {
     return new CreateOrderViewModel_Factory(productRepositoryProvider, productRepositoryProvider2);
   }
 
-  public static CreateOrderViewModel newInstance(ProductRepository productRepository) {
+  public static CreateOrderViewModel newInstance(BuyingRepository productRepository) {
     return new CreateOrderViewModel(productRepository);
   }
 }

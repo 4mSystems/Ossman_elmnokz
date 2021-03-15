@@ -53,19 +53,19 @@ public class CartFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (Constants.FINISH_ORDER.equals(((Mutable) o).message)) {
-                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(new CreateOrder(viewModel.getCartAdapter().getProductList())), getResources().getString(R.string.finish_order),CreateOrderFragment.class.getName(),  null);
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(new CreateOrder(viewModel.getCartAdapter().getProductList())), getResources().getString(R.string.finish_order),CreateOrderFragment.class.getName(),  null,Constants.RESULT_CODE);
             }
         });
         viewModel.getCartLiveData().observe(((LifecycleOwner) context), productDetails -> {
             viewModel.getCartAdapter().update(productDetails);
             viewModel.notifyChange(BR.cartAdapter);
         });
-        viewModel.getCartTotal().observe(((LifecycleOwner) context), s -> {
-            if (s != null) {
-                binding.tvTotalValue.setText(s.concat(" ").concat("ج.م"));
-            }else
-                finishActivity();
-        });
+//        viewModel.getCartTotal().observe(((LifecycleOwner) context), s -> {
+//            if (s != null) {
+//                binding.tvTotalValue.setText(s.concat(" ").concat("ج.م"));
+//            }else
+//                finishActivity();
+//        });
     }
 
     @Override

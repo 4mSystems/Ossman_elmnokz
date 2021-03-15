@@ -52,12 +52,12 @@
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_onboard.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/drawable_corner_view_overlay.xml.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/drawable/corner_view_overlay.xml"
-    },
-    {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/layout_fragment_about.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_about.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/drawable_corner_view_overlay.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/drawable/corner_view_overlay.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/layout_fragment_gallery.xml.flat",
@@ -226,6 +226,10 @@
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/layout_fragment_suggestions.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_suggestions.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/layout_item_brand.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/item_brand.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/layout_fragment_contacts.xml.flat",
@@ -464,6 +468,10 @@
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/drawable/ic_contact.xml"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/layout_fragment_brand_models_partion.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_brand_models_partion.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
@@ -516,16 +524,16 @@
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/drawable/ic_call_white.xml"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/drawable_exit.png.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/drawable/exit.png"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/layout_incremental_view.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/incremental_view.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/drawable_border_grand_call.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/drawable/border_grand_call.xml"
-    },
-    {
-        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/drawable_exit.png.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/drawable/exit.png"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/layout_fragment_products.xml.flat",
