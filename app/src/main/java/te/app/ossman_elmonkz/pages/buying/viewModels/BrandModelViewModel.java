@@ -12,6 +12,7 @@ import te.app.ossman_elmonkz.model.base.Mutable;
 import te.app.ossman_elmonkz.pages.buying.adapter.BrandModelAdapter;
 import te.app.ossman_elmonkz.pages.buying.models.BrandModelsPartionMain;
 import te.app.ossman_elmonkz.pages.buying.models.BrandsModellsItem;
+import te.app.ossman_elmonkz.pages.buying.models.DataFromSearchRequest;
 import te.app.ossman_elmonkz.repository.BuyingRepository;
 import te.app.ossman_elmonkz.utils.Constants;
 
@@ -23,22 +24,19 @@ public class BrandModelViewModel extends BaseViewModel {
     BuyingRepository buyingRepository;
     BrandModelsPartionMain brandModelsPartionMain;
     BrandModelAdapter brandModelAdapter;
-    BrandsModellsItem modellsItem;
+    DataFromSearchRequest dataFromSearchRequest;
 
     @Inject
     public BrandModelViewModel(BuyingRepository buyingRepository) {
-        modellsItem = new BrandsModellsItem();
+        dataFromSearchRequest = new DataFromSearchRequest();
         brandModelsPartionMain = new BrandModelsPartionMain();
         this.liveData = new MutableLiveData<>();
         this.buyingRepository = buyingRepository;
         this.buyingRepository.setLiveData(this.liveData);
     }
+
     public void onTextChanged(CharSequence s, int start, int before, int count) {
         getBrandModelAdapter().getFilter().filter(s);
-    }
-    @Bindable
-    public BrandModelsPartionMain getBrandModelsPartionMain() {
-        return brandModelsPartionMain;
     }
 
     @Bindable
@@ -54,16 +52,15 @@ public class BrandModelViewModel extends BaseViewModel {
 
 
     @Bindable
-    public void setModellsItem(BrandsModellsItem modellsItem) {
-        getBrandModelAdapter().update(modellsItem.getModells());
-        notifyChange(BR.brandModelAdapter);
-        notifyChange(BR.modellsItem);
-        this.modellsItem = modellsItem;
+    public BrandModelAdapter getBrandModelAdapter() {
+        return this.brandModelAdapter == null ? this.brandModelAdapter = new BrandModelAdapter() : this.brandModelAdapter;
     }
 
     @Bindable
-    public BrandModelAdapter getBrandModelAdapter() {
-        return this.brandModelAdapter == null ? this.brandModelAdapter = new BrandModelAdapter() : this.brandModelAdapter;
+    public void setDataFromSearchRequest(DataFromSearchRequest dataFromSearchRequest) {
+        buyingRepository.getModelsFromSearch(dataFromSearchRequest);
+        notifyChange(BR.dataFromSearchRequest);
+        this.dataFromSearchRequest = dataFromSearchRequest;
     }
 
     public BuyingRepository getBuyingRepository() {

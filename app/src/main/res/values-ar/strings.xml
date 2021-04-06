@@ -68,6 +68,12 @@
     <string name="department"><font fgcolor='#0076BC'>القسم :</font></string>
     <string name="brand_cart"><font fgcolor='#0076BC'>الماركة :</font></string>
     <string name="model"><font fgcolor='#0076BC'>الموديل :</font></string>
+    <string name="thank_you">شكرا تم اضافة طلبك الى السلة بنجاح</string>
+    <string name="done">تمام كده ؟</string>
+    <string name="continue_buy">نشوف حاجة تانية ؟</string>
+    <string name="product_name_hint">اختار المنتج من هنا</string>
+    <string name="details">تفاصيل المنتج</string>
+    <string name="coin">جنية مصرى</string>
 
 
 </resources>

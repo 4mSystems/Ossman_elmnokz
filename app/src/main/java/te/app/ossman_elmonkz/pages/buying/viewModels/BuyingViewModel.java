@@ -1,5 +1,6 @@
 package te.app.ossman_elmonkz.pages.buying.viewModels;
 
+
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
@@ -12,6 +13,7 @@ import te.app.ossman_elmonkz.base.MyApplication;
 import te.app.ossman_elmonkz.model.base.Mutable;
 import te.app.ossman_elmonkz.pages.buying.models.BrandModelsPartionMain;
 import te.app.ossman_elmonkz.pages.buying.models.BrandsModellsItem;
+import te.app.ossman_elmonkz.pages.buying.models.DataFromSearchRequest;
 import te.app.ossman_elmonkz.pages.buying.models.OrderRequest;
 import te.app.ossman_elmonkz.repository.BuyingRepository;
 import te.app.ossman_elmonkz.repository.CartRepository;
@@ -26,9 +28,11 @@ public class BuyingViewModel extends BaseViewModel {
     OrderRequest orderRequest;
     BrandsModellsItem modellsItem;
     CartRepository cartRepository;
+    public DataFromSearchRequest dataFromSearchRequest;
 
     @Inject
     public BuyingViewModel(BuyingRepository buyingRepository) {
+        dataFromSearchRequest = new DataFromSearchRequest();
         orderRequest = new OrderRequest();
         modellsItem = new BrandsModellsItem();
         brandModelsPartionMain = new BrandModelsPartionMain();
@@ -43,23 +47,50 @@ public class BuyingViewModel extends BaseViewModel {
     }
 
     public void addToCart() {
-        getCartRepository().insert(getOrderRequest());
-        liveData.setValue(new Mutable(Constants.ADD_TO_CART));
+        if (getPassingObject().getObject().equals("8")) {
+            if (getOrderRequest().isAllValid()) {
+                getCartRepository().insert(getOrderRequest());
+                liveData.setValue(new Mutable(Constants.ADD_TO_CART));
+            }
+        } else {
+            if (getOrderRequest().isValid()) {
+                getCartRepository().insert(getOrderRequest());
+                liveData.setValue(new Mutable(Constants.ADD_TO_CART));
+            }
+        }
+
     }
 
     public void toPart() {
-        liveData.setValue(new Mutable(Constants.SELECT_PART));
+        if (getBrandModelsPartionMain().getBrandsModells() != null)
+            liveData.setValue(new Mutable(Constants.SELECT_PART));
     }
 
     public void toBrand() {
-        liveData.setValue(new Mutable(Constants.SELECT_BRAND));
+        if (getBrandModelsPartionMain().getBrandsModells() != null)
+            liveData.setValue(new Mutable(Constants.SELECT_BRAND));
     }
 
     public void toModel() {
-        if (getOrderRequest().getBrandName() != null)
+        if (getOrderRequest().getBrandName() != null) {
+            dataFromSearchRequest.setBrand_id(getOrderRequest().getBrandId());
+            dataFromSearchRequest.setCategory_id(String.valueOf(getPassingObject().getId()));
             liveData.setValue(new Mutable(Constants.SELECT_MODELS));
-        else
+        } else
             liveData.setValue(new Mutable(Constants.EMPTY_WARNING));
+    }
+
+    public void toProducts() {
+        if (getOrderRequest().getModelName() != null) {
+            dataFromSearchRequest.setBrand_id(null);
+            dataFromSearchRequest.setModell_id(getOrderRequest().getModelId());
+            dataFromSearchRequest.setCategory_id(String.valueOf(getPassingObject().getId()));
+            dataFromSearchRequest.setSub_category_id(String.valueOf(getPassingObject().getObject()));
+            if (getPassingObject().getObject().equals("9") || getPassingObject().getObject().equals("10"))
+                dataFromSearchRequest.setPartion_id(getOrderRequest().getPartId());
+            liveData.setValue(new Mutable(Constants.SELECT_PRODUCT));
+        } else
+            liveData.setValue(new Mutable(Constants.MODEL_WARNING));
     }
 
     @Bindable

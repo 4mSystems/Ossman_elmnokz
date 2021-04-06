@@ -33,16 +33,16 @@ public class Constants {
     public final static String GOVS = "GOVS";
     public final static String SHOW_GOVS = "SHOW_GOVS";
     public final static String HOME = "HOME";
-    public final static int PRESSURE_ID_IMAGE = 9; // صور المكبس
-    public final static int SMOKE_ID_IMAGE = 10; // صور غرفه الغاز
+    public final static int PRESSURE_ID_IMAGE = 11; // صور المكبس
+    public final static int SMOKE_ID_IMAGE = 12; // صور غرفه الغاز
 
     public final static String LOGOUT = "logout";
     public final static String SELECT_PART = "SELECT_PART";
     public final static String EMPTY_WARNING = "EMPTY_WARNING";
 
     public final static String SELECT_MODELS = "SELECT_MODELS";
-    public final static String USER_DETAILS = "USER_DETAILS";
-    public final static String COMPANY_PROFILE = "COMPANY_PROFILE";
+    public final static String SELECT_PRODUCT = "SELECT_PRODUCT";
+    public final static String MODEL_WARNING = "MODEL_WARNING";
     public final static String ERROR_TOAST = "error_toast";
 
     public final static String ERROR = "error";
@@ -80,6 +80,7 @@ public class Constants {
     public static int PART_REQUEST = 4000;
     public static int BRAND_REQUEST = 5000;
     public static int MODEL_REQUEST = 7000;
+    public static int PRODUCT_REQUEST = 8000;
     public static final int RESPONSE_JWT_EXPIRE = 403;
     public static final int RESPONSE_405 = 405;
     public static final int RESPONSE_402 = 402;
@@ -113,6 +114,6 @@ public class Constants {
     public static final int CUSTOM_REQUEST_CODE = 532;
     public static final String SUPPORT = "SUPPORT";
     public static final String MENu = "menu";
-    public static final String COUNTRIES = "COUNTRIES";
+    public static final String PRODUCT_DETAILS = "PRODUCT_DETAILS";
 }
 

@@ -1,11 +1,15 @@
 package te.app.ossman_elmonkz.pages.buying;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
@@ -25,10 +29,12 @@ import te.app.ossman_elmonkz.base.IApplicationComponent;
 import te.app.ossman_elmonkz.base.MyApplication;
 import te.app.ossman_elmonkz.base.ParentActivity;
 import te.app.ossman_elmonkz.databinding.FragmentBuyingBinding;
+import te.app.ossman_elmonkz.databinding.SendRequestDialogBinding;
 import te.app.ossman_elmonkz.model.base.Mutable;
 import te.app.ossman_elmonkz.pages.buying.models.BrandModelsPartionResponse;
 import te.app.ossman_elmonkz.pages.buying.models.BrandsModellsItem;
 import te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel;
+import te.app.ossman_elmonkz.pages.cart.CartFragment;
 import te.app.ossman_elmonkz.utils.Constants;
 import te.app.ossman_elmonkz.utils.helper.MovementHelper;
 
@@ -66,14 +72,35 @@ public class BuyingFragment extends BaseFragment {
             } else if (Constants.SELECT_BRAND.equals(((Mutable) o).message)) {
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getBrandModelsPartionMain(), Constants.BRAND_REQUEST), getResources().getString(R.string.brand_name_hint), SelectBrandModelPartionFragment.class.getName(), null, Constants.BRAND_REQUEST);
             } else if (Constants.SELECT_MODELS.equals(((Mutable) o).message)) {
-                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getModellsItem(), Constants.MODEL_REQUEST), getResources().getString(R.string.model_name_hint), SelectBrandModelPartionFragment.class.getName(), null, Constants.MODEL_REQUEST);
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.dataFromSearchRequest, Constants.MODEL_REQUEST), getResources().getString(R.string.model_name_hint), SelectBrandModelPartionFragment.class.getName(), null, Constants.MODEL_REQUEST);
+            } else if (Constants.SELECT_PRODUCT.equals(((Mutable) o).message)) {
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.dataFromSearchRequest, Constants.PRODUCT_REQUEST), getResources().getString(R.string.product_name_hint), SelectBrandModelPartionFragment.class.getName(), null, Constants.PRODUCT_REQUEST);
             } else if (Constants.EMPTY_WARNING.equals(((Mutable) o).message)) {
                 ((ParentActivity) context).toastError(getString(R.string.select_brand));
+            } else if (Constants.MODEL_WARNING.equals(((Mutable) o).message)) {
+                ((ParentActivity) context).toastError(getString(R.string.model_name_hint));
             } else if (Constants.ADD_TO_CART.equals(((Mutable) o).message)) {
-                toastMessage(getString(R.string.add_cart_successfully));
-                finishActivity();
+                showSuccessDialog();
             }
         });
+    }
+
+    private void showSuccessDialog() {
+        Dialog successDialog = new Dialog(context);
+        successDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        successDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        SendRequestDialogBinding binding = DataBindingUtil.inflate(LayoutInflater.from(successDialog.getContext()), R.layout.send_request_dialog, null, false);
+        successDialog.setContentView(binding.getRoot());
+        binding.continueBuy.setOnClickListener(v -> {
+            successDialog.dismiss();
+            finishActivity();
+        });
+        binding.done.setOnClickListener(v -> {
+            successDialog.dismiss();
+            finishActivity();
+            MovementHelper.startActivity(context, CartFragment.class.getName(), getString(R.string.cart), null);
+        });
+        successDialog.show();
     }
 
     @Override
@@ -93,9 +120,20 @@ public class BuyingFragment extends BaseFragment {
                     viewModel.getOrderRequest().setModelName(null);
                     viewModel.getOrderRequest().setModelId(null);
                     viewModel.setModellsItem(brandsModellsItem);
+                    //reset for update Product
+                    viewModel.getOrderRequest().setProductName(null);
+                    viewModel.getOrderRequest().setProduct_id(null);
+                    viewModel.setModellsItem(brandsModellsItem);
+
                 } else if (requestCode == Constants.MODEL_REQUEST) {
                     viewModel.getOrderRequest().setModelName(brandsModellsItem.getName());
                     viewModel.getOrderRequest().setModelId(String.valueOf(brandsModellsItem.getId()));
+                    //reset for update Product
+                    viewModel.getOrderRequest().setProductName(null);
+                    viewModel.getOrderRequest().setProduct_id(null);
+                } else if (requestCode == Constants.PRODUCT_REQUEST) {
+                    viewModel.getOrderRequest().setProductName(brandsModellsItem.getName());
+                    viewModel.getOrderRequest().setProduct_id(String.valueOf(brandsModellsItem.getId()));
                 }
             }
             viewModel.notifyChange();

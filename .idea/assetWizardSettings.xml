@@ -358,7 +358,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:$USER_HOME$/Android/Sdk/icons/material/materialicons/call/baseline_call_24.xml" />
+                                      <entry key="url" value="file:$USER_HOME$/Android/Sdk/icons/material/materialicons/info/baseline_info_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -368,8 +368,9 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="autoMirrored" value="true" />
                             <entry key="color" value="8a98a3" />
-                            <entry key="outputName" value="ic_call_white" />
+                            <entry key="outputName" value="ic_info" />
                             <entry key="sourceFile" value="$USER_HOME$/Downloads/whatsapp.svg" />
                           </map>
                         </option>

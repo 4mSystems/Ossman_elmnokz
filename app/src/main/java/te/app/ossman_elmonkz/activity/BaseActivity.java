@@ -1,14 +1,11 @@
 package te.app.ossman_elmonkz.activity;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
-import androidx.core.app.ActivityCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+
 import te.app.ossman_elmonkz.R;
 import te.app.ossman_elmonkz.base.IApplicationComponent;
 import te.app.ossman_elmonkz.base.MyApplication;
@@ -20,7 +17,7 @@ import te.app.ossman_elmonkz.utils.Constants;
 import te.app.ossman_elmonkz.utils.helper.MovementHelper;
 
 public class BaseActivity extends ParentActivity {
-    ActivityBaseBinding activityBaseBinding;
+    public ActivityBaseBinding activityBaseBinding;
     public BackActionBarView backActionBarView;
 
     @Override
@@ -50,7 +47,8 @@ public class BaseActivity extends ParentActivity {
         backActionBarView = new BackActionBarView(this);
         if (getIntent().hasExtra(Constants.NAME_BAR)) {
             backActionBarView.setTitle(getIntent().getStringExtra(Constants.NAME_BAR));
-        }if (getIntent().hasExtra(Constants.SHARE_BAR)) {
+        }
+        if (getIntent().hasExtra(Constants.SHARE_BAR)) {
             backActionBarView.layoutActionBarBackBinding.imgActionBarFilter.setVisibility(View.VISIBLE);
         }
         activityBaseBinding.llBaseActionBarContainer.addView(backActionBarView);

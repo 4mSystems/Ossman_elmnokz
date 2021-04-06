@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.gson.Gson;
 
 import org.jetbrains.annotations.NotNull;
@@ -62,12 +63,20 @@ public class CreateOrderFragment extends BaseFragment {
                 finishActivity();
             }
         });
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(task -> {
+                    if (!task.isSuccessful()) {
+                        return;
+                    }
+                    viewModel.getCreateOrder().setDevice_id(task.getResult());
+                });
     }
 
 
     @Override
     public void onResume() {
         super.onResume();
+        viewModel.getProductRepository().setLiveData(viewModel.liveData);
     }
 
     @Override

@@ -9,13 +9,21 @@ import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import de.hdodenhof.circleimageview.CircleImageView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.ossman_elmonkz.R;
+import te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium;
 import te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular;
 import te.app.ossman_elmonkz.pages.buying.viewModels.ItemBrandModelViewModel;
 
 public abstract class ItemBrandBinding extends ViewDataBinding {
+  @NonNull
+  public final CircleImageView brandImage;
+
+  @NonNull
+  public final CustomTextViewMedium productDetails;
+
   @NonNull
   public final CustomTextViewRegular productName;
 
@@ -23,8 +31,11 @@ public abstract class ItemBrandBinding extends ViewDataBinding {
   protected ItemBrandModelViewModel mItemViewModel;
 
   protected ItemBrandBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      CircleImageView brandImage, CustomTextViewMedium productDetails,
       CustomTextViewRegular productName) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.brandImage = brandImage;
+    this.productDetails = productDetails;
     this.productName = productName;
   }
 

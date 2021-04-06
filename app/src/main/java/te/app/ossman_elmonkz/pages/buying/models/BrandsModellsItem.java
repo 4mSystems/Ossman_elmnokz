@@ -1,7 +1,5 @@
 package te.app.ossman_elmonkz.pages.buying.models;
 
-import java.util.List;
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -10,9 +8,10 @@ public class BrandsModellsItem {
     @SerializedName("image")
     private String image;
 
-    @SerializedName("modells")
-    private List<BrandsModellsItem> modells;
-
+    @SerializedName("price")
+    private String price;
+    @SerializedName("description")
+    private String description;
     @SerializedName("name")
     private String name;
 
@@ -26,8 +25,12 @@ public class BrandsModellsItem {
         return image;
     }
 
-    public List<BrandsModellsItem> getModells() {
-        return modells;
+    public String getDescription() {
+        return description;
+    }
+
+    public String getPrice() {
+        return price;
     }
 
     public String getName() {

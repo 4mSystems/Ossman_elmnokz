@@ -1,6 +1,5 @@
 package te.app.ossman_elmonkz.pages.buying.viewModels;
 
-import android.util.Log;
 
 import androidx.databinding.Bindable;
 
@@ -22,6 +21,10 @@ public class ItemBrandModelViewModel extends BaseViewModel {
 
     public void itemAction() {
         getLiveData().setValue(Constants.MENu);
+    }
+
+    public void toProductDetails() {
+        getLiveData().setValue(Constants.PRODUCT_DETAILS);
     }
 
 }

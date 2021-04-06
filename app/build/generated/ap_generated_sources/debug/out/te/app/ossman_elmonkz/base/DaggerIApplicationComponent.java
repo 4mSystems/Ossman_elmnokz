@@ -20,6 +20,8 @@ import te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.AgentsClientsView
 import te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.AgentsClientsViewModel_MembersInjector;
 import te.app.ossman_elmonkz.pages.buying.BuyingFragment;
 import te.app.ossman_elmonkz.pages.buying.BuyingFragment_MembersInjector;
+import te.app.ossman_elmonkz.pages.buying.ProductDetailsFragment;
+import te.app.ossman_elmonkz.pages.buying.ProductDetailsFragment_MembersInjector;
 import te.app.ossman_elmonkz.pages.buying.SelectBrandModelPartionFragment;
 import te.app.ossman_elmonkz.pages.buying.SelectBrandModelPartionFragment_MembersInjector;
 import te.app.ossman_elmonkz.pages.buying.viewModels.BrandModelViewModel;
@@ -28,6 +30,7 @@ import te.app.ossman_elmonkz.pages.buying.viewModels.BrandModelViewModel_Members
 import te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel;
 import te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel_Factory;
 import te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel_MembersInjector;
+import te.app.ossman_elmonkz.pages.buying.viewModels.ProductDetailsViewModel;
 import te.app.ossman_elmonkz.pages.cart.CartFragment;
 import te.app.ossman_elmonkz.pages.cart.CartFragment_MembersInjector;
 import te.app.ossman_elmonkz.pages.cart.CreateOrderFragment;
@@ -161,6 +164,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectMoreViewModel(MoreViewModel_Factory.newInstance(settingsRepositoryProvider.get()));
   }
 
+  private ProductDetailsViewModel productDetailsViewModel() {
+    return new ProductDetailsViewModel(buyingRepositoryProvider.get());
+  }
+
   private BrandModelViewModel brandModelViewModel() {
     return injectBrandModelViewModel(BrandModelViewModel_Factory.newInstance(buyingRepositoryProvider.get()));
   }
@@ -261,6 +268,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(MoreFragment moreFragment) {
     injectMoreFragment(moreFragment);
+  }
+
+  @Override
+  public void inject(ProductDetailsFragment productDetailsFragment) {
+    injectProductDetailsFragment(productDetailsFragment);
   }
 
   @Override
@@ -407,6 +419,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private MoreFragment injectMoreFragment(MoreFragment instance) {
     MoreFragment_MembersInjector.injectViewModel(instance, moreViewModel());
+    return instance;
+  }
+
+  private ProductDetailsFragment injectProductDetailsFragment(ProductDetailsFragment instance) {
+    ProductDetailsFragment_MembersInjector.injectViewModel(instance, productDetailsViewModel());
     return instance;
   }
 

@@ -18,10 +18,13 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+import te.app.ossman_elmonkz.PassingObject;
 import te.app.ossman_elmonkz.R;
 import te.app.ossman_elmonkz.databinding.ItemBrandBinding;
+import te.app.ossman_elmonkz.pages.buying.ProductDetailsFragment;
 import te.app.ossman_elmonkz.pages.buying.models.BrandsModellsItem;
 import te.app.ossman_elmonkz.pages.buying.viewModels.ItemBrandModelViewModel;
+import te.app.ossman_elmonkz.utils.Constants;
 import te.app.ossman_elmonkz.utils.helper.MovementHelper;
 
 
@@ -51,7 +54,12 @@ public class BrandModelAdapter extends RecyclerView.Adapter<BrandModelAdapter.Vi
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
         BrandsModellsItem categoriesData = brandsModellsItemListFilter.get(position);
         ItemBrandModelViewModel itemMenuViewModel = new ItemBrandModelViewModel(categoriesData);
-        itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> selectedIdLiveData.setValue(categoriesData));
+        itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
+            if (o.equals(Constants.MENu))
+                selectedIdLiveData.setValue(categoriesData);
+            else
+                MovementHelper.startActivityWithBundle(context, new PassingObject(categoriesData), categoriesData.getName(), ProductDetailsFragment.class.getName(), null);
+        });
         holder.setViewModel(itemMenuViewModel);
     }
 

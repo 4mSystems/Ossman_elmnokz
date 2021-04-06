@@ -1,21 +1,38 @@
 package te.app.ossman_elmonkz.pages.buying.models;
 
+import android.text.TextUtils;
+
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+
+import com.google.gson.annotations.SerializedName;
 
 import java.util.Random;
 
 @Entity(tableName = "order")
 public class OrderRequest {
     private String partName;
+    @SerializedName("part_id")
     private String partId;
     private String brandName;
     private String brandId;
     private String modelName;
+    private String productName;
+    @SerializedName("product_id")
+    private String product_id;
     private String modelId;
     private String quantity = "1";
     @PrimaryKey
-    private int id= new Random().nextInt(61);
+    private int id = new Random().nextInt(61);
+
+    public boolean isAllValid() {
+        return (!TextUtils.isEmpty(partName) && !TextUtils.isEmpty(brandName) && !TextUtils.isEmpty(modelName) && !TextUtils.isEmpty(productName));
+    }
+
+    public boolean isValid() {
+        return (!TextUtils.isEmpty(brandName) && !TextUtils.isEmpty(modelName) && !TextUtils.isEmpty(productName));
+    }
+
     public String getPartName() {
         return partName;
     }
@@ -64,6 +81,14 @@ public class OrderRequest {
         this.modelId = modelId;
     }
 
+    public String getProduct_id() {
+        return product_id;
+    }
+
+    public void setProduct_id(String product_id) {
+        this.product_id = product_id;
+    }
+
     public String getQuantity() {
         return quantity;
     }
@@ -78,5 +103,13 @@ public class OrderRequest {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 }

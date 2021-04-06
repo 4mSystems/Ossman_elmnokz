@@ -23,11 +23,11 @@ public class ItemCartBindingImpl extends ItemCartBinding implements te.app.ossma
     private final androidx.appcompat.widget.AppCompatImageView mboundView7;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback23;
+    private final android.view.View.OnClickListener mCallback27;
     @Nullable
-    private final android.view.View.OnClickListener mCallback21;
+    private final android.view.View.OnClickListener mCallback25;
     @Nullable
-    private final android.view.View.OnClickListener mCallback22;
+    private final android.view.View.OnClickListener mCallback26;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -57,9 +57,9 @@ public class ItemCartBindingImpl extends ItemCartBinding implements te.app.ossma
         this.productName.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback23 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 3);
-        mCallback21 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
-        mCallback22 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 2);
+        mCallback27 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 3);
+        mCallback25 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
+        mCallback26 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -233,9 +233,9 @@ public class ItemCartBindingImpl extends ItemCartBinding implements te.app.ossma
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.decrement.setOnClickListener(mCallback22);
-            this.increment.setOnClickListener(mCallback21);
-            this.mboundView7.setOnClickListener(mCallback23);
+            this.decrement.setOnClickListener(mCallback26);
+            this.increment.setOnClickListener(mCallback25);
+            this.mboundView7.setOnClickListener(mCallback27);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

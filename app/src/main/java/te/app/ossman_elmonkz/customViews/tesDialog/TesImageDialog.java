@@ -62,19 +62,19 @@ class TesDialog extends RelativeLayout {
         AlertDialog dialog = builder.create();
         dialog.setView(grand);
         dialog.show();
-        layoutGrandBinding.tvGrandUrl.setOnClickListener((OnClickListener) v -> {
+        layoutGrandBinding.tvGrandUrl.setOnClickListener(v -> {
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + layoutGrandBinding.tvGrandUrl.getText().toString()));
             context.startActivity(browserIntent);
         });
-        layoutGrandBinding.rlGrandCall.setOnClickListener((OnClickListener) v -> {
+        layoutGrandBinding.rlGrandCall.setOnClickListener(v -> {
             Uri call = Uri.parse("tel:" + layoutGrandBinding.tvGrandPhone.getText().toString());
             Intent surf = new Intent(Intent.ACTION_DIAL, call);
             context.startActivity(surf);
         });
-        layoutGrandBinding.rlGrandWhats.setOnClickListener((OnClickListener) v -> {
+        layoutGrandBinding.rlGrandWhats.setOnClickListener(v -> {
             try {
 
-                Uri uri = Uri.parse("https://api.whatsapp.com/send?phone=" + layoutGrandBinding.tvGrandPhone.getText().toString() + "&text=" + "");
+                Uri uri = Uri.parse("https://api.whatsapp.com/send?phone=201090624441&text=" + "");
 
                 Intent sendIntent = new Intent(Intent.ACTION_VIEW, uri);
 

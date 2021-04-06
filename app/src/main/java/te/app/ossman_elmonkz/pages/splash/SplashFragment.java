@@ -16,6 +16,7 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
 
+import te.app.ossman_elmonkz.activity.BaseActivity;
 import te.app.ossman_elmonkz.base.BaseFragment;
 import te.app.ossman_elmonkz.base.IApplicationComponent;
 import te.app.ossman_elmonkz.base.MyApplication;
@@ -35,11 +36,13 @@ public class SplashFragment extends BaseFragment {
 
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        ((BaseActivity) context).activityBaseBinding.logo.setVisibility(View.GONE);
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_splash, container, false);
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
         viewModel.splashStart();
+
         setEvent();
         return binding.getRoot();
     }

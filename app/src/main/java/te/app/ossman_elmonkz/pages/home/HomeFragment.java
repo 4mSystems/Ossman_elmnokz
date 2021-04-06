@@ -27,6 +27,7 @@ import te.app.ossman_elmonkz.model.base.Mutable;
 import te.app.ossman_elmonkz.pages.cart.CartFragment;
 import te.app.ossman_elmonkz.pages.home.models.HomeResponse;
 import te.app.ossman_elmonkz.pages.home.viewModels.HomeViewModel;
+import te.app.ossman_elmonkz.pages.settings.AboutAppFragment;
 import te.app.ossman_elmonkz.pages.settings.SuggestionsFragment;
 import te.app.ossman_elmonkz.utils.Constants;
 import te.app.ossman_elmonkz.utils.helper.MovementHelper;
@@ -59,6 +60,8 @@ public class HomeFragment extends BaseFragment {
                 viewModel.notifyChange(BR.categoriesAdapter);
             } else if (Constants.CART.equals(((Mutable) o).message)) {
                 MovementHelper.startActivity(context, CartFragment.class.getName(), getString(R.string.cart), null);
+            } else if (Constants.ABOUT.equals(((Mutable) o).message)) {
+                MovementHelper.startActivity(context, AboutAppFragment.class.getName(), getResources().getString(R.string.about), null);
             }
         });
     }

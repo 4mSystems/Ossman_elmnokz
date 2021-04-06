@@ -41,13 +41,17 @@ public abstract class FragmentBuyingBinding extends ViewDataBinding {
   @NonNull
   public final TextInputLayout modelName;
 
+  @NonNull
+  public final TextInputLayout productName;
+
   @Bindable
   protected BuyingViewModel mViewmodel;
 
   protected FragmentBuyingBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Barrier br, TextInputLayout brandName, CustomTextViewMedium customTextViewMedium,
       TextInputLayout departmentName, MaterialButton edit,
-      IncrementalView incrementalViewFloorNumber, TextInputLayout modelName) {
+      IncrementalView incrementalViewFloorNumber, TextInputLayout modelName,
+      TextInputLayout productName) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br = br;
     this.brandName = brandName;
@@ -56,6 +60,7 @@ public abstract class FragmentBuyingBinding extends ViewDataBinding {
     this.edit = edit;
     this.incrementalViewFloorNumber = incrementalViewFloorNumber;
     this.modelName = modelName;
+    this.productName = productName;
   }
 
   public abstract void setViewmodel(@Nullable BuyingViewModel viewmodel);

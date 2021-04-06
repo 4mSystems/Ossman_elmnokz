@@ -44,10 +44,14 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ic_fav"
                 android:layout_width="@dimen/dp35w"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp8h"
+                android:layout_height="@dimen/dp35h"
+                android:layout_marginEnd="@dimen/dp6w"
+                android:scaleType="centerCrop"
+                android:onClick="@{()-> viewmodel.toAbout()}"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toBottomOf="@id/ic_shopping_cart"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@id/ic_shopping_cart" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"

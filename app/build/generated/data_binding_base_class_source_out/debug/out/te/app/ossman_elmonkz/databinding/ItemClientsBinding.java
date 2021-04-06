@@ -10,6 +10,7 @@ import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import de.hdodenhof.circleimageview.CircleImageView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.ossman_elmonkz.R;
@@ -24,10 +25,19 @@ public abstract class ItemClientsBinding extends ViewDataBinding {
   public final Barrier br4;
 
   @NonNull
+  public final Barrier br5;
+
+  @NonNull
+  public final Barrier br6;
+
+  @NonNull
+  public final CustomTextViewMedium name;
+
+  @NonNull
   public final CustomTextViewMedium phone;
 
   @NonNull
-  public final CustomTextViewMedium productImage;
+  public final CircleImageView productImage;
 
   @NonNull
   public final CustomTextViewMedium productName;
@@ -39,12 +49,15 @@ public abstract class ItemClientsBinding extends ViewDataBinding {
   protected ItemClientViewModel mItemViewModel;
 
   protected ItemClientsBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomTextViewMedium address, Barrier br4, CustomTextViewMedium phone,
-      CustomTextViewMedium productImage, CustomTextViewMedium productName,
-      CustomTextViewMedium shopName) {
+      CustomTextViewMedium address, Barrier br4, Barrier br5, Barrier br6,
+      CustomTextViewMedium name, CustomTextViewMedium phone, CircleImageView productImage,
+      CustomTextViewMedium productName, CustomTextViewMedium shopName) {
     super(_bindingComponent, _root, _localFieldCount);
     this.address = address;
     this.br4 = br4;
+    this.br5 = br5;
+    this.br6 = br6;
+    this.name = name;
     this.phone = phone;
     this.productImage = productImage;
     this.productName = productName;

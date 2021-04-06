@@ -27,13 +27,13 @@ public class BR {
 
   public static final int clientsAdapter = 12;
 
-  public static final int galleryAdapter = 13;
+  public static final int dataFromSearchRequest = 13;
 
-  public static final int galleryData = 14;
+  public static final int galleryAdapter = 14;
 
-  public static final int itemViewModel = 15;
+  public static final int galleryData = 15;
 
-  public static final int modellsItem = 16;
+  public static final int itemViewModel = 16;
 
   public static final int onBoardAdapter = 17;
 
@@ -43,15 +43,17 @@ public class BR {
 
   public static final int product = 20;
 
-  public static final int productsAdapter = 21;
+  public static final int productDetails = 21;
 
-  public static final int searchAdapter = 22;
+  public static final int productsAdapter = 22;
 
-  public static final int searchItem = 23;
+  public static final int searchAdapter = 23;
 
-  public static final int searchProgressVisible = 24;
+  public static final int searchItem = 24;
 
-  public static final int viewModel = 25;
+  public static final int searchProgressVisible = 25;
 
-  public static final int viewmodel = 26;
+  public static final int viewModel = 26;
+
+  public static final int viewmodel = 27;
 }

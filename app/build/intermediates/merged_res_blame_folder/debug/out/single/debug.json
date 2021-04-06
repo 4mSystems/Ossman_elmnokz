@@ -52,12 +52,16 @@
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_onboard.xml"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/drawable_corner_view_overlay.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/drawable/corner_view_overlay.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/layout_fragment_about.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_about.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/drawable_corner_view_overlay.xml.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/drawable/corner_view_overlay.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/layout_send_request_dialog.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/send_request_dialog.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/layout_fragment_gallery.xml.flat",
@@ -118,6 +122,10 @@
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/drawable_ic_info.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/drawable/ic_info.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/layout_fragment_more.xml.flat",
@@ -210,6 +218,10 @@
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_grand_g.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/mipmap-xxxhdpi/grand_g.png"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/drawable_ic_join_request.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/drawable/ic_join_request.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/font_medium.otf.flat",
@@ -522,6 +534,10 @@
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/drawable_ic_call_white.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/drawable/ic_call_white.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/layout_fragment_product_details.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_product_details.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/drawable_exit.png.flat",

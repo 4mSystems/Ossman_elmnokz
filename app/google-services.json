@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "867852528446",
+    "project_id": "el3amed-2885a",
+    "storage_bucket": "el3amed-2885a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867852528446:android:dd8058c023d9bf15c0da6f",
+        "android_client_info": {
+          "package_name": "te.app.ossman_elmonkz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "867852528446-m83iu9b4l9uj62oistnoipaiim0ojfsk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmN5u3BIEZZFqBEk_3IE_3tAhAGXIr9MA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "867852528446-m83iu9b4l9uj62oistnoipaiim0ojfsk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

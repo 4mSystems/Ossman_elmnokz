@@ -4,45 +4,51 @@ import com.google.gson.annotations.SerializedName;
 
 public class ClientData {
 
-	@SerializedName("address")
-	private String address;
+    @SerializedName("address")
+    private String address;
 
-	@SerializedName("phone")
-	private String phone;
+    @SerializedName("phone")
+    private String phone;
+    @SerializedName("image")
+    private String image;
 
-	@SerializedName("name")
-	private String name;
+    @SerializedName("name")
+    private String name;
 
-	@SerializedName("gov_id")
-	private String govId;
+    @SerializedName("gov_id")
+    private String govId;
 
-	@SerializedName("id")
-	private int id;
+    @SerializedName("id")
+    private int id;
 
-	@SerializedName("shop_name")
-	private String shopName;
+    @SerializedName("shop_name")
+    private String shopName;
 
-	public String getAddress(){
-		return address;
-	}
+    public String getAddress() {
+        return address;
+    }
 
-	public String getPhone(){
-		return phone;
-	}
+    public String getPhone() {
+        return phone;
+    }
 
-	public String getName(){
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getGovId(){
-		return govId;
-	}
+    public String getGovId() {
+        return govId;
+    }
 
-	public int getId(){
-		return id;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public String getShopName(){
-		return shopName;
+    public String getShopName() {
+        return shopName;
+    }
+
+	public String getImage() {
+		return image;
 	}
 }

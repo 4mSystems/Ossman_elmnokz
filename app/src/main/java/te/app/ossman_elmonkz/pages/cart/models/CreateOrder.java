@@ -9,7 +9,7 @@ import java.util.List;
 import te.app.ossman_elmonkz.pages.buying.models.OrderRequest;
 
 public class CreateOrder {
-    @SerializedName("data")
+    @SerializedName("product")
     private List<OrderRequest> productList;
     @SerializedName("name")
     private String name;
@@ -19,6 +19,8 @@ public class CreateOrder {
     private String address;
     @SerializedName("notes")
     private String notes;
+    @SerializedName("device_id")
+    private String device_id;
 
 
     public CreateOrder() {
@@ -70,5 +72,13 @@ public class CreateOrder {
 
     public void setNotes(String notes) {
         this.notes = notes;
+    }
+
+    public String getDevice_id() {
+        return device_id;
+    }
+
+    public void setDevice_id(String device_id) {
+        this.device_id = device_id;
     }
 }

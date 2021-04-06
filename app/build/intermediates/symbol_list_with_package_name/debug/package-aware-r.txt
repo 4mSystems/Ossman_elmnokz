@@ -193,6 +193,7 @@ attr buttonCompat
 attr buttonGravity
 attr buttonIconDimen
 attr buttonPanelSideLayout
+attr buttonSize
 attr buttonStyle
 attr buttonStyleSmall
 attr buttonTint
@@ -236,6 +237,7 @@ attr chipStrokeColor
 attr chipStrokeWidth
 attr chipStyle
 attr chipSurfaceColor
+attr circleCrop
 attr circleRadius
 attr circularProgressIndicatorStyle
 attr civ_border_color
@@ -279,6 +281,7 @@ attr colorPrimary
 attr colorPrimaryDark
 attr colorPrimarySurface
 attr colorPrimaryVariant
+attr colorScheme
 attr colorSecondary
 attr colorSecondaryVariant
 attr colorSurface
@@ -488,6 +491,8 @@ attr iconStartPadding
 attr iconTint
 attr iconTintMode
 attr iconifiedByDefault
+attr imageAspectRatio
+attr imageAspectRatioAdjust
 attr imageButtonStyle
 attr indeterminateAnimationType
 attr indeterminateProgressStyle
@@ -791,6 +796,7 @@ attr rippleColor
 attr round
 attr roundPercent
 attr saturation
+attr scopeUris
 attr scrimAnimationDuration
 attr scrimBackground
 attr scrimVisibleHeightTrigger
@@ -1094,6 +1100,17 @@ color colorPrimaryDark
 color colorPrimaryHolo
 color colorYellow
 color colordark
+color common_google_signin_btn_text_dark
+color common_google_signin_btn_text_dark_default
+color common_google_signin_btn_text_dark_disabled
+color common_google_signin_btn_text_dark_focused
+color common_google_signin_btn_text_dark_pressed
+color common_google_signin_btn_text_light
+color common_google_signin_btn_text_light_default
+color common_google_signin_btn_text_light_disabled
+color common_google_signin_btn_text_light_focused
+color common_google_signin_btn_text_light_pressed
+color common_google_signin_btn_tint
 color dark_grey
 color defaultTextColor
 color design_bottom_navigation_shadow_color
@@ -2910,6 +2927,25 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable circle
+drawable common_full_open_on_phone
+drawable common_google_signin_btn_icon_dark
+drawable common_google_signin_btn_icon_dark_focused
+drawable common_google_signin_btn_icon_dark_normal
+drawable common_google_signin_btn_icon_dark_normal_background
+drawable common_google_signin_btn_icon_disabled
+drawable common_google_signin_btn_icon_light
+drawable common_google_signin_btn_icon_light_focused
+drawable common_google_signin_btn_icon_light_normal
+drawable common_google_signin_btn_icon_light_normal_background
+drawable common_google_signin_btn_text_dark
+drawable common_google_signin_btn_text_dark_focused
+drawable common_google_signin_btn_text_dark_normal
+drawable common_google_signin_btn_text_dark_normal_background
+drawable common_google_signin_btn_text_disabled
+drawable common_google_signin_btn_text_light
+drawable common_google_signin_btn_text_light_focused
+drawable common_google_signin_btn_text_light_normal
+drawable common_google_signin_btn_text_light_normal_background
 drawable contact
 drawable corner_view_border
 drawable corner_view_border_warning
@@ -2922,6 +2958,8 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable exit
+drawable googleg_disabled_color_18
+drawable googleg_standard_color_18
 drawable ic_add
 drawable ic_airplane
 drawable ic_airplanemode_inactive_24dp
@@ -2939,7 +2977,9 @@ drawable ic_favorite_border
 drawable ic_favorite_fill
 drawable ic_filter
 drawable ic_home
+drawable ic_info
 drawable ic_info_outline_white_24dp
+drawable ic_join_request
 drawable ic_keyboard_black_24dp
 drawable ic_list_fav
 drawable ic_more
@@ -3073,6 +3113,8 @@ id activity_chooser_view_content
 id add
 id add_cart
 id address
+id adjust_height
+id adjust_width
 id alertTitle
 id aligned
 id all
@@ -3100,6 +3142,9 @@ id br1
 id br2
 id br3
 id br4
+id br5
+id br6
+id brand_image
 id brand_name
 id btn_airplane_off
 id btn_mobile_on
@@ -3139,6 +3184,7 @@ id container
 id content
 id contentPanel
 id contiguous
+id continue_buy
 id coordinator
 id cos
 id counterclockwise
@@ -3146,6 +3192,7 @@ id custom
 id customPanel
 id customTextViewMedium
 id cut
+id dark
 id dataBinding
 id date_picker_actions
 id decelerate
@@ -3162,12 +3209,14 @@ id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
 id dialog_button
+id dialog_header
 id dimensions
 id direct
 id disableHome
 id disablePostScroll
 id disableScroll
 id disjoint
+id done
 id dragDown
 id dragEnd
 id dragLeft
@@ -3231,11 +3280,13 @@ id ic_fav
 id ic_shopping_cart
 id icon
 id icon_group
+id icon_only
 id ifRoom
 id ignore
 id ignoreRequest
 id image
 id imageSlider
+id img
 id img_action_bar_cancel
 id img_action_bar_filter
 id img_airplane
@@ -3258,6 +3309,7 @@ id largeLabel
 id layout
 id left
 id leftToRight
+id light
 id line
 id line1
 id line3
@@ -3268,6 +3320,7 @@ id ll_base_action_bar_container
 id ll_base_container
 id loading
 id login_container
+id logo
 id lottie_layer_name
 id masked
 id material_clock_display
@@ -3328,6 +3381,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id name
 id navigation_header_container
 id never
 id noScroll
@@ -3365,9 +3419,11 @@ id postLayout
 id prePayment_text
 id prePayment_text_val
 id product_brand
+id product_details
 id product_image
 id product_model
 id product_name
+id product_price
 id product_warning2
 id progress_circular
 id progress_horizontal
@@ -3544,6 +3600,7 @@ id visible_removing_fragment_view_tag
 id warning1
 id warningPhone
 id whats
+id wide
 id withText
 id withinBounds
 id worm
@@ -3561,6 +3618,7 @@ integer cancel_button_image_alpha
 integer config_tooltipAnimTime
 integer design_snackbar_text_max_lines
 integer design_tab_indicator_anim_duration_ms
+integer google_play_services_version
 integer hide_password_duration
 integer mtrl_badge_max_character_count
 integer mtrl_btn_anim_delay_ms
@@ -3644,6 +3702,7 @@ layout fragment_gallery
 layout fragment_home
 layout fragment_more
 layout fragment_onboard
+layout fragment_product_details
 layout fragment_products
 layout fragment_splash
 layout fragment_sub_categories
@@ -3724,6 +3783,7 @@ layout popup_photo_full
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout send_request_dialog
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_chip_zero_corner_radius
@@ -3799,7 +3859,26 @@ string client_address
 string client_name
 string client_notes
 string client_phone
+string coin
 string color
+string common_google_play_services_enable_button
+string common_google_play_services_enable_text
+string common_google_play_services_enable_title
+string common_google_play_services_install_button
+string common_google_play_services_install_text
+string common_google_play_services_install_title
+string common_google_play_services_notification_channel_name
+string common_google_play_services_notification_ticker
+string common_google_play_services_unknown_issue
+string common_google_play_services_unsupported_text
+string common_google_play_services_update_button
+string common_google_play_services_update_text
+string common_google_play_services_update_title
+string common_google_play_services_updating_text
+string common_google_play_services_wear_update_text
+string common_open_on_phone
+string common_signin_button_text
+string common_signin_button_text_long
 string connection_AirPlane
 string connection_AirPlane_Mode
 string connection_AirPlane_TurnOff
@@ -3810,20 +3889,30 @@ string connection_invaild_body
 string connection_invaild_msg
 string contact_title
 string contact_us
+string continue_buy
 string default_airplane_mode_message
 string default_airplane_mode_snackbar_message
 string default_message
 string default_snackbar_message
 string default_title
+string default_web_client_id
 string department
 string department_name_hint
 string design_program
+string details
+string done
 string elmonkz_systems_text
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string fcm_fallback_notification_channel_label
 string finish_order
+string gcm_defaultSenderId
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
 string gov_hint
 string hide_bottom_view_on_scroll_behavior
 string high_price
@@ -3905,9 +3994,11 @@ string please_select_another_file
 string please_turn_off
 string please_turn_on
 string prePayment_text
+string product_name_hint
 string product_warning1
 string product_warning2
 string product_warning3
+string project_id
 string quanity
 string rate
 string related_products
@@ -3925,6 +4016,7 @@ string status_bar_notification_info_overflow
 string suggest
 string suggest_title
 string t_word
+string thank_you
 string toast_message
 string total
 string whats
@@ -4732,6 +4824,7 @@ styleable LinearLayoutCompat android_gravity android_orientation android_baselin
 styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width android_layout_height android_layout_weight
 styleable LinearProgressIndicator indeterminateAnimationType indicatorDirectionLinear
 styleable ListPopupWindow android_dropDownHorizontalOffset android_dropDownVerticalOffset
+styleable LoadingImageView circleCrop imageAspectRatio imageAspectRatioAdjust
 styleable LottieAnimationView lottie_autoPlay lottie_cacheComposition lottie_colorFilter lottie_enableMergePathsForKitKatAndAbove lottie_fallbackRes lottie_fileName lottie_imageAssetsFolder lottie_loop lottie_progress lottie_rawRes lottie_renderMode lottie_repeatCount lottie_repeatMode lottie_scale lottie_speed lottie_url
 styleable MaterialAlertDialog backgroundInsetBottom backgroundInsetEnd backgroundInsetStart backgroundInsetTop
 styleable MaterialAlertDialogTheme materialAlertDialogBodyTextStyle materialAlertDialogTheme materialAlertDialogTitleIconStyle materialAlertDialogTitlePanelStyle materialAlertDialogTitleTextStyle
@@ -4775,6 +4868,7 @@ styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottomRight cornerFamilyTopLeft cornerFamilyTopRight cornerSize cornerSizeBottomLeft cornerSizeBottomRight cornerSizeTopLeft cornerSizeTopRight
 styleable ShapeableImageView contentPadding contentPaddingBottom contentPaddingEnd contentPaddingLeft contentPaddingRight contentPaddingStart contentPaddingTop shapeAppearance shapeAppearanceOverlay strokeColor strokeWidth
+styleable SignInButton buttonSize colorScheme scopeUris
 styleable Slider android_enabled android_value android_stepSize android_valueFrom android_valueTo haloColor haloRadius labelBehavior labelStyle thumbColor thumbElevation thumbRadius thumbStrokeColor thumbStrokeWidth tickColor tickColorActive tickColorInactive tickVisible trackColor trackColorActive trackColorInactive trackHeight
 styleable SliderView sliderAnimationDuration sliderAutoCycleDirection sliderAutoCycleEnabled sliderIndicatorAnimationDuration sliderIndicatorEnabled sliderIndicatorGravity sliderIndicatorMargin sliderIndicatorMarginBottom sliderIndicatorMarginLeft sliderIndicatorMarginRight sliderIndicatorMarginTop sliderIndicatorOrientation sliderIndicatorPadding sliderIndicatorRadius sliderIndicatorRtlMode sliderIndicatorSelectedColor sliderIndicatorUnselectedColor sliderScrollTimeInSec sliderStartAutoCycle
 styleable Snackbar snackbarButtonStyle snackbarStyle snackbarTextViewStyle

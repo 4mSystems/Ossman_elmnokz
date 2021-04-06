@@ -15,7 +15,8 @@ public class ActivityBaseBindingImpl extends ActivityBaseBinding  {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.ll_base_action_bar_container, 1);
-        sViewsWithIds.put(R.id.fl_home_container, 2);
+        sViewsWithIds.put(R.id.logo, 2);
+        sViewsWithIds.put(R.id.fl_home_container, 3);
     }
     // views
     // variables
@@ -24,13 +25,14 @@ public class ActivityBaseBindingImpl extends ActivityBaseBinding  {
     // Inverse Binding Event Handlers
 
     public ActivityBaseBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private ActivityBaseBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (android.widget.FrameLayout) bindings[2]
+            , (android.widget.FrameLayout) bindings[3]
             , (android.widget.LinearLayout) bindings[1]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[0]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
             );
         this.llBaseContainer.setTag(null);
         setRootTag(root);

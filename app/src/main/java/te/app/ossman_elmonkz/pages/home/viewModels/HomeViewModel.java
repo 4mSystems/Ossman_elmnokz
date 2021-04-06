@@ -43,6 +43,10 @@ public class HomeViewModel extends BaseViewModel {
         liveData.setValue(new Mutable(Constants.CART));
     }
 
+    public void toAbout() {
+        liveData.setValue(new Mutable(Constants.ABOUT));
+    }
+
 
     @Bindable
     public CategoriesAdapter getCategoriesAdapter() {

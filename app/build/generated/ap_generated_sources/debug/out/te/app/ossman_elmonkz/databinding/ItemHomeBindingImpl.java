@@ -19,7 +19,7 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.ossma
     @NonNull
     private final androidx.cardview.widget.CardView mboundView0;
     @NonNull
-    private final te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular mboundView2;
+    private final te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium mboundView2;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback5;
@@ -37,7 +37,7 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.ossma
         this.catImage.setTag(null);
         this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView2 = (te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular) bindings[2];
+        this.mboundView2 = (te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium) bindings[2];
         this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners

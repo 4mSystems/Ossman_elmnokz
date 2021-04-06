@@ -38,7 +38,7 @@ public final class CartDao_Impl implements CartDao {
     this.__insertionAdapterOfOrderRequest = new EntityInsertionAdapter<OrderRequest>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR IGNORE INTO `order` (`partName`,`partId`,`brandName`,`brandId`,`modelName`,`modelId`,`quantity`,`id`) VALUES (?,?,?,?,?,?,?,?)";
+        return "INSERT OR IGNORE INTO `order` (`partName`,`partId`,`brandName`,`brandId`,`modelName`,`productName`,`product_id`,`modelId`,`quantity`,`id`) VALUES (?,?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -68,23 +68,33 @@ public final class CartDao_Impl implements CartDao {
         } else {
           stmt.bindString(5, value.getModelName());
         }
-        if (value.getModelId() == null) {
+        if (value.getProductName() == null) {
           stmt.bindNull(6);
         } else {
-          stmt.bindString(6, value.getModelId());
+          stmt.bindString(6, value.getProductName());
         }
-        if (value.getQuantity() == null) {
+        if (value.getProduct_id() == null) {
           stmt.bindNull(7);
         } else {
-          stmt.bindString(7, value.getQuantity());
+          stmt.bindString(7, value.getProduct_id());
         }
-        stmt.bindLong(8, value.getId());
+        if (value.getModelId() == null) {
+          stmt.bindNull(8);
+        } else {
+          stmt.bindString(8, value.getModelId());
+        }
+        if (value.getQuantity() == null) {
+          stmt.bindNull(9);
+        } else {
+          stmt.bindString(9, value.getQuantity());
+        }
+        stmt.bindLong(10, value.getId());
       }
     };
     this.__updateAdapterOfOrderRequest = new EntityDeletionOrUpdateAdapter<OrderRequest>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `order` SET `partName` = ?,`partId` = ?,`brandName` = ?,`brandId` = ?,`modelName` = ?,`modelId` = ?,`quantity` = ?,`id` = ? WHERE `id` = ?";
+        return "UPDATE OR ABORT `order` SET `partName` = ?,`partId` = ?,`brandName` = ?,`brandId` = ?,`modelName` = ?,`productName` = ?,`product_id` = ?,`modelId` = ?,`quantity` = ?,`id` = ? WHERE `id` = ?";
       }
 
       @Override
@@ -114,18 +124,28 @@ public final class CartDao_Impl implements CartDao {
         } else {
           stmt.bindString(5, value.getModelName());
         }
-        if (value.getModelId() == null) {
+        if (value.getProductName() == null) {
           stmt.bindNull(6);
         } else {
-          stmt.bindString(6, value.getModelId());
+          stmt.bindString(6, value.getProductName());
         }
-        if (value.getQuantity() == null) {
+        if (value.getProduct_id() == null) {
           stmt.bindNull(7);
         } else {
-          stmt.bindString(7, value.getQuantity());
+          stmt.bindString(7, value.getProduct_id());
         }
-        stmt.bindLong(8, value.getId());
-        stmt.bindLong(9, value.getId());
+        if (value.getModelId() == null) {
+          stmt.bindNull(8);
+        } else {
+          stmt.bindString(8, value.getModelId());
+        }
+        if (value.getQuantity() == null) {
+          stmt.bindNull(9);
+        } else {
+          stmt.bindString(9, value.getQuantity());
+        }
+        stmt.bindLong(10, value.getId());
+        stmt.bindLong(11, value.getId());
       }
     };
     this.__preparedStmtOfDeleteItem = new SharedSQLiteStatement(__db) {
@@ -238,6 +258,8 @@ public final class CartDao_Impl implements CartDao {
           final int _cursorIndexOfBrandName = CursorUtil.getColumnIndexOrThrow(_cursor, "brandName");
           final int _cursorIndexOfBrandId = CursorUtil.getColumnIndexOrThrow(_cursor, "brandId");
           final int _cursorIndexOfModelName = CursorUtil.getColumnIndexOrThrow(_cursor, "modelName");
+          final int _cursorIndexOfProductName = CursorUtil.getColumnIndexOrThrow(_cursor, "productName");
+          final int _cursorIndexOfProductId = CursorUtil.getColumnIndexOrThrow(_cursor, "product_id");
           final int _cursorIndexOfModelId = CursorUtil.getColumnIndexOrThrow(_cursor, "modelId");
           final int _cursorIndexOfQuantity = CursorUtil.getColumnIndexOrThrow(_cursor, "quantity");
           final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
@@ -260,6 +282,12 @@ public final class CartDao_Impl implements CartDao {
             final String _tmpModelName;
             _tmpModelName = _cursor.getString(_cursorIndexOfModelName);
             _item.setModelName(_tmpModelName);
+            final String _tmpProductName;
+            _tmpProductName = _cursor.getString(_cursorIndexOfProductName);
+            _item.setProductName(_tmpProductName);
+            final String _tmpProduct_id;
+            _tmpProduct_id = _cursor.getString(_cursorIndexOfProductId);
+            _item.setProduct_id(_tmpProduct_id);
             final String _tmpModelId;
             _tmpModelId = _cursor.getString(_cursorIndexOfModelId);
             _item.setModelId(_tmpModelId);

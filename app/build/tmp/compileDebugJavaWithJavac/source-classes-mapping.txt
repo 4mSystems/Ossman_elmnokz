@@ -11,18 +11,24 @@ te/app/ossman_elmonkz/databinding/FragmentSubCategorySearchBinding.java
  te.app.ossman_elmonkz.databinding.FragmentSubCategorySearchBinding
 te/app/ossman_elmonkz/utils/validation/Validate.java
  te.app.ossman_elmonkz.utils.validation.Validate
+te/app/ossman_elmonkz/pages/buying/viewModels/ProductDetailsViewModel.java
+ te.app.ossman_elmonkz.pages.buying.viewModels.ProductDetailsViewModel
 te/app/ossman_elmonkz/pages/settings/models/AboutData.java
  te.app.ossman_elmonkz.pages.settings.models.AboutData
 te/app/ossman_elmonkz/pages/splash/models/SettingsResponse.java
  te.app.ossman_elmonkz.pages.splash.models.SettingsResponse
 te/app/ossman_elmonkz/pages/buying/SelectBrandModelPartionFragment.java
  te.app.ossman_elmonkz.pages.buying.SelectBrandModelPartionFragment
+te/app/ossman_elmonkz/pages/buying/models/ProductSearchResponse.java
+ te.app.ossman_elmonkz.pages.buying.models.ProductSearchResponse
 te/app/ossman_elmonkz/base/BaseViewModel.java
  te.app.ossman_elmonkz.base.BaseViewModel
 te/app/ossman_elmonkz/pages/more/viewModels/MoreViewModel.java
  te.app.ossman_elmonkz.pages.more.viewModels.MoreViewModel
 te/app/ossman_elmonkz/connection/ConnectionListenerInterFace.java
  te.app.ossman_elmonkz.connection.ConnectionListenerInterFace
+te/app/ossman_elmonkz/pages/buying/models/DataFromSearchRequest.java
+ te.app.ossman_elmonkz.pages.buying.models.DataFromSearchRequest
 te/app/ossman_elmonkz/databinding/ItemAgentsBinding.java
  te.app.ossman_elmonkz.databinding.ItemAgentsBinding
 te/app/ossman_elmonkz/pages/agentsAndClients/ClientsFragment.java
@@ -109,6 +115,8 @@ te/app/ossman_elmonkz/customViews/views/CustomTextViewMedium.java
 te/app/ossman_elmonkz/pages/agentsAndClients/adapters/AgentsAdapter.java
  te.app.ossman_elmonkz.pages.agentsAndClients.adapters.AgentsAdapter
  te.app.ossman_elmonkz.pages.agentsAndClients.adapters.AgentsAdapter$ViewHolder
+te/app/ossman_elmonkz/databinding/FragmentProductDetailsBinding.java
+ te.app.ossman_elmonkz.databinding.FragmentProductDetailsBinding
 te/app/ossman_elmonkz/databinding/ActivityBaseBinding.java
  te.app.ossman_elmonkz.databinding.ActivityBaseBinding
 te/app/ossman_elmonkz/pages/subCategories/models/search/SearchData.java
@@ -159,6 +167,8 @@ te/app/ossman_elmonkz/activity/MainActivity.java
  te.app.ossman_elmonkz.activity.MainActivity
 te/app/ossman_elmonkz/base/ParentActivity.java
  te.app.ossman_elmonkz.base.ParentActivity
+te/app/ossman_elmonkz/pages/buying/ProductDetailsFragment.java
+ te.app.ossman_elmonkz.pages.buying.ProductDetailsFragment
 te/app/ossman_elmonkz/pages/agentsAndClients/viewModels/ItemClientViewModel.java
  te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.ItemClientViewModel
 te/app/ossman_elmonkz/base/IApplicationComponent.java
@@ -198,6 +208,8 @@ te/app/ossman_elmonkz/customViews/views/CustomTextViewRegular.java
  te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular
 te/app/ossman_elmonkz/repository/BuyingRepository.java
  te.app.ossman_elmonkz.repository.BuyingRepository
+te/app/ossman_elmonkz/databinding/SendRequestDialogBinding.java
+ te.app.ossman_elmonkz.databinding.SendRequestDialogBinding
 te/app/ossman_elmonkz/utils/PopUp/PopUpInterface.java
  te.app.ossman_elmonkz.utils.PopUp.PopUpInterface
 te/app/ossman_elmonkz/model/base/StatusMessage.java

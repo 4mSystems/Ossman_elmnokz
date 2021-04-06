@@ -8,6 +8,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
@@ -27,16 +28,20 @@ public abstract class ActivityBaseBinding extends ViewDataBinding {
   @NonNull
   public final ConstraintLayout llBaseContainer;
 
+  @NonNull
+  public final AppCompatImageView logo;
+
   @Bindable
   protected BaseViewModel mBaseViewModel;
 
   protected ActivityBaseBinding(Object _bindingComponent, View _root, int _localFieldCount,
       FrameLayout flHomeContainer, LinearLayout llBaseActionBarContainer,
-      ConstraintLayout llBaseContainer) {
+      ConstraintLayout llBaseContainer, AppCompatImageView logo) {
     super(_bindingComponent, _root, _localFieldCount);
     this.flHomeContainer = flHomeContainer;
     this.llBaseActionBarContainer = llBaseActionBarContainer;
     this.llBaseContainer = llBaseContainer;
+    this.logo = logo;
   }
 
   public abstract void setBaseViewModel(@Nullable BaseViewModel baseViewModel);

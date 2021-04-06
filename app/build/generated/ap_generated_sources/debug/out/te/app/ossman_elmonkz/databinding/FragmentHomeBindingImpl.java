@@ -13,17 +13,18 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.ic_fav, 3);
+        sViewsWithIds = null;
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
     @NonNull
-    private final androidx.recyclerview.widget.RecyclerView mboundView2;
+    private final androidx.recyclerview.widget.RecyclerView mboundView3;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback14;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback15;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -33,17 +34,19 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     }
     private FragmentHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
             );
+        this.icFav.setTag(null);
         this.icShoppingCart.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView2 = (androidx.recyclerview.widget.RecyclerView) bindings[2];
-        this.mboundView2.setTag(null);
+        this.mboundView3 = (androidx.recyclerview.widget.RecyclerView) bindings[3];
+        this.mboundView3.setTag(null);
         setRootTag(root);
         // listeners
         mCallback14 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
+        mCallback15 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -134,30 +137,53 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
+            this.icFav.setOnClickListener(mCallback15);
             this.icShoppingCart.setOnClickListener(mCallback14);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            te.app.ossman_elmonkz.base.ApplicationBinding.getItemsV2Binding(this.mboundView2, viewmodelCategoriesAdapter, "2", "1");
+            te.app.ossman_elmonkz.base.ApplicationBinding.getItemsV2Binding(this.mboundView3, viewmodelCategoriesAdapter, "2", "1");
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // viewmodel != null
-        boolean viewmodelJavaLangObjectNull = false;
-        // viewmodel
-        te.app.ossman_elmonkz.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+        switch(sourceId) {
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.ossman_elmonkz.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
 
 
 
-        viewmodelJavaLangObjectNull = (viewmodel) != (null);
-        if (viewmodelJavaLangObjectNull) {
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
 
 
-            viewmodel.toCart();
+                    viewmodel.toCart();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.ossman_elmonkz.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toAbout();
+                }
+                break;
+            }
         }
     }
     // dirty flag
