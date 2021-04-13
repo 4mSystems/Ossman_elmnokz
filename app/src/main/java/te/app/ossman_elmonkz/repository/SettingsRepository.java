@@ -58,10 +58,6 @@ public class SettingsRepository extends BaseRepository {
                 Constants.AGENTS, true);
     }
 
-    public Disposable getGovs() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.GOVS, new Object(), GovsResponse.class,
-                Constants.GOVS, true);
-    }
 
     public Disposable getClients(int clientId) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CLIENTS + clientId, new Object(), ClientsResponse.class,

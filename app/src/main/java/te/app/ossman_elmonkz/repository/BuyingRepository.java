@@ -36,13 +36,12 @@ public class BuyingRepository extends BaseRepository {
         connectionHelper.liveData = liveData;
     }
 
-    public Disposable getBrandModelPartion() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.BRAND_MODEL_PARTION, new Object(), BrandModelsPartionResponse.class,
+    public Disposable getBrandModelPartion(int subId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.BRAND_MODEL_PARTION + "?sub_category_id=" + subId, new Object(), BrandModelsPartionResponse.class,
                 Constants.BRAND_MODEL_RESPONSE, true);
     }
 
     public Disposable getModelsFromSearch(DataFromSearchRequest dataFromSearchRequest) {
-        Log.e("getModelsFromSearch", "getModelsFromSearch: "+dataFromSearchRequest.getBrand_id());
         if (dataFromSearchRequest.getBrand_id() == null)
             return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SEARCH + dataFromSearchRequest.getCategory_id()
                             + "&sub_category_id=" + dataFromSearchRequest.getSub_category_id()
@@ -53,6 +52,7 @@ public class BuyingRepository extends BaseRepository {
         else
             return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SEARCH + dataFromSearchRequest.getCategory_id()
                             + "&brand_id=" + dataFromSearchRequest.getBrand_id()
+                            + "&sub_category_id=" + dataFromSearchRequest.getSub_category_id()
                     , new Object(), ProductSearchResponse.class,
                     Constants.SEARCH, true);
 

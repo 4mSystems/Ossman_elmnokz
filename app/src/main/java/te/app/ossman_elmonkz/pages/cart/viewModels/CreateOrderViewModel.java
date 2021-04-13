@@ -2,13 +2,18 @@ package te.app.ossman_elmonkz.pages.cart.viewModels;
 
 import androidx.lifecycle.MutableLiveData;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
 import te.app.ossman_elmonkz.base.BaseViewModel;
 import te.app.ossman_elmonkz.model.base.Mutable;
+import te.app.ossman_elmonkz.model.govs.GovsData;
 import te.app.ossman_elmonkz.pages.cart.models.CreateOrder;
 import te.app.ossman_elmonkz.repository.BuyingRepository;
+import te.app.ossman_elmonkz.utils.Constants;
 
 public class CreateOrderViewModel extends BaseViewModel {
 
@@ -17,13 +22,19 @@ public class CreateOrderViewModel extends BaseViewModel {
     CreateOrder createOrder;
     @Inject
     BuyingRepository productRepository;
+    public List<GovsData> govsDataList;
 
     @Inject
     public CreateOrderViewModel(BuyingRepository productRepository) {
+        govsDataList = new ArrayList<>();
         this.productRepository = productRepository;
         this.liveData = new MutableLiveData<>();
         this.productRepository.setLiveData(liveData);
         createOrder = new CreateOrder();
+    }
+
+    public void getGovs() {
+        compositeDisposable.add(getProductRepository().getGovs());
     }
 
     public void sendOrder() {
@@ -37,6 +48,10 @@ public class CreateOrderViewModel extends BaseViewModel {
 
     public void setCreateOrder(CreateOrder createOrder) {
         this.createOrder = createOrder;
+    }
+
+    public void showGovs() {
+        liveData.setValue(new Mutable(Constants.SHOW_GOVS));
     }
 
     public BuyingRepository getProductRepository() {

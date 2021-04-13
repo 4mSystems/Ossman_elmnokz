@@ -74,5 +74,6 @@
     <string name="product_name_hint">اختار المنتج من هنا</string>
     <string name="details">تفاصيل المنتج</string>
     <string name="coin">جنية مصرى</string>
+    <string name="gov_order">يرجى إختيار المحافظة</string>
 
 </resources>

@@ -55,8 +55,9 @@ public class BuyingFragment extends BaseFragment {
         if (bundle != null) {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
+            viewModel.getBrandModel();
         }
-        viewModel.getBrandModel();
+
         setEvent();
         return binding.getRoot();
     }

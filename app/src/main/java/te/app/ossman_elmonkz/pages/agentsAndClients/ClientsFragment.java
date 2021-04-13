@@ -53,18 +53,22 @@ public class ClientsFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            if (((Mutable) o).message.equals(Constants.GOVS)) {
-                viewModel.govsDataList = ((GovsResponse) mutable.object).getData();
-                if (viewModel.govsDataList.size() > 0) {
-                    viewModel.selectGov = viewModel.govsDataList.get(0).getName();
-                    viewModel.getClients(viewModel.govsDataList.get(0).getId());
-                }
+            switch (((Mutable) o).message) {
+                case Constants.GOVS:
+                    viewModel.govsDataList = ((GovsResponse) mutable.object).getData();
+                    if (viewModel.govsDataList.size() > 0) {
+                        viewModel.selectGov = viewModel.govsDataList.get(0).getName();
+                        viewModel.getClients(viewModel.govsDataList.get(0).getId());
+                    }
 
-            } else if (((Mutable) o).message.equals(Constants.CLIENTS)) {
-                viewModel.getClientsAdapter().update(((ClientsResponse) mutable.object).getData());
-                viewModel.notifyChange(BR.clientsAdapter);
-            } else if (((Mutable) o).message.equals(Constants.SHOW_GOVS)) {
-                showGovs();
+                    break;
+                case Constants.CLIENTS:
+                    viewModel.getClientsAdapter().update(((ClientsResponse) mutable.object).getData());
+                    viewModel.notifyChange(BR.clientsAdapter);
+                    break;
+                case Constants.SHOW_GOVS:
+                    showGovs();
+                    break;
             }
         });
     }

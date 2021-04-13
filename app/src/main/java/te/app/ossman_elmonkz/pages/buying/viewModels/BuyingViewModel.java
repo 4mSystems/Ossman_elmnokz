@@ -43,11 +43,11 @@ public class BuyingViewModel extends BaseViewModel {
     }
 
     public void getBrandModel() {
-        compositeDisposable.add(buyingRepository.getBrandModelPartion());
+        compositeDisposable.add(buyingRepository.getBrandModelPartion(Integer.parseInt(getPassingObject().getObject())));
     }
 
     public void addToCart() {
-        if (getPassingObject().getObject().equals("8")) {
+        if (getPassingObject().getObject().equals("9") || getPassingObject().getObject().equals("10")) {
             if (getOrderRequest().isAllValid()) {
                 getCartRepository().insert(getOrderRequest());
                 liveData.setValue(new Mutable(Constants.ADD_TO_CART));

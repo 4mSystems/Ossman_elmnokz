@@ -9,7 +9,7 @@ import java.util.List;
 import te.app.ossman_elmonkz.pages.buying.models.OrderRequest;
 
 public class CreateOrder {
-    @SerializedName("product")
+    @SerializedName("products")
     private List<OrderRequest> productList;
     @SerializedName("name")
     private String name;
@@ -21,6 +21,8 @@ public class CreateOrder {
     private String notes;
     @SerializedName("device_id")
     private String device_id;
+    @SerializedName("gov_id")
+    private String gov_id;
 
 
     public CreateOrder() {
@@ -31,7 +33,7 @@ public class CreateOrder {
     }
 
     public boolean isValid() {
-        return (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(phone) && !TextUtils.isEmpty(address));
+        return (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(phone) && !TextUtils.isEmpty(address)&& !TextUtils.isEmpty(gov_id));
     }
 
     public List<OrderRequest> getProductList() {
@@ -80,5 +82,13 @@ public class CreateOrder {
 
     public void setDevice_id(String device_id) {
         this.device_id = device_id;
+    }
+
+    public String getGov_id() {
+        return gov_id;
+    }
+
+    public void setGov_id(String gov_id) {
+        this.gov_id = gov_id;
     }
 }

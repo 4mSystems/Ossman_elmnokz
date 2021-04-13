@@ -25,9 +25,11 @@ import te.app.ossman_elmonkz.base.IApplicationComponent;
 import te.app.ossman_elmonkz.base.MyApplication;
 import te.app.ossman_elmonkz.databinding.FragmentCreateOrderBinding;
 import te.app.ossman_elmonkz.model.base.Mutable;
+import te.app.ossman_elmonkz.model.govs.GovsResponse;
 import te.app.ossman_elmonkz.pages.cart.models.CreateOrder;
 import te.app.ossman_elmonkz.pages.cart.viewModels.CreateOrderViewModel;
 import te.app.ossman_elmonkz.utils.Constants;
+import te.app.ossman_elmonkz.utils.PopUp.PopUpMenuHelper;
 import te.app.ossman_elmonkz.utils.helper.MovementHelper;
 
 
@@ -36,13 +38,15 @@ public class CreateOrderFragment extends BaseFragment {
     private Context context;
     @Inject
     CreateOrderViewModel viewModel;
+    FragmentCreateOrderBinding binding;
 
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        FragmentCreateOrderBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_create_order, container, false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_create_order, container, false);
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
+        viewModel.getGovs();
         Bundle bundle = this.getArguments();
         if (bundle != null) {
             String passingObject = bundle.getString(Constants.BUNDLE);
@@ -61,6 +65,10 @@ public class CreateOrderFragment extends BaseFragment {
                 toastMessage(getString(R.string.send_successfully));
                 MovementHelper.finishWithResult(new PassingObject(), context);
                 finishActivity();
+            } else if (((Mutable) o).message.equals(Constants.GOVS)) {
+                viewModel.govsDataList = ((GovsResponse) mutable.object).getData();
+            } else if (((Mutable) o).message.equals(Constants.SHOW_GOVS)) {
+                showGovs();
             }
         });
         FirebaseMessaging.getInstance().getToken()
@@ -72,6 +80,13 @@ public class CreateOrderFragment extends BaseFragment {
                 });
     }
 
+    private void showGovs() {
+        PopUpMenuHelper.showGovsPopUp(context, binding.clientGovText, viewModel.govsDataList).setOnMenuItemClickListener(item -> {
+            binding.clientGovText.setText(viewModel.govsDataList.get(item.getItemId()).getName());
+            viewModel.getCreateOrder().setGov_id(String.valueOf(viewModel.govsDataList.get(item.getItemId()).getId()));
+            return false;
+        });
+    }
 
     @Override
     public void onResume() {

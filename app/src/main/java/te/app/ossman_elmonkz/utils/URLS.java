@@ -6,7 +6,7 @@ public class URLS {
     public final static String SUB_CATEGORIES = "sub_categories/level1/";
     public final static String BRAND_MODEL_PARTION = "app/brands_modells_partions";
 
-    public final static String SEND_ORDER = "make_order/ar/v1";
+    public final static String SEND_ORDER = "app/make-order";
     public final static String FILTER = "products/sort-last-level/5/ar/v1?category_id=";
     public final static String CONTACT = "app/complains_suggestions";
     public final static String HOME = "app/categories_subcategories";

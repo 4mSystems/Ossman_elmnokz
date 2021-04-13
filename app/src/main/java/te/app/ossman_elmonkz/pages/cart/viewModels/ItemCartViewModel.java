@@ -21,9 +21,11 @@ public class ItemCartViewModel extends BaseViewModel {
     }
 
     public void minusItem() {
-        product.setQuantity(String.valueOf(Integer.parseInt(product.getQuantity()) - 1));
-        new CartRepository(MyApplication.getInstance()).update(product);
-        getLiveData().setValue(Constants.MINUS);
+        if (!product.getQuantity().equals("1")) {
+            product.setQuantity(String.valueOf(Integer.parseInt(product.getQuantity()) - 1));
+            new CartRepository(MyApplication.getInstance()).update(product);
+            getLiveData().setValue(Constants.MINUS);
+        }
     }
 
     public void plusItem() {

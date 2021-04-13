@@ -21,6 +21,7 @@ public class OrderRequest {
     @SerializedName("product_id")
     private String product_id;
     private String modelId;
+    @SerializedName("quantity")
     private String quantity = "1";
     @PrimaryKey
     private int id = new Random().nextInt(61);
