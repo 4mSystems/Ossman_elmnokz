@@ -41,7 +41,7 @@ public class BuyingViewModel extends BaseViewModel {
         this.buyingRepository.setLiveData(this.liveData);
         cartRepository = new CartRepository(MyApplication.getInstance());
     }
-
+//    getPassingObject().getObject() Sub cat id
     public void getBrandModel() {
         compositeDisposable.add(buyingRepository.getBrandModelPartion(Integer.parseInt(getPassingObject().getObject())));
     }
@@ -75,6 +75,7 @@ public class BuyingViewModel extends BaseViewModel {
         if (getOrderRequest().getBrandName() != null) {
             dataFromSearchRequest.setBrand_id(getOrderRequest().getBrandId());
             dataFromSearchRequest.setCategory_id(String.valueOf(getPassingObject().getId()));
+            dataFromSearchRequest.setSub_category_id(String.valueOf(getPassingObject().getObject()));
             liveData.setValue(new Mutable(Constants.SELECT_MODELS));
         } else
             liveData.setValue(new Mutable(Constants.EMPTY_WARNING));
@@ -86,7 +87,7 @@ public class BuyingViewModel extends BaseViewModel {
             dataFromSearchRequest.setModell_id(getOrderRequest().getModelId());
             dataFromSearchRequest.setCategory_id(String.valueOf(getPassingObject().getId()));
             dataFromSearchRequest.setSub_category_id(String.valueOf(getPassingObject().getObject()));
-            if (getPassingObject().getObject().equals("9") || getPassingObject().getObject().equals("10"))
+            if (getPassingObject().getObject().equals(Constants.INTERNAL_ACCESSORIES) || getPassingObject().getObject().equals(Constants.EXTERNAL_ACCESSORIES))
                 dataFromSearchRequest.setPartion_id(getOrderRequest().getPartId());
             liveData.setValue(new Mutable(Constants.SELECT_PRODUCT));
         } else

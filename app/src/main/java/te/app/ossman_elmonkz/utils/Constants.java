@@ -77,6 +77,8 @@ public class Constants {
     //RESPONSES
     public static final int RESPONSE_SUCCESS = 200;
     public final static String MY_WORKS = "MY_WORKS";
+    public static final String INTERNAL_ACCESSORIES = "9"; //اكسسوار داخلى
+    public static final String EXTERNAL_ACCESSORIES = "10"; //اكسسوار خارجى
     public static int PART_REQUEST = 4000;
     public static int BRAND_REQUEST = 5000;
     public static int MODEL_REQUEST = 7000;

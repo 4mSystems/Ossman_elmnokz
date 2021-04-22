@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+
+           
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dp12h" android:tag="layout/send_request_dialog_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp18h"
+                android:src="@drawable/ic_join_request"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium
+                android:id="@+id/dialog_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp13h"
+                android:text="@string/thank_you"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/done"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp12w"
+                android:gravity="center"
+                android:text="@string/done"
+                android:textAppearance="?attr/textAppearanceButton"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/colorPrimaryDark"
+                app:iconGravity="end"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/continue_buy"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_header"
+                app:rippleColor="@color/overlayBackground" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/continue_buy"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp12w"
+                android:gravity="center"
+                android:text="@string/continue_buy"
+                android:textAppearance="?attr/textAppearanceButton"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/colorAccent"
+                app:iconGravity="end"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/done"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_header"
+                app:rippleColor="@color/overlayBackground" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+         
