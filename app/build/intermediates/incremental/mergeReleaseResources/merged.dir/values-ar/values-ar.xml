@@ -161,6 +161,8 @@
     <string name="password_toggle_content_description">عرض كلمة المرور</string>
     <string name="please_select_another_file">Please select another file</string>
     <string name="prePayment_text">مقدم الحجز :</string>
+    <string name="product_color_hint">اختار لون المنتج :</string>
+    <string name="product_color_warning">اختر اللون</string>
     <string name="product_name_hint">اختار المنتج من هنا</string>
     <string name="product_warning1">للحجز يرجى التواصل مع مسئول الحجز مهندس / محمد المنقذ</string>
     <string name="product_warning2">سيتم فتح باب الحجز ابتداء من ---- الى ---</string>

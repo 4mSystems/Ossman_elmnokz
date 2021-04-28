@@ -18,11 +18,15 @@ public class OrderRequest {
     private String brandId;
     private String modelName;
     private String productName;
+    private String productColorName;
     @SerializedName("product_id")
     private String product_id;
     private String modelId;
     @SerializedName("quantity")
     private String quantity = "1";
+    @SerializedName("color_id")
+    private String colorId;
+    private boolean hasColor;
     @PrimaryKey
     private int id = new Random().nextInt(61);
 
@@ -112,5 +116,29 @@ public class OrderRequest {
 
     public void setProductName(String productName) {
         this.productName = productName;
+    }
+
+    public String getProductColorName() {
+        return productColorName;
+    }
+
+    public void setProductColorName(String productColorName) {
+        this.productColorName = productColorName;
+    }
+
+    public String getColorId() {
+        return colorId;
+    }
+
+    public void setColorId(String colorId) {
+        this.colorId = colorId;
+    }
+
+    public boolean isHasColor() {
+        return hasColor;
+    }
+
+    public void setHasColor(boolean hasColor) {
+        this.hasColor = hasColor;
     }
 }

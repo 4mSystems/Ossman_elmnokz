@@ -23,6 +23,9 @@ public abstract class ItemCartBinding extends ViewDataBinding {
   public final Barrier br;
 
   @NonNull
+  public final CustomTextViewMedium colorName;
+
+  @NonNull
   public final AppCompatImageView decrement;
 
   @NonNull
@@ -44,11 +47,12 @@ public abstract class ItemCartBinding extends ViewDataBinding {
   protected ItemCartViewModel mItemViewModel;
 
   protected ItemCartBinding(Object _bindingComponent, View _root, int _localFieldCount, Barrier br,
-      AppCompatImageView decrement, AppCompatImageView increment,
+      CustomTextViewMedium colorName, AppCompatImageView decrement, AppCompatImageView increment,
       MaterialTextView incrementalViewText, CustomTextViewMedium productBrand,
       CustomTextViewMedium productModel, CustomTextViewMedium productName) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br = br;
+    this.colorName = colorName;
     this.decrement = decrement;
     this.increment = increment;
     this.incrementalViewText = incrementalViewText;

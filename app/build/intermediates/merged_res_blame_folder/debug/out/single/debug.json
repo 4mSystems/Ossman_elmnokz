@@ -244,6 +244,10 @@
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/item_brand.xml"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/layout_item_color.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/item_color.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/debug/layout_fragment_contacts.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_contacts.xml"
     },

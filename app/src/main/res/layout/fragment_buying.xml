@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
         <import type="android.view.View" />
+
+        <import type="android.graphics.Color" />
 
         <variable
             name="viewmodel"
@@ -94,6 +97,7 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/product_name"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -104,6 +108,7 @@
                 android:layout_marginEnd="@dimen/dp6w"
                 app:endIconDrawable="@drawable/ic_arrow_down"
                 app:endIconMode="custom"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/model_name">
 
@@ -118,6 +123,51 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium
+                android:id="@+id/color_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp6w"
+                android:text="@string/product_color_hint"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_name" />
+
+            <te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium
+                android:id="@+id/color_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp6w"
+                android:text="@{viewmodel.colorName!=null?viewmodel.colorName:``}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@{Color.parseColor(viewmodel.colorCode!=null?viewmodel.colorCode:`#F2F2F2`)}"
+                android:textStyle="bold|italic"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/color_hint"
+                app:layout_constraintTop_toBottomOf="@id/product_name" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/br6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="color_hint,color_name" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/product_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10w"
+                android:orientation="horizontal"
+                app:adapter="@{viewmodel.productColorAdapter}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/br6"
+                app:orientation="@{`2`}"
+                app:span="@{`1`}"
+                tools:listitem="@layout/item_color" />
 
             <te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium
                 android:id="@+id/customTextViewMedium"
@@ -142,7 +192,7 @@
                 android:layout_marginTop="@dimen/dp6h"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/customTextViewMedium"
-                app:layout_constraintTop_toBottomOf="@id/product_name"
+                app:layout_constraintTop_toBottomOf="@id/product_color"
                 app:value="@={viewmodel.orderRequest.quantity}" />
 
             <androidx.constraintlayout.widget.Barrier

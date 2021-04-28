@@ -64,6 +64,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/product_brand" />
 
+            <te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium
+                android:id="@+id/color_name"
+                android:layout_width="match_parent"
+                android:textAlignment="viewStart"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp6w"
+                android:text="@{itemViewModel.product.productColorName!=null?itemViewModel.product.productColorName:``}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_model" />
+
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/increment"
                 android:layout_width="wrap_content"
@@ -72,7 +84,7 @@
                 android:onClick="@{()-> itemViewModel.plusItem()}"
                 android:src="@drawable/ic_add"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/product_model"
+                app:layout_constraintTop_toBottomOf="@id/color_name"
                 app:tint="@color/black" />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -83,7 +95,7 @@
                 android:onClick="@{()-> itemViewModel.minusItem()}"
                 android:src="@drawable/ic_remove"
                 app:layout_constraintStart_toEndOf="@+id/incrementalViewText"
-                app:layout_constraintTop_toBottomOf="@id/product_model"
+                app:layout_constraintTop_toBottomOf="@id/color_name"
                 app:tint="@color/black" />
 
             <com.google.android.material.textview.MaterialTextView

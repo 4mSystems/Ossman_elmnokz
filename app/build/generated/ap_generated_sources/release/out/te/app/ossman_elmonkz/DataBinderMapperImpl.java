@@ -39,6 +39,7 @@ import te.app.ossman_elmonkz.databinding.ItemAgentsBindingImpl;
 import te.app.ossman_elmonkz.databinding.ItemBrandBindingImpl;
 import te.app.ossman_elmonkz.databinding.ItemCartBindingImpl;
 import te.app.ossman_elmonkz.databinding.ItemClientsBindingImpl;
+import te.app.ossman_elmonkz.databinding.ItemColorBindingImpl;
 import te.app.ossman_elmonkz.databinding.ItemGalleryBindingImpl;
 import te.app.ossman_elmonkz.databinding.ItemHomeBindingImpl;
 import te.app.ossman_elmonkz.databinding.ItemSearchBindingImpl;
@@ -96,21 +97,23 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_ITEMCLIENTS = 24;
 
-  private static final int LAYOUT_ITEMGALLERY = 25;
+  private static final int LAYOUT_ITEMCOLOR = 25;
 
-  private static final int LAYOUT_ITEMHOME = 26;
+  private static final int LAYOUT_ITEMGALLERY = 26;
 
-  private static final int LAYOUT_ITEMSEARCH = 27;
+  private static final int LAYOUT_ITEMHOME = 27;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 28;
+  private static final int LAYOUT_ITEMSEARCH = 28;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 29;
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 29;
 
-  private static final int LAYOUT_LAYOUTTES = 30;
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 30;
 
-  private static final int LAYOUT_SENDREQUESTDIALOG = 31;
+  private static final int LAYOUT_LAYOUTTES = 31;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(31);
+  private static final int LAYOUT_SENDREQUESTDIALOG = 32;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(32);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
@@ -137,6 +140,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.item_brand, LAYOUT_ITEMBRAND);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.item_cart, LAYOUT_ITEMCART);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.item_clients, LAYOUT_ITEMCLIENTS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.item_color, LAYOUT_ITEMCOLOR);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.item_gallery, LAYOUT_ITEMGALLERY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.item_home, LAYOUT_ITEMHOME);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.ossman_elmonkz.R.layout.item_search, LAYOUT_ITEMSEARCH);
@@ -299,6 +303,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for item_clients is invalid. Received: " + tag);
         }
+        case  LAYOUT_ITEMCOLOR: {
+          if ("layout/item_color_0".equals(tag)) {
+            return new ItemColorBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_color is invalid. Received: " + tag);
+        }
         case  LAYOUT_ITEMGALLERY: {
           if ("layout/item_gallery_0".equals(tag)) {
             return new ItemGalleryBindingImpl(component, view);
@@ -386,7 +396,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(28);
+    static final SparseArray<String> sKeys = new SparseArray<String>(30);
 
     static {
       sKeys.put(0, "_all");
@@ -410,18 +420,20 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(18, "onBoardViewModels");
       sKeys.put(19, "passingObject");
       sKeys.put(20, "product");
-      sKeys.put(21, "productDetails");
-      sKeys.put(22, "productsAdapter");
-      sKeys.put(23, "searchAdapter");
-      sKeys.put(24, "searchItem");
-      sKeys.put(25, "searchProgressVisible");
-      sKeys.put(26, "viewModel");
-      sKeys.put(27, "viewmodel");
+      sKeys.put(21, "productColor");
+      sKeys.put(22, "productColorAdapter");
+      sKeys.put(23, "productDetails");
+      sKeys.put(24, "productsAdapter");
+      sKeys.put(25, "searchAdapter");
+      sKeys.put(26, "searchItem");
+      sKeys.put(27, "searchProgressVisible");
+      sKeys.put(28, "viewModel");
+      sKeys.put(29, "viewmodel");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(31);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(32);
 
     static {
       sKeys.put("layout/activity_base_0", te.app.ossman_elmonkz.R.layout.activity_base);
@@ -448,6 +460,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/item_brand_0", te.app.ossman_elmonkz.R.layout.item_brand);
       sKeys.put("layout/item_cart_0", te.app.ossman_elmonkz.R.layout.item_cart);
       sKeys.put("layout/item_clients_0", te.app.ossman_elmonkz.R.layout.item_clients);
+      sKeys.put("layout/item_color_0", te.app.ossman_elmonkz.R.layout.item_color);
       sKeys.put("layout/item_gallery_0", te.app.ossman_elmonkz.R.layout.item_gallery);
       sKeys.put("layout/item_home_0", te.app.ossman_elmonkz.R.layout.item_home);
       sKeys.put("layout/item_search_0", te.app.ossman_elmonkz.R.layout.item_search);

@@ -14,11 +14,13 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding implements 
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.brand_name, 8);
-        sViewsWithIds.put(R.id.model_name, 9);
-        sViewsWithIds.put(R.id.product_name, 10);
-        sViewsWithIds.put(R.id.customTextViewMedium, 11);
-        sViewsWithIds.put(R.id.br, 12);
+        sViewsWithIds.put(R.id.brand_name, 10);
+        sViewsWithIds.put(R.id.model_name, 11);
+        sViewsWithIds.put(R.id.product_name, 12);
+        sViewsWithIds.put(R.id.color_hint, 13);
+        sViewsWithIds.put(R.id.br6, 14);
+        sViewsWithIds.put(R.id.customTextViewMedium, 15);
+        sViewsWithIds.put(R.id.br, 16);
     }
     // views
     @NonNull
@@ -35,11 +37,11 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding implements 
     @Nullable
     private final android.view.View.OnClickListener mCallback23;
     @Nullable
-    private final android.view.View.OnClickListener mCallback21;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback20;
-    @Nullable
     private final android.view.View.OnClickListener mCallback24;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback25;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback21;
     @Nullable
     private final android.view.View.OnClickListener mCallback22;
     // values
@@ -232,19 +234,24 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding implements 
     };
 
     public FragmentBuyingBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 13, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 17, sIncludes, sViewsWithIds));
     }
     private FragmentBuyingBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 1
-            , (androidx.constraintlayout.widget.Barrier) bindings[12]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[8]
-            , (te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium) bindings[11]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[1]
-            , (com.google.android.material.button.MaterialButton) bindings[7]
-            , (te.app.ossman_elmonkz.customViews.views.IncrementalView) bindings[6]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[9]
+        super(bindingComponent, root, 3
+            , (androidx.constraintlayout.widget.Barrier) bindings[16]
+            , (androidx.constraintlayout.widget.Barrier) bindings[14]
             , (com.google.android.material.textfield.TextInputLayout) bindings[10]
+            , (te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium) bindings[13]
+            , (te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium) bindings[6]
+            , (te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium) bindings[15]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[1]
+            , (com.google.android.material.button.MaterialButton) bindings[9]
+            , (te.app.ossman_elmonkz.customViews.views.IncrementalView) bindings[8]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[11]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[7]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[12]
             );
+        this.colorName.setTag(null);
         this.departmentName.setTag(null);
         this.edit.setTag(null);
         this.incrementalViewFloorNumber.setTag(null);
@@ -258,20 +265,21 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding implements 
         this.mboundView4.setTag(null);
         this.mboundView5 = (com.google.android.material.textfield.TextInputEditText) bindings[5];
         this.mboundView5.setTag(null);
+        this.productColor.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback23 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 4);
-        mCallback21 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 2);
-        mCallback20 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
-        mCallback24 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 5);
-        mCallback22 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 3);
+        mCallback23 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 3);
+        mCallback24 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 4);
+        mCallback25 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 5);
+        mCallback21 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
+        mCallback22 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x4L;
+                mDirtyFlags = 0x20L;
         }
         requestRebind();
     }
@@ -299,10 +307,10 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding implements 
     }
 
     public void setViewmodel(@Nullable te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel Viewmodel) {
-        updateRegistration(0, Viewmodel);
+        updateRegistration(2, Viewmodel);
         this.mViewmodel = Viewmodel;
         synchronized(this) {
-            mDirtyFlags |= 0x1L;
+            mDirtyFlags |= 0x4L;
         }
         notifyPropertyChanged(BR.viewmodel);
         super.requestRebind();
@@ -312,20 +320,48 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding implements 
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
+                return onChangeViewmodelColorName((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+            case 1 :
+                return onChangeViewmodelColorCode((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+            case 2 :
                 return onChangeViewmodel((te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewmodel(te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel Viewmodel, int fieldId) {
+    private boolean onChangeViewmodelColorName(androidx.databinding.ObservableField<java.lang.String> ViewmodelColorName, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
             }
             return true;
         }
-        else if (fieldId == BR.passingObject) {
+        return false;
+    }
+    private boolean onChangeViewmodelColorCode(androidx.databinding.ObservableField<java.lang.String> ViewmodelColorCode, int fieldId) {
+        if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
+        return false;
+    }
+    private boolean onChangeViewmodel(te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel Viewmodel, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x4L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.passingObject) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x8L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.productColorAdapter) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x10L;
             }
             return true;
         }
@@ -339,49 +375,120 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding implements 
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        java.lang.String viewmodelOrderRequestQuantity = null;
         int viewmodelPassingObjectObjectEqualsJavaLangString9BooleanTrueViewmodelPassingObjectObjectEqualsJavaLangString10ViewVISIBLEViewGONE = 0;
         te.app.ossman_elmonkz.PassingObject viewmodelPassingObject = null;
+        java.lang.String viewmodelColorNameGet = null;
         boolean viewmodelPassingObjectObjectEqualsJavaLangString9 = false;
-        boolean viewmodelPassingObjectObjectEqualsJavaLangString9BooleanTrueViewmodelPassingObjectObjectEqualsJavaLangString10 = false;
+        java.lang.String viewmodelColorCodeJavaLangObjectNullViewmodelColorCodeJavaLangStringF2F2F2 = null;
         java.lang.String viewmodelPassingObjectObject = null;
         boolean viewmodelPassingObjectObjectEqualsJavaLangString10 = false;
-        java.lang.String viewmodelOrderRequestBrandName = null;
-        java.lang.String viewmodelOrderRequestPartName = null;
+        int colorParseColorViewmodelColorCodeJavaLangObjectNullViewmodelColorCodeJavaLangStringF2F2F2 = 0;
         java.lang.String viewmodelOrderRequestModelName = null;
+        boolean viewmodelColorNameJavaLangObjectNull = false;
+        java.lang.String viewmodelOrderRequestQuantity = null;
+        java.lang.String viewmodelColorCodeGet = null;
+        androidx.databinding.ObservableField<java.lang.String> viewmodelColorName = null;
+        boolean viewmodelColorCodeJavaLangObjectNull = false;
+        boolean viewmodelPassingObjectObjectEqualsJavaLangString9BooleanTrueViewmodelPassingObjectObjectEqualsJavaLangString10 = false;
+        java.lang.String viewmodelOrderRequestBrandName = null;
+        te.app.ossman_elmonkz.pages.buying.adapter.ProductColorAdapter viewmodelProductColorAdapter = null;
+        java.lang.String viewmodelOrderRequestPartName = null;
+        java.lang.String viewmodelColorNameJavaLangObjectNullViewmodelColorNameJavaLangString = null;
+        androidx.databinding.ObservableField<java.lang.String> viewmodelColorCode = null;
         java.lang.String viewmodelOrderRequestProductName = null;
         te.app.ossman_elmonkz.pages.buying.models.OrderRequest viewmodelOrderRequest = null;
         te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel viewmodel = mViewmodel;
 
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0x3fL) != 0) {
 
 
+            if ((dirtyFlags & 0x2cL) != 0) {
 
-                if (viewmodel != null) {
-                    // read viewmodel.passingObject
-                    viewmodelPassingObject = viewmodel.getPassingObject();
-                }
-
-
-                if (viewmodelPassingObject != null) {
-                    // read viewmodel.passingObject.object
-                    viewmodelPassingObjectObject = viewmodelPassingObject.getObject();
-                }
+                    if (viewmodel != null) {
+                        // read viewmodel.passingObject
+                        viewmodelPassingObject = viewmodel.getPassingObject();
+                    }
 
 
-                if (viewmodelPassingObjectObject != null) {
-                    // read viewmodel.passingObject.object.equals("9")
-                    viewmodelPassingObjectObjectEqualsJavaLangString9 = viewmodelPassingObjectObject.equals("9");
-                }
-            if((dirtyFlags & 0x7L) != 0) {
-                if(viewmodelPassingObjectObjectEqualsJavaLangString9) {
-                        dirtyFlags |= 0x40L;
-                }
-                else {
-                        dirtyFlags |= 0x20L;
+                    if (viewmodelPassingObject != null) {
+                        // read viewmodel.passingObject.object
+                        viewmodelPassingObjectObject = viewmodelPassingObject.getObject();
+                    }
+
+
+                    if (viewmodelPassingObjectObject != null) {
+                        // read viewmodel.passingObject.object.equals("9")
+                        viewmodelPassingObjectObjectEqualsJavaLangString9 = viewmodelPassingObjectObject.equals("9");
+                    }
+                if((dirtyFlags & 0x2cL) != 0) {
+                    if(viewmodelPassingObjectObjectEqualsJavaLangString9) {
+                            dirtyFlags |= 0x800L;
+                    }
+                    else {
+                            dirtyFlags |= 0x400L;
+                    }
                 }
             }
-            if ((dirtyFlags & 0x5L) != 0) {
+            if ((dirtyFlags & 0x25L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.colorName
+                        viewmodelColorName = viewmodel.colorName;
+                    }
+                    updateRegistration(0, viewmodelColorName);
+
+
+                    if (viewmodelColorName != null) {
+                        // read viewmodel.colorName.get()
+                        viewmodelColorNameGet = viewmodelColorName.get();
+                    }
+
+
+                    // read viewmodel.colorName.get() != null
+                    viewmodelColorNameJavaLangObjectNull = (viewmodelColorNameGet) != (null);
+                if((dirtyFlags & 0x25L) != 0) {
+                    if(viewmodelColorNameJavaLangObjectNull) {
+                            dirtyFlags |= 0x2000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x1000L;
+                    }
+                }
+            }
+            if ((dirtyFlags & 0x34L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.productColorAdapter
+                        viewmodelProductColorAdapter = viewmodel.getProductColorAdapter();
+                    }
+            }
+            if ((dirtyFlags & 0x26L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.colorCode
+                        viewmodelColorCode = viewmodel.colorCode;
+                    }
+                    updateRegistration(1, viewmodelColorCode);
+
+
+                    if (viewmodelColorCode != null) {
+                        // read viewmodel.colorCode.get()
+                        viewmodelColorCodeGet = viewmodelColorCode.get();
+                    }
+
+
+                    // read viewmodel.colorCode.get() != null
+                    viewmodelColorCodeJavaLangObjectNull = (viewmodelColorCodeGet) != (null);
+                if((dirtyFlags & 0x26L) != 0) {
+                    if(viewmodelColorCodeJavaLangObjectNull) {
+                            dirtyFlags |= 0x200L;
+                    }
+                    else {
+                            dirtyFlags |= 0x100L;
+                    }
+                }
+            }
+            if ((dirtyFlags & 0x24L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.orderRequest
@@ -390,14 +497,14 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding implements 
 
 
                     if (viewmodelOrderRequest != null) {
+                        // read viewmodel.orderRequest.modelName
+                        viewmodelOrderRequestModelName = viewmodelOrderRequest.getModelName();
                         // read viewmodel.orderRequest.quantity
                         viewmodelOrderRequestQuantity = viewmodelOrderRequest.getQuantity();
                         // read viewmodel.orderRequest.brandName
                         viewmodelOrderRequestBrandName = viewmodelOrderRequest.getBrandName();
                         // read viewmodel.orderRequest.partName
                         viewmodelOrderRequestPartName = viewmodelOrderRequest.getPartName();
-                        // read viewmodel.orderRequest.modelName
-                        viewmodelOrderRequestModelName = viewmodelOrderRequest.getModelName();
                         // read viewmodel.orderRequest.productName
                         viewmodelOrderRequestProductName = viewmodelOrderRequest.getProductName();
                     }
@@ -405,24 +512,38 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding implements 
         }
         // batch finished
 
-        if ((dirtyFlags & 0x20L) != 0) {
+        if ((dirtyFlags & 0x26L) != 0) {
+
+                // read viewmodel.colorCode.get() != null ? viewmodel.colorCode.get() : "#F2F2F2"
+                viewmodelColorCodeJavaLangObjectNullViewmodelColorCodeJavaLangStringF2F2F2 = ((viewmodelColorCodeJavaLangObjectNull) ? (viewmodelColorCodeGet) : ("#F2F2F2"));
+
+
+                // read Color.parseColor(viewmodel.colorCode.get() != null ? viewmodel.colorCode.get() : "#F2F2F2")
+                colorParseColorViewmodelColorCodeJavaLangObjectNullViewmodelColorCodeJavaLangStringF2F2F2 = android.graphics.Color.parseColor(viewmodelColorCodeJavaLangObjectNullViewmodelColorCodeJavaLangStringF2F2F2);
+        }
+        if ((dirtyFlags & 0x400L) != 0) {
 
                 if (viewmodelPassingObjectObject != null) {
                     // read viewmodel.passingObject.object.equals("10")
                     viewmodelPassingObjectObjectEqualsJavaLangString10 = viewmodelPassingObjectObject.equals("10");
                 }
         }
+        if ((dirtyFlags & 0x25L) != 0) {
 
-        if ((dirtyFlags & 0x7L) != 0) {
+                // read viewmodel.colorName.get() != null ? viewmodel.colorName.get() : ""
+                viewmodelColorNameJavaLangObjectNullViewmodelColorNameJavaLangString = ((viewmodelColorNameJavaLangObjectNull) ? (viewmodelColorNameGet) : (""));
+        }
+
+        if ((dirtyFlags & 0x2cL) != 0) {
 
                 // read viewmodel.passingObject.object.equals("9") ? true : viewmodel.passingObject.object.equals("10")
                 viewmodelPassingObjectObjectEqualsJavaLangString9BooleanTrueViewmodelPassingObjectObjectEqualsJavaLangString10 = ((viewmodelPassingObjectObjectEqualsJavaLangString9) ? (true) : (viewmodelPassingObjectObjectEqualsJavaLangString10));
-            if((dirtyFlags & 0x7L) != 0) {
+            if((dirtyFlags & 0x2cL) != 0) {
                 if(viewmodelPassingObjectObjectEqualsJavaLangString9BooleanTrueViewmodelPassingObjectObjectEqualsJavaLangString10) {
-                        dirtyFlags |= 0x10L;
+                        dirtyFlags |= 0x80L;
                 }
                 else {
-                        dirtyFlags |= 0x8L;
+                        dirtyFlags |= 0x40L;
                 }
             }
 
@@ -431,26 +552,36 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding implements 
                 viewmodelPassingObjectObjectEqualsJavaLangString9BooleanTrueViewmodelPassingObjectObjectEqualsJavaLangString10ViewVISIBLEViewGONE = ((viewmodelPassingObjectObjectEqualsJavaLangString9BooleanTrueViewmodelPassingObjectObjectEqualsJavaLangString10) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
         // batch finished
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0x25L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.colorName, viewmodelColorNameJavaLangObjectNullViewmodelColorNameJavaLangString);
+        }
+        if ((dirtyFlags & 0x26L) != 0) {
+            // api target 1
+
+            this.colorName.setTextColor(colorParseColorViewmodelColorCodeJavaLangObjectNullViewmodelColorCodeJavaLangStringF2F2F2);
+        }
+        if ((dirtyFlags & 0x2cL) != 0) {
             // api target 1
 
             this.departmentName.setVisibility(viewmodelPassingObjectObjectEqualsJavaLangString9BooleanTrueViewmodelPassingObjectObjectEqualsJavaLangString10ViewVISIBLEViewGONE);
         }
-        if ((dirtyFlags & 0x4L) != 0) {
+        if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.edit.setOnClickListener(mCallback24);
+            this.edit.setOnClickListener(mCallback25);
             te.app.ossman_elmonkz.customViews.views.IncrementalView.setValueListner(this.incrementalViewFloorNumber, incrementalViewFloorNumbervalueAttrChanged);
-            this.mboundView2.setOnClickListener(mCallback20);
+            this.mboundView2.setOnClickListener(mCallback21);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
-            this.mboundView3.setOnClickListener(mCallback21);
+            this.mboundView3.setOnClickListener(mCallback22);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView3, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView3androidTextAttrChanged);
-            this.mboundView4.setOnClickListener(mCallback22);
+            this.mboundView4.setOnClickListener(mCallback23);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
-            this.mboundView5.setOnClickListener(mCallback23);
+            this.mboundView5.setOnClickListener(mCallback24);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView5, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView5androidTextAttrChanged);
         }
-        if ((dirtyFlags & 0x5L) != 0) {
+        if ((dirtyFlags & 0x24L) != 0) {
             // api target 1
 
             te.app.ossman_elmonkz.customViews.views.IncrementalView.getValue(this.incrementalViewFloorNumber, viewmodelOrderRequestQuantity);
@@ -459,11 +590,33 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding implements 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView4, viewmodelOrderRequestModelName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView5, viewmodelOrderRequestProductName);
         }
+        if ((dirtyFlags & 0x34L) != 0) {
+            // api target 1
+
+            te.app.ossman_elmonkz.base.ApplicationBinding.getItemsV2Binding(this.productColor, viewmodelProductColorAdapter, "1", "2");
+        }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toModel();
+                }
+                break;
+            }
             case 4: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -478,40 +631,6 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding implements 
 
 
                     viewmodel.toProducts();
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.toBrand();
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.toPart();
                 }
                 break;
             }
@@ -532,7 +651,7 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding implements 
                 }
                 break;
             }
-            case 3: {
+            case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -545,7 +664,24 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding implements 
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.toModel();
+                    viewmodel.toPart();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toBrand();
                 }
                 break;
             }
@@ -554,13 +690,20 @@ public class FragmentBuyingBindingImpl extends FragmentBuyingBinding implements 
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): viewmodel.passingObject
-        flag 2 (0x3L): null
-        flag 3 (0x4L): viewmodel.passingObject.object.equals("9") ? true : viewmodel.passingObject.object.equals("10") ? View.VISIBLE : View.GONE
-        flag 4 (0x5L): viewmodel.passingObject.object.equals("9") ? true : viewmodel.passingObject.object.equals("10") ? View.VISIBLE : View.GONE
-        flag 5 (0x6L): viewmodel.passingObject.object.equals("9") ? true : viewmodel.passingObject.object.equals("10")
-        flag 6 (0x7L): viewmodel.passingObject.object.equals("9") ? true : viewmodel.passingObject.object.equals("10")
+        flag 0 (0x1L): viewmodel.colorName
+        flag 1 (0x2L): viewmodel.colorCode
+        flag 2 (0x3L): viewmodel
+        flag 3 (0x4L): viewmodel.passingObject
+        flag 4 (0x5L): viewmodel.productColorAdapter
+        flag 5 (0x6L): null
+        flag 6 (0x7L): viewmodel.passingObject.object.equals("9") ? true : viewmodel.passingObject.object.equals("10") ? View.VISIBLE : View.GONE
+        flag 7 (0x8L): viewmodel.passingObject.object.equals("9") ? true : viewmodel.passingObject.object.equals("10") ? View.VISIBLE : View.GONE
+        flag 8 (0x9L): viewmodel.colorCode.get() != null ? viewmodel.colorCode.get() : "#F2F2F2"
+        flag 9 (0xaL): viewmodel.colorCode.get() != null ? viewmodel.colorCode.get() : "#F2F2F2"
+        flag 10 (0xbL): viewmodel.passingObject.object.equals("9") ? true : viewmodel.passingObject.object.equals("10")
+        flag 11 (0xcL): viewmodel.passingObject.object.equals("9") ? true : viewmodel.passingObject.object.equals("10")
+        flag 12 (0xdL): viewmodel.colorName.get() != null ? viewmodel.colorName.get() : ""
+        flag 13 (0xeL): viewmodel.colorName.get() != null ? viewmodel.colorName.get() : ""
     flag mapping end*/
     //end
 }

@@ -22,9 +22,9 @@ public class ItemBrandBindingImpl extends ItemBrandBinding implements te.app.oss
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback17;
-    @Nullable
     private final android.view.View.OnClickListener mCallback18;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback19;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -47,8 +47,8 @@ public class ItemBrandBindingImpl extends ItemBrandBinding implements te.app.oss
         this.productName.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback17 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
-        mCallback18 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 2);
+        mCallback18 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
+        mCallback19 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -177,8 +177,8 @@ public class ItemBrandBindingImpl extends ItemBrandBinding implements te.app.oss
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView1.setOnClickListener(mCallback17);
-            this.productDetails.setOnClickListener(mCallback18);
+            this.mboundView1.setOnClickListener(mCallback18);
+            this.productDetails.setOnClickListener(mCallback19);
         }
     }
     // Listener Stub Implementations

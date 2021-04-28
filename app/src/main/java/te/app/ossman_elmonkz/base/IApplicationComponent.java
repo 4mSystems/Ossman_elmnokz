@@ -71,6 +71,7 @@ public interface IApplicationComponent {
     void inject(SelectBrandModelPartionFragment selectBrandModelPartionFragment);
 
 
+
     @Component.Builder
     interface Builder {
         IApplicationComponent build();

@@ -22,7 +22,7 @@ public class FragmentProductDetailsBindingImpl extends FragmentProductDetailsBin
     private final te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium mboundView3;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback16;
+    private final android.view.View.OnClickListener mCallback17;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -43,7 +43,7 @@ public class FragmentProductDetailsBindingImpl extends FragmentProductDetailsBin
         this.productPrice.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback16 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
+        mCallback17 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -210,7 +210,7 @@ public class FragmentProductDetailsBindingImpl extends FragmentProductDetailsBin
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.productImage.setOnClickListener(mCallback16);
+            this.productImage.setOnClickListener(mCallback17);
         }
     }
     // Listener Stub Implementations

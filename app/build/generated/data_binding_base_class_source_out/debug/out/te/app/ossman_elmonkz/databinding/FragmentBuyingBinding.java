@@ -10,6 +10,7 @@ import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
@@ -24,7 +25,16 @@ public abstract class FragmentBuyingBinding extends ViewDataBinding {
   public final Barrier br;
 
   @NonNull
+  public final Barrier br6;
+
+  @NonNull
   public final TextInputLayout brandName;
+
+  @NonNull
+  public final CustomTextViewMedium colorHint;
+
+  @NonNull
+  public final CustomTextViewMedium colorName;
 
   @NonNull
   public final CustomTextViewMedium customTextViewMedium;
@@ -42,24 +52,32 @@ public abstract class FragmentBuyingBinding extends ViewDataBinding {
   public final TextInputLayout modelName;
 
   @NonNull
+  public final RecyclerView productColor;
+
+  @NonNull
   public final TextInputLayout productName;
 
   @Bindable
   protected BuyingViewModel mViewmodel;
 
   protected FragmentBuyingBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Barrier br, TextInputLayout brandName, CustomTextViewMedium customTextViewMedium,
+      Barrier br, Barrier br6, TextInputLayout brandName, CustomTextViewMedium colorHint,
+      CustomTextViewMedium colorName, CustomTextViewMedium customTextViewMedium,
       TextInputLayout departmentName, MaterialButton edit,
       IncrementalView incrementalViewFloorNumber, TextInputLayout modelName,
-      TextInputLayout productName) {
+      RecyclerView productColor, TextInputLayout productName) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br = br;
+    this.br6 = br6;
     this.brandName = brandName;
+    this.colorHint = colorHint;
+    this.colorName = colorName;
     this.customTextViewMedium = customTextViewMedium;
     this.departmentName = departmentName;
     this.edit = edit;
     this.incrementalViewFloorNumber = incrementalViewFloorNumber;
     this.modelName = modelName;
+    this.productColor = productColor;
     this.productName = productName;
   }
 

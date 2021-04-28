@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.text.TextUtils;
 import android.widget.ImageView;
 import android.widget.RatingBar;
+import android.widget.TextView;
 
 import androidx.databinding.BindingAdapter;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,7 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.squareup.picasso.Picasso;
 
 import te.app.ossman_elmonkz.R;
+import te.app.ossman_elmonkz.customViews.CustomDrawable;
 import te.app.ossman_elmonkz.utils.helper.AppHelper;
+import te.app.ossman_elmonkz.utils.resources.ResourceManager;
 
 
 public class ApplicationBinding {
@@ -29,6 +32,13 @@ public class ApplicationBinding {
         if (color != null && !color.equals("") && color.charAt(0) == '#') {
             imageView.setBackgroundColor(Color.parseColor(color));
         }
+    }
+
+    @BindingAdapter("background")
+    public static void setBackGround(TextView textView, String colorCode) {
+        int color = Color.parseColor(colorCode);
+        CustomDrawable customDrawable = new CustomDrawable(color, color, color, 4, ResourceManager.getColor(R.color.colorPrimaryDark), 0);
+        textView.setBackground(customDrawable);
     }
 
     @BindingAdapter({"app:adapter", "app:span", "app:orientation"})

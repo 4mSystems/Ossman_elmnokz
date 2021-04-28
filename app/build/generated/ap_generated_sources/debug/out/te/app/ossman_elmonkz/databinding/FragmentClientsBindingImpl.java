@@ -20,7 +20,7 @@ public class FragmentClientsBindingImpl extends FragmentClientsBinding implement
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback19;
+    private final android.view.View.OnClickListener mCallback20;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -65,7 +65,7 @@ public class FragmentClientsBindingImpl extends FragmentClientsBinding implement
         this.searchInput.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback19 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
+        mCallback20 = new te.app.ossman_elmonkz.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -195,7 +195,7 @@ public class FragmentClientsBindingImpl extends FragmentClientsBinding implement
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.searchInput.setOnClickListener(mCallback19);
+            this.searchInput.setOnClickListener(mCallback20);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.searchInput, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, searchInputandroidTextAttrChanged);
         }
         if ((dirtyFlags & 0x5L) != 0) {

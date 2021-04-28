@@ -3180,6 +3180,8 @@ id clip_vertical
 id clockwise
 id collapseActionView
 id color
+id color_hint
+id color_name
 id confirm_button
 id contact_header_img
 id container
@@ -3421,6 +3423,7 @@ id postLayout
 id prePayment_text
 id prePayment_text_val
 id product_brand
+id product_color
 id product_details
 id product_image
 id product_model
@@ -3716,6 +3719,7 @@ layout item_agents
 layout item_brand
 layout item_cart
 layout item_clients
+layout item_color
 layout item_gallery
 layout item_home
 layout item_search
@@ -3997,6 +4001,8 @@ string please_select_another_file
 string please_turn_off
 string please_turn_on
 string prePayment_text
+string product_color_hint
+string product_color_warning
 string product_name_hint
 string product_warning1
 string product_warning2

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="itemViewModel"
+            type="te.app.ossman_elmonkz.pages.buying.viewModels.ItemColorsViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp4h"
+        android:onClick="@{()-> itemViewModel.itemAction()}">
+
+        <te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular
+            android:id="@+id/cat_image"
+            android:layout_width="@dimen/dp60w"
+            android:layout_height="@dimen/dp60h"
+            android:layout_margin="@dimen/dp6h"
+            app:background="@{itemViewModel.productColor.color_color}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp4h"
+            android:text="@{itemViewModel.productColor.color_name}"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/cat_image"
+            app:layout_constraintStart_toStartOf="@+id/cat_image"
+            app:layout_constraintTop_toBottomOf="@id/cat_image" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

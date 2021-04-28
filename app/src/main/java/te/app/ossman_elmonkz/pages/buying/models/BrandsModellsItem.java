@@ -3,6 +3,8 @@ package te.app.ossman_elmonkz.pages.buying.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class BrandsModellsItem {
 
     @SerializedName("image")
@@ -20,6 +22,12 @@ public class BrandsModellsItem {
     @SerializedName("brand_id")
     @Expose
     private int brand_id;
+    @SerializedName("product_colors")
+    private List<ProductColors> productColors;
+
+    public List<ProductColors> getProductColors() {
+        return productColors;
+    }
 
     public String getImage() {
         return image;

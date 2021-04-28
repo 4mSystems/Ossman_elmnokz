@@ -38,7 +38,7 @@ public final class CartDao_Impl implements CartDao {
     this.__insertionAdapterOfOrderRequest = new EntityInsertionAdapter<OrderRequest>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR IGNORE INTO `order` (`partName`,`partId`,`brandName`,`brandId`,`modelName`,`productName`,`product_id`,`modelId`,`quantity`,`id`) VALUES (?,?,?,?,?,?,?,?,?,?)";
+        return "INSERT OR IGNORE INTO `order` (`partName`,`partId`,`brandName`,`brandId`,`modelName`,`productName`,`productColorName`,`product_id`,`modelId`,`quantity`,`colorId`,`hasColor`,`id`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -73,28 +73,41 @@ public final class CartDao_Impl implements CartDao {
         } else {
           stmt.bindString(6, value.getProductName());
         }
-        if (value.getProduct_id() == null) {
+        if (value.getProductColorName() == null) {
           stmt.bindNull(7);
         } else {
-          stmt.bindString(7, value.getProduct_id());
+          stmt.bindString(7, value.getProductColorName());
         }
-        if (value.getModelId() == null) {
+        if (value.getProduct_id() == null) {
           stmt.bindNull(8);
         } else {
-          stmt.bindString(8, value.getModelId());
+          stmt.bindString(8, value.getProduct_id());
         }
-        if (value.getQuantity() == null) {
+        if (value.getModelId() == null) {
           stmt.bindNull(9);
         } else {
-          stmt.bindString(9, value.getQuantity());
+          stmt.bindString(9, value.getModelId());
         }
-        stmt.bindLong(10, value.getId());
+        if (value.getQuantity() == null) {
+          stmt.bindNull(10);
+        } else {
+          stmt.bindString(10, value.getQuantity());
+        }
+        if (value.getColorId() == null) {
+          stmt.bindNull(11);
+        } else {
+          stmt.bindString(11, value.getColorId());
+        }
+        final int _tmp;
+        _tmp = value.isHasColor() ? 1 : 0;
+        stmt.bindLong(12, _tmp);
+        stmt.bindLong(13, value.getId());
       }
     };
     this.__updateAdapterOfOrderRequest = new EntityDeletionOrUpdateAdapter<OrderRequest>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `order` SET `partName` = ?,`partId` = ?,`brandName` = ?,`brandId` = ?,`modelName` = ?,`productName` = ?,`product_id` = ?,`modelId` = ?,`quantity` = ?,`id` = ? WHERE `id` = ?";
+        return "UPDATE OR ABORT `order` SET `partName` = ?,`partId` = ?,`brandName` = ?,`brandId` = ?,`modelName` = ?,`productName` = ?,`productColorName` = ?,`product_id` = ?,`modelId` = ?,`quantity` = ?,`colorId` = ?,`hasColor` = ?,`id` = ? WHERE `id` = ?";
       }
 
       @Override
@@ -129,23 +142,36 @@ public final class CartDao_Impl implements CartDao {
         } else {
           stmt.bindString(6, value.getProductName());
         }
-        if (value.getProduct_id() == null) {
+        if (value.getProductColorName() == null) {
           stmt.bindNull(7);
         } else {
-          stmt.bindString(7, value.getProduct_id());
+          stmt.bindString(7, value.getProductColorName());
         }
-        if (value.getModelId() == null) {
+        if (value.getProduct_id() == null) {
           stmt.bindNull(8);
         } else {
-          stmt.bindString(8, value.getModelId());
+          stmt.bindString(8, value.getProduct_id());
         }
-        if (value.getQuantity() == null) {
+        if (value.getModelId() == null) {
           stmt.bindNull(9);
         } else {
-          stmt.bindString(9, value.getQuantity());
+          stmt.bindString(9, value.getModelId());
         }
-        stmt.bindLong(10, value.getId());
-        stmt.bindLong(11, value.getId());
+        if (value.getQuantity() == null) {
+          stmt.bindNull(10);
+        } else {
+          stmt.bindString(10, value.getQuantity());
+        }
+        if (value.getColorId() == null) {
+          stmt.bindNull(11);
+        } else {
+          stmt.bindString(11, value.getColorId());
+        }
+        final int _tmp;
+        _tmp = value.isHasColor() ? 1 : 0;
+        stmt.bindLong(12, _tmp);
+        stmt.bindLong(13, value.getId());
+        stmt.bindLong(14, value.getId());
       }
     };
     this.__preparedStmtOfDeleteItem = new SharedSQLiteStatement(__db) {
@@ -259,9 +285,12 @@ public final class CartDao_Impl implements CartDao {
           final int _cursorIndexOfBrandId = CursorUtil.getColumnIndexOrThrow(_cursor, "brandId");
           final int _cursorIndexOfModelName = CursorUtil.getColumnIndexOrThrow(_cursor, "modelName");
           final int _cursorIndexOfProductName = CursorUtil.getColumnIndexOrThrow(_cursor, "productName");
+          final int _cursorIndexOfProductColorName = CursorUtil.getColumnIndexOrThrow(_cursor, "productColorName");
           final int _cursorIndexOfProductId = CursorUtil.getColumnIndexOrThrow(_cursor, "product_id");
           final int _cursorIndexOfModelId = CursorUtil.getColumnIndexOrThrow(_cursor, "modelId");
           final int _cursorIndexOfQuantity = CursorUtil.getColumnIndexOrThrow(_cursor, "quantity");
+          final int _cursorIndexOfColorId = CursorUtil.getColumnIndexOrThrow(_cursor, "colorId");
+          final int _cursorIndexOfHasColor = CursorUtil.getColumnIndexOrThrow(_cursor, "hasColor");
           final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
           final List<OrderRequest> _result = new ArrayList<OrderRequest>(_cursor.getCount());
           while(_cursor.moveToNext()) {
@@ -285,6 +314,9 @@ public final class CartDao_Impl implements CartDao {
             final String _tmpProductName;
             _tmpProductName = _cursor.getString(_cursorIndexOfProductName);
             _item.setProductName(_tmpProductName);
+            final String _tmpProductColorName;
+            _tmpProductColorName = _cursor.getString(_cursorIndexOfProductColorName);
+            _item.setProductColorName(_tmpProductColorName);
             final String _tmpProduct_id;
             _tmpProduct_id = _cursor.getString(_cursorIndexOfProductId);
             _item.setProduct_id(_tmpProduct_id);
@@ -294,6 +326,14 @@ public final class CartDao_Impl implements CartDao {
             final String _tmpQuantity;
             _tmpQuantity = _cursor.getString(_cursorIndexOfQuantity);
             _item.setQuantity(_tmpQuantity);
+            final String _tmpColorId;
+            _tmpColorId = _cursor.getString(_cursorIndexOfColorId);
+            _item.setColorId(_tmpColorId);
+            final boolean _tmpHasColor;
+            final int _tmp;
+            _tmp = _cursor.getInt(_cursorIndexOfHasColor);
+            _tmpHasColor = _tmp != 0;
+            _item.setHasColor(_tmpHasColor);
             final int _tmpId;
             _tmpId = _cursor.getInt(_cursorIndexOfId);
             _item.setId(_tmpId);

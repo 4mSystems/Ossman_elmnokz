@@ -36,6 +36,10 @@
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/item_clients.xml"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_color.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/item_color.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_more.xml",
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_more.xml"
     },

@@ -43,17 +43,21 @@ public class BR {
 
   public static final int product = 20;
 
-  public static final int productDetails = 21;
+  public static final int productColor = 21;
 
-  public static final int productsAdapter = 22;
+  public static final int productColorAdapter = 22;
 
-  public static final int searchAdapter = 23;
+  public static final int productDetails = 23;
 
-  public static final int searchItem = 24;
+  public static final int productsAdapter = 24;
 
-  public static final int searchProgressVisible = 25;
+  public static final int searchAdapter = 25;
 
-  public static final int viewModel = 26;
+  public static final int searchItem = 26;
 
-  public static final int viewmodel = 27;
+  public static final int searchProgressVisible = 27;
+
+  public static final int viewModel = 28;
+
+  public static final int viewmodel = 29;
 }

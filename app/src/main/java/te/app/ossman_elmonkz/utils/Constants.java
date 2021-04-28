@@ -50,13 +50,13 @@ public class Constants {
     public final static String HIDE_PROGRESS = "hideProgress";
     public final static String SERVER_ERROR = "serverError";
     public final static String ERROR_NOT_FOUND = "not_found";
-    public final static String UPDATE_CATEGORY = "UPDATE_CATEGORY";
+    public final static String SELECT_COLORS = "SELECT_COLORS";
     public final static String FAILURE_CONNECTION = "failure_connection";
     public final static String OFFERS = "OFFERS";
 
     public final static String LANGUAGE = "language";
     public static final String DEFAULT_LANGUAGE = "ar";
-    public static final String ADD_OFFER = "ADD_OFFER";
+    public static final String COLOR_WARNING = "COLOR_WARNING";
     public static final String PAGE = "page";
     public final static String NAME_BAR = "name_bar";
     public static final String BUNDLE = "bundle";

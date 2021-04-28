@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
 
+import te.app.ossman_elmonkz.BR;
 import te.app.ossman_elmonkz.PassingObject;
 import te.app.ossman_elmonkz.R;
 import te.app.ossman_elmonkz.base.BaseFragment;
@@ -33,6 +34,7 @@ import te.app.ossman_elmonkz.databinding.SendRequestDialogBinding;
 import te.app.ossman_elmonkz.model.base.Mutable;
 import te.app.ossman_elmonkz.pages.buying.models.BrandModelsPartionResponse;
 import te.app.ossman_elmonkz.pages.buying.models.BrandsModellsItem;
+import te.app.ossman_elmonkz.pages.buying.models.ProductColors;
 import te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel;
 import te.app.ossman_elmonkz.pages.cart.CartFragment;
 import te.app.ossman_elmonkz.utils.Constants;
@@ -44,10 +46,11 @@ public class BuyingFragment extends BaseFragment {
     private Context context;
     @Inject
     BuyingViewModel viewModel;
+    FragmentBuyingBinding binding;
 
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        FragmentBuyingBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_buying, container, false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_buying, container, false);
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
@@ -76,13 +79,23 @@ public class BuyingFragment extends BaseFragment {
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.dataFromSearchRequest, Constants.MODEL_REQUEST), getResources().getString(R.string.model_name_hint), SelectBrandModelPartionFragment.class.getName(), null, Constants.MODEL_REQUEST);
             } else if (Constants.SELECT_PRODUCT.equals(((Mutable) o).message)) {
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.dataFromSearchRequest, Constants.PRODUCT_REQUEST), getResources().getString(R.string.product_name_hint), SelectBrandModelPartionFragment.class.getName(), null, Constants.PRODUCT_REQUEST);
+            } else if (Constants.SELECT_COLORS.equals(((Mutable) o).message)) {
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.dataFromSearchRequest, Constants.PRODUCT_REQUEST), getResources().getString(R.string.product_name_hint), SelectBrandModelPartionFragment.class.getName(), null, Constants.PRODUCT_REQUEST);
             } else if (Constants.EMPTY_WARNING.equals(((Mutable) o).message)) {
                 ((ParentActivity) context).toastError(getString(R.string.select_brand));
             } else if (Constants.MODEL_WARNING.equals(((Mutable) o).message)) {
                 ((ParentActivity) context).toastError(getString(R.string.model_name_hint));
+            } else if (Constants.COLOR_WARNING.equals(((Mutable) o).message)) {
+                ((ParentActivity) context).toastError(getString(R.string.product_color_warning));
             } else if (Constants.ADD_TO_CART.equals(((Mutable) o).message)) {
                 showSuccessDialog();
             }
+        });
+        viewModel.getProductColorAdapter().selectedColorLiveData.observe((LifecycleOwner) context, productColors -> {
+            viewModel.getOrderRequest().setColorId(String.valueOf(productColors.getColor_id()));
+            viewModel.getOrderRequest().setProductColorName(productColors.getColor_name());
+            viewModel.colorCode.set(productColors.getColor_color());
+            viewModel.colorName.set(productColors.getColor_name());
         });
     }
 
@@ -135,6 +148,14 @@ public class BuyingFragment extends BaseFragment {
                 } else if (requestCode == Constants.PRODUCT_REQUEST) {
                     viewModel.getOrderRequest().setProductName(brandsModellsItem.getName());
                     viewModel.getOrderRequest().setProduct_id(String.valueOf(brandsModellsItem.getId()));
+                    if (brandsModellsItem.getProductColors() != null && brandsModellsItem.getProductColors().size() > 0) {
+                        viewModel.getOrderRequest().setHasColor(true);
+                        binding.productColor.setVisibility(View.VISIBLE);
+                        binding.colorHint.setVisibility(View.VISIBLE);
+                        binding.colorName.setVisibility(View.VISIBLE);
+                        viewModel.getProductColorAdapter().update(brandsModellsItem.getProductColors());
+                        viewModel.notifyChange(BR.productColorAdapter);
+                    }
                 }
             }
             viewModel.notifyChange();

@@ -1,7 +1,10 @@
 package te.app.ossman_elmonkz.pages.buying.viewModels;
 
 
+import android.text.TextUtils;
+
 import androidx.databinding.Bindable;
+import androidx.databinding.ObservableField;
 import androidx.lifecycle.MutableLiveData;
 
 import javax.inject.Inject;
@@ -11,6 +14,7 @@ import te.app.ossman_elmonkz.BR;
 import te.app.ossman_elmonkz.base.BaseViewModel;
 import te.app.ossman_elmonkz.base.MyApplication;
 import te.app.ossman_elmonkz.model.base.Mutable;
+import te.app.ossman_elmonkz.pages.buying.adapter.ProductColorAdapter;
 import te.app.ossman_elmonkz.pages.buying.models.BrandModelsPartionMain;
 import te.app.ossman_elmonkz.pages.buying.models.BrandsModellsItem;
 import te.app.ossman_elmonkz.pages.buying.models.DataFromSearchRequest;
@@ -29,6 +33,9 @@ public class BuyingViewModel extends BaseViewModel {
     BrandsModellsItem modellsItem;
     CartRepository cartRepository;
     public DataFromSearchRequest dataFromSearchRequest;
+    ProductColorAdapter productColorAdapter;
+    public ObservableField<String> colorCode = new ObservableField<>();
+    public ObservableField<String> colorName = new ObservableField<>();
 
     @Inject
     public BuyingViewModel(BuyingRepository buyingRepository) {
@@ -41,21 +48,28 @@ public class BuyingViewModel extends BaseViewModel {
         this.buyingRepository.setLiveData(this.liveData);
         cartRepository = new CartRepository(MyApplication.getInstance());
     }
-//    getPassingObject().getObject() Sub cat id
+
+    //    getPassingObject().getObject() Sub cat id
     public void getBrandModel() {
         compositeDisposable.add(buyingRepository.getBrandModelPartion(Integer.parseInt(getPassingObject().getObject())));
     }
 
     public void addToCart() {
-        if (getPassingObject().getObject().equals("9") || getPassingObject().getObject().equals("10")) {
+        if (getPassingObject().getObject().equals(Constants.INTERNAL_ACCESSORIES) || getPassingObject().getObject().equals(Constants.EXTERNAL_ACCESSORIES)) {
             if (getOrderRequest().isAllValid()) {
-                getCartRepository().insert(getOrderRequest());
-                liveData.setValue(new Mutable(Constants.ADD_TO_CART));
+                if (getOrderRequest().isHasColor() && !TextUtils.isEmpty(getOrderRequest().getProductColorName())) {
+                    getCartRepository().insert(getOrderRequest());
+                    liveData.setValue(new Mutable(Constants.ADD_TO_CART));
+                } else
+                    liveData.setValue(new Mutable(Constants.COLOR_WARNING));
             }
         } else {
             if (getOrderRequest().isValid()) {
-                getCartRepository().insert(getOrderRequest());
-                liveData.setValue(new Mutable(Constants.ADD_TO_CART));
+                if (getOrderRequest().isHasColor() && !TextUtils.isEmpty(getOrderRequest().getProductColorName())) {
+                    getCartRepository().insert(getOrderRequest());
+                    liveData.setValue(new Mutable(Constants.ADD_TO_CART));
+                } else
+                    liveData.setValue(new Mutable(Constants.COLOR_WARNING));
             }
         }
 
@@ -70,6 +84,7 @@ public class BuyingViewModel extends BaseViewModel {
         if (getBrandModelsPartionMain().getBrandsModells() != null)
             liveData.setValue(new Mutable(Constants.SELECT_BRAND));
     }
+
 
     public void toModel() {
         if (getOrderRequest().getBrandName() != null) {
@@ -103,6 +118,11 @@ public class BuyingViewModel extends BaseViewModel {
     public void setBrandModelsPartionMain(BrandModelsPartionMain brandModelsPartionMain) {
         notifyChange(BR.brandModelsPartionMain);
         this.brandModelsPartionMain = brandModelsPartionMain;
+    }
+
+    @Bindable
+    public ProductColorAdapter getProductColorAdapter() {
+        return this.productColorAdapter == null ? this.productColorAdapter = new ProductColorAdapter() : this.productColorAdapter;
     }
 
     public BrandsModellsItem getModellsItem() {

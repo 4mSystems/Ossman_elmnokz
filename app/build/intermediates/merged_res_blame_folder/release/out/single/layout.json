@@ -24,12 +24,12 @@
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/item_clients.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeReleaseResources/stripped.dir/layout/item_home.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/item_home.xml"
-    },
-    {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeReleaseResources/stripped.dir/layout/fragment_cart.xml",
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_cart.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeReleaseResources/stripped.dir/layout/item_home.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/item_home.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeReleaseResources/stripped.dir/layout/fragment_sub_categories.xml",
@@ -90,6 +90,10 @@
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeReleaseResources/stripped.dir/layout/item_agents.xml",
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/item_agents.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeReleaseResources/stripped.dir/layout/item_color.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/item_color.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/incremental/mergeReleaseResources/stripped.dir/layout/fragment_onboard.xml",
