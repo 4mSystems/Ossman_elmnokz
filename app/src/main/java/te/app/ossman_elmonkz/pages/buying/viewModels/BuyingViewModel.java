@@ -57,19 +57,29 @@ public class BuyingViewModel extends BaseViewModel {
     public void addToCart() {
         if (getPassingObject().getObject().equals(Constants.INTERNAL_ACCESSORIES) || getPassingObject().getObject().equals(Constants.EXTERNAL_ACCESSORIES)) {
             if (getOrderRequest().isAllValid()) {
-                if (getOrderRequest().isHasColor() && !TextUtils.isEmpty(getOrderRequest().getProductColorName())) {
+                if (getOrderRequest().isHasColor()) {
+                    if (!TextUtils.isEmpty(getOrderRequest().getProductColorName())) {
+                        getCartRepository().insert(getOrderRequest());
+                        liveData.setValue(new Mutable(Constants.ADD_TO_CART));
+                    } else
+                        liveData.setValue(new Mutable(Constants.COLOR_WARNING));
+                } else {
                     getCartRepository().insert(getOrderRequest());
                     liveData.setValue(new Mutable(Constants.ADD_TO_CART));
-                } else
-                    liveData.setValue(new Mutable(Constants.COLOR_WARNING));
+                }
             }
         } else {
             if (getOrderRequest().isValid()) {
-                if (getOrderRequest().isHasColor() && !TextUtils.isEmpty(getOrderRequest().getProductColorName())) {
+                if (getOrderRequest().isHasColor()) {
+                    if (!TextUtils.isEmpty(getOrderRequest().getProductColorName())) {
+                        getCartRepository().insert(getOrderRequest());
+                        liveData.setValue(new Mutable(Constants.ADD_TO_CART));
+                    } else
+                        liveData.setValue(new Mutable(Constants.COLOR_WARNING));
+                } else {
                     getCartRepository().insert(getOrderRequest());
                     liveData.setValue(new Mutable(Constants.ADD_TO_CART));
-                } else
-                    liveData.setValue(new Mutable(Constants.COLOR_WARNING));
+                }
             }
         }
 

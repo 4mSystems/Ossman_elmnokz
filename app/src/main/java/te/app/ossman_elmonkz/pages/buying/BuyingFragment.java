@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -148,6 +149,7 @@ public class BuyingFragment extends BaseFragment {
                 } else if (requestCode == Constants.PRODUCT_REQUEST) {
                     viewModel.getOrderRequest().setProductName(brandsModellsItem.getName());
                     viewModel.getOrderRequest().setProduct_id(String.valueOf(brandsModellsItem.getId()));
+                    Log.e("onActivityResult", "onActivityResult: "+viewModel.getOrderRequest().isHasColor() );
                     if (brandsModellsItem.getProductColors() != null && brandsModellsItem.getProductColors().size() > 0) {
                         viewModel.getOrderRequest().setHasColor(true);
                         binding.productColor.setVisibility(View.VISIBLE);
