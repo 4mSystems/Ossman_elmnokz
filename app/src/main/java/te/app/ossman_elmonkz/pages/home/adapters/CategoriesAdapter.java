@@ -1,7 +1,6 @@
 package te.app.ossman_elmonkz.pages.home.adapters;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +18,7 @@ import java.util.List;
 import te.app.ossman_elmonkz.PassingObject;
 import te.app.ossman_elmonkz.R;
 import te.app.ossman_elmonkz.databinding.ItemHomeBinding;
-import te.app.ossman_elmonkz.pages.agentsAndClients.AgentsFragment;
+import te.app.ossman_elmonkz.pages.agentsAndClients.ClientsFragment;
 import te.app.ossman_elmonkz.pages.gallery.GalleryFragment;
 import te.app.ossman_elmonkz.pages.home.models.CategoriesItem;
 import te.app.ossman_elmonkz.pages.home.viewModels.ItemCategoryViewModel;
@@ -63,8 +62,8 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
                     MovementHelper.startActivity(context, GalleryFragment.class.getName(), categoriesData.getTitle(), null);
                 else if (categoriesData.getId() == Constants.SYSTEM_PRODUCTS)
                     MovementHelper.startActivityWithBundle(context, new PassingObject(categoriesData), categoriesData.getTitle(), ProductsFragment.class.getName(), null);
-                else if (categoriesData.getId() == Constants.AGENTS_ID)
-                    MovementHelper.startActivityWithBundle(context, new PassingObject(categoriesData), categoriesData.getTitle(), AgentsFragment.class.getName(), null);
+                else if (categoriesData.getId() == Constants.CLIENTS_ID)
+                    MovementHelper.startActivityWithBundle(context, new PassingObject(categoriesData), categoriesData.getTitle(), ClientsFragment.class.getName(), null);
                 else if (categoriesData.getId() == Constants.TERMS_ID)
                     MovementHelper.startActivityWithBundle(context, new PassingObject(categoriesData), categoriesData.getTitle(), SuggestionsFragment.class.getName(), null);
                 else

@@ -28,7 +28,7 @@ public class Constants {
     public final static int SYSTEM_PRODUCTS = 3;
     public final static int GALLERY_ID = 5;
     public final static String AGENTS = "AGENTS";
-    public final static int AGENTS_ID = 4;
+    public final static int CLIENTS_ID = 4;
     public final static String CLIENTS = "CLIENTS";
     public final static String GOVS = "GOVS";
     public final static String SHOW_GOVS = "SHOW_GOVS";
