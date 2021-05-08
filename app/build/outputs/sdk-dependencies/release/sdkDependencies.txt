@@ -65,7 +65,7 @@ library {
   maven_library {
     groupId: "androidx.lifecycle"
     artifactId: "lifecycle-common"
-    version: "2.3.0"
+    version: "2.3.1"
   }
   digests {
     sha256: "\025\204\217\265m\263/L|\334r\263$\0001\203\325*H\204\326\277\t\276p\212\307\365\207\3219\265"
@@ -105,10 +105,10 @@ library {
   maven_library {
     groupId: "androidx.core"
     artifactId: "core"
-    version: "1.3.1"
+    version: "1.3.2"
   }
   digests {
-    sha256: "\351.\246Z7\325\211\224=@ZjT\321\276\235\022\242%\224\217&\304\344\036Q\035\325^\201\357\266"
+    sha256: "\224\336\031l\326yP\317\366\357>\032\305\220\025\370\352\257a\204\v\334#\217,\365M\336\370\335\v\351"
   }
 }
 library {
@@ -195,30 +195,30 @@ library {
   maven_library {
     groupId: "androidx.lifecycle"
     artifactId: "lifecycle-livedata-core"
-    version: "2.3.0"
+    version: "2.3.1"
   }
   digests {
-    sha256: "\211\364\200\210\217+\270\353b\331\267\261\3534\276i\265\236\310K$\241\260\275\276\264\231sG\214m\243"
+    sha256: "\345]8\303rF\017\n\003\231}\334\225\fg\"u\0214\017\327O\2064\331\235)e<\330\032\261"
   }
 }
 library {
   maven_library {
     groupId: "androidx.lifecycle"
     artifactId: "lifecycle-viewmodel"
-    version: "2.3.0"
+    version: "2.3.1"
   }
   digests {
-    sha256: "\316\250\362o\2422\003y\"\266\232\371\315\033\336-\361!\032\314\213u%>B[qP\245\374\245\235"
+    sha256: "\266\333L\'J\022\377\205\244t~\036fi\307\351\212\357\242W\032\316\235\037\032o\246\276A|\3508"
   }
 }
 library {
   maven_library {
     groupId: "androidx.lifecycle"
     artifactId: "lifecycle-viewmodel-savedstate"
-    version: "2.3.0"
+    version: "2.3.1"
   }
   digests {
-    sha256: "I\371S+Q\004\314\036\346I\000\355Oim\003\035\200\177\272rn\r]jRE\236\217\272J\035"
+    sha256: "\227\023z\212\366\243\027v\241NHf\253\200\214|\ny\033HK\333\307\210\273\330>f@ud\300"
   }
 }
 library {
@@ -235,10 +235,10 @@ library {
   maven_library {
     groupId: "androidx.lifecycle"
     artifactId: "lifecycle-livedata"
-    version: "2.3.0"
+    version: "2.3.1"
   }
   digests {
-    sha256: "\253\275\302\347\357\325\322\030#\262\001F\270{,U\260\246\256q\265\020\240+\'s\3607l\260\021?"
+    sha256: "\261\340a\023\221&\370\203\324\001\017#\376{\244`\255\352C-E<\210\240\v\206\214\277\232\3007\316"
   }
 }
 library {
@@ -355,20 +355,20 @@ library {
   maven_library {
     groupId: "androidx.annotation"
     artifactId: "annotation-experimental"
-    version: "1.0.0"
+    version: "1.1.0"
   }
   digests {
-    sha256: "\262\031\322\265h\347\344\272SN\t\370\302\375$#C\337l\313\337\273\3518\204o]t\016k\v\021"
+    sha256: "\001W\336a\242\006@G\211j\005\200\200\363\375g\272W\255\232\224\205{?z66`$>?\220"
   }
 }
 library {
   maven_library {
     groupId: "androidx.recyclerview"
     artifactId: "recyclerview"
-    version: "1.1.0"
+    version: "1.2.0"
   }
   digests {
-    sha256: "\360\322\265\246}\n\221\356\033\034s\357+cj\201\363V9%\335\321Z\035N\034A\354(\336zO"
+    sha256: "\366\214C-\271\230\357\254\220\271\347\364\034\025\020\360\227\270\" ve$\324]\004\371\266LnM\207"
   }
 }
 library {
@@ -655,50 +655,50 @@ library {
   maven_library {
     groupId: "androidx.room"
     artifactId: "room-runtime"
-    version: "2.2.6"
+    version: "2.3.0"
   }
   digests {
-    sha256: "\337\031\020\267\302l=\bz\333\350L\316\243\002\003\"z\032\002\207\326\250\3126\247e9L\325\177\021"
+    sha256: "2\226\227\016\222\330_\t\217&\347v\221\035\243\275\233\260\204\254\323t@\275\027\005\375\026?J\223\371"
   }
 }
 library {
   maven_library {
     groupId: "androidx.room"
     artifactId: "room-common"
-    version: "2.2.6"
+    version: "2.3.0"
   }
   digests {
-    sha256: "+\023\r\324\241\323\331\033g\001\3553\tm8\237\001\304\374\021\227\247\254\326\271\027$\335\305\254\374\006"
+    sha256: "4\222\335`\345|Q\210\017\370g\241\216\331O(A*\204\257\b0\304\275m8\325W\220r\253f"
   }
 }
 library {
   maven_library {
     groupId: "androidx.sqlite"
     artifactId: "sqlite-framework"
-    version: "2.0.1"
+    version: "2.1.0"
   }
   digests {
-    sha256: "\207\016;\3163\255!\357\003C2\260\203\262\222Q\005\276\317\327=&.:\022p\220\022)\344Pv"
+    sha256: "\206ss\177\333.\373\255\221\256\256\355\031\'\353\262\222\022\323j\206}\223\271c\234\200i\001\237\212\036"
   }
 }
 library {
   maven_library {
     groupId: "androidx.sqlite"
     artifactId: "sqlite"
-    version: "2.0.1"
+    version: "2.1.0"
   }
   digests {
-    sha256: "\315\374\353\217n\306J\254!}\305\244\231\245\355\266\326\020\371\326\245u\373\247\276\240k+\372\363\352\177"
+    sha256: "\203A\377\t-``\326*\a\"\177)#qU\377\363o\261o\226\311_\275\232\210N7]\271\022"
   }
 }
 library {
   maven_library {
     groupId: "androidx.room"
     artifactId: "room-rxjava2"
-    version: "2.2.6"
+    version: "2.3.0"
   }
   digests {
-    sha256: "<~\272=8\231 2\242%\256_r\227\213t\340a:\005\377\274L\310U2\214\b\023\\/\016"
+    sha256: "\b=7\260xmb\244\246\275\227}HWF\263\213\310\f\f\245\345\002\027\345\231\276\247f\t\3542"
   }
 }
 library {
@@ -1620,6 +1620,7 @@ library_dependencies {
   library_dep_index: 67
   library_dep_index: 68
   library_dep_index: 24
+  library_dep_index: 35
 }
 library_dependencies {
   library_index: 66
@@ -1636,11 +1637,10 @@ library_dependencies {
 }
 library_dependencies {
   library_index: 69
-  library_dep_index: 58
+  library_dep_index: 24
   library_dep_index: 66
   library_dep_index: 65
-  library_dep_index: 39
-  library_dep_index: 24
+  library_dep_index: 58
 }
 library_dependencies {
   library_index: 70

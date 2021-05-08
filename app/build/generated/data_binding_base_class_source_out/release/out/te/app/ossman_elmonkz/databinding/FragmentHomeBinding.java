@@ -13,9 +13,13 @@ import androidx.databinding.ViewDataBinding;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.ossman_elmonkz.R;
+import te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium;
 import te.app.ossman_elmonkz.pages.home.viewModels.HomeViewModel;
 
 public abstract class FragmentHomeBinding extends ViewDataBinding {
+  @NonNull
+  public final CustomTextViewMedium badge;
+
   @NonNull
   public final AppCompatImageView icFav;
 
@@ -26,8 +30,9 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
   protected HomeViewModel mViewmodel;
 
   protected FragmentHomeBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatImageView icFav, AppCompatImageView icShoppingCart) {
+      CustomTextViewMedium badge, AppCompatImageView icFav, AppCompatImageView icShoppingCart) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.badge = badge;
     this.icFav = icFav;
     this.icShoppingCart = icShoppingCart;
   }

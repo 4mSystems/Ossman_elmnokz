@@ -129,12 +129,12 @@ te/app/ossman_elmonkz/pages/buying/viewModels/ItemColorsViewModel.java
  te.app.ossman_elmonkz.pages.buying.viewModels.ItemColorsViewModel
 te/app/ossman_elmonkz/pages/subCategories/viewModels/SubCategoriesSearchViewModel.java
  te.app.ossman_elmonkz.pages.subCategories.viewModels.SubCategoriesSearchViewModel
+te/app/ossman_elmonkz/utils/cart/CartDao.java
+ te.app.ossman_elmonkz.utils.cart.CartDao
 te/app/ossman_elmonkz/pages/gallery/viewModels/GalleryViewModel.java
  te.app.ossman_elmonkz.pages.gallery.viewModels.GalleryViewModel
 te/app/ossman_elmonkz/pages/settings/models/AboutMain.java
  te.app.ossman_elmonkz.pages.settings.models.AboutMain
-te/app/ossman_elmonkz/utils/cart/CartDao.java
- te.app.ossman_elmonkz.utils.cart.CartDao
 te/app/ossman_elmonkz/base/ConnectivityReceiver.java
  te.app.ossman_elmonkz.base.ConnectivityReceiver
  te.app.ossman_elmonkz.base.ConnectivityReceiver$ConnectivityReceiverListener

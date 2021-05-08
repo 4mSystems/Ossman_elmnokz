@@ -2,6 +2,7 @@ package te.app.ossman_elmonkz.pages.home;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,6 +65,7 @@ public class HomeFragment extends BaseFragment {
                 MovementHelper.startActivity(context, AboutAppFragment.class.getName(), getResources().getString(R.string.about), null);
             }
         });
+        viewModel.getCartCount().observe((LifecycleOwner) context, s -> binding.badge.setText(s));
     }
 
 

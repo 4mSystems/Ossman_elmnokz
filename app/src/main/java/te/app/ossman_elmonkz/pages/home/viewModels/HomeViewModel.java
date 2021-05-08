@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.databinding.Bindable;
 import androidx.databinding.BindingMethod;
 import androidx.databinding.BindingMethods;
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -15,8 +16,10 @@ import javax.inject.Inject;
 import io.reactivex.disposables.CompositeDisposable;
 import te.app.ossman_elmonkz.R;
 import te.app.ossman_elmonkz.base.BaseViewModel;
+import te.app.ossman_elmonkz.base.MyApplication;
 import te.app.ossman_elmonkz.model.base.Mutable;
 import te.app.ossman_elmonkz.pages.home.adapters.CategoriesAdapter;
+import te.app.ossman_elmonkz.repository.CartRepository;
 import te.app.ossman_elmonkz.repository.HomeRepository;
 import te.app.ossman_elmonkz.utils.Constants;
 
@@ -27,12 +30,16 @@ public class HomeViewModel extends BaseViewModel {
     @Inject
     HomeRepository homeRepository;
     CategoriesAdapter categoriesAdapter;
+    CartRepository cartRepository;
+    LiveData<String> cartCount;
 
     @Inject
     public HomeViewModel(HomeRepository homeRepository) {
+        cartRepository = new CartRepository(MyApplication.getInstance());
         this.homeRepository = homeRepository;
         this.liveData = new MutableLiveData<>();
         homeRepository.setLiveData(liveData);
+        cartCount = cartRepository.getCartCount();
     }
 
     public void homeData() {
@@ -45,6 +52,10 @@ public class HomeViewModel extends BaseViewModel {
 
     public void toAbout() {
         liveData.setValue(new Mutable(Constants.ABOUT));
+    }
+
+    public LiveData<String> getCartCount() {
+        return cartCount;
     }
 
 

@@ -13,7 +13,8 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = null;
+        sViewsWithIds = new android.util.SparseIntArray();
+        sViewsWithIds.put(R.id.badge, 4);
     }
     // views
     @NonNull
@@ -30,10 +31,11 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     // Inverse Binding Event Handlers
 
     public FragmentHomeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
     }
     private FragmentHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
+            , (te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium) bindings[4]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
             );

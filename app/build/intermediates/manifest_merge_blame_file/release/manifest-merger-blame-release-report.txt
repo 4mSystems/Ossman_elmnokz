@@ -48,7 +48,7 @@
 24        android:allowBackup="false"
 24-->/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/AndroidManifest.xml:17:9-36
 25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-25-->[androidx.core:core:1.3.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/f3d364c4591b4da0386e5d8846d9d728/core-1.3.1/AndroidManifest.xml:24:18-86
+25-->[androidx.core:core:1.3.2] /home/elnagar/.gradle/caches/transforms-2/files-2.1/67144f8b09a953df3e7278900fce8670/core-1.3.2/AndroidManifest.xml:24:18-86
 26        android:extractNativeLibs="false"
 27        android:hardwareAccelerated="true"
 27-->/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/AndroidManifest.xml:18:9-43
@@ -267,13 +267,13 @@
 143-->[com.google.android.gms:play-services-basement:17.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/830f40744a6b50d3acce285cce8599db/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
 144
 145        <service
-145-->[androidx.room:room-runtime:2.2.6] /home/elnagar/.gradle/caches/transforms-2/files-2.1/f7dc4a753ee63e3517a6360d392da23b/room-runtime-2.2.6/AndroidManifest.xml:25:9-28:40
+145-->[androidx.room:room-runtime:2.3.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/373a300837b9dfcd92fc74f3016157de/room-runtime-2.3.0/AndroidManifest.xml:25:9-28:40
 146            android:name="androidx.room.MultiInstanceInvalidationService"
-146-->[androidx.room:room-runtime:2.2.6] /home/elnagar/.gradle/caches/transforms-2/files-2.1/f7dc4a753ee63e3517a6360d392da23b/room-runtime-2.2.6/AndroidManifest.xml:26:13-74
+146-->[androidx.room:room-runtime:2.3.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/373a300837b9dfcd92fc74f3016157de/room-runtime-2.3.0/AndroidManifest.xml:26:13-74
 147            android:directBootAware="true"
-147-->[androidx.room:room-runtime:2.2.6] /home/elnagar/.gradle/caches/transforms-2/files-2.1/f7dc4a753ee63e3517a6360d392da23b/room-runtime-2.2.6/AndroidManifest.xml:27:13-43
+147-->[androidx.room:room-runtime:2.3.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/373a300837b9dfcd92fc74f3016157de/room-runtime-2.3.0/AndroidManifest.xml:27:13-43
 148            android:exported="false" />
-148-->[androidx.room:room-runtime:2.2.6] /home/elnagar/.gradle/caches/transforms-2/files-2.1/f7dc4a753ee63e3517a6360d392da23b/room-runtime-2.2.6/AndroidManifest.xml:28:13-37
+148-->[androidx.room:room-runtime:2.3.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/373a300837b9dfcd92fc74f3016157de/room-runtime-2.3.0/AndroidManifest.xml:28:13-37
 149
 150        <provider
 150-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/086a3cae3c38486247075a0fd0351633/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40

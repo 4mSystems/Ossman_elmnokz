@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                   
+
+    
+
+                                           
+
+                                                
+
+                 
+                            
+                                                                                   
+           
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/fragment_buying_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/department_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp6w"
+                android:layout_marginTop="@dimen/dp10h"
+                android:layout_marginEnd="@dimen/dp6w"
+                android:tag="binding_1"                                                                                                               
+                app:endIconDrawable="@drawable/ic_arrow_down"
+                app:endIconMode="custom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="@string/department_name_hint"
+                    android:inputType="text"
+                    android:tag="binding_2"                    
+                                                                      
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/overlayBackground" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/brand_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp6w"
+                android:layout_marginTop="@dimen/dp6h"
+                android:layout_marginEnd="@dimen/dp6w"
+                app:endIconDrawable="@drawable/ic_arrow_down"
+                app:endIconMode="custom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/department_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="@string/brand_name_hint"
+                    android:inputType="text"
+                    android:tag="binding_3"                     
+                                                                       
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/overlayBackground" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/model_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp6w"
+                android:layout_marginTop="@dimen/dp6h"
+                android:layout_marginEnd="@dimen/dp6w"
+                app:endIconDrawable="@drawable/ic_arrow_down"
+                app:endIconMode="custom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/brand_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="@string/model_name_hint"
+                    android:inputType="text"
+                    android:tag="binding_4"                     
+                                                                       
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/overlayBackground" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/product_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp6w"
+                android:layout_marginTop="@dimen/dp6h"
+                android:layout_marginEnd="@dimen/dp6w"
+                app:endIconDrawable="@drawable/ic_arrow_down"
+                app:endIconMode="custom"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/model_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="@string/product_name_hint"
+                    android:inputType="text"
+                    android:tag="binding_5"                        
+                                                                         
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/overlayBackground" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium
+                android:id="@+id/color_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp6w"
+                android:text="@string/product_color_hint"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_name" />
+
+            <te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium
+                android:id="@+id/color_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp6w"
+                android:tag="binding_6"                                           
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                                                                                                
+                android:textStyle="bold|italic"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/color_hint"
+                app:layout_constraintTop_toBottomOf="@id/product_name" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/br6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="color_hint,color_name" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/product_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10w"
+                android:orientation="horizontal"
+                android:tag="binding_7"                       
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/br6"
+                                        
+                                 
+                tools:listitem="@layout/item_color" />
+
+            <te.app.ossman_elmonkz.customViews.views.CustomTextViewMedium
+                android:id="@+id/customTextViewMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp6w"
+                android:layout_marginTop="@dimen/dp6h"
+                android:text="@string/quanity"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/incrementalViewFloorNumber"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/incrementalViewFloorNumber" />
+
+            <te.app.ossman_elmonkz.customViews.views.IncrementalView
+                android:id="@+id/incrementalViewFloorNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp6w"
+                android:layout_marginTop="@dimen/dp6h"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/customTextViewMedium"
+                app:layout_constraintTop_toBottomOf="@id/product_color"
+                android:tag="binding_8"                         />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/br"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="customTextViewMedium,incrementalViewFloorNumber" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/edit"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp12w"
+                android:gravity="center"
+                android:tag="binding_9"                        
+                android:text="@string/add_cart"
+                android:textAppearance="?attr/textAppearanceButton"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/colorPrimaryDark"
+                app:icon="@drawable/ic_shopping_cart"
+                app:iconGravity="textEnd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/br"
+                app:rippleColor="@color/overlayBackground" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+         

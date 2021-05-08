@@ -20,6 +20,9 @@ public interface CartDao {
     @Query("select * from `order`")
     LiveData<List<OrderRequest>> getProducts();
 
+    @Query("select count(*) from `order`")
+    LiveData<String> getCartCount();
+
     @Query("DELETE FROM `order` WHERE id=:productId")
     void deleteItem(int productId);
 

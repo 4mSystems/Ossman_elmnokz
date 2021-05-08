@@ -14,13 +14,13 @@ import te.app.ossman_elmonkz.utils.cart.CartDataBase;
 public class CartRepository {
     CartDao cartDao;
     LiveData<List<OrderRequest>> allProducts;
-    LiveData<String> cartTotal;
+    LiveData<String> cartCount;
 
     public CartRepository(Application application) {
         CartDataBase cartDataBase = CartDataBase.getInstance(application);
         cartDao = cartDataBase.cartDao();
         allProducts = cartDao.getProducts();
-//        cartTotal = cartDao.getCartTotal();
+        cartCount = cartDao.getCartCount();
     }
 
     public void insert(OrderRequest product) {
@@ -42,8 +42,8 @@ public class CartRepository {
         return allProducts;
     }
 
-    public LiveData<String> getCartTotal() {
-        return cartTotal;
+    public LiveData<String> getCartCount() {
+        return cartCount;
     }
 
 

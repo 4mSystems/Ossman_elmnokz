@@ -10,11 +10,13 @@ import androidx.room.SharedSQLiteStatement;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
+import java.lang.Class;
 import java.lang.Exception;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.Callable;
 import te.app.ossman_elmonkz.pages.buying.models.OrderRequest;
@@ -297,37 +299,81 @@ public final class CartDao_Impl implements CartDao {
             final OrderRequest _item;
             _item = new OrderRequest();
             final String _tmpPartName;
-            _tmpPartName = _cursor.getString(_cursorIndexOfPartName);
+            if (_cursor.isNull(_cursorIndexOfPartName)) {
+              _tmpPartName = null;
+            } else {
+              _tmpPartName = _cursor.getString(_cursorIndexOfPartName);
+            }
             _item.setPartName(_tmpPartName);
             final String _tmpPartId;
-            _tmpPartId = _cursor.getString(_cursorIndexOfPartId);
+            if (_cursor.isNull(_cursorIndexOfPartId)) {
+              _tmpPartId = null;
+            } else {
+              _tmpPartId = _cursor.getString(_cursorIndexOfPartId);
+            }
             _item.setPartId(_tmpPartId);
             final String _tmpBrandName;
-            _tmpBrandName = _cursor.getString(_cursorIndexOfBrandName);
+            if (_cursor.isNull(_cursorIndexOfBrandName)) {
+              _tmpBrandName = null;
+            } else {
+              _tmpBrandName = _cursor.getString(_cursorIndexOfBrandName);
+            }
             _item.setBrandName(_tmpBrandName);
             final String _tmpBrandId;
-            _tmpBrandId = _cursor.getString(_cursorIndexOfBrandId);
+            if (_cursor.isNull(_cursorIndexOfBrandId)) {
+              _tmpBrandId = null;
+            } else {
+              _tmpBrandId = _cursor.getString(_cursorIndexOfBrandId);
+            }
             _item.setBrandId(_tmpBrandId);
             final String _tmpModelName;
-            _tmpModelName = _cursor.getString(_cursorIndexOfModelName);
+            if (_cursor.isNull(_cursorIndexOfModelName)) {
+              _tmpModelName = null;
+            } else {
+              _tmpModelName = _cursor.getString(_cursorIndexOfModelName);
+            }
             _item.setModelName(_tmpModelName);
             final String _tmpProductName;
-            _tmpProductName = _cursor.getString(_cursorIndexOfProductName);
+            if (_cursor.isNull(_cursorIndexOfProductName)) {
+              _tmpProductName = null;
+            } else {
+              _tmpProductName = _cursor.getString(_cursorIndexOfProductName);
+            }
             _item.setProductName(_tmpProductName);
             final String _tmpProductColorName;
-            _tmpProductColorName = _cursor.getString(_cursorIndexOfProductColorName);
+            if (_cursor.isNull(_cursorIndexOfProductColorName)) {
+              _tmpProductColorName = null;
+            } else {
+              _tmpProductColorName = _cursor.getString(_cursorIndexOfProductColorName);
+            }
             _item.setProductColorName(_tmpProductColorName);
             final String _tmpProduct_id;
-            _tmpProduct_id = _cursor.getString(_cursorIndexOfProductId);
+            if (_cursor.isNull(_cursorIndexOfProductId)) {
+              _tmpProduct_id = null;
+            } else {
+              _tmpProduct_id = _cursor.getString(_cursorIndexOfProductId);
+            }
             _item.setProduct_id(_tmpProduct_id);
             final String _tmpModelId;
-            _tmpModelId = _cursor.getString(_cursorIndexOfModelId);
+            if (_cursor.isNull(_cursorIndexOfModelId)) {
+              _tmpModelId = null;
+            } else {
+              _tmpModelId = _cursor.getString(_cursorIndexOfModelId);
+            }
             _item.setModelId(_tmpModelId);
             final String _tmpQuantity;
-            _tmpQuantity = _cursor.getString(_cursorIndexOfQuantity);
+            if (_cursor.isNull(_cursorIndexOfQuantity)) {
+              _tmpQuantity = null;
+            } else {
+              _tmpQuantity = _cursor.getString(_cursorIndexOfQuantity);
+            }
             _item.setQuantity(_tmpQuantity);
             final String _tmpColorId;
-            _tmpColorId = _cursor.getString(_cursorIndexOfColorId);
+            if (_cursor.isNull(_cursorIndexOfColorId)) {
+              _tmpColorId = null;
+            } else {
+              _tmpColorId = _cursor.getString(_cursorIndexOfColorId);
+            }
             _item.setColorId(_tmpColorId);
             final boolean _tmpHasColor;
             final int _tmp;
@@ -350,5 +396,43 @@ public final class CartDao_Impl implements CartDao {
         _statement.release();
       }
     });
+  }
+
+  @Override
+  public LiveData<String> getCartCount() {
+    final String _sql = "select count(*) from `order`";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    return __db.getInvalidationTracker().createLiveData(new String[]{"order"}, false, new Callable<String>() {
+      @Override
+      public String call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final String _result;
+          if(_cursor.moveToFirst()) {
+            final String _tmp;
+            if (_cursor.isNull(0)) {
+              _tmp = null;
+            } else {
+              _tmp = _cursor.getString(0);
+            }
+            _result = _tmp;
+          } else {
+            _result = null;
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+        }
+      }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    });
+  }
+
+  public static List<Class<?>> getRequiredConverters() {
+    return Collections.emptyList();
   }
 }

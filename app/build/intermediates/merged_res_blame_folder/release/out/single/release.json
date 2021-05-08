@@ -44,6 +44,10 @@
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/mipmap-xhdpi/grand_g.png"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/release/drawable_badge.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/drawable/badge.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/release/drawable_ic_join_request.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/drawable/ic_join_request.xml"
     },
