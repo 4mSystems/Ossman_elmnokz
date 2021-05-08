@@ -35,7 +35,6 @@ import te.app.ossman_elmonkz.databinding.SendRequestDialogBinding;
 import te.app.ossman_elmonkz.model.base.Mutable;
 import te.app.ossman_elmonkz.pages.buying.models.BrandModelsPartionResponse;
 import te.app.ossman_elmonkz.pages.buying.models.BrandsModellsItem;
-import te.app.ossman_elmonkz.pages.buying.models.ProductColors;
 import te.app.ossman_elmonkz.pages.buying.viewModels.BuyingViewModel;
 import te.app.ossman_elmonkz.pages.cart.CartFragment;
 import te.app.ossman_elmonkz.utils.Constants;
@@ -43,7 +42,6 @@ import te.app.ossman_elmonkz.utils.helper.MovementHelper;
 
 
 public class BuyingFragment extends BaseFragment {
-
     private Context context;
     @Inject
     BuyingViewModel viewModel;
@@ -88,6 +86,8 @@ public class BuyingFragment extends BaseFragment {
                 ((ParentActivity) context).toastError(getString(R.string.model_name_hint));
             } else if (Constants.COLOR_WARNING.equals(((Mutable) o).message)) {
                 ((ParentActivity) context).toastError(getString(R.string.product_color_warning));
+            } else if (Constants.SELECT_PART_WARNING.equals(((Mutable) o).message)) {
+                ((ParentActivity) context).toastError(getString(R.string.part_warning_warning));
             } else if (Constants.ADD_TO_CART.equals(((Mutable) o).message)) {
                 showSuccessDialog();
             }
@@ -149,7 +149,7 @@ public class BuyingFragment extends BaseFragment {
                 } else if (requestCode == Constants.PRODUCT_REQUEST) {
                     viewModel.getOrderRequest().setProductName(brandsModellsItem.getName());
                     viewModel.getOrderRequest().setProduct_id(String.valueOf(brandsModellsItem.getId()));
-                    Log.e("onActivityResult", "onActivityResult: "+viewModel.getOrderRequest().isHasColor() );
+                    Log.e("onActivityResult", "onActivityResult: " + viewModel.getOrderRequest().isHasColor());
                     if (brandsModellsItem.getProductColors() != null && brandsModellsItem.getProductColors().size() > 0) {
                         viewModel.getOrderRequest().setHasColor(true);
                         binding.productColor.setVisibility(View.VISIBLE);

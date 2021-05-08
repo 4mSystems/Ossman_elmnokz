@@ -92,7 +92,13 @@ public class BuyingViewModel extends BaseViewModel {
 
     public void toBrand() {
         if (getBrandModelsPartionMain().getBrandsModells() != null)
-            liveData.setValue(new Mutable(Constants.SELECT_BRAND));
+            if (getPassingObject().getObject().equals(Constants.INTERNAL_ACCESSORIES) || getPassingObject().getObject().equals(Constants.EXTERNAL_ACCESSORIES))
+                if (!TextUtils.isEmpty(getOrderRequest().getPartId()))
+                    liveData.setValue(new Mutable(Constants.SELECT_BRAND));
+                else
+                    liveData.setValue(new Mutable(Constants.SELECT_PART_WARNING));
+            else
+                liveData.setValue(new Mutable(Constants.SELECT_BRAND));
     }
 
 
@@ -101,6 +107,7 @@ public class BuyingViewModel extends BaseViewModel {
             dataFromSearchRequest.setBrand_id(getOrderRequest().getBrandId());
             dataFromSearchRequest.setCategory_id(String.valueOf(getPassingObject().getId()));
             dataFromSearchRequest.setSub_category_id(String.valueOf(getPassingObject().getObject()));
+            dataFromSearchRequest.setPartion_id(getOrderRequest().getPartId());
             liveData.setValue(new Mutable(Constants.SELECT_MODELS));
         } else
             liveData.setValue(new Mutable(Constants.EMPTY_WARNING));

@@ -9,8 +9,7 @@ import android.widget.TextView;
 import androidx.databinding.BindingAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.squareup.picasso.Picasso;
-
+import com.bumptech.glide.Glide;
 import te.app.ossman_elmonkz.R;
 import te.app.ossman_elmonkz.customViews.CustomDrawable;
 import te.app.ossman_elmonkz.utils.helper.AppHelper;
@@ -21,7 +20,7 @@ public class ApplicationBinding {
     @BindingAdapter("imageUrl")
     public static void loadImage(ImageView imageView, Object image) {
         if (image instanceof String && !TextUtils.isEmpty((String) image)) {
-            Picasso.get().load((String) image).placeholder(R.drawable.logo).into(imageView);
+            Glide.with(imageView.getContext()).load((String) image).into(imageView);
         } else if (image instanceof Integer) {
             imageView.setImageResource((Integer) image);
         }

@@ -12,7 +12,6 @@ import io.reactivex.disposables.CompositeDisposable;
 import te.app.ossman_elmonkz.BR;
 import te.app.ossman_elmonkz.base.BaseViewModel;
 import te.app.ossman_elmonkz.model.base.Mutable;
-import te.app.ossman_elmonkz.pages.home.adapters.CategoriesAdapter;
 import te.app.ossman_elmonkz.pages.subCategories.adapters.SearchAdapter;
 import te.app.ossman_elmonkz.repository.HomeRepository;
 
@@ -35,6 +34,9 @@ public class SubCategoriesSearchViewModel extends BaseViewModel {
 
     public void search() {
         if (!TextUtils.isEmpty(search)) {
+            if (search.contains("+")) {
+                search = search.replace("+", "-");
+            }
             setSearchProgressVisible(View.VISIBLE);
             compositeDisposable.add(homeRepository.search(getPassingObject().getId(), getPassingObject().getObject(), search));
         } else

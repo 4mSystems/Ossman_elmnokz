@@ -18,7 +18,7 @@
     <string name="home">الرئيسية</string>
     <string name="contact_us">تواصل معنا</string>
     <string name="add_cart">أضف الى عربه السله</string>
-    <string name="finish_order">إنهاء الطلب</string>
+    <string name="finish_order">تأكيد الطلب</string>
     <string name="client_name">الاسم</string>
     <string name="client_phone">الموبايل</string>
     <string name="client_address">عنوانك بالتفصيل</string>
@@ -77,6 +77,7 @@
     <string name="gov_order">يرجى إختيار المحافظة</string>
     <string name="product_color_hint">اختار لون المنتج :</string>
     <string name="product_color_warning">اختر اللون</string>
+    <string name="part_warning_warning">اختار القسم اولا</string>
 
 
 </resources>

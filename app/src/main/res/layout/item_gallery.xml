@@ -42,6 +42,6 @@
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/white"
-            android:visibility="@{itemViewModel.galleryData.name!=null?View.VISIBLE:View.GONE}" />
+            android:visibility="gone" />
     </androidx.cardview.widget.CardView>
 </layout>

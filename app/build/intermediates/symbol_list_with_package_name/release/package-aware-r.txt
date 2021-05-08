@@ -3992,6 +3992,7 @@ string next
 string ok
 string oldest
 string on_hand
+string part_warning_warning
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through

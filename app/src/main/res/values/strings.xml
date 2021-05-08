@@ -77,5 +77,6 @@
     <string name="gov_order">يرجى إختيار المحافظة</string>
     <string name="product_color_hint">اختار لون المنتج :</string>
     <string name="product_color_warning">اختر اللون</string>
+    <string name="part_warning_warning">اختار القسم اولا</string>
 
 </resources>

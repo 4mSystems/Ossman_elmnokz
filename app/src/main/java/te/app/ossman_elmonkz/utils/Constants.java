@@ -52,7 +52,7 @@ public class Constants {
     public final static String ERROR_NOT_FOUND = "not_found";
     public final static String SELECT_COLORS = "SELECT_COLORS";
     public final static String FAILURE_CONNECTION = "failure_connection";
-    public final static String OFFERS = "OFFERS";
+    public final static String SELECT_PART_WARNING = "SELECT_PART_WARNING";
 
     public final static String LANGUAGE = "language";
     public static final String DEFAULT_LANGUAGE = "ar";

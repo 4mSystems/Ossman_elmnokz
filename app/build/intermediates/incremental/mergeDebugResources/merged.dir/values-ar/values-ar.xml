@@ -93,7 +93,7 @@
     <string name="error_icon_content_description">خطأ</string>
     <string name="exposed_dropdown_menu_content_description">عرض القائمة المنسدلة</string>
     <string msgid="4133737464567140336" name="fcm_fallback_notification_channel_label">"متنوعة"</string>
-    <string name="finish_order">إنهاء الطلب</string>
+    <string name="finish_order">تأكيد الطلب</string>
     <string name="gov_hint">اختار المحافظه لاظهار العملاء</string>
     <string name="gov_order">يرجى إختيار المحافظة</string>
     <string name="high_price">السعر من الاعلى الى الاقل</string>
@@ -158,6 +158,7 @@
     <string name="next">التالى</string>
     <string name="oldest">التاريخ من القديم الى الجديد</string>
     <string name="on_hand">عند الاستلام :</string>
+    <string name="part_warning_warning">اختار القسم اولا</string>
     <string name="password_toggle_content_description">عرض كلمة المرور</string>
     <string name="please_select_another_file">Please select another file</string>
     <string name="prePayment_text">مقدم الحجز :</string>

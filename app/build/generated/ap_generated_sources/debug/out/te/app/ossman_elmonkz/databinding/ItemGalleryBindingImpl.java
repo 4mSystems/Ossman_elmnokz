@@ -117,10 +117,8 @@ public class ItemGalleryBindingImpl extends ItemGalleryBinding implements te.app
             mDirtyFlags = 0;
         }
         te.app.ossman_elmonkz.pages.gallery.viewModels.ItemGalleryViewModel itemViewModel = mItemViewModel;
-        te.app.ossman_elmonkz.pages.gallery.models.GalleryData itemViewModelGalleryData = null;
-        boolean itemViewModelGalleryDataNameJavaLangObjectNull = false;
-        int itemViewModelGalleryDataNameJavaLangObjectNullViewVISIBLEViewGONE = 0;
         java.lang.String itemViewModelGalleryDataName = null;
+        te.app.ossman_elmonkz.pages.gallery.models.GalleryData itemViewModelGalleryData = null;
         java.lang.String itemViewModelGalleryDataImage = null;
 
         if ((dirtyFlags & 0x7L) != 0) {
@@ -139,22 +137,6 @@ public class ItemGalleryBindingImpl extends ItemGalleryBinding implements te.app
                     // read itemViewModel.galleryData.image
                     itemViewModelGalleryDataImage = itemViewModelGalleryData.getImage();
                 }
-
-
-                // read itemViewModel.galleryData.name != null
-                itemViewModelGalleryDataNameJavaLangObjectNull = (itemViewModelGalleryDataName) != (null);
-            if((dirtyFlags & 0x7L) != 0) {
-                if(itemViewModelGalleryDataNameJavaLangObjectNull) {
-                        dirtyFlags |= 0x10L;
-                }
-                else {
-                        dirtyFlags |= 0x8L;
-                }
-            }
-
-
-                // read itemViewModel.galleryData.name != null ? View.VISIBLE : View.GONE
-                itemViewModelGalleryDataNameJavaLangObjectNullViewVISIBLEViewGONE = ((itemViewModelGalleryDataNameJavaLangObjectNull) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
         // batch finished
         if ((dirtyFlags & 0x4L) != 0) {
@@ -166,7 +148,6 @@ public class ItemGalleryBindingImpl extends ItemGalleryBinding implements te.app
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, itemViewModelGalleryDataName);
-            this.mboundView2.setVisibility(itemViewModelGalleryDataNameJavaLangObjectNullViewVISIBLEViewGONE);
             te.app.ossman_elmonkz.base.ApplicationBinding.loadImage(this.productImage, itemViewModelGalleryDataImage);
         }
     }
@@ -212,8 +193,6 @@ public class ItemGalleryBindingImpl extends ItemGalleryBinding implements te.app
         flag 0 (0x1L): itemViewModel
         flag 1 (0x2L): itemViewModel.galleryData
         flag 2 (0x3L): null
-        flag 3 (0x4L): itemViewModel.galleryData.name != null ? View.VISIBLE : View.GONE
-        flag 4 (0x5L): itemViewModel.galleryData.name != null ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }
