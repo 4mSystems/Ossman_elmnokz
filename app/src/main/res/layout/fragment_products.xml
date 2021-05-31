@@ -198,12 +198,13 @@
                 app:layout_constraintTop_toBottomOf="@id/warning1" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="378dp"
+                android:layout_height="34dp"
                 android:layout_margin="@dimen/dp12h"
                 android:background="@drawable/corner_view_border_warning"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/warningPhone">
+                app:layout_constraintTop_toBottomOf="@id/warningPhone"
+                tools:layout_editor_absoluteX="18dp">
 
                 <te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular
                     android:id="@+id/product_warning2"

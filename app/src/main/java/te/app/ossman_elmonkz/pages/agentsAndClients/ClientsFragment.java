@@ -56,10 +56,10 @@ public class ClientsFragment extends BaseFragment {
             switch (((Mutable) o).message) {
                 case Constants.GOVS:
                     viewModel.govsDataList = ((GovsResponse) mutable.object).getData();
-                    if (viewModel.govsDataList.size() > 0) {
-                        viewModel.selectGov = viewModel.govsDataList.get(0).getName();
-                        viewModel.getClients(viewModel.govsDataList.get(0).getId());
-                    }
+//                    if (viewModel.govsDataList.size() > 0) {
+//                        viewModel.selectGov = viewModel.govsDataList.get(0).getName();
+////                        viewModel.getClients(viewModel.govsDataList.get(0).getId());
+//                    }
 
                     break;
                 case Constants.CLIENTS:
@@ -75,8 +75,9 @@ public class ClientsFragment extends BaseFragment {
 
     private void showGovs() {
         PopUpMenuHelper.showGovsPopUp(context, binding.searchInput, viewModel.govsDataList).setOnMenuItemClickListener(item -> {
-            viewModel.selectGov = viewModel.govsDataList.get(item.getItemId()).getName();
+            binding.searchInput.setText(viewModel.govsDataList.get(item.getItemId()).getName());
             viewModel.getClients(viewModel.govsDataList.get(item.getItemId()).getId());
+            viewModel.notifyChange();
             return false;
         });
     }

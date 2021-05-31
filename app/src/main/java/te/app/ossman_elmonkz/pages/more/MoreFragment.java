@@ -28,6 +28,7 @@ import te.app.ossman_elmonkz.pages.settings.AboutAppFragment;
 import te.app.ossman_elmonkz.pages.settings.ContactFragment;
 import te.app.ossman_elmonkz.pages.settings.SuggestionsFragment;
 import te.app.ossman_elmonkz.utils.Constants;
+import te.app.ossman_elmonkz.utils.helper.AppHelper;
 import te.app.ossman_elmonkz.utils.helper.MovementHelper;
 
 public class MoreFragment extends BaseFragment {
@@ -65,6 +66,12 @@ public class MoreFragment extends BaseFragment {
                     break;
                 case Constants.CLIENTS:
                     MovementHelper.startActivity(context, ClientsFragment.class.getName(), getResources().getString(R.string.members), null);
+                    break;
+                case Constants.SHARE_BAR:
+                    AppHelper.shareApp(getActivityBase());
+                    break;
+                case Constants.RATE_APP:
+                    AppHelper.rateApp(context);
                     break;
 
             }

@@ -20,8 +20,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.MutableLiveData;
+
 import com.google.android.material.snackbar.Snackbar;
+
 import org.imaginativeworld.oopsnointernet.NoInternetDialog;
+
 import es.dmoral.toasty.Toasty;
 import te.app.ossman_elmonkz.R;
 import te.app.ossman_elmonkz.model.base.Mutable;
@@ -31,7 +34,7 @@ import te.app.ossman_elmonkz.utils.session.LanguagesHelper;
 import te.app.ossman_elmonkz.utils.session.MyContextWrapper;
 
 public class ParentActivity extends AppCompatActivity implements
-        ConnectivityReceiver.ConnectivityReceiverListener{
+        ConnectivityReceiver.ConnectivityReceiverListener {
     public NoInternetDialog noInternetDialog;
     public MutableLiveData<Boolean> ConnectionLiveData;
     ConnectivityReceiver connectivityReceiver = new ConnectivityReceiver();
@@ -136,29 +139,30 @@ public class ParentActivity extends AppCompatActivity implements
     }
 
     public void noConnection() {
-        Resources resources = getResources();
-        // No Internet Dialog
-        NoInternetDialog.Builder builder1 = new NoInternetDialog.Builder(this);
-        // Optional
-        builder1.setConnectionCallback(hasActiveConnection -> {
-            if (hasActiveConnection)
-                noInternetDialog.destroy();
-            connectionMutableLiveData.postValue(hasActiveConnection);
-        });
-        builder1.setCancelable(false); // Optional
-        builder1.setNoInternetConnectionTitle(resources.getString(R.string.connection_invaild_msg)); // Optional
-        builder1.setNoInternetConnectionMessage(resources.getString(R.string.connection_invaild_body)); // Optional
-        builder1.setShowInternetOnButtons(true); // Optional
-        builder1.setPleaseTurnOnText(resources.getString(R.string.connection_On)); // Optional
-        builder1.setWifiOnButtonText(resources.getString(R.string.connection_Wifi)); // Optional
-        builder1.setMobileDataOnButtonText(resources.getString(R.string.connection_Data)); // Optional
-
-        builder1.setOnAirplaneModeTitle(resources.getString(R.string.connection_invaild_msg)); // Optional
-        builder1.setOnAirplaneModeMessage(resources.getString(R.string.connection_AirPlane)); // Optional
-        builder1.setPleaseTurnOffText(resources.getString(R.string.connection_AirPlane_TurnOff)); // Optional
-        builder1.setAirplaneModeOffButtonText(resources.getString(R.string.connection_AirPlane_Mode)); // Optional
-        builder1.setShowAirplaneModeOffButtons(true); // Optional
-        noInternetDialog = builder1.build();
+//        Resources resources = getResources();
+//        // No Internet Dialog
+//        NoInternetDialog.Builder builder1 = new NoInternetDialog.Builder(this);
+//        // Optional
+//        builder1.setConnectionCallback(hasActiveConnection -> {
+//            if (hasActiveConnection)
+//                noInternetDialog.destroy();
+//            connectionMutableLiveData.postValue(hasActiveConnection);
+//        });
+//        builder1.setCancelable(false); // Optional
+//        builder1.setNoInternetConnectionTitle(resources.getString(R.string.connection_invaild_msg)); // Optional
+//        builder1.setNoInternetConnectionMessage(resources.getString(R.string.connection_invaild_body)); // Optional
+//        builder1.setShowInternetOnButtons(true); // Optional
+//        builder1.setPleaseTurnOnText(resources.getString(R.string.connection_On)); // Optional
+//        builder1.setWifiOnButtonText(resources.getString(R.string.connection_Wifi)); // Optional
+//        builder1.setMobileDataOnButtonText(resources.getString(R.string.connection_Data)); // Optional
+//
+//        builder1.setOnAirplaneModeTitle(resources.getString(R.string.connection_invaild_msg)); // Optional
+//        builder1.setOnAirplaneModeMessage(resources.getString(R.string.connection_AirPlane)); // Optional
+//        builder1.setPleaseTurnOffText(resources.getString(R.string.connection_AirPlane_TurnOff)); // Optional
+//        builder1.setAirplaneModeOffButtonText(resources.getString(R.string.connection_AirPlane_Mode)); // Optional
+//        builder1.setShowAirplaneModeOffButtons(true); // Optional
+//        noInternetDialog = builder1.build();
+        showError(ResourceManager.getString(R.string.connection_invaild_body));
     }
 
     @Override

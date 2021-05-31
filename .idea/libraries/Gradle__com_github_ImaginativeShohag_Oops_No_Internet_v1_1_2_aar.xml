@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.ImaginativeShohag:Oops-No-Internet:v1.1.2@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/73ae5ba33bc1a76e85fa52ae5fdc92df/jetified-Oops-No-Internet-v1.1.2/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/73ae5ba33bc1a76e85fa52ae5fdc92df/jetified-Oops-No-Internet-v1.1.2/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/73ae5ba33bc1a76e85fa52ae5fdc92df/jetified-Oops-No-Internet-v1.1.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ee4b9d7c82c7c791fbf1c29863d4e493/jetified-Oops-No-Internet-v1.1.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ee4b9d7c82c7c791fbf1c29863d4e493/jetified-Oops-No-Internet-v1.1.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ee4b9d7c82c7c791fbf1c29863d4e493/jetified-Oops-No-Internet-v1.1.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

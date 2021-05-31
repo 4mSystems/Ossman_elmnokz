@@ -2,26 +2,32 @@ package te.app.ossman_elmonkz.pages.subCategories.models.search;
 
 import com.google.gson.annotations.SerializedName;
 
-public class EqualItemsItem{
+public class EqualItemsItem {
 
-	@SerializedName("equal_id")
-	private String equalId;
+    @SerializedName("equal_id")
+    private String equalId;
 
-	@SerializedName("name")
-	private String name;
+    @SerializedName("name")
+    private String name;
+    @SerializedName("brand_name")
+    private String brandName;
 
-	@SerializedName("id")
-	private int id;
+    @SerializedName("id")
+    private int id;
 
-	public String getEqualId(){
-		return equalId;
-	}
+    public String getEqualId() {
+        return equalId;
+    }
 
-	public String getName(){
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public int getId(){
-		return id;
-	}
+    public int getId() {
+        return id;
+    }
+
+    public String getBrandName() {
+        return brandName;
+    }
 }

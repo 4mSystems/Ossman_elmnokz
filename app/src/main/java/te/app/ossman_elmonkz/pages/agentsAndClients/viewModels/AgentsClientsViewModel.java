@@ -25,7 +25,6 @@ public class AgentsClientsViewModel extends BaseViewModel {
     SettingsRepository repository;
     AgentsAdapter agentsAdapter;
     ClientsAdapter clientsAdapter;
-    public String selectGov;
     public List<GovsData> govsDataList;
 
     @Inject

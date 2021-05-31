@@ -46,6 +46,14 @@ public class MoreViewModel extends BaseViewModel {
         liveData.setValue(new Mutable(Constants.CONTACT));
     }
 
+    public void share() {
+        liveData.setValue(new Mutable(Constants.SHARE_BAR));
+    }
+
+    public void rateApp() {
+        liveData.setValue(new Mutable(Constants.RATE_APP));
+    }
+
 
     protected void unSubscribeFromObservable() {
         if (compositeDisposable != null && !compositeDisposable.isDisposed()) {

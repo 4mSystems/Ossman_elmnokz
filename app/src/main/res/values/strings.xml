@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">عثمان المنقذ</string>
+    <string name="app_name">المنقذ والعميد</string>
     <string name="connection_invaild_body">Check your Internet connection and try again</string>
     <string name="connection_On">Please turn on</string>
     <string name="connection_Wifi">Wifi</string>
