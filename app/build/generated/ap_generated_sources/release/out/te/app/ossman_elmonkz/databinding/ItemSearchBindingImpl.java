@@ -109,14 +109,15 @@ public class ItemSearchBindingImpl extends ItemSearchBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        java.lang.String itemViewModelSearchItemNameConcatJavaLangString = null;
         te.app.ossman_elmonkz.pages.subCategories.viewModels.ItemSearchViewModel itemViewModel = mItemViewModel;
         boolean itemViewModelSearchItemBrandNameJavaLangObjectNull = false;
+        java.lang.String itemViewModelSearchItemBrandNameJavaLangObjectNullItemViewModelSearchItemNameConcatJavaLangStringConcatJavaLangStringConcatItemViewModelSearchItemBrandNameConcatJavaLangStringItemViewModelSearchItemName = null;
+        java.lang.String itemViewModelSearchItemNameConcatJavaLangStringConcatJavaLangString = null;
+        java.lang.String itemViewModelSearchItemNameConcatJavaLangStringConcatJavaLangStringConcatItemViewModelSearchItemBrandNameConcatJavaLangString = null;
         java.lang.String itemViewModelSearchItemName = null;
-        java.lang.String itemViewModelSearchItemNameConcatJavaLangStringConcatItemViewModelSearchItemBrandNameConcatJavaLangString = null;
+        java.lang.String itemViewModelSearchItemNameConcatJavaLangStringConcatJavaLangStringConcatItemViewModelSearchItemBrandName = null;
+        java.lang.String itemViewModelSearchItemNameConcatJavaLangString = null;
         te.app.ossman_elmonkz.pages.subCategories.models.search.EqualItemsItem itemViewModelSearchItem = null;
-        java.lang.String itemViewModelSearchItemNameConcatJavaLangStringConcatItemViewModelSearchItemBrandName = null;
-        java.lang.String itemViewModelSearchItemBrandNameJavaLangObjectNullItemViewModelSearchItemNameConcatJavaLangStringConcatItemViewModelSearchItemBrandNameConcatJavaLangStringItemViewModelSearchItemName = null;
         java.lang.String itemViewModelSearchItemBrandName = null;
 
         if ((dirtyFlags & 0x7L) != 0) {
@@ -158,34 +159,40 @@ public class ItemSearchBindingImpl extends ItemSearchBinding  {
             if ((dirtyFlags & 0x10L) != 0) {
 
                     if (itemViewModelSearchItemName != null) {
-                        // read itemViewModel.searchItem.name.concat("(")
-                        itemViewModelSearchItemNameConcatJavaLangString = itemViewModelSearchItemName.concat("(");
+                        // read itemViewModel.searchItem.name.concat(" ")
+                        itemViewModelSearchItemNameConcatJavaLangString = itemViewModelSearchItemName.concat(" ");
                     }
 
 
                     if (itemViewModelSearchItemNameConcatJavaLangString != null) {
-                        // read itemViewModel.searchItem.name.concat("(").concat(itemViewModel.searchItem.brandName)
-                        itemViewModelSearchItemNameConcatJavaLangStringConcatItemViewModelSearchItemBrandName = itemViewModelSearchItemNameConcatJavaLangString.concat(itemViewModelSearchItemBrandName);
+                        // read itemViewModel.searchItem.name.concat(" ").concat("(")
+                        itemViewModelSearchItemNameConcatJavaLangStringConcatJavaLangString = itemViewModelSearchItemNameConcatJavaLangString.concat("(");
                     }
 
 
-                    if (itemViewModelSearchItemNameConcatJavaLangStringConcatItemViewModelSearchItemBrandName != null) {
-                        // read itemViewModel.searchItem.name.concat("(").concat(itemViewModel.searchItem.brandName).concat(")")
-                        itemViewModelSearchItemNameConcatJavaLangStringConcatItemViewModelSearchItemBrandNameConcatJavaLangString = itemViewModelSearchItemNameConcatJavaLangStringConcatItemViewModelSearchItemBrandName.concat(")");
+                    if (itemViewModelSearchItemNameConcatJavaLangStringConcatJavaLangString != null) {
+                        // read itemViewModel.searchItem.name.concat(" ").concat("(").concat(itemViewModel.searchItem.brandName)
+                        itemViewModelSearchItemNameConcatJavaLangStringConcatJavaLangStringConcatItemViewModelSearchItemBrandName = itemViewModelSearchItemNameConcatJavaLangStringConcatJavaLangString.concat(itemViewModelSearchItemBrandName);
+                    }
+
+
+                    if (itemViewModelSearchItemNameConcatJavaLangStringConcatJavaLangStringConcatItemViewModelSearchItemBrandName != null) {
+                        // read itemViewModel.searchItem.name.concat(" ").concat("(").concat(itemViewModel.searchItem.brandName).concat(")")
+                        itemViewModelSearchItemNameConcatJavaLangStringConcatJavaLangStringConcatItemViewModelSearchItemBrandNameConcatJavaLangString = itemViewModelSearchItemNameConcatJavaLangStringConcatJavaLangStringConcatItemViewModelSearchItemBrandName.concat(")");
                     }
             }
         }
 
         if ((dirtyFlags & 0x7L) != 0) {
 
-                // read itemViewModel.searchItem.brandName != null ? itemViewModel.searchItem.name.concat("(").concat(itemViewModel.searchItem.brandName).concat(")") : itemViewModel.searchItem.name
-                itemViewModelSearchItemBrandNameJavaLangObjectNullItemViewModelSearchItemNameConcatJavaLangStringConcatItemViewModelSearchItemBrandNameConcatJavaLangStringItemViewModelSearchItemName = ((itemViewModelSearchItemBrandNameJavaLangObjectNull) ? (itemViewModelSearchItemNameConcatJavaLangStringConcatItemViewModelSearchItemBrandNameConcatJavaLangString) : (itemViewModelSearchItemName));
+                // read itemViewModel.searchItem.brandName != null ? itemViewModel.searchItem.name.concat(" ").concat("(").concat(itemViewModel.searchItem.brandName).concat(")") : itemViewModel.searchItem.name
+                itemViewModelSearchItemBrandNameJavaLangObjectNullItemViewModelSearchItemNameConcatJavaLangStringConcatJavaLangStringConcatItemViewModelSearchItemBrandNameConcatJavaLangStringItemViewModelSearchItemName = ((itemViewModelSearchItemBrandNameJavaLangObjectNull) ? (itemViewModelSearchItemNameConcatJavaLangStringConcatJavaLangStringConcatItemViewModelSearchItemBrandNameConcatJavaLangString) : (itemViewModelSearchItemName));
         }
         // batch finished
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.productName, itemViewModelSearchItemBrandNameJavaLangObjectNullItemViewModelSearchItemNameConcatJavaLangStringConcatItemViewModelSearchItemBrandNameConcatJavaLangStringItemViewModelSearchItemName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.productName, itemViewModelSearchItemBrandNameJavaLangObjectNullItemViewModelSearchItemNameConcatJavaLangStringConcatJavaLangStringConcatItemViewModelSearchItemBrandNameConcatJavaLangStringItemViewModelSearchItemName);
         }
     }
     // Listener Stub Implementations
@@ -196,8 +203,8 @@ public class ItemSearchBindingImpl extends ItemSearchBinding  {
         flag 0 (0x1L): itemViewModel
         flag 1 (0x2L): itemViewModel.searchItem
         flag 2 (0x3L): null
-        flag 3 (0x4L): itemViewModel.searchItem.brandName != null ? itemViewModel.searchItem.name.concat("(").concat(itemViewModel.searchItem.brandName).concat(")") : itemViewModel.searchItem.name
-        flag 4 (0x5L): itemViewModel.searchItem.brandName != null ? itemViewModel.searchItem.name.concat("(").concat(itemViewModel.searchItem.brandName).concat(")") : itemViewModel.searchItem.name
+        flag 3 (0x4L): itemViewModel.searchItem.brandName != null ? itemViewModel.searchItem.name.concat(" ").concat("(").concat(itemViewModel.searchItem.brandName).concat(")") : itemViewModel.searchItem.name
+        flag 4 (0x5L): itemViewModel.searchItem.brandName != null ? itemViewModel.searchItem.name.concat(" ").concat("(").concat(itemViewModel.searchItem.brandName).concat(")") : itemViewModel.searchItem.name
     flag mapping end*/
     //end
 }

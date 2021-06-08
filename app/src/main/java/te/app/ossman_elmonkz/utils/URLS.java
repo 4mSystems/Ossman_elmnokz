@@ -1,7 +1,8 @@
 package te.app.ossman_elmonkz.utils;
 
 public class URLS {
-    public final static String BASE_URL = "https://el3amd.com/api/";
+//    public final static String BASE_URL = "https://el3amd.com/api/";
+    public final static String BASE_URL = "http://test.phys-bebsata.com/api/";
     public final static String GET_BRANDS = "app/equal_brands_modells?sub_category_id=";
     public final static String SUB_CATEGORIES = "sub_categories/level1/";
     public final static String BRAND_MODEL_PARTION = "app/brands_modells_partions";

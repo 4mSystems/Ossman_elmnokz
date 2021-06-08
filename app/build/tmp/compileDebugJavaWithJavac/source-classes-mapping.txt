@@ -104,8 +104,8 @@ te/app/ossman_elmonkz/customViews/views/DateEditText.java
  te.app.ossman_elmonkz.customViews.views.DateEditText
 te/app/ossman_elmonkz/pages/subCategories/models/search/SearchResponse.java
  te.app.ossman_elmonkz.pages.subCategories.models.search.SearchResponse
-te/app/ossman_elmonkz/utils/session/UserHelper.java
- te.app.ossman_elmonkz.utils.session.UserHelper
+te/app/ossman_elmonkz/pages/subCategories/SubCategorySearchFragment.java
+ te.app.ossman_elmonkz.pages.subCategories.SubCategorySearchFragment
 te/app/ossman_elmonkz/pages/subCategories/viewModels/ItemSearchViewModel.java
  te.app.ossman_elmonkz.pages.subCategories.viewModels.ItemSearchViewModel
 te/app/ossman_elmonkz/PassingObject.java
@@ -179,9 +179,9 @@ te/app/ossman_elmonkz/pages/buying/ProductDetailsFragment.java
  te.app.ossman_elmonkz.pages.buying.ProductDetailsFragment
 te/app/ossman_elmonkz/pages/agentsAndClients/viewModels/ItemClientViewModel.java
  te.app.ossman_elmonkz.pages.agentsAndClients.viewModels.ItemClientViewModel
-te/app/ossman_elmonkz/customViews/views/BaseEditText.java
- te.app.ossman_elmonkz.customViews.views.BaseEditText
- te.app.ossman_elmonkz.customViews.views.BaseEditText$1
+te/app/ossman_elmonkz/base/IApplicationComponent.java
+ te.app.ossman_elmonkz.base.IApplicationComponent
+ te.app.ossman_elmonkz.base.IApplicationComponent$Builder
 te/app/ossman_elmonkz/activity/BaseActivity.java
  te.app.ossman_elmonkz.activity.BaseActivity
 te/app/ossman_elmonkz/pages/home/HomeFragment.java
@@ -236,8 +236,9 @@ te/app/ossman_elmonkz/utils/images/PhotoFullPopupWindow.java
  te.app.ossman_elmonkz.utils.images.PhotoFullPopupWindow
  te.app.ossman_elmonkz.utils.images.PhotoFullPopupWindow$1
  te.app.ossman_elmonkz.utils.images.PhotoFullPopupWindow$2
-te/app/ossman_elmonkz/model/base/Mutable.java
- te.app.ossman_elmonkz.model.base.Mutable
+te/app/ossman_elmonkz/pages/subCategories/adapters/SubCategoriesAdapter.java
+ te.app.ossman_elmonkz.pages.subCategories.adapters.SubCategoriesAdapter
+ te.app.ossman_elmonkz.pages.subCategories.adapters.SubCategoriesAdapter$ViewHolder
 te/app/ossman_elmonkz/databinding/FragmentHomeBinding.java
  te.app.ossman_elmonkz.databinding.FragmentHomeBinding
 te/app/ossman_elmonkz/repository/HomeRepository.java
@@ -259,8 +260,8 @@ te/app/ossman_elmonkz/base/LiveData.java
  te.app.ossman_elmonkz.base.LiveData
 te/app/ossman_elmonkz/databinding/FragmentSubCategoriesBinding.java
  te.app.ossman_elmonkz.databinding.FragmentSubCategoriesBinding
-te/app/ossman_elmonkz/pages/cart/CartFragment.java
- te.app.ossman_elmonkz.pages.cart.CartFragment
+te/app/ossman_elmonkz/base/ApplicationComponent.java
+ te.app.ossman_elmonkz.base.ApplicationComponent
 te/app/ossman_elmonkz/pages/settings/viewModels/SettingsViewModel.java
  te.app.ossman_elmonkz.pages.settings.viewModels.SettingsViewModel
 te/app/ossman_elmonkz/databinding/FragmentBrandModelsPartionBinding.java
@@ -271,8 +272,8 @@ te/app/ossman_elmonkz/DataBindingTriggerClass.java
  te.app.ossman_elmonkz.DataBindingTriggerClass
 te/app/ossman_elmonkz/databinding/ItemHomeBinding.java
  te.app.ossman_elmonkz.databinding.ItemHomeBinding
-te/app/ossman_elmonkz/pages/products/ProductsFragment.java
- te.app.ossman_elmonkz.pages.products.ProductsFragment
+te/app/ossman_elmonkz/base/MyApplication.java
+ te.app.ossman_elmonkz.base.MyApplication
 te/app/ossman_elmonkz/pages/settings/SuggestionsFragment.java
  te.app.ossman_elmonkz.pages.settings.SuggestionsFragment
 te/app/ossman_elmonkz/pages/subCategories/models/search/EqualItemsItem.java
@@ -374,15 +375,14 @@ te/app/ossman_elmonkz/pages/buying/adapter/ProductColorAdapter.java
  te.app.ossman_elmonkz.pages.buying.adapter.ProductColorAdapter$ViewHolder
 te/app/ossman_elmonkz/pages/agentsAndClients/models/clients/ClientsResponse.java
  te.app.ossman_elmonkz.pages.agentsAndClients.models.clients.ClientsResponse
-te/app/ossman_elmonkz/pages/subCategories/SubCategorySearchFragment.java
- te.app.ossman_elmonkz.pages.subCategories.SubCategorySearchFragment
-te/app/ossman_elmonkz/base/IApplicationComponent.java
- te.app.ossman_elmonkz.base.IApplicationComponent
- te.app.ossman_elmonkz.base.IApplicationComponent$Builder
-te/app/ossman_elmonkz/base/MyApplication.java
- te.app.ossman_elmonkz.base.MyApplication
-te/app/ossman_elmonkz/base/ApplicationComponent.java
- te.app.ossman_elmonkz.base.ApplicationComponent
-te/app/ossman_elmonkz/pages/subCategories/adapters/SubCategoriesAdapter.java
- te.app.ossman_elmonkz.pages.subCategories.adapters.SubCategoriesAdapter
- te.app.ossman_elmonkz.pages.subCategories.adapters.SubCategoriesAdapter$ViewHolder
+te/app/ossman_elmonkz/model/base/Mutable.java
+ te.app.ossman_elmonkz.model.base.Mutable
+te/app/ossman_elmonkz/pages/cart/CartFragment.java
+ te.app.ossman_elmonkz.pages.cart.CartFragment
+te/app/ossman_elmonkz/pages/products/ProductsFragment.java
+ te.app.ossman_elmonkz.pages.products.ProductsFragment
+te/app/ossman_elmonkz/customViews/views/BaseEditText.java
+ te.app.ossman_elmonkz.customViews.views.BaseEditText
+ te.app.ossman_elmonkz.customViews.views.BaseEditText$1
+te/app/ossman_elmonkz/utils/session/UserHelper.java
+ te.app.ossman_elmonkz.utils.session.UserHelper
