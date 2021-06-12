@@ -76,7 +76,7 @@ public class SubCategoriesSearchViewModel extends BaseViewModel {
                 search = search.replace("+", "-");
             }
             setSearchProgressVisible(View.VISIBLE);
-            compositeDisposable.add(homeRepository.search(getPassingObject().getId(), getPassingObject().getObject(), search));
+            compositeDisposable.add(homeRepository.search(getPassingObject().getId(), getPassingObject().getObject(), search, getOrderRequest().getModelId()));
         } else
             setSearchProgressVisible(View.GONE);
 

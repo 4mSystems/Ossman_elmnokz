@@ -13,7 +13,6 @@ import te.app.ossman_elmonkz.pages.home.models.HomeResponse;
 import te.app.ossman_elmonkz.pages.onBoard.models.BoardResponse;
 import te.app.ossman_elmonkz.pages.subCategories.models.MatchesResponse;
 import te.app.ossman_elmonkz.pages.subCategories.models.SubCategoriesResponse;
-import te.app.ossman_elmonkz.pages.subCategories.models.search.SearchResponse;
 import te.app.ossman_elmonkz.pages.subCategories.models.search.SubCategorySearchResponse;
 import te.app.ossman_elmonkz.utils.Constants;
 import te.app.ossman_elmonkz.utils.URLS;
@@ -49,8 +48,10 @@ public class HomeRepository extends BaseRepository {
                 Constants.BOARD, true);
     }
 
-    public Disposable search(int categoryId, String subCatId, String search) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SEARCH + categoryId + "&sub_category_id=" + subCatId + "&search_key=" + search, new Object(), SubCategorySearchResponse.class,
+    public Disposable search(int categoryId, String subCatId, String search, String modelId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SEARCH
+                        + categoryId + "&sub_category_id=" + subCatId+ "&modell_id=" + modelId + "&search_key=" + search
+                , new Object(), SubCategorySearchResponse.class,
                 Constants.SEARCH, false);
     }
 

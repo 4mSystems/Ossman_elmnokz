@@ -63,9 +63,9 @@ public class SubCategorySearchFragment extends BaseFragment {
         viewModel.liveData.observe(((LifecycleOwner) context), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            Log.e("setEvent", "setEvent: "+mutable.message );
+            Log.e("setEvent", "setEvent: " + mutable.message);
             if (Constants.SEARCH.equals(((Mutable) o).message)) {
-                Log.e("setEvent", "setEvent: " );
+                Log.e("setEvent", "setEvent: ");
                 if (((SubCategorySearchResponse) mutable.object).getCategorySearchMain() != null) {
                     viewModel.getSearchAdapter().update(((SubCategorySearchResponse) mutable.object).getCategorySearchMain().getSearchData());
                     viewModel.setDesc(((SubCategorySearchResponse) mutable.object).getCategorySearchMain().getDesc());
@@ -74,7 +74,7 @@ public class SubCategorySearchFragment extends BaseFragment {
                 viewModel.notifyChange(BR.searchAdapter);
             } else if (Constants.GET_BRANDS.equals(((Mutable) o).message)) {
                 viewModel.getBrandModelsPartionMain().setBrandsModells(((MatchesResponse) mutable.object).getBrandsModellsItem());
-            }else if (Constants.ERROR.equals(((Mutable) o).message)) {
+            } else if (Constants.ERROR.equals(((Mutable) o).message)) {
                 viewModel.setSearchProgressVisible(View.GONE);
             } else if (Constants.SELECT_BRAND.equals(((Mutable) o).message)) {
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getBrandModelsPartionMain(), Constants.BRAND_REQUEST), getResources().getString(R.string.brand_name_hint), SelectBrandModelPartionFragment.class.getName(), null, Constants.BRAND_REQUEST);
@@ -105,6 +105,7 @@ public class SubCategorySearchFragment extends BaseFragment {
                     viewModel.search = null;
                 } else if (requestCode == Constants.MODEL_REQUEST) {
                     viewModel.search = brandsModellsItem.getName();
+                    viewModel.getOrderRequest().setModelId(String.valueOf(brandsModellsItem.getId()));
                 }
             }
             viewModel.notifyChange();

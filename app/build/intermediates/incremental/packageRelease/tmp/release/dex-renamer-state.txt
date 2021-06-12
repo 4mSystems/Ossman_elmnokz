@@ -1,4 +1,4 @@
-#Tue Jun 08 22:44:26 EET 2021
+#Sat Jun 12 01:56:06 EET 2021
 base.0=/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
 path.1=classes2.dex
 renamed.1=classes2.dex

@@ -1,27 +1,27 @@
 [
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/release/anim_layout_animation_bottom_to_top.xml.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/anim/layout_animation_bottom_to_top.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/release/menu_bottom_navigation_menu.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/menu/bottom_navigation_menu.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/release/anim_blink.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/anim/blink.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/release/menu_bottom_navigation_menu.xml.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/menu/bottom_navigation_menu.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/release/anim_layout_animation_bottom_to_top.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/anim/layout_animation_bottom_to_top.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/release/mipmap-hdpi_grand_g.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/mipmap-hdpi/grand_g.png"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/release/layout_fragment_products.xml.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_products.xml"
-    },
-    {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/release/anim_layout_animation_left_to_right.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/anim/layout_animation_left_to_right.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/release/layout_fragment_products.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Ossman/app/src/main/res/layout/fragment_products.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Ossman/app/build/intermediates/res/merged/release/drawable_circle.xml.flat",

@@ -197,15 +197,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/warning1" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="378dp"
-                android:layout_height="34dp"
-                android:layout_margin="@dimen/dp12h"
-                android:background="@drawable/corner_view_border_warning"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/warningPhone"
-                tools:layout_editor_absoluteX="18dp">
-
                 <te.app.ossman_elmonkz.customViews.views.CustomTextViewRegular
                     android:id="@+id/product_warning2"
                     android:layout_width="match_parent"
@@ -213,12 +204,13 @@
                     android:layout_margin="@dimen/dp8h"
                     android:text="@{viewmodel.aboutMain.news.body}"
                     android:textAlignment="viewStart"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/medium_color"
+                    android:padding="@dimen/dp10h"
+                    android:background="@drawable/corner_view_border_warning"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@id/warningPhone"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/medium_color" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>
